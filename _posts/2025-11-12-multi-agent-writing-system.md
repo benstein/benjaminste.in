@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How I Built a Multi-Agent Writing System That Actually Sounds Like Me"
-date: 2024-11-12
+date: 2025-11-12
 categories: [ai, writing, agents, claude]
 excerpt: "I built a collaborative team of agents in Claude Code to automate my writing--without sounding like an LLM"
 ---

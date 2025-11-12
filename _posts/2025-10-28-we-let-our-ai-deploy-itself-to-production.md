@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "We Let Our AI Deploy Itself to Production (And Accidentally Created Your Next Favorite Pixar Character)"
-date: 2024-10-28
+date: 2025-10-28
 categories: [ai, devops, teammates, automation]
 excerpt: "Our staging server writes poetry, calls me 'Skipper', and wants a promotion. Let me explain."
 ---

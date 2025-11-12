@@ -11,15 +11,17 @@ Ayo! I'm Ben. I'm the CEO of [Teammates](https://teammates.work) and the Preside
 
 ---
 
-## Recent Blog Posts
+## Select Writing
 
 {% if site.posts.size > 0 %}
-<ul>
+<ul style="list-style: none; padding-left: 0;">
   {% for post in site.posts %}
-  <li>
-    <strong>{{ post.date | date: "%B %d, %Y" }}</strong> - <a href="{{ post.url }}">{{ post.title }}</a>
+  <li style="margin-bottom: 30px;">
+    <a href="{{ post.url }}" style="font-size: 1.2em; font-weight: 500;">{{ post.title }}</a>
     <br/>
-    <em>{{ post.excerpt | strip_html | truncatewords: 30 }}</em>
+    <span style="color: #666; font-size: 0.9em;">{{ post.date | date: "%B %d, %Y" }}</span>
+    <br/>
+    <em style="color: #555;">{{ post.excerpt | strip_html | truncatewords: 30 }}</em>
   </li>
   {% endfor %}
 </ul>
