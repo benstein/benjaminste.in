@@ -68,7 +68,7 @@ You can use **bold text** for emphasis, *italic text* for subtle emphasis, and `
 
 ## Links and Resources
 
-Check out my [GitHub profile](https://github.com/benstein) for more projects, or connect with me on [LinkedIn](https://www.linkedin.com/in/benjaminstein/).
+Connect with me on [LinkedIn](https://www.linkedin.com/in/benjaminstein/) to stay in touch!
 
 ---
 

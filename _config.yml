@@ -3,6 +3,7 @@ title: Benjamin Stein
 description: Personal website and blog
 author: Benjamin Stein
 email: # Add your email if desired
+logo: /assets/images/avatar.jpg
 
 # Build settings
 theme: jekyll-theme-minimal
@@ -11,7 +12,6 @@ permalink: /blog/:year/:month/:day/:title/
 
 # Social links
 linkedin_url: https://www.linkedin.com/in/benjaminstein/
-github_username: benstein
 
 # Repository (required for GitHub Pages theme)
 repository: benstein/benjaminste.in
