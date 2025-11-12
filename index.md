@@ -5,9 +5,7 @@ title: Home
 
 # About Me
 
-Hello! I'm Benjamin Stein, a [add your professional title/description here - e.g., software engineer, product manager, data scientist].
-
-[Add a brief bio here - 2-3 sentences about your background, interests, and what you're passionate about.]
+Ayo! I'm Ben. I'm the CEO of [Teammates](https://teammates.work) and the President of [Piedmont Makers](https://piedmontmakers.org). I live in Oakland, CA with my illustrious wife, two teenage boys, and a pup named Soup. I love birds, bridge, bots, bears, beets, Battlestar Galactica. And losing at pub trivia.
 
 ---
 
