@@ -3,6 +3,27 @@
 
 @import "{{ site.theme }}";
 
+/* Widen content area for better readability */
+.wrapper {
+  width: 1000px;
+  max-width: 90%;
+}
+
+section {
+  width: 650px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    width: auto;
+  }
+
+  section {
+    width: auto;
+  }
+}
+
 /* Headshot sizing for all viewports */
 header img {
   max-width: 150px;
