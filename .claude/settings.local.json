@@ -12,7 +12,9 @@
       "Bash(git push:*)",
       "Bash(git pull:*)",
       "Bash(curl:*)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.teammates.work)",
+      "WebFetch(domain:docs.google.com)"
     ]
   },
   "enableAllProjectMcpServers": true,

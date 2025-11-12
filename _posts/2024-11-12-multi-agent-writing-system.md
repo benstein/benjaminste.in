@@ -124,25 +124,25 @@ How much guidance do you want to provide?
 ![Claude Code review interface](/assets/images/claude_code_confirming_responses.png)
 *Claude Code's interactive review interface confirming document parameters*
 
-Is bash or zsh a reasonable interface for most people? No. But for demonstrating what's possible with agentic architecture, it's surprisingly effective. The CLI is to user interfaces what vinyl is to music formats—objectively inferior in convenience, inexplicably satisfying to enthusiasts, and it signals to others that you have opinions about things.
+Is bash or zsh a reasonable interface for most people? No. Certainly not. But for demonstrating what's possible with agentic architecture, it's surprisingly effective. The CLI is to document editing what vinyl is to music formats: objectively inferior in convenience, inexplicably satisfying to enthusiasts, yes signals to others that you have opinions about things.
 
 ## Why This Matters
 
-I agree with Bryan's thesis that one-shot "help me write" prompts lead to generic, boring content. But what's actually possible with today's LLMs and agentic architecture goes far beyond what most people imagine.
+I agree with Bryan's thesis that one-shot "Help Me Write" prompts lead to generic, boring content. *But what's actually possible with today's LLMs and agentic architecture goes far beyond what most people imagine.*
 
-This system doesn't replace human judgment. I still decide what matters, what's true, and what the piece should say. It automates the tedious parts: running multiple editorial passes, checking consistency, hunting AI tells, ensuring my voice comes through.
+This system doesn't replace human judgment. I still decide what matters, what's true, and what the piece should say. I tidy up, add more wit, and make sure it's truly words that I would stand behind. But it automates the tedious parts of a sophisticated human-in-the-loop editorial process: running multiple editorial passes, checking consistency, hunting AI tells, ensuring my authentic voice comes through.
 
-We need better user interfaces. The right UI isn't a command line. It's not Google Docs with an AI sidebar, or Notion with integrated agents. It's something else entirely, and the world is still iterating on what that should be.
+We definitely need better user interfaces. The right UI for writing isn't a command line. It's also not Google Docs with an AI sidebar, or Notion with integrated agents. It's something else entirely, and the world is still iterating on what that should be. 
 
-But the architecture itself matters: specialized agents with clear responsibilities, iterative refinement with scoring, validation to catch regressions, and priority hierarchies for resolving conflicts. That's what makes it possible to use AI for writing without producing generic content—no microwave burrito shame required.
+But the architecture itself is showing us fascinating possibilities: specialized agents with clear responsibilities, iterative refinement with scoring, validation to catch regressions, and priority hierarchies for resolving conflicts. That's what currently makes it possible to use AI for writing without producing generic content — no microwave burrito shame required!
 
 The technology exists today to build writing tools that preserve your voice, maintain quality standards, and actually save time. We just need to stop thinking about LLMs as one-shot text generators and start thinking about them as collaborative editors in a structured refinement process.
 
-## The Reveal: AI Wrote This Post
+## The Prestige: AI Wrote This Post
 
-Plot twist: This entire post was written by the multi-agent system I just described. What you just read wasn't me writing about the system—it was the system writing about itself. 
+Plot twist: This entire post was written by the multi-agent system I just described. What you just read wasn't me writing about the system—it was the system writing about itself.
 
-Here are the actual scores from the agents that created this:
+Here are the actual scores from the agents that created it:
 
 ```
 Iteration 1 - Review Scores
@@ -181,8 +181,8 @@ All scores now at 8+ target:
 Overall: 8.7/10 - Publication ready!
 ```
 
-Let's just say the Authenticity Agent was, indeed, busy. 
+Let's just say the Authenticity Agent was, indeed, busy.
 
 I personally think the system works quite well (although I would say that). 
 
-But you tell me: was the microwave burrito and TI-83 calculator reference really an 8.5 out of 10?
+But you tell me: were the microwave burrito and TI-83 calculator references really an 8.5 out of 10? Only a human can be the judge of that.
