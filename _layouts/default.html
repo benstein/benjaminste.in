@@ -15,10 +15,10 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        <h1 style="text-align: center; margin-bottom: 20px;"><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
 
         {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" />
+          <img src="{{site.logo | relative_url}}" alt="Logo" style="display: block; margin: 0 auto 20px auto;" />
         {% endif %}
 
         {% if site.description %}
@@ -26,19 +26,12 @@
         {% endif %}
 
         <!-- Social Links -->
-        <p class="view" style="display: flex; gap: 10px;">
+        <p class="view" style="display: flex; gap: 15px; justify-content: center; align-items: center; margin-bottom: 30px;">
           {% if site.linkedin_url %}
           <a href="{{ site.linkedin_url }}"><img src="/assets/images/linkedin-logo.png" alt="LinkedIn" style="width: 32px; height: 32px;" /></a>
           {% endif %}
           <a href="https://github.com/benstein"><img src="/assets/images/github-logo.png" alt="GitHub" style="width: 32px; height: 32px;" /></a>
         </p>
-
-        <!-- Links Section -->
-        <ul style="list-style: none; padding-left: 0;">
-          <li><a href="http://thefloweringartichoke.com">The Flowering Artichoke</a></li>
-          <li><a href="https://teammates.work">Teammates</a></li>
-          <li><a href="https://piedmontmakers.org">Piedmont Makers</a></li>
-        </ul>
 
       </header>
       <section>

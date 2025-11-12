@@ -108,11 +108,11 @@ Agents run in priority order:
 
 Then conflict and hallucination detectors run. The system iterates until all scores hit 8+/10. One agent may undo another's work (that's expected). The repeated iteration with scoring catches and resolves these tensions.
 
-## The Interface: Still Being Invented
+## The User Interface Is Still Being Invented
 
-The nerdy reality: I'm using Claude Code's command-line interface as my actual UI. Yes, I'm aware this makes me the guy bringing a TI-83 calculator to a dinner party. But hear me out.
+The unfortunate nerdy reality: While I love my writing agents, I'm using Claude Code's command-line interface as my actual UI. Yes, I'm aware this makes me the guy whipping out a TI-83 calculator at a dinner party. But hear me out.
 
-Running `/refine` triggers an interactive menu via AskUserQuestion:
+I start by running `/refine` which triggers an interactive menu (did you know Claude Code has a built-in customizable menu system? I didn't.):
 
 ```
 How much guidance do you want to provide?
@@ -140,7 +140,9 @@ The technology exists today to build writing tools that preserve your voice, mai
 
 ## The Reveal: AI Wrote This Post
 
-Plot twist: This entire post was written by the multi-agent system I just described. What you just read wasn't me writing about the system—it was the system writing about itself. Here are the actual scores from the agents that created this:
+Plot twist: This entire post was written by the multi-agent system I just described. What you just read wasn't me writing about the system—it was the system writing about itself. 
+
+Here are the actual scores from the agents that created this:
 
 ```
 Iteration 1 - Review Scores
@@ -179,4 +181,8 @@ All scores now at 8+ target:
 Overall: 8.7/10 - Publication ready!
 ```
 
-The Conflict Detector was, indeed, busy. But the system works.
+Let's just say the Authenticity Agent was, indeed, busy. 
+
+I personally think the system works quite well (although I would say that). 
+
+But you tell me: was the microwave burrito and TI-83 calculator reference really an 8.5 out of 10?
