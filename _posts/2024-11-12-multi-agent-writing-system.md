@@ -7,7 +7,7 @@ categories: [ai, writing, agents, claude]
 
 *I built a multi-agent writing system with Claude Code that automates my tedious refinement workflow while preserving my voice. Nine specialized agents iterate on drafts until they hit quality targets—no more copy-paste hell between LLMs.*
 
-After reading [this post](https://bcantrill.dtrace.org/2024/11/11/llms-are-not-for-writing/) by the indefatigable Bryan Cantrill on why you shouldn't use LLMs to write LinkedIn posts for you, I decided to let an LLM write a post outlining how I use LLMs to write. Bryan certainly nails the core problem:
+After reading [this post](https://www.linkedin.com/feed/update/urn:li:activity:7394083873082703872/) by the indefatigable [Bryan Cantrill](https://bcantrill.dtrace.org/) on why you shouldn't use LLMs to write LinkedIn posts for you, I decided to let an LLM write a post outlining how I use LLMs to write. Bryan certainly nails the core problem:
 
 > "Because holy hell, the writing sucks. It's not that it's mediocre (though certainly that!), it's that it is so stylistically grating, riddled with emojis and single-sentence paragraphs and 'it's not just... but also' constructions and (yes!) em-dashes that some of us use naturally -- but most don't (or shouldn't)."
 
