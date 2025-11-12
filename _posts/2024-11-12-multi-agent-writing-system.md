@@ -121,7 +121,7 @@ How much guidance do you want to provide?
   3. Full control (4 questions) - Let me specify all parameters
 ```
 
-![Claude Code review interface](/assets/images/posts/claude-code-review.png)
+![Claude Code review interface](/assets/images/claude_code_confirming_responses.png)
 *Claude Code's interactive review interface confirming document parameters*
 
 Is bash or zsh a reasonable interface for most people? No. But for demonstrating what's possible with agentic architecture, it's surprisingly effective. The CLI is to user interfaces what vinyl is to music formats—objectively inferior in convenience, inexplicably satisfying to enthusiasts, and it signals to others that you have opinions about things.

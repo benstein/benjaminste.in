@@ -1,0 +1,25 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Headshot sizing for all viewports */
+header img {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+@media screen and (max-width: 720px) {
+  header img {
+    max-width: 120px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header img {
+    max-width: 100px;
+  }
+}

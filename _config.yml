@@ -1,8 +1,9 @@
 # Site settings
 title: Benjamin Stein
 author: Benjamin Stein
+description: ""
 email: # Add your email if desired
-logo: /assets/images/ben pink headshot.png
+logo: /assets/images/ben_pink_headshot_circle.png
 
 # Build settings
 theme: jekyll-theme-minimal
