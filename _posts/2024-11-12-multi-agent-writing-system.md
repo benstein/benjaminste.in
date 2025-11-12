@@ -3,11 +3,12 @@ layout: default
 title: "How I Built a Multi-Agent Writing System That Actually Sounds Like Me"
 date: 2024-11-12
 categories: [ai, writing, agents, claude]
+excerpt: "I built a collaborative team of agents in Claude Code to automate my writing--without sounding like an LLM"
 ---
 
 # How I Built a Multi-Agent Writing System That Actually Sounds Like Me
 
-*I built a multi-agent writing system with Claude Code that automates my tedious refinement workflow while preserving my voice. Nine specialized agents iterate on drafts until they hit quality targets—no more copy-paste hell between LLMs.*
+*I built a collaborative team of agents in Claude Code to automate my writing--without sounding like an LLM*
 
 After reading [this post](https://www.linkedin.com/feed/update/urn:li:activity:7394083873082703872/) by the indefatigable [Bryan Cantrill](https://bcantrill.dtrace.org/) on why you shouldn't use LLMs to write LinkedIn posts for you, I decided to let an LLM write a post outlining how I use LLMs to write. Bryan certainly nails the core problem:
 
