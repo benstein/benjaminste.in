@@ -185,6 +185,10 @@ Overall: 8.7/10 - Publication ready!
 
 Let's just say the Authenticity Agent was, indeed, busy.
 
-I personally think the system works quite well (although I would say that). 
+I personally think the system works quite well (although I would say that).
 
 But you tell me: were the microwave burrito and TI-83 calculator references really an 8.5 out of 10? Only a human can be the judge of that.
+
+---
+
+*Want to see the actual agent code? All nine specialist agents are [open source on GitHub](https://github.com/benstein/righter/tree/main/.claude/agents).*
