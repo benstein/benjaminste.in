@@ -16,7 +16,10 @@
       "WebFetch(domain:www.teammates.work)",
       "WebFetch(domain:docs.google.com)",
       "Bash(git mv:*)",
-      "Bash(magick:*)"
+      "Bash(magick:*)",
+      "Bash(cat:*)",
+      "Bash(chmod:*)",
+      "Bash(ruby generate_alternate_formats.rb:*)"
     ]
   },
   "enableAllProjectMcpServers": true,

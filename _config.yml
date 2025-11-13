@@ -4,6 +4,7 @@ author: Benjamin Stein
 description: ""
 email: # Add your email if desired
 logo: /assets/images/ben_pink_headshot_circle.png
+url: https://benjaminste.in
 
 # Build settings
 theme: jekyll-theme-minimal
@@ -30,9 +31,20 @@ defaults:
     values:
       layout: "default"
 
+# Plugins
+plugins:
+  - jekyll-seo-tag
+
+# Include alternate format files
+include:
+  - blog
+
 # Exclude from processing
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
   - vendor/
+  - generate_alternate_formats.rb
+  - alternate_formats
+  - .github

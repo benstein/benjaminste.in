@@ -1,0 +1,60 @@
+{
+  "version": "1.0",
+  "site": {
+    "name": "Benjamin Stein's Blog",
+    "url": "https://benjaminste.in",
+    "author": "Benjamin Stein",
+    "description": "Blog posts about AI, software development, and technology",
+    "content_types": [
+      {
+        "type": "blog_post",
+        "format": "html",
+        "location_pattern": "/blog/YYYY/MM/DD/title/"
+      },
+      {
+        "type": "blog_post",
+        "format": "json",
+        "location_pattern": "/blog/YYYY/MM/DD/title.json",
+        "schema": {
+          "title": "string",
+          "date": "YYYY-MM-DD",
+          "author": "string",
+          "categories": "array",
+          "excerpt": "string",
+          "content": "string (markdown)",
+          "url": "string",
+          "html_url": "string",
+          "json_url": "string",
+          "markdown_url": "string"
+        }
+      },
+      {
+        "type": "blog_post",
+        "format": "markdown",
+        "location_pattern": "/blog/YYYY/MM/DD/title.md",
+        "description": "Clean markdown without front matter, optimized for AI consumption"
+      }
+    ]
+  },
+  "ai_usage_policy": {
+    "crawling_allowed": true,
+    "training_allowed": true,
+    "attribution_requested": true,
+    "attribution_format": "Benjamin Stein (https://benjaminste.in)",
+    "content_declaration": "partial",
+    "notes": "Some content is AI-assisted but all posts are authored and approved by Benjamin Stein"
+  },
+  "structured_data": {
+    "schema_org": true,
+    "json_ld": true,
+    "open_graph": true
+  },
+  "discovery": {
+    "sitemap": "https://benjaminste.in/sitemap.xml",
+    "rss": "https://benjaminste.in/feed.xml",
+    "api": {
+      "blog_posts_json": "/blog/YYYY/MM/DD/title.json",
+      "blog_posts_markdown": "/blog/YYYY/MM/DD/title.md"
+    }
+  }
+}

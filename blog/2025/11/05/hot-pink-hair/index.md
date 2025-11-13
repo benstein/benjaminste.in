@@ -1,9 +1,11 @@
----
-layout: default
-title: "On Approaching 50 with Hot Pink Hair"
-date: 2025-11-05
-categories: [personal, robotics, life]
-excerpt: "Nine months ago, I walked into a hair salon and asked for hot pink hair. I get lots of questions. This answers some of them."
+# On Approaching 50 with Hot Pink Hair
+
+**Date:** 2025-11-05
+
+**Author:** Benjamin Stein
+
+**Categories:** personal, robotics, life
+
 ---
 
 # On Approaching 50 with Hot Pink Hair
