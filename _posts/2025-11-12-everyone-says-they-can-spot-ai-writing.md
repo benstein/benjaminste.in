@@ -1,16 +1,18 @@
 ---
 layout: default
-title: "How I Built a Multi-Agent Writing System That Actually Sounds Like Me"
+title: "Everyone Says They Can Spot AI Writing—Can You? 🤔"
 date: 2025-11-12
 categories: [ai, writing, agents, claude]
-excerpt: "I built a collaborative team of agents in Claude Code to automate my writing--without sounding like an LLM"
+excerpt: "I built a collaborative team of copywriters that run inside Claude Code (what?!) that automate my writing process--without sounding like an LLM"
 ---
 
-# How I Built a Multi-Agent Writing System That Actually Sounds Like Me
+# Everyone Says They Can Spot AI Writing—Can You? 🤔
 
-*I built a collaborative team of agents in Claude Code to automate my writing--without sounding like an LLM*
+*I built a collaborative team of copywriters that run inside Claude Code  (what?!) that automate my writing process--without sounding like an LLM*
 
-After reading [this post](https://www.linkedin.com/feed/update/urn:li:activity:7394083873082703872/) by the indefatigable [Bryan Cantrill](https://bcantrill.dtrace.org/) on why you shouldn't use LLMs to write LinkedIn posts for you, I decided to let an LLM write a post outlining how I use LLMs to write. Bryan certainly nails the core problem:
+After reading [this post](https://www.linkedin.com/feed/update/urn:li:activity:7394083873082703872/) by the indefatigable [Bryan Cantrill](https://bcantrill.dtrace.org/) on why you shouldn't use LLMs to write LinkedIn posts for you, I decided to let an LLM write a repsonse. Specifically, I'd let my team of nine autonmous AI agent copywriters do it.
+
+To start, Bryan certainly nails the core problem with most people's use of LLMs for writing:
 
 > "Because holy hell, the writing sucks. It's not that it's mediocre (though certainly that!), it's that it is so stylistically grating, riddled with emojis and single-sentence paragraphs and 'it's not just... but also' constructions and (yes!) em-dashes that some of us use naturally -- but most don't (or shouldn't)."
 
@@ -18,7 +20,7 @@ The issue isn't hard to identify: the one-shot "help me write this" prompt is th
 
 ## My Writing Process: Sophisticated but Laborious
 
-For the past year, I've had a writing process that works remarkably well. I've generated some of my best work using it, and the collaborative back-and-forth keeps my voice in the piece. This blog post explains how I captured that process in an agentic system.
+For the past year, I've had a writing process that worked remarkably well. I've generated some of my best work using it, and the collaborative back-and-forth keeps my voice in the piece. Let me start by explaining my manual process, which was the inspiration for my new team of autonomous AI copywriters.
 
 When I write substantial work (blog posts, business memos, long-form pieces), I typically have 3 tabs open: Google Docs, my homeboy ChattyG, and El Clauderino (if you're not into the whole brevity thing).
 
