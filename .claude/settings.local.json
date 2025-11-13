@@ -15,7 +15,8 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:www.teammates.work)",
       "WebFetch(domain:docs.google.com)",
-      "Bash(git mv:*)"
+      "Bash(git mv:*)",
+      "Bash(magick:*)"
     ]
   },
   "enableAllProjectMcpServers": true,

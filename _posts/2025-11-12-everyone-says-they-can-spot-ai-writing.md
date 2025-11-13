@@ -10,7 +10,7 @@ excerpt: "I built a collaborative team of copywriters that run inside Claude Cod
 
 *I built a collaborative team of copywriters that run inside Claude Code  (what?!) that automate my writing process--without sounding like an LLM*
 
-After reading [this post](https://www.linkedin.com/feed/update/urn:li:activity:7394083873082703872/) by the indefatigable [Bryan Cantrill](https://bcantrill.dtrace.org/) on why you shouldn't use LLMs to write LinkedIn posts for you, I decided to let an LLM write a repsonse. Specifically, I'd let my team of nine autonmous AI agent copywriters do it.
+After reading [this post](https://www.linkedin.com/feed/update/urn:li:activity:7394083873082703872/) by the indefatigable [Bryan Cantrill](https://bcantrill.dtrace.org/) on why you shouldn't use LLMs to write LinkedIn posts for you, I decided to let an LLM write a repsonse. The audacity, I know. More specifically, I'd let my team of nine(!) autonmous AI agent copywriters do it.
 
 To start, Bryan certainly nails the core problem with most people's use of LLMs for writing:
 
@@ -39,7 +39,7 @@ LLM vs LLM vs Ben vs LLM vs LLM. Turtles most of the way down.
 
 What's interesting is this cycle must repeat at different levels: sometimes working on document structure and narrative arc, sometimes refining individual paragraphs or sentences for clarity. Although after editing a single paragraph, I need the LLM to look at the entire document to ensure I didn't break the narrative arc or change tones.
 
-The results are shockingly good. But all that copying, pasting, and reformatting is exhausting. It's the opposite of what AI tools should be.
+The results are shockingly good. But all that copying, pasting, and reformatting is exhausting. It's the opposite of what AI tools should be. Like rinsing dishes before putting them in the dishwasher, then hand-washing them again when they come out.
 
 How can I automate these tedious refinement cycles while keeping my voice?
 
@@ -108,7 +108,7 @@ Agents run in priority order:
 - Tone Consistency
 - Humor (when applicable)
 
-Then conflict and hallucination detectors run. The system iterates until all scores hit 8+/10. One agent may undo another's work (that's expected). The repeated iteration with scoring catches and resolves these tensions.
+Then conflict and hallucination detectors run. The system iterates until all scores hit 8+/10. One agent may undo another's work (that's expected). The repeated iteration with scoring catches and resolves these tensions. It's recursive refinement all the way down. Remember those turtles? They've all gone to journalism school.
 
 ## The User Interface Is Still Being Invented
 
@@ -126,7 +126,7 @@ How much guidance do you want to provide?
 ![Claude Code review interface](/assets/images/claude_code_confirming_responses.png)
 *Claude Code's interactive review interface confirming document parameters*
 
-Is bash or zsh a reasonable interface for most people? No. Certainly not. But for demonstrating what's possible with agentic architecture, it's surprisingly effective. The CLI is to document editing what vinyl is to music formats: objectively inferior in convenience, inexplicably satisfying to enthusiasts, yes signals to others that you have opinions about things.
+Is bash or zsh a reasonable interface for most people? No. Certainly not. But for demonstrating what's possible with agentic architecture, it's surprisingly effective. My CLI interface is to document editing what vinyl is to music formats: objectively inferior in convenience, inexplicably satisfying to enthusiasts, requires you to explain your choices at parties (to people who don't care), yet signals to others that you have genuine opinions about things.
 
 ## Why This Matters
 
