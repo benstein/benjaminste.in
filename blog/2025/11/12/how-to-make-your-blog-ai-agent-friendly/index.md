@@ -10,162 +10,155 @@
 
 # How to Make Your Blog AI Agent-Friendly (And Why You Should)
 
-I added two lines to my blog's HTML header in October 2024.
+If I'm going to write so much about AI agents (or have my AI agents write about themselves, as the case may be), I thought it was only appropriate that my blog was as AI agent friendly as possible. I added a few lines of code to my blog. Some HTML meta tags, a JSON endpoint, a robots.txt update. Now AI agents can read my content as cleanly as humans do.
+
+I'm not talking about "AI optimization" in some vague SEO sense. I mean direct access: ChatGPT, Claude, Perplexity can pull machine-readable versions of my posts. When someone asks Claude "What does Ben Stein think about AI agents?", it can pull my actual content, not a garbled web scrape.
+
+The AI agent is just a better browser.
+
+This isn't about deprioritizing humans or writing for machines. It's recognizing that humans increasingly research through AI intermediaries. Making content AI-friendly means recognizing that machines are now legitimate readers.
+
+Publishers who resisted RSS feeds eventually discovered that millions of users preferred feed readers. The ones who embraced RSS early gained readership. The ones who resisted became invisible to an entire segment of their audience.
+
+We're at that moment again. Except this time, AI agents don't just aggregate content—they synthesize it, answer questions with it, route research through it. If your content isn't accessible to these systems, you're invisible to everyone using them.
+
+## Who This Is For
+
+I write about AI, agents, and automation. My audience: developers building AI systems, founders thinking about agent strategy, technical leaders trying to understand where this technology is headed. Many of them use AI tools to research. When they ask Claude or ChatGPT about agent patterns, I want my writing to be part of that answer.
+
+The web has always mediated between human intentions and machine capabilities. We write HTML because browsers need structure. We add alt text because screen readers need descriptions. We use semantic markup because search engines need context.
+
+AI agents are the next reader in that progression. They need structure too. Different structure.
+
+The technical implementation is surprisingly straightforward. Four components.
+
+## The Implementation
+
+**Alternate Format Links**
+
+The foundation: give AI agents alternate representations of your content. On every blog post, I add HTML meta tags that point to JSON and Markdown versions:
 
 ```html
-<link rel="alternate" type="application/json" href="/posts/example.json">
-<link rel="alternate" type="text/markdown" href="/posts/example.md">
+<link rel="alternate" type="application/json"
+      href="https://benste.in/posts/ai-agent-friendly.json">
+<link rel="alternate" type="text/markdown"
+      href="https://benste.in/posts/ai-agent-friendly.md">
 ```
 
-Those two lines enabled AI agents to read my blog posts directly—not just humans with browsers anymore. ChatGPT, Claude, and Perplexity now access my content, working on behalf of humans researching topics, synthesizing information, answering questions, connecting dots across thousands of sources. The web has become less "information superhighway" and more "information concierge service."
+The JSON version contains structured data—title, author, date, content, categories. The Markdown version is clean prose without navigation chrome or site furniture. Both formats strip away everything except the actual post content.
 
-My argument: this isn't about machines. It's about the humans directing them.
+When an AI agent encounters my blog post, it can request the JSON or Markdown version instead of parsing HTML. Cleaner, faster, more reliable than trying to extract content from complex page layouts.
 
-## Core Concept
+My blog generates these alternate versions automatically on build. Simple script: reads source files, outputs three formats. HTML for humans, JSON for structured access, Markdown for clean text. The entire pipeline runs in seconds.
 
-Content consumption changed.
+**Schema.org Structured Data**
 
-People ask AI agents to research topics, summarize arguments, synthesize information from dozens of sources. Content that isn't accessible to these agents becomes invisible to everyone using them. It's the digital equivalent of having the world's best product review buried in a filing cabinet—technically exists, functionally doesn't. The agents require three formats: HTML for humans, JSON for structured data, Markdown for clean text.
-
-My blog provides all three.
-
-## Key Argument
-
-My reframe: "The AI agent is just a better browser."
-
-Machine-readable content doesn't deprioritize human readers. It serves humans who use AI tools for information access. RSS feeds faced identical resistance twenty years ago—content consumption patterns evolve, infrastructure follows. The people who said "nobody wants to read through a feed reader" eventually discovered that millions of people wanted exactly that, once Google Reader made it effortless.
-
-"Making content AI-friendly isn't about deprioritizing humans. It's about recognizing that machines are now legitimate readers, and they're reading on our behalf."
-
-Humans access content through intermediaries now—AI agents that search, filter, summarize, synthesize. These agents need clean, structured data the same way RSS readers needed XML feeds. The mechanism has a certain *déjà vu* quality: new technology, same infrastructure requirements, identical resistance from publishers who insist this time is different.
-
-When an AI agent cleanly parses your blog post, the agent accurately represents your ideas when someone researches your topic. When the agent cannot parse it cleanly, your work doesn't exist to the growing number of people who research through AI. Schrödinger's blog post—simultaneously published and invisible.
-
-The mechanism parallels RSS adoption. Publishers who provided RSS feeds became discoverable through feed readers. Publishers who didn't became invisible to that distribution channel. AI agents function as a new distribution channel with similar infrastructure requirements. The lesson from RSS adoption: the people who said "my readers don't use feed readers" were technically correct—their readers couldn't, because they hadn't provided feeds.
-
-## Technical Implementation
-
-Four layers make content discoverable and usable. It's not rocket surgery, but it does require intention.
-
-**1. Alternate Format Links**
-
-HTML meta tags point to JSON and Markdown versions. Same mechanism RSS feeds used. These links live in your document head, telling AI crawlers that alternative representations exist:
-
-```html
-<link rel="alternate" type="application/json" href="/posts/example.json">
-<link rel="alternate" type="text/markdown" href="/posts/example.md">
-```
-
-RSS adoption demonstrated that when crawlers can find structured alternatives, they use them reliably. The web has operated on this principle since Tim Berners-Lee was writing specs: declare what you have, machines will find it.
-
-**2. Schema.org Structured Data**
-
-JSON-LD markup embedded in pages provides semantic understanding. Instead of machines guessing what they're looking at—a process with roughly the accuracy of reading tea leaves—you explicitly declare it:
+Beyond alternate formats, I add semantic metadata using JSON-LD markup. This tells AI agents what type of content they're looking at and how it's organized:
 
 ```json
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Your Post Title",
-  "author": {"@type": "Person", "name": "Your Name"},
-  "datePublished": "2024-10-15",
-  "articleBody": "Your content here..."
+  "headline": "How to Make Your Blog AI Agent-Friendly",
+  "author": {
+    "@type": "Person",
+    "name": "Benjamin Stein"
+  },
+  "datePublished": "2025-11-12",
+  "articleBody": "..."
 }
 ```
 
-This markup specifies exactly what machines are reading: headline, author, publication date, body text, and relationships between them. Search engines and AI crawlers parse this reliably. Without it, they reverse-engineer meaning from HTML structure—error-prone and incomplete. The difference between giving someone your address versus making them deduce it from your utility bills.
+Schema.org markup has been around for years, primarily for search engine optimization. AI agents use it differently. They treat it as a semantic layer that clarifies relationships and content types. Instead of guessing whether a block of text is the main article or a sidebar, they read the structured data.
 
-**3. AI-Friendly robots.txt**
+This isn't new technology—it's existing infrastructure being used for a new purpose. The same markup that helped Google understand your content now helps Claude.
 
-Explicitly permit AI crawlers and grant access to your machine-readable formats:
+**AI-Friendly robots.txt**
+
+The robots.txt file controls which automated systems can access which parts of your site. For years, this meant telling search engine crawlers where they could go. Now it means explicitly permitting AI agents.
+
+I added entries for known AI crawlers:
 
 ```
 User-agent: GPTBot
 Allow: /
-Allow: *.json
-Allow: *.md
 
 User-agent: Claude-Web
 Allow: /
-Allow: *.json
-Allow: *.md
 
 User-agent: CCBot
 Allow: /
 ```
 
-This permission layer is critical. Many publishers block AI crawlers by default, then wonder why their content doesn't appear in AI-powered research. It's the digital equivalent of locking your storefront and complaining about foot traffic. Explicit permission signals intent and ensures content discoverability through the channels you specify.
+The default behavior varies by agent. Some respect standard crawl permissions; others use proprietary identifiers. By explicitly allowing these bots, I signal that my content is available for AI systems to read and reference.
 
-**4. Content Manifest**
+I also added a line pointing to my alternate formats:
 
-Create `/ai-content-manifest.json` to describe site structure comprehensively:
+```
+# AI-friendly alternate formats available
+# See /ai-content-manifest.json for details
+```
+
+This acts as a pointer for AI systems that know to look for machine-readable content.
+
+**Content Manifest**
+
+The final layer: a site-wide manifest file at `/ai-content-manifest.json`. This is my own convention—not a standard, just a pattern I implemented and documented.
+
+The manifest describes my site's structure, lists all posts with their alternate format URLs, specifies attribution requirements, declares content policies:
 
 ```json
 {
-  "site_name": "Your Blog",
-  "content_types": ["blog_posts"],
-  "formats": ["html", "json", "markdown"],
-  "ai_crawling": {
-    "allowed": true,
-    "training": "permitted",
-    "attribution": "required"
+  "site": {
+    "name": "Ben Stein's Blog",
+    "url": "https://benste.in",
+    "author": "Benjamin Stein"
   },
-  "usage_policies": "Cite author and source"
+  "content_policy": {
+    "ai_access": "permitted",
+    "attribution_required": true,
+    "commercial_use": "allowed_with_attribution"
+  },
+  "posts": [
+    {
+      "title": "How to Make Your Blog AI Agent-Friendly",
+      "url": "https://benste.in/posts/ai-agent-friendly",
+      "formats": {
+        "html": "https://benste.in/posts/ai-agent-friendly",
+        "json": "https://benste.in/posts/ai-agent-friendly.json",
+        "markdown": "https://benste.in/posts/ai-agent-friendly.md"
+      }
+    }
+  ]
 }
 ```
 
-The manifest communicates your terms upfront. It specifies what the site is, what formats you provide, whether content can be used for training, and what attribution you require. This prevents misuse and establishes clear boundaries. The web has always functioned best when expectations are explicit—ambiguity is where lawyers make their living.
+This gives AI agents a single point of entry to understand everything available on my site. Rather than crawling page by page, they read the manifest and know exactly what content exists and how to access it.
 
-The architecture works because each layer builds on the previous one. Alternate format links enable discovery. Schema.org provides semantic understanding. Robots.txt grants explicit permission. The manifest communicates comprehensive terms. Four pieces, working together, transform a human-only website into one machines can read and respect. It's turtles all the way down, except the turtles are metadata and they actually support something useful.
+I built this manifest as part of my static site generation process. Every time I publish a new post, the manifest updates automatically. Zero ongoing maintenance.
 
-## Practical Implementation
+## Why You Should
 
-Most publishers could implement this in an afternoon. That's not marketing hyperbole—it's genuinely a few hours of focused work if your publishing infrastructure isn't held together with duct tape and optimism.
+I research through AI agents constantly now. When I'm learning about a new technology, I ask Claude to synthesize multiple sources. When I'm trying to understand someone's position on a topic, I ask for summaries of their writing. When I'm exploring a technical concept, I use AI to pull together relevant blog posts and documentation.
 
-**Generation workflow**: Generate JSON and Markdown versions for each post. This can be automated—scripts that convert your HTML or Markdown source into these formats. Many existing static site generators support this natively. If you're writing in Markdown already, you're halfway done without realizing it.
+I'm not unique in this. The developers and founders I talk to use AI for research in similar ways. We're not replacing reading—we're routing our attention through systems that can surface, synthesize, and contextualize information faster than manual web browsing.
 
-**HTML updates**: Add meta tags to your HTML header. Two lines of code per post (or one global addition if your templates support it):
+If your content isn't accessible to these systems, you're invisible to this entire workflow. Not because AI companies are gatekeeping, but because parsing HTML is messy and unreliable. Giving AI agents clean, structured access to your content is the difference between being included in synthesis and being skipped.
 
-```html
-<link rel="alternate" type="application/json" href="/posts/example.json">
-<link rel="alternate" type="text/markdown" href="/posts/example.md">
-```
+There's also a longer-term consideration. AI agents are getting better at following citations, attributing sources, and linking back to original content. When an AI system references my blog post and provides a direct link, that creates a path for readers to engage with my full argument in context. But only if the AI could read my content reliably in the first place.
 
-This is the level of technical complexity that separates "I should do this" from "I did this." Two lines. The barrier to entry is roughly equivalent to learning a new keyboard shortcut.
+This is the same dynamic that made RSS valuable. Feed readers didn't replace blogs—they multiplied reach. AI agents work similarly. They surface your ideas to people who might never have found them otherwise.
 
-**Metadata markup**: Include Schema.org structured data in your post template. JSON-LD is cleaner than inline microdata and doesn't bloat your HTML with attributes that make your markup look like it has *chutzpah*:
+The philosophical objection—that we shouldn't optimize for machines—misses the point. We've always structured content for machines. HTML is machine structure. Semantic markup is machine structure. URLs are machine structure. The entire web is a negotiation between human expression and machine readability.
 
-```html
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "{{ post.title }}",
-  "datePublished": "{{ post.date }}"
-}
-</script>
-```
+AI agents are just the next machine in that negotiation. Serving them doesn't mean serving them instead of humans. It means serving the humans who choose to read through them.
 
-**Permissions**: Update your robots.txt file to explicitly allow AI crawlers. Create your manifest file describing your site's structure and policies. The whole robots.txt update takes five minutes unless you're running a site so complex that you've forgotten what's in your own directories.
+## What Happens Next
 
-This is additive infrastructure running alongside your current HTML output. You're not abandoning your publishing workflow or redesigning your site. You're extending what already exists. The digital equivalent of adding a ramp next to your stairs—same building, more ways in.
+I don't know if AI content manifests will become a standard. Maybe someone will formalize this into a spec. Maybe site generators will build it in by default. Maybe AI companies will create better discovery mechanisms that make manual markup unnecessary.
 
-## Broader Philosophy: Why This Matters Beyond the Technical
+But right now (late 2025), there's a window where making your content AI-friendly is both easy and advantageous. The people implementing this early will be the ones whose ideas show up in AI-mediated research.
 
-Content visibility used to depend on direct traffic or search engine crawling. Both assumed readers came directly to your site. That model is shifting. Readers now come through AI intermediaries—agents that search, filter, summarize, and synthesize across thousands of sources. Visibility depends on being accessible through those intermediaries.
+I added those meta tags in October. I've already seen the results—AI systems citing my posts with clean attribution, developers finding my writing through Claude, researchers asking detailed questions about my arguments because the AI could surface teh right content.
 
-The person researching your field through Claude or ChatGPT is still your reader. The human directing that tool is your actual audience. They've chosen a research method. The technical requirement is ensuring your ideas are accessible within it. Complaining that they should come to your site directly is roughly as productive as insisting people should drive to the library instead of using Google—technically you're not wrong, practically you've lost the plot.
-
-Publishers who provided RSS feeds became discoverable through feed readers. Publishers who didn't became invisible to that distribution channel. AI agents function as a new distribution channel with similar infrastructure requirements. The pattern repeats because the underlying dynamic hasn't changed: new consumption method emerges, infrastructure adapts, publishers who adapt remain visible.
-
-My implementation code is open-source on GitHub. Most publishers could implement this in an afternoon. The code doesn't require a PhD in computer science or a FromSoftware-level difficulty tolerance. It requires recognizing that content accessibility has always been infrastructure, and infrastructure requires maintenance.
-
-The technical question: do you want your work findable in the research workflows that define how people discover ideas now?
-
-The practical answer: those two lines of HTML aren't just about machines. They're about the humans who send machines to do their reading.
-
----
-
-*Check out the [AI-README.md](https://benjaminste.in/AI-README.md) and [ai-content-manifest.json](https://benjaminste.in/ai-content-manifest.json) on this site to see the full implementation. Or just curl the JSON version of this post to see it in action.*
-
-*All implementation code is available at [github.com/benstein/benjaminste.in](https://github.com/benstein/benjaminste.in)*
+That's not magic. It's infrastructure. The same infrastructure that's made the web accessible for decades, now extended to a new class of readers who happen to be machines serving humans.
