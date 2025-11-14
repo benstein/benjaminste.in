@@ -52,7 +52,7 @@ Did we really have a bear named Cholent? I choose to believe we did. It makes th
 
 The tradition died out briefly in the mid-20th century. Assimilation pressures, probably. My uncle David had a dog named "Rex" in the 1960s. Rex! Like we were trying to blend in with some imaginary gentile standard of normal pet names. The family still talks about this as a regrettable period. "The Rex years," my father calls it, shaking his head.
 
-But traditions have a way of resurging. When we got Kugel in 1998, it felt like a return to form. Something essential had been restored. And now we have Soup, who is currently asleep on the couch, unaware that he's part of a multi-generational legacy that may or may not include a medium-sized bear.
+But traditions have a way of resurging. When we got Kugel in 2008, it felt like a return to form. Something essential had been restored. And now we have Soup, who is currently asleep on the couch, unaware that he's part of a multi-generational legacy that may or may not include a medium-sized bear.
 
 And after Soup, we'll get another pet. We haven't decided what yet. But the name is already chosen: Rugelach. It's a family decision, arrived at by consensus. My mother suggested Gefilte, but we all agreed that felt mean to the animal.
 
