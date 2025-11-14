@@ -44,3 +44,25 @@ header img {
     max-width: 100px;
   }
 }
+
+/* Prompt styling for Useful Prompts page */
+blockquote {
+  border-left: 4px solid #6a737d;
+  padding: 10px 20px;
+  margin: 20px 0;
+  background-color: #f6f8fa;
+  font-style: italic;
+  color: #24292e;
+}
+
+blockquote em {
+  font-style: italic;
+}
+
+/* Horizontal rules for prompt separation */
+hr {
+  border: 0;
+  height: 1px;
+  background: #e1e4e8;
+  margin: 40px 0;
+}

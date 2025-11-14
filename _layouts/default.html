@@ -78,6 +78,12 @@
         <p>{{ site.description }}</p>
         {% endif %}
 
+        <!-- Navigation -->
+        <p class="view" style="text-align: center; margin-bottom: 20px;">
+          <a href="{{ "/" | absolute_url }}">Home</a> •
+          <a href="{{ "/useful-prompts/" | relative_url }}">Useful Prompts</a>
+        </p>
+
         <!-- Social Links -->
         <p class="view" style="display: flex; gap: 15px; justify-content: center; align-items: center; margin-bottom: 30px;">
           {% if site.linkedin_url %}
