@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How to Protect Yourself Online (2026 Edition)"
-date: 2026-01-01
+date: 2025-11-14
 categories: [security, technology, guide]
 excerpt: "Every year I write an updated guide for friends and family who want a New Year's Resolution that might actually stick. Here's my latest for 2026."
 ---
