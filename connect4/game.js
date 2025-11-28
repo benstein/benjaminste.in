@@ -31,6 +31,7 @@ let humanPlayer = PLAYER_RED;
 let aiPlayer = PLAYER_YELLOW;
 let lastMove = null; // Stores {row, col, player} for undo
 let canUndo = false;
+let aiExplanation = []; // Stores reasoning for AI's last move
 
 const boardElement = document.getElementById('board');
 const playerDisplay = document.getElementById('player-display');
@@ -38,6 +39,9 @@ const messageElement = document.getElementById('message');
 const twoPlayerBtn = document.getElementById('two-player-btn');
 const aiButtons = document.querySelectorAll('.ai-btn');
 const undoBtn = document.getElementById('undo-btn');
+const explainBtn = document.getElementById('explain-btn');
+const explanationModal = document.getElementById('explanation-modal');
+const explanationText = document.getElementById('explanation-text');
 
 function initBoard(aiMode = false, difficulty = 'hard') {
     board = Array(ROWS).fill(null).map(() => Array(COLS).fill(null));
@@ -66,6 +70,10 @@ function initBoard(aiMode = false, difficulty = 'hard') {
     canUndo = false;
     updateUndoButton();
 
+    // Reset explanation state
+    aiExplanation = [];
+    updateExplainButton();
+
     messageElement.textContent = '';
     updatePlayerDisplay();
     renderBoard();
@@ -81,6 +89,15 @@ function updateUndoButton() {
     } else {
         undoBtn.classList.remove('hidden');
         undoBtn.disabled = !canUndo;
+    }
+}
+
+function updateExplainButton() {
+    if (!isAIMode) {
+        explainBtn.classList.add('hidden');
+    } else {
+        explainBtn.classList.remove('hidden');
+        explainBtn.disabled = aiExplanation.length === 0;
     }
 }
 
@@ -308,14 +325,26 @@ function makeAIMove() {
 }
 
 function findBestMove() {
+    // Clear previous explanation
+    aiExplanation = [];
     const settings = getAISettings();
+
+    aiExplanation.push(`Difficulty: ${aiDifficulty.toUpperCase()} (lookahead depth: ${settings.depth})`);
 
     // First check for immediate wins or blocks (all difficulties do this)
     const immediateWin = findWinningMove(aiPlayer);
-    if (immediateWin !== -1) return immediateWin;
+    if (immediateWin !== -1) {
+        aiExplanation.push(`Found immediate winning move in column ${immediateWin + 1}!`);
+        updateExplainButton();
+        return immediateWin;
+    }
 
     const immediateBlock = findWinningMove(humanPlayer);
-    if (immediateBlock !== -1) return immediateBlock;
+    if (immediateBlock !== -1) {
+        aiExplanation.push(`Blocking your winning threat in column ${immediateBlock + 1}.`);
+        updateExplainButton();
+        return immediateBlock;
+    }
 
     // Randomness factor - occasionally pick a random valid move (for easier difficulties)
     if (settings.randomness > 0 && Math.random() < settings.randomness) {
@@ -323,12 +352,17 @@ function findBestMove() {
         for (let col = 0; col < COLS; col++) {
             if (getLowestEmptyRow(col) !== -1) validCols.push(col);
         }
-        return validCols[Math.floor(Math.random() * validCols.length)];
+        const randomCol = validCols[Math.floor(Math.random() * validCols.length)];
+        aiExplanation.push(`Playing randomly (easier difficulty) - chose column ${randomCol + 1}.`);
+        updateExplainButton();
+        return randomCol;
     }
 
     // Use minimax for deeper analysis
+    aiExplanation.push(`Evaluating all possible moves using minimax algorithm...`);
     let bestScore = -Infinity;
     let bestCols = [];
+    let colScores = [];
 
     for (let col = 0; col < COLS; col++) {
         const row = getLowestEmptyRow(col);
@@ -339,6 +373,7 @@ function findBestMove() {
 
         // Evaluate with minimax using difficulty-based depth
         const score = minimax(settings.depth - 1, -Infinity, Infinity, false);
+        colScores.push({ col: col + 1, score: score.toFixed(0) });
 
         // Undo move
         board[row][col] = null;
@@ -351,8 +386,18 @@ function findBestMove() {
         }
     }
 
+    aiExplanation.push(`Column scores: ${colScores.map(c => `Col ${c.col}=${c.score}`).join(', ')}`);
+    aiExplanation.push(`Best score: ${bestScore.toFixed(0)}`);
+
     // Randomize among equal best moves to avoid predictability
-    return bestCols[Math.floor(Math.random() * bestCols.length)];
+    if (bestCols.length > 1) {
+        aiExplanation.push(`Multiple equally good moves (columns ${bestCols.map(c => c + 1).join(', ')}). Randomly chose one.`);
+    }
+    const chosenCol = bestCols[Math.floor(Math.random() * bestCols.length)];
+    aiExplanation.push(`Final decision: Column ${chosenCol + 1}`);
+
+    updateExplainButton();
+    return chosenCol;
 }
 
 function minimax(depth, alpha, beta, isMaximizing) {
@@ -728,5 +773,20 @@ aiButtons.forEach(btn => {
     });
 });
 undoBtn.addEventListener('click', undoMove);
+
+// Explain button - show modal with AI reasoning
+explainBtn.addEventListener('click', () => {
+    if (aiExplanation.length > 0) {
+        explanationText.innerHTML = aiExplanation.map(line => `<p>${line}</p>`).join('');
+        explanationModal.classList.remove('hidden');
+    }
+});
+
+// Click outside modal to close
+explanationModal.addEventListener('click', (e) => {
+    if (e.target === explanationModal) {
+        explanationModal.classList.add('hidden');
+    }
+});
 
 initBoard();

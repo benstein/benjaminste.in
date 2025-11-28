@@ -141,6 +141,84 @@ h1 {
     display: none;
 }
 
+#explain-btn {
+    background: #ffd93d;
+    color: #000;
+    border: none;
+    padding: clamp(6px, 1.5vw, 12px) clamp(10px, 2vw, 20px);
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s, background 0.2s;
+}
+
+#explain-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    background: #ffed4e;
+}
+
+#explain-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+#explain-btn:disabled {
+    background: #666;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+#explain-btn.hidden {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: linear-gradient(145deg, #2c3e50, #34495e);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 2px solid #3a8ae6;
+}
+
+.modal-content h3 {
+    color: #ffd93d;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.modal-content #explanation-text {
+    color: white;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.modal-content #explanation-text p {
+    margin: 10px 0;
+}
+
 .board-grid {
     display: grid;
     grid-template-columns: auto auto auto;
