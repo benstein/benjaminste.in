@@ -358,43 +358,49 @@ h1 {
 }
 
 @media (max-width: 768px) {
+    .board-grid {
+        gap: 2px;
+    }
+
+    .board {
+        padding: 2px;
+        gap: 2px;
+        border-width: 1px;
+        border-radius: 5px;
+    }
+
     .main-board {
-        grid-template-columns: repeat(7, min(3.5vh, 40px)) !important;
-        grid-template-rows: repeat(6, min(3.5vh, 40px)) !important;
+        grid-template-columns: repeat(7, 5.5vw) !important;
+        grid-template-rows: repeat(6, 5.5vw) !important;
     }
 
     .mirror-board[data-position="top"],
     .mirror-board[data-position="bottom"] {
-        grid-template-columns: repeat(7, min(3.5vh, 40px)) !important;
-        grid-template-rows: repeat(3, min(3.5vh, 40px)) !important;
+        grid-template-columns: repeat(7, 5.5vw) !important;
+        grid-template-rows: repeat(3, 5.5vw) !important;
     }
 
     .mirror-board[data-position="left"],
     .mirror-board[data-position="right"] {
-        grid-template-columns: repeat(3, min(3.5vh, 40px)) !important;
-        grid-template-rows: repeat(6, min(3.5vh, 40px)) !important;
+        grid-template-columns: repeat(3, 5.5vw) !important;
+        grid-template-rows: repeat(6, 5.5vw) !important;
     }
 
     .mirror-board[data-position="top-left"],
     .mirror-board[data-position="top-right"],
     .mirror-board[data-position="bottom-left"],
     .mirror-board[data-position="bottom-right"] {
-        grid-template-columns: repeat(3, min(3.5vh, 40px)) !important;
-        grid-template-rows: repeat(3, min(3.5vh, 40px)) !important;
+        grid-template-columns: repeat(3, 5.5vw) !important;
+        grid-template-rows: repeat(3, 5.5vw) !important;
     }
 
     .cell {
-        width: min(3.5vh, 40px);
-        height: min(3.5vh, 40px);
+        width: 5.5vw;
+        height: 5.5vw;
     }
 
     .game-info {
         flex-direction: column;
         gap: 10px;
-    }
-
-    .board {
-        padding: 4px;
-        gap: 8px;
     }
 }
