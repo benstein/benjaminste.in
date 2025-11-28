@@ -1,1 +1,37 @@
-/Users/ben/Work/connect4/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect 4 Gabi Style</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Connect 4 Gabi Style</h1>
+        <div class="game-info">
+            <div class="current-player">
+                Current: <span id="player-display" class="player-red">Red</span>
+                <span id="thinking-spinner" class="thinking-spinner hidden"></span>
+            </div>
+            <div class="button-group">
+                <button id="two-player-btn">2-Player Game</button>
+                <button id="ai-btn">Play BenBot</button>
+            </div>
+        </div>
+        <div class="board-grid">
+            <div id="board-tl" class="board mirror-board" data-position="top-left"></div>
+            <div id="board-t" class="board mirror-board" data-position="top"></div>
+            <div id="board-tr" class="board mirror-board" data-position="top-right"></div>
+            <div id="board-l" class="board mirror-board" data-position="left"></div>
+            <div id="board" class="board main-board"></div>
+            <div id="board-r" class="board mirror-board" data-position="right"></div>
+            <div id="board-bl" class="board mirror-board" data-position="bottom-left"></div>
+            <div id="board-b" class="board mirror-board" data-position="bottom"></div>
+            <div id="board-br" class="board mirror-board" data-position="bottom-right"></div>
+        </div>
+        <div id="message" class="message"></div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
