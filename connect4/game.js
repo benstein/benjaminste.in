@@ -3,10 +3,30 @@ const COLS = 7;
 const PLAYER_RED = 'red';
 const PLAYER_YELLOW = 'yellow';
 
+// Difficulty settings
+const DIFFICULTY_SETTINGS = {
+    easy: {
+        depth: 2,
+        wrapBonus: 1.0,  // No wrap bonus - doesn't try to trick
+        randomness: 0.15  // 15% chance to pick suboptimal move
+    },
+    medium: {
+        depth: 4,
+        wrapBonus: 1.1,
+        randomness: 0.05  // 5% chance to pick suboptimal move
+    },
+    hard: {
+        depth: 7,
+        wrapBonus: 1.2,
+        randomness: 0  // Always optimal
+    }
+};
+
 let currentPlayer = PLAYER_RED;
 let board = [];
 let gameOver = false;
 let isAIMode = false;
+let aiDifficulty = 'hard';
 let humanPlayer = PLAYER_RED;
 let aiPlayer = PLAYER_YELLOW;
 
@@ -14,12 +34,13 @@ const boardElement = document.getElementById('board');
 const playerDisplay = document.getElementById('player-display');
 const messageElement = document.getElementById('message');
 const twoPlayerBtn = document.getElementById('two-player-btn');
-const aiBtn = document.getElementById('ai-btn');
+const aiButtons = document.querySelectorAll('.ai-btn');
 
-function initBoard(aiMode = false) {
+function initBoard(aiMode = false, difficulty = 'hard') {
     board = Array(ROWS).fill(null).map(() => Array(COLS).fill(null));
     gameOver = false;
     isAIMode = aiMode;
+    aiDifficulty = difficulty;
 
     if (isAIMode) {
         const aiGoesFirst = Math.random() < 0.5;
@@ -210,14 +231,16 @@ function makeMove(col) {
 }
 
 // AI Constants
-const AI_DEPTH = 7; // Lookahead depth for minimax
 const SCORE_WIN = 100000;
 const SCORE_THREE = 100;
 const SCORE_TWO = 10;
 const SCORE_CENTER_BONUS = 3;
-const WRAP_BONUS_MULTIPLIER = 1.2;
 
 const thinkingSpinner = document.getElementById('thinking-spinner');
+
+function getAISettings() {
+    return DIFFICULTY_SETTINGS[aiDifficulty];
+}
 
 function makeAIMove() {
     if (gameOver) return;
@@ -233,12 +256,23 @@ function makeAIMove() {
 }
 
 function findBestMove() {
-    // First check for immediate wins or blocks
+    const settings = getAISettings();
+
+    // First check for immediate wins or blocks (all difficulties do this)
     const immediateWin = findWinningMove(aiPlayer);
     if (immediateWin !== -1) return immediateWin;
 
     const immediateBlock = findWinningMove(humanPlayer);
     if (immediateBlock !== -1) return immediateBlock;
+
+    // Randomness factor - occasionally pick a random valid move (for easier difficulties)
+    if (settings.randomness > 0 && Math.random() < settings.randomness) {
+        const validCols = [];
+        for (let col = 0; col < COLS; col++) {
+            if (getLowestEmptyRow(col) !== -1) validCols.push(col);
+        }
+        return validCols[Math.floor(Math.random() * validCols.length)];
+    }
 
     // Use minimax for deeper analysis
     let bestScore = -Infinity;
@@ -251,8 +285,8 @@ function findBestMove() {
         // Make move
         board[row][col] = aiPlayer;
 
-        // Evaluate with minimax
-        const score = minimax(AI_DEPTH - 1, -Infinity, Infinity, false);
+        // Evaluate with minimax using difficulty-based depth
+        const score = minimax(settings.depth - 1, -Infinity, Infinity, false);
 
         // Undo move
         board[row][col] = null;
@@ -408,8 +442,10 @@ function evaluateWindow(startRow, startCol, dRow, dCol) {
     }
 
     // Bonus for wrap-based threats (harder for humans to spot)
+    // Only applies based on difficulty setting
     if (wraps && score !== 0) {
-        score *= WRAP_BONUS_MULTIPLIER;
+        const settings = getAISettings();
+        score *= settings.wrapBonus;
     }
 
     return score;
@@ -633,6 +669,11 @@ function animateWinMessage() {
 }
 
 twoPlayerBtn.addEventListener('click', () => initBoard(false));
-aiBtn.addEventListener('click', () => initBoard(true));
+aiButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const difficulty = btn.dataset.difficulty;
+        initBoard(true, difficulty);
+    });
+});
 
 initBoard();

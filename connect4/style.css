@@ -88,11 +88,11 @@ h1 {
 }
 
 #two-player-btn,
-#ai-btn {
+.ai-btn {
     background: white;
     border: none;
-    padding: clamp(8px, 2vw, 15px) clamp(15px, 3vw, 30px);
-    font-size: clamp(0.8rem, 2vw, 1rem);
+    padding: clamp(6px, 1.5vw, 12px) clamp(10px, 2vw, 20px);
+    font-size: clamp(0.7rem, 1.8vw, 0.95rem);
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
@@ -101,13 +101,13 @@ h1 {
 }
 
 #two-player-btn:hover,
-#ai-btn:hover {
+.ai-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 #two-player-btn:active,
-#ai-btn:active {
+.ai-btn:active {
     transform: translateY(0);
 }
 
