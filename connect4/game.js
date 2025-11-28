@@ -29,12 +29,15 @@ let isAIMode = false;
 let aiDifficulty = 'hard';
 let humanPlayer = PLAYER_RED;
 let aiPlayer = PLAYER_YELLOW;
+let lastMove = null; // Stores {row, col, player} for undo
+let canUndo = false;
 
 const boardElement = document.getElementById('board');
 const playerDisplay = document.getElementById('player-display');
 const messageElement = document.getElementById('message');
 const twoPlayerBtn = document.getElementById('two-player-btn');
 const aiButtons = document.querySelectorAll('.ai-btn');
+const undoBtn = document.getElementById('undo-btn');
 
 function initBoard(aiMode = false, difficulty = 'hard') {
     board = Array(ROWS).fill(null).map(() => Array(COLS).fill(null));
@@ -58,12 +61,26 @@ function initBoard(aiMode = false, difficulty = 'hard') {
         currentPlayer = PLAYER_RED;
     }
 
+    // Reset undo state
+    lastMove = null;
+    canUndo = false;
+    updateUndoButton();
+
     messageElement.textContent = '';
     updatePlayerDisplay();
     renderBoard();
 
     if (isAIMode && currentPlayer === aiPlayer) {
         setTimeout(makeAIMove, 500);
+    }
+}
+
+function updateUndoButton() {
+    if (isAIMode) {
+        undoBtn.classList.add('hidden');
+    } else {
+        undoBtn.classList.remove('hidden');
+        undoBtn.disabled = !canUndo;
     }
 }
 
@@ -198,6 +215,13 @@ function makeMove(col) {
     const row = getLowestEmptyRow(col);
     if (row === -1) return;
 
+    // Store move for undo (only in 2-player mode)
+    if (!isAIMode) {
+        lastMove = { row, col, player: currentPlayer };
+        canUndo = true;
+        updateUndoButton();
+    }
+
     board[row][col] = currentPlayer;
     renderBoard();
 
@@ -212,6 +236,9 @@ function makeMove(col) {
         messageElement.textContent = `${currentPlayer.toUpperCase()} WINS!`;
         messageElement.style.color = currentPlayer === PLAYER_RED ? '#e74c3c' : '#f39c12';
         celebrate();
+        // Disable undo after game ends
+        canUndo = false;
+        updateUndoButton();
         return;
     }
 
@@ -219,6 +246,9 @@ function makeMove(col) {
         gameOver = true;
         messageElement.textContent = "IT'S A DRAW!";
         messageElement.style.color = 'white';
+        // Disable undo after game ends
+        canUndo = false;
+        updateUndoButton();
         return;
     }
 
@@ -228,6 +258,28 @@ function makeMove(col) {
     if (isAIMode && currentPlayer === aiPlayer && !gameOver) {
         setTimeout(makeAIMove, 500);
     }
+}
+
+function undoMove() {
+    if (!canUndo || !lastMove || isAIMode || gameOver) return;
+
+    // Remove the piece from the board
+    board[lastMove.row][lastMove.col] = null;
+
+    // Revert to the previous player
+    currentPlayer = lastMove.player;
+
+    // Clear undo state
+    lastMove = null;
+    canUndo = false;
+    updateUndoButton();
+
+    // Clear any messages
+    messageElement.textContent = '';
+
+    // Re-render and update display
+    renderBoard();
+    updatePlayerDisplay();
 }
 
 // AI Constants
@@ -675,5 +727,6 @@ aiButtons.forEach(btn => {
         initBoard(true, difficulty);
     });
 });
+undoBtn.addEventListener('click', undoMove);
 
 initBoard();
