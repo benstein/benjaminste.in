@@ -329,19 +329,32 @@ function findBestMove() {
     aiExplanation = [];
     const settings = getAISettings();
 
-    aiExplanation.push(`Difficulty: ${aiDifficulty.toUpperCase()} (lookahead depth: ${settings.depth})`);
+    aiExplanation.push(`Difficulty: ${aiDifficulty.toUpperCase()} (lookahead depth: ${settings.depth} moves)`);
+
+    // Count pieces for context
+    let aiPieces = 0, humanPieces = 0;
+    for (let r = 0; r < ROWS; r++) {
+        for (let c = 0; c < COLS; c++) {
+            if (board[r][c] === aiPlayer) aiPieces++;
+            if (board[r][c] === humanPlayer) humanPieces++;
+        }
+    }
+    aiExplanation.push(`Board state: BenBot has ${aiPieces} pieces, Human has ${humanPieces} pieces`);
+    aiExplanation.push(''); // Empty line
 
     // First check for immediate wins or blocks (all difficulties do this)
     const immediateWin = findWinningMove(aiPlayer);
     if (immediateWin !== -1) {
-        aiExplanation.push(`Found immediate winning move in column ${immediateWin + 1}!`);
+        aiExplanation.push(`🎯 Found immediate winning move in column ${immediateWin + 1}!`);
+        aiExplanation.push('Taking the win.');
         updateExplainButton();
         return immediateWin;
     }
 
     const immediateBlock = findWinningMove(humanPlayer);
     if (immediateBlock !== -1) {
-        aiExplanation.push(`Blocking your winning threat in column ${immediateBlock + 1}.`);
+        aiExplanation.push(`🛡️ Detected winning threat in column ${immediateBlock + 1}.`);
+        aiExplanation.push('Must block immediately to prevent loss.');
         updateExplainButton();
         return immediateBlock;
     }
@@ -362,21 +375,42 @@ function findBestMove() {
     aiExplanation.push(`Evaluating all possible moves using minimax algorithm...`);
     let bestScore = -Infinity;
     let bestCols = [];
-    let colScores = [];
+    let colAnalysis = [];
 
     for (let col = 0; col < COLS; col++) {
         const row = getLowestEmptyRow(col);
-        if (row === -1) continue;
+        if (row === -1) {
+            colAnalysis.push({ col: col + 1, score: null, reason: 'Column full' });
+            continue;
+        }
 
         // Make move
         board[row][col] = aiPlayer;
 
+        // Analyze position before minimax
+        const positionAnalysis = analyzePosition(row, col, aiPlayer);
+
         // Evaluate with minimax using difficulty-based depth
         const score = minimax(settings.depth - 1, -Infinity, Infinity, false);
-        colScores.push({ col: col + 1, score: score.toFixed(0) });
 
         // Undo move
         board[row][col] = null;
+
+        // Determine reasoning
+        let reasoning = [];
+        if (positionAnalysis.creates3InRow) reasoning.push('creates 3-in-a-row');
+        if (positionAnalysis.creates2InRow) reasoning.push('builds toward 4');
+        if (positionAnalysis.blocksOpponent) reasoning.push('blocks opponent');
+        if (positionAnalysis.hasWrapThreat) reasoning.push('wrap-around threat');
+        if (positionAnalysis.centerControl) reasoning.push('center control');
+        if (score < -1000) reasoning.push('⚠️ dangerous - gives opponent winning setup');
+        if (reasoning.length === 0) reasoning.push('neutral position');
+
+        colAnalysis.push({
+            col: col + 1,
+            score: score.toFixed(0),
+            reason: reasoning.join(', ')
+        });
 
         if (score > bestScore) {
             bestScore = score;
@@ -386,18 +420,112 @@ function findBestMove() {
         }
     }
 
-    aiExplanation.push(`Column scores: ${colScores.map(c => `Col ${c.col}=${c.score}`).join(', ')}`);
+    // Add detailed analysis
+    aiExplanation.push(''); // Empty line for readability
+    colAnalysis.forEach(analysis => {
+        if (analysis.score !== null) {
+            aiExplanation.push(`Column ${analysis.col}: Score ${analysis.score} - ${analysis.reason}`);
+        } else {
+            aiExplanation.push(`Column ${analysis.col}: ${analysis.reason}`);
+        }
+    });
+
+    aiExplanation.push(''); // Empty line
     aiExplanation.push(`Best score: ${bestScore.toFixed(0)}`);
+
+    // Explain what the best score means
+    if (bestScore > 5000) {
+        aiExplanation.push('This move leads to a likely win within a few turns.');
+    } else if (bestScore > 100) {
+        aiExplanation.push('Strong offensive position with multiple threats.');
+    } else if (bestScore > 0) {
+        aiExplanation.push('Slight advantage - good positioning.');
+    } else if (bestScore > -100) {
+        aiExplanation.push('Neutral position - no clear advantage.');
+    } else {
+        aiExplanation.push('Defensive position - limiting opponent opportunities.');
+    }
 
     // Randomize among equal best moves to avoid predictability
     if (bestCols.length > 1) {
-        aiExplanation.push(`Multiple equally good moves (columns ${bestCols.map(c => c + 1).join(', ')}). Randomly chose one.`);
+        aiExplanation.push(`Multiple equally good moves available (columns ${bestCols.map(c => c + 1).join(', ')}). Randomly chose one.`);
     }
     const chosenCol = bestCols[Math.floor(Math.random() * bestCols.length)];
-    aiExplanation.push(`Final decision: Column ${chosenCol + 1}`);
+    aiExplanation.push(''); // Empty line
+    aiExplanation.push(`✓ Final decision: Column ${chosenCol + 1}`);
 
     updateExplainButton();
     return chosenCol;
+}
+
+function analyzePosition(row, col, player) {
+    const analysis = {
+        creates3InRow: false,
+        creates2InRow: false,
+        blocksOpponent: false,
+        hasWrapThreat: false,
+        centerControl: false
+    };
+
+    // Check if center column
+    if (col === 3) analysis.centerControl = true;
+
+    const directions = [[0, 1], [1, 0], [1, 1], [1, -1]];
+
+    for (const [dRow, dCol] of directions) {
+        // Count our pieces in this direction
+        let ourCount = 1; // The piece we just placed
+        let hasWrap = false;
+
+        // Check both directions
+        for (const multiplier of [1, -1]) {
+            for (let i = 1; i < 4; i++) {
+                let checkRow = row + (dRow * i * multiplier);
+                let checkCol = col + (dCol * i * multiplier);
+
+                // Check for wrapping
+                if (checkRow < 0 || checkRow >= ROWS || checkCol < 0 || checkCol >= COLS) {
+                    hasWrap = true;
+                    checkRow = ((checkRow % ROWS) + ROWS) % ROWS;
+                    checkCol = ((checkCol % COLS) + COLS) % COLS;
+                }
+
+                if (board[checkRow][checkCol] === player) {
+                    ourCount++;
+                } else {
+                    break;
+                }
+            }
+        }
+
+        if (hasWrap && ourCount >= 2) analysis.hasWrapThreat = true;
+        if (ourCount >= 3) analysis.creates3InRow = true;
+        else if (ourCount >= 2) analysis.creates2InRow = true;
+    }
+
+    // Check if it blocks opponent
+    const opponent = player === aiPlayer ? humanPlayer : aiPlayer;
+    const savedPiece = board[row][col];
+    board[row][col] = opponent; // Temporarily place opponent piece
+
+    for (const [dRow, dCol] of directions) {
+        let oppCount = 1;
+        for (const multiplier of [1, -1]) {
+            for (let i = 1; i < 4; i++) {
+                let checkRow = ((row + (dRow * i * multiplier)) % ROWS + ROWS) % ROWS;
+                let checkCol = ((col + (dCol * i * multiplier)) % COLS + COLS) % COLS;
+                if (board[checkRow][checkCol] === opponent) {
+                    oppCount++;
+                } else {
+                    break;
+                }
+            }
+        }
+        if (oppCount >= 3) analysis.blocksOpponent = true;
+    }
+    board[row][col] = savedPiece; // Restore original piece
+
+    return analysis;
 }
 
 function minimax(depth, alpha, beta, isMaximizing) {
