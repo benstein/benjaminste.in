@@ -301,9 +301,13 @@ function undoMove() {
 
 // AI Constants
 const SCORE_WIN = 100000;
-const SCORE_THREE = 100;
+const SCORE_FORK = 5000;
+const SCORE_OPEN_THREE = 500;
+const SCORE_CLOSED_THREE = 100;
 const SCORE_TWO = 10;
 const SCORE_CENTER_BONUS = 3;
+const SCORE_VERTICAL_CONTROL = 5;
+const SCORE_DANGEROUS_MOVE = -10000;
 
 const thinkingSpinner = document.getElementById('thinking-spinner');
 
@@ -329,7 +333,7 @@ function findBestMove() {
     aiExplanation = [];
     const settings = getAISettings();
 
-    aiExplanation.push(`Difficulty: ${aiDifficulty.toUpperCase()} (lookahead depth: ${settings.depth} moves)`);
+    aiExplanation.push(`🤖 BenBot AI - Difficulty: ${aiDifficulty.toUpperCase()} (lookahead depth: ${settings.depth} moves)`);
 
     // Count pieces for context
     let aiPieces = 0, humanPieces = 0;
@@ -342,22 +346,46 @@ function findBestMove() {
     aiExplanation.push(`Board state: BenBot has ${aiPieces} pieces, Human has ${humanPieces} pieces`);
     aiExplanation.push(''); // Empty line
 
-    // First check for immediate wins or blocks (all difficulties do this)
+    // STEP 1: Check for immediate wins
     const immediateWin = findWinningMove(aiPlayer);
     if (immediateWin !== -1) {
-        aiExplanation.push(`🎯 Found immediate winning move in column ${immediateWin + 1}!`);
+        aiExplanation.push(`🎯 STEP 1: Found immediate winning move in column ${immediateWin + 1}!`);
         aiExplanation.push('Taking the win.');
         updateExplainButton();
         return immediateWin;
     }
+    aiExplanation.push(`✓ STEP 1: No immediate winning moves available.`);
 
+    // STEP 2: Check for immediate blocks
     const immediateBlock = findWinningMove(humanPlayer);
     if (immediateBlock !== -1) {
-        aiExplanation.push(`🛡️ Detected winning threat in column ${immediateBlock + 1}.`);
+        aiExplanation.push(`🛡️ STEP 2: Detected winning threat in column ${immediateBlock + 1}.`);
         aiExplanation.push('Must block immediately to prevent loss.');
         updateExplainButton();
         return immediateBlock;
     }
+    aiExplanation.push(`✓ STEP 2: No immediate threats to block.`);
+
+    // STEP 3: Check for fork opportunities (creating multiple threats)
+    aiExplanation.push(`🔍 STEP 3: Checking for fork opportunities...`);
+    const forkMove = findForkMove(aiPlayer);
+    if (forkMove !== -1) {
+        aiExplanation.push(`⚡ Found fork opportunity in column ${forkMove + 1}! This creates multiple winning threats.`);
+        aiExplanation.push('✓ Final decision: Taking the fork (nearly unstoppable).');
+        updateExplainButton();
+        return forkMove;
+    }
+    aiExplanation.push(`No fork opportunities found.`);
+
+    // STEP 4: Check if opponent can create a fork
+    aiExplanation.push(`🛡️ STEP 4: Checking if opponent can create a fork...`);
+    const blockFork = findForkMove(humanPlayer);
+    if (blockFork !== -1) {
+        aiExplanation.push(`⚠️ Opponent can create fork in column ${blockFork + 1}. Blocking it.`);
+        updateExplainButton();
+        return blockFork;
+    }
+    aiExplanation.push(`Opponent cannot create a fork on their next move.`);
 
     // Randomness factor - occasionally pick a random valid move (for easier difficulties)
     if (settings.randomness > 0 && Math.random() < settings.randomness) {
@@ -366,45 +394,70 @@ function findBestMove() {
             if (getLowestEmptyRow(col) !== -1) validCols.push(col);
         }
         const randomCol = validCols[Math.floor(Math.random() * validCols.length)];
-        aiExplanation.push(`Playing randomly (easier difficulty) - chose column ${randomCol + 1}.`);
+        aiExplanation.push(`🎲 Playing randomly (easier difficulty) - chose column ${randomCol + 1}.`);
         updateExplainButton();
         return randomCol;
     }
 
-    // Use minimax for deeper analysis
-    aiExplanation.push(`Evaluating all possible moves using minimax algorithm...`);
+    // STEP 5: Deep analysis with improved evaluation
+    aiExplanation.push(`📊 STEP 5: Deep strategic analysis (minimax with alpha-beta pruning)...`);
+    aiExplanation.push(''); // Empty line
+
+    // Quick heuristic evaluation for move ordering
+    let movesWithHeuristic = [];
+    for (let col = 0; col < COLS; col++) {
+        const row = getLowestEmptyRow(col);
+        if (row === -1) continue;
+
+        board[row][col] = aiPlayer;
+        const quickScore = quickEvaluate(row, col);
+        board[row][col] = null;
+
+        movesWithHeuristic.push({ col, row, quickScore });
+    }
+
+    // Sort by quick score (best first) for better pruning
+    movesWithHeuristic.sort((a, b) => b.quickScore - a.quickScore);
+    aiExplanation.push(`Move ordering (by quick heuristic): ${movesWithHeuristic.map(m => `Col ${m.col + 1}`).join(' > ')}`);
+
     let bestScore = -Infinity;
     let bestCols = [];
     let colAnalysis = [];
 
-    for (let col = 0; col < COLS; col++) {
-        const row = getLowestEmptyRow(col);
-        if (row === -1) {
-            colAnalysis.push({ col: col + 1, score: null, reason: 'Column full' });
-            continue;
-        }
+    // Evaluate with full minimax
+    for (const moveData of movesWithHeuristic) {
+        const { col, row } = moveData;
 
         // Make move
         board[row][col] = aiPlayer;
 
-        // Analyze position before minimax
-        const positionAnalysis = analyzePosition(row, col, aiPlayer);
+        // Detailed position analysis
+        const positionAnalysis = analyzePositionDetailed(row, col, aiPlayer);
+
+        // Check if this move gives opponent a winning response
+        const givesOpponentWin = checkOpponentResponse(row, col);
 
         // Evaluate with minimax using difficulty-based depth
-        const score = minimax(settings.depth - 1, -Infinity, Infinity, false);
+        const score = givesOpponentWin ? SCORE_DANGEROUS_MOVE : minimax(settings.depth - 1, -Infinity, Infinity, false);
 
         // Undo move
         board[row][col] = null;
 
-        // Determine reasoning
+        // Build reasoning
         let reasoning = [];
-        if (positionAnalysis.creates3InRow) reasoning.push('creates 3-in-a-row');
-        if (positionAnalysis.creates2InRow) reasoning.push('builds toward 4');
-        if (positionAnalysis.blocksOpponent) reasoning.push('blocks opponent');
-        if (positionAnalysis.hasWrapThreat) reasoning.push('wrap-around threat');
-        if (positionAnalysis.centerControl) reasoning.push('center control');
-        if (score < -1000) reasoning.push('⚠️ dangerous - gives opponent winning setup');
-        if (reasoning.length === 0) reasoning.push('neutral position');
+        if (givesOpponentWin) {
+            reasoning.push('❌ DANGEROUS - gives opponent winning response');
+        } else {
+            if (positionAnalysis.createsFork) reasoning.push('🍴 sets up future fork');
+            if (positionAnalysis.openThree) reasoning.push('⚡ open 3-in-a-row (both ends available)');
+            if (positionAnalysis.closedThree) reasoning.push('creates 3-in-a-row');
+            if (positionAnalysis.creates2InRow) reasoning.push('builds toward 4');
+            if (positionAnalysis.blocksOpponent) reasoning.push('🛡️ blocks opponent threat');
+            if (positionAnalysis.hasWrapThreat) reasoning.push('🔄 wrap-around threat');
+            if (positionAnalysis.verticalControl) reasoning.push('controls column');
+            if (positionAnalysis.centerControl) reasoning.push('center position');
+            if (reasoning.length === 0) reasoning.push('neutral move');
+        }
 
         colAnalysis.push({
             col: col + 1,
@@ -422,37 +475,38 @@ function findBestMove() {
 
     // Add detailed analysis
     aiExplanation.push(''); // Empty line for readability
+    aiExplanation.push('📋 Detailed column evaluation:');
     colAnalysis.forEach(analysis => {
-        if (analysis.score !== null) {
-            aiExplanation.push(`Column ${analysis.col}: Score ${analysis.score} - ${analysis.reason}`);
-        } else {
-            aiExplanation.push(`Column ${analysis.col}: ${analysis.reason}`);
-        }
+        aiExplanation.push(`  Column ${analysis.col}: Score ${analysis.score} - ${analysis.reason}`);
     });
 
     aiExplanation.push(''); // Empty line
-    aiExplanation.push(`Best score: ${bestScore.toFixed(0)}`);
+    aiExplanation.push(`🏆 Best score: ${bestScore.toFixed(0)}`);
 
     // Explain what the best score means
     if (bestScore > 5000) {
-        aiExplanation.push('This move leads to a likely win within a few turns.');
+        aiExplanation.push('💪 This creates a fork or leads to certain victory!');
+    } else if (bestScore > 500) {
+        aiExplanation.push('⚔️ Strong offensive position with serious threats.');
     } else if (bestScore > 100) {
-        aiExplanation.push('Strong offensive position with multiple threats.');
+        aiExplanation.push('📈 Solid move with tactical advantages.');
     } else if (bestScore > 0) {
-        aiExplanation.push('Slight advantage - good positioning.');
+        aiExplanation.push('➕ Slight advantage - building position.');
     } else if (bestScore > -100) {
-        aiExplanation.push('Neutral position - no clear advantage.');
+        aiExplanation.push('⚖️ Neutral position - maintaining balance.');
+    } else if (bestScore > -5000) {
+        aiExplanation.push('🛡️ Defensive position - limiting opponent opportunities.');
     } else {
-        aiExplanation.push('Defensive position - limiting opponent opportunities.');
+        aiExplanation.push('😓 All moves look bad - trying to minimize damage.');
     }
 
     // Randomize among equal best moves to avoid predictability
     if (bestCols.length > 1) {
-        aiExplanation.push(`Multiple equally good moves available (columns ${bestCols.map(c => c + 1).join(', ')}). Randomly chose one.`);
+        aiExplanation.push(`🎲 Multiple equally good moves (columns ${bestCols.map(c => c + 1).join(', ')}). Randomly selecting one.`);
     }
     const chosenCol = bestCols[Math.floor(Math.random() * bestCols.length)];
     aiExplanation.push(''); // Empty line
-    aiExplanation.push(`✓ Final decision: Column ${chosenCol + 1}`);
+    aiExplanation.push(`✅ Final decision: Column ${chosenCol + 1}`);
 
     updateExplainButton();
     return chosenCol;
@@ -528,6 +582,193 @@ function analyzePosition(row, col, player) {
     return analysis;
 }
 
+function analyzePositionDetailed(row, col, player) {
+    const analysis = {
+        createsFork: false,
+        openThree: false,
+        closedThree: false,
+        creates2InRow: false,
+        blocksOpponent: false,
+        hasWrapThreat: false,
+        centerControl: false,
+        verticalControl: false
+    };
+
+    // Check if center column
+    if (col === 3) analysis.centerControl = true;
+
+    // Check vertical control (3+ pieces in this column)
+    let verticalCount = 0;
+    for (let r = 0; r < ROWS; r++) {
+        if (board[r][col] === player) verticalCount++;
+    }
+    if (verticalCount >= 2) analysis.verticalControl = true;
+
+    const directions = [[0, 1], [1, 0], [1, 1], [1, -1]];
+    let threeInRowCount = 0;
+
+    for (const [dRow, dCol] of directions) {
+        let ourCount = 1;
+        let hasWrap = false;
+        let emptyBefore = false;
+        let emptyAfter = false;
+
+        // Check forward direction
+        for (let i = 1; i < 4; i++) {
+            let checkRow = row + (dRow * i);
+            let checkCol = col + (dCol * i);
+
+            if (checkRow < 0 || checkRow >= ROWS || checkCol < 0 || checkCol >= COLS) {
+                hasWrap = true;
+                checkRow = ((checkRow % ROWS) + ROWS) % ROWS;
+                checkCol = ((checkCol % COLS) + COLS) % COLS;
+            }
+
+            if (board[checkRow][checkCol] === player) {
+                ourCount++;
+            } else if (i === 1 && board[checkRow][checkCol] === null) {
+                emptyAfter = true;
+                break;
+            } else {
+                break;
+            }
+        }
+
+        // Check backward direction
+        for (let i = 1; i < 4; i++) {
+            let checkRow = row - (dRow * i);
+            let checkCol = col - (dCol * i);
+
+            if (checkRow < 0 || checkRow >= ROWS || checkCol < 0 || checkCol >= COLS) {
+                hasWrap = true;
+                checkRow = ((checkRow % ROWS) + ROWS) % ROWS;
+                checkCol = ((checkCol % COLS) + COLS) % COLS;
+            }
+
+            if (board[checkRow][checkCol] === player) {
+                ourCount++;
+            } else if (i === 1 && board[checkRow][checkCol] === null) {
+                emptyBefore = true;
+                break;
+            } else {
+                break;
+            }
+        }
+
+        if (hasWrap && ourCount >= 2) analysis.hasWrapThreat = true;
+
+        if (ourCount >= 3) {
+            threeInRowCount++;
+            if (emptyBefore && emptyAfter) {
+                analysis.openThree = true;
+            } else {
+                analysis.closedThree = true;
+            }
+        } else if (ourCount >= 2) {
+            analysis.creates2InRow = true;
+        }
+    }
+
+    // Fork = 2 or more three-in-a-rows
+    if (threeInRowCount >= 2) {
+        analysis.createsFork = true;
+    }
+
+    // Check if it blocks opponent
+    const opponent = player === aiPlayer ? humanPlayer : aiPlayer;
+    const savedPiece = board[row][col];
+    board[row][col] = opponent;
+
+    for (const [dRow, dCol] of directions) {
+        let oppCount = 1;
+        for (const multiplier of [1, -1]) {
+            for (let i = 1; i < 4; i++) {
+                let checkRow = ((row + (dRow * i * multiplier)) % ROWS + ROWS) % ROWS;
+                let checkCol = ((col + (dCol * i * multiplier)) % COLS + COLS) % COLS;
+                if (board[checkRow][checkCol] === opponent) {
+                    oppCount++;
+                } else {
+                    break;
+                }
+            }
+        }
+        if (oppCount >= 3) analysis.blocksOpponent = true;
+    }
+    board[row][col] = savedPiece;
+
+    return analysis;
+}
+
+function findForkMove(player) {
+    // A fork creates 2+ simultaneous three-in-a-rows
+    for (let col = 0; col < COLS; col++) {
+        const row = getLowestEmptyRow(col);
+        if (row === -1) continue;
+
+        board[row][col] = player;
+
+        // Count how many 3-in-a-rows this creates
+        let threeCount = 0;
+        const directions = [[0, 1], [1, 0], [1, 1], [1, -1]];
+
+        for (const [dRow, dCol] of directions) {
+            let count = 1;
+            count += countInDirection(row, col, dRow, dCol, player);
+            count += countInDirection(row, col, -dRow, -dCol, player);
+
+            if (count >= 3) threeCount++;
+        }
+
+        board[row][col] = null;
+
+        if (threeCount >= 2) {
+            return col;
+        }
+    }
+    return -1;
+}
+
+function checkOpponentResponse(row, col) {
+    // After we play here, can opponent win on their next turn?
+    const opponent = aiPlayer === PLAYER_RED ? PLAYER_YELLOW : PLAYER_RED;
+
+    for (let opCol = 0; opCol < COLS; opCol++) {
+        const opRow = getLowestEmptyRow(opCol);
+        if (opRow === -1) continue;
+
+        board[opRow][opCol] = opponent;
+        const opponentWins = checkWin(opRow, opCol);
+        board[opRow][opCol] = null;
+
+        if (opponentWins) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function quickEvaluate(row, col) {
+    // Fast heuristic for move ordering
+    let score = 0;
+
+    // Center column bonus
+    if (col === 3) score += 20;
+    else if (col === 2 || col === 4) score += 10;
+
+    // Count immediate connections
+    const directions = [[0, 1], [1, 0], [1, 1], [1, -1]];
+    for (const [dRow, dCol] of directions) {
+        let count = 1;
+        count += countInDirection(row, col, dRow, dCol, aiPlayer);
+        count += countInDirection(row, col, -dRow, -dCol, aiPlayer);
+
+        if (count >= 3) score += 100;
+        else if (count >= 2) score += 20;
+    }
+
+    return score;
+}
+
 function minimax(depth, alpha, beta, isMaximizing) {
     // Check terminal states
     const winner = checkBoardWinner();
@@ -597,7 +838,11 @@ function checkBoardWinner() {
 function evaluateBoard() {
     let score = 0;
 
-    // Evaluate all possible 4-in-a-row windows
+    // Check for forks (multiple 3-in-a-rows)
+    score += evaluateForks(aiPlayer) * SCORE_FORK;
+    score -= evaluateForks(humanPlayer) * SCORE_FORK;
+
+    // Evaluate all possible 4-in-a-row windows with threat analysis
     const directions = [
         [0, 1],  // Horizontal
         [1, 0],  // Vertical
@@ -608,25 +853,74 @@ function evaluateBoard() {
     for (let row = 0; row < ROWS; row++) {
         for (let col = 0; col < COLS; col++) {
             for (const [dRow, dCol] of directions) {
-                score += evaluateWindow(row, col, dRow, dCol);
+                score += evaluateWindowAdvanced(row, col, dRow, dCol);
             }
         }
     }
 
-    // Center column bonus (less important with wrapping, but still slightly useful)
+    // Center column bonus
     for (let row = 0; row < ROWS; row++) {
         if (board[row][3] === aiPlayer) score += SCORE_CENTER_BONUS;
         if (board[row][3] === humanPlayer) score -= SCORE_CENTER_BONUS;
     }
 
+    // Vertical control bonus
+    for (let col = 0; col < COLS; col++) {
+        let aiCount = 0, humanCount = 0;
+        for (let row = 0; row < ROWS; row++) {
+            if (board[row][col] === aiPlayer) aiCount++;
+            if (board[row][col] === humanPlayer) humanCount++;
+        }
+        if (aiCount >= 3) score += SCORE_VERTICAL_CONTROL;
+        if (humanCount >= 3) score -= SCORE_VERTICAL_CONTROL;
+    }
+
+    // Odd/even strategy bonus (pieces on even vs odd rows)
+    for (let col = 0; col < COLS; col++) {
+        const nextRow = getLowestEmptyRow(col);
+        if (nextRow !== -1 && nextRow % 2 === 0) {
+            // Even rows slightly preferred (gives more control)
+            if (board[nextRow + 1] && board[nextRow + 1][col] === aiPlayer) {
+                score += 2;
+            }
+        }
+    }
+
     return score;
 }
 
-function evaluateWindow(startRow, startCol, dRow, dCol) {
+function evaluateForks(player) {
+    let forkCount = 0;
+
+    for (let row = 0; row < ROWS; row++) {
+        for (let col = 0; col < COLS; col++) {
+            if (board[row][col] !== player) continue;
+
+            // Count how many 3-in-a-rows this piece participates in
+            let threeCount = 0;
+            const directions = [[0, 1], [1, 0], [1, 1], [1, -1]];
+
+            for (const [dRow, dCol] of directions) {
+                let count = 1;
+                count += countInDirection(row, col, dRow, dCol, player);
+                count += countInDirection(row, col, -dRow, -dCol, player);
+
+                if (count >= 3) threeCount++;
+            }
+
+            if (threeCount >= 2) forkCount++;
+        }
+    }
+
+    return forkCount;
+}
+
+function evaluateWindowAdvanced(startRow, startCol, dRow, dCol) {
     let aiCount = 0;
     let humanCount = 0;
     let emptyCount = 0;
     let wraps = false;
+    let emptyPositions = [];
 
     for (let i = 0; i < 4; i++) {
         let row = startRow + i * dRow;
@@ -644,30 +938,60 @@ function evaluateWindow(startRow, startCol, dRow, dCol) {
         const cell = board[row][col];
         if (cell === aiPlayer) aiCount++;
         else if (cell === humanPlayer) humanCount++;
-        else emptyCount++;
+        else {
+            emptyCount++;
+            emptyPositions.push({ row, col });
+        }
     }
 
     // If both players have pieces in this window, it's blocked - no value
     if (aiCount > 0 && humanCount > 0) return 0;
 
     let score = 0;
+    let isOpenThreat = false;
+
+    // Check if threat is "open" (empty on both ends)
+    if (emptyCount >= 2 && emptyPositions.length >= 2) {
+        const firstEmpty = emptyPositions[0];
+        const lastEmpty = emptyPositions[emptyPositions.length - 1];
+
+        // Check if both empties are playable (have support below)
+        const firstPlayable = firstEmpty.row === ROWS - 1 || board[firstEmpty.row + 1][firstEmpty.col] !== null;
+        const lastPlayable = lastEmpty.row === ROWS - 1 || board[lastEmpty.row + 1][lastEmpty.col] !== null;
+
+        if (firstPlayable || lastPlayable) {
+            isOpenThreat = true;
+        }
+    }
 
     // Score for AI pieces
     if (aiCount > 0) {
-        if (aiCount === 4) score = SCORE_WIN;
-        else if (aiCount === 3 && emptyCount === 1) score = SCORE_THREE;
-        else if (aiCount === 2 && emptyCount === 2) score = SCORE_TWO;
+        if (aiCount === 4) {
+            score = SCORE_WIN;
+        } else if (aiCount === 3 && emptyCount === 1) {
+            // Check if the empty spot is immediately playable
+            const empty = emptyPositions[0];
+            const isPlayable = empty.row === ROWS - 1 || board[empty.row + 1][empty.col] !== null;
+            score = isPlayable ? (isOpenThreat ? SCORE_OPEN_THREE : SCORE_CLOSED_THREE) : SCORE_CLOSED_THREE / 2;
+        } else if (aiCount === 2 && emptyCount === 2) {
+            score = SCORE_TWO;
+        }
     }
 
     // Score for blocking human pieces
     if (humanCount > 0) {
-        if (humanCount === 4) score = -SCORE_WIN;
-        else if (humanCount === 3 && emptyCount === 1) score = -SCORE_THREE;
-        else if (humanCount === 2 && emptyCount === 2) score = -SCORE_TWO;
+        if (humanCount === 4) {
+            score = -SCORE_WIN;
+        } else if (humanCount === 3 && emptyCount === 1) {
+            const empty = emptyPositions[0];
+            const isPlayable = empty.row === ROWS - 1 || board[empty.row + 1][empty.col] !== null;
+            score = isPlayable ? (isOpenThreat ? -SCORE_OPEN_THREE : -SCORE_CLOSED_THREE) : -SCORE_CLOSED_THREE / 2;
+        } else if (humanCount === 2 && emptyCount === 2) {
+            score = -SCORE_TWO;
+        }
     }
 
     // Bonus for wrap-based threats (harder for humans to spot)
-    // Only applies based on difficulty setting
     if (wraps && score !== 0) {
         const settings = getAISettings();
         score *= settings.wrapBonus;
