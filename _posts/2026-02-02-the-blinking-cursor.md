@@ -44,14 +44,6 @@ But when you actually logged in to Windows 95, you quickly noticed they had to i
 
 Fast forward thirty years. Every app with an empty text field is asking the same question:
 
-"What can I help with?" (ChatGPT)
-
-"How can I help you today?" (Claude)
-
-"Describe the app you want to build." (Lovable)
-
-"What do you want to create." (v0)
-
 <p style="text-align: center;">
   <img src="/assets/images/cursor-chatgpt.png" alt="ChatGPT prompt" style="max-width: 100%; margin-bottom: 10px;" /><br/>
   <img src="/assets/images/cursor-claude.png" alt="Claude prompt" style="max-width: 100%; margin-bottom: 10px;" /><br/>
