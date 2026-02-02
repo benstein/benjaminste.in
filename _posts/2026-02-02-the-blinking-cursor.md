@@ -81,18 +81,6 @@ Our team is building it.
 
 Lots more soon.
 
----
-
-## LinkedIn Share
-
-You know what's harder than selling AI agents in 2025? Selling AI agents in 2026.
-
-I'm not going to do a full founder pivot retrospective here, but we've made the hard decision to say farewell to Stacey, Ramona, and all our favorite Teammates.
-
-I wrote up some thoughts on the challenges of the past year, what we learned, and why we're taking another swing.
-
-Lots more soon... stay tuned.
-
 <p style="text-align: center;">
   <img src="/assets/images/teammates-farewell.png" alt="Farewell to Teammates" style="max-width: 100%;" />
 </p>
