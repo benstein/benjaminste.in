@@ -53,7 +53,7 @@ Fast forward thirty years. Every app with an empty text field is asking the same
 
 Thirty years of better and better tools, all asking the same question: What do you want?
 
-But what if you don't know what you want?
+*But what if you don't know what you want?*
 
 None of us do. Not really. We know the problem exists. We feel it. But we can't articulate the solution. I can barely decide which roll of toilet paper to buy at the grocery store! And I'm supposed to think through all the edge cases of an app??
 
@@ -67,9 +67,15 @@ At least, you couldn't...
 
 ## So What's Next?
 
-What we learned building Teammates is that there ought to be a completely new way to build hyper-personalized software. And the latest generation of models is finally making it possible. We're on the cusp of personal software that doesn't start with a blinking cursor. Software that doesn't wait to be prompted. Software that observes, infers, proposes. Software that writes the spec around you. Software that builds itself around you.
+What we learned building Teammates is that there ought to be a completely new way to build hyper-personalized software. And the latest generation of models is finally making it possible. We're on the cusp of personal software that doesn't start with a blinking cursor.
 
-Our team is building it.
+Software that doesn't wait to be prompted.
+
+Software that observes, infers, proposes.
+
+Software that writes the spec around you.
+
+Software that builds itself around you.
 
 Lots more soon.
 
