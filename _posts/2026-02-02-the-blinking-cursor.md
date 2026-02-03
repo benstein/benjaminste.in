@@ -73,11 +73,11 @@ Software that doesn't wait to be prompted.
 
 Software that observes, infers, proposes.
 
-Software that writes the spec around you.
+Software that writes the spec about you.
 
-Software that builds itself around you.
+*Software that builds itself around you.*
 
-Lots more soon.
+Lots more soon...
 
 <p style="text-align: center;">
   <img src="/assets/images/teammates-farewell.png" alt="Farewell to Teammates" style="max-width: 100%;" />
