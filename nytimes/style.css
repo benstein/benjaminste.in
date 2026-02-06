@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Karnak Condensed';
+  src: url('fonts/karnak-condensed-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -240,7 +248,8 @@ body {
 }
 
 .card-title {
-  font-size: 22px;
+  font-family: 'Karnak Condensed', Georgia, serif;
+  font-size: 26px;
   font-weight: 700;
 }
 
