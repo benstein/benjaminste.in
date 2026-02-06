@@ -1,0 +1,169 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="NYT Games">
+  <title>NYT Games</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Warning Modal -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal">
+      <div class="modal-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="48" height="48">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+        </svg>
+      </div>
+      <h2 class="modal-title">Security Notice</h2>
+      <p class="modal-text">We've detected suspicious activity on your account. To protect the integrity of New York Times Games, access has been temporarily restricted.</p>
+      <p class="modal-text">Access will be restored in <strong>48-72 hours</strong>.</p>
+      <p class="modal-text modal-text-warning">As a precautionary measure, all game statistics have been reset.</p>
+      <button id="modal-close" class="modal-button">Close</button>
+    </div>
+  </div>
+
+  <!-- Stats Page -->
+  <div id="stats-page" class="stats-page hidden">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="header-title">Me</h1>
+      <button class="header-settings">
+        <img src="images/gear.png" alt="Settings" width="24" height="24">
+      </button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Profile Section -->
+      <section class="profile">
+        <div class="avatar-container">
+          <img src="images/horse.png" alt="Profile" class="avatar">
+          <button class="avatar-edit">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="12" height="12">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+            </svg>
+          </button>
+        </div>
+        <p class="profile-greeting">Hi, Soup &#x1F375;. Check out your achievements.</p>
+        <p class="profile-subscriber">Subscriber since June 2025</p>
+        <a href="#" class="profile-badges">
+          <img src="images/badges.png" alt="Badges" width="20" height="20">
+          <span>View all badges</span>
+        </a>
+      </section>
+
+      <!-- Spelling Bee Card -->
+      <section class="game-card spelling-bee">
+        <div class="card-header">
+          <img src="images/spellingbee.png" alt="Spelling Bee" class="card-icon">
+          <h2 class="card-title">Spelling Bee</h2>
+        </div>
+        <div class="card-stats spelling-bee-stats">
+          <div class="stat">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Puzzles<br>Played</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Words</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Pangrams</span>
+          </div>
+          <div class="stat stat-with-icon">
+            <img src="images/cap.png" alt="" class="stat-icon">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Geniuses</span>
+          </div>
+          <div class="stat stat-with-icon">
+            <img src="images/crown.png" alt="" class="stat-icon">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Queen Bees</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Wordle Card -->
+      <section class="game-card wordle">
+        <div class="card-header">
+          <img src="images/wordle.png" alt="Wordle" class="card-icon">
+          <h2 class="card-title">Wordle</h2>
+        </div>
+        <div class="card-stats">
+          <div class="stat">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Puzzles<br>Played</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">0%</span>
+            <span class="stat-label">Win Rate</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Current<br>Streak</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Max<br>Streak</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Connections Card -->
+      <section class="game-card connections">
+        <div class="card-header">
+          <img src="images/connections.png" alt="Connections" class="card-icon">
+          <h2 class="card-title">Connections</h2>
+        </div>
+        <div class="card-stats">
+          <div class="stat">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Played</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">0%</span>
+            <span class="stat-label">Win Rate</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Current<br>Streak</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Max<br>Streak</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <button class="nav-item">
+        <img src="images/house.png" alt="Games" width="24" height="24">
+        <span>Games</span>
+      </button>
+      <button class="nav-item">
+        <img src="images/friends.png" alt="Friends" width="24" height="24">
+        <span>Friends</span>
+      </button>
+      <button class="nav-item active">
+        <img src="images/horse_small_bottom.png" alt="Me" width="24" height="24">
+        <span>Me</span>
+      </button>
+    </nav>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

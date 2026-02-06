@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Black background -->
+  <rect width="512" height="512" fill="#000000"/>
+
+  <!-- Colored squares - top left green, top right yellow, bottom left blue -->
+  <rect x="32" y="32" width="200" height="200" rx="20" fill="#6AAA64"/>
+  <rect x="280" y="32" width="200" height="200" rx="20" fill="#F7DA21"/>
+  <rect x="32" y="280" width="200" height="200" rx="20" fill="#85C0F9"/>
+
+  <!-- White NYT gothic "T" in bottom right quadrant -->
+  <text x="380" y="420" font-family="'Times New Roman', Georgia, serif" font-size="180" font-weight="bold" fill="#FFFFFF" text-anchor="middle">T</text>
+</svg>

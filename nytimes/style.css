@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #FFFFFF;
+  color: #000000;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 32px 24px;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.modal-icon {
+  color: #D4A017;
+  margin-bottom: 16px;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #000000;
+}
+
+.modal-text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333333;
+  margin-bottom: 12px;
+}
+
+.modal-text-warning {
+  color: #C41E3A;
+  font-weight: 500;
+}
+
+.modal-button {
+  background: #000000;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 24px;
+  padding: 14px 48px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.modal-button:active {
+  background: #333333;
+}
+
+/* Stats Page */
+.stats-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.header-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.header-settings {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 24px 16px;
+  overflow-y: auto;
+}
+
+/* Profile Section */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.avatar-container {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.avatar-edit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: #FFFFFF;
+  border: 1px solid #E8E8E8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.avatar-edit svg {
+  color: #666666;
+}
+
+.profile-greeting {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.profile-subscriber {
+  font-size: 13px;
+  color: #787878;
+  margin-bottom: 12px;
+}
+
+.profile-badges {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.profile-badges img {
+  opacity: 0.8;
+}
+
+/* Game Cards */
+.game-card {
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.spelling-bee {
+  background-color: #F7DA21;
+}
+
+.wordle {
+  background-color: #E8E8E8;
+}
+
+.connections {
+  background-color: #B49FDC;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.card-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.spelling-bee-stats {
+  flex-wrap: wrap;
+}
+
+.spelling-bee-stats .stat {
+  flex: 0 0 calc(20% - 8px);
+  min-width: 55px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.stat-with-icon {
+  position: relative;
+}
+
+.stat-icon {
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  object-fit: contain;
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.2;
+  margin-top: 4px;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  border-top: 1px solid #E8E8E8;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0 20px;
+  z-index: 100;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  color: #888888;
+  font-size: 11px;
+}
+
+.nav-item img {
+  opacity: 0.5;
+}
+
+.nav-item.active {
+  color: #000000;
+}
+
+.nav-item.active img {
+  opacity: 1;
+}
+
+/* Safe area for notched phones */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .bottom-nav {
+    padding-bottom: calc(12px + env(safe-area-inset-bottom));
+  }
+
+  .stats-page {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+}
