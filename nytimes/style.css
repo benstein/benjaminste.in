@@ -6,6 +6,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Karnak';
+  src: url('fonts/karnak-normal.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -108,8 +116,8 @@ body {
 }
 
 .header-title {
-  font-family: 'Karnak Condensed', Georgia, serif;
-  font-size: 26px;
+  font-family: 'Karnak', Georgia, serif;
+  font-size: 28px;
   font-weight: 400;
 }
 
@@ -167,8 +175,8 @@ body {
 }
 
 .profile-greeting {
-  font-family: 'Karnak Condensed', Georgia, serif;
-  font-size: 20px;
+  font-family: 'Karnak', Georgia, serif;
+  font-size: 22px;
   font-weight: 400;
   margin-bottom: 4px;
   text-align: center;
