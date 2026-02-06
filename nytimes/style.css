@@ -108,7 +108,8 @@ body {
 }
 
 .header-title {
-  font-size: 20px;
+  font-family: 'Karnak Condensed', Georgia, serif;
+  font-size: 26px;
   font-weight: 400;
 }
 
@@ -166,15 +167,11 @@ body {
 }
 
 .profile-greeting {
-  font-size: 16px;
-  font-weight: 500;
+  font-family: 'Karnak Condensed', Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
   margin-bottom: 4px;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  flex-wrap: wrap;
 }
 
 .soup-emoji {
@@ -238,6 +235,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   margin-bottom: 16px;
 }
 
@@ -281,7 +280,7 @@ body {
 
 .stat-label {
   font-size: 11px;
-  color: rgba(0, 0, 0, 0.7);
+  color: #827112;
   line-height: 1.3;
 }
 
