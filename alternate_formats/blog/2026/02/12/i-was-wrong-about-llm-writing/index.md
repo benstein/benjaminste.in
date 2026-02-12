@@ -40,7 +40,7 @@ I became allergic to it. I hated reviewing it when someone on my team handed it 
 
 ## Enter Bryan Cantrill, Stage Left
 
-At some point Bryan Cantrill (who is somehow both way cooler than me and way nerdier than me at the same time) posted a now-viral LinkedIn screed about LLM writing. The gist: holy hell, the writing sucks, LLMs are lousy writers and most importantly they are not you, stop outsourcing your goddamn brain.
+At some point Bryan Cantrill (who is somehow both way cooler than me and way nerdier than me at the same time) posted a [now-viral LinkedIn screed](https://www.linkedin.com/feed/update/urn:li:activity:7394083873082703872/) about LLM writing. The gist: holy hell, the writing sucks, LLMs are lousy writers and most importantly they are not you, stop outsourcing your goddamn brain.
 
 1,800 reactions. Standing ovation from every developer who'd ever received a Slack message that opened with "Great question!" followed by an em-dash cascade into oblivion.
 
@@ -58,7 +58,7 @@ Could I get a model to actually write in my voice? Not approximate. Not "close e
 
 I built elaborate prompt chains. Multiple collaborating agents. An orchestrator coordinating nine sub-agents - one stripping LLM tells, another enforcing narrative arc, another checking for tonal drift, one that was essentially a bouncer for hallucinations. I had my own little army of linguists. Like the nerdiest version of Ocean's Eleven.
 
-I wrote a whole blog post about it. My wife read the output and couldn't tell what was me and what wasn't. It cost $46 in Anthropic API tokens, which is either absurdly expensive or absurdly cheap depending on whether you think of it as "generating a blog post" or "employing a nine-person editorial staff for an afternoon."
+I [wrote a whole blog post about it](/blog/2025/11/12/everyone-says-they-can-spot-ai-writing/). My wife read the output and couldn't tell what was me and what wasn't. It cost $46 in Anthropic API tokens, which is either absurdly expensive or absurdly cheap depending on whether you think of it as "generating a blog post" or "employing a nine-person editorial staff for an afternoon."
 
 It was a fascinating experiment. It mostly proved something uncomfortable: you can approximate tone. You can remove obvious tells. You can even get a little humor. A clever callback. A Dennis Miller-style cultural reference to prove that you're smarter than your reader.
 
