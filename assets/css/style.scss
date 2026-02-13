@@ -3,6 +3,11 @@
 
 @import "{{ site.theme }}";
 
+/* Darken body text from theme default #727272 */
+body {
+  color: #333;
+}
+
 /* Widen content area for better readability */
 .wrapper {
   width: 1000px;

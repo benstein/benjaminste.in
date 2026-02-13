@@ -5,7 +5,7 @@ title: Home
 
 # About Me
 
-Ayo! I'm Ben. I'm the CEO of [Teammates](https://teammates.work) and the President of [Piedmont Makers](https://piedmontmakers.org). I live in Oakland, CA with my illustrious [wife](http://thefloweringartichoke.com), two teenage boys, and a pup named [Soup](/assets/images/soup.jpg). I love birds, bridge, beer, bots, bears, beets, Battlestar Galactica. And losing at pub trivia. Electrify everything.
+Ayo! I'm Ben. I'm the CEO of [SuperDuper](https://superduperlabs.com) and the President of [Piedmont Makers](https://piedmontmakers.org). I live in Oakland, CA with my illustrious [wife](http://thefloweringartichoke.com), two teenage boys, and a pup named [Soup](/assets/images/soup.jpg). I love birds, bridge, beer, bots, bears, beets, Battlestar Galactica. And losing at pub trivia. Electrify everything.
 
 *Current Status:* Reading Dikkens with two Ks, the well-known Dutch author  
 *Previously:* Memorizing jokes from Cap'n Billy's Whiz Bang
