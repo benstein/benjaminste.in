@@ -28,6 +28,7 @@ jobs:
           require 'json'
           require 'yaml'
           require 'date'
+          require 'fileutils'
 
           # Load site config
           config = YAML.load_file('_config.yml')
