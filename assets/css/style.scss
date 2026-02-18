@@ -3,12 +3,79 @@
 
 @import "{{ site.theme }}";
 
-/* Darken body text from theme default #727272 */
+/* === Body Typography === */
 body {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 19px;
+  line-height: 1.7;
   color: #333;
+  background-color: #fafaf7;
 }
 
-/* Widen content area for better readability */
+/* === Heading Typography === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 0.6em;
+  line-height: 1.25;
+}
+h1 { font-size: 2.2em; font-weight: 900; letter-spacing: -0.02em; margin-top: 0; }
+h2 { font-size: 1.6em; margin-top: 2em; color: #1a1a1a; }
+h3 { font-size: 1.3em; font-weight: 700; margin-top: 1.8em; color: #1a1a1a; }
+h4, h5, h6 { font-size: 1.1em; font-weight: 700; margin-top: 1.5em; color: #333; }
+
+/* === Paragraph & Element Spacing === */
+p, ul, ol, table, pre, dl { margin: 0 0 1.5em; }
+
+/* === Link Styling (no layout shift on hover) === */
+a { color: #267CB9; text-decoration: none; transition: color 0.15s ease; }
+a:hover, a:focus { color: #1a5a8a; font-weight: inherit; text-decoration: underline; }
+
+/* === Sidebar Header === */
+header {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* === Blockquotes === */
+blockquote {
+  border-left: 3px solid #c9a96e;
+  padding: 0.5em 1.5em;
+  margin: 1.8em 0;
+  background-color: #faf6ef;
+  font-style: italic;
+  color: #444;
+}
+blockquote em {
+  font-style: italic;
+}
+blockquote p:last-child { margin-bottom: 0; }
+
+/* === Horizontal Rules === */
+hr {
+  border: 0;
+  height: 1px;
+  background: #d5cfc5;
+  margin: 2.5em 0;
+}
+
+/* === Code Blocks === */
+code, pre {
+  font-size: 0.88em;
+  background-color: #f7f5f0;
+  border-color: #e8e4da;
+}
+
+/* === Images in Content === */
+section img {
+  margin: 1.5em 0;
+  border-radius: 4px;
+}
+
+/* === Strong Text === */
+strong { color: inherit; }
+
+/* === Layout === */
 .wrapper {
   width: 1000px;
   max-width: 90%;
@@ -29,7 +96,7 @@ section {
   }
 }
 
-/* Headshot sizing for all viewports */
+/* === Headshot === */
 header img {
   max-width: 150px;
   width: 100%;
@@ -38,36 +105,15 @@ header img {
   display: block;
 }
 
+/* === Mobile Responsive === */
 @media screen and (max-width: 720px) {
-  header img {
-    max-width: 120px;
-  }
+  body { font-size: 17px; line-height: 1.65; }
+  h1 { font-size: 1.8em; }
+  header img { max-width: 120px; }
 }
 
 @media screen and (max-width: 480px) {
-  header img {
-    max-width: 100px;
-  }
-}
-
-/* Prompt styling for Useful Prompts page */
-blockquote {
-  border-left: 4px solid #6a737d;
-  padding: 10px 20px;
-  margin: 20px 0;
-  background-color: #f6f8fa;
-  font-style: italic;
-  color: #24292e;
-}
-
-blockquote em {
-  font-style: italic;
-}
-
-/* Horizontal rules for prompt separation */
-hr {
-  border: 0;
-  height: 1px;
-  background: #e1e4e8;
-  margin: 40px 0;
+  body { font-size: 16px; }
+  h1 { font-size: 1.6em; }
+  header img { max-width: 100px; }
 }
