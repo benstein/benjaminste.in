@@ -6,8 +6,6 @@ categories: [security, technology, guide]
 excerpt: "Every year I write an updated guide for friends and family who want a New Year's Resolution that might actually stick. Here's my latest for 2026."
 ---
 
-# How to Protect Yourself Online (2026 Edition)
-
 Every year I write an updated "How to protect yourself online" guide for friends and family who want a New Year's Resolution that might actually stick. (Not my techno nerd friends. If you know what a Yubikey or an elliptic curve is, you can skip this one). Here's my latest guide for New Year's Eve 2026.
 
 ---

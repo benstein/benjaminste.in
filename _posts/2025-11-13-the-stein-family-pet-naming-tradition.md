@@ -6,8 +6,6 @@ categories: [personal, family, humor]
 excerpt: "Our dog is named Matzah Ball Soup. Before him, our beagle was named Kugel. The hamsters were Falafel and Babka. Our family has been naming pets after Jewish foods since the shtetl."
 ---
 
-# The Stein Family Pet Naming Tradition: A Comprehensive History
-
 *Our dog is named Matzah Ball Soup. Before him, our beagle was named Kugel. The hamsters were Falafel and Babka. Our family has been naming pets after Jewish foods since the shtetl.*
 
 We currently have a chihuahua/Jack Russell mix named Matzah Ball Soup. We call him Soup for short. He's a good dog, enthusiastic, loyal, prone to eating things he shouldn't. When we're at the vet and they call "Matzah Ball Soup Stein," I watch the other pet owners try to maintain neutral expressions.

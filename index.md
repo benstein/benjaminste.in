@@ -3,29 +3,31 @@ layout: default
 title: Home
 ---
 
-# About Me
+<div class="homepage-hero">
+  <img src="{{ site.logo | relative_url }}" alt="Benjamin Stein" class="homepage-hero-avatar" />
+  <div>
+    <h1>Benjamin Stein</h1>
+    <p>CEO of <a href="https://superduperlabs.com">SuperDuper</a>. President of <a href="https://piedmontmakers.org">Piedmont Makers</a>. Oakland, CA.</p>
+  </div>
+</div>
 
-Ayo! I'm Ben. I'm the CEO of [SuperDuper](https://superduperlabs.com) and the President of [Piedmont Makers](https://piedmontmakers.org). I live in Oakland, CA with my illustrious [wife](http://thefloweringartichoke.com), two teenage boys, and a pup named [Soup](/assets/images/soup.jpg). I love birds, bridge, beer, bots, bears, beets, Battlestar Galactica. And losing at pub trivia. Electrify everything.
+<p class="homepage-bio">Ayo! I'm Ben. I live in Oakland, CA with my illustrious <a href="http://thefloweringartichoke.com">wife</a>, two teenage boys, and a pup named <a href="/assets/images/soup.jpg">Soup</a>. I love birds, bridge, beer, bots, bears, beets, Battlestar Galactica. And losing at pub trivia. Electrify everything.</p>
 
-*Current Status:* Reading Dikkens with two Ks, the well-known Dutch author  
-*Previously:* Memorizing jokes from Cap'n Billy's Whiz Bang
+<p class="homepage-status">
+<em>Current Status:</em> Reading Dikkens with two Ks, the well-known Dutch author<br>
+<em>Previously:</em> Memorizing jokes from Cap'n Billy's Whiz Bang
+</p>
 
 ---
 
-## Select Writing
+## Writing
 
-{% if site.posts.size > 0 %}
-<ul style="list-style: none; padding-left: 0;">
+<div class="post-list">
   {% for post in site.posts %}
-  <li style="margin-bottom: 30px;">
-    <a href="{{ post.url }}" style="font-size: 1.2em; font-weight: 500;">{{ post.title }}</a>
-    <br/>
-    <span style="color: #666; font-size: 0.9em;">{{ post.date | date: "%B %d, %Y" }}</span>
-    <br/>
-    <em style="color: #555;">{{ post.excerpt | strip_html | truncatewords: 30 }}</em>
-  </li>
+  <a href="{{ post.url }}" class="post-card">
+    <h3 class="post-card-title">{{ post.title }}</h3>
+    <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+    <span class="post-card-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+  </a>
   {% endfor %}
-</ul>
-{% else %}
-<p>No blog posts yet. Check back soon!</p>
-{% endif %}
+</div>

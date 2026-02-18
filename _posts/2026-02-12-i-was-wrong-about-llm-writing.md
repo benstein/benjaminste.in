@@ -6,8 +6,6 @@ categories: [ai, writing, startups]
 excerpt: "I spent two years treating all LLM writing as slop. Turns out there's a crucial distinction between using AI as a microwave burrito and using it as a compiler for your own hard-won thinking."
 ---
 
-# I Was Wrong About LLM Writing
-
 I've changed my mind about AI-generated writing. More than once, actually. And the thing I was most wrong about is the thing I was most righteous about, which is how these things usually go.
 
 ---

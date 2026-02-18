@@ -6,8 +6,6 @@ categories: [startups, ai, teammates]
 excerpt: "We launched Teammates to create virtual colleagues that actually understood you. The hard truth: 9 out of 10 just sat there."
 ---
 
-# The Blinking Cursor
-
 We launched our startup, Teammates, in early 2025 to create virtual colleagues that actually understood you. Your context, your team, your way of working. Not chatbots. Not copilots. AI with identity, memory, personality. Multiplayer collaborators who could get real work done.
 
 The vision was hyper-personalized AI agents. Teammates that would learn your preferences, adapt to your style, evolve to meet your exact needs. 100% malleable to you. Software that shaped itself around the human, not the other way around.

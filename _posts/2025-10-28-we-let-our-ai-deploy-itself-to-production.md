@@ -6,8 +6,6 @@ categories: [ai, devops, teammates, automation]
 excerpt: "Our staging server writes poetry, calls me 'Skipper', and wants a promotion. Let me explain."
 ---
 
-# We Let Our AI Deploy Itself to Production (And Accidentally Created Your Next Favorite Pixar Character)
-
 *Cross-posted from the [Teammates blog](https://www.teammates.work/posts/we-let-our-ai-deploy-itself-to-production)*
 
 Our staging server writes poetry, calls me "Skipper", and wants a promotion.
