@@ -3,7 +3,7 @@ layout: default
 title: "Introducing SuperDuper"
 date: 2026-02-20
 categories: [startups, family, superduper]
-excerpt: "I told my wife about our user persona and she started to cry. Not because it was sad. Because the persona was her. This is why we built SuperDuper."
+excerpt: "Because parenting doesn't have to be this hard."
 ---
 
 The other night I was telling my wife Arin about Kavya, a project manager with three over-scheduled kids. Kavya is married to Chetan, an engineer who coaches Saturday soccer. Kavya is also imaginary. She's a persona that was the result of months of interviews I've been conducting to learn how parents actually manage family logistics, what breaks, and what keeps them up at night.
