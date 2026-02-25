@@ -46,9 +46,9 @@ Studying engineering, or philosophy, or physics, or classics isn't about landing
 
 The idea of learning how to think differently is not unique to engineering, of course. Consider a classics major. They spend years reading ancient texts, parsing dead languages, studying historical context, writing, arguing. What do they actually learn? They learn to interpret ambiguous material, construct and dismantle arguments, trace how ideas evolve across centuries, and write with the kind of clarity and precision that is, frankly, a superpower most people underestimate.
 
-Those aren't "job skills" in the narrow LinkedIn sense. They're thinking patterns. A philosophy major learns to reason formally. A history major learns to trace causality across complex systems. A literature major learns to inhabit other minds, which is honestly one of the most underrated abilities a person can develop.
+Those aren't job skills in the narrow LinkedIn sense. They're thinking patterns. A philosophy major learns to reason formally. A history major learns to trace causality across complex systems. A literature major learns to inhabit other minds, which is honestly one of the most underrated abilities a person can develop.
 
-None of these disciplines are "about" employability in any direct way. They're about building a different brain. Engineering does the same thing, just with algorithms instead of Kafka. (OK maybe a bad example)
+None of these disciplines are about employability in any direct way. They're about building a different brain. Engineering does the same thing, just with algorithms instead of Kafka. (OK maybe a bad example)
 
 ## The Skills We'll Need in the Age of AI
 
