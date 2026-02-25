@@ -413,6 +413,292 @@ footer p {
 }
 
 /* ============================================
+   PRODUCT ADVISORY PAGE
+   ============================================ */
+
+.advisor-subtitle {
+  font-style: italic;
+  color: #666;
+  font-size: 1.15em;
+  line-height: 1.5;
+  margin: -0.3em 0 0.8em;
+}
+
+.advisor-intro {
+  font-size: 1.05em;
+  line-height: 1.7;
+  margin-bottom: 2.5em;
+}
+
+/* Service cards — 2-col grid */
+.advisor-services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 0.5em;
+}
+
+.advisor-service {
+  border: 1px solid #e8e4da;
+  border-radius: 6px;
+  padding: 22px 24px;
+  background-color: #fdfcf9;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.advisor-service:hover {
+  border-color: #c9a96e;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.advisor-service h3 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.4em;
+  line-height: 1.3;
+}
+
+.advisor-service p {
+  font-size: 0.9em;
+  color: #555;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Client logo grid */
+.advisor-clients {
+  margin-bottom: 0.5em;
+}
+
+.advisor-client-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.advisor-client {
+  text-align: center;
+}
+
+.advisor-client-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  margin-bottom: 10px;
+}
+
+.advisor-client-logo img {
+  max-height: 40px;
+  max-width: 120px;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: filter 0.2s ease, opacity 0.2s ease;
+  margin: 0;
+}
+
+.advisor-client-logo img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.advisor-client-name {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.82em;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 3px;
+}
+
+.advisor-client-desc {
+  font-size: 0.78em;
+  color: #888;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Text-only logo fallback */
+.advisor-client-text-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  margin-bottom: 10px;
+}
+
+.advisor-client-text-logo span {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #999;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
+}
+
+.advisor-client-text-logo:hover span {
+  color: #1a1a1a;
+}
+
+/* Testimonial — extends pull-quote */
+.advisor-testimonial {
+  border-top: 2px solid #c9a96e;
+  border-bottom: 2px solid #c9a96e;
+  padding: 1.6em 0;
+  margin: 2.5em 0;
+  text-align: center;
+}
+
+.advisor-testimonial p {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.2em;
+  line-height: 1.55;
+  color: #1a1a1a;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0;
+}
+
+.advisor-testimonial .advisor-attribution {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-size: 0.82em;
+  color: #888;
+  margin-top: 1em;
+  display: block;
+}
+
+/* Recommended reading */
+.advisor-books {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5em;
+}
+
+.advisor-book {
+  padding: 14px 0;
+  border-bottom: 1px solid #e8e4da;
+}
+
+.advisor-book:first-child {
+  border-top: 1px solid #e8e4da;
+}
+
+.advisor-book-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1em;
+}
+
+.advisor-book-title a {
+  color: #267CB9;
+}
+
+.advisor-book-author {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.85em;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* Templates list */
+.advisor-templates {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5em;
+}
+
+.advisor-templates li {
+  padding: 8px 0 8px 20px;
+  position: relative;
+  font-size: 0.95em;
+  color: #444;
+}
+
+.advisor-templates li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 16px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #c9a96e;
+}
+
+/* Pricing cards — 3-col */
+.advisor-pricing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 1.5em;
+}
+
+.advisor-tier {
+  border: 1px solid #e8e4da;
+  border-radius: 6px;
+  padding: 28px 22px;
+  background-color: #fdfcf9;
+  text-align: center;
+}
+
+.advisor-tier-name {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 1em;
+  padding-bottom: 0.8em;
+  border-bottom: 2px solid #c9a96e;
+}
+
+.advisor-tier ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.advisor-tier li {
+  padding: 7px 0;
+  font-size: 0.88em;
+  color: #555;
+  line-height: 1.45;
+  border-bottom: 1px solid #f0ece4;
+}
+
+.advisor-tier li:last-child {
+  border-bottom: none;
+}
+
+.advisor-pricing-notes {
+  font-size: 0.88em;
+  color: #888;
+  line-height: 1.6;
+}
+
+.advisor-pricing-notes ul {
+  list-style: none;
+  padding: 0;
+}
+
+.advisor-pricing-notes li {
+  padding: 3px 0;
+}
+
+/* CTA section */
+.advisor-cta {
+  text-align: center;
+  padding: 1.5em 0 0;
+  font-size: 1.05em;
+}
+
+.advisor-cta a {
+  font-weight: 600;
+}
+
+/* ============================================
    RESPONSIVE — THEME OVERRIDE AT 960px
    ============================================ */
 
@@ -455,6 +741,25 @@ footer p {
 
   .homepage-hero h1 {
     font-size: 1.5em;
+  }
+
+  .advisor-services {
+    grid-template-columns: 1fr;
+  }
+
+  .advisor-client-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .advisor-testimonial p {
+    font-size: 1.05em;
+  }
+
+  .advisor-pricing {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -504,5 +809,18 @@ footer p {
   .post-meta-avatar {
     width: 36px;
     height: 36px;
+  }
+
+  .advisor-client-grid {
+    gap: 18px;
+  }
+
+  .advisor-client-logo img {
+    max-height: 32px;
+    max-width: 100px;
+  }
+
+  .advisor-client-text-logo span {
+    font-size: 0.95em;
   }
 }
