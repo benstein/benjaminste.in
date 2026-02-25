@@ -50,6 +50,11 @@ permalink: /product-advisor/
 </div>
 
 <div class="advisor-service">
+<h3>AI Transformation</h3>
+<p>Designing AI and agentic products, evaluating AI technologies, and driving internal adoption of AI across your organization.</p>
+</div>
+
+<div class="advisor-service">
 <h3>Social Impact</h3>
 <p>Combining purpose with business. B-Corp, 1% Pledge, public-private partnerships, and inclusive product design.</p>
 </div>
