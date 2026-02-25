@@ -12,7 +12,7 @@ It was CS100 at Cornell. I had never written a line of code before college, and 
 
 So I did what any rational 18-year-old does: I studied syntax like my life depended on it. Where does the semicolon go? How do you nest curly braces? What's the difference between `*ptr`, `**ptr`, and `&ptr`? What's the indentation convention? I had that stuff absolutely cold. I could punctuate C in my sleep.
 
-Then I sat down for the exam and none of it mattered. The questions weren't about syntax. They were about algorithms. They were puzzles. They were "how would you approach this problem?" and "what's the most efficient way to think about this?" I sat there in a state of mild panic until somewhere between questions two and three I had one of those bizarre, inconvenient epiphanies: computer science has basically nothing to do with syntax.
+Then I sat down for the exam and none of it mattered. The questions weren't about syntax. They were about algorithms. They were puzzles. They were "how would you approach this problem?" and "what's the most efficient way to think about this?" I sat there in a state of mild panic until somewhere between questions two and three I had one of those bizarre, inconvenient epipahines: computer science has basically nothing to do with syntax.
 
 I still failed the test. But I walked out thinking this is the most fascinating thing I'd ever experienced in school.
 
@@ -28,7 +28,7 @@ I learned about algorithmic complexity, Big O notation, which sounds impressivel
 
 I learned about pointers and references, which is a mildly metaphysical concept if you think about it too long. The idea that something can *point to* something else rather than *be* the thing itself will genuinely rewire your brain. Indirection isn't intuitive. It's also incredibly powerful once you internalize it.
 
-I learned divide and conquer: break a giant problem into composable pieces, make each piece testable on its own, then reassemble them. I learned debugging, which sounds like a technical skill but is really the art of forming hypotheses, instrumenting a system, observing what actually happens versus what you expected, and adjusting your mental model accordingly. So when my wife says "why isn't the Netflix sound working?", I can systematically solve the problem before the new season of Bridgerton starts.
+I learned divide and conquer: break a giant problem into composable pieces, make each piece testable on its own, then reassemble them. I learned debugging, which sounds like a technical skill but is really the art of forming hypotheses, instrumenting a system, observing what actually happens versus what you expected, and adjusting your mental model accordingly. So when my wife says "why isn't the Netflix sound working?", I can systematically sovle the problem before the new season of Bridgerton starts.
 
 At some point I stopped thinking of these as "skills" and started thinking of them as tools in my proverbial toolbelt. And they compound over time in ways that are hard to appreciate when you're 18 and staring at a failed exam.
 
@@ -52,9 +52,9 @@ None of these disciplines are "about" employability in any direct way. They're a
 
 ## The Skills We'll Need in the Age of AI
 
-Here's the uncomfortable truth: we don't know which specific skills will be most valuable in 2035. Maybe it's writing. Maybe it's prioritization. Maybe it's taste. Maybe it's interpersonal communication. Maybe it's something we can't even name yet because the job doesn't exist.
+We don't know which specific skills will be most valuable in 2035. Maybe it's writing. Maybe it's prioritization. Maybe it's taste. Maybe it's interpersonal communication. Maybe it's something we can't even name yet because the job doesn't exist.
 
-But I'm comfortable asserting this: the ability to think clearly, abstractly, structurally, and creatively is not going anywhere. Pattern matching, decomposition, adaptation, model-building, debugging your own assumptions (which, if we're being honest, is the hardest kind of debugging there is).
+The ability to think clearly, abstractly, structurally, and creatively is not going anywhere. Pattern matching, decomposition, adaptation, model-building, debugging your own assumptions (which, if we're being honest, is the hardest kind of debugging there is).
 
 AI will generate code. It will draft essays. It will design interfaces. But someone still needs to define the problem worth solving, evaluate tradeoffs, recognize when the output is subtly wrong (which requires understanding why it should be right), and design the system that ties it all together.
 
