@@ -3,7 +3,7 @@ layout: default
 title: "Should You Major in Computer Science in the Age of AI?"
 date: 2026-02-24
 categories: [education, ai, engineering]
-excerpt: "I failed my first computer science exam. Not 'didn't do great.' Failed. It was the best thing that ever happened to me."
+excerpt: "I failed my first computer science exam. Not 'didn't do great.' Failed. It was the best lessons I ever learned."
 ---
 
 I failed my first computer science exam. Not "didn't do great." Failed.
