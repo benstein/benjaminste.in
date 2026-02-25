@@ -20,15 +20,15 @@ I still failed the test. But I walked out thinking this is the most fascinating 
 
 If you think engineering is about memorizing syntax, you're making the same mistake I made in 1996. And if you think AI means nobody should study engineering because "LLMs will just write the code," you're making a more sophisticated version of the same mistake.
 
-What I actually learned studying computer science had very little to do with semicolons. It had everything to do with how to reason about the world.
+<aside class="pull-quote"><p>What I actually learned studying computer science had very little to do with semicolons. It had everything to do with how to reason about the world.</p></aside>
 
-I learned about abstraction, which is the practice of separating what something does from how it does it. In code, that means interfaces and layers. In real life, that's the plumbing in your house. I don't need to understand fluid dynamics to fix my toilet. I need to understand the boundary between systems. (I'm also pretty bad at fixing my toilet, but that's a separate issue.)
+I learned about **abstraction**, which is the practice of separating what something does from how it does it. In code, that means interfaces and layers. In real life, that's the plumbing in your house. I don't need to understand fluid dynamics to fix my toilet. I need to understand the boundary between systems. (I'm also pretty bad at fixing my toilet, but that's a separate issue.)
 
-I learned about algorithmic complexity, Big O notation, which sounds impressively nerdy and is. But the actual skill it teaches you is thinking in orders of magnitude. Is this problem linear or exponential? If we double the inputs, does it get a little harder or does it explode? That lens applies to companies, markets, families, and the rate at which my 2 teenage boys consume Top Ramen.
+I learned about **algorithmic complexity**, Big O notation, which sounds impressively nerdy and is. But the actual skill it teaches you is thinking in orders of magnitude. Is this problem linear or exponential? If we double the inputs, does it get a little harder or does it explode? That lens applies to companies, markets, families, and the rate at which my 2 teenage boys consume Top Ramen.
 
-I learned about pointers and references, which is a mildly metaphysical concept if you think about it too long. The idea that something can *point to* something else rather than *be* the thing itself will genuinely rewire your brain. Indirection isn't intuitive. It's also incredibly powerful once you internalize it.
+I learned about **pointers and references**, which is a mildly metaphysical concept if you think about it too long. The idea that something can *point to* something else rather than *be* the thing itself will genuinely rewire your brain. Indirection isn't intuitive. It's also incredibly powerful once you internalize it.
 
-I learned divide and conquer: break a giant problem into composable pieces, make each piece testable on its own, then reassemble them. I learned debugging, which sounds like a technical skill but is really the art of forming hypotheses, instrumenting a system, observing what actually happens versus what you expected, and adjusting your mental model accordingly. So when my wife says "why isn't the Netflix sound working?", I can systematically sovle the problem before the new season of Bridgerton starts.
+I learned **divide and conquer**: break a giant problem into composable pieces, make each piece testable on its own, then reassemble them. I learned **debugging**, which sounds like a technical skill but is really the art of forming hypotheses, instrumenting a system, observing what actually happens versus what you expected, and adjusting your mental model accordingly. So when my wife says "why isn't the Netflix sound working?", I can systematically sovle the problem before the new season of Bridgerton starts.
 
 At some point I stopped thinking of these as "skills" and started thinking of them as tools in my proverbial toolbelt. And they compound over time in ways that are hard to appreciate when you're 18 and staring at a failed exam.
 
