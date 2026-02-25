@@ -4,11 +4,11 @@ title: Product Advisor
 permalink: /product-advisor/
 ---
 
-# Product Advisory
+# Product Advisor
 
-<p class="advisor-subtitle">Helping founders and product leaders build what matters</p>
+<p class="advisor-subtitle">I help founders and product leaders build what matters</p>
 
-<p class="advisor-intro">I work with founders, CEOs, and product leaders to build high-growth B2B companies. After years as a product executive and operator — from seed-stage startups to Fortune 500 — I share what I've learned so you can grow quickly and efficiently.</p>
+<p class="advisor-intro">I work with founders, CEOs, and product leaders to build high-growth B2B companies. After years as a product executive and operator, from seed-stage startups to Fortune 500, I share what I've learned so you can grow quickly and efficiently.</p>
 
 ## How I Can Help
 
@@ -51,7 +51,7 @@ permalink: /product-advisor/
 
 <div class="advisor-service">
 <h3>Social Impact</h3>
-<p>Combining purpose with business — B-Corp, 1% Pledge, public-private partnerships, and inclusive product design.</p>
+<p>Combining purpose with business. B-Corp, 1% Pledge, public-private partnerships, and inclusive product design.</p>
 </div>
 
 </div>
@@ -62,65 +62,41 @@ permalink: /product-advisor/
 <div class="advisor-client-grid">
 
 <div class="advisor-client">
-<div class="advisor-client-logo">
-<img src="/assets/images/clients/bloomberg.svg" alt="Bloomberg LP">
-</div>
 <p class="advisor-client-name">Bloomberg LP</p>
 <p class="advisor-client-desc">Product platform & shared services, KPI frameworks</p>
 </div>
 
 <div class="advisor-client">
-<div class="advisor-client-logo">
-<img src="/assets/images/clients/mobile-commons.svg" alt="Mobile Commons">
-</div>
 <p class="advisor-client-name">Mobile Commons</p>
 <p class="advisor-client-desc">AI transformation, roadmap alignment</p>
 </div>
 
 <div class="advisor-client">
-<div class="advisor-client-logo">
-<img src="/assets/images/clients/privateai.svg" alt="PrivateAI">
-</div>
 <p class="advisor-client-name">PrivateAI</p>
 <p class="advisor-client-desc">Developer go-to-market playbook</p>
 </div>
 
 <div class="advisor-client">
-<div class="advisor-client-logo">
-<img src="/assets/images/clients/art19.svg" alt="Art19">
-</div>
-<p class="advisor-client-name">Art19 (Amazon Music)</p>
+<p class="advisor-client-name">Art19 (Amazon)</p>
 <p class="advisor-client-desc">OKR and prioritization frameworks</p>
 </div>
 
 <div class="advisor-client">
-<div class="advisor-client-logo">
-<img src="/assets/images/clients/moveev.svg" alt="MoveEV">
-</div>
 <p class="advisor-client-name">MoveEV</p>
 <p class="advisor-client-desc">Product strategy, investment framework, leadership hiring</p>
 </div>
 
 <div class="advisor-client">
-<div class="advisor-client-logo">
-<img src="/assets/images/clients/presto.svg" alt="Presto Charging">
-</div>
 <p class="advisor-client-name">Presto Charging</p>
 <p class="advisor-client-desc">Product & engineering leadership hiring</p>
 </div>
 
 <div class="advisor-client">
-<div class="advisor-client-logo">
-<img src="/assets/images/clients/mindx.svg" alt="Mind-X">
-</div>
 <p class="advisor-client-name">Mind-X (BlackRock)</p>
 <p class="advisor-client-desc">Developer experience</p>
 </div>
 
 <div class="advisor-client">
-<div class="advisor-client-logo">
-<img src="/assets/images/clients/sesh.svg" alt="Sesh">
-</div>
 <p class="advisor-client-name">Sesh</p>
 <p class="advisor-client-desc">VC fundraising, seed pitch</p>
 </div>
@@ -156,7 +132,7 @@ Books I recommend to every product leader:
 </li>
 </ul>
 
-## What You Get
+## Frameworks & Templates
 
 Every engagement includes access to my library of battle-tested templates and frameworks:
 

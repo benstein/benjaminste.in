@@ -467,7 +467,7 @@ footer p {
   margin: 0;
 }
 
-/* Client logo grid */
+/* Client grid */
 .advisor-clients {
   margin-bottom: 0.5em;
 }
@@ -480,28 +480,6 @@ footer p {
 
 .advisor-client {
   text-align: center;
-}
-
-.advisor-client-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 56px;
-  margin-bottom: 10px;
-}
-
-.advisor-client-logo img {
-  max-height: 40px;
-  max-width: 120px;
-  filter: grayscale(100%);
-  opacity: 0.7;
-  transition: filter 0.2s ease, opacity 0.2s ease;
-  margin: 0;
-}
-
-.advisor-client-logo img:hover {
-  filter: grayscale(0%);
-  opacity: 1;
 }
 
 .advisor-client-name {
@@ -517,28 +495,6 @@ footer p {
   color: #888;
   line-height: 1.4;
   margin: 0;
-}
-
-/* Text-only logo fallback */
-.advisor-client-text-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 56px;
-  margin-bottom: 10px;
-}
-
-.advisor-client-text-logo span {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  font-size: 1.1em;
-  font-weight: 700;
-  color: #999;
-  letter-spacing: -0.01em;
-  transition: color 0.2s ease;
-}
-
-.advisor-client-text-logo:hover span {
-  color: #1a1a1a;
 }
 
 /* Testimonial — extends pull-quote */
@@ -813,14 +769,5 @@ footer p {
 
   .advisor-client-grid {
     gap: 18px;
-  }
-
-  .advisor-client-logo img {
-    max-height: 32px;
-    max-width: 100px;
-  }
-
-  .advisor-client-text-logo span {
-    font-size: 0.95em;
   }
 }
