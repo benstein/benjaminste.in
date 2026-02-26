@@ -8,8 +8,6 @@
 
 ---
 
-# Sisyphus Only Had One Boulder (I Have Four)
-
 I love a clean house. No clutter, no mess, vacuumed rugs, mopped floors, wiped counters.
 
 My family is the opposite. My wife LOVES dishes in the sink (I can only assume based on behavior). Zeke leaves his basketball and sneakers and slides and uniforms on every surface. Gabi has been doing science experiments in the kitchen for the past week, leaving a trail of hardened bread starter on the counter every night. Soup the dog loves sticks and brings one into the hallway and chews it to pieces, leaving a mess of bark (no pun intended) behind.

@@ -45,6 +45,4 @@ exclude:
   - Gemfile.lock
   - README.md
   - vendor/
-  - generate_alternate_formats.rb
-  - alternate_formats
   - .github

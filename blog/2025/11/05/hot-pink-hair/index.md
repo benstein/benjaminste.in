@@ -8,8 +8,6 @@
 
 ---
 
-# On Approaching 50 with Hot Pink Hair
-
 Nine months ago, I walked into a hair salon and asked them to dye my hair hot pink. I was 47 years old. The stylist didn't blink. Oakland has seen stranger things before breakfast.
 
 Some background... I coach youth robotics. My son's FTC robotics team, the [Circuit Breakers](https://piedmontmakers.org/robotics/21419), advanced to NorCal championships. Their jerseys were hot pink. So my co-coach and I matched them, full solidarity.

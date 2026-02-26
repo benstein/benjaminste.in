@@ -8,8 +8,6 @@
 
 ---
 
-# Everyone Says They Can Spot AI Writing—Can You? 🤔
-
 *I built a collaborative team of copywriters that run inside Claude Code  (what?!) that automate my writing process--without sounding like an LLM*
 
 After reading [this post](https://www.linkedin.com/feed/update/urn:li:activity:7394083873082703872/) by the indefatigable [Bryan Cantrill](https://bcantrill.dtrace.org/) on why you shouldn't use LLMs to write LinkedIn posts for you, I decided to let an LLM write a repsonse. The audacity, I know. More specifically, I'd let my team of nine(!) autonmous AI agent copywriters do it.

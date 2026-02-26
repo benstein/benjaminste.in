@@ -8,9 +8,9 @@
 
 ---
 
-# The Stein Family Pet Naming Tradition: A Comprehensive History
+*Our dog is named Matzah Ball Soup. Before him, our beagle was named Kugel. The hamsters were Falafel and Babka. Our family has been naming pets after Jewish foods since the shtetl.*
 
-We currently have a dog named Matzah Ball Soup. We call him Soup for short. He's a good dog, enthusiastic, loyal, prone to eating things he shouldn't. When we're at the vet and they call "Matzah Ball Soup Stein," I watch the other pet owners try to maintain neutral expressions.
+We currently have a chihuahua/Jack Russell mix named Matzah Ball Soup. We call him Soup for short. He's a good dog, enthusiastic, loyal, prone to eating things he shouldn't. When we're at the vet and they call "Matzah Ball Soup Stein," I watch the other pet owners try to maintain neutral expressions.
 
 People ask me why we do this.
 
@@ -54,7 +54,7 @@ Did we really have a bear named Cholent? I choose to believe we did. It makes th
 
 The tradition died out briefly in the mid-20th century. Assimilation pressures, probably. My uncle David had a dog named "Rex" in the 1960s. Rex! Like we were trying to blend in with some imaginary gentile standard of normal pet names. The family still talks about this as a regrettable period. "The Rex years," my father calls it, shaking his head.
 
-But traditions have a way of resurging. When we got Kugel in 1998, it felt like a return to form. Something essential had been restored. And now we have Soup, who is currently asleep on the couch, unaware that he's part of a multi-generational legacy that may or may not include a medium-sized bear.
+But traditions have a way of resurging. When we got Kugel in 2008, it felt like a return to form. Something essential had been restored. And now we have Soup, who is currently asleep on the couch, unaware that he's part of a multi-generational legacy that may or may not include a medium-sized bear.
 
 And after Soup, we'll get another pet. We haven't decided what yet. But the name is already chosen: Rugelach. It's a family decision, arrived at by consensus. My mother suggested Gefilte, but we all agreed that felt mean to the animal.
 

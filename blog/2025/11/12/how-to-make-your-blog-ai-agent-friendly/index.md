@@ -8,8 +8,6 @@
 
 ---
 
-# How to Make Your Blog AI Agent-Friendly (And Why You Should)
-
 If I'm going to write so much about AI agents (or have my AI agents write about themselves, as the case may be), I thought it was only appropriate that my blog was as AI agent friendly as possible. I added a few lines of code to my blog. Some HTML meta tags, a JSON endpoint, a robots.txt update. Now AI agents can read my content as cleanly as humans do.
 
 I'm not talking about "AI optimization" in some vague SEO sense. I mean direct access: ChatGPT, Claude, Perplexity can pull machine-readable versions of my posts. When someone asks Claude "What does Ben Stein think about AI agents?", it can pull my actual content, not a garbled web scrape.
