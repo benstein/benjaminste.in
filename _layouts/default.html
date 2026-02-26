@@ -7,12 +7,10 @@
 
 {% seo %}
 
-    <!-- Alternate formats for AI agents -->
     {% if page.layout == "default" and page.date %}
     <link rel="alternate" type="application/json" href="{{ page.url | append: 'index.json' | relative_url }}" title="JSON version" />
     <link rel="alternate" type="text/markdown" href="{{ page.url | append: 'index.md' | relative_url }}" title="Markdown version" />
 
-    <!-- Structured data for AI understanding -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -39,23 +37,17 @@
     }
     </script>
 
-    <!-- AI-friendly meta tags -->
     <meta name="robots" content="index, follow" />
     <meta name="ai-content-declaration" content="partial" />
     <meta name="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
     {% endif %}
 
-    <!-- AI content manifest -->
     <link rel="manifest" href="/ai-content-manifest.json" type="application/json" />
     <meta name="ai-content-manifest" content="{{ '/ai-content-manifest.json' | absolute_url }}" />
 
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
     {% include head-custom.html %}
 
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PDGCVYBVTP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
