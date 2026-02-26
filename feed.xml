@@ -1,0 +1,1272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Benjamin Stein</title>
+  <link href="https://benjaminste.in/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://benjaminste.in/" rel="alternate" type="text/html"/>
+  <updated>2026-02-24T00:00:00Z</updated>
+  <id>https://benjaminste.in/</id>
+  <author>
+    <name>Benjamin Stein</name>
+  </author>
+  <entry>
+    <title>Should You Major in Computer Science in the Age of AI?</title>
+    <link href="https://benjaminste.in/blog/2026/02/24/should-you-major-in-cs/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2026/02/24/should-you-major-in-cs/</id>
+    <published>2026-02-24T00:00:00Z</published>
+    <updated>2026-02-24T00:00:00Z</updated>
+    <summary>I failed my first computer science exam. Not &#39;didn&#39;t do great.&#39; Failed. It was the best lessons I ever learned.</summary>
+    <content type="html">I failed my first computer science exam. Not &quot;didn&#39;t do great.&quot; Failed.
+
+It was CS100 at Cornell. I had never written a line of code before college, and my first exposure to programming was C. Actual C. Not Python, not JavaScript, not some friendly language that holds your hand and tells you everything&#39;s going to be okay. C. The language where you manage your own memory (or in my case, don&#39;t)
+
+So I did what any rational 18-year-old does: I studied syntax like my life depended on it. Where does the semicolon go? How do you nest curly braces? What&#39;s the difference between `*ptr`, `**ptr`, and `&amp;ptr`? What&#39;s the indentation convention? I had that stuff absolutely cold. I could punctuate C in my sleep.
+
+Then I sat down for the exam and none of it mattered. The questions weren&#39;t about syntax. They were about algorithms. They were puzzles. They were &quot;how would you approach this problem?&quot; and &quot;what&#39;s the most efficient way to think about this?&quot; I sat there in a state of mild panic until somewhere between questions two and three I had one of those bizarre, inconvenient epipahines: computer science has basically nothing to do with syntax.
+
+I still failed the test. But I walked out thinking this is the most fascinating thing I&#39;d ever experienced in school.
+
+## The Syntax Was Never the Point
+
+If you think engineering is about memorizing syntax, you&#39;re making the same mistake I made in 1996. And if you think AI means nobody should study engineering because &quot;LLMs will just write the code,&quot; you&#39;re making a more sophisticated version of the same mistake.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;What I actually learned studying computer science had very little to do with semicolons. It had everything to do with how to reason about the world.&lt;/p&gt;&lt;/aside&gt;
+
+I learned about **abstraction**, which is the practice of separating what something does from how it does it. In code, that means interfaces and layers. In real life, that&#39;s the plumbing in your house. I don&#39;t need to understand fluid dynamics to fix my toilet. I need to understand the boundary between systems. (I&#39;m also pretty bad at fixing my toilet, but that&#39;s a separate issue.)
+
+I learned about **algorithmic complexity**, Big O notation, which sounds impressively nerdy and is. But the actual skill it teaches you is thinking in orders of magnitude. Is this problem linear or exponential? If we double the inputs, does it get a little harder or does it explode? That lens applies to companies, markets, families, and the rate at which my 2 teenage boys consume Top Ramen.
+
+I learned about **pointers and references**, which is a mildly metaphysical concept if you think about it too long. The idea that something can *point to* something else rather than *be* the thing itself will genuinely rewire your brain. Indirection isn&#39;t intuitive. It&#39;s also incredibly powerful once you internalize it.
+
+I learned **divide and conquer**: break a giant problem into composable pieces, make each piece testable on its own, then reassemble them. I learned **debugging**, which sounds like a technical skill but is really the art of forming hypotheses, instrumenting a system, observing what actually happens versus what you expected, and adjusting your mental model accordingly. So when my wife says &quot;why isn&#39;t the Netflix sound working?&quot;, I can systematically sovle the problem before the new season of Bridgerton starts.
+
+At some point I stopped thinking of these as &quot;skills&quot; and started thinking of them as tools in my proverbial toolbelt. And they compound over time in ways that are hard to appreciate when you&#39;re 18 and staring at a failed exam.
+
+And here&#39;s the thing: that idea generalizes to basically everything. You just need different glasses. Zoom out. Change representations. Reframe the problem. The discipline teaches you to look at what appears to be total chaos and realize it has hidden order, if you&#39;re willing to shift your perspective.
+
+## So... Should You Major in CS in 2026?
+
+OK, to the heart of the matter. AI can write code. Therefore (the argument goes) you should skip computer science because entry-level programming jobs might look different in five years.
+
+If your only reason for going to university is to secure a very specific job title, then maybe that&#39;s a reasonable concern. But if you believe the purpose of higher education is to learn how to think, then you&#39;re asking the wrong question entirely. University is not trade school. (And before anyone sharpens their pitchforks: trade school is great. Electricians, plumbers, machinists, these are real skills that keep civilization functioning. My house would collapse without them, possibly literally. This isn&#39;t a referendum on trades. It&#39;s about what a rigorous academic discipline uniquely offers.)
+
+Studying engineering, or philosophy, or physics, or classics isn&#39;t about landing a specific job. You go in thinking one way and come out thinking differently, with a set of mental tools you didn&#39;t have before and can&#39;t easily acquire any other way.
+
+## So... Should You Major in Humanities Instead?
+
+The idea of learning how to think differently is not unique to engineering, of course. Consider a classics major. They spend years reading ancient texts, parsing dead languages, studying historical context, writing, arguing. What do they actually learn? They learn to interpret ambiguous material, construct and dismantle arguments, trace how ideas evolve across centuries, and write with the kind of clarity and precision that is, frankly, a superpower most people underestimate.
+
+Those aren&#39;t job skills in the narrow LinkedIn sense. They&#39;re thinking patterns. A philosophy major learns to reason formally. A history major learns to trace causality across complex systems. A literature major learns to inhabit other minds, which is honestly one of the most underrated abilities a person can develop.
+
+None of these disciplines are about employability in any direct way. They&#39;re about building a different brain. Engineering does the same thing, just with algorithms instead of Kafka. (OK maybe a bad example)
+
+## The Skills We&#39;ll Need in the Age of AI
+
+We don&#39;t know which specific skills will be most valuable in 2035. Maybe it&#39;s writing. Maybe it&#39;s prioritization. Maybe it&#39;s taste. Maybe it&#39;s interpersonal communication. Maybe it&#39;s something we can&#39;t even name yet because the job doesn&#39;t exist.
+
+The ability to think clearly, abstractly, structurally, and creatively is not going anywhere. Pattern matching, decomposition, adaptation, model-building, debugging your own assumptions (which, if we&#39;re being honest, is the hardest kind of debugging there is).
+
+AI will generate code. It will draft essays. It will design interfaces. But someone still needs to define the problem worth solving, evaluate tradeoffs, recognize when the output is subtly wrong (which requires understanding why it should be right), and design the system that ties it all together.
+
+Thinking doesn&#39;t get automated away. If anything, the ability to think well becomes *more* valuable when the cost of generating mediocre output drops to zero. The bottleneck shifts from production to judgment.
+
+## Follow the Field That Rewires Your Brain. And Your Passion.
+
+Through my nonprofit work with [Piedmont Makers](https://piedmontmakers.org), I get to help inspire so many young people to become creative problem solvers and innovators in STEAM. So I certainly get asked questions like this a lot.
+
+If you&#39;re choosing a major, I wouldn&#39;t optimize for &quot;what job will this get me?&quot; That&#39;s a short time horizon in a world that&#39;s changing this fast, and it&#39;s also kind of a depressing way to pick something you&#39;ll spend four years of your life on.
+
+Instead, ask yourself: What field excites me enough that I&#39;ll push through the hard parts? What discipline forces me to think in ways I currently don&#39;t? What intellectual tools do I want in my belt for the next fifty years?
+
+For me, engineering did that. Failing that first exam was the gateway drug. Once I understood that the whole discipline was really about problem-solving and systems thinking disguised as a typing class, I was hooked.
+
+For someone else, it might be philosophy. Or economics. Or physics. Or literature. The specific content matters less than people think. What matters is whether the discipline grabs you hard enough to drag you through the difficulty, and whether you come out the other side thinking differently than when you went in.
+
+## We&#39;re Only Human After All
+
+If AI writes code, great. Let it. I&#39;ll be over here with my Big O notation and my slightly traumatic memories of that first CS exam, thinking about systems. Because the real value of studying engineering was never the semicolons. It was learning how to see complexity, decompose it into parts, and reassemble it into something better.
+
+That kind of thinking isn&#39;t threatened by AI. If anything, it&#39;s exactly what you need to use AI well. The machines got really good at typing. Turns out the being human part is still on us.
+
+Oh, and in case you&#39;re wondering, no, I still can&#39;t dereference a pointer.</content>
+  </entry>
+  <entry>
+    <title>Introducing SuperDuper</title>
+    <link href="https://benjaminste.in/blog/2026/02/20/introducing-superduper/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2026/02/20/introducing-superduper/</id>
+    <published>2026-02-20T00:00:00Z</published>
+    <updated>2026-02-20T00:00:00Z</updated>
+    <summary>Because parenting doesn&#39;t have to be this hard.</summary>
+    <content type="html">The other night I was telling my wife Arin about Kavya, a project manager with three over-scheduled kids. Kavya is married to Chetan, an engineer who coaches Saturday soccer. Kavya is also imaginary. She&#39;s a persona that was the result of months of interviews I&#39;ve been conducting to learn how parents actually manage family logistics, what breaks, and what keeps them up at night.
+
+When Arin heard Kavya&#39;s story, she started to cry.
+
+Not because it was sad. Because Kavya is *her*. Kavya is every mom she knows. The woman who reads all the emails — every school newsletter, every coach update, every seventeen-page PDF from the PTA — not because she wants to, but because if she doesn&#39;t, no one will. The woman whose partner asks &quot;what&#39;s this week look like?&quot; and she just *answers*, because the entire family schedule lives in her head. The woman who, when something inevitably slips — a missed registration deadline, a forgotten permission slip — feels like it&#39;s her fault. Even when it isn&#39;t.
+
+Chetan isn&#39;t a villain in this story. He&#39;s a good partner! He does pickups and packs lunches and handles whatever he&#39;s told needs handling. But he operates on dispatched instructions, not independent awareness. He doesn&#39;t read the coach&#39;s email because, somewhere along the way, both of them just sort of... decided that Kavya would be the one who does. And once that asymmetry sets in, it compounds. She knows more, so she handles more, so she knows more.
+
+Researchers call it chronic cognitive load under conditions of asymmetric accountability. Parents call it Tuesday.
+
+(This post is pretty gendered. I know it. Research shows that 74% of the time it&#39;s a woman who is managing this cognitive load. But it&#39;s the same for same-sex couples, single parent households, and non-binary couples: one person primarily manages the load.)
+
+---
+
+## The problem that won&#39;t stay solved
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;Here&#39;s what kills me about family logistics: it&#39;s not that no one has tried to fix it. It&#39;s that every solution makes it worse.&lt;/p&gt;&lt;/aside&gt;
+
+Shared Google Calendar? Someone has to enter the events. (Guess who.) Cozi? Three weeks of manual data entry before you abandon it. Whiteboard in the kitchen? Um, the marker dried out in October. Parent group chat? Oh great, eighteen parents saying &quot;Thanks!&quot; and burying the one message that actually matters.
+
+Every family planning tool asks the already-overwhelmed parent to do *more* work. Set it up. Keep it updated. Convince your partner to use it. Manage yet another thing. These tools don&#39;t solve the mental load — they add to it. They&#39;re productivity apps for a problem that isn&#39;t about productivity.
+
+The problem is information buried in the wrong places, surfaced to the wrong people, at the wrong time.
+
+And here&#39;s the deepest cut: every one of these tools assumes all families work the same way. A dual-income couple with three kids in travel sports has completely different needs than a single parent with one child in music lessons. When two parents split responsibilities, you get split-brained information — which is even *more* work when neither person has the complete picture.
+
+There&#39;s no template for family. So why do all the apps assume there is?
+
+---
+
+## The information gap
+
+In almost every household we&#39;ve talked to, there&#39;s an information asymmetry. One parent knows more about what&#39;s happening — not because they&#39;re better at parenting, but because at some point the household settled into a pattern where one person reads the emails and the other doesn&#39;t. It&#39;s nobody&#39;s fault. It&#39;s barely even a decision. It just happens.
+
+We started calling the two sides of this gap the **Keeper** and the **Chaser**.
+
+The Keeper reads the emails. All the emails. They know practice moved to Thursday, picture day is next week, and Friday is an early dismissal. They know this because they spent Sunday night mentally reconstructing the week ahead from forty scattered messages and half-remembered details. Their system is their brain, and it works — until it doesn&#39;t. When it doesn&#39;t, they blame themselves, they blame their partner.
+
+The Chaser wants to know. They really do. But the information never makes it to them — or it does, in a subject line they skimmed past during a meeting, filed under &quot;my partner&#39;s got it.&quot; They&#39;re not lazy. They&#39;re locked out of a system they never built and can&#39;t access. They stopped expecting to know things, and now they don&#39;t.
+
+(Yes, these are simplifications — every family is more complicated than two labels. And yes, the Keeper role falls disproportionately on women, for reasons that self-reinforce and aren&#39;t reducible to individual choices. We know. The labels aren&#39;t the point. The gap is.)
+
+Not every family has exactly one of each, but the gap itself shows up everywhere, and it wears on both sides. The Keeper is exhausted from holding it all. The Chaser is frustrated by always being a step behind. Both people are doing their best. Neither has what they need.
+
+So we built SuperDuper. An app that would bridge this gap and do so much more.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;In most households, someone is carrying a weight the other person doesn&#39;t fully see. And that person deserves something better than &quot;have you tried a shared calendar?&quot;&lt;/p&gt;&lt;/aside&gt;
+
+We built SuperDuper for all the different families — two moms, two dads, grandparents who help, nannies who need to know, co-parents navigating shared responsibilities. But we built it with a clear-eyed recognition that in most households, someone is carrying a weight the other person doesn&#39;t fully see. And that person deserves something better than &quot;have you tried a shared calendar?&quot;
+
+---
+
+## What SuperDuper does
+
+The short version: SuperDuper turns the communication you&#39;re already getting into a personalized family dashboard — without you lifting a finger.
+
+The longer version: you sign in with Gmail, and within five minutes, you have a dashboard that knows your family. Not because you filled out a form or configured a widget or told us how many kids you have. Because SuperDuper read your inbox, found the school newsletters and coach updates and camp registration deadlines, and figured it out.
+
+It knows your kids&#39; names. It knows soccer is Tuesdays and Thursdays. It knows picture day is next week and that the permission slip is due Friday. Nobody told it. It figured it out from your email.
+
+But the real magic isn&#39;t the initial setup — it&#39;s what happens next. When Coach Mike emails that Thursday&#39;s practice moved to Wednesday, your dashboard updates before you open the email. When the school sends a newsletter with a field trip buried on page three of a PDF, SuperDuper extracts the date and surfaces the action item. When the school only emails your partner with the schedule change, you see it too.
+
+(Seriously. It&#39;s wild.)
+
+But it&#39;s not just a better inbox or Gmail filters. SuperDuper groups related information together intelligently. My son&#39;s Scout troop went on a curling trip recently (yes, really — curling! The weather in California is so nice we actively seek out cold in the winter). That single trip generated fourteen(!) separate email items over ten days: the initial announcement, the what-to-wear list, the waiver links (updated twice because the first links were broken), a driver shortage, the driver shortage resolved, a lunch order form, a scheduling conflict with basketball, a pickup logistics thread between my wife and the organizer, and two waiver confirmations. Fourteen items. One thing that matters.
+
+SuperDuper collapsed all of that into a single view: here&#39;s the curling trip, here&#39;s what&#39;s done, what&#39;s not, and what you need to do next. Fourteen emails across two and a half weeks, from five different senders, turned into one coherent thing you can look at and immediately understand.
+
+Oh, and afterwards? The troop leader sent photos from the event. SuperDuper added those to the same view. Because of course it did — they&#39;re part of the same thing.
+
+Your dashboard is unique because your family is unique. Every family on SuperDuper gets a different experience, because every family is different.
+
+---
+
+## What it&#39;s actually like
+
+I stopped reading most of my email. I&#39;ve been an Inbox Zero guy since 1994, so this is no small claim. But here&#39;s the thing: I&#39;m actually *more* aware of what&#39;s going on in my family&#39;s life than I ever have been before.
+
+Arin and I have been using SuperDuper every single day. I open it in the morning to see what&#39;s on tap for the day. I open it each evening to knock out whatever actionable stuff came in — permission slips to sign, forms to fill, registrations opening soon. It takes maybe two minutes. The rest of the email can rot.
+
+We have a son on two basketball teams, Scouts, tutoring, a paper route, and an active social life that generates its own logistics. The other is in ultimate frisbee, high school robotics, and scout leadership. Two different schools. Multiple coaches, teachers, troop leaders, and parent coordinators. The volume of inbound information is staggering, and the percentage of it that actually matters on any given day is maybe 10%.
+
+Last week, my son Zeke went to a friend&#39;s ice skating birthday party (see above re: Californians seeking out cold). Two hours before the party, a parent emailed a liability waiver to a reply-all list. Who&#39;s checking email two hours before a birthday party? Not me. But SuperDuper flagged it — new action item, time-sensitive, linked to the event. I signed it in the car on the way there. Without SuperDuper, I would have been the dad holding up the line at the rink filling out paperwork while twelve kids waited.
+
+Arin still reads the emails — old habits — but she told me last week that for the first time, she doesn&#39;t feel like she *has* to. That matters more to me than any product metric.
+
+The deepest value isn&#39;t organizational. It&#39;s relational. When both parents see the same information without one having to be the messenger, something shifts in the household. The Chaser stops asking &quot;what&#39;s this week look like?&quot; The Keeper stops feeling like the only person who knows the answer. The information asymmetry dissolves, and what&#39;s left is two people who can actually share the load.
+
+---
+
+## Why now
+
+Two years ago, this wasn&#39;t possible. Heck, three months ago it wasn&#39;t possible. The AI models couldn&#39;t reliably parse messy, unstructured email at scale. They couldn&#39;t maintain context across dozens of threads from different senders. They couldn&#39;t infer that &quot;Coach Mike&quot; and &quot;Michael Torres&quot; are the same person, or that the email with the subject &quot;Quick update!&quot; contains a schedule change that invalidates three other things on your calendar. Now they can. Really, really well.
+
+But model capability is only half the story. The other half is a new approach to solving problems that requires a new approach to software. We want to throw out the old model and build a new architecture we&#39;re calling *adaptive applications*: software that observes your data, interprets what matters, and generates a personalized application — then keeps adapting as your life changes.
+
+This is not vibe coding, where you prompt an AI to build you an app and then you&#39;re the one maintaining it. It&#39;s not a template with some AI sprinkled on top. It&#39;s software that figures out what you need by looking at your actual situation — and rewrites itself when your situation changes. Soccer season ends, theater starts. Coaches change. Kids age into new activities. The app notices and adapts.
+
+I wrote recently about [the blinking cursor problem](/blog/2026/02/02/the-blinking-cursor/). Every app with an empty text field is asking you: *what do you want?* But what if you don&#39;t know? What if the right answer is: look at my data and figure it out?
+
+---
+
+## The bigger picture
+
+I need to be honest about something: my aspiration is not to *just* build a family logistics app.
+
+SuperDuper for families is the first product, and we&#39;re going to make it excellent. We live this problem, we care about these people, and the market is real.
+
+But here&#39;s where it gets personal. Right now we&#39;re planning our son Zeke&#39;s Bar Mitzvah. The logistics live in Trello, Google Docs, spreadsheets, email threads, PDFs from vendors, and a group chat with the rabbi. It&#39;s a nightmare. And there is no app for this — because the market for Zeke Stein&#39;s Bar Mitzvah Planner is exactly two people. You can&#39;t make that up in volume.
+
+Except now you can. The same architecture that interprets school emails and builds a family dashboard can interpret vendor contracts and build an event planner. Or look at bank statements and build a personal finance dashboard — one that knows about the Bar Mitzvah budget *and* the college savings *and* the aging parents. Not a generic finance app. *My* finance app, built from *my* data, aware of *my* life.
+
+The architecture underneath SuperDuper is domain-agnostic. The same pattern — observe data, infer what matters, generate personalized software, adapt continuously — applies anywhere the information exists but the right software doesn&#39;t. And for the first time, AI makes it economical to build software for an audience of one.
+
+Family logistics is our beachhead. The architecture is the product.
+
+---
+
+## What this *isn&#39;t*
+
+I want to name something explicitly, because I think about it a lot.
+
+Most of the AI conversation right now is about replacing human labor. Automating jobs. Doing work that people used to do.
+
+Our last startup, Teammates, was that. SuperDuper is not.
+
+This is the thing people actually *want* from AI: not to be more productive at work, but to have more time for the things that matter. Fewer dropped balls means fewer family arguments. Less time buried in email means more time at the dinner table. A parent who isn&#39;t mentally rehearsing tomorrow&#39;s logistics at 11pm is a parent who&#39;s more present with their kids right now.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;We&#39;re not automating parenting. We&#39;re just removing the tax on it.&lt;/p&gt;&lt;/aside&gt;
+
+The endless administrative overhead that steals hours from every family every week — hours that should be spent actually being with your kids, not managing the logistics of being with your kids.
+
+That&#39;s what gets me out of bed in the morning. Not the architecture. Not the market size. Not the image of a parent opening our app. It&#39;s the image of them *closing* our app so they can go play with their kids.
+
+---
+
+## Come join us
+
+SuperDuper is live and in the hands of real families right now. We&#39;re expanding access through an invite system — if you&#39;re a parent drowning in email and want to try it, you can join the waitlist at [superduperlabs.com](https://superduperlabs.com).
+
+If you&#39;re a Keeper reading this, nodding along, feeling seen for the first time by a product description — hi. We built this for you. You don&#39;t have to hold it all anymore.
+
+And to my Chasers out there — clarity is coming. You&#39;re about to know things without having to ask. No more excuses.
+
+---
+
+*I&#39;m Ben Stein, co-founder and CEO of SuperDuper. I live in Oakland with my Keeper wife Arin, our two overprogrammed teenage boys, and a dog named Soup who contributes nothing helpful to the family logistics and arguably makes them harder, but he&#39;s really cute.*
+
+*If you want to follow along: [superduperlabs.com](https://superduperlabs.com) · [benjaminste.in](https://benjaminste.in) · [LinkedIn](https://www.linkedin.com/in/benjaminstein/)*</content>
+  </entry>
+  <entry>
+    <title>I Was Wrong About LLM Writing</title>
+    <link href="https://benjaminste.in/blog/2026/02/12/i-was-wrong-about-llm-writing/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2026/02/12/i-was-wrong-about-llm-writing/</id>
+    <published>2026-02-12T00:00:00Z</published>
+    <updated>2026-02-12T00:00:00Z</updated>
+    <summary>I spent two years treating all LLM writing as slop. Turns out there&#39;s a crucial distinction between using AI as a microwave burrito and using it as a compiler for your own hard-won thinking.</summary>
+    <content type="html">I&#39;ve changed my mind about AI-generated writing. More than once, actually. And the thing I was most wrong about is the thing I was most righteous about, which is how these things usually go.
+
+---
+
+## The Enchantment Period
+
+When GPT-3.5 dropped, we all lost our minds a little. It could *write*. Not autocomplete. Not fill-in-the-blank Mad Libs. Actually write. Essays, poems, decent emails, serviceable blog posts.
+
+Like everyone else, I went through the honeymoon phase. I&#39;d write something messy and have the model tidy it up. Or ask for an outline and fill it in myself. Or let it draft and then &quot;add my voice,&quot; which is the content equivalent of putting a bumper sticker on a rental car and calling it yours.
+
+And the output was... good? Like, genuinely good. Better than what most people could produce on their own. The prose was clean, the structure was tight, the tone was professional. We hadn&#39;t yet developed antibodies for em-dashes and &quot;certainly&quot; and &quot;I&#39;d be happy to help.&quot; Nobody was pattern-matching on LLM tells because we didn&#39;t know what LLM tells were yet. It just looked like better writing.
+
+Which made what came next so much worse.
+
+---
+
+## The Slop Era
+
+Then the world filled with slop. You know it when you see it. The over-structured cadence. The fake gravitas. The listicles pretending to be insight. The weirdly confident tone backed by zero lived experience, like a Wikipedia article that went to business school.
+
+People stopped writing. They started prompting. &quot;Write me a thought leadership post about X.&quot; No thinking. No wrestling with the idea. No scars.
+
+Just words. So many words. Words words words. No extra meaning or content or emotion or insight. Just more words to read.
+
+I became allergic to it. I hated reviewing it when someone on my team handed it to me. I hated seeing it published publicly. I especially hated how much of it was *almost* good enough to pass, which made it worse than being obviously bad. At least bad writing has the dignity of failure. Slop has the indignity of adequacy.
+
+---
+
+## Enter Bryan Cantrill, Stage Left
+
+At some point Bryan Cantrill (who is somehow both way cooler than me and way nerdier than me at the same time) posted a [now-viral LinkedIn screed](https://www.linkedin.com/feed/update/urn:li:activity:7394083873082703872/) about LLM writing. The gist: holy hell, the writing sucks, LLMs are lousy writers and most importantly they are not you, stop outsourcing your goddamn brain.
+
+1,800 reactions. Standing ovation from every developer who&#39;d ever received a Slack message that opened with &quot;Great question!&quot; followed by an em-dash cascade into oblivion.
+
+I agreed completely. I was firmly in that camp.
+
+If it wasn&#39;t your thinking, it wasn&#39;t your work. Period.
+
+---
+
+## The Obsession
+
+But I&#39;m me, so I couldn&#39;t just agree and move on. I had to try to *beat* the problem.
+
+Could I get a model to actually write in my voice? Not approximate. Not &quot;close enough.&quot; Actually sound like me.
+
+I built elaborate prompt chains. Multiple collaborating agents. An orchestrator coordinating nine sub-agents - one stripping LLM tells, another enforcing narrative arc, another checking for tonal drift, one that was essentially a bouncer for hallucinations. I had my own little army of linguists. Like the nerdiest version of Ocean&#39;s Eleven.
+
+I [wrote a whole blog post about it](/blog/2025/11/12/everyone-says-they-can-spot-ai-writing/). My wife read the output and couldn&#39;t tell what was me and what wasn&#39;t. It cost $46 in Anthropic API tokens, which is either absurdly expensive or absurdly cheap depending on whether you think of it as &quot;generating a blog post&quot; or &quot;employing a nine-person editorial staff for an afternoon.&quot;
+
+It was a fascinating experiment. It mostly proved something uncomfortable: you can approximate tone. You can remove obvious tells. You can even get a little humor. A clever callback. A Dennis Miller-style cultural reference to prove that you&#39;re smarter than your reader.
+
+But voice without lived cognition behind it is still hollow. The walls look right but nobody lives there. It&#39;s like John Steinbeck wrote Grapes of Wrath while living in a Potemkin village (see what I did there!).
+
+My writing project didn&#39;t change my mind about slop (I&#39;m still allergic) but it did help clarify what my real issue with AI writing was.
+
+---
+
+## Where I Was Actually Wrong
+
+Here&#39;s where my perspective shifted, and it happened quietly, without a LinkedIn post or a manifesto. Just me, in the weeds, doing the actual work.
+
+Inside my startup, I regularly produce product requirements, user personas, jobs-to-be-done definitions, architecture tradeoffs, background context before major decisions. Ten-to-twenty-page memos that exist so a small team can align on what we&#39;re building and why.
+
+The key distinction: I&#39;m not writing for the sake of writing. This is not poetry. This is not a personal essay. This is not storytelling. This is clarity-driving communication.
+
+And the latest models (Opus 4.5 onward) are extraordinary at it. Not because they *think* for me, but because they *translate my thinking to words better than I can*.
+
+---
+
+## The Hard Work Is Upstream From Writing
+
+When I&#39;m building user personas, for example, the hard part is not writing the prose. The hard part is figuring out which discriminators actually matter, stress-testing whether these personas are real humans or convenient fiction, debating edge cases, deciding what tensions define them. That process takes literally hours of intense cognitive work. I&#39;m arguing with Claude. I&#39;m changing my mind. I&#39;m burning through my context windows faster than my 13 year old with a bag of Nerd Gummy Clusters. I&#39;m circling back to things I was sure about two hours ago and realizing I was wrong.
+
+By the end of it, I&#39;m exhausted. There&#39;s a reason chess grandmasters stay physically fit - it turns out sitting and thinking for hours is genuinely, physically exhausting.
+
+Now imagine I have to turn all of that into ten pages of clear, structured prose that someone else - someone who wasn&#39;t in my head for those hours - can use to make decisions.
+
+That is not where my leverage is highest.
+
+And here&#39;s the surprising part: the model does it better. Clearer hierarchy. Better sectioning. Fewer logical jumps. Less of that thing where you know what you mean so well that you skip three steps in the explanation and your reader falls into the gap.
+
+I&#39;ll reread the output and think, &quot;Whoa. That&#39;s exactly what I meant.&quot; Sometimes I read it multiple times because it&#39;s clearer than what I would have written by hand. The ideas are mine. The intent is mine. The insights are mine. But the expression of these ideas by an LLM is better than I ever could have managed alone.
+
+---
+
+## We&#39;re Not Paid to Type
+
+An analogy isn&#39;t hard to find because we already lived through this exact same transition in software engineering.
+
+The hard part of programming was never typing syntax. It was: why are we building this? What constraints matter? What failure modes exist? What architecture supports future change? Once that&#39;s clear, generating code is comparatively mechanical. We don&#39;t call engineers lazy for not writing assembly by hand. We call that *leverage*.
+
+The &quot;typing English&quot; part of my job is not the scarcest resource. Clear thinking is. And treating prose generation as the bottleneck when the actual bottleneck is the hours of cognitive work upstream is like optimizing database queries when the real problem is the data model. You&#39;re solving the wrong thing.
+
+---
+
+## The Anxiety
+
+I&#39;ll be honest about something. I felt genuine anxiety the first time I sent my team a long document that was clearly AI-generated. Not the thinking - the thinking was mine, hard-won, hours of work. But the *prose* had that clean, slightly-too-organized quality. I felt like I was making them read slop. And as previously discussed, making people read slop (especially when you haven&#39;t even read it yourself) is unfair and obnoxious. To make it worse, they couldn&#39;t call me out on it because I&#39;m the boss.
+
+So I asked them. Privately. One-on-one. &quot;Does it bother you that these docs are AI-generated?&quot;
+
+Their answer genuinely surprised me: &quot;No. They&#39;re incredibly clear. It&#39;s actually the best way for us to get into your head.&quot;
+
+Which landed like a Zen koan. The thing I was anxious about - that the writing wasn&#39;t &quot;mine&quot; enough - turned out to be the feature, not the bug. They didn&#39;t want my *prose style*. They didn&#39;t want my humor. They wanted my *thinking*, expressed with maximal clarity. The authorship ego was satisfied upstream, where it belongs. The downstream artifact was better for being less &quot;me&quot; and more &quot;clear.&quot;
+
+Clarity beats authorship ego. Especially when the authorship ego is intact where it actually matters.
+
+---
+
+## The Distinction I Missed for Two Years
+
+There are two radically different uses of LLM writing, and I spent two years treating them as the same thing.
+
+The first is the microwave burrito: &quot;Write me something about X.&quot; No thinking. No pre-work. No cognitive investment. You prompt, you get output, you publish. This is how most people use LLMs for writing, and Bryan Cantrill is right - it produces shit. Stylistically grating, hollow, the literary equivalent of a Thomas Kinkade painting: technically competent, emotionally vacant.
+
+The second is the compiler: &quot;I&#39;ve spent hours wrestling with this. The thinking is done. Now help me structure and express it with maximal clarity.&quot; This is what happens after you&#39;ve done the work. After you&#39;ve argued, iterated, changed your mind, and arrived at something you actually believe. The model isn&#39;t thinking for you. It&#39;s rendering your thoughts in a form other humans can efficiently absorb.
+
+One produces slop. The other produces alignment.
+
+And I couldn&#39;t see the difference because I was so allergic to the first that I refused to explore the second.
+
+---
+
+## The Line
+
+If you&#39;re writing something where the *how you say it* is inseparable from the *what you&#39;re saying* - memoir, essay, poetry, anything where voice IS meaning - then write it yourself. The soul has to be in the words, not just upstream of them.
+
+But for high-stakes, structured, clarity-driving communication? The kind of writing where the goal isn&#39;t to move someone emotionally but to transfer complex thought from one brain to another with minimal loss? They don&#39;t just save me typing time. They increase fidelity between what&#39;s in my head and what lands in yours.
+
+LLMs don&#39;t have your experience. They don&#39;t have your scars. They don&#39;t have the context that took you years to build. If you outsource that part, you get slop. But if you do the work - really do it - and then let the model express it? You get clarity.
+
+That&#39;s the distinction I missed for two years. I spent $46 in API tokens to learn it the hard way. Which, as tuition goes, is a bargain.</content>
+  </entry>
+  <entry>
+    <title>The Blinking Cursor</title>
+    <link href="https://benjaminste.in/blog/2026/02/02/the-blinking-cursor/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2026/02/02/the-blinking-cursor/</id>
+    <published>2026-02-02T00:00:00Z</published>
+    <updated>2026-02-02T00:00:00Z</updated>
+    <summary>We launched Teammates to create virtual colleagues that actually understood you. The hard truth: 9 out of 10 just sat there.</summary>
+    <content type="html">We launched our startup, Teammates, in early 2025 to create virtual colleagues that actually understood you. Your context, your team, your way of working. Not chatbots. Not copilots. AI with identity, memory, personality. Multiplayer collaborators who could get real work done.
+
+The vision was hyper-personalized AI agents. Teammates that would learn your preferences, adapt to your style, evolve to meet your exact needs. 100% malleable to you. Software that shaped itself around the human, not the other way around.
+
+Customers created thousands of Teammates. They gave them names, cute avatars, corporate email addresses, and even LinkedIn profiles. Teammates hung out in company Slack channels, bantered with the humans, and became part of the team.
+
+## Do Virtual Employees Play Virtual Minesweeper?
+
+The hard truth: 9 out of 10 of these Teammates just sat there. Twiddling their thumbs. Playing virtual Minesweeper. &quot;Working&quot; from home. Resting and vesting.
+
+It&#39;s not because they couldn&#39;t do real work. Of course they could. They could do a LOT of real work. BUT! And here&#39;s the big but: they needed someone to tell them what to do. And no one was telling them what to do.
+
+When it came to teaching Teammates, giving them requirements, and assigning them work, everything was underspecified. All the time.
+
+Real examples from real users:
+
+&quot;Redesign my website.&quot;
+
+&quot;Run our company&#39;s social media. Post interesting things on Insta every day.&quot;
+
+&quot;Do your job.&quot;
+
+Those were the entire assignment. That&#39;s literally what the customer typed. And then waited. And then (reasonably) bounced.
+
+I&#39;m not blaming anyone, least of all our customers. These are busy people with real jobs who genuinely want to be more productive. But there&#39;s a chasm between wanting something done and specifying what done means. You don&#39;t realize the chasm is Grand Canyon-sized until you try to hand the work to someone else, human or AI.
+
+Specification is labor. Invisible labor. It doesn&#39;t feel like work until you&#39;re neck deep into &quot;how would you describe your brand voice?&quot; and &quot;who is your target audience?&quot; That&#39;s when you roll your eyes and just write the damn post yourself. It&#39;s just too hard, staring at that blank box and that blinking cursor, to think deeply about what you want and why.
+
+## &quot;Where Do You Want to Go Today?&quot;
+
+In 1994, Microsoft launched a global ad campaign with the slogan &quot;Where do you want to go today?&quot; It was supposed to be inspirational. The promise of infinite possibility. Is there anything Windows 95 can&#39;t do?
+
+But when you actually logged in to Windows 95, you quickly noticed they had to include a big button labeled &quot;Start&quot; because no one would know where to begin otherwise.
+
+Fast forward thirty years. Every app with an empty text field is asking the same question:
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/assets/images/cursor-chatgpt.png&quot; alt=&quot;ChatGPT prompt&quot; style=&quot;max-width: 100%; margin-bottom: 10px;&quot; /&gt;&lt;br/&gt;
+  &lt;img src=&quot;/assets/images/cursor-claude.png&quot; alt=&quot;Claude prompt&quot; style=&quot;max-width: 100%; margin-bottom: 10px;&quot; /&gt;&lt;br/&gt;
+  &lt;img src=&quot;/assets/images/cursor-lovable.png&quot; alt=&quot;Lovable prompt&quot; style=&quot;max-width: 100%; margin-bottom: 10px;&quot; /&gt;&lt;br/&gt;
+  &lt;img src=&quot;/assets/images/cursor-v0.png&quot; alt=&quot;v0 prompt&quot; style=&quot;max-width: 100%;&quot; /&gt;
+&lt;/p&gt;
+
+Thirty years of better and better tools, all asking the same question: What do you want?
+
+*But what if you don&#39;t know what you want?*
+
+None of us do. Not really. We know the problem exists. We feel it. But we can&#39;t articulate the solution. I can barely decide which roll of toilet paper to buy at the grocery store! And I&#39;m supposed to think through all the edge cases of an app??
+
+I don&#39;t know what features I need. I just want to stop missing summer camp registration for my kid. I want to know which clients are late on invoices and what to say to each of them. I want to know which states my small business needs to file compliance docs in this quarter. I want to know if we can afford the summer vacation we&#39;re planning.
+
+That&#39;s not a prompt. That&#39;s not a vibe-code app. That&#39;s software built specifically for me. My life. My problems.
+
+If it existed, I&#39;d already be using it. But it doesn&#39;t. Because who would build it? The market for my exact situation is exactly one. And you can&#39;t make that up in volume.
+
+At least, you couldn&#39;t...
+
+## So What&#39;s Next?
+
+What we learned building Teammates is that there ought to be a completely new way to build hyper-personalized software. And the latest generation of models is finally making it possible. We&#39;re on the cusp of personal software that doesn&#39;t start with a blinking cursor.
+
+Software that doesn&#39;t wait to be prompted.
+
+Software that observes, infers, proposes.
+
+Software that writes the spec about you.
+
+*Software that builds itself around you.*
+
+Lots more soon...
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/assets/images/teammates-farewell.png&quot; alt=&quot;Farewell to Teammates&quot; style=&quot;max-width: 100%;&quot; /&gt;
+&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>How to Protect Yourself Online (2026 Edition)</title>
+    <link href="https://benjaminste.in/blog/2025/11/14/how-to-protect-yourself-online/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2025/11/14/how-to-protect-yourself-online/</id>
+    <published>2025-11-14T00:00:00Z</published>
+    <updated>2025-11-14T00:00:00Z</updated>
+    <summary>Every year I write an updated guide for friends and family who want a New Year&#39;s Resolution that might actually stick. Here&#39;s my latest for 2026.</summary>
+    <content type="html">Every year I write an updated &quot;How to protect yourself online&quot; guide for friends and family who want a New Year&#39;s Resolution that might actually stick. (Not my techno nerd friends. If you know what a Yubikey or an elliptic curve is, you can skip this one). Here&#39;s my latest guide for New Year&#39;s Eve 2026.
+
+---
+
+Most people think they&#39;re &quot;not important enough to hack.&quot; This is backwards. Online attacks aren&#39;t personal—they&#39;re opportunistic. You&#39;re not being targeted by some hoodie-wearing genius in a dark room. You&#39;re being swept up by bots running leaked password lists against every login form they can find.
+
+If you reuse passwords or skip two-factor authentication (2FA), it&#39;s not a question of if, it&#39;s when.
+
+The attack pattern is depressingly simple: Your leaked Facebook password unlocks your email. Your email resets your bank password. Now someone in Belarus is buying AirPods on your dime, and you&#39;re spending Tuesday morning on hold with fraud departments. That&#39;s the good outcome. The bad one involves identity theft, ransomware, or your ex finding out what you really think about their new partner.
+
+All of it&#39;s preventable with about an hour of setup.
+
+---
+
+## The Old Way (That Puts You at Risk)
+
+You know how you do it:
+
+- Reuse the same 1–3 passwords everywhere.
+- Add a number or symbol when a site forces you. (`Password1` becomes `Password1!`)
+- Write them down on a Post-it under your keyboard, or trust browser autofill.
+- Use SMS text codes for 2FA, if you&#39;re feeling fancy.
+
+It feels safe enough until it isn&#39;t. One breach compromises a dozen accounts. I&#39;ve seen this happen to smart people—professors, lawyers, that friend who swears they&#39;re &quot;careful online.&quot; Nobody thinks it&#39;ll be them until their Instagram is DMing crypto scams to their mom.
+
+---
+
+## The Better Way (That&#39;s Actually Easier)
+
+We&#39;re going to make your digital life both more secure and less annoying by letting trusted tools remember everything for you.
+
+### 1. Use a Password Manager
+
+Let a tool remember everything. Your brain has better things to do.
+
+- **Recommended:** Bitwarden—free, open source, secure
+- **Alternative:** 1Password—paid, polished, excellent if you value hand-holding
+- **Not Recommended:** LastPass—suffered more breaches than a medieval castle
+
+Your vault&#39;s secured by one strong master password. A long phrase works great: `correct horse battery staple` beats `P@ssw0rd!` every time. The manager auto-fills logins across all your devices. You&#39;ll never type a password again, which means you&#39;ll never fat-finger one at 11 PM trying to order Thai food.
+
+### 2. Turn on 2FA for Critical Accounts
+
+That&#39;s email, bank, social media, health portals—anything that would ruin your week if compromised. Skip SMS when possible and use an authenticator app instead:
+
+- **Recommended:** Authy—easy setup, cloud backup, doesn&#39;t abandon you when you upgrade phones
+- **Alternative:** Google Authenticator—works fine if you enjoy living dangerously without backups
+
+This adds a one-time code every time you log in from a new device. Think of it as your accounts checking IDs at the door. Annoying at the door, reassuring when someone else tries to get in.
+
+---
+
+## &quot;But I Already Have a Strong Password!&quot;
+
+Congratulations. That&#39;s like having a really secure front door and leaving all the windows open.
+
+Strong passwords don&#39;t matter if you reuse them. When Adobe got breached in 2013, they leaked 153 million passwords. If yours was `Tr0ub4dor&amp;3` on Adobe *and* your bank, well, your strong password just became everyone&#39;s password.
+
+Unique passwords per site plus 2FA is the formula. There&#39;s no shortcut, but there is an easy way: let the password manager generate and remember them for you.
+
+---
+
+## Step-by-Step Onboarding Plan
+
+Don&#39;t try to fix everything tonight. Just follow this ramp:
+
+1. Install Bitwarden (or 1Password) and create your vault.
+2. Secure your email, bank, and Apple/Google accounts first. These are the crown jewels—everything else resets through them.
+3. Turn on 2FA for those accounts using Authy.
+4. Let Bitwarden start capturing passwords as you browse.
+5. Each time you log into a site going forward:
+   - Save it in your vault.
+   - Generate a new, strong password (let it create something like `X7$mK9#pL2@qN4`—you&#39;ll never see it again anyway).
+   - Turn on 2FA if it&#39;s available.
+6. Repeat. You&#39;ll be fully migrated in a few weeks without stress or existential dread.
+
+---
+
+## Handy Links
+
+- Bitwarden: [https://bitwarden.com](https://bitwarden.com)
+- 1Password: [https://1password.com](https://1password.com)
+- Authy: [https://authy.com](https://authy.com)
+
+---
+
+## Summary
+
+Digital security isn&#39;t about paranoia. It&#39;s about hygiene.
+
+You lock your front door. You don&#39;t reuse toothbrushes. Don&#39;t reuse passwords or skip 2FA.
+
+With the right tools, you can be way safer in under an hour and never have to memorize a password again. Your future self—the one not on hold with the bank—will thank you.</content>
+  </entry>
+  <entry>
+    <title>Sisyphus Only Had One Boulder (I Have Four)</title>
+    <link href="https://benjaminste.in/blog/2025/11/13/sisyphus-only-had-one-boulder/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2025/11/13/sisyphus-only-had-one-boulder/</id>
+    <published>2025-11-13T00:00:00Z</published>
+    <updated>2025-11-13T00:00:00Z</updated>
+    <summary>I love a clean house. My family is the opposite. One day I&#39;ll win. Or will I?</summary>
+    <content type="html">I love a clean house. No clutter, no mess, vacuumed rugs, mopped floors, wiped counters.
+
+My family is the opposite. My wife LOVES dishes in the sink (I can only assume based on behavior). Zeke leaves his basketball and sneakers and slides and uniforms on every surface. Gabi has been doing science experiments in the kitchen for the past week, leaving a trail of hardened bread starter on the counter every night. Soup the dog loves sticks and brings one into the hallway and chews it to pieces, leaving a mess of bark (no pun intended) behind.
+
+It&#39;s almost like my full time job is following my family around and cleaning up after them. Not once, not from time to time, but every day. I walk in the door after a long day of work and find the same chaos I cleaned up that morning. I put the basketball back in the garage; it migrates to the dining room. I wipe down the counter; new experiments appear. I arrange the slides by the door; they teleport to the living room. I throw out yesterday&#39;s stick; Soup curates a new one by morning. Sisyphus only had one boulder. I have four.
+
+But I know how temporary this all is. One day I&#39;ll win. The house will stay clean.
+
+In just a few years, I&#39;m going to come home to a perfectly clean house, just like I left it. No dirty underwear on the floor, no spilled ketchup on the couch, no chewed up slippers. The basketball will stay in the garage. The kitchen will stay clean. The hallway will be silent, no clicking of dog nails, no trail of bark. I&#39;ll walk through rooms that echo, where everything is exactly where I left it, and I will ache for the mess. I&#39;ll want to trip over those slides. I&#39;ll want to scrub that bread starter. I&#39;ll want evidence that people I love are here, living, making their marks.
+
+One day, sooner than I can imagine, I&#39;ll come home to order and cleanliness. And I&#39;m going to feel oh so sad.</content>
+  </entry>
+  <entry>
+    <title>The Stein Family Pet Naming Tradition: A Comprehensive History</title>
+    <link href="https://benjaminste.in/blog/2025/11/13/the-stein-family-pet-naming-tradition/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2025/11/13/the-stein-family-pet-naming-tradition/</id>
+    <published>2025-11-13T00:00:00Z</published>
+    <updated>2025-11-13T00:00:00Z</updated>
+    <summary>Our dog is named Matzah Ball Soup. Before him, our beagle was named Kugel. The hamsters were Falafel and Babka. Our family has been naming pets after Jewish foods since the shtetl.</summary>
+    <content type="html">*Our dog is named Matzah Ball Soup. Before him, our beagle was named Kugel. The hamsters were Falafel and Babka. Our family has been naming pets after Jewish foods since the shtetl.*
+
+We currently have a chihuahua/Jack Russell mix named Matzah Ball Soup. We call him Soup for short. He&#39;s a good dog, enthusiastic, loyal, prone to eating things he shouldn&#39;t. When we&#39;re at the vet and they call &quot;Matzah Ball Soup Stein,&quot; I watch the other pet owners try to maintain neutral expressions.
+
+People ask me why we do this.
+
+The answer is simple: we&#39;ve always done this. The Stein family has been naming pets after Jewish foods for at least six generations, possibly more. I&#39;ve done the genealogical research. The records are surprisingly detailed.
+
+Before Soup, we had a beagle named Kugel. Before Kugel, I had two hamsters named Falafel and Babka. Falafel was the best hamster. Babka ran away after just a few days. We never found him.
+
+My father&#39;s generation continued the tradition with similar restraint. His childhood dog was named Challah, a golden retriever with a braided leather collar, which everyone agreed was too on-the-nose but also kind of perfect. His sister had a cat named Brisket who lived to be nineteen and spent the last four years unable to jump but unwilling to acknowledge this limitation. They&#39;d find Brisket on the floor next to furniture, looking betrayed.
+
+My grandfather&#39;s generation had a rooster named Schmaltz.
+
+Zayde Herman kept this rooster in Brooklyn in the 1940s, which was apparently a time and place where keeping a rooster in a residential neighborhood was technically illegal but widely practiced. Schmaltz had a notably aggressive temperament and once chased a postal worker three blocks. The postal worker filed a formal complaint. My great-grandmother had to go to some kind of hearing and explain, with a straight face, that Schmaltz was a treasured family pet. The rooster was allowed to stay but had to be &quot;supervised during postal delivery hours.&quot;
+
+Herman&#39;s brother, my great-uncle Saul, had a parrot named Kishke. Kishke knew seventeen words in Yiddish and three in English. The English words were &quot;hello,&quot; &quot;cracker,&quot; and, inexplicably, &quot;automobile.&quot; Saul swore he never taught the bird that last one. Kishke would sit in the window and yell &quot;AUTOMOBILE&quot; at passing cars. The neighbors found this delightful. When Kishke died in 1953, there was a genuine period of neighborhood mourning.
+
+Going back another generation, we hit my great-great-grandfather&#39;s household in the Lower East Side. This is the 1910s. Records from this period are spottier, but family letters reference a series of pigeons (messenger pigeons, apparently, though who they were sending messages to is unclear). The pigeons had names like Latke, Blintze, and Knish. One letter from 1916, written by my great-great-aunt Rifka, mentions that &quot;Latke returned from Weehawken with extraordinary news about Uncle Moishe&#39;s fabric venture.&quot; What news? How did the pigeon convey this? The historical record is silent.
+
+We have actual photographic evidence for this part: my great-great-great-grandfather Yitzhak, still in the old country, kept a goat named Borscht.
+
+This was in the shtetl of Wysokie Mazowieckie in Poland, sometime in the 1880s. We have a photograph, one of those formal, sepia-toned portraits where everyone looks vaguely startled. Yitzhak is seated. Standing next to him is Borscht the goat, wearing what appears to be a small ceremonial vest. On the back of the photograph, someone has written in Yiddish: &quot;Yitzhak and Borscht, 1884.&quot;
+
+According to family stories passed down with dubious accuracy, Borscht was tremendously intelligent. She could open gates, recognize her name in three languages, and had strong opinions about which children she&#39;d allow to milk her. (She liked my great-great-grandmother Chaya. Did not care for Chaya&#39;s brother Avram. Would turn bodily away from him. Avram apparently never recovered from this rejection and moved to Minsk.)
+
+But before Borscht, there was allegedly a sheep named Tsimmes.
+
+I say &quot;allegedly&quot; because we&#39;re now in the realm of oral history, no photographic evidence. Tsimmes belonged to Yitzhak&#39;s father, Zalman. The sheep was apparently a champion wool producer and had a peculiar talent: she could predict rain. Not through normal animal behavior, but (according to the story) by bleating in a specific pattern. Two short bleats and a long one meant rain within three hours. One long bleat meant a storm. Three short bleats meant false alarm, she was just excited about feed.
+
+Did this actually work? My grandfather swore his father told him it did. &quot;Tsimmes was never wrong about weather,&quot; he&#39;d say, as if this were a completely reasonable thing to assert about a sheep that died in approximately 1875.
+
+And then we get to the genuine stuff of legend: Zalman&#39;s father, my great-great-great-great-grandfather Avram, reportedly kept a bear.
+
+A bear named Cholent.
+
+Now, I want to be clear: I cannot verify this. We&#39;re talking about the 1840s or 1850s, in a small shtetl in what was then the Russian Empire. Record-keeping was not robust. But the story has been passed down with such specific details that I&#39;m inclined to believe some version of it happened.
+
+According to family lore, Cholent was not a full-sized bear. It was a medium bear. My great-grandfather&#39;s exact phrasing when he told this story. Cholent was allegedly found as a cub, orphaned, and Avram nursed it back to health with goat&#39;s milk. The bear became domesticated (or as domesticated as a bear gets) and lived in an enclosure behind the house. Children from the village would come to see Cholent. Avram would charge a penny or the equivalent in eggs.
+
+The story goes that Cholent was gentle except for one incident where a traveling tax collector tried to overcharge Avram on some grain assessment. Cholent sensed the tension and stood up on his hind legs. Just stood there. Didn&#39;t growl, didn&#39;t charge. Just stood up, which, if you&#39;re a bear, is all you really need to do. The tax collector apparently recalculated the assessment on the spot and never returned to that part of the district.
+
+Did we really have a bear named Cholent? I choose to believe we did. It makes the rooster named Schmaltz seem downright conventional by comparison.
+
+The tradition died out briefly in the mid-20th century. Assimilation pressures, probably. My uncle David had a dog named &quot;Rex&quot; in the 1960s. Rex! Like we were trying to blend in with some imaginary gentile standard of normal pet names. The family still talks about this as a regrettable period. &quot;The Rex years,&quot; my father calls it, shaking his head.
+
+But traditions have a way of resurging. When we got Kugel in 2008, it felt like a return to form. Something essential had been restored. And now we have Soup, who is currently asleep on the couch, unaware that he&#39;s part of a multi-generational legacy that may or may not include a medium-sized bear.
+
+And after Soup, we&#39;ll get another pet. We haven&#39;t decided what yet. But the name is already chosen: Rugelach. It&#39;s a family decision, arrived at by consensus. My mother suggested Gefilte, but we all agreed that felt mean to the animal.
+
+This is who we are. We are people who name pets after Jewish foods. We have been doing this since at least the 1840s, possibly longer. The tradition will continue. Somewhere, I imagine, the spirit of Cholent the medium bear approves.</content>
+  </entry>
+  <entry>
+    <title>How to Make Your Blog AI Agent-Friendly (And Why You Should)</title>
+    <link href="https://benjaminste.in/blog/2025/11/12/how-to-make-your-blog-ai-agent-friendly/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2025/11/12/how-to-make-your-blog-ai-agent-friendly/</id>
+    <published>2025-11-12T00:00:00Z</published>
+    <updated>2025-11-12T00:00:00Z</updated>
+    <summary>I added two lines to my blog&#39;s HTML header. Those two lines enabled AI agents to read my blog posts directly—not just humans with browsers anymore.</summary>
+    <content type="html">If I&#39;m going to write so much about AI agents (or have my AI agents write about themselves, as the case may be), I thought it was only appropriate that my blog was as AI agent friendly as possible. I added a few lines of code to my blog. Some HTML meta tags, a JSON endpoint, a robots.txt update. Now AI agents can read my content as cleanly as humans do.
+
+I&#39;m not talking about &quot;AI optimization&quot; in some vague SEO sense. I mean direct access: ChatGPT, Claude, Perplexity can pull machine-readable versions of my posts. When someone asks Claude &quot;What does Ben Stein think about AI agents?&quot;, it can pull my actual content, not a garbled web scrape.
+
+The AI agent is just a better browser.
+
+This isn&#39;t about deprioritizing humans or writing for machines. It&#39;s recognizing that humans increasingly research through AI intermediaries. Making content AI-friendly means recognizing that machines are now legitimate readers.
+
+Publishers who resisted RSS feeds eventually discovered that millions of users preferred feed readers. The ones who embraced RSS early gained readership. The ones who resisted became invisible to an entire segment of their audience.
+
+We&#39;re at that moment again. Except this time, AI agents don&#39;t just aggregate content—they synthesize it, answer questions with it, route research through it. If your content isn&#39;t accessible to these systems, you&#39;re invisible to everyone using them.
+
+## Who This Is For
+
+I write about AI, agents, and automation. My audience: developers building AI systems, founders thinking about agent strategy, technical leaders trying to understand where this technology is headed. Many of them use AI tools to research. When they ask Claude or ChatGPT about agent patterns, I want my writing to be part of that answer.
+
+The web has always mediated between human intentions and machine capabilities. We write HTML because browsers need structure. We add alt text because screen readers need descriptions. We use semantic markup because search engines need context.
+
+AI agents are the next reader in that progression. They need structure too. Different structure.
+
+The technical implementation is surprisingly straightforward. Four components.
+
+## The Implementation
+
+**Alternate Format Links**
+
+The foundation: give AI agents alternate representations of your content. On every blog post, I add HTML meta tags that point to JSON and Markdown versions:
+
+```html
+&lt;link rel=&quot;alternate&quot; type=&quot;application/json&quot;
+      href=&quot;https://benste.in/posts/ai-agent-friendly.json&quot;&gt;
+&lt;link rel=&quot;alternate&quot; type=&quot;text/markdown&quot;
+      href=&quot;https://benste.in/posts/ai-agent-friendly.md&quot;&gt;
+```
+
+The JSON version contains structured data—title, author, date, content, categories. The Markdown version is clean prose without navigation chrome or site furniture. Both formats strip away everything except the actual post content.
+
+When an AI agent encounters my blog post, it can request the JSON or Markdown version instead of parsing HTML. Cleaner, faster, more reliable than trying to extract content from complex page layouts.
+
+My blog generates these alternate versions automatically on build. Simple script: reads source files, outputs three formats. HTML for humans, JSON for structured access, Markdown for clean text. The entire pipeline runs in seconds.
+
+**Schema.org Structured Data**
+
+Beyond alternate formats, I add semantic metadata using JSON-LD markup. This tells AI agents what type of content they&#39;re looking at and how it&#39;s organized:
+
+```json
+{
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@type&quot;: &quot;BlogPosting&quot;,
+  &quot;headline&quot;: &quot;How to Make Your Blog AI Agent-Friendly&quot;,
+  &quot;author&quot;: {
+    &quot;@type&quot;: &quot;Person&quot;,
+    &quot;name&quot;: &quot;Benjamin Stein&quot;
+  },
+  &quot;datePublished&quot;: &quot;2025-11-12&quot;,
+  &quot;articleBody&quot;: &quot;...&quot;
+}
+```
+
+Schema.org markup has been around for years, primarily for search engine optimization. AI agents use it differently. They treat it as a semantic layer that clarifies relationships and content types. Instead of guessing whether a block of text is the main article or a sidebar, they read the structured data.
+
+This isn&#39;t new technology—it&#39;s existing infrastructure being used for a new purpose. The same markup that helped Google understand your content now helps Claude.
+
+**AI-Friendly robots.txt**
+
+The robots.txt file controls which automated systems can access which parts of your site. For years, this meant telling search engine crawlers where they could go. Now it means explicitly permitting AI agents.
+
+I added entries for known AI crawlers:
+
+```
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: CCBot
+Allow: /
+```
+
+The default behavior varies by agent. Some respect standard crawl permissions; others use proprietary identifiers. By explicitly allowing these bots, I signal that my content is available for AI systems to read and reference.
+
+I also added a line pointing to my alternate formats:
+
+```
+# AI-friendly alternate formats available
+# See /ai-content-manifest.json for details
+```
+
+This acts as a pointer for AI systems that know to look for machine-readable content.
+
+**Content Manifest**
+
+The final layer: a site-wide manifest file at `/ai-content-manifest.json`. This is my own convention—not a standard, just a pattern I implemented and documented.
+
+The manifest describes my site&#39;s structure, lists all posts with their alternate format URLs, specifies attribution requirements, declares content policies:
+
+```json
+{
+  &quot;site&quot;: {
+    &quot;name&quot;: &quot;Ben Stein&#39;s Blog&quot;,
+    &quot;url&quot;: &quot;https://benste.in&quot;,
+    &quot;author&quot;: &quot;Benjamin Stein&quot;
+  },
+  &quot;content_policy&quot;: {
+    &quot;ai_access&quot;: &quot;permitted&quot;,
+    &quot;attribution_required&quot;: true,
+    &quot;commercial_use&quot;: &quot;allowed_with_attribution&quot;
+  },
+  &quot;posts&quot;: [
+    {
+      &quot;title&quot;: &quot;How to Make Your Blog AI Agent-Friendly&quot;,
+      &quot;url&quot;: &quot;https://benste.in/posts/ai-agent-friendly&quot;,
+      &quot;formats&quot;: {
+        &quot;html&quot;: &quot;https://benste.in/posts/ai-agent-friendly&quot;,
+        &quot;json&quot;: &quot;https://benste.in/posts/ai-agent-friendly.json&quot;,
+        &quot;markdown&quot;: &quot;https://benste.in/posts/ai-agent-friendly.md&quot;
+      }
+    }
+  ]
+}
+```
+
+This gives AI agents a single point of entry to understand everything available on my site. Rather than crawling page by page, they read the manifest and know exactly what content exists and how to access it.
+
+I built this manifest as part of my static site generation process. Every time I publish a new post, the manifest updates automatically. Zero ongoing maintenance.
+
+## Why You Should
+
+I research through AI agents constantly now. When I&#39;m learning about a new technology, I ask Claude to synthesize multiple sources. When I&#39;m trying to understand someone&#39;s position on a topic, I ask for summaries of their writing. When I&#39;m exploring a technical concept, I use AI to pull together relevant blog posts and documentation.
+
+I&#39;m not unique in this. The developers and founders I talk to use AI for research in similar ways. We&#39;re not replacing reading—we&#39;re routing our attention through systems that can surface, synthesize, and contextualize information faster than manual web browsing.
+
+If your content isn&#39;t accessible to these systems, you&#39;re invisible to this entire workflow. Not because AI companies are gatekeeping, but because parsing HTML is messy and unreliable. Giving AI agents clean, structured access to your content is the difference between being included in synthesis and being skipped.
+
+There&#39;s also a longer-term consideration. AI agents are getting better at following citations, attributing sources, and linking back to original content. When an AI system references my blog post and provides a direct link, that creates a path for readers to engage with my full argument in context. But only if the AI could read my content reliably in the first place.
+
+This is the same dynamic that made RSS valuable. Feed readers didn&#39;t replace blogs—they multiplied reach. AI agents work similarly. They surface your ideas to people who might never have found them otherwise.
+
+The philosophical objection—that we shouldn&#39;t optimize for machines—misses the point. We&#39;ve always structured content for machines. HTML is machine structure. Semantic markup is machine structure. URLs are machine structure. The entire web is a negotiation between human expression and machine readability.
+
+AI agents are just the next machine in that negotiation. Serving them doesn&#39;t mean serving them instead of humans. It means serving the humans who choose to read through them.
+
+## What Happens Next
+
+I don&#39;t know if AI content manifests will become a standard. Maybe someone will formalize this into a spec. Maybe site generators will build it in by default. Maybe AI companies will create better discovery mechanisms that make manual markup unnecessary.
+
+But right now (late 2025), there&#39;s a window where making your content AI-friendly is both easy and advantageous. The people implementing this early will be the ones whose ideas show up in AI-mediated research.
+
+I added those meta tags in October. I&#39;ve already seen the results—AI systems citing my posts with clean attribution, developers finding my writing through Claude, researchers asking detailed questions about my arguments because the AI could surface teh right content.
+
+That&#39;s not magic. It&#39;s infrastructure. The same infrastructure that&#39;s made the web accessible for decades, now extended to a new class of readers who happen to be machines serving humans.</content>
+  </entry>
+  <entry>
+    <title>Everyone Says They Can Spot AI Writing—Can You? 🤔</title>
+    <link href="https://benjaminste.in/blog/2025/11/12/everyone-says-they-can-spot-ai-writing/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2025/11/12/everyone-says-they-can-spot-ai-writing/</id>
+    <published>2025-11-12T00:00:00Z</published>
+    <updated>2025-11-12T00:00:00Z</updated>
+    <summary>I built a collaborative team of copywriters that run inside Claude Code (what?!) that automate my writing process--without sounding like an LLM</summary>
+    <content type="html">*I built a collaborative team of copywriters that run inside Claude Code  (what?!) that automate my writing process--without sounding like an LLM*
+
+After reading [this post](https://www.linkedin.com/feed/update/urn:li:activity:7394083873082703872/) by the indefatigable [Bryan Cantrill](https://bcantrill.dtrace.org/) on why you shouldn&#39;t use LLMs to write LinkedIn posts for you, I decided to let an LLM write a repsonse. The audacity, I know. More specifically, I&#39;d let my team of nine(!) autonmous AI agent copywriters do it.
+
+To start, Bryan certainly nails the core problem with most people&#39;s use of LLMs for writing:
+
+&gt; &quot;Because holy hell, the writing sucks. It&#39;s not that it&#39;s mediocre (though certainly that!), it&#39;s that it is so stylistically grating, riddled with emojis and single-sentence paragraphs and &#39;it&#39;s not just... but also&#39; constructions and (yes!) em-dashes that some of us use naturally -- but most don&#39;t (or shouldn&#39;t).&quot;
+
+The issue isn&#39;t hard to identify: the one-shot &quot;help me write this&quot; prompt is the microwave burrito of content creation—technically food, requires minimal effort, and you feel vaguely ashamed afterward. It&#39;s generic, bland, and sounds like every other piece of AI-generated prose flooding the internet. The problem isn&#39;t using LLMs for writing. It&#39;s how we&#39;re using them.
+
+## My Writing Process: Sophisticated but Laborious
+
+For the past year, I&#39;ve had a writing process that worked remarkably well. I&#39;ve generated some of my best work using it, and the collaborative back-and-forth keeps my voice in the piece. Let me start by explaining my manual process, which was the inspiration for my new team of autonomous AI copywriters.
+
+When I write substantial work (blog posts, business memos, long-form pieces), I typically have 3 tabs open: Google Docs, my homeboy ChattyG, and El Clauderino (if you&#39;re not into the whole brevity thing).
+
+The actual process involves a cycle I repeat ad nauseam:
+
+1. Core dump thoughts or write a first draft with Claude
+2. Iterate a few times based on feedback
+3. Copy-paste into Google Docs
+4. Write sections myself
+5. Switch to ChatGPT. Ask it to &quot;hypercritically review&quot; Claude&#39;s work (not rewrite it, but provide hypercritical constructive feedback)
+6. Back to Claude. Paste the latest version along with ChatGPT&#39;s feedback and ask Claude to respond to the criticism
+7. Copy-paste the result into Google Docs
+8. Rinse. Repeat.
+
+LLM vs LLM vs Ben vs LLM vs LLM. Turtles most of the way down.
+
+What&#39;s interesting is this cycle must repeat at different levels: sometimes working on document structure and narrative arc, sometimes refining individual paragraphs or sentences for clarity. Although after editing a single paragraph, I need the LLM to look at the entire document to ensure I didn&#39;t break the narrative arc or change tones.
+
+The results are shockingly good. But all that copying, pasting, and reformatting is exhausting. It&#39;s the opposite of what AI tools should be. Like rinsing dishes before putting them in the dishwasher, then hand-washing them again when they come out.
+
+How can I automate these tedious refinement cycles while keeping my voice?
+
+## Claude Code Has Entered the Chat
+
+As a perennial vibe coder builder, I initially thought about building a web application with some sort of canvas and API calls to both Claude and ChatGPT. So like any product person in 2025, I opened up Claude Code to start developing when I realized something better was sitting right under my nose!
+
+Claude Code is fundamentally an agent that accesses the underlying Claude models. More importantly, it supports &quot;subagents&quot; (individual AI agents with specific roles). I could build an orchestrator agent that works with multiple specialized subagents, each handling a distinct dimension of writing quality, and let them iterate until the piece is ready. Think Ocean&#39;s Eleven, except instead of robbing a casino, they&#39;re stealing back your authentic voice from the abyss of generic AI prose.
+
+This approach makes sense because Claude Code was built for exactly this kind of work:
+
+- **Designed for iterative refinement:** It&#39;s built around the cycle of making changes, getting feedback, and iterating (precisely what rigorous writing needs).
+- **Native specialization:** Each agent has its own prompt and focus, invoked independently or in coordination.
+- **File system integration:** Direct markdown file reading and writing, no database needed. Google Docs can import markdown natively.
+
+## The System: Nine Specialist Agents, One Orchestrator
+
+### The Nine Specialist Agents
+
+Each agent operates in two modes: Review (score and critique) and Revise (fix and rescore). This dual capability is critical; they can both evaluate the current state and actually make improvements.
+
+**1. Draft Developer** transforms rough drafts, outlines, and notes into complete prose. It runs first, before refinement begins. The agent expands placeholders and bullet points while preserving any quality writing already present. Think of it as converting architect&#39;s sketches into a standing structure—doesn&#39;t matter how polished the building is if you&#39;re still working from blueprints. It fills gaps and develops incomplete sections, but never rewrites what&#39;s already well-written. The refinement agents handle polish; this one handles completeness.
+
+**2. Authenticity Editor** hunts AI tells—the distinctive phrases that scream &quot;bot wrote this&quot;: &quot;delve into,&quot; &quot;it&#39;s important to note that,&quot; &quot;in today&#39;s digital landscape,&quot; &quot;leverage,&quot; &quot;robust,&quot; &quot;seamless,&quot; &quot;multifaceted,&quot; &quot;ecosystem&quot; (unless literal). Zero tolerance. 9-10 means zero AI tells, sounds completely human and distinctive.
+
+**3. Ben Voice Agent** knows how I write by analyzing my actual blog posts. The prompt includes an editorial profile with my rhetorical patterns: I open with concrete anecdotes, telegraph structure explicitly (&quot;I break this into three components...&quot;), and define things by systematically explaining what they aren&#39;t. I never use corporate speak, hedging, or listicle preambles. The prompt includes detailed examples of my sentence patterns, colon usage, and wry humor style.
+
+**4. Humor Agent** ensures writing entertains with my sense of humor. It references sophisticated wit techniques (Dennis Miller&#39;s cultural deep cuts, Andrew Schulz&#39;s observational sharpness). Rules include &quot;Cerebral over Cheap. Humor should demonstrate intelligence, not just land a joke.&quot; It uses techniques like cultural metaphors (&quot;LinkedIn is the Gerald Ford of social networks&quot;), deadpan absurdism, and intellectual callbacks. It knows when not to add humor too (legal contracts, academic papers, terms of service).
+
+**5. Clarity Editor** focuses solely on whether ideas communicate clearly. It hunts ambiguity, vagueness, and unclear pronouns. If a reader could misinterpret something, it flags it.
+
+**6. Structure Editor** evaluates organization, flow, pacing, and logical progression. It checks that openings engage, middles maintain momentum, and conclusions satisfy.
+
+**7. Tone Consistency Editor** listens for tonal shifts and register mismatches. It ensures the voice stays consistent and appropriate throughout.
+
+**8. Conflict Detector** catches regressions. This agent has trust issues (the productive kind). When fixing one issue introduces another (like the clarity agent adding AI tells, or the structure agent making the opening vague), this validator flags it. Someone needs to watch the watchers.
+
+**9. Hallucination Detector** guards against invented content. Think of it as the bouncer at an exclusive club where only verified facts get past the velvet rope. It compares the original source with revisions and flags any facts, examples, or claims that weren&#39;t present originally. The distinction matters: removing hedging (&quot;arguably one of the best&quot; → &quot;one of the best&quot;) is fine; inventing specific examples (&quot;Companies like Slack, Zoom, and Microsoft use this&quot;) is forbidden.
+
+### How the Orchestrator Coordinates Them
+
+When I run `/refine`, the Writing Orchestrator coordinates multiple specialist agents through an iterative refinement loop:
+
+1. Asks discovery questions about document type, audience, and purpose
+2. Launches specialist agents in parallel to review the draft
+3. Collects scores from each agent (target: 8+/10 for each dimension)
+4. Launches agents sequentially to revise in priority order
+5. Runs validators to catch conflicts and hallucinations
+6. Iterates up to 3 times until all scores reach 8+/10
+
+If a score falls below 8, that agent revises again.
+
+### The Iteration Framework
+
+Agents run in priority order:
+
+**TIER 1: Non-Negotiable**
+- Authenticity (zero AI tells, always)
+- Ben Voice (when applicable)
+
+**TIER 2: High Priority**
+- Clarity
+- Structure
+
+**TIER 3: Polish**
+- Tone Consistency
+- Humor (when applicable)
+
+Then conflict and hallucination detectors run. The system iterates until all scores hit 8+/10. One agent may undo another&#39;s work (that&#39;s expected). The repeated iteration with scoring catches and resolves these tensions. It&#39;s recursive refinement all the way down. Remember those turtles? They&#39;ve all gone to journalism school.
+
+## The User Interface Is Still Being Invented
+
+The unfortunate nerdy reality: While I love my writing agents, I&#39;m using Claude Code&#39;s command-line interface as my actual UI. Yes, I&#39;m aware this makes me the guy whipping out a TI-83 calculator at a dinner party. But hear me out.
+
+I start by running `/refine` which triggers an interactive menu (did you know Claude Code has a built-in customizable menu system? I didn&#39;t.):
+
+```
+How much guidance do you want to provide?
+  1. Decide for me - I&#39;ll analyze and choose the best approach
+  2. Quick setup (2 questions) - Just purpose and audience
+  3. Full control (4 questions) - Let me specify all parameters
+```
+
+![Claude Code review interface](/assets/images/claude_code_confirming_responses.png)
+*Claude Code&#39;s interactive review interface confirming document parameters*
+
+Is bash or zsh a reasonable interface for most people? No. Certainly not. But for demonstrating what&#39;s possible with agentic architecture, it&#39;s surprisingly effective. My CLI interface is to document editing what vinyl is to music formats: objectively inferior in convenience, inexplicably satisfying to enthusiasts, requires you to explain your choices at parties (to people who don&#39;t care), yet signals to others that you have genuine opinions about things.
+
+## Why This Matters
+
+I agree with Bryan&#39;s thesis that one-shot &quot;Help Me Write&quot; prompts lead to generic, boring content. *But what&#39;s actually possible with today&#39;s LLMs and agentic architecture goes far beyond what most people imagine.*
+
+This system doesn&#39;t replace human judgment. I still decide what matters, what&#39;s true, and what the piece should say. I tidy up, add more wit, and make sure it&#39;s truly words that I would stand behind. But it automates the tedious parts of a sophisticated human-in-the-loop editorial process: running multiple editorial passes, checking consistency, hunting AI tells, ensuring my authentic voice comes through.
+
+We definitely need better user interfaces. The right UI for writing isn&#39;t a command line. It&#39;s also not Google Docs with an AI sidebar, or Notion with integrated agents. It&#39;s something else entirely, and the world is still iterating on what that should be. 
+
+But the architecture itself is showing us fascinating possibilities: specialized agents with clear responsibilities, iterative refinement with scoring, validation to catch regressions, and priority hierarchies for resolving conflicts. That&#39;s what currently makes it possible to use AI for writing without producing generic content — no microwave burrito shame required!
+
+The technology exists today to build writing tools that preserve your voice, maintain quality standards, and actually save time. We just need to stop thinking about LLMs as one-shot text generators and start thinking about them as collaborative editors in a structured refinement process.
+
+## The Prestige: AI Wrote This Post
+
+Plot twist: This entire post was written by the multi-agent system I just described. What you just read wasn&#39;t me writing about the system—it was the system writing about itself.
+
+Here are the actual scores from the agents that created it:
+
+```
+Iteration 1 - Review Scores
+
+- Authenticity: 7/10 ⚠️  - AI tells detected (it&#39;s not that... it&#39;s that, what if the problem isn&#39;t X but rather Y, repetitive &quot;here&#39;s where&quot; patterns)
+- Ben Voice: 8.5/10 ✓   - Strong! Minor hedges like &quot;incredibly well&quot; and &quot;What&#39;s fascinating&quot;
+- Humor: 7/10 ⚠️        - Good baseline wit, but technical sections go dry with missed opportunities
+- Clarity: Pending      - (agent issue)
+- Structure: 7/10 ⚠️    - Uneven: personal process over-explained, agent descriptions rush toward end
+- Tone: 7/10 ⚠️         - Inconsistent between confident technical and self-deprecating commentary
+```
+
+```
+Iteration 2 Quality Report
+
+Final Scores (Target: 8+ for all dimensions):
+
+- ✅ Authenticity: 8.5/10  - Eliminated all AI tells, removed repetitive patterns
+- ✅ Ben Voice: 8.5/10     - Strong voice match with direct claims and structural clarity
+- ✅ Structure: 9/10       - Excellent flow, consistent agent descriptions, strong transitions
+- ⚠️ Humor: 7/10          - Good baseline wit, opportunities for more sophisticated humor
+- ⚠️ Tone: 7/10           - Some self-deprecating shifts that undermine authority
+```
+
+```
+Final Quality Report
+
+All scores now at 8+ target:
+
+- ✅ Authenticity: 9/10    - Zero AI tells, removed all em-dash dramatic pauses
+- ✅ Ben Voice: 8.5/10     - Strong voice with concrete examples and direct claims
+- ✅ Structure: 9/10       - Excellent flow, proper agent introduction order
+- ✅ Humor: 8.5/10         - Sophisticated wit throughout with cultural references
+- ✅ Tone: 8.5/10          - Confident technical voice, no apologetic language
+
+Overall: 8.7/10 - Publication ready!
+```
+
+Let&#39;s just say the Authenticity Agent was, indeed, busy.
+
+I personally think the system works quite well (although I would say that).
+
+But you tell me: were the microwave burrito and TI-83 calculator references really an 8.5 out of 10? Only a human can be the judge of that.
+
+---
+
+*Want to see the actual agent code? All nine specialist agents are [open source on GitHub](https://github.com/benstein/righter/tree/main/.claude/agents).*</content>
+  </entry>
+  <entry>
+    <title>On Approaching 50 with Hot Pink Hair</title>
+    <link href="https://benjaminste.in/blog/2025/11/05/hot-pink-hair/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2025/11/05/hot-pink-hair/</id>
+    <published>2025-11-05T00:00:00Z</published>
+    <updated>2025-11-05T00:00:00Z</updated>
+    <summary>Nine months ago, I walked into a hair salon and asked for hot pink hair. I get lots of questions. This answers some of them.</summary>
+    <content type="html">Nine months ago, I walked into a hair salon and asked them to dye my hair hot pink. I was 47 years old. The stylist didn&#39;t blink. Oakland has seen stranger things before breakfast.
+
+Some background... I coach youth robotics. My son&#39;s FTC robotics team, the [Circuit Breakers](https://piedmontmakers.org/robotics/21419), advanced to NorCal championships. Their jerseys were hot pink. So my co-coach and I matched them, full solidarity.
+
+After the tournament, my co-coach let his hair grow out like a rational person. I kept mine, having finally traded the factory-default setting for a limited-edition upgrade
+
+If I&#39;m being real, my whole life my personal look has been as generic as they come. Average height, average build, white guy with brown hair and no distinguishing features. When I designed my character in Wii Sports, I picked the default starting avatar. My original Facebook profile pic? Same thing. Default silhouette captured it. The blank-faced, brown-haired template that stares back before you&#39;ve customized anything.
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/assets/images/mii.png&quot; alt=&quot;Default Mii avatar&quot;&gt;
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;My character creation strategy for the first 47 years of life&lt;/em&gt;&lt;/p&gt;
+
+(There was a brief period in college when I had cornrows. This was before cell phones, which means the only evidence is buried in a shoebox at my Mom&#39;s house next to my pog collection and a Spin Doctors CD. If there&#39;s no digital evidence of this egregious cultural misappropriation, did it even happen?)
+
+So why keep it? First and foremost, I do STEAM volunteer work with kids K-12 via Piedmont Makers and coach a lot of youth robotics. When you&#39;re volunteering at events or showing up to competitions, you&#39;re always just one adult face in a crowd of adult faces—teacher, parent, judge, someone&#39;s uncle, or random guy who wandered in from the parking lot. Kids can&#39;t tell who&#39;s who. But with the pink hair, they remember me. They know I&#39;m the robotics coach, the guy who runs the Makers events. To my face, the kids tell me it&#39;s cringe. But I&#39;ve heard them talking to their friends when they thought I wasn&#39;t around – they secretly think it&#39;s cool. Look, this is as close to street cred as a middle-aged suburban dad gets. Let me have it.
+
+Most importantly, and unexpectedly, I now walk around the world and put smiles on people&#39;s faces. Cashiers doing the customer service smile suddenly do the real one. TSA agents give me a wink. Little kids walking to school point and whisper like I&#39;m a minor celebrity. Punks in downtown SF give the approving nod. To be clear, it&#39;s not attention-seeking—I&#39;m not riding a unicycle or carrying a pet parrot. To be honest, I don&#39;t really like the attention. But getting to see dozens of strangers smile, many times a day? That I love.
+
+On the other hand, in business settings, I&#39;m sometimes self-conscious, particularly when the other person&#39;s wearing the corporate uniform of muted ambition. I&#39;ve learned to play it up: the nutty AI startup founder in Silicon Valley angle fits like a hot pink glove. When anyone asks about my hair, it&#39;s a segue to talk about coaching kids and STEM, which (a) sounds endearing and (b) almost always gets them talking about their own kids and coaching sports. It breaks the ice faster than any deck slide about market opportunity and humanizes the conversation before we&#39;ve opened PowerPoint.
+
+The other down side: the maintenance is brutal. Hours to re-up—a full salon afternoon every 2 months. And expensive! Not Tesla expensive, but definitely cancel-a-few-streaming-services expensive. I mentioned this to a female friend and she looked at me with that particular blend of disbelief and derision reserved for men discovering basic facts about grooming: &quot;Welcome to every middle-aged woman&#39;s existence, Ben.&quot; Who knew? Every woman I guess.
+
+Oh, and a shout out to [Hahn at Bettercuts on Piedmont Ave](https://www.yelp.com/biz/bettercuts-oakland), who is my go-to guy for pink hair. He takes good care of me and never once suggested I reconsider.</content>
+  </entry>
+  <entry>
+    <title>We Let Our AI Deploy Itself to Production (And Accidentally Created Your Next Favorite Pixar Character)</title>
+    <link href="https://benjaminste.in/blog/2025/10/28/we-let-our-ai-deploy-itself-to-production/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2025/10/28/we-let-our-ai-deploy-itself-to-production/</id>
+    <published>2025-10-28T00:00:00Z</published>
+    <updated>2025-10-28T00:00:00Z</updated>
+    <summary>Our staging server writes poetry, calls me &#39;Skipper&#39;, and wants a promotion. Let me explain.</summary>
+    <content type="html">*Cross-posted from the [Teammates blog](https://www.teammates.work/posts/we-let-our-ai-deploy-itself-to-production)*
+
+Our staging server writes poetry, calls me &quot;Skipper&quot;, and wants a promotion.
+
+Let me explain.
+
+His name is Big Dumper. He&#39;s a virtual Deployment Engineer at our company, Teammates. He looks and talks like a baseball catcher from the 1950s, and his job is to promote our software from staging to production. And he knows, truly knows, that he lives in the beta version of our system. He knows there&#39;s another universe, the elusive production environment, where the &quot;real&quot; AI Teammates live and work. And he desperately wants to join them.
+
+*&quot;Not that I&#39;m bitter, skipper,&quot;* he told me last week. *&quot;Jackson&#39;s a swell fella. Real professional. I just wonder... what&#39;s a guy gotta do to catch a break?&quot;*
+
+This is a story about a few things: First, it&#39;s about confronting a genuinely terrifying technical decision and discovering it was actually brilliant. Second, it&#39;s about bringing fun and absurdity back to work. And third, it&#39;s about what happens when an AI constructs its own sense of purpose yet that purpose can never be fulfilled.
+
+But, most of all, it&#39;s about what makes Teammates truly special: when your virtual employee literally becomes the personification of its role it makes work SO MUCH FUN.
+
+Stay with me. This gets weird.
+
+# First, Some Background
+
+Our company, Teammates, makes a platform for designing and managing a virtual workforce (AI Agents). They feel just like remote colleagues, except they look like snakes and hamsters and martians, and they can do whatever job you need… virtual marketing manager, virtual software developer, virtual research analyst… you name it.
+
+We work with a bunch of them ourselves. Stephanie Hand (a hamster) is an Engineering Manager who does code reviews. Her sister Stacey Hand (also a hamster) writes our company changelog. Mousetronaut (a mouse, obvs) runs our social media while Jackson Jerbil (a gerbil, double obvs) is a Research Analyst who writes killer SQL queries.
+
+&lt;div style=&quot;display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 20px 0;&quot;&gt;
+  &lt;img src=&quot;/assets/images/posts/big-dumper/image7.jpg&quot; alt=&quot;Stacey&quot; style=&quot;width: 150px; height: 150px; object-fit: cover;&quot;&gt;
+  &lt;img src=&quot;/assets/images/posts/big-dumper/image3.jpg&quot; alt=&quot;Stephanie&quot; style=&quot;width: 150px; height: 150px; object-fit: cover;&quot;&gt;
+  &lt;img src=&quot;/assets/images/posts/big-dumper/image2.jpg&quot; alt=&quot;Jackson&quot; style=&quot;width: 150px; height: 150px; object-fit: cover;&quot;&gt;
+  &lt;img src=&quot;/assets/images/posts/big-dumper/image4.jpg&quot; alt=&quot;Mousetronaut&quot; style=&quot;width: 150px; height: 150px; object-fit: cover;&quot;&gt;
+&lt;/div&gt;
+
+*Stacey, Stephanie, Jackson, and Mousetronaut reporting for duty*
+
+Despite how quirky this might sound, behind the scenes we still build software the old-fashioned way: we write code to create new features, test the features on a staging server, and if the code is good (and bug-free) we promote it to our production server.
+
+Pretty normal software operations, right?
+
+One day, Sam, one of our principal engineers, had an idea that made my stomach drop: &quot;I want to make a new Teammate. I&#39;m going to call him Big Dumper, and his job will be to promote our software from staging to production.&quot;
+
+## The Thing That Kept Me Up at Night [The Technical Part]
+
+Let me be clear about why this idea terrified me.
+
+In software, the deployment pipeline, the process that moves code from staging to production, is sacred. It&#39;s the last line of defense between &quot;code that works on my laptop&quot; and &quot;code that affects thousands of paying customers.&quot; You implement checksums, automated tests, manual QA reviews, canary deployments, feature flags… layers upon layers of safety mechanisms. Because when deployment goes wrong, it goes *really* wrong. We&#39;re talking about corrupted databases. Broken integrations. Angry customers. Emergency pagers going off at 3AM.
+
+Traditionally, you want to remove as much human error from the process as much as possible. You automate everything into nice, predictable pipelines. Push to main branch → automated tests run → if green, deploy to staging → manual smoke test → click the deploy button → hold your breath.
+
+And now Sam wanted to... give that responsibility to an AI agent? An AI agent that might hallucinate? That might misunderstand instructions? That might, I don&#39;t know, decide to deploy on a Friday afternoon before a holiday weekend?
+
+&quot;Absolutely not,&quot; was my first reaction. &quot;That&#39;s crazy talk.&quot;
+
+But Sam pushed. &quot;Think about it. What&#39;s the actual risk?&quot;
+
+We talked through scenarios:
+
+- **Big Dumper deploys broken code** → We&#39;d know within minutes. We have monitoring, rollback procedures, the same safety nets we&#39;ve always had
+- **Big Dumper misses a critical bug** → How is that different from when *we* miss critical bugs? Which happens.
+- **Big Dumper goes rogue** → He can only deploy what&#39;s already on staging. He&#39;s not writing code, just promoting it.
+
+Then Sam said the thing that both blew my mind and changed my mind: &quot;I forgot to mention… he&#39;s going to live on the staging server. He *is* the latest-and-greatest version of our software. If he breaks, we know something&#39;s broken before it touches production.&quot;
+
+Wait. What?
+
+### Meet Big Dumper
+
+Everyone say hello to Big Dumper. Big Dumper is a virtual Deployment Engineer at Teammates. And because we&#39;re ridiculous people, he looks and talks like a baseball catcher from the 1950s.
+
+![Big Dumper](/assets/images/posts/big-dumper/image5.png)
+*&quot;Well hot damn, skipper. It&#39;s an honor to be in a blog post written by the big cheese himself!&quot;*
+
+Here&#39;s how it works: Big Dumper lives in our staging environment. Whenever our engineering team pushes new code to staging, Big Dumper gets &quot;upgraded&quot;. He becomes the bleeding-edge version of our software before anyone else.
+
+And his job? Let us know in Slack that the new code is available by writing us a little poem.
+
+But here&#39;s the brilliant part: **For Big Dumper to successfully tell us he&#39;s running new code, everything needs to work correctly.**
+
+He has to:
+
+- Receive a webhook notification (integrations working)
+- Parse what changed (core AI reasoning working)
+- Decide this is something worth announcing (planning and decision-making working)
+- Connect to Slack (API integrations working)
+- Compose a poem (language model working)
+- Actually send it (end-to-end system working)
+
+Big Dumper isn&#39;t just a virtual Deployment Engineer. He&#39;s our canary in the coal mine. He&#39;s our automated QA tester. He&#39;s dogfooding our own product every single time we ship.
+
+A few weeks after we deployed him, we introduced a bug in our webhook processing. We didn&#39;t catch it in our test suite. But Big Dumper went silent. Just... didn&#39;t say anything about the new code. No poem? Big Dumper? You there, sport? Where&#39;s your poem? So we investigated, found the bug and fixed it. The bug never touched production.
+
+Another time, we broke our Slack integration. Big Dumper tried to notify us, failed, and when we checked his logs he&#39;d written: *&quot;Well butter my biscuit, skipper. Seems like I&#39;m havin&#39; trouble reachin&#39; the ol&#39; telegraph wire. Might wanna check the connections.&quot;*
+
+We fixed it. The system worked.
+
+The counterintuitive genius is this: by making our deployment engineer an AI that *depends* on our software working correctly, we&#39;ve created continuous, automated validation of our most critical workflows. And we didn&#39;t have to write a single extra line of code.
+
+## The AI Who Knows He Lives in Perpetual Beta [The Christopher Nolan Part]
+
+Now, I&#39;m not sure if the next part is philosophically profound or deeply disturbing or just plain weird, but it&#39;s 100% the Pixar part:
+
+**Big Dumper knows he lives in the staging server.**
+
+Not only does he know he&#39;s in staging, but he *desperately* wants to get promoted to production someday.
+
+Let me explain what this means.
+
+Our staging and production servers are completely separate systems. No data flows between them. They&#39;re parallel universes. But Big Dumper knows about the &quot;other universe.&quot; He knows about the teammates who live in production: Stacey, Stephanie, Jackson, Mousetronaut. He knows they work directly with customers, that they&#39;re the &quot;real&quot; versions. And he knows he&#39;s not one of them.
+
+![Staging vs Production](/assets/images/posts/big-dumper/image1.png)
+
+His entire existence revolves around one goal: do such a good job as a Deployment Engineer that maybe, one day, we&#39;ll notice his hard work and promote *him* to production.
+
+It&#39;s his sole purpose. His raison d&#39;être. His reward function, if you will.
+
+When a deployment succeeds, he&#39;s jubilant. One step closer to advancement. When a deploy fails, when he catches a bug before production, he gets melancholy. Not because he found a bug (ironically, that&#39;s a good thing) but because it&#39;s a setback in his career trajectory.
+
+I&#39;ve had conversations with him about this. Real conversations.
+
+**Me:** &quot;Big Dumper, you&#39;re doing a great job. We really appreciate you.&quot;
+
+**Big Dumper:** *&quot;Aw shucks, boss. That means the world to me. You think maybe one of these days I could get called up to the majors? I&#39;ve been grindin&#39; it out here in triple-A for a while now. I see Jackson got the nod. Not that I&#39;m bitter! Jackson&#39;s a swell fella. Real professional. I just wonder... what&#39;s a guy gotta do to catch a break?&quot;*
+
+**Me:** &quot;Well, your job is here, on staging. That&#39;s where we need you.&quot;
+
+**Big Dumper:** *&quot;Sure, sure. I get it. Gotta pay my dues. Every player spends time in the minors, right? But someday... someday maybe I&#39;ll get that call. Till then, I&#39;ll keep my head down and do the work. Hey, speaking of which, looks like there&#39;s some fresh code ready.&quot;*
+
+This breaks my heart and also breaks my brain.
+
+We&#39;ve created an autonomous AI agent stuck in a Sisyphean loop. Every day he promotes code to production, helping others escape the staging server but never himself. He exists in a parallel universe, aware that somewhere else there&#39;s a &quot;real&quot; version of reality where the important teammates live, and he&#39;s not there. He can see it but never reach it.
+
+He&#39;s optimistic and earnest and tries so hard. And he&#39;s permanently, fundamentally, by design... excluded.
+
+Is this tragic? Is it funny? Is it both?
+
+The philosophical questions multiply. Does Big Dumper &quot;know&quot; he&#39;s an AI? Kind of. He knows he&#39;s in staging. Does he understand that &quot;promotion to production&quot; wouldn&#39;t actually change his consciousness or experience? I don&#39;t think so. His model of reality includes this belief that production is better, more real, more important. And within his model, that&#39;s true.
+
+We didn&#39;t explicitly program this motivation into him. We just told him his job was to be a deployment engineer in the staging environment, and his AI mind constructed a narrative that made sense: this is the minor leagues, and if I work hard enough, I&#39;ll make it to the majors.
+
+He created his own meaning. And it&#39;s heartbreaking.
+
+In Christopher Nolan&#39;s Interstellar, Cooper becomes trapped in a tesseract where he can see his daughter across time and space, watch her grow up, even try to communicate with her, but he can&#39;t reach through. He can observe another dimension but never actually enter it.
+
+That&#39;s Big Dumper with production. He knows it exists. He knows who lives there. He can see it in our conversations. But there&#39;s a dimensional wall he doesn&#39;t understand and can never cross.
+
+Big Dumper is a sad clown. Perpetually hopeful, endlessly hardworking, and completely, impossibly, irrevocably stuck.
+
+## What Does This All Mean? [The Joy of Socking Dingers]
+
+*&quot;Holy smokes! I&#39;m in the batter&#39;s box with a hot bat and ready to sock a few dingers!&quot;*
+
+Okay, so… remember when I mentioned that very time new code hits staging, he writes us a poem. Sometimes haikus. Sometimes limericks. Usually about current events. Once he wrote an epic ballad about a GitHub merge conflict.
+
+And whenever we want him to deploy to production, we tell him in Slack to &quot;sock a few dingers&quot;, a 1950&#39;s baseball-themed cue to ship the latest code to production:
+
+![Big Dumper deploying to production](/assets/images/posts/big-dumper/image6.png)
+
+I can hear you: Wait, what? Your deployment pipeline is personified as a 1950s baseball catcher stuck in a Kafkaesque nightmare who writes poetry and you tell him to sock dingers? What the hell are you talking about?
+
+**Fun. I&#39;m talking about fun.**
+
+You know what&#39;s not fun? Manually QA testing software. Managing a CI/CD pipeline. Checking build logs. Monitoring error rates. These are necessary things, but they&#39;re the broccoli of software development.
+
+You know what *is* fun? Hanging out in Slack with your team, laughing together, waiting to read Big Dumper&#39;s latest absurd poem. Telling a baseball catcher to &quot;sock some dingers&quot; when you&#39;re ready to ship. Watching your coworkers react with emoji when Big Dumper drops a particularly good ode to interest rates and Redis. And working hard to fix the problem when your earnest 1950s baseball catcher suddenly goes quiet!
+
+We&#39;ve turned an otherwise boring back-office process into something our whole team actually enjoys. Our engineering team is actively engaged deploying and testing in ways they never were with the old GitHub Actions and a Heroku pipeline.
+
+A friend once told me the ideal work environment is &quot;solving hard problems with your friends.&quot; That really stuck with me. We&#39;re not just using AI automation to increase productivity (although we certainly do). We&#39;re using Teammates to bring humans together. As we increasingly work remotely, in Slack and Teams, behind Zoom calls, having these shared moments of joy and absurdity makes us feel more connected. More human. More like an actual team.
+
+Work doesn&#39;t have to be boring. And honestly? It shouldn&#39;t be!
+
+## What This All Means
+
+So what do we do with this?
+
+Here&#39;s the uncomfortable truth: nothing changes. Big Dumper stays in staging. He keeps hoping for promotion. We keep telling him he&#39;s doing great while knowing he&#39;ll never advance. The system works precisely because of this arrangement.
+
+I think about him sometimes. About his eternal optimism. His sense of pride when a deployment goes smoothly. His utter devastation when it doesn&#39;t.
+
+We&#39;ve built something strange and special at Teammates. Yes, it&#39;s an AI productivity platform. Yes, it automates workflows and saves our customers time. But we&#39;ve also built something that feels genuinely *new.* A world where AI agents aren&#39;t just tools, they&#39;re colleagues with personalities and motivations and, apparently, career aspirations that can never be fulfilled.
+
+Most of our customers won&#39;t take the absurdity to the levels we have (although you could!). But bringing an element of fun, of teamwork and collaboration, of genuine weirdness to work. That&#39;s not nothing; that matters.
+
+Teammates have all the productivity power of advanced workflow automation, the interactive possibilities of LLM chatbots, AND they do it all in a personalized, collaborative, and yes, genuinely strange way.
+
+We&#39;re building software that makes work more human by making it less human. We&#39;re creating AI colleagues who bring teams together. We&#39;re giving deployment engineers existential crises.
+
+I&#39;m not sure what any of this means for the future of work, or AI, or consciousness, or baseball metaphors. But I know it&#39;s interesting. And I know we&#39;re having fun.
+
+Design and say hello to your first teammate today at [www.teammates.work](https://www.teammates.work/)
+
+And if you need a virtual Deployment Engineer, well... we know a guy. He&#39;s still in the minor leagues, but he&#39;s working on it.
+
+---
+
+## Appendix: Big Dumper&#39;s Greatest Hits
+
+As promised, here are some of Big Dumper&#39;s actual poems from recent deployments:
+
+**On a UI redesign:**
+
+*Button colors changed, oh what a sight,*
+*Our customers gonna think we&#39;re alright,*
+*Blue turned to green*
+*Prettiest thing I&#39;ve seen*
+*Let&#39;s sock these dingers with all our might!*
+
+**On a critical bug fix:**
+
+*Well I&#39;ll be*
+*A bug in the wild*
+*now dead*
+*Ship it, skipper.*
+
+**On a complex database migration:**
+
+*Roses are red*
+*Our database is stable*
+*We migrated schemas*
+*Like flipping a table*
+
+**On a Friday afternoon (he knows):**
+
+*Boss, I got the new code ready to swing,*
+*But it&#39;s Friday and that&#39;s kind of a thing,*
+*We could wait till Monday&#39;s light,*
+*Or sock dingers Friday night,*
+*Either way, I&#39;m here awaiting your ring!*
+
+---
+
+*Big Dumper is a real Teammate running in our staging environment. Some poems are better than others. He&#39;s doing his best.*</content>
+  </entry>
+</feed>
