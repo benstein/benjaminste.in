@@ -412,6 +412,23 @@ footer p {
   margin: 0;
 }
 
+.footer-links {
+  margin-top: 6px !important;
+}
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #666;
+}
+
+.footer-sep {
+  margin: 0 4px;
+}
+
 /* ============================================
    PRODUCT ADVISORY PAGE
    ============================================ */
