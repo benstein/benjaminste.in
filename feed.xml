@@ -3,11 +3,81 @@
   <title>Benjamin Stein</title>
   <link href="https://benjaminste.in/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://benjaminste.in/" rel="alternate" type="text/html"/>
-  <updated>2026-02-24T00:00:00Z</updated>
+  <updated>2026-03-06T00:00:00Z</updated>
   <id>https://benjaminste.in/</id>
   <author>
     <name>Benjamin Stein</name>
   </author>
+  <entry>
+    <title>Stop Calling Yourself an AI Startup</title>
+    <link href="https://benjaminste.in/blog/2026/03/06/stop-calling-yourself-an-ai-startup/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2026/03/06/stop-calling-yourself-an-ai-startup/</id>
+    <published>2026-03-06T00:00:00Z</published>
+    <updated>2026-03-06T00:00:00Z</updated>
+    <summary>It&#39;s 2026. We know.</summary>
+    <content type="html">I want you to say &quot;internet company&quot; out loud. Just try it on. Roll it around in your mouth. Notice how it sounds? It sounds like 1999. It sounds like a thing people used to say before they realized every company is an internet company, at which point the phrase stopped meaning anything at all.
+
+Now say &quot;AI startup.&quot;
+
+Same energy. We just can&#39;t hear it yet.
+
+## The YC Chart That Should Scare You
+
+This chart from Benedict Evans tells a simple story: AI startups went from a sliver of each YC batch to the majority. By the most recent cohorts, the red bar (AI) is taller than the black bar (everything else). More than half of all YC startups now call themselves AI companies.
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/assets/images/yc-startups-by-field.png&quot; alt=&quot;Y Combinator startups by field, showing AI startups growing from a sliver to the majority by 2025&quot; /&gt;
+&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Source: Benedict Evans, November 2025&lt;/em&gt;&lt;/p&gt;
+
+When more than half of all funded startups share the same adjective, that adjective has stopped doing useful work. It&#39;s not a differentiator. It&#39;s a checkbox. You might as well put &quot;uses electricity&quot; on your pitch deck.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;When more than half of all funded startups share the same adjective, that adjective has stopped doing useful work.&lt;/p&gt;&lt;/aside&gt;
+
+## It Happened Before. It&#39;ll Happen Again.
+
+In 1998, being an &quot;internet company&quot; was a genuine signal. It told investors and customers something meaningful: you were doing business in a new way, on a new platform, with new economics. Pets.com was an internet company. So was Amazon. The label covered both because the technology was new enough that simply using it was interesting.
+
+By 2002, the label was dead weight. The companies that survived didn&#39;t talk about the internet. Amazon talked about selection, price, and delivery speed. Google talked about organizing information. The technology became infrastructure, invisible and assumed. The interesting part was always what you built on top of it.
+
+Fast forward to 2008 and every founder is building a mobile app. &quot;We&#39;re a mobile-first company&quot; was the rallying cry. By 2014 that sounded as quaint as &quot;we have a fax machine.&quot; Of course you&#39;re mobile. What do you actually *do*?
+
+Here we are in 2026, and the same movie is playing again with AI. The technology has crossed from novel to expected. Every new product has some model behind it, some agent orchestrating something, some RAG pipeline pulling context from somewhere. The presence of AI is no longer the story. The absence of it would be.
+
+## We Forbid Talking About AI
+
+At my startup, SuperDuper, we build tools for busy parents to wrangle the chaos of family logistics. The school newsletter you didn&#39;t read, the last-minute soccer schedule change, the permission slip you forgot to sign. SuperDuper finds all of it buried in your inbox, pulls out only what matters, and puts it all in one place.
+
+To say our product is agentic is an understatement. SuperDuper literally vibe codes its own UIs in real-time in production. (Yes, really. It&#39;s bonkers. But more on that in a future post.) It reads email, extracts structured data, builds personalized dashboards, sends timely nudges. It does things that would have been science fiction three months ago. And we have a rule in our brand style guide that I enforce with an iron fist: **we do not talk about AI.** The word is literally forbidden in our marketing copy.
+
+Because it&#39;s table stakes. Saying &quot;we use AI&quot; in 2026 is like saying &quot;we have a website.&quot; It tells people nothing about what you do or why you&#39;re good at it. It&#39;s filler. It&#39;s noise. It&#39;s the verbal equivalent of putting a stock photo of a robot on your landing page.
+
+When someone asks what SuperDuper does, I don&#39;t say &quot;AI Agents for Families.&quot; I don&#39;t say &quot;we&#39;re an AI-powered family logistics platform leveraging frontier models to extract actionable intelligence from unstructured communication channels.&quot; I say we make sure you don&#39;t miss your kid&#39;s basketball game because you didn&#39;t see the email about the schedule change. One of those sentences makes people lean in. The other makes them check their phone.
+
+## What We Talk About Instead
+
+At SuperDuper, we talk about parents. We talk about the 47 emails from school that arrived this week, only three of which actually required action. We talk about the mental load of remembering that Tuesday is early pickup and Thursday is pizza day and Friday is the field trip you still haven&#39;t signed the form for. We talk about the moment at 9pm when you realize picture day was today and your kid wore a Minecraft shirt with a ketchup stain.
+
+We talk about the problem. The AI is how. The family is why.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;We talk about the problem. The AI is how. The family is why.&lt;/p&gt;&lt;/aside&gt;
+
+And here&#39;s the thing nobody in the &quot;AI startup&quot; crowd wants to admit: the technology is not the hard part anymore. The hard part is understanding your user deeply enough to build something they actually need. The hard part is the product, the design, the taste, the judgment calls about what to surface and what to hide. The hard part is all the stuff that was always hard, long before anyone had access to an API that could summarize text.
+
+(Now, to be clear: *I* am going to talk about AI all the time. It&#39;s basically all I want to talk about. I&#39;ll be blogging and posting on LinkedIn about our batshit crazy architecture that makes this hyper-personalized software possible. But that&#39;s me, the founder, nerding out. It&#39;s not our brand voice. It&#39;s not our brand promise. It&#39;s not what we say to the parent at 9pm who just needs to know if tomorrow is a half day.)
+
+## Take the &quot;No AI&quot; Test
+
+If you&#39;re a founder, here&#39;s a test. Describe your company without using the words AI, machine learning, LLM, model, agent, or copilot. If you can do it clearly, in one sentence, and it sounds like something a real person would pay for, you probably have a company. If you can&#39;t, you might have a technology demo walking around in an AI trenchcoat.
+
+The internet didn&#39;t go away. It became everything. AI won&#39;t go away either. It&#39;ll become everything too. And when it does, the companies that spent their energy talking about the technology will be forgotten, and the companies that spent their energy solving problems will be the ones left standing.
+
+We&#39;re not an AI startup. We&#39;re just a startup. And we help parents raise great kids without losing their minds.
+
+---
+
+*I&#39;m Ben Stein, co-founder and CEO of SuperDuper. I live in Oakland with my Keeper wife Arin, our two overprogrammed teenage boys, and a dog named Soup who contributes nothing helpful to the family logistics and arguably makes them harder, but he&#39;s really cute. If you want to follow along: [superduperlabs.com](https://superduperlabs.com) · [benjaminste.in](https://benjaminste.in) · [LinkedIn](https://www.linkedin.com/in/benjaminstein/)*</content>
+  </entry>
   <entry>
     <title>Should You Major in Computer Science in the Age of AI?</title>
     <link href="https://benjaminste.in/blog/2026/02/24/should-you-major-in-cs/" rel="alternate" type="text/html"/>
@@ -571,25 +641,6 @@ You lock your front door. You don&#39;t reuse toothbrushes. Don&#39;t reuse pass
 With the right tools, you can be way safer in under an hour and never have to memorize a password again. Your future self—the one not on hold with the bank—will thank you.</content>
   </entry>
   <entry>
-    <title>Sisyphus Only Had One Boulder (I Have Four)</title>
-    <link href="https://benjaminste.in/blog/2025/11/13/sisyphus-only-had-one-boulder/" rel="alternate" type="text/html"/>
-    <id>https://benjaminste.in/blog/2025/11/13/sisyphus-only-had-one-boulder/</id>
-    <published>2025-11-13T00:00:00Z</published>
-    <updated>2025-11-13T00:00:00Z</updated>
-    <summary>I love a clean house. My family is the opposite. One day I&#39;ll win. Or will I?</summary>
-    <content type="html">I love a clean house. No clutter, no mess, vacuumed rugs, mopped floors, wiped counters.
-
-My family is the opposite. My wife LOVES dishes in the sink (I can only assume based on behavior). Zeke leaves his basketball and sneakers and slides and uniforms on every surface. Gabi has been doing science experiments in the kitchen for the past week, leaving a trail of hardened bread starter on the counter every night. Soup the dog loves sticks and brings one into the hallway and chews it to pieces, leaving a mess of bark (no pun intended) behind.
-
-It&#39;s almost like my full time job is following my family around and cleaning up after them. Not once, not from time to time, but every day. I walk in the door after a long day of work and find the same chaos I cleaned up that morning. I put the basketball back in the garage; it migrates to the dining room. I wipe down the counter; new experiments appear. I arrange the slides by the door; they teleport to the living room. I throw out yesterday&#39;s stick; Soup curates a new one by morning. Sisyphus only had one boulder. I have four.
-
-But I know how temporary this all is. One day I&#39;ll win. The house will stay clean.
-
-In just a few years, I&#39;m going to come home to a perfectly clean house, just like I left it. No dirty underwear on the floor, no spilled ketchup on the couch, no chewed up slippers. The basketball will stay in the garage. The kitchen will stay clean. The hallway will be silent, no clicking of dog nails, no trail of bark. I&#39;ll walk through rooms that echo, where everything is exactly where I left it, and I will ache for the mess. I&#39;ll want to trip over those slides. I&#39;ll want to scrub that bread starter. I&#39;ll want evidence that people I love are here, living, making their marks.
-
-One day, sooner than I can imagine, I&#39;ll come home to order and cleanliness. And I&#39;m going to feel oh so sad.</content>
-  </entry>
-  <entry>
     <title>The Stein Family Pet Naming Tradition: A Comprehensive History</title>
     <link href="https://benjaminste.in/blog/2025/11/13/the-stein-family-pet-naming-tradition/" rel="alternate" type="text/html"/>
     <id>https://benjaminste.in/blog/2025/11/13/the-stein-family-pet-naming-tradition/</id>
@@ -647,6 +698,25 @@ But traditions have a way of resurging. When we got Kugel in 2008, it felt like 
 And after Soup, we&#39;ll get another pet. We haven&#39;t decided what yet. But the name is already chosen: Rugelach. It&#39;s a family decision, arrived at by consensus. My mother suggested Gefilte, but we all agreed that felt mean to the animal.
 
 This is who we are. We are people who name pets after Jewish foods. We have been doing this since at least the 1840s, possibly longer. The tradition will continue. Somewhere, I imagine, the spirit of Cholent the medium bear approves.</content>
+  </entry>
+  <entry>
+    <title>Sisyphus Only Had One Boulder (I Have Four)</title>
+    <link href="https://benjaminste.in/blog/2025/11/13/sisyphus-only-had-one-boulder/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2025/11/13/sisyphus-only-had-one-boulder/</id>
+    <published>2025-11-13T00:00:00Z</published>
+    <updated>2025-11-13T00:00:00Z</updated>
+    <summary>I love a clean house. My family is the opposite. One day I&#39;ll win. Or will I?</summary>
+    <content type="html">I love a clean house. No clutter, no mess, vacuumed rugs, mopped floors, wiped counters.
+
+My family is the opposite. My wife LOVES dishes in the sink (I can only assume based on behavior). Zeke leaves his basketball and sneakers and slides and uniforms on every surface. Gabi has been doing science experiments in the kitchen for the past week, leaving a trail of hardened bread starter on the counter every night. Soup the dog loves sticks and brings one into the hallway and chews it to pieces, leaving a mess of bark (no pun intended) behind.
+
+It&#39;s almost like my full time job is following my family around and cleaning up after them. Not once, not from time to time, but every day. I walk in the door after a long day of work and find the same chaos I cleaned up that morning. I put the basketball back in the garage; it migrates to the dining room. I wipe down the counter; new experiments appear. I arrange the slides by the door; they teleport to the living room. I throw out yesterday&#39;s stick; Soup curates a new one by morning. Sisyphus only had one boulder. I have four.
+
+But I know how temporary this all is. One day I&#39;ll win. The house will stay clean.
+
+In just a few years, I&#39;m going to come home to a perfectly clean house, just like I left it. No dirty underwear on the floor, no spilled ketchup on the couch, no chewed up slippers. The basketball will stay in the garage. The kitchen will stay clean. The hallway will be silent, no clicking of dog nails, no trail of bark. I&#39;ll walk through rooms that echo, where everything is exactly where I left it, and I will ache for the mess. I&#39;ll want to trip over those slides. I&#39;ll want to scrub that bread starter. I&#39;ll want evidence that people I love are here, living, making their marks.
+
+One day, sooner than I can imagine, I&#39;ll come home to order and cleanliness. And I&#39;m going to feel oh so sad.</content>
   </entry>
   <entry>
     <title>How to Make Your Blog AI Agent-Friendly (And Why You Should)</title>

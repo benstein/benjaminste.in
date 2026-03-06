@@ -1,0 +1,72 @@
+# Stop Calling Yourself an AI Startup
+
+**Date:** 2026-03-06
+
+**Author:** Benjamin Stein
+
+**Categories:** startups, ai, superduper
+
+---
+
+I want you to say "internet company" out loud. Just try it on. Roll it around in your mouth. Notice how it sounds? It sounds like 1999. It sounds like a thing people used to say before they realized every company is an internet company, at which point the phrase stopped meaning anything at all.
+
+Now say "AI startup."
+
+Same energy. We just can't hear it yet.
+
+## The YC Chart That Should Scare You
+
+This chart from Benedict Evans tells a simple story: AI startups went from a sliver of each YC batch to the majority. By the most recent cohorts, the red bar (AI) is taller than the black bar (everything else). More than half of all YC startups now call themselves AI companies.
+
+<p style="text-align: center;">
+  <img src="/assets/images/yc-startups-by-field.png" alt="Y Combinator startups by field, showing AI startups growing from a sliver to the majority by 2025" />
+</p>
+<p style="text-align: center;"><em>Source: Benedict Evans, November 2025</em></p>
+
+When more than half of all funded startups share the same adjective, that adjective has stopped doing useful work. It's not a differentiator. It's a checkbox. You might as well put "uses electricity" on your pitch deck.
+
+<aside class="pull-quote"><p>When more than half of all funded startups share the same adjective, that adjective has stopped doing useful work.</p></aside>
+
+## It Happened Before. It'll Happen Again.
+
+In 1998, being an "internet company" was a genuine signal. It told investors and customers something meaningful: you were doing business in a new way, on a new platform, with new economics. Pets.com was an internet company. So was Amazon. The label covered both because the technology was new enough that simply using it was interesting.
+
+By 2002, the label was dead weight. The companies that survived didn't talk about the internet. Amazon talked about selection, price, and delivery speed. Google talked about organizing information. The technology became infrastructure, invisible and assumed. The interesting part was always what you built on top of it.
+
+Fast forward to 2008 and every founder is building a mobile app. "We're a mobile-first company" was the rallying cry. By 2014 that sounded as quaint as "we have a fax machine." Of course you're mobile. What do you actually *do*?
+
+Here we are in 2026, and the same movie is playing again with AI. The technology has crossed from novel to expected. Every new product has some model behind it, some agent orchestrating something, some RAG pipeline pulling context from somewhere. The presence of AI is no longer the story. The absence of it would be.
+
+## We Forbid Talking About AI
+
+At my startup, SuperDuper, we build tools for busy parents to wrangle the chaos of family logistics. The school newsletter you didn't read, the last-minute soccer schedule change, the permission slip you forgot to sign. SuperDuper finds all of it buried in your inbox, pulls out only what matters, and puts it all in one place.
+
+To say our product is agentic is an understatement. SuperDuper literally vibe codes its own UIs in real-time in production. (Yes, really. It's bonkers. But more on that in a future post.) It reads email, extracts structured data, builds personalized dashboards, sends timely nudges. It does things that would have been science fiction three months ago. And we have a rule in our brand style guide that I enforce with an iron fist: **we do not talk about AI.** The word is literally forbidden in our marketing copy.
+
+Because it's table stakes. Saying "we use AI" in 2026 is like saying "we have a website." It tells people nothing about what you do or why you're good at it. It's filler. It's noise. It's the verbal equivalent of putting a stock photo of a robot on your landing page.
+
+When someone asks what SuperDuper does, I don't say "AI Agents for Families." I don't say "we're an AI-powered family logistics platform leveraging frontier models to extract actionable intelligence from unstructured communication channels." I say we make sure you don't miss your kid's basketball game because you didn't see the email about the schedule change. One of those sentences makes people lean in. The other makes them check their phone.
+
+## What We Talk About Instead
+
+At SuperDuper, we talk about parents. We talk about the 47 emails from school that arrived this week, only three of which actually required action. We talk about the mental load of remembering that Tuesday is early pickup and Thursday is pizza day and Friday is the field trip you still haven't signed the form for. We talk about the moment at 9pm when you realize picture day was today and your kid wore a Minecraft shirt with a ketchup stain.
+
+We talk about the problem. The AI is how. The family is why.
+
+<aside class="pull-quote"><p>We talk about the problem. The AI is how. The family is why.</p></aside>
+
+And here's the thing nobody in the "AI startup" crowd wants to admit: the technology is not the hard part anymore. The hard part is understanding your user deeply enough to build something they actually need. The hard part is the product, the design, the taste, the judgment calls about what to surface and what to hide. The hard part is all the stuff that was always hard, long before anyone had access to an API that could summarize text.
+
+(Now, to be clear: *I* am going to talk about AI all the time. It's basically all I want to talk about. I'll be blogging and posting on LinkedIn about our batshit crazy architecture that makes this hyper-personalized software possible. But that's me, the founder, nerding out. It's not our brand voice. It's not our brand promise. It's not what we say to the parent at 9pm who just needs to know if tomorrow is a half day.)
+
+## Take the "No AI" Test
+
+If you're a founder, here's a test. Describe your company without using the words AI, machine learning, LLM, model, agent, or copilot. If you can do it clearly, in one sentence, and it sounds like something a real person would pay for, you probably have a company. If you can't, you might have a technology demo walking around in an AI trenchcoat.
+
+The internet didn't go away. It became everything. AI won't go away either. It'll become everything too. And when it does, the companies that spent their energy talking about the technology will be forgotten, and the companies that spent their energy solving problems will be the ones left standing.
+
+We're not an AI startup. We're just a startup. And we help parents raise great kids without losing their minds.
+
+---
+
+*I'm Ben Stein, co-founder and CEO of SuperDuper. I live in Oakland with my Keeper wife Arin, our two overprogrammed teenage boys, and a dog named Soup who contributes nothing helpful to the family logistics and arguably makes them harder, but he's really cute. If you want to follow along: [superduperlabs.com](https://superduperlabs.com) · [benjaminste.in](https://benjaminste.in) · [LinkedIn](https://www.linkedin.com/in/benjaminstein/)*
