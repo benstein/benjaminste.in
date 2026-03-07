@@ -16,7 +16,7 @@ const PUZZLE_DATA = {
     ["R", "M", "I", "T", "Z", "V"],
     ["E", "I", "T", "E", "H", "A"],
     ["M", "Z", "T", "L", "T", "U"],
-    ["T", "A", "E", "S", "U", "O"],
+    ["E", "A", "E", "S", "U", "O"],
     ["T", "I", "N", "K", "C", "L"],
     ["F", "O", "R", "T", "I", "E"],
   ],
@@ -55,6 +55,8 @@ const state = {
   // Track order of guesses for results: {type: "theme"|"spangram"|"hint"}
   guessOrder: [],
   gameComplete: false,
+  // Persistent found-word paths for drawing lines
+  foundPaths: [], // { path: [{row,col},...], color: string }
 };
 
 // ============================================================
@@ -150,14 +152,14 @@ function getWordFromPath(path) {
 // ============================================================
 // Drawing
 // ============================================================
-function drawPath(path, color = "#5ba3d9", pointerPos = null) {
-  ctx.clearRect(0, 0, canvasEl.width / window.devicePixelRatio, canvasEl.height / window.devicePixelRatio);
+function drawLine(path, color, pointerPos = null) {
   if (path.length === 0) return;
 
   ctx.strokeStyle = color;
   ctx.lineWidth = 4;
   ctx.lineCap = "round";
   ctx.lineJoin = "round";
+  ctx.globalAlpha = 1;
   ctx.beginPath();
 
   const first = getCellCenter(path[0].row, path[0].col);
@@ -168,26 +170,28 @@ function drawPath(path, color = "#5ba3d9", pointerPos = null) {
     ctx.lineTo(pt.x, pt.y);
   }
 
-  // Draw line to current pointer position if dragging
   if (pointerPos) {
     const gridRect = gridEl.getBoundingClientRect();
     ctx.lineTo(pointerPos.x - gridRect.left, pointerPos.y - gridRect.top);
   }
 
   ctx.stroke();
+}
 
-  // Draw circles at each node
-  ctx.fillStyle = color;
-  for (const p of path) {
-    const pt = getCellCenter(p.row, p.col);
-    ctx.beginPath();
-    ctx.arc(pt.x, pt.y, 6, 0, Math.PI * 2);
-    ctx.fill();
+function redrawCanvas(activePath = [], activeColor = "#5ba3d9", pointerPos = null) {
+  ctx.clearRect(0, 0, canvasEl.width / window.devicePixelRatio, canvasEl.height / window.devicePixelRatio);
+
+  // Draw persistent found-word lines
+  for (const fp of state.foundPaths) {
+    drawLine(fp.path, fp.color);
   }
+
+  // Draw active drag line
+  drawLine(activePath, activeColor, pointerPos);
 }
 
 function clearCanvas() {
-  ctx.clearRect(0, 0, canvasEl.width / window.devicePixelRatio, canvasEl.height / window.devicePixelRatio);
+  redrawCanvas();
 }
 
 // ============================================================
@@ -215,7 +219,7 @@ function onDragStart(e) {
   state.isDragging = true;
   state.currentPath = [pos];
   updateSelectionHighlight();
-  drawPath(state.currentPath);
+  redrawCanvas(state.currentPath);
 }
 
 function onDragMove(e) {
@@ -233,7 +237,7 @@ function onDragMove(e) {
         state.currentPath.pop();
         updateSelectionHighlight();
         const touch = e.touches ? e.touches[0] : e;
-        drawPath(state.currentPath, "#5ba3d9", { x: touch.clientX, y: touch.clientY });
+        redrawCanvas(state.currentPath, "#5ba3d9", { x: touch.clientX, y: touch.clientY });
         return;
       }
     }
@@ -246,7 +250,7 @@ function onDragMove(e) {
   }
 
   const touch = e.touches ? e.touches[0] : e;
-  drawPath(state.currentPath, "#5ba3d9", { x: touch.clientX, y: touch.clientY });
+  redrawCanvas(state.currentPath, "#5ba3d9", { x: touch.clientX, y: touch.clientY });
 }
 
 function onDragEnd(e) {
@@ -353,6 +357,13 @@ function foundThemeWord(tw, path) {
     getCell(r, c).classList.add("found-theme");
   }
 
+  // Store path for persistent line
+  state.foundPaths.push({
+    path: tw.path.map(([r, c]) => ({ row: r, col: c })),
+    color: "#5ba3d9",
+  });
+  redrawCanvas();
+
   animateCells(tw.path.map(([r, c]) => ({ row: r, col: c })), "valid-bounce");
   showMessage(tw.word);
   updateProgress();
@@ -367,6 +378,13 @@ function foundSpangram(path) {
     state.claimed[r][c] = "spangram";
     getCell(r, c).classList.add("found-spangram");
   }
+
+  // Store path for persistent line
+  state.foundPaths.push({
+    path: PUZZLE_DATA.spangram.path.map(([r, c]) => ({ row: r, col: c })),
+    color: "#c5a400",
+  });
+  redrawCanvas();
 
   animateCells(PUZZLE_DATA.spangram.path.map(([r, c]) => ({ row: r, col: c })), "valid-bounce");
   showMessage(PUZZLE_DATA.spangram.word + "!");
