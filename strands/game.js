@@ -7,33 +7,61 @@
 // [row, col] coordinates tracing the path through the grid.
 // ============================================================
 
-const PUZZLE_DATA = {
-  theme: "Mazel Tov, Zeke!",
-  // 6 columns x 8 rows, row-major order
-  grid: [
-    ["B", "A", "S", "K", "E", "T"],
-    ["A", "B", "L", "L", "A", "B"],
-    ["R", "M", "I", "T", "Z", "V"],
-    ["M", "A", "T", "E", "H", "A"],
-    ["E", "I", "T", "L", "T", "U"],
-    ["E", "Z", "E", "S", "U", "O"],
-    ["T", "I", "N", "K", "C", "L"],
-    ["F", "O", "R", "T", "I", "E"],
-  ],
-  // The spangram: must touch two opposite sides (left col 0 → right col 5)
-  spangram: {
-    word: "EZEKIEL",
-    path: [[4,0],[5,1],[5,2],[6,3],[7,4],[7,5],[6,5]],
+const PUZZLES = {
+  easy: {
+    theme: "Mazel Tov, Zeke!",
+    grid: [
+      ["B", "A", "S", "K", "E", "T"],
+      ["A", "B", "L", "L", "A", "B"],
+      ["R", "M", "I", "T", "Z", "V"],
+      ["M", "A", "T", "E", "H", "A"],
+      ["E", "I", "T", "L", "T", "U"],
+      ["E", "Z", "E", "S", "U", "O"],
+      ["T", "I", "N", "K", "C", "L"],
+      ["F", "O", "R", "T", "I", "E"],
+    ],
+    spangram: {
+      word: "EZEKIEL",
+      path: [[4,0],[5,1],[5,2],[6,3],[7,4],[7,5],[6,5]],
+    },
+    themeWords: [
+      { word: "BASKETBALL", path: [[0,0],[0,1],[0,2],[0,3],[0,4],[0,5],[1,5],[1,4],[1,3],[1,2]] },
+      { word: "BARMITZVAH", path: [[1,1],[1,0],[2,0],[2,1],[2,2],[2,3],[2,4],[2,5],[3,5],[3,4]] },
+      { word: "FORTNITE",   path: [[7,0],[7,1],[7,2],[7,3],[6,2],[6,1],[6,0],[5,0]] },
+      { word: "SCOUT",      path: [[5,3],[6,4],[5,5],[4,5],[4,4]] },
+      { word: "ULTIMATE",   path: [[5,4],[4,3],[4,2],[4,1],[3,0],[3,1],[3,2],[3,3]] },
+    ],
   },
-  // Theme words (not including spangram)
-  themeWords: [
-    { word: "BASKETBALL", path: [[0,0],[0,1],[0,2],[0,3],[0,4],[0,5],[1,5],[1,4],[1,3],[1,2]] },
-    { word: "BARMITZVAH", path: [[1,1],[1,0],[2,0],[2,1],[2,2],[2,3],[2,4],[2,5],[3,5],[3,4]] },
-    { word: "FORTNITE",   path: [[7,0],[7,1],[7,2],[7,3],[6,2],[6,1],[6,0],[5,0]] },
-    { word: "SCOUT",      path: [[5,3],[6,4],[5,5],[4,5],[4,4]] },
-    { word: "ULTIMATE",   path: [[5,4],[4,3],[4,2],[4,1],[3,0],[3,1],[3,2],[3,3]] },
-  ],
+  hard: {
+    theme: "Mazel Tov, Zeke!",
+    grid: [
+      ["E", "K", "S", "A", "T", "I"],
+      ["T", "B", "H", "B", "L", "M"],
+      ["A", "V", "A", "I", "U", "A"],
+      ["L", "Z", "T", "M", "R", "T"],
+      ["L", "E", "K", "I", "A", "E"],
+      ["Z", "I", "T", "E", "E", "B"],
+      ["E", "T", "N", "T", "U", "L"],
+      ["R", "O", "F", "S", "C", "O"],
+    ],
+    spangram: {
+      word: "EZEKIEL",
+      path: [[6,0],[5,0],[4,1],[4,2],[4,3],[5,4],[6,5]],
+    },
+    themeWords: [
+      { word: "BASKETBALL", path: [[1,3],[0,3],[0,2],[0,1],[0,0],[1,0],[1,1],[2,0],[3,0],[4,0]] },
+      { word: "BARMITZVAH", path: [[5,5],[4,4],[3,4],[3,3],[2,3],[3,2],[3,1],[2,1],[2,2],[1,2]] },
+      { word: "FORTNITE",   path: [[7,2],[7,1],[7,0],[6,1],[6,2],[5,1],[5,2],[5,3]] },
+      { word: "SCOUT",      path: [[7,3],[7,4],[7,5],[6,4],[6,3]] },
+      { word: "ULTIMATE",   path: [[2,4],[1,4],[0,4],[0,5],[1,5],[2,5],[3,5],[4,5]] },
+    ],
+  },
 };
+
+// Read mode from URL, default to hard
+const urlParams = new URLSearchParams(window.location.search);
+const currentMode = urlParams.get("mode") === "easy" ? "easy" : "hard";
+const PUZZLE_DATA = PUZZLES[currentMode];
 
 // ============================================================
 // State
@@ -82,6 +110,9 @@ function init() {
   const totalTheme = PUZZLE_DATA.themeWords.length + (PUZZLE_DATA.spangram.path.length ? 1 : 0);
   totalCountEl.textContent = totalTheme;
   foundCountEl.textContent = "0";
+
+  // Highlight active mode toggle
+  document.getElementById("mode-" + currentMode).classList.add("active");
 
   buildGrid();
   resizeCanvas();
