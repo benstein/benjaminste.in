@@ -93,6 +93,8 @@ const state = {
 const gridEl = document.getElementById("grid");
 const canvasEl = document.getElementById("line-canvas");
 const ctx = canvasEl.getContext("2d");
+const foundCanvasEl = document.getElementById("found-canvas");
+const foundCtx = foundCanvasEl.getContext("2d");
 const themeTextEl = document.getElementById("theme-text");
 const foundCountEl = document.getElementById("found-count");
 const totalCountEl = document.getElementById("total-count");
@@ -135,11 +137,21 @@ function buildGrid() {
 
 function resizeCanvas() {
   const rect = gridEl.getBoundingClientRect();
-  canvasEl.width = rect.width * window.devicePixelRatio;
-  canvasEl.height = rect.height * window.devicePixelRatio;
+  const dpr = window.devicePixelRatio;
+
+  canvasEl.width = rect.width * dpr;
+  canvasEl.height = rect.height * dpr;
   canvasEl.style.width = rect.width + "px";
   canvasEl.style.height = rect.height + "px";
-  ctx.setTransform(window.devicePixelRatio, 0, 0, window.devicePixelRatio, 0, 0);
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+  foundCanvasEl.width = rect.width * dpr;
+  foundCanvasEl.height = rect.height * dpr;
+  foundCanvasEl.style.width = rect.width + "px";
+  foundCanvasEl.style.height = rect.height + "px";
+  foundCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+  drawFoundPaths();
 }
 
 // ============================================================
@@ -218,6 +230,59 @@ function redrawCanvas(activePath = [], activeColor = "#5ba3d9", pointerPos = nul
 
 function clearCanvas() {
   redrawCanvas();
+}
+
+function drawFoundPaths() {
+  const w = foundCanvasEl.width / window.devicePixelRatio;
+  const h = foundCanvasEl.height / window.devicePixelRatio;
+  foundCtx.clearRect(0, 0, w, h);
+
+  // Draw thin grid lines between all horizontally/vertically adjacent cells
+  foundCtx.strokeStyle = "#b8e4f9";
+  foundCtx.lineWidth = 4;
+  foundCtx.lineCap = "round";
+  for (let r = 0; r < ROWS; r++) {
+    for (let c = 0; c < COLS; c++) {
+      const center = getCellCenter(r, c);
+      if (c < COLS - 1) {
+        const right = getCellCenter(r, c + 1);
+        foundCtx.beginPath();
+        foundCtx.moveTo(center.x, center.y);
+        foundCtx.lineTo(right.x, right.y);
+        foundCtx.stroke();
+      }
+      if (r < ROWS - 1) {
+        const bottom = getCellCenter(r + 1, c);
+        foundCtx.beginPath();
+        foundCtx.moveTo(center.x, center.y);
+        foundCtx.lineTo(bottom.x, bottom.y);
+        foundCtx.stroke();
+      }
+    }
+  }
+
+  // Draw thick connector lines for found words
+  if (state.foundPaths.length === 0) return;
+  const cellDiameter = getCell(0, 0).getBoundingClientRect().width;
+
+  for (const fp of state.foundPaths) {
+    if (fp.path.length < 2) continue;
+    foundCtx.strokeStyle = fp.color;
+    foundCtx.lineWidth = cellDiameter;
+    foundCtx.lineCap = "round";
+    foundCtx.lineJoin = "round";
+    foundCtx.beginPath();
+
+    const first = getCellCenter(fp.path[0].row, fp.path[0].col);
+    foundCtx.moveTo(first.x, first.y);
+
+    for (let i = 1; i < fp.path.length; i++) {
+      const pt = getCellCenter(fp.path[i].row, fp.path[i].col);
+      foundCtx.lineTo(pt.x, pt.y);
+    }
+
+    foundCtx.stroke();
+  }
 }
 
 // ============================================================
@@ -383,12 +448,12 @@ function foundThemeWord(tw, path) {
     getCell(r, c).classList.add("found-theme");
   }
 
-  // Store path for persistent line
+  // Store path for persistent connector
   state.foundPaths.push({
     path: tw.path.map(([r, c]) => ({ row: r, col: c })),
-    color: "#5ba3d9",
+    color: "#b8e4f9",
   });
-  redrawCanvas();
+  drawFoundPaths();
 
   animateCells(tw.path.map(([r, c]) => ({ row: r, col: c })), "valid-bounce");
   showMessage(tw.word);
@@ -405,12 +470,12 @@ function foundSpangram(path) {
     getCell(r, c).classList.add("found-spangram");
   }
 
-  // Store path for persistent line
+  // Store path for persistent connector
   state.foundPaths.push({
     path: PUZZLE_DATA.spangram.path.map(([r, c]) => ({ row: r, col: c })),
-    color: "#c5a400",
+    color: "#f5d547",
   });
-  redrawCanvas();
+  drawFoundPaths();
 
   animateCells(PUZZLE_DATA.spangram.path.map(([r, c]) => ({ row: r, col: c })), "valid-bounce");
   showMessage(PUZZLE_DATA.spangram.word + "!");

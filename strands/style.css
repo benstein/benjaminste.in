@@ -152,6 +152,16 @@ header {
   max-width: 400px;
 }
 
+#found-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
 #line-canvas {
   position: absolute;
   top: 0;
@@ -166,7 +176,7 @@ header {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(8, 1fr);
-  gap: 2px;
+  gap: 0;
   width: 100%;
   aspect-ratio: 6 / 8;
   max-height: 100%;
@@ -177,19 +187,22 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 72%;
+  aspect-ratio: 1;
+  place-self: center;
   font-size: clamp(18px, 5vw, 28px);
   font-weight: 700;
   cursor: pointer;
   border-radius: 50%;
-  aspect-ratio: 1;
   position: relative;
+  background: #b8e4f9;
   transition: background-color 0.15s, color 0.15s, transform 0.1s;
   text-transform: uppercase;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 .cell.selecting {
-  background: #dbeafe;
+  background: #7ec0dd;
   transform: scale(1.1);
 }
 
