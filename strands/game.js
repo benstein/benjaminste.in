@@ -8,7 +8,7 @@
 // ============================================================
 
 const PUZZLE_DATA = {
-  theme: "Happy Birthday Zeke!",
+  theme: "Mazel Tov, Zeke!",
   // 6 columns x 8 rows, row-major order
   grid: [
     ["B", "A", "S", "K", "E", "T"],
