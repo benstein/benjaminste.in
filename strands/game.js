@@ -8,33 +8,31 @@
 // ============================================================
 
 const PUZZLE_DATA = {
-  theme: "Nice glasses!",
+  theme: "Happy Birthday Zeke!",
   // 6 columns x 8 rows, row-major order
   grid: [
-    ["T", "E", "R", "T", "E", "D"],
-    ["U", "M", "B", "A", "L", "R"],
-    ["E", "L", "W", "B", "O", "A"],
-    ["R", "H", "C", "K", "G", "K"],
-    ["L", "A", "N", "T", "A", "N"],
-    ["I", "C", "E", "I", "E", "R"],
-    ["N", "I", "R", "S", "I", "T"],
-    ["E", "T", "S", "D", "N", "F"],
+    ["B", "A", "S", "K", "E", "T"],
+    ["A", "B", "L", "L", "A", "B"],
+    ["R", "M", "I", "T", "Z", "V"],
+    ["E", "I", "T", "E", "H", "A"],
+    ["M", "Z", "T", "L", "T", "U"],
+    ["T", "A", "E", "S", "U", "O"],
+    ["T", "I", "N", "K", "C", "L"],
+    ["F", "O", "R", "T", "I", "E"],
   ],
-  // The spangram: must touch two opposite sides
+  // The spangram: must touch two opposite sides (left col 0 → right col 5)
   spangram: {
-    word: "EYEGLASSES",
-    // Path as [row, col] pairs — will be set by user
-    path: [],
+    word: "EZEKIEL",
+    path: [[3,0],[4,1],[5,2],[6,3],[7,4],[7,5],[6,5]],
   },
   // Theme words (not including spangram)
   themeWords: [
-    // { word: "TUMBLER", path: [[0,0],[1,0],[1,1],[1,2],[2,1],[0,2],[0,1]] },
-    // Add more theme words here...
+    { word: "BASKETBALL", path: [[0,0],[0,1],[0,2],[0,3],[0,4],[0,5],[1,5],[1,4],[1,3],[1,2]] },
+    { word: "BARMITZVAH", path: [[1,1],[1,0],[2,0],[2,1],[2,2],[2,3],[2,4],[2,5],[3,5],[3,4]] },
+    { word: "FORTNITE",   path: [[7,0],[7,1],[7,2],[7,3],[6,2],[6,1],[6,0],[5,0]] },
+    { word: "SCOUT",      path: [[5,3],[6,4],[5,5],[4,5],[4,4]] },
+    { word: "ULTIMATE",   path: [[5,4],[4,3],[3,2],[3,1],[4,0],[5,1],[4,2],[3,3]] },
   ],
-  // Optional: list of valid English words for non-theme detection
-  // If empty, any 4+ letter drag that isn't a theme word gets
-  // checked against a basic dictionary API
-  validWords: null, // set to a Set or array, or leave null to use API
 };
 
 // ============================================================
@@ -268,7 +266,7 @@ function onDragEnd(e) {
 // ============================================================
 // Word evaluation
 // ============================================================
-function evaluateWord(word, path) {
+async function evaluateWord(word, path) {
   if (word.length < 4) {
     showMessage("Too short");
     animateCells(path, "invalid-shake");
@@ -292,8 +290,9 @@ function evaluateWord(word, path) {
     }
   }
 
-  // Not a theme word — check if it's a valid English word for hint meter
-  if (isValidNonThemeWord(word)) {
+  // Not a theme word — check dictionary for hint meter credit
+  const isValid = await checkWordInDictionary(word);
+  if (isValid) {
     handleNonThemeWord(word, path);
   } else {
     showMessage("Not a word");
@@ -314,23 +313,31 @@ function pathMatchesWord(path, wordObj) {
   return rev;
 }
 
-// Simple valid word check — uses a built-in word list loaded on demand
-let _wordSet = null;
+// Non-theme word validation using dictionary API
+const _checkedWords = new Map(); // word -> true/false cache
+const _pendingChecks = new Map(); // word -> Promise
 
-function isValidNonThemeWord(word) {
-  // If puzzle provides explicit valid words
-  if (PUZZLE_DATA.validWords) {
-    if (PUZZLE_DATA.validWords instanceof Set) {
-      return PUZZLE_DATA.validWords.has(word.toUpperCase());
-    }
-    return PUZZLE_DATA.validWords.includes(word.toUpperCase());
-  }
-  // If we have a loaded word set
-  if (_wordSet) {
-    return _wordSet.has(word.toUpperCase());
-  }
-  // Fallback: accept all 4+ letter words as valid for hint purposes
-  return word.length >= 4;
+async function checkWordInDictionary(word) {
+  const lower = word.toLowerCase();
+  if (_checkedWords.has(lower)) return _checkedWords.get(lower);
+  if (_pendingChecks.has(lower)) return _pendingChecks.get(lower);
+
+  const promise = fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${lower}`)
+    .then((res) => {
+      const valid = res.ok;
+      _checkedWords.set(lower, valid);
+      _pendingChecks.delete(lower);
+      return valid;
+    })
+    .catch(() => {
+      // On network error, accept the word
+      _checkedWords.set(lower, true);
+      _pendingChecks.delete(lower);
+      return true;
+    });
+
+  _pendingChecks.set(lower, promise);
+  return promise;
 }
 
 // ============================================================
