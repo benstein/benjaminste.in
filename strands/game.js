@@ -181,12 +181,7 @@ function drawLine(path, color, pointerPos = null) {
 function redrawCanvas(activePath = [], activeColor = "#5ba3d9", pointerPos = null) {
   ctx.clearRect(0, 0, canvasEl.width / window.devicePixelRatio, canvasEl.height / window.devicePixelRatio);
 
-  // Draw persistent found-word lines
-  for (const fp of state.foundPaths) {
-    drawLine(fp.path, fp.color);
-  }
-
-  // Draw active drag line
+  // Draw active drag line only (found words shown via cell background colors)
   drawLine(activePath, activeColor, pointerPos);
 }
 
