@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Strands</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="header-left">
+        <button id="back-btn" class="icon-btn" aria-label="Back">&larr;</button>
+      </div>
+      <div class="header-right">
+        <button id="hint-icon-btn" class="icon-btn" aria-label="Hint">&#x1F4A1;</button>
+        <button id="stats-btn" class="icon-btn" aria-label="Stats">&#x1F4CA;</button>
+        <button id="help-btn" class="icon-btn" aria-label="Help">&#x3F;</button>
+        <button id="settings-btn" class="icon-btn" aria-label="Settings">&#x2699;</button>
+      </div>
+    </header>
+
+    <div id="theme-card">
+      <div class="theme-label">TODAY'S THEME</div>
+      <div id="theme-text" class="theme-text">Loading...</div>
+    </div>
+
+    <div id="message-bar" class="message-bar hidden"></div>
+
+    <div id="grid-container">
+      <canvas id="line-canvas"></canvas>
+      <div id="grid"></div>
+    </div>
+
+    <div id="bottom-bar">
+      <button id="hint-btn" class="hint-button" disabled>Hint</button>
+      <div id="progress-text"><span id="found-count">0</span> of <span id="total-count">0</span> theme words found.</div>
+    </div>
+
+    <div id="hint-meter" class="hint-meter">
+      <div id="hint-meter-fill" class="hint-meter-fill"></div>
+    </div>
+  </div>
+
+  <!-- Results Modal -->
+  <div id="results-overlay" class="overlay hidden">
+    <div id="results-modal" class="modal">
+      <h2>Strands</h2>
+      <div id="results-theme" class="results-theme"></div>
+      <div id="results-grid" class="results-grid"></div>
+      <div id="results-perfect" class="results-perfect hidden">Perfect!</div>
+      <button id="results-close" class="results-close-btn">Close</button>
+    </div>
+  </div>
+
+  <!-- Help Modal -->
+  <div id="help-overlay" class="overlay hidden">
+    <div id="help-modal" class="modal help-modal">
+      <button id="help-close" class="modal-close-btn">&times;</button>
+      <h2>How to Play</h2>
+      <p>Find all the theme words to fill the board.</p>
+      <ul>
+        <li>Theme words match the theme described at the top.</li>
+        <li>Drag to connect adjacent letters (including diagonals).</li>
+        <li>Words must be at least 4 letters long.</li>
+        <li>The <strong>spangram</strong> describes the theme and spans two opposite sides of the board. It is highlighted in <span class="yellow-text">yellow</span>.</li>
+        <li>Theme words are highlighted in <span class="blue-text">blue</span>.</li>
+        <li>Finding 3 non-theme valid words earns a <strong>hint</strong>.</li>
+        <li>A hint reveals the letters of one theme word.</li>
+        <li>Every letter is used exactly once.</li>
+      </ul>
+      <button id="help-ok" class="results-close-btn">Got it</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
