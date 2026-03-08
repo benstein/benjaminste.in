@@ -8,7 +8,7 @@
 html, body {
   height: 100%;
   overflow: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "nyt-franklin", "Franklin Gothic Medium", "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background: #fff;
   color: #1a1a1a;
   touch-action: none;
@@ -195,25 +195,22 @@ header {
   cursor: pointer;
   border-radius: 50%;
   position: relative;
-  background: #b8e4f9;
+  background: transparent;
   transition: background-color 0.15s, color 0.15s, transform 0.1s;
   text-transform: uppercase;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "nyt-franklin", "Franklin Gothic Medium", "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 .cell.selecting {
-  background: #7ec0dd;
-  transform: scale(1.1);
+  background: #d4cfc4;
 }
 
 .cell.found-theme {
   background: #b8e4f9;
-  color: #1a1a1a;
 }
 
 .cell.found-spangram {
   background: #f5d547;
-  color: #1a1a1a;
 }
 
 .cell.hint-highlight {

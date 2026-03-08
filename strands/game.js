@@ -198,59 +198,22 @@ function getWordFromPath(path) {
 // ============================================================
 // Drawing
 // ============================================================
-function drawLine(path, color, pointerPos = null) {
-  if (path.length === 0) return;
+const DRAG_COLOR = "#d4cfc4";
 
-  ctx.strokeStyle = color;
-  ctx.lineWidth = 4;
-  ctx.lineCap = "round";
-  ctx.lineJoin = "round";
-  ctx.globalAlpha = 1;
-  ctx.beginPath();
-
-  const first = getCellCenter(path[0].row, path[0].col);
-  ctx.moveTo(first.x, first.y);
-
-  for (let i = 1; i < path.length; i++) {
-    const pt = getCellCenter(path[i].row, path[i].col);
-    ctx.lineTo(pt.x, pt.y);
-  }
-
-  if (pointerPos) {
-    const gridRect = gridEl.getBoundingClientRect();
-    ctx.lineTo(pointerPos.x - gridRect.left, pointerPos.y - gridRect.top);
-  }
-
-  ctx.stroke();
-}
-
-function redrawCanvas(activePath = [], activeColor = "#5ba3d9", pointerPos = null) {
-  ctx.clearRect(0, 0, canvasEl.width / window.devicePixelRatio, canvasEl.height / window.devicePixelRatio);
-
-  // Draw active drag line only (found words shown via cell background colors)
-  drawLine(activePath, activeColor, pointerPos);
-}
-
-function clearCanvas() {
-  redrawCanvas();
-}
-
-function drawFoundPaths() {
+function drawConnectors(activePath = []) {
   const w = foundCanvasEl.width / window.devicePixelRatio;
   const h = foundCanvasEl.height / window.devicePixelRatio;
   foundCtx.clearRect(0, 0, w, h);
 
-  // Draw thick connector bars between adjacent cells in found words
-  if (state.foundPaths.length === 0) return;
   const cellDiameter = getCell(0, 0).getBoundingClientRect().width;
   const barWidth = cellDiameter * 0.28;
+  foundCtx.lineCap = "round";
+  foundCtx.lineWidth = barWidth;
 
+  // Draw found word connectors
   for (const fp of state.foundPaths) {
     if (fp.path.length < 2) continue;
     foundCtx.strokeStyle = fp.color;
-    foundCtx.lineWidth = barWidth;
-    foundCtx.lineCap = "round";
-
     for (let i = 0; i < fp.path.length - 1; i++) {
       const from = getCellCenter(fp.path[i].row, fp.path[i].col);
       const to = getCellCenter(fp.path[i + 1].row, fp.path[i + 1].col);
@@ -260,7 +223,24 @@ function drawFoundPaths() {
       foundCtx.stroke();
     }
   }
+
+  // Draw active drag connectors
+  if (activePath.length >= 2) {
+    foundCtx.strokeStyle = DRAG_COLOR;
+    for (let i = 0; i < activePath.length - 1; i++) {
+      const from = getCellCenter(activePath[i].row, activePath[i].col);
+      const to = getCellCenter(activePath[i + 1].row, activePath[i + 1].col);
+      foundCtx.beginPath();
+      foundCtx.moveTo(from.x, from.y);
+      foundCtx.lineTo(to.x, to.y);
+      foundCtx.stroke();
+    }
+  }
 }
+
+// Legacy aliases
+function drawFoundPaths() { drawConnectors(); }
+function clearCanvas() { drawConnectors(); }
 
 // ============================================================
 // Selection highlighting
@@ -287,7 +267,7 @@ function onDragStart(e) {
   state.isDragging = true;
   state.currentPath = [pos];
   updateSelectionHighlight();
-  redrawCanvas(state.currentPath);
+  drawConnectors(state.currentPath);
 }
 
 function onDragMove(e) {
@@ -304,8 +284,7 @@ function onDragMove(e) {
       if (pos.row === prev.row && pos.col === prev.col) {
         state.currentPath.pop();
         updateSelectionHighlight();
-        const touch = e.touches ? e.touches[0] : e;
-        redrawCanvas(state.currentPath, "#5ba3d9", { x: touch.clientX, y: touch.clientY });
+        drawConnectors(state.currentPath);
         return;
       }
     }
@@ -317,8 +296,7 @@ function onDragMove(e) {
     }
   }
 
-  const touch = e.touches ? e.touches[0] : e;
-  redrawCanvas(state.currentPath, "#5ba3d9", { x: touch.clientX, y: touch.clientY });
+  drawConnectors(state.currentPath);
 }
 
 function onDragEnd(e) {
