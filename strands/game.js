@@ -237,30 +237,6 @@ function drawFoundPaths() {
   const h = foundCanvasEl.height / window.devicePixelRatio;
   foundCtx.clearRect(0, 0, w, h);
 
-  // Draw thin grid lines between all horizontally/vertically adjacent cells
-  foundCtx.strokeStyle = "#b8e4f9";
-  foundCtx.lineWidth = 4;
-  foundCtx.lineCap = "round";
-  for (let r = 0; r < ROWS; r++) {
-    for (let c = 0; c < COLS; c++) {
-      const center = getCellCenter(r, c);
-      if (c < COLS - 1) {
-        const right = getCellCenter(r, c + 1);
-        foundCtx.beginPath();
-        foundCtx.moveTo(center.x, center.y);
-        foundCtx.lineTo(right.x, right.y);
-        foundCtx.stroke();
-      }
-      if (r < ROWS - 1) {
-        const bottom = getCellCenter(r + 1, c);
-        foundCtx.beginPath();
-        foundCtx.moveTo(center.x, center.y);
-        foundCtx.lineTo(bottom.x, bottom.y);
-        foundCtx.stroke();
-      }
-    }
-  }
-
   // Draw thick connector bars between adjacent cells in found words
   if (state.foundPaths.length === 0) return;
   const cellDiameter = getCell(0, 0).getBoundingClientRect().width;
