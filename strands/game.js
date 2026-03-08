@@ -261,27 +261,25 @@ function drawFoundPaths() {
     }
   }
 
-  // Draw thick connector lines for found words
+  // Draw thick connector bars between adjacent cells in found words
   if (state.foundPaths.length === 0) return;
   const cellDiameter = getCell(0, 0).getBoundingClientRect().width;
+  const barWidth = cellDiameter * 0.5;
 
   for (const fp of state.foundPaths) {
     if (fp.path.length < 2) continue;
     foundCtx.strokeStyle = fp.color;
-    foundCtx.lineWidth = cellDiameter;
+    foundCtx.lineWidth = barWidth;
     foundCtx.lineCap = "round";
-    foundCtx.lineJoin = "round";
-    foundCtx.beginPath();
 
-    const first = getCellCenter(fp.path[0].row, fp.path[0].col);
-    foundCtx.moveTo(first.x, first.y);
-
-    for (let i = 1; i < fp.path.length; i++) {
-      const pt = getCellCenter(fp.path[i].row, fp.path[i].col);
-      foundCtx.lineTo(pt.x, pt.y);
+    for (let i = 0; i < fp.path.length - 1; i++) {
+      const from = getCellCenter(fp.path[i].row, fp.path[i].col);
+      const to = getCellCenter(fp.path[i + 1].row, fp.path[i + 1].col);
+      foundCtx.beginPath();
+      foundCtx.moveTo(from.x, from.y);
+      foundCtx.lineTo(to.x, to.y);
+      foundCtx.stroke();
     }
-
-    foundCtx.stroke();
   }
 }
 
