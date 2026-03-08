@@ -136,19 +136,22 @@ function buildGrid() {
 }
 
 function resizeCanvas() {
-  const rect = gridEl.getBoundingClientRect();
+  const containerRect = gridEl.parentElement.getBoundingClientRect();
+  const gridRect = gridEl.getBoundingClientRect();
   const dpr = window.devicePixelRatio;
+  const offsetX = gridRect.left - containerRect.left;
+  const offsetY = gridRect.top - containerRect.top;
 
-  canvasEl.width = rect.width * dpr;
-  canvasEl.height = rect.height * dpr;
-  canvasEl.style.width = rect.width + "px";
-  canvasEl.style.height = rect.height + "px";
+  for (const canvas of [canvasEl, foundCanvasEl]) {
+    canvas.width = gridRect.width * dpr;
+    canvas.height = gridRect.height * dpr;
+    canvas.style.width = gridRect.width + "px";
+    canvas.style.height = gridRect.height + "px";
+    canvas.style.left = offsetX + "px";
+    canvas.style.top = offsetY + "px";
+  }
+
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-  foundCanvasEl.width = rect.width * dpr;
-  foundCanvasEl.height = rect.height * dpr;
-  foundCanvasEl.style.width = rect.width + "px";
-  foundCanvasEl.style.height = rect.height + "px";
   foundCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
   drawFoundPaths();
@@ -240,7 +243,7 @@ function drawFoundPaths() {
   // Draw thick connector bars between adjacent cells in found words
   if (state.foundPaths.length === 0) return;
   const cellDiameter = getCell(0, 0).getBoundingClientRect().width;
-  const barWidth = cellDiameter * 0.5;
+  const barWidth = cellDiameter * 0.28;
 
   for (const fp of state.foundPaths) {
     if (fp.path.length < 2) continue;
