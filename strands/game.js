@@ -305,11 +305,9 @@ function onDragEnd(e) {
   state.isDragging = false;
 
   const word = getWordFromPath(state.currentPath);
-  evaluateWord(word, state.currentPath);
+  const path = [...state.currentPath];
+  evaluateWord(word, path);
 
-  // Clear selection
-  updateSelectionHighlight();
-  clearCanvas();
   state.currentPath = [];
 }
 
@@ -319,7 +317,7 @@ function onDragEnd(e) {
 async function evaluateWord(word, path) {
   if (word.length < 4) {
     showMessage("Too short");
-    animateCells(path, "invalid-shake");
+    shakeAndClear(path);
     return;
   }
 
@@ -346,8 +344,23 @@ async function evaluateWord(word, path) {
     handleNonThemeWord(word, path);
   } else {
     showMessage("Not a word");
-    animateCells(path, "invalid-shake");
+    shakeAndClear(path);
   }
+}
+
+function shakeAndClear(path) {
+  animateCells(path, "invalid-shake");
+  // Keep circles visible during shake, clear after animation
+  setTimeout(() => {
+    clearSelection(path);
+  }, 400);
+}
+
+function clearSelection(path) {
+  for (const p of path) {
+    getCell(p.row, p.col).classList.remove("selecting");
+  }
+  drawConnectors();
 }
 
 function pathMatchesWord(path, wordObj) {
@@ -397,7 +410,8 @@ function foundThemeWord(tw, path) {
   state.foundThemeWords.push(tw.word);
   state.guessOrder.push({ type: "theme" });
 
-  // Claim cells
+  // Clear selection and claim cells
+  document.querySelectorAll(".cell.selecting").forEach(c => c.classList.remove("selecting"));
   for (const [r, c] of tw.path) {
     state.claimed[r][c] = "theme";
     getCell(r, c).classList.add("found-theme");
@@ -420,6 +434,7 @@ function foundSpangram(path) {
   state.foundSpangram = true;
   state.guessOrder.push({ type: "spangram" });
 
+  document.querySelectorAll(".cell.selecting").forEach(c => c.classList.remove("selecting"));
   for (const [r, c] of PUZZLE_DATA.spangram.path) {
     state.claimed[r][c] = "spangram";
     getCell(r, c).classList.add("found-spangram");
@@ -441,6 +456,7 @@ function foundSpangram(path) {
 function handleNonThemeWord(word, path) {
   showMessage(word);
   animateCells(path, "valid-bounce");
+  clearSelection(path);
 
   if (!state.hintAvailable) {
     state.hintMeter++;

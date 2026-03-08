@@ -191,7 +191,7 @@ header {
   aspect-ratio: 1;
   place-self: center;
   font-size: clamp(18px, 5vw, 28px);
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   border-radius: 50%;
   position: relative;
