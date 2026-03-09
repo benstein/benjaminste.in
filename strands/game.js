@@ -255,8 +255,11 @@ function updateSelectionHighlight() {
 }
 
 // ============================================================
-// Drag handling
+// Drag & tap handling
 // ============================================================
+let _dragStartPos = null;
+let _didDragMove = false;
+
 function onDragStart(e) {
   if (state.gameComplete) return;
   e.preventDefault();
@@ -264,18 +267,31 @@ function onDragStart(e) {
   if (!pos) return;
   if (state.claimed[pos.row][pos.col]) return;
 
+  _dragStartPos = pos;
+  _didDragMove = false;
   state.isDragging = true;
-  state.currentPath = [pos];
-  updateSelectionHighlight();
-  drawConnectors(state.currentPath);
+
+  // No active path → start fresh
+  if (state.currentPath.length === 0) {
+    state.currentPath = [pos];
+    updateSelectionHighlight();
+    drawConnectors(state.currentPath);
+  }
+  // Active tap path exists — don't modify it here, handle in onDragEnd
 }
 
 function onDragMove(e) {
   if (!state.isDragging) return;
   e.preventDefault();
   const pos = cellFromEvent(e);
+  if (!pos) return;
 
-  if (pos && !state.claimed[pos.row][pos.col]) {
+  // Detect that the user actually dragged (moved to a different cell)
+  if (_dragStartPos && (pos.row !== _dragStartPos.row || pos.col !== _dragStartPos.col)) {
+    _didDragMove = true;
+  }
+
+  if (!state.claimed[pos.row][pos.col]) {
     const last = state.currentPath[state.currentPath.length - 1];
 
     // If going back to the previous cell, undo
@@ -304,11 +320,60 @@ function onDragEnd(e) {
   e.preventDefault();
   state.isDragging = false;
 
+  const pos = _dragStartPos;
+  _dragStartPos = null;
+
+  // If user dragged across multiple cells, submit immediately (drag mode)
+  if (_didDragMove) {
+    submitCurrentPath();
+    return;
+  }
+
+  // Tap mode: user tapped a single cell
+  if (!pos) return;
+
+  const last = state.currentPath[state.currentPath.length - 1];
+
+  // Tap on the last cell again → submit
+  if (state.currentPath.length >= 2 && pos.row === last.row && pos.col === last.col) {
+    submitCurrentPath();
+    return;
+  }
+
+  // Tap on the second-to-last cell → undo last
+  if (state.currentPath.length >= 2) {
+    const prev = state.currentPath[state.currentPath.length - 2];
+    if (pos.row === prev.row && pos.col === prev.col) {
+      state.currentPath.pop();
+      updateSelectionHighlight();
+      drawConnectors(state.currentPath);
+      return;
+    }
+  }
+
+  // Tap on a non-adjacent or already-in-path cell → ignore (path stays)
+  // The cell was already added in onDragStart if it was the first cell,
+  // or we need to try adding it if adjacent
+  if (state.currentPath.length >= 1 && !(pos.row === last.row && pos.col === last.col)) {
+    if (!state.claimed[pos.row][pos.col] && isAdjacent(last, pos) && !pathContains(state.currentPath, pos.row, pos.col)) {
+      state.currentPath.push(pos);
+      updateSelectionHighlight();
+      drawConnectors(state.currentPath);
+    }
+  }
+}
+
+function submitCurrentPath() {
   const word = getWordFromPath(state.currentPath);
   const path = [...state.currentPath];
-  evaluateWord(word, path);
-
   state.currentPath = [];
+  evaluateWord(word, path);
+}
+
+function cancelTapPath() {
+  document.querySelectorAll(".cell.selecting").forEach(c => c.classList.remove("selecting"));
+  state.currentPath = [];
+  drawConnectors();
 }
 
 // ============================================================
@@ -605,6 +670,18 @@ function bindEvents() {
   gridEl.addEventListener("touchstart", onDragStart, { passive: false });
   window.addEventListener("touchmove", onDragMove, { passive: false });
   window.addEventListener("touchend", onDragEnd, { passive: false });
+
+  // Cancel tap path when clicking outside the grid
+  document.addEventListener("mousedown", (e) => {
+    if (state.currentPath.length > 0 && !state.isDragging && !gridEl.contains(e.target)) {
+      cancelTapPath();
+    }
+  });
+  document.addEventListener("touchstart", (e) => {
+    if (state.currentPath.length > 0 && !state.isDragging && !gridEl.contains(e.target)) {
+      cancelTapPath();
+    }
+  });
 
   // Hint button
   hintBtn.addEventListener("click", useHint);
