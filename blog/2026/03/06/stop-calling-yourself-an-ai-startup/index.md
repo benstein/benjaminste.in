@@ -14,7 +14,7 @@ Now say "AI startup."
 
 Same energy. We just can't hear it yet.
 
-## The YC Chart That Should Scare You
+## Every Startup is an AI Startup
 
 This chart from Benedict Evans tells a simple story: AI startups went from a sliver of each YC batch to the majority. By the most recent cohorts, the red bar (AI) is taller than the black bar (everything else). More than half of all YC startups now call themselves AI companies.
 
