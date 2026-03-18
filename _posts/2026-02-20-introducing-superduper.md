@@ -154,4 +154,4 @@ And to my Chasers out there — clarity is coming. You're about to know things w
 
 *I'm Ben Stein, co-founder and CEO of SuperDuper. I live in Oakland with my Keeper wife Arin, our two overprogrammed teenage boys, and a dog named Soup who contributes nothing helpful to the family logistics and arguably makes them harder, but he's really cute.*
 
-*If you want to follow along: [superduperlabs.com](https://superduperlabs.com) · [benjaminste.in](https://benjaminste.in) · [LinkedIn](https://www.linkedin.com/in/benjaminstein/)*
+*If you want to follow along: [superduperlabs.com](https://superduperlabs.com) · [benjaminste.in](https://benjaminste.in) · [LinkedIn](https://www.linkedin.com/in/benjaminstein/) · [Substack](https://benjaminstein.substack.com/)*
