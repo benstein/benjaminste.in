@@ -49,6 +49,8 @@ It&#39;s not just that it&#39;s cheaper (though it is, dramatically). It&#39;s t
 
 &lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;It&#39;s MUCH easier to teach someone to prompt a change than to navigate Webflow&#39;s designer. The barrier to contributing went down, not up.&lt;/p&gt;&lt;/aside&gt;
 
+And then there&#39;s the person who used to do all this. Our web developer spent a big chunk of his time implementing marketing site changes, help center updates, landing pages. That work mostly doesn&#39;t exist anymore. He&#39;s not gone. He&#39;s just doing something better: full-time app design and customer experience work. We didn&#39;t lose a headcount. We moved one to a higher-leverage seat.
+
 ## Scope of the Blast Radius
 
 I want to be precise about the claim. This is not &quot;all SaaS is toast.&quot; This is: if you sell a SaaS tool that serves as a relatively thin layer between a small team and their content, you should be worried. Website builders. Doc platforms. Changelog tools. Landing page generators. Email template editors. Anything where the core job is &quot;take my content and put it on the internet in a nice way.&quot;
