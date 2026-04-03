@@ -3,11 +3,74 @@
   <title>Benjamin Stein</title>
   <link href="https://benjaminste.in/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://benjaminste.in/" rel="alternate" type="text/html"/>
-  <updated>2026-04-02T00:00:00Z</updated>
+  <updated>2026-04-03T00:00:00Z</updated>
   <id>https://benjaminste.in/</id>
   <author>
     <name>Benjamin Stein</name>
   </author>
+  <entry>
+    <title>The SaaSpocalypse Already Happened (To Us)</title>
+    <link href="https://benjaminste.in/blog/2026/04/03/the-saaspocalypse-already-happened-to-us/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2026/04/03/the-saaspocalypse-already-happened-to-us/</id>
+    <published>2026-04-03T00:00:00Z</published>
+    <updated>2026-04-03T00:00:00Z</updated>
+    <summary>The SaaSpocalypse is not coming for the enterprise giants. But it already happened to us.</summary>
+    <content type="html">There&#39;s a narrative going around that SaaS is dead. That vibe coding is going to replace Salesforce. That every company will just build their own CRM, their own HRIS, their own ERP, and all those fat SaaS margins will evaporate into a million custom apps stitched together by vibes and Claude.
+
+Every time I hear this I get flashbacks to 2007, when Hacker News commenters reacted to Dropbox&#39;s launch with &quot;this is just rsync and a NAS.&quot; Technically? Sure. In the same way a Tesla is just batteries and wheels. The point was never the technology. The point was that normal people needed it to work, at scale, with support, forever.
+
+Salesforce is not getting replaced by a vibe coded app. ServiceNow is not getting replaced by a vibe coded app. Workday is not getting replaced by a vibe coded app. Anyone telling you otherwise has never seen what happens when you try to untangle a decade of custom objects and workflow rules inside a Fortune 500 org. Enterprise SaaS survives because it absorbed the complexity of real business processes, and that complexity doesn&#39;t care how easy it is to spin up a React app.
+
+So no. The SaaSpocalypse is not coming for the enterprise giants.
+
+But I run an AI-native startup. We&#39;re six people. We&#39;re fully AGI-pilled, building with Claude every day. And what I can tell you is: the SaaSpocalypse already happened to us. We just didn&#39;t notice because we were too busy shipping.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;The SaaSpocalypse already happened to us. We just didn&#39;t notice because we were too busy shipping.&lt;/p&gt;&lt;/aside&gt;
+
+## Four Vendors, Zero Remaining
+
+A year ago, we were a different company. We were called Teammates, building AI virtual colleagues, and we ran our stack the way most startups do. Paid SaaS contracts for a marketing website builder. A product docs platform. A help center. A changelog. Standard stuff. Four vendors, four monthly invoices, four dashboards, four sets of constraints and templates and &quot;upgrade to unlock&quot; paywalls.
+
+Then we pivoted. Shut down Teammates, launched [SuperDuper](https://superduperlabs.com/), and made a deliberate decision: go all in on AI and agents for literally everything possible. Not just our product. Our entire operation.
+
+Today we have zero SaaS vendor contracts for any of those things. Replaced them all with Claude Code.
+
+Our [marketing site](https://superduperlabs.com/) is fully custom. Our [help center](https://superduperlabs.com/help/) auto-updates on every code commit, so it&#39;s never stale. Our [changelog](https://superduperlabs.com/changelog/) is written in our actual company voice, not a template. And when our marketing lead had an idea for an [interactive quiz with social sharing](https://superduperlabs.com/keeper-or-chaser/), it didn&#39;t require a designer, a Webflow developer, or a scope negotiation. It just got built.
+
+## Better, Faster, Cheaper. Actually All Three.
+
+It&#39;s not just that it&#39;s cheaper (though it is, dramatically). It&#39;s three things at once.
+
+**The integration problem vanished.** When your help docs and your FAQ live in the same codebase as your product, they update when the product updates. We don&#39;t have a process for &quot;make sure the help center reflects the latest release.&quot; There is no process. It just happens. The [changelog](https://superduperlabs.com/changelog/) reflects what actually shipped, written by a system that knows what actually shipped, because it lives in the same repo.
+
+**The customization ceiling disappeared.** SaaS tools give you templates and a design sandbox. You can make things look &quot;your way&quot; inside their constraints. But if you want something that doesn&#39;t fit the template, you&#39;re either hacking CSS overrides or filing a feature request that goes to die. With Claude Code, the constraint is your imagination. The [Keeper or Chaser quiz](https://superduperlabs.com/keeper-or-chaser/) is genuinely interactive, personalized, shareable. No template could do that.
+
+**The skill barrier flipped.** Here&#39;s the part that surprised me most. We used to need someone who knew Webflow&#39;s visual designer to make a marketing page change. That&#39;s a real skill, and not a trivial one. But &quot;knowing how to describe what you want in plain English&quot; is a skill that more people have. It&#39;s MUCH easier to teach someone to prompt a change than to navigate Webflow&#39;s designer. The barrier to contributing went down, not up.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;It&#39;s MUCH easier to teach someone to prompt a change than to navigate Webflow&#39;s designer. The barrier to contributing went down, not up.&lt;/p&gt;&lt;/aside&gt;
+
+## Scope of the Blast Radius
+
+I want to be precise about the claim. This is not &quot;all SaaS is toast.&quot; This is: if you sell a SaaS tool that serves as a relatively thin layer between a small team and their content, you should be worried. Website builders. Doc platforms. Changelog tools. Landing page generators. Email template editors. Anything where the core job is &quot;take my content and put it on the internet in a nice way.&quot;
+
+Those products used to sell because the alternative was hiring a developer. The developer was expensive and slow and had their own opinions about your font choices. The SaaS tool was cheaper and faster and let non-technical people ship.
+
+But &quot;non-technical people can ship&quot; is no longer a unique selling proposition. Non-technical people can ship with AI. Faster, cheaper, and without the template constraints.
+
+And if you&#39;re a founder in this space, the part that should keep you up at night: the output is better. Not just cheaper. Not just faster. Better. Truly personalized to what we want, integrated with all of our systems, written in our voice. The SaaS tool was always a compromise. We just accepted the compromise because the alternative was worse. The alternative isn&#39;t worse anymore.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;The SaaS tool was always a compromise. We just accepted the compromise because the alternative was worse. The alternative isn&#39;t worse anymore.&lt;/p&gt;&lt;/aside&gt;
+
+## We&#39;re Probably Early
+
+We&#39;re probably a canary here. A six-person AI-native team building with Claude Code daily is not representative of the average company. Most orgs aren&#39;t there yet. But &quot;yet&quot; is load-bearing.
+
+Last year we paid four vendors real money for services we now get for free, with better results, built exactly the way we want. Four contracts, cancelled. The world truly is different. If you have a product in this space, I wouldn&#39;t panic. But I&#39;d be really worried.
+
+---
+
+*I&#39;m Ben Stein, co-founder and CEO of SuperDuper. I live in Oakland with my Keeper wife Arin, our two overprogrammed teenage boys, and a dog named Soup who contributes nothing helpful to the family logistics and arguably makes them harder, but he&#39;s really cute. If you want to follow along: [superduperlabs.com](https://superduperlabs.com) · [benjaminste.in](https://benjaminste.in) · [LinkedIn](https://www.linkedin.com/in/benjaminstein/) · [Substack](https://benjaminstein.substack.com/)*</content>
+  </entry>
   <entry>
     <title>The PM Who Stopped Submitting PRs</title>
     <link href="https://benjaminste.in/blog/2026/04/02/the-pm-who-stopped-submitting-prs/" rel="alternate" type="text/html"/>
