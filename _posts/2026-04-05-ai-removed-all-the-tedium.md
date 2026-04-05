@@ -135,7 +135,7 @@ Or maybe I'm rationalizing. I honestly don't know.
 Let's recap. Here's what I'm currently sitting with:
 
 1. I'm exhausted despite having eliminated all the tedium. That's a weird sentence to type.
-2. I think I'm enjoying this? But I can't tell if it's going to get old.
+2. I'm enjoying working this way. I think. But is it going to get old? When?
 3. Important skills might be atrophying and I'm not sure which ones I should care about.
 4. Rapid context switching is terrible for humans and I'm doing more of it than ever. Is this avoidable in an agent-first world, or is it just the cost of the leverage?
 5. Is Claude Code going to eat the world, or is this an awkward interim step before something else takes shape?
