@@ -118,7 +118,7 @@ I don't have a conclusion or grand philosophy yet. I'm living through this in re
 
 <aside class="pull-quote"><p>My 19-year-old self, high in the dorm room on a Friday night, would be having a field day with these existential questions.</p></aside>
 
-I feel powerful. My output is insane. The volume and quality of work I produce in a day would have taken a full week two years ago, and some of it I simply couldn't have done at all. I'm shipping across every function of the company simultaneously. As a startup founder, I've never had this kind of leverage.
+I feel powerful. My output is insane. The volume and quality of work I produce in an hour or two would have taken a full week two years ago, and some of it I simply couldn't have done at all. I'm shipping across every function of the company simultaneously. As a startup founder, I've never had this kind of leverage.
 
 And also: my brain is constantly tired. My days feel strange. Chatting with an AI in a terminal all day is a weird way to work (excluding the time I spend talking to customers, which is still the most important and joyful part of the job), and I don't totally know how to feel about it. I'm not doing anything lazy. Every task gets my full judgment, my taste, my attention. None of this is slop. But the texture of the work is just... new. Nobody prepared me for it and I don't have a framework for it yet.
 
