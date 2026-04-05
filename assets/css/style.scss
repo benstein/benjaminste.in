@@ -204,6 +204,27 @@ blockquote p:last-child { margin-bottom: 0; }
 }
 
 /* ============================================
+   TIMELINE INTERSTITIALS
+   ============================================ */
+
+.timeline-interstitial {
+  text-align: center;
+  margin: 2em 0;
+  padding: 1.2em 1.5em;
+  background: #faf6ef;
+  border-radius: 6px;
+  border: 1px dashed #c9a96e;
+}
+
+.timeline-interstitial p {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  color: #5a5a5a;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ============================================
    HORIZONTAL RULES
    ============================================ */
 

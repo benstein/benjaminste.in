@@ -3,11 +3,161 @@
   <title>Benjamin Stein</title>
   <link href="https://benjaminste.in/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://benjaminste.in/" rel="alternate" type="text/html"/>
-  <updated>2026-04-03T00:00:00Z</updated>
+  <updated>2026-04-05T00:00:00Z</updated>
   <id>https://benjaminste.in/</id>
   <author>
     <name>Benjamin Stein</name>
   </author>
+  <entry>
+    <title>AI Removed All the Tedium. So Why Am I So Exhausted?</title>
+    <link href="https://benjaminste.in/blog/2026/04/05/ai-removed-all-the-tedium/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2026/04/05/ai-removed-all-the-tedium/</id>
+    <published>2026-04-05T00:00:00Z</published>
+    <updated>2026-04-05T00:00:00Z</updated>
+    <summary>I am more productive than I have ever been in my career. I am also more mentally exhausted than I have ever been in my career.</summary>
+    <content type="html">I run a startup. I do a million things. Founders always have. Business analytics. Investor decks. Market research. Customer support. Filing tickets. Helping engineering diagnose bugs. Sneaking in a code change or two. Blogging. LinkedIn. None of this is new.
+
+What&#39;s new is that since November 2025, Claude Code has subsumed every single one of these tasks for me. I don&#39;t mean AI generally. I mean Claude Code, Opus 4.6, specifically. It&#39;s subsumed ALL of them.
+
+I get up in the morning and open Claude Code. I prompt for eight hours. I close my laptop. I am more productive than I have ever been in my career. I am also more mentally exhausted than I have ever been in my career. And I have this deep, weird, hard-to-articulate feeling that my entire workday is now just... Claude Code. Not &quot;help me write this.&quot; Not an AI chat sidebar in Notion or Linear or Cursor or Docs or PostHog. My entire day. If software ate the world, Claude Code ate me.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;If software ate the world, Claude Code ate me.&lt;/p&gt;&lt;/aside&gt;
+
+Here&#39;s a slightly dramatized but not-far-off example of a recent morning.
+
+**6:47am** --- Open terminal. Prompt Claude to query our analytics database and PostHog, summarize key metrics, flag anything weird.
+
+**6:48am** --- Claude&#39;s running. Open new tab. Prompt Claude to research three VCs on our target list, pull recent investments, find warm intro paths.
+
+**6:52am** --- Metrics tab finishes. Read Claude&#39;s output. Our activation rate dropped. Prompt Claude to dig into the funnel data and figure out where we&#39;re losing people.
+
+**6:53am** --- VC research tab finishes. Read Claude&#39;s output. Two of the three look right. Prompt Claude to draft outreach emails for those two.
+
+**6:58am** --- Funnel analysis tab finishes. Read Claude&#39;s output. The drop is in onboarding step 3. Prompt Claude to look at the code for that step and suggest fixes.
+
+**7:01am** --- Outreach email tab finishes. Read Claude&#39;s drafts. First one&#39;s good. Second one&#39;s generic. Re-prompt with feedback.
+
+&lt;div class=&quot;timeline-interstitial&quot;&gt;&lt;p&gt;You get the idea. Feel free to skip ahead. But this is the point: every single line is me reading AI output and writing another prompt.&lt;/p&gt;&lt;/div&gt;
+
+**7:04am** --- Slack message from a customer: &quot;something&#39;s broken with my email sync.&quot; Open new tab. Prompt Claude to investigate the logs for that user&#39;s account and create a Linear ticket.
+
+**7:06am** --- Onboarding fix tab finishes. Read Claude&#39;s proposed diff. Looks right. Prompt Claude to write tests and open a PR.
+
+**7:09am** --- Bug investigation tab finishes. Read Claude&#39;s analysis and the Linear ticket it wrote. Ask Claude to tweak the priority. Move on.
+
+**7:12am** --- Open new tab. I have an idea for a blog post. Core dump my rough thoughts into a prompt. Ask Claude to write a first draft.
+
+**7:14am** --- Outreach email tab finishes. Read Claude&#39;s revision. Better. Approve and send.
+
+**7:15am** --- PR tab finishes. Read Claude&#39;s tests and code. Tests pass. Approve the PR.
+
+**7:20am** --- Blog draft tab finishes. Read Claude&#39;s draft. It&#39;s okay. The opening is weak. Re-prompt with specific feedback.
+
+**7:22am** --- New tab. Our marketing site hero copy has been bugging me. Prompt Claude to try five variations.
+
+**7:26am** --- Blog tab finishes. Read Claude&#39;s v2. Better. Still not right. Re-prompt again.
+
+**7:27am** --- Marketing copy tab finishes. Read Claude&#39;s five options. Number 3 is good. Prompt Claude to implement it on the site and push to staging.
+
+&lt;div class=&quot;timeline-interstitial&quot;&gt;&lt;p&gt;Are you still reading these? Skip ahead to the meat. This is just a dramatic joke to make a point.&lt;/p&gt;&lt;/div&gt;
+
+**7:31am** --- Blog tab finishes. Read Claude&#39;s v3. Close. I rewrite the opening myself and prompt Claude to revise the rest to match my edit.
+
+**7:34am** --- Staging deploy tab finishes. Check the site. Hero copy looks good. Prompt Claude to push to production.
+
+**7:35am** --- Customer support queue has a new ticket. Open new tab. Prompt Claude to draft a response using our help center docs.
+
+**7:38am** --- Blog tab finishes. Read Claude&#39;s final version. Good. Prompt Claude to publish it to my site.
+
+**7:40am** --- Support tab finishes. Read Claude&#39;s draft response. Reads well. Send it.
+
+**7:41am** --- Blog is live. Prompt Claude to write a LinkedIn post about it.
+
+**7:44am** --- LinkedIn tab finishes. Read Claude&#39;s draft. Too corporate. Re-prompt: &quot;more like how I actually talk.&quot;
+
+**7:46am** --- Read Claude&#39;s revision. Better. Post it.
+
+**7:47am** --- Open the investor deck tab I started yesterday. Prompt Claude to rework the competition slide based on what came out of the VC research earlier.
+
+It&#39;s 7:47am. I&#39;ve shipped across engineering, marketing, fundraising, customer support, content, and sales. Ten terminal tabs. Exposed and started fixing a funnel problem. Investigated and ticketed a customer bug. Published a blog post and promoted it. Sent two investor outreach emails. Deployed a website change. Answered a support ticket.
+
+I do this for eight more hours. By 4pm I&#39;m completely destroyed.
+
+## The Context Switching Is Destroying Me
+
+The tasks aren&#39;t what&#39;s different. What&#39;s new is the rate of context switching between them.
+
+Each prompt takes time to run. A minute, five minutes, sometimes thirty. And I&#39;m not going to sit there watching terminal output scroll. So I switch to the next thing. Meanwhile, many tasks can run in parallel (VC research and funnel analysis have nothing to do with each other), but most tasks are also iterative (I can&#39;t dig deeper into the funnel until I see the first query&#39;s results). So while I&#39;m waiting on step 2 of task A, I&#39;m reviewing step 3 of task B and kicking off step 1 of task C. There&#39;s always a tab that just finished. The terminal tabs stack up like a short-order cook&#39;s tickets and I&#39;m working every station.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;I&#39;m pretending to be multi-threaded but really I&#39;m running cooperative multitasking like I&#39;m Windows 3.1.&lt;/p&gt;&lt;/aside&gt;
+
+I feel like I&#39;m pretending to be multi-threaded but really I&#39;m running cooperative multitasking like I&#39;m Windows 3.1. (Sorry folks, I&#39;m old. Ask your mom to explain that joke.) Lots of rapid context switches, each one with a save-and-restore penalty that I&#39;m pretending doesn&#39;t exist. My OS scheduler is garbage and there&#39;s no preemption. Just me, frantically flipping between tabs, convinced I&#39;m doing concurrent work when really I&#39;m doing serial work with extra overhead.
+
+We all know context switching isn&#39;t a healthy or productive way to work. Humans do best with focused time. Deep thought. Concentration. But focused time is really hard when you&#39;re waiting for an agent and there&#39;s another tab blinking at you with fresh output to review.
+
+(There&#39;s a whole engineering subculture developing around worktrees and containers to massively parallelize Claude Code execution and avoid some of this serial waiting. It&#39;s cool. It also doesn&#39;t solve my problem, which is that I&#39;m not the bottleneck on compute. I&#39;m the bottleneck on attention.)
+
+## I ONLY Use Claude Code These Days
+
+I&#39;ve stopped using almost every other app.
+
+That sentence looked strange to me when I first thought it, so I audited my day. I barely use UIs anymore. I don&#39;t really interact with SaaS products directly. I don&#39;t learn the nuances of new tools because I don&#39;t have to. Airtable, Linear, our database, our website, our marketing stack, customer support, the investor deck, the codebase. All of it through Claude Code.
+
+You know that meme of the guy from the &#39;80s holding a boombox and a camcorder, surrounded by a dozen gadgets, captioned &quot;Everything in this picture is now in your pocket&quot;? That, but for my entire job. Everything in my job description is now in a terminal window.
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/assets/images/everything-in-your-pocket.webp&quot; alt=&quot;Man from the 1980s holding a boombox and camcorder, surrounded by gadgets. Caption: Everything in this picture is now in your pocket.&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/assets/images/evolution-of-the-desk.jpg&quot; alt=&quot;Side-by-side comparison of a 1980 desk full of equipment and a 2014 desk with just a laptop and phone&quot; /&gt;
+&lt;/p&gt;
+
+Same energy, different decade. Except now it&#39;s not just the gadgets or the desk. It&#39;s the entire job description.
+
+I&#39;m not using &quot;AI products&quot; either, at least not the way the industry imagined them. I don&#39;t use purpose-built AI writing tools or AI research tools or AI analytics dashboards. I use one general-purpose tool that can do all of those things. All day.
+
+We&#39;ve all listened to podcast pundits pontificate about the jobs of the future being &quot;managing agents.&quot; Directing AI systems and reviewing their output. That mythical future person?
+
+It&#39;s me. Hi. I&#39;m the problem, it&#39;s me.
+
+## OK, So What? Some Half-Baked Thoughts...
+
+I don&#39;t have a conclusion or grand philosophy yet. I&#39;m living through this in real time and taking a rare moment to reflect. And that reflection is giving me a LOT of thoughts and questions. My 19-year-old self, high in the dorm room on a Friday night, would be having a field day with these existential questions.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;My 19-year-old self, high in the dorm room on a Friday night, would be having a field day with these existential questions.&lt;/p&gt;&lt;/aside&gt;
+
+I feel powerful. My output is insane. The volume and quality of work I produce in a day would have taken a full week two years ago, and some of it I simply couldn&#39;t have done at all. I&#39;m shipping across every function of the company simultaneously. As a startup founder, I&#39;ve never had this kind of leverage.
+
+And also: my brain is constantly tired. My days feel strange. Chatting with an AI in a terminal all day is a weird way to work (excluding the time I spend talking to customers, which is still the most important and joyful part of the job), and I don&#39;t totally know how to feel about it. I&#39;m not doing anything lazy. Every task gets my full judgment, my taste, my attention. None of this is slop. But the texture of the work is just... new. Nobody prepared me for it and I don&#39;t have a framework for it yet.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;My brain is constantly tired.&lt;/p&gt;&lt;/aside&gt;
+
+There&#39;s a darker thread I keep pulling on. You&#39;ve read those stories about people forming intense emotional relationships with their LLMs. Unhealthy ones. To the detriment of actual human connection. I spend eight hours a day talking to an AI. Is that me? Am I just justifying it because I call it &quot;work&quot;? I don&#39;t think so. But I&#39;d be lying if I said the question doesn&#39;t cross my mind.
+
+And then there&#39;s the skills question. Am I losing the ability to debug a problem myself, to divide and conquer, to actually reason through a system? Am I losing research skills? Day-to-day syntax? Deep understanding of how my own tools work? The ability to stare at a chart and find my own meaning in it? When I play this forward five years, which of these skills will I regret letting atrophy and which ones are genuinely just tedium I&#39;ve thankfully offloaded?
+
+When I&#39;m searching for answers, I look to history. And I&#39;ve found myself reflecting this week on my sense of direction. I used to have a great one. When I moved to California ten years ago, I made a conscious decision that it was an unnecessary skill. I have GPS. I have a backup GPS. Today I literally cannot drive to the grocery store or the airport without it. And you know what? It&#39;s been great. People love to wag their finger about this, but they never have a good reason beyond &quot;what if there&#39;s no GPS one day,&quot; and that hasn&#39;t been a problem in over a decade. Maybe losing some skills is fine. Maybe some of the things we romanticize knowing how to do are just... things we don&#39;t need to know how to do anymore. Like changing the oil in your car (sorry Dad), writing in cursive (sorry Mom), or narrating which highways you took to get to dinner (sorry father-in-law).
+
+Or maybe I&#39;m rationalizing. I honestly don&#39;t know.
+
+Let&#39;s recap. Here&#39;s what I&#39;m currently sitting with:
+
+1. I&#39;m exhausted despite having eliminated all the tedium. That&#39;s a weird sentence to type.
+2. I think I&#39;m enjoying this? But I can&#39;t tell if it&#39;s going to get old.
+3. Important skills might be atrophying and I&#39;m not sure which ones I should care about.
+4. Rapid context switching is terrible for humans and I&#39;m doing more of it than ever. Is this avoidable in an agent-first world, or is it just the cost of the leverage?
+5. Is Claude Code going to eat the world, or is this an awkward interim step before something else takes shape?
+6. Am I spending eight hours a day with an AI and calling it a job, and is that fine, or is that a thing I should be worried about?
+
+I don&#39;t have answers to any of these. I&#39;m not even sure I&#39;m asking the right questions.
+
+What I want to know is whether I&#39;m just the AI 1%. Whether this is a weird blip in time, a brief window where a small number of people are working this way before the tools evolve and the workflows settle into something more natural. Or whether I&#39;ve actually glimpsed the future and this is just what work looks like now. Canary, meet coal mine.
+
+If your days currently look like mine, I want to hear about it. Not the polished LinkedIn version. The real version. What does your morning look like? How do you feel at 4pm? What have you stopped using? What skills are you worried about? Are you exhausted? Are you thriving? Are you both?
+
+I&#39;m at [benjaminstein on LinkedIn](https://www.linkedin.com/in/benjaminstein/). Tell me about your weird day.</content>
+  </entry>
   <entry>
     <title>The SaaSpocalypse Already Happened (To Us)</title>
     <link href="https://benjaminste.in/blog/2026/04/03/the-saaspocalypse-already-happened-to-us/" rel="alternate" type="text/html"/>
