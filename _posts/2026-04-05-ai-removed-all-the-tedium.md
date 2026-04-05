@@ -72,7 +72,7 @@ Here's a slightly dramatized but not-far-off example of a recent morning.
 
 It's 7:47am. I've shipped across engineering, marketing, fundraising, customer support, content, and sales. Ten terminal tabs. Exposed and started fixing a funnel problem. Investigated and ticketed a customer bug. Published a blog post and promoted it. Sent two investor outreach emails. Deployed a website change. Answered a support ticket.
 
-I do this for eight more hours. By 4pm I'm completely destroyed.
+I do this for eight more hours. By lunch I'm mentally exhausted. By 4pm my brain is destroyed.
 
 ## The Context Switching Is Destroying Me
 
