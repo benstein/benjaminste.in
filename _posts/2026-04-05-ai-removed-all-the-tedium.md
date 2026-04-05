@@ -3,7 +3,7 @@ layout: default
 title: "AI Removed All the Tedium. So Why Am I So Exhausted?"
 date: 2026-04-05
 categories: [startups, ai, superduper]
-excerpt: "I am more productive than I have ever been in my career. I am also more mentally exhausted than I have ever been in my career."
+excerpt: "And I am more mentally exhausted than ever. Am I doing it right?"
 ---
 
 I run a startup. I do a million things. Founders always have. Business analytics. Investor decks. Market research. Customer support. Filing tickets. Helping engineering diagnose bugs. Sneaking in a code change or two. Blogging. LinkedIn. None of this is new.
