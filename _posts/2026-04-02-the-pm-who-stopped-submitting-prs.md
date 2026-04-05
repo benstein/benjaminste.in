@@ -96,7 +96,3 @@ PMs, support leads, founders: you don't need to submit PRs to be useful in the c
 
 Your engineering team doesn't want your PRs. They want to open a ticket and find that someone already figured out what's wrong.
 
----
-
-*I'm Ben Stein, co-founder and CEO of [SuperDuper](https://superduperlabs.com), helping underwater parents manage all their family logistics.*
-*I live in Oakland with my Keeper wife Arin, our two overprogrammed teenage boys, and a dog named Soup who contributes nothing helpful to the family logistics and arguably makes them harder, but he's really cute. If you want to follow along: [superduperlabs.com](https://superduperlabs.com) · [benjaminste.in](https://benjaminste.in) · [LinkedIn](https://www.linkedin.com/in/benjaminstein/) · [Substack](https://benjaminstein.substack.com/)*

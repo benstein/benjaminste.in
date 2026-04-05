@@ -60,7 +60,3 @@ We're probably a canary here. A six-person AI-native team building with Claude C
 
 Last year we paid four vendors real money for services we now get for free, with better results, built exactly the way we want. Four contracts, cancelled. The world truly is different. If you have a product in this space, I wouldn't panic. But I'd be really worried.
 
----
-
-*I'm Ben Stein, co-founder and CEO of [SuperDuper](https://superduperlabs.com), helping underwater parents manage all their family logistics.*
-*I live in Oakland with my Keeper wife Arin, our two overprogrammed teenage boys, and a dog named Soup who contributes nothing helpful to the family logistics and arguably makes them harder, but he's really cute. If you want to follow along: [superduperlabs.com](https://superduperlabs.com) · [benjaminste.in](https://benjaminste.in) · [LinkedIn](https://www.linkedin.com/in/benjaminstein/) · [Substack](https://benjaminstein.substack.com/)*

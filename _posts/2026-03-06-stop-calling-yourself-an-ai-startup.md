@@ -65,7 +65,3 @@ The internet didn't go away. It became everything. AI won't go away either. It'l
 
 We're not an AI startup. We're just a startup. And we help parents raise great kids without losing their minds.
 
----
-
-*I'm Ben Stein, co-founder and CEO of [SuperDuper](https://superduperlabs.com), helping underwater parents manage all their family logistics.*
-*I live in Oakland with my Keeper wife Arin, our two overprogrammed teenage boys, and a dog named Soup who contributes nothing helpful to the family logistics and arguably makes them harder, but he's really cute. If you want to follow along: [superduperlabs.com](https://superduperlabs.com) · [benjaminste.in](https://benjaminste.in) · [LinkedIn](https://www.linkedin.com/in/benjaminstein/) · [Substack](https://benjaminstein.substack.com/)*

@@ -151,8 +151,3 @@ SuperDuper is live and in the hands of real families right now. We're expanding 
 If you're a Keeper reading this, nodding along, feeling seen for the first time by a product description — hi. We built this for you. You don't have to hold it all anymore.
 
 And to my Chasers out there — clarity is coming. You're about to know things without having to ask. No more excuses.
-
----
-
-*I'm Ben Stein, co-founder and CEO of [SuperDuper](https://superduperlabs.com), helping underwater parents manage all their family logistics.*
-*I live in Oakland with my Keeper wife Arin, our two overprogrammed teenage boys, and a dog named Soup who contributes nothing helpful to the family logistics and arguably makes them harder, but he's really cute. If you want to follow along: [superduperlabs.com](https://superduperlabs.com) · [benjaminste.in](https://benjaminste.in) · [LinkedIn](https://www.linkedin.com/in/benjaminstein/) · [Substack](https://benjaminstein.substack.com/)*
