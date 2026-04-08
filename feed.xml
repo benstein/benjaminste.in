@@ -3,11 +3,48 @@
   <title>Benjamin Stein</title>
   <link href="https://benjaminste.in/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://benjaminste.in/" rel="alternate" type="text/html"/>
-  <updated>2026-04-05T00:00:00Z</updated>
+  <updated>2026-04-07T00:00:00Z</updated>
   <id>https://benjaminste.in/</id>
   <author>
     <name>Benjamin Stein</name>
   </author>
+  <entry>
+    <title>Bring Your Weirdest Idea to the Maker Faire</title>
+    <link href="https://benjaminste.in/blog/2026/04/07/bring-your-weirdest-idea-to-the-maker-faire/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2026/04/07/bring-your-weirdest-idea-to-the-maker-faire/</id>
+    <published>2026-04-07T00:00:00Z</published>
+    <updated>2026-04-07T00:00:00Z</updated>
+    <summary>Kids walk up, describe their wildest change, and Claude Code rewrites the game&#39;s source on the spot.</summary>
+    <content type="html">My kids Gabi (15) and Zeke (13) and I are running an exhibit at the Piedmont School Maker Faire this weekend.
+
+Here&#39;s the setup.
+
+A TV in the corner running a tiny arena shooter. A white square (the player) dodges red squares (enemies) and shoots them with white bullets. It&#39;s deliberately boring.
+
+A kid walks up. We ask what they want to change.
+
+&quot;Make the player a dragon.&quot;
+
+&quot;Make the enemies dancing bananas.&quot;
+
+&quot;Add a freeze ray that slows everything down.&quot;
+
+Whatever the kid says gets typed into Claude Code. The screen flips to BUILD MODE with their name on it. A few seconds later the game reloads and they&#39;re playing their idea. The next kid walks up and the game gets weirder.
+
+Every few hours we hit `/baseline` and reset to boring white squares. Every previous change is still in git history, we just stop running them. Then we start over.
+
+The whole thing is open source: [github.com/benstein/makerfaire2026](https://github.com/benstein/makerfaire2026). Fork it, run it at your school.
+
+## Why this, not a robot
+
+Gabi and Zeke picked the concept. The faire usually has robots, 3D printers, soldering. They wanted something the younger kids could participate in without any hardware or waiting for a tool. Just tell them what you want, watch it happen, play it.
+
+We tested it on some kids before the faire. Every one of them went through the same arc: they&#39;d start skeptical (&quot;wait, is that real code?&quot;), probe for the limits (&quot;can it do [ridiculous thing]?&quot;), and by the fourth or fifth request they weren&#39;t asking permission anymore, they were shouting ideas.
+
+Gabi and Zeke love the exact moment it clicks — the quick pause before the avalanche of requests starts.
+
+Come say hi if you&#39;re at the faire. Bring your weirdest idea.</content>
+  </entry>
   <entry>
     <title>AI Removed All the Tedium. So Why Am I So Exhausted?</title>
     <link href="https://benjaminste.in/blog/2026/04/05/ai-removed-all-the-tedium/" rel="alternate" type="text/html"/>

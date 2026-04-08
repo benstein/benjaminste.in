@@ -1,0 +1,16 @@
+{
+  "title": "Bring Your Weirdest Idea to the Maker Faire",
+  "date": "2026-04-07",
+  "author": "Benjamin Stein",
+  "categories": [
+    "personal",
+    "family",
+    "ai"
+  ],
+  "excerpt": "Kids walk up, describe their wildest change, and Claude Code rewrites the game's source on the spot.",
+  "url": "/blog/2026/04/07/bring-your-weirdest-idea-to-the-maker-faire/",
+  "content": "My kids Gabi (15) and Zeke (13) and I are running an exhibit at the Piedmont School Maker Faire this weekend.\n\nHere's the setup.\n\nA TV in the corner running a tiny arena shooter. A white square (the player) dodges red squares (enemies) and shoots them with white bullets. It's deliberately boring.\n\nA kid walks up. We ask what they want to change.\n\n\"Make the player a dragon.\"\n\n\"Make the enemies dancing bananas.\"\n\n\"Add a freeze ray that slows everything down.\"\n\nWhatever the kid says gets typed into Claude Code. The screen flips to BUILD MODE with their name on it. A few seconds later the game reloads and they're playing their idea. The next kid walks up and the game gets weirder.\n\nEvery few hours we hit `/baseline` and reset to boring white squares. Every previous change is still in git history, we just stop running them. Then we start over.\n\nThe whole thing is open source: [github.com/benstein/makerfaire2026](https://github.com/benstein/makerfaire2026). Fork it, run it at your school.\n\n## Why this, not a robot\n\nGabi and Zeke picked the concept. The faire usually has robots, 3D printers, soldering. They wanted something the younger kids could participate in without any hardware or waiting for a tool. Just tell them what you want, watch it happen, play it.\n\nWe tested it on some kids before the faire. Every one of them went through the same arc: they'd start skeptical (\"wait, is that real code?\"), probe for the limits (\"can it do [ridiculous thing]?\"), and by the fourth or fifth request they weren't asking permission anymore, they were shouting ideas.\n\nGabi and Zeke love the exact moment it clicks — the quick pause before the avalanche of requests starts.\n\nCome say hi if you're at the faire. Bring your weirdest idea.",
+  "html_url": "https://benjaminste.in/blog/2026/04/07/bring-your-weirdest-idea-to-the-maker-faire/",
+  "json_url": "https://benjaminste.in/blog/2026/04/07/bring-your-weirdest-idea-to-the-maker-faire/index.json",
+  "markdown_url": "https://benjaminste.in/blog/2026/04/07/bring-your-weirdest-idea-to-the-maker-faire/index.md"
+}
