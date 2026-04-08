@@ -8,7 +8,7 @@
 
 ---
 
-My kids Gabi (15) and Zeke (13) and I are running an exhibit at the Piedmont School Maker Faire this weekend.
+My kids Gabi (15) and Zeke (13) and I are running an exhibit at the [Piedmont School Maker Faire](https://www.piedmontmakers.org/school-maker-faire) this weekend.
 
 Here's the setup.
 
@@ -30,10 +30,10 @@ The whole thing is open source: [github.com/benstein/makerfaire2026](https://git
 
 ## Why this, not a robot
 
-Gabi and Zeke picked the concept. The faire usually has robots, 3D printers, soldering. They wanted something the younger kids could participate in without any hardware or waiting for a tool. Just tell them what you want, watch it happen, play it.
+Gabi and Zeke picked the concept. The School Maker Faire usually has robots, 3D printers, soldering. They wanted something the younger kids could participate in without any hardware or waiting for a tool. Just tell them what you want, watch it happen, play it.
 
-We tested it on some kids before the faire. Every one of them went through the same arc: they'd start skeptical ("wait, is that real code?"), probe for the limits ("can it do [ridiculous thing]?"), and by the fourth or fifth request they weren't asking permission anymore, they were shouting ideas.
+We tested it on some kids before the School Maker Faire. Every one of them went through the same arc: they'd start skeptical ("wait, is that real code?"), probe for the limits ("can it do [ridiculous thing]?"), and by the fourth or fifth request they weren't asking permission anymore, they were shouting ideas.
 
 Gabi and Zeke love the exact moment it clicks — the quick pause before the avalanche of requests starts.
 
-Come say hi if you're at the faire. Bring your weirdest idea.
+Come say hi if you're at the [School Maker Faire](https://www.piedmontmakers.org/school-maker-faire). Bring your weirdest idea.
