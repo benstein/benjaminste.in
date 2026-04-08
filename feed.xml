@@ -3,11 +3,68 @@
   <title>Benjamin Stein</title>
   <link href="https://benjaminste.in/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://benjaminste.in/" rel="alternate" type="text/html"/>
-  <updated>2026-04-07T00:00:00Z</updated>
+  <updated>2026-04-08T00:00:00Z</updated>
   <id>https://benjaminste.in/</id>
   <author>
     <name>Benjamin Stein</name>
   </author>
+  <entry>
+    <title>We Used to Know When to Stop</title>
+    <link href="https://benjaminste.in/blog/2026/04/08/we-used-to-know-when-to-stop/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2026/04/08/we-used-to-know-when-to-stop/</id>
+    <published>2026-04-08T00:00:00Z</published>
+    <updated>2026-04-08T00:00:00Z</updated>
+    <summary>In the old world, the 9pm cliff forced us to stop. That cliff is gone.</summary>
+    <content type="html">The night owl engineer is a myth. You know the one. The 2am hero commit. The &quot;I cranked on it all night and shipped by morning.&quot; If you&#39;ve ever PR reviewed code you wrote past 9pm, you already know. Most of it comes back the next morning as cleanup work. We know this, and we do it anyway, because pushing through feels good.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;The night owl engineer is a myth.&lt;/p&gt;&lt;/aside&gt;
+
+Engineer code quality across a day looks roughly like this:
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/assets/images/code-quality-decline.jpg&quot; alt=&quot;Hand-drawn line graph showing a human engineer&#39;s code quality over the course of a day. Flat through the afternoon, a slow decline in early evening, then a cliff at 9pm. Two vertical dashed lines annotate where we &#39;should stop&#39; and where we &#39;actually stop&#39;.&quot; /&gt;
+&lt;/p&gt;
+
+Flat through the afternoon, cliff around 9pm. One line marks where we *should* stop. Another marks where we actually stop, which is always a bit later because we&#39;re stubborn.
+
+(Morning people: flip the graph. Same shape, mirrored. Your 4am is someone else&#39;s 10pm.)
+
+Now picture the Claude Code version.
+
+Claude doesn&#39;t get tired. 11pm Claude is as good as 11am Claude. Arguably better, since Claude&#39;s calendar has fewer meetings left in the day. Its raw output holds flat.
+
+There&#39;s still a dip, but it&#39;s a gentle slope, not a cliff:
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/assets/images/claude-code-quality.jpg&quot; alt=&quot;Hand-drawn line graph showing Claude Code&#39;s output quality over the course of a day. Almost completely flat, with only a very subtle dip late in the evening. No cliff.&quot; /&gt;
+&lt;/p&gt;
+
+And the dip isn&#39;t on Claude&#39;s side. It&#39;s on mine. At 10am I read every response carefully and push back on the bits that are wrong. I rewrite prompts. I catch subtle mistakes. By 11pm I&#39;m skimming. By midnight it&#39;s &quot;looks good, ship it.&quot; Claude is still doing about the same quality work. I&#39;m just approving more of the rough edges and catching fewer of the bugs.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;11pm Claude is as good as 11am Claude. Arguably better, since Claude&#39;s calendar has fewer meetings left in the day.&lt;/p&gt;&lt;/aside&gt;
+
+Here&#39;s where the whole model of &quot;working late&quot; falls apart.
+
+In the old world, the 9pm cliff forced me to stop. I&#39;d produce shit code, wake up to a cleanup job, and slowly (badly) learn to stop earlier. The mechanism was pain. The reward for stopping was quality.
+
+In the Claude Code world, my midnight output is still roughly 90% as good as my 2pm output. And my 2pm wasn&#39;t perfect either. So where&#39;s the signal that says stop?
+
+It isn&#39;t there.
+
+An 80% drop in my own code quality after 9pm is a red flag my brain notices. A 5% drop in Claude&#39;s output? My brain goes &quot;fine, next prompt.&quot; And the next prompt is easy. And the one after that. And it&#39;s 11:53pm and I can barely read the screen as I type this, but I know when I wake up there&#39;ll be a B+ blog post waiting.
+
+*(Sorry Claude --- you&#39;ll do A+ work.)*
+
+The shape of the incentive has flipped. &quot;Keep going past your limit&quot; used to be punished by the next morning. Now it&#39;s rewarded. Idea in bed? Prompt it. Flicker of curiosity at 1am? Prompt it. Brushing your teeth and something crosses your mind? Prompt it. Wake up, review, ship.
+
+It&#39;s fun. I won&#39;t pretend it isn&#39;t. It&#39;s also a dopamine loop, and dopamine is a terrible manager. Write prompt, wait, read output, write prompt, wait, read output. The loop used to have a natural off switch called &quot;exhausted human producing garbage.&quot; That switch is gone.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;The loop used to have a natural off switch called &quot;exhausted human producing garbage.&quot; That switch is gone.&lt;/p&gt;&lt;/aside&gt;
+
+I don&#39;t have a conclusion. I have three tabs running. One of them just finished.
+
+Next prompt.</content>
+  </entry>
   <entry>
     <title>Bring Your Weirdest Idea to the Maker Faire</title>
     <link href="https://benjaminste.in/blog/2026/04/07/bring-your-weirdest-idea-to-the-maker-faire/" rel="alternate" type="text/html"/>
