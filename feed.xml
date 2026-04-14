@@ -3,11 +3,74 @@
   <title>Benjamin Stein</title>
   <link href="https://benjaminste.in/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://benjaminste.in/" rel="alternate" type="text/html"/>
-  <updated>2026-04-08T00:00:00Z</updated>
+  <updated>2026-04-14T00:00:00Z</updated>
   <id>https://benjaminste.in/</id>
   <author>
     <name>Benjamin Stein</name>
   </author>
+  <entry>
+    <title>AI Image Gen = I Could Do That + Yeah, But You Didn&#39;t</title>
+    <link href="https://benjaminste.in/blog/2026/04/14/ai-image-gen-i-could-do-that/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2026/04/14/ai-image-gen-i-could-do-that/</id>
+    <published>2026-04-14T00:00:00Z</published>
+    <updated>2026-04-14T00:00:00Z</updated>
+    <summary>&#39;You used AI for that&#39; is the 2026 version of &#39;you used Photoshop for that.&#39; Both miss the same thing.</summary>
+    <content type="html">&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/assets/images/ai-image-gen-header.png&quot; alt=&quot;Modern Art (crossed out) / AI Image Gen = I could do that + Yeah, but you didn&#39;t.&quot; style=&quot;max-width: 100%;&quot; /&gt;
+&lt;/p&gt;
+
+Before I ever typed a prompt into an image generator, I made [Scientist Trading Cards](http://alltooflat.com/geeky/scientists/). This was 1999. Photoshop 4, a stack of scanned baseball cards, and my favorite scientists.
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/assets/images/scientist-cards-mays.jpg&quot; alt=&quot;Willie Mays 1954 Topps card, New York Giants.&quot; style=&quot;display: inline-block; max-width: 32%; vertical-align: top; margin: 0 0.5%;&quot; /&gt;
+  &lt;img src=&quot;/assets/images/scientist-cards-feynman.gif&quot; alt=&quot;Richard Feynman parody trading card in the same 1954 Topps layout, team changed to Princeton, signed by Feynman.&quot; style=&quot;display: inline-block; max-width: 32%; vertical-align: top; margin: 0 0.5%;&quot; /&gt;
+&lt;/p&gt;
+
+My Photoshop skills were not the point. Pasting a face onto a body was a solved problem even in 1999. The point was the stuff nobody had to notice. Feynman sits on the 1954 Topps layout because that&#39;s Willie Mays&#39; year. The team reads &quot;Princeton&quot; because that&#39;s where Feynman got his PhD. The signature is Feynman&#39;s, in Feynman&#39;s hand, lifted from an actual autograph. The pose, the crop, the yellowed border bleed, all matched on purpose.
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/assets/images/scientist-cards-rose.jpg&quot; alt=&quot;Pete Rose 1980 Fleer card, Phillies, late-career.&quot; style=&quot;display: inline-block; max-width: 32%; vertical-align: top; margin: 0 0.5%;&quot; /&gt;
+  &lt;img src=&quot;/assets/images/scientist-cards-gould.jpg&quot; alt=&quot;Stephen Jay Gould parody trading card in the same 1980 Fleer layout, team changed to Harvard, position changed to paleontologist.&quot; style=&quot;display: inline-block; max-width: 32%; vertical-align: top; margin: 0 0.5%;&quot; /&gt;
+&lt;/p&gt;
+
+The Gould card is Pete Rose&#39;s 1980 Fleer, specifically the late-career one where Rose got chunky, because late-career Gould got chunky. Harvard crest where the Phillies logo used to be. &quot;Paleontologist&quot; where &quot;1st Base&quot; used to be. Nobody ever pulled me aside to say &quot;you used Photoshop for that.&quot; What they said, when they got it, was some version of &quot;oh my god, the Princeton signature.&quot; The tool was free. The noticing was the whole thing.
+
+(The Venn diagram of people who care about scientific history, mid-century Topps card design, and puns is, I am aware, narrow. Let&#39;s just say *I* think they&#39;re funny, and *I* never once said &quot;I used Photoshop for that.&quot;)
+
+## Twenty-five years later
+
+I use AI image gen constantly now. Not for work. For texts to my family.
+
+Of course my son G isn&#39;t actually a Knight of the Round Table heading off on a quest to find a ride home from school. Of course the seven ponies dressed as famous detectives carrying a banner that reads MANE CHARACTER ENERGY were not captured on an iPhone 17. You, dear reader, are not supposed to get these. They&#39;re inside jokes. The people who receive them laugh, because they&#39;re the ones carrying the pony context.
+
+When someone outside the circle sees one of these and mutters &quot;you used AI for that,&quot; they&#39;re doing a 2026 version of the &quot;you used Photoshop for that&quot; move from 1999. Except in 1999 it was at least sort of understandable, because Photoshop cost money and had a real learning curve. Now the dismissal makes even less sense. AI image gen is free, fast, and easy. So is drawing with a pencil. So is typing a joke into a text message. The cheapness of a tool has never, in the history of tools, been a reasonable case against making something good with it.
+
+## &quot;I could do that&quot;
+
+The real version of &quot;you used AI for that&quot; is &quot;I could do that.&quot; And sure, you could. Everyone could. A pencil is in reach. So is a DSLR. So was iMovie in 2004 and GarageBand in 2007. A tool being widely accessible doesn&#39;t deflate the people choosing what to do with it. If anything it sharpens the question of what you do choose.
+
+The joke in the header at the top of this post is basically the whole thesis. &quot;I could do that&quot; is only half the sentence. The operative half is &quot;yeah, but you didn&#39;t.&quot;
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;&quot;I could do that&quot; is only half the sentence. The operative half is &quot;yeah, but you didn&#39;t.&quot;&lt;/p&gt;&lt;/aside&gt;
+
+What I do with AI image gen, it turns out, is a specific brand of family humor that didn&#39;t exist as a possibility two years ago. Not because the tech couldn&#39;t do it (parts of it could, clumsily) but because the distance between &quot;funny idea&quot; and &quot;finished image I can text my wife&quot; was too big. The idea would die in transit. The overhead of opening Photoshop, masking in a knight&#39;s helmet, color-matching a tabard, rendering a shield — more friction than the joke could survive.
+
+That gap has collapsed. The joke survives now. And once the joke survives, you make more jokes. And once you&#39;re making more jokes, you start noticing that some of them are really good, in the same specific way the Scientist Trading Cards were good. You lean in. A new muscle shows up.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;The novelty of AI image gen wore off two years ago. The creative use of it is just getting started.&lt;/p&gt;&lt;/aside&gt;
+
+## The Bar Mitzvah
+
+My son Z&#39;s Bar Mitzvah is this summer. I won&#39;t spoil what&#39;s on the walls, but I&#39;ll say this: an entire category of image is going to be in the room that reflects the specific jokes, inside references, and shared family history of our family, and two years ago that category was not possible. Not &quot;possible but expensive.&quot; Not &quot;possible if we hired somebody.&quot; Not possible. It required a combination of specific visual humor, custom composition, and sheer volume that would have taken either a full-time illustrator who knew us personally, or a month of my life.
+
+Some of it is elaborate. Some of it is stupid. All of it is ours. None of it reduces to &quot;Papi used AI.&quot;
+
+That&#39;s what the new tool has actually done. Not replaced anything, not made a professional category redundant. It opened a creative lane that used to be closed on cost and time and skill grounds. Same thing Photoshop did for Scientist Trading Cards. Same thing the camera in your pocket did for snapshotting your day.
+
+The novelty of AI image gen wore off two years ago. The creative use of it is just getting started, and I am so here for it.
+
+(You&#39;re still not getting the MANE CHARACTER ENERGY one. That&#39;s for the group chat.)</content>
+  </entry>
   <entry>
     <title>We Used to Know When to Stop</title>
     <link href="https://benjaminste.in/blog/2026/04/08/we-used-to-know-when-to-stop/" rel="alternate" type="text/html"/>
