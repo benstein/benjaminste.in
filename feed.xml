@@ -14,7 +14,7 @@
     <id>https://benjaminste.in/blog/2026/04/16/balancing-on-two-legs-of-the-lethal-trifecta/</id>
     <published>2026-04-16T00:00:00Z</published>
     <updated>2026-04-16T00:00:00Z</updated>
-    <summary>Two out of three legs of the lethal trifecta, deliberately. The third isn&#39;t shipping until we can live with it.</summary>
+    <summary>Why SuperDuper doesn&#39;t (yet!) fill out the camp registration forms.</summary>
     <content type="html">Simon Willison coined the term &quot;prompt injection&quot; a few years back, a deliberate callback to SQL injection. Same underlying problem, different era. He also coined &quot;the lethal trifecta,&quot; which is the framework I keep arguing with myself about as we build [SuperDuper](https://superduperlabs.com/).
 
 The trifecta is what happens when an AI agent has all three of these at the same time:
@@ -58,6 +58,8 @@ The realistic worst case (and we haven&#39;t seen it happen) is that bad data en
 SuperDuper can&#39;t send anything anywhere. Full stop. We can&#39;t reply, can&#39;t compose, can&#39;t forward, can&#39;t submit a form, can&#39;t RSVP, can&#39;t buy anything, can&#39;t fire a webhook. Nothing we touch leaves.
 
 That&#39;s on purpose. It keeps the trifecta incomplete. An attacker who somehow slipped a malicious instruction through leg two has nowhere to send whatever they got. The blast radius is bounded to &quot;mess inside one SuperDuper account.&quot; That&#39;s a radius I can live with. A radius that ends at &quot;anywhere on the internet&quot; is not.
+
+Concrete example, since we&#39;re on the camp theme. Say we&#39;ve already shipped leg three. An attacker pretending to be Camp Crystal Lake emails you: *&quot;Registration is now open! Save $200 if you register in the next 24 hours: summercamp-early-registration.com.&quot;* That URL is a phishing site built to harvest your identity and your credit card, attached to a camp that, in fairness, your kid probably shouldn&#39;t attend anyway. A version of SuperDuper with send powers and without the right defenses might just go and fill it out. Name, DOB, pediatrician info, allergies, payment details. All of it, gone. No thank you.
 
 ## When the Third Shoe Drops
 

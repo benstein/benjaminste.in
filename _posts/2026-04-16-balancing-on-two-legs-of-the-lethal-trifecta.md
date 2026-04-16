@@ -3,7 +3,7 @@ layout: default
 title: "Balancing on Two Legs of the Lethal Trifecta"
 date: 2026-04-16
 categories: [superduper, ai, engineering]
-excerpt: "Two out of three legs of the lethal trifecta, deliberately. The third isn't shipping until we can live with it."
+excerpt: "Why SuperDuper doesn't (yet!) fill out the camp registration forms."
 ---
 
 Simon Willison coined the term "prompt injection" a few years back, a deliberate callback to SQL injection. Same underlying problem, different era. He also coined "the lethal trifecta," which is the framework I keep arguing with myself about as we build [SuperDuper](https://superduperlabs.com/).
@@ -49,6 +49,8 @@ The realistic worst case (and we haven't seen it happen) is that bad data ends u
 SuperDuper can't send anything anywhere. Full stop. We can't reply, can't compose, can't forward, can't submit a form, can't RSVP, can't buy anything, can't fire a webhook. Nothing we touch leaves.
 
 That's on purpose. It keeps the trifecta incomplete. An attacker who somehow slipped a malicious instruction through leg two has nowhere to send whatever they got. The blast radius is bounded to "mess inside one SuperDuper account." That's a radius I can live with. A radius that ends at "anywhere on the internet" is not.
+
+Concrete example, since we're on the camp theme. Say we've already shipped leg three. An attacker pretending to be Camp Crystal Lake emails you: *"Registration is now open! Save $200 if you register in the next 24 hours: summercamp-early-registration.com."* That URL is a phishing site built to harvest your identity and your credit card, attached to a camp that, in fairness, your kid probably shouldn't attend anyway. A version of SuperDuper with send powers and without the right defenses might just go and fill it out. Name, DOB, pediatrician info, allergies, payment details. All of it, gone. No thank you.
 
 ## When the Third Shoe Drops
 

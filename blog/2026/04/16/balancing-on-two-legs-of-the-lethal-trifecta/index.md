@@ -52,6 +52,8 @@ SuperDuper can't send anything anywhere. Full stop. We can't reply, can't compos
 
 That's on purpose. It keeps the trifecta incomplete. An attacker who somehow slipped a malicious instruction through leg two has nowhere to send whatever they got. The blast radius is bounded to "mess inside one SuperDuper account." That's a radius I can live with. A radius that ends at "anywhere on the internet" is not.
 
+Concrete example, since we're on the camp theme. Say we've already shipped leg three. An attacker pretending to be Camp Crystal Lake emails you: *"Registration is now open! Save $200 if you register in the next 24 hours: summercamp-early-registration.com."* That URL is a phishing site built to harvest your identity and your credit card, attached to a camp that, in fairness, your kid probably shouldn't attend anyway. A version of SuperDuper with send powers and without the right defenses might just go and fill it out. Name, DOB, pediatrician info, allergies, payment details. All of it, gone. No thank you.
+
 ## When the Third Shoe Drops
 
 Our users want leg three. I want it worse than they do.
