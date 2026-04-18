@@ -3,11 +3,81 @@
   <title>Benjamin Stein</title>
   <link href="https://benjaminste.in/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://benjaminste.in/" rel="alternate" type="text/html"/>
-  <updated>2026-04-16T00:00:00Z</updated>
+  <updated>2026-04-17T00:00:00Z</updated>
   <id>https://benjaminste.in/</id>
   <author>
     <name>Benjamin Stein</name>
   </author>
+  <entry>
+    <title>A Crayon Drawing, Five Kids, and a Minivan</title>
+    <link href="https://benjaminste.in/blog/2026/04/17/a-crayon-drawing-five-kids-and-a-minivan/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2026/04/17/a-crayon-drawing-five-kids-and-a-minivan/</id>
+    <published>2026-04-17T00:00:00Z</published>
+    <updated>2026-04-17T00:00:00Z</updated>
+    <summary>No product survives first contact with real users.</summary>
+    <content type="html">This morning an email landed in my inbox from Zeke&#39;s teacher. Subject line was something like &quot;5/6 field trip — car groups.&quot; I didn&#39;t open it. [SuperDuper](https://superduperlabs.com) did.
+
+The attachment was a photograph. Of a piece of paper. With a crayon drawing on it. Of carpool groups. Plus a little smiley-face cartoon at the bottom because of course.
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/assets/images/chinatown-car-groups.png&quot; alt=&quot;A hand-drawn list on notebook paper titled &#39;Chinatown Car Groups.&#39; At the top: &#39;5/6 Core 10:45am departure.&#39; Below that, groups of first names arranged in columns, each group led by an asterisked name (the driver). A legend reads &#39;* Parent Driver.&#39; A small smiling stick-figure doodle sits under the title.&quot; /&gt;
+&lt;/p&gt;
+
+Five minutes later I had a calendar event on my phone. *Chinatown field trip, 10:45am departure, driving Zeke + Miles, Elliott, Bezani, and Zain.* Every detail right. I didn&#39;t type anything. I didn&#39;t even read the email.
+
+Humblebrags about my product aside, this absurd episode has me thinking about 3 things.
+
+## 1. There&#39;s nothing like real-world users
+
+You cannot make this up in a test suite.
+
+I&#39;ve worked on a lot of products. I&#39;ve written a lot of test cases. Not once — not in a thousand years of synthetic data generation, not with the world&#39;s most creative QA team, not with a room full of PMs trying to break the system — would anyone have written the test case *&quot;teacher sends carpool assignments as an iPhone photo of a piece of notebook paper covered in crayon.&quot;* It&#39;s not in the corpus. It&#39;s not in the edge case doc. It&#39;s not anywhere.
+
+But it&#39;s real life. Real life is weirder than your test plan. It is always, always weirder than your test plan.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;Real life is weirder than your test plan. It is always, always weirder than your test plan.&lt;/p&gt;&lt;/aside&gt;
+
+Every interesting bug I&#39;ve ever seen in production has been some version of this.[^1] A thing a user did that nobody on the team imagined anyone would do, because the team spends its days thinking about the system and the user spends theirs thinking about lunch. For Zeke&#39;s teacher, this involved a sharpie, a piece of printer paper, and thirty seconds at his kitchen table. Why would he open a spreadsheet. He has a field trip to run.
+
+You ship. Then you find out.
+
+## 2. Multimodal models are bonkers
+
+If you&#39;re not deep in tech, you probably don&#39;t appreciate where image understanding is right now.
+
+A photograph. Of handwriting. In crayon. With four columns of names, some asterisks, some not, a title at the top, a legend at the bottom, and a smiling stick figure doodled in the margin for good measure. The model read all of it. Names, groupings, &quot;Chinatown Car Groups,&quot; the fact that asterisks marked drivers. It correctly ignored the stick figure.
+
+Five years ago we were excited about OCR that could handle a clean printed receipt. The killer app in Silicon Valley was Hot Dog / Not Hot Dog for a reason — that was peak image classification just a few years ago. Now a frontier model parses a first-grade-style crayon drawing as easily as it reads a Word doc.
+
+If you haven&#39;t put a messy photo of something into a modern multimodal model recently, go try it. Bring the worst photo you&#39;ve got. You will be surprised.
+
+## 3. Context is King
+
+Gemini can read the photo. Claude can read the photo. Any of them can. Reading the photo is *table stakes.* The magic isn&#39;t in the reading.
+
+The magic is knowing:
+
+- That &quot;Chinatown&quot; meant a field trip, not a restaurant recommendation.
+- That &quot;5/6 Core 10:45am departure&quot; meant 5th/6th period core class and not a flight number.
+- That the asterisks marked parent drivers.
+- That I was chaperoning in the first place, because I emailed that form to the teacher last month.
+- That I&#39;m Zeke&#39;s dad — and my name isn&#39;t on this page at all. *It just says &quot;Zeke.&quot;*
+- That five kids in a car means I need to take the minivan, not the Tesla.
+
+None of that is in the photo. All of that is *around* the photo. It lives in the accumulated understanding of who I am, which kid is which, and what I&#39;ve already committed to. An LLM with no context looks at this image and sees a list of names. An LLM with context looks at this image and puts a minivan reminder on my calendar for Saturday morning.
+
+The model is the least of it. Everyone has the model. Everyone can call the API. The difference between a toy and a product you use every day is whether the system knows enough about your life to make the output *useful.*
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;The difference between a toy and a product you use every day is whether the system knows enough about your life to make the output useful.&lt;/p&gt;&lt;/aside&gt;
+
+Knowledge without context is worthless. A list of five names means nothing. *&quot;Drive the minivan to Chinatown on Saturday with Miles, Elliott, Bezani, and Zain&quot;* is the entire game.
+
+---
+
+Anyway. The calendar event is on my phone. I wish my minivan was electric. Shout out to Zeke&#39;s teacher, and to every teacher out there spending their Saturdays driving other people&#39;s kids to Chinatown. You are raising our children. Thank you.
+
+[^1]: I would also include the time an outage was caused by a corrupt ARP cache, but that&#39;s a story for another blog post.</content>
+  </entry>
   <entry>
     <title>Balancing on Two Legs of the Lethal Trifecta</title>
     <link href="https://benjaminste.in/blog/2026/04/16/balancing-on-two-legs-of-the-lethal-trifecta/" rel="alternate" type="text/html"/>

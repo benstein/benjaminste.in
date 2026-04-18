@@ -204,6 +204,58 @@ blockquote p:last-child { margin-bottom: 0; }
 }
 
 /* ============================================
+   FOOTNOTES
+   ============================================ */
+
+sup[id^="fnref"] {
+  font-size: 0.75em;
+  line-height: 0;
+}
+
+sup[id^="fnref"] a.footnote {
+  text-decoration: none;
+  padding: 0 0.15em;
+  color: #c9a96e;
+  font-weight: 600;
+}
+
+sup[id^="fnref"] a.footnote:hover {
+  text-decoration: underline;
+}
+
+.footnotes {
+  margin-top: 3em;
+  padding-top: 1.2em;
+  border-top: 1px solid #d5cfc5;
+  font-size: 0.9em;
+  color: #5a5a5a;
+}
+
+.footnotes ol {
+  padding-left: 1.4em;
+  margin: 0;
+}
+
+.footnotes li {
+  margin-bottom: 0.6em;
+}
+
+.footnotes li p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.footnotes a.reversefootnote {
+  text-decoration: none;
+  margin-left: 0.3em;
+  color: #c9a96e;
+}
+
+.footnotes a.reversefootnote:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
    TIMELINE INTERSTITIALS
    ============================================ */
 
