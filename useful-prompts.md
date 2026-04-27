@@ -19,3 +19,21 @@ Wait until you get a session with ChatGPT or Claude that you're really enjoying.
 Then copy-paste the results into your Custom Instructions (in Settings). Now you have an AI assistant that you LOVE to talk to.
 
 ---
+
+## Tune Up Your Mac With Claude Code
+
+Open Claude Code on your Mac and run this:
+
+> *"Look in /var/log at my system logs and make suggestions on how to improve my Mac's performance. There's obviously a LOT of data in there, so use good judgment to get enough signal without processing everything — e.g. awk, head, tail, don't unarchive old logs."*
+
+Then go make a coffee. Two minutes later you'll come back to a report.
+
+When I ran this, it found an old version of MySQL crashing in a loop, SOC2 monitoring agents from past jobs still phoning home, out-of-date software, a network misconfiguration, and a bunch of other detritus my laptop had accumulated over the years. Plus remediation steps for each one.
+
+This isn't a human-tractable problem. No sane person is grepping `/var/log` on a Saturday. But it's basically a unit test for Opus, and it really does breathe new life into a crufty laptop.
+
+Let me know what you find, and whether it fixes your [running out of memory / slow wifi / fan won't stop / battery dies fast] problem.
+
+*(Disclaimer: don't blindly run `sudo` commands that an LLM tells you to. I mean, I do. But you shouldn't. Or at least don't blame me.)*
+
+---
