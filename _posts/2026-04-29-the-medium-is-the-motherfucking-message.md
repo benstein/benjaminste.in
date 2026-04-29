@@ -3,10 +3,10 @@ layout: default
 title: "The medium is the motherfucking message"
 date: 2026-04-29
 categories: [superduper, ai, startups]
-excerpt: "The chat-only crowd is shipping a model and calling it a medium. They are about to find out those are different things."
+excerpt: "Why we made SuperDuper an app like it was 2018."
 ---
 
-### Why we made SuperDuper an app like it was 2018
+<p class="post-subtitle">Why we made SuperDuper an app like it was 2018</p>
 
 Marshall McLuhan's most famous line gets quoted constantly, almost always by people who have it backwards. He wasn't saying content doesn't matter. He was saying the form of a medium changes how people live and think and coordinate, regardless of what's running through it. The printing press didn't show up and politely deliver more information; it cooked up a few centuries of individualism along the way. Television didn't just hand us the news, it changed what news even was. The medium is the message because the medium is the part that actually does the work on you.
 
@@ -69,8 +69,6 @@ We have fifty years of UX (windows, lists, maps, cards, calendars, timelines, ba
 If you're an AI-native startup, here's the part you might not want to hear: your users may not want an AI-native product. They want their problem solved, and they'd really love to be able to *see it*.
 
 Which is McLuhan, again. The medium is not a wrapper around the model, it's the part that decides what the model gets to be in your life. A surface that's visible and shareable and teachable and pokeable changes whether the AI ever gets used at all, whether two parents can coordinate around it, whether a kid can glance at it and know she has basketball in twenty minutes. The chat-only crowd is shipping a model and calling it a medium, and they are about to find out those are different things.
-
-<aside class="pull-quote"><p>The chat-only crowd is shipping a model and calling it a medium, and they are about to find out those are different things.</p></aside>
 
 The best products of this era are going to be mullets. Business up front, where the human lives: a real interface, dense and scannable and shareable, that you can hand to your spouse or glance at from a parking lot. Party in the back, where nobody has to look at it: a swarm of agents reading email, reconciling calendars, untangling PDFs, doing things that were not technically possible eighteen months ago. The front is the part you sell, and it only exists because the back is doing all the gross work nobody wants to see.
 

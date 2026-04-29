@@ -14,8 +14,8 @@
     <id>https://benjaminste.in/blog/2026/04/29/the-medium-is-the-motherfucking-message/</id>
     <published>2026-04-29T00:00:00Z</published>
     <updated>2026-04-29T00:00:00Z</updated>
-    <summary>The chat-only crowd is shipping a model and calling it a medium. They are about to find out those are different things.</summary>
-    <content type="html">### Why we made SuperDuper an app like it was 2018
+    <summary>Why we made SuperDuper an app like it was 2018.</summary>
+    <content type="html">&lt;p class=&quot;post-subtitle&quot;&gt;Why we made SuperDuper an app like it was 2018&lt;/p&gt;
 
 Marshall McLuhan&#39;s most famous line gets quoted constantly, almost always by people who have it backwards. He wasn&#39;t saying content doesn&#39;t matter. He was saying the form of a medium changes how people live and think and coordinate, regardless of what&#39;s running through it. The printing press didn&#39;t show up and politely deliver more information; it cooked up a few centuries of individualism along the way. Television didn&#39;t just hand us the news, it changed what news even was. The medium is the message because the medium is the part that actually does the work on you.
 
@@ -78,8 +78,6 @@ We have fifty years of UX (windows, lists, maps, cards, calendars, timelines, ba
 If you&#39;re an AI-native startup, here&#39;s the part you might not want to hear: your users may not want an AI-native product. They want their problem solved, and they&#39;d really love to be able to *see it*.
 
 Which is McLuhan, again. The medium is not a wrapper around the model, it&#39;s the part that decides what the model gets to be in your life. A surface that&#39;s visible and shareable and teachable and pokeable changes whether the AI ever gets used at all, whether two parents can coordinate around it, whether a kid can glance at it and know she has basketball in twenty minutes. The chat-only crowd is shipping a model and calling it a medium, and they are about to find out those are different things.
-
-&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;The chat-only crowd is shipping a model and calling it a medium, and they are about to find out those are different things.&lt;/p&gt;&lt;/aside&gt;
 
 The best products of this era are going to be mullets. Business up front, where the human lives: a real interface, dense and scannable and shareable, that you can hand to your spouse or glance at from a parking lot. Party in the back, where nobody has to look at it: a swarm of agents reading email, reconciling calendars, untangling PDFs, doing things that were not technically possible eighteen months ago. The front is the part you sell, and it only exists because the back is doing all the gross work nobody wants to see.
 
