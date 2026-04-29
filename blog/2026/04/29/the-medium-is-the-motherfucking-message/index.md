@@ -8,8 +8,6 @@
 
 ---
 
-<p class="post-subtitle">Why we made SuperDuper an app like it was 2018</p>
-
 Marshall McLuhan's most famous line gets quoted constantly, almost always by people who have it backwards. He wasn't saying content doesn't matter. He was saying the form of a medium changes how people live and think and coordinate, regardless of what's running through it. The printing press didn't show up and politely deliver more information; it cooked up a few centuries of individualism along the way. Television didn't just hand us the news, it changed what news even was. The medium is the message because the medium is the part that actually does the work on you.
 
 I think about this a lot, because for two years now the loudest idea in consumer AI has been *just talk to it.* No app. No buttons. No structure. You type, the agent figures it out, off you go. It's a very compelling pitch. We believed it enough to spend a year shipping a company on top of it.
