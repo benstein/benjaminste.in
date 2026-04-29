@@ -50,6 +50,8 @@ Of course we can build agents. We've built plenty. We just know where they fall 
 
 The app gives us a thing chat physically cannot give us, which is *a place.* Information lives somewhere. You can scan it in five seconds. Maps look like maps. Schedules look like schedules. A conflict between two events looks different than a reminder about a permission slip, because they *are* different. Trying to flatten all of that into a chat reply is like trying to put a city map into a paragraph. Sure, you can. But why would you do that to people.
 
+<p style="text-align: center;"><img src="/assets/images/sd-foryou.png" alt="SuperDuper For You screen with overdue task and week ahead" style="display: inline-block; max-width: 32%; vertical-align: top; margin: 0 0.5%;" /><img src="/assets/images/sd-upcoming.png" alt="SuperDuper upcoming event detail with map, schedule, and to-do list" style="display: inline-block; max-width: 32%; vertical-align: top; margin: 0 0.5%;" /></p>
+
 ## And it's a multiplayer game
 
 Family logistics is not a single-player problem. There are two parents, three kids, a babysitter, a coach who only texts, a school that only emails, and a dog who only cares about dinner. What you actually need is alignment, where everyone can see the same picture: what's on, who's on it, what changed since yesterday.
