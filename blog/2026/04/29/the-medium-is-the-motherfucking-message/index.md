@@ -10,7 +10,7 @@
 
 Marshall McLuhan's most famous line gets quoted constantly, almost always by people who have it backwards. He wasn't saying content doesn't matter. He was saying the form of a medium changes how people live and think and coordinate, regardless of what's running through it. The printing press didn't show up and politely deliver more information; it cooked up a few centuries of individualism along the way. Television didn't just hand us the news, it changed what news even was. The medium is the message because the medium is the part that actually does the work on you.
 
-I think about this a lot, because for two years now the loudest idea in consumer AI has been *just talk to it.* No app. No buttons. No structure. You type, the agent figures it out, off you go. It's a very compelling pitch. We believed it enough to spend a year shipping a company on top of it.
+For two years now the loudest idea in consumer AI has been *just talk to it.* No app. No buttons. No structure. You type, the agent figures it out, off you go. It's a very compelling pitch. We believed it enough to spend a year shipping a company on top of it.
 
 ## The pitch
 
@@ -56,13 +56,13 @@ Family logistics is not a single-player problem. There are two parents, three ki
 
 You can't share an agent. You can't point at it. Two people can't both look at it together. Every working family-logistics tool in human history has been something you can stare at together: the calendar on the fridge, the whiteboard in the kitchen, the shared Google Doc, the printed-out schedule taped to the wall. The thing you can look at *is* the tool. McLuhan's revenge.
 
-## The funny part
+## The ironic part
 
 SuperDuper is, under the hood, the most agent-heavy thing we've ever built. There are agents reading email, agents pulling structure out of PDFs, agents reconciling conflicts, agents building a personal timeline of your life. It's agents all the way down.[^1]
 
 Almost none of it shows up to you as "talk to an agent," because that isn't the job. The job is taking the chaos and turning it into something a perplexed parent can check from the soccer complex to figure out which field her kid is on for Game 2.
 
-## The pendulum
+## The pendulum swings
 
 The smartest people in this industry are currently building deeper and deeper into chat. I get it. I've felt the pull. I still think the pendulum swings back, and probably soon.
 
