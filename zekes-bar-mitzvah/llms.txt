@@ -13,7 +13,7 @@ This site is unlisted (noindex, not in sitemap, not linked from anywhere). If yo
 ## MCP
 
 - [mcp.json](https://benjaminste.in/zekes-bar-mitzvah/mcp.json): MCP server descriptor
-- Working stdio server: `npx github:benstein/zeke-bar-mitzvah-mcp` ([source](https://github.com/benstein/zeke-bar-mitzvah-mcp))
+- Stdio MCP server: `npx github:benstein/zeke-bar-mitzvah-mcp` ([source](https://github.com/benstein/zeke-bar-mitzvah-mcp))
 
 ## Day-of contact
 

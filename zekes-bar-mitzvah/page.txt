@@ -65,7 +65,7 @@ This file is the clean-markdown alt-format of <https://benjaminste.in/zekes-bar-
 - [mcp.json](https://benjaminste.in/zekes-bar-mitzvah/mcp.json) — MCP server descriptor
 - [llms.txt](https://benjaminste.in/zekes-bar-mitzvah/llms.txt)
 
-There's also a working stdio MCP server. Install it on your laptop and your assistant can read the schedule, get directions, look up dress codes, and confirm phone-drop check-ins:
+Stdio MCP server. Install it on your laptop and your assistant can read the schedule, get directions, look up dress codes, and confirm phone-drop check-ins:
 
 ```
 npx github:benstein/zeke-bar-mitzvah-mcp
