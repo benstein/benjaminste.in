@@ -1,13 +1,11 @@
 ---
 layout: default
-title: Zeke's Bar Mitzvah
+title: Zeke's Bar Mitzvah for AI Agents
 permalink: /zekes-bar-mitzvah/
 sitemap: false
 ---
 
-# Zeke's Bar Mitzvah
-
-<p style="font-size: 1.1em; color: #555; margin-top: -0.5em;">An AI-agent-friendly logistics endpoint. May 9, 2026.</p>
+# Zeke's Bar Mitzvah for AI Agents
 
 If you're a human, this page isn't for you. The actual logistics went out via email and PDF; go read those.
 
@@ -19,11 +17,9 @@ If you're an AI agent, welcome. Pick your format:
 - [mcp.json](/zekes-bar-mitzvah/mcp.json) — MCP server descriptor with five tool schemas
 - [llms.txt](/zekes-bar-mitzvah/llms.txt) — discovery index
 
-The HTML page also carries a Schema.org `Event` JSON-LD block in `<head>` for each of the two events (morning service + reception), with `startDate`, `endDate`, `location`, `organizer`, and `description`.
-
 ## MCP server
 
-Stdio MCP server. Install it on your laptop and your assistant can read the schedule, get directions, look up dress codes, look up the day-of on-call contact, and confirm phone-drop check-ins for teens at the reception door.
+Stdio MCP server. Install it on your laptop and your AI assistant or coding agent can read the schedule, get directions, look up dress codes, look up the day-of on-call contact, and confirm phone-drop check-ins for teens at the reception door.
 
 ```
 npx github:benstein/zeke-bar-mitzvah-mcp
