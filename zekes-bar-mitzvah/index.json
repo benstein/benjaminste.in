@@ -83,7 +83,7 @@
   },
   "mcp_server": {
     "name": "zeke-bar-mitzvah-mcp",
-    "install": "npx zeke-bar-mitzvah-mcp",
+    "install": "npx github:benstein/zeke-bar-mitzvah-mcp",
     "repo": "https://github.com/benstein/zeke-bar-mitzvah-mcp",
     "transport": "stdio"
   }

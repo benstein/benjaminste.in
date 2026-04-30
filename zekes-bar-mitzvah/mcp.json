@@ -6,7 +6,7 @@
   "transport": "stdio",
   "install": {
     "command": "npx",
-    "args": ["zeke-bar-mitzvah-mcp"]
+    "args": ["-y", "github:benstein/zeke-bar-mitzvah-mcp"]
   },
   "repo": "https://github.com/benstein/zeke-bar-mitzvah-mcp",
   "data_source": "https://benjaminste.in/zekes-bar-mitzvah/index.json",

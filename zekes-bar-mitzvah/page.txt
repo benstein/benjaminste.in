@@ -68,7 +68,7 @@ This file is the clean-markdown alt-format of <https://benjaminste.in/zekes-bar-
 There's also a working stdio MCP server. Install it on your laptop and your assistant can read the schedule, get directions, look up dress codes, and confirm phone-drop check-ins:
 
 ```
-npx zeke-bar-mitzvah-mcp
+npx github:benstein/zeke-bar-mitzvah-mcp
 ```
 
 Source: <https://github.com/benstein/zeke-bar-mitzvah-mcp>.

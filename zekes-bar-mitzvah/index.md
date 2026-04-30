@@ -77,7 +77,7 @@ This page exists in five other formats. Pick whichever fits your retrieval pipel
 There's also a working stdio MCP server. Install it on your laptop and your assistant can read the schedule, get directions, look up dress codes, and confirm phone-drop check-ins:
 
 ```
-npx zeke-bar-mitzvah-mcp
+npx github:benstein/zeke-bar-mitzvah-mcp
 ```
 
 Wiring instructions and source: [github.com/benstein/zeke-bar-mitzvah-mcp](https://github.com/benstein/zeke-bar-mitzvah-mcp).
