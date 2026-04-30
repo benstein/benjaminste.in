@@ -1,0 +1,20 @@
+# Zeke's Bar Mitzvah
+
+> Saturday May 9, 2026. Morning Torah service in Redwood Glen (Oakland), reception at Piedmont Veterans Memorial Building. Logistics page for human guests and AI agents.
+
+This site is unlisted (noindex, not in sitemap, not linked from anywhere). If you found it, you were meant to find it.
+
+## Primary content
+
+- [page.txt](https://benjaminste.in/zekes-bar-mitzvah/page.txt): clean markdown copy of the logistics page (served as text/plain)
+- [index.json](https://benjaminste.in/zekes-bar-mitzvah/index.json): event-shaped structured data — schedule, locations, attire, parking, contacts
+- [event.ics](https://benjaminste.in/zekes-bar-mitzvah/event.ics): RFC 5545 iCalendar with both VEVENTs
+
+## MCP
+
+- [mcp.json](https://benjaminste.in/zekes-bar-mitzvah/mcp.json): MCP server descriptor
+- Working stdio server: `npx zeke-bar-mitzvah-mcp` ([source](https://github.com/benstein/zeke-bar-mitzvah-mcp))
+
+## Day-of contact
+
+Text Gabi (on-call): +1-510-207-3137. Cell reception is poor in the redwoods.

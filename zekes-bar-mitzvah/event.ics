@@ -1,0 +1,50 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Benjamin Stein//Zekes Bar Mitzvah//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Zeke's Bar Mitzvah
+X-WR-CALDESC:Zeke's Bar Mitzvah, May 9 2026.
+X-WR-TIMEZONE:America/Los_Angeles
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+BEGIN:STANDARD
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:service-2026-05-09@zekes-bar-mitzvah.benjaminste.in
+DTSTAMP:20260430T000000Z
+SUMMARY:Zeke's Bar Mitzvah — Morning Torah Service
+DTSTART;TZID=America/Los_Angeles:20260509T103000
+DTEND;TZID=America/Los_Angeles:20260509T124500
+LOCATION:Redwood Glen Picnic Area\, Roberts Regional Recreation Area\, Oakland\, CA
+DESCRIPTION:Saturday May 9\, 2026\, 10:30am-12:45pm. Arrive by 10am. Park at Roberts Regional ($5)\, walk back out of the lot\, turn right onto Skyline Blvd for 500 feet\, cross the street and follow the trail. Attire: Redwood Torah casual.\n\nIf you get lost\, look for ~200 Jews wandering in the forest.\n\nKiddush lunch (bagels & lox) follows at ~12:30pm.\n\nCell reception may be limited in the redwoods. Day-of on-call: Gabi 510-207-3137.\n\nFull details: https://benjaminste.in/zekes-bar-mitzvah/
+URL:https://benjaminste.in/zekes-bar-mitzvah/
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:reception-2026-05-09@zekes-bar-mitzvah.benjaminste.in
+DTSTAMP:20260430T000000Z
+SUMMARY:Zeke's Bar Mitzvah — Reception (Dinner & Dancing)
+DTSTART;TZID=America/Los_Angeles:20260509T180000
+DTEND;TZID=America/Los_Angeles:20260509T220000
+LOCATION:Piedmont Veterans Memorial Building\, 401 Highland Ave\, Piedmont\, CA 94611
+DESCRIPTION:Saturday May 9\, 2026\, 6:00pm-10:00pm. Indoors. Attire: party clothes\, dress to dance. Plenty of street parking throughout the neighborhood.\n\nA note for teenagers: phone check at the door (phones available to grab if needed for calls). 13-year-old drop-off and pick-up.\n\nFull details: https://benjaminste.in/zekes-bar-mitzvah/
+URL:https://benjaminste.in/zekes-bar-mitzvah/
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

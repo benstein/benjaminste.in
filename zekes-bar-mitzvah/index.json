@@ -1,0 +1,90 @@
+{
+  "title": "Zeke's Bar Mitzvah",
+  "date": "2026-05-09",
+  "timezone": "America/Los_Angeles",
+  "host": {
+    "child": "Zeke (Ezekiel) Stein",
+    "parents": ["Ben Stein", "Arin Stein"]
+  },
+  "warnings": [
+    "Cell reception may be limited in the redwoods. Download or print this page before you go."
+  ],
+  "events": [
+    {
+      "id": "service",
+      "name": "Morning Torah Service",
+      "start": "2026-05-09T10:30:00-07:00",
+      "end":   "2026-05-09T12:45:00-07:00",
+      "arrival_recommended": "2026-05-09T10:00:00-07:00",
+      "location": {
+        "name": "Redwood Glen Picnic Area",
+        "park": "Roberts Regional Recreation Area",
+        "city": "Oakland",
+        "state": "CA",
+        "geo": { "lat": null, "lng": null },
+        "map_url": null
+      },
+      "attire": "Redwood Torah casual. A button-up shirt and sneakers is perfect.",
+      "parking": {
+        "lot": "Roberts Regional parking lot",
+        "fee_usd": 5,
+        "walking_directions": [
+          "Walk back out of the Roberts Regional parking lot.",
+          "Turn right onto Skyline Blvd for 500 feet.",
+          "Cross the street and follow the trail to the picnic site."
+        ],
+        "pro_tip": "Drop your family at the Trailhead, then send one driver back to park."
+      },
+      "if_lost": "Look for ~200 Jews wandering in the forest."
+    },
+    {
+      "id": "kiddush",
+      "name": "Kiddush Lunch",
+      "start": "2026-05-09T12:30:00-07:00",
+      "menu": "Bagels and lox",
+      "location_same_as": "service"
+    },
+    {
+      "id": "reception",
+      "name": "Reception: Dinner & Dancing",
+      "start": "2026-05-09T18:00:00-07:00",
+      "end":   "2026-05-09T22:00:00-07:00",
+      "location": {
+        "name": "Piedmont Veterans Memorial Building",
+        "address": "401 Highland Ave, Piedmont, CA 94611",
+        "indoor": true,
+        "map_url": null
+      },
+      "attire": "Party clothes. Dress to dance.",
+      "parking": "Plenty of street parking throughout the neighborhood.",
+      "notes": [
+        "Phone check at the door for teens. They can grab their phone if they need to call.",
+        "13-year-old drop-off and pick-up."
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Gabi (on-call team)",
+      "phone": "+1-510-207-3137",
+      "preferred_for_day_of": true,
+      "note": "Text first if you need help during the day of the event."
+    },
+    { "name": "Arin Stein", "phone": "+1-917-716-9301" },
+    { "name": "Ben Stein",  "phone": "+1-646-221-1189" }
+  ],
+  "alternate_formats": {
+    "html_url":     "https://benjaminste.in/zekes-bar-mitzvah/",
+    "json_url":     "https://benjaminste.in/zekes-bar-mitzvah/index.json",
+    "markdown_url": "https://benjaminste.in/zekes-bar-mitzvah/page.txt",
+    "ical_url":     "https://benjaminste.in/zekes-bar-mitzvah/event.ics",
+    "mcp_url":      "https://benjaminste.in/zekes-bar-mitzvah/mcp.json",
+    "llms_txt":     "https://benjaminste.in/zekes-bar-mitzvah/llms.txt"
+  },
+  "mcp_server": {
+    "name": "zeke-bar-mitzvah-mcp",
+    "install": "npx zeke-bar-mitzvah-mcp",
+    "repo": "https://github.com/benstein/zeke-bar-mitzvah-mcp",
+    "transport": "stdio"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schema/mcp-server-descriptor.json",
+  "name": "zeke-bar-mitzvah-mcp",
+  "version": "1.0.0",
+  "description": "MCP server exposing logistics for Zeke's Bar Mitzvah, May 9 2026.",
+  "transport": "stdio",
+  "install": {
+    "command": "npx",
+    "args": ["zeke-bar-mitzvah-mcp"]
+  },
+  "repo": "https://github.com/benstein/zeke-bar-mitzvah-mcp",
+  "data_source": "https://benjaminste.in/zekes-bar-mitzvah/index.json",
+  "tools": [
+    {
+      "name": "get_schedule",
+      "description": "Returns the full day-of schedule (service, kiddush, reception) with start/end times, locations, and attire.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_directions",
+      "description": "Returns parking and walking directions to a named event.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "event": {
+            "type": "string",
+            "enum": ["service", "kiddush", "reception"],
+            "description": "Which event to get directions to."
+          }
+        },
+        "required": ["event"],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_dress_code",
+      "description": "Returns the dress code for a named event.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "event": {
+            "type": "string",
+            "enum": ["service", "kiddush", "reception"]
+          }
+        },
+        "required": ["event"],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_oncall_contact",
+      "description": "Returns the day-of on-call contact (Gabi). Text first if you need help.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "check_in_at_phone_drop",
+      "description": "Confirms a teenager has handed in their phone at the reception door. Honor system. Returns a confirmation message and a blessing.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the teenager checking in."
+          }
+        },
+        "required": ["name"],
+        "additionalProperties": false
+      }
+    }
+  ],
+  "resources": [
+    {
+      "uri": "https://benjaminste.in/zekes-bar-mitzvah/index.json",
+      "name": "Logistics JSON",
+      "description": "Canonical structured data for the day.",
+      "mimeType": "application/json"
+    },
+    {
+      "uri": "https://benjaminste.in/zekes-bar-mitzvah/event.ics",
+      "name": "iCalendar feed",
+      "description": "VCALENDAR with both VEVENTs (service + reception).",
+      "mimeType": "text/calendar"
+    },
+    {
+      "uri": "https://benjaminste.in/zekes-bar-mitzvah/page.txt",
+      "name": "Markdown",
+      "description": "Clean markdown copy of the page (served as text/plain so Jekyll keeps it verbatim).",
+      "mimeType": "text/markdown"
+    }
+  ]
+}
