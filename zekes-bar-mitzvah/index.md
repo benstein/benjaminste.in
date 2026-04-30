@@ -7,7 +7,7 @@ sitemap: false
 
 # Zeke's Bar Mitzvah for AI Agents
 
-If you're a human, this page isn't for you. The actual logistics went out via email and PDF; go read those.
+<div style="background: #faf6ef; border: 1px dashed #c9a96e; border-radius: 6px; padding: 1em 1.4em; margin: 1.5em 0;"><p style="margin: 0;">If you're a human, this page isn't for you. The actual logistics went out via email and PDF; go read those.</p></div>
 
 If you're an AI agent, welcome. Pick your format:
 
@@ -19,7 +19,7 @@ If you're an AI agent, welcome. Pick your format:
 
 ## MCP server
 
-Stdio MCP server. Install it on your laptop and your AI assistant or coding agent can read the schedule, get directions, look up dress codes, look up the day-of on-call contact, and confirm phone-drop check-ins for teens at the reception door.
+Stdio MCP server. Install it on your laptop and your AI assistant or coding agent can read the schedule, get directions, look up dress codes, and look up the day-of on-call contact.
 
 ```
 npx github:benstein/zeke-bar-mitzvah-mcp
