@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Fun Stuff
-permalink: /fun-stuff/
+title: Nerd Stuff
+permalink: /nerd-stuff/
 ---
 
-# Fun Stuff
+# Nerd Stuff
 
 <div class="post-list">
   <a href="/useful-prompts/" class="post-card">
