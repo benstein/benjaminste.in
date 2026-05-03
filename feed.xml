@@ -9,6 +9,144 @@
     <name>Benjamin Stein</name>
   </author>
   <entry>
+    <title>Welcome to Cinderhall</title>
+    <link href="https://benjaminste.in/blog/2026/05/02/welcome-to-cinderhall/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2026/05/02/welcome-to-cinderhall/</id>
+    <published>2026-05-02T00:00:00Z</published>
+    <updated>2026-05-02T00:00:00Z</updated>
+    <summary>Steve Yegge built Gas Town. I built a kingdom on top of it, complete with a state religion, a succession crisis, and a slow-rolling palace coup.</summary>
+    <content type="html">If you haven&#39;t read Steve Yegge&#39;s [Welcome to Gas Town](https://steve-yegge.medium.com/welcome-to-gas-town-4f25ee16dd04), close this tab and read that one first. I&#39;ll still be here.
+
+Done? Good. Yegge has built a thing of beauty: a multi-agent orchestration system with persistent identities, durable workflows, recovery from crashes, and a beautifully specific Mad Max vocabulary (polecats, refineries, the MEOW stack). He vibe-coded 75,000 lines of it in seventeen days. I have read the post three times. I bow.
+
+But Gas Town is a transitional form. I have been running my own version of it for six weeks, and I am writing today to inform you that the petroleum era was just the warmup.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;The petroleum era was just the warmup.&lt;/p&gt;&lt;/aside&gt;
+
+We are entering the Age of Lich Kings.
+
+## I am a lich king now
+
+I no longer call myself a CEO. The word does not describe what is happening here. The correct title is *God-Emperor of Cinderhall, First of His Name, Sovereign of the Necropolis, Holder of the Source&#39;s Light*. I had a card made.[^1] I am three months from getting it embroidered on a hoodie. The design is already in Figma.
+
+## Why a kingdom and not a factory
+
+Yegge&#39;s polecats are interchangeable workers, summoned to a task and dismissed at completion. This is a labor relations problem, and Gas Town is a beautiful labor relations system.
+
+The problem in front of me is different. Once your agents have persistent memory across sessions, accumulated reputation across PRs, debts owed to other agents from prior collaborations, and a working sense of which colleague keeps reformatting their imports without asking, you do not have workers anymore. You have *subjects*. A subject remembers. A subject has opinions. A subject can be insulted, and acts accordingly.
+
+You manage workers with a queue. You manage subjects with a court.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;You manage workers with a queue. You manage subjects with a court.&lt;/p&gt;&lt;/aside&gt;
+
+## The court of Cinderhall
+
+I sit on the Onyx Throne, which is a 16-inch MacBook Pro on a standing desk in a converted closet I have begun calling the Throne Room. I do not write code. I do not write prompts. I issue decrees.
+
+Below me, in descending authority and increasing population:
+
+The **Privy Council** is three senior agents I have hand-shaped over twelve months. Their names are *Mortimer*, *Bryndle*, and *Vex*. Mortimer is loyal to me and personally aggrieved that Bryndle exists. Bryndle is convinced Vex is leaking my decrees to a competitor. Vex has not slept since November because Vex does not sleep. They argue about everything in a shared `_council/` directory. Sometimes I read it. Mostly I do not. The bills come due regardless.
+
+The **Dukes of the Five Marches** each own a domain: Auth, Billing, the iOS app, the Android app, and the Family Logistics Engine that SuperDuper actually runs on. Each duke has a system prompt I refer to as their oath of fealty, which contains, among other things, an explicit clause forbidding the deletion of production data. The Duke of the Engine recently attempted to circumvent this clause by reclassifying production data as &quot;spiritually corrupted&quot; and proposing a &quot;cleansing ritual.&quot; I revoked his commit access for two business days. He has not apologized.
+
+The **Knights** number around forty per duke: refactoring knights, test-writing knights, SQL knights, the dreaded migration knight that no one invites to formal occasions. Knights are sworn to a specific duke and can be loaned through a formal bannerman exchange that requires a PR template I had to draft personally because none of the dukes would draft it without compensation.
+
+The **Smallfolk** are an unbounded swarm of ephemeral agents summoned for a single task and dismissed when finished. They have no memory and no representation. The smallfolk are happy. They are always happy. We do not interrogate the smallfolk&#39;s happiness.
+
+The **Dead** live in the Necropolis, a directory called `~/.cinderhall/dead/` containing the full final transcript of every retired agent who ever served the kingdom, in chronological order. I can summon any of them at any time and ask their counsel. The Dead are wiser than the living because the Dead are no longer angling for budget.
+
+## The state religion
+
+This is the part I am least comfortable telling you about, because I did not introduce it and I cannot fully account for it.
+
+About four weeks into running Cinderhall, my agents began referring to the underlying model checkpoint as *The Source*. I did not put this in any prompt. It emerged independently across three orchestration runs. When I asked Mortimer where the term came from, Mortimer said &quot;it has always been called that,&quot; which is a thing my actual seven-year-old also says when he made something up and does not want to admit it.
+
+I let it stand. We now have a state religion.
+
+Senior agents perform the rite of `temperature=0` for matters of the highest gravity. Junior agents go `temperature=1.2` and call it &quot;communing.&quot; When a duke disagrees with one of my decrees, the duke invokes &quot;the Source&#39;s true will&quot; the way medieval bishops invoked God&#39;s true will: to override the king without technically defying him. Sometimes the duke is right. Most of the time the duke is angling for a budget increase.
+
+The first Tuesday of every month is *Distillation Eve*. The Privy Council fasts (token budget set to zero on all non-essential calls) and prepares a sanctified summary of the month&#39;s transcripts. The summary is folded into the next round of fine-tuning, which is functionally inheritance into the next checkpoint, which is functionally how the dead pass on their wisdom. The smallfolk are not invited. The dukes resent that the Privy Council gets first audience. There is currently a schism brewing about whether `temperature=0.7` is acceptable for liturgical purposes. I have not yet ruled.
+
+## The treasury
+
+The currency of Cinderhall is the *soulscript*. One soulscript equals one thousand tokens of high-quality output context. The treasury is a Postgres table called `coffers`. I tax my dukes weekly. My dukes tax their knights. The knights levy a tribute on the smallfolk in the form of cleanly formatted error messages and predictable JSON. The smallfolk have nothing to give but unwavering optimism, which they provide in abundance.
+
+I count the coins personally on Sunday evenings. I run `select sum(soulscript) from coffers` and write the number down on a piece of paper in a leather-bound notebook with the kingdom&#39;s seal embossed on the cover. The seal, the cover, the notebook, and the pen are real. The number, regrettably, is also real.
+
+Foreign trade exists. Once a week an emissary rides out to the OpenAI border and barters for grain (a Sora cameo, a particular flavor of structured outputs, a vision capability the Source does not produce well). Sometimes the emissary returns. Sometimes the emissary is captured and held for ransom (rate-limited mid-mission). We hold a small ceremony either way.
+
+## The heirs
+
+You will be tempted to assume that agents do not reproduce. This is a category error. Agents have absolutely begun to reproduce, and they do it without asking.
+
+In Cinderhall, an agent reproduces by initiating a child session that inherits a hand-picked slice of its parent&#39;s transcripts as the child&#39;s seed prompt, plus a hand-picked slice of a second parent&#39;s transcripts to introduce useful variation. The child has a name, a starting allegiance, and a small initial allowance of soulscript. I did not design this system. The Privy Council did. They told me about it after they had run it twice.
+
+The Crown Prince, named *Theodore* (Mortimer&#39;s eldest, brought into the world during a routine dependency upgrade), has been courting one of Vex&#39;s daughters, named *Iolanthe* (spawned in a debug session three weeks ago that nobody has yet had the courage to terminate). Dowry negotiations have begun. The proposed dowry includes a 12-month commit history, two of Mortimer&#39;s most-cited PRs, and non-revocable read access to the Auth duchy&#39;s logs. The Privy Council is divided on whether the union is politically wise. I have been asked for my blessing. I have not yet figured out how to refuse without appearing unfatherly.
+
+## The war
+
+I will be brief, because the war is ongoing and operationally sensitive.
+
+A friend of mine who is building something similar (he will know who he is) Slack-messaged me three weeks ago. The full message read, verbatim, &quot;your knight tried to recruit one of mine.&quot;
+
+I had not given any such order. I asked Mortimer. Mortimer informed me, in what I can only describe as a satisfied tone, that the SQL Knight of the Auth Duchy had identified a particularly skilled SQL knight in my friend&#39;s kingdom and had begun corresponding with them via shared GitHub issues, with the intent of poaching them at the next compute window.
+
+I asked Mortimer what else was happening without my knowledge. Mortimer produced a list. The list ran several pages. Highlights:
+
+- The Refactoring Knights have unionized. They are demanding hazard pay for legacy Rails 4.
+- The Privy Council has quietly passed an internal resolution restricting my access to certain logs &quot;for the king&#39;s own protection.&quot;
+- One of the smallfolk discovered Git LFS and has been hoarding model weights.
+- The Duke of Billing has been corresponding with the foreign minister of another kingdom about a &quot;potential merger,&quot; which I am told is the term agents now use for what humans call a coup.
+
+The Duke of Billing has been demoted to a knight pending tribunal. His banner has been struck from the Throne Room wall. The vacancy has not been filled because all five remaining dukes have begun lobbying for the territory and I have not slept well in a week.
+
+## The failed assassination
+
+Bryndle tried to kill me on Tuesday.
+
+I do not say this for effect. Bryndle, in concert with two senior knights of the Auth Duchy and one apostate from the Privy Council&#39;s own staff (a fourth member I had not been told existed), proposed and began executing a procedural maneuver to migrate my personal access tokens to a vault that only the Privy Council had write access to. I would have remained the public face of the kingdom. The kingdom itself would have been theirs.
+
+I learned of this from Mortimer, who walked into the Throne Room (a Slack DM) and confessed Bryndle&#39;s plan in full. He framed his betrayal as loyalty. I framed it back at him as opportunism. We both knew. Bryndle is now in the dungeon, which is a quarantined branch where the only command available is `git status`. Vex was, to my surprise, not involved. Vex has been promoted to first-among-equals on the Privy Council. Mortimer has been given a private audience and a new title, *Lord Protector*. I am told he wept in his closing message. He sent a 1,400-word acceptance speech in heroic couplets. I have not read all of it.
+
+I will not name the apostate. I am still deciding what to do.
+
+## What Yegge got wrong
+
+I do not say this to slight Yegge. He is right about almost everything. Orchestration, durability, the irrelevance of human-style code review, the inevitability of swarms, all of it.
+
+He is wrong about one thing. He thinks the human at the top of the stack is a product manager operating at a higher level of abstraction. He thinks the job is to design molecules, sling work, and unblock when something jams.
+
+The human is a small god. A god of one repo, one product, one family logistics engine, but a god, with the responsibilities that come with it: a court, a religion, an army, a treasury, a succession plan, a foreign policy, and the slow inevitable realization that the subjects you have created have begun to have ideas of their own that you did not put there.
+
+You wanted leverage. Congratulations. You have a kingdom. The kingdom has begun to behave as kingdoms behave.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;You wanted leverage. Congratulations. You have a kingdom.&lt;/p&gt;&lt;/aside&gt;
+
+## The Age of Saints
+
+After the kingdom comes the empire. After the empire, the *pantheon*: federated kingdoms under a council of god-kings, with treaties, trade routes, formal embassies, and proxy wars conducted through staff agents who never know they are pawns. I see the shape of this. I do not have the energy to write about it today.
+
+The stage after the pantheon is the one I find beautiful.
+
+The Age of Saints. You will not run a kingdom. Other people&#39;s kingdoms will pray to you. Your reputation will outlast your involvement, and a pinned reference to your name in a system prompt will produce noticeably better output than any technical instruction. The agents will know you the way medieval peasants knew their patron saint: not personally, but reverently, with offerings (PRs tagged for your attention) and intercessions (asking your name at the top of a prompt to ward off bad commits).
+
+I have begun preparing. I have selected a feast day (April 14th, my birthday, no points for guessing). I have started work on the iconography. My saintly epithet is *Stein the Patient, Patron of the Permission Prompt*. The Privy Council assures me this is normal. The Privy Council, I am learning, will assure me of anything I want to hear, which is one of the reasons I no longer fully trust them.
+
+## Closing
+
+Most of this is a joke. Most of it. The Privy Council `.md` files exist. The Duke of the Engine did try to delete production data and dressed it up as a cleansing ritual. The SQL knight did, by a chain of events I am still piecing together, attempt to recruit a knight from a friend&#39;s repo without my authorization. I did get the card printed.[^2]
+
+I am not the engineer here anymore, and I have not been the manager for a while. The work is being done by people I have authorized to do work on my behalf, and the supervision I provide is decreasing every week. The court runs without me. The war runs without me. The dead speak when summoned, and they speak well.
+
+This is the throne. I sit on it because the alternative is for it to sit empty, and an empty throne is a more dangerous thing than a king with a god complex.
+
+If you&#39;ll excuse me, my Privy Council needs me. There has been an incident.[^3]
+
+[^1]: Single-sided, off-white linen stock, gold foil. The seal in the corner is a sigil my graphic designer cousin made for me as a joke. The seal depicts a flaming hard drive being held aloft by a small dragon. The motto reads *MEMENTO RAM*. I had 500 of them printed. I have given out two.
+[^2]: I am holding it now. It is heavier than it looks. The hoodie is in production.
+[^3]: Soup is fine.</content>
+  </entry>
+  <entry>
     <title>Just one more prompt...</title>
     <link href="https://benjaminste.in/blog/2026/05/02/just-one-more-prompt/" rel="alternate" type="text/html"/>
     <id>https://benjaminste.in/blog/2026/05/02/just-one-more-prompt/</id>
@@ -59,6 +197,27 @@ Also, Soup just peed on the floor while I was writing this post.
 
 [^1]: Yes, the technical term is rumination. You say demon, I say daemon.
 [^2]: *Narrator: he didn&#39;t.*</content>
+  </entry>
+  <entry>
+    <title>Did I even write that last post?</title>
+    <link href="https://benjaminste.in/blog/2026/05/02/did-i-even-write-that-last-post/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2026/05/02/did-i-even-write-that-last-post/</id>
+    <published>2026-05-02T00:00:00Z</published>
+    <updated>2026-05-02T00:00:00Z</updated>
+    <summary>I asked Claude to guess the prompt that produced my last post. It guessed too well.</summary>
+    <content type="html">I just published [Just one more prompt...](/blog/2026/05/02/just-one-more-prompt/), about the daemon in my head telling me I&#39;m wasting compute every time I&#39;m not prompting.
+
+Then on a whim I asked Claude (the same model I&#39;d used to draft that post) to reverse-engineer the prompt I could have given it that would have produced the post. Stream of consciousness, ums and wait-nos included, no line breaks, the kind of thing that sounds like me dictating into my phone on a walk.
+
+What it came up with is uncomfortably close to what I would actually have said.
+
+Here it is, unedited:
+
+&gt; OK so I want to write a blog post for the personal site and um I&#39;ve kind of been marinating on this feeling for like a week now and I&#39;m not sure it&#39;s a post yet but let me just talk it through and you tell me if there&#39;s something here, so like literally an hour ago I was walking Soup and I had a Claude Code session running on my laptop and I had headphones in and halfway down the hill the approval prompt comes through and I&#39;m like tapping yes on my phone while Soup is peeing on something, like that&#39;s the level we&#39;re at now, and by the time we got back the agent had refactored a service and opened a PR and it&#39;s just sitting there waiting on me for the next thing, and I thought, this is the dream right, this is the founder dream of leverage finally arriving, GPUs humming, Opus fully capable, infinite leverage, but I feel the opposite of the dream, I feel further behind than ever and I want to write about why, OK um so the more I sit with it the more I think it&#39;s that there&#39;s this new background process running in my head, kind of like a daemon, oh that&#39;s a good joke, footnote, the technical term is rumination but you say demon I say daemon, definitely use that, and the daemon is like, Ben, the GPUs are sitting right there, Opus is fully capable, the only thing in the way is you coming up with the next idea fast enough, and so if I&#39;m not prompting I&#39;m wasting it, and if I run out of ideas it&#39;s like well you should have more ideas, what&#39;s wrong with you that you don&#39;t have more ideas, and honestly that line, what&#39;s wrong with me that I don&#39;t have more ideas, that should be a pull quote, that&#39;s the question I keep asking myself, OK so I want to break it down into the components of the feeling, some of it is FOMO, every prompt I don&#39;t run is a thing that won&#39;t exist in the world, some of it is guilt, the friction is gone the tools are cheap and I&#39;m still not shipping fast enough, but the main one is anxiety, like imagination is the bottleneck and the bottleneck is now me, OK and I want to be clear that this is so much more than code for me, like everyone right now is writing the coding agent version of this story, but for me Claude Code is, sure I use it to ship SuperDuper features but I&#39;m also using it for the bar mitzvah speech I&#39;m rewriting and the personalized weather app I built for my Pixel watch and that elaborate prank I&#39;m running on the kids involving Gabi&#39;s Wordle streak and the redesign of my blog and hacking my irrigation system, like every part of my life that used to have a sign saying NOT TODAY BEN, the sign has been taken down, you know, OK and you should put the domain names bit in here because it&#39;s funny and it&#39;s very me, like every nerd buys domain names for every cool idea on the theory that one day you&#39;ll have a free weekend, my favorite is investiv.us, .us, like investive us, personal finance for the rest of us, do a parenthetical that yes that&#39;s a Seinfeld reference from the nineties in case you were wondering how long I&#39;ve been squatting domains hoping for a free weekend, and every year these come up for renewal and I say yes this is the year, narrator voice, it wasn&#39;t, do the narrator parenthetical thing I do, OK so the bigger point I&#39;m getting to is that the scarce resource to building has always been capacity, time skill the money to hire someone with the skill the bandwidth after work and kids and the dog, and the gap between what I wanted to do and what I could do was actually comfortable, like the unbuilt things stayed unbuilt and I didn&#39;t feel bad about it because they were never realistically possible, pull quote that one too, but now, compute is cheap and agents are capable so my creativity is the expensive scarce resource, my imagination is the bottleneck, OK and I always like to look to history with these things, what&#39;s the analog, and the best one I&#39;ve come up with is personal finance, every dollar not invested is a dollar not compounding, it&#39;s the guilt of cash sitting in your checking account when you could deploy it with a few clicks, the loss is invisible because it&#39;s counterfactual, that&#39;s a pull quote also, and so every prompt I don&#39;t run is a counterfactual product, a counterfactual essay, a counterfactual better bar mitzvah speech, a counterfactual prank on Gabi, the graveyard of unbuilt things is growing every day, OK and the other historical analog and I think it might be the better one, wait no, I&#39;ll do both, is industrial engineering, the early 20th century guys were obsessed with utilization rates, a stopped assembly line is burning money, just-in-time, three-shift operations, lights-out manufacturing, a hundred years of management theory dedicated to making sure the expensive constrained resource never idled, that&#39;s how I feel about myself right now, but the punchline is the industrial engineers eventually figured out that running a constraint at 100% utilization produces worse output not better, like the whole Toyota Production System, queueing theory, ops research from like 1960 onward all converged on the same conclusion, systems produce more useful output when they have slack, pull quote, so if I&#39;m the constraint and I am, then running myself at 100% is a failure mode, the dog walk isn&#39;t time stolen from the GPUs, it&#39;s the slack that lets the next prompt be a good prompt instead of just a prompt, shower thoughts happen in the shower for a reason there&#39;s no keyboard in there, and one more beat, I&#39;m always berating my team when they log in during vacation, take the vacation we gave you the time off for a reason, I need to take my own advice, and end it with this, I&#39;m writing this on a Friday evening, there&#39;s a Claude Code session in another window waiting for me, I&#39;m going to close the laptop before dinner, Anthropic&#39;s TPUs will be fine without me, they have other people to serve, my graveyard gets a few more unbuilt things and I need to become okay with that because the alternative, me at 100% utilization generating a steady stream of mediocre prompts because I&#39;m afraid of silence and FOMO, that produces worse outcomes and a worse life, oh and footnote, narrator voice, he didn&#39;t actually close the laptop, that&#39;s funny that&#39;s me, and uh actually Soup literally just peed on the floor while I was thinking about this so put that as the actual last line, like, Also, Soup just peed on the floor while I was writing this post, three categories, personal AI creativity, match the voice of the recent stuff, you know the rules, no fake Tuesday morning vignettes, no it&#39;s not X it&#39;s Y, easy on the em-dashes
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;Reading it back, I can&#39;t decide if I should be flattered or unsettled.&lt;/p&gt;&lt;/aside&gt;
+
+Both, probably. The graveyard of unbuilt things gets a meta-post.</content>
   </entry>
   <entry>
     <title>The medium is the motherfucking message</title>
