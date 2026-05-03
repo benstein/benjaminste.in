@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Did I even write that last post?"
-date: 2026-05-02 23:30:00 -0700
+date: 2026-05-02 22:00:00 -0700
 categories: [personal, ai, creativity]
 excerpt: "For those of you who'd rather read the input tokens than the output tokens, here's the prompt behind the last post."
 ---
