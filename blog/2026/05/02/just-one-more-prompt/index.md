@@ -8,8 +8,6 @@
 
 ---
 
-*Claude Code gives me a constant stream of dopamine hits but also FOMO, guilt, and anxiety.*
-
 My dog Soup needs a walk. I clip the leash on, grab my headphones, open Claude Code on my laptop one more time, kick off an agent session, and head out the door. Halfway down the hill I get the approval prompt and tap yes without breaking stride. Soup pees on something. I tap yes again. By the time we're back, the agent has refactored a service, opened a PR, and is waiting on me to build the next thing.
 
 I thought this would feel great. But in reality I feel like I'm getting further and further behind.
