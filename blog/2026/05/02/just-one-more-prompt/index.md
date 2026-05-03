@@ -26,6 +26,8 @@ Like most nerds, I buy domain names for every cool idea based on the theory that
 
 The scarce resource to building has always been capacity. Time, skill, the dollars it would have cost to hire someone who had the skill, the bandwidth after work and kids and dog. The gap between the things I wanted to do and the things I could do is, well, comfortable. The unbuilt things stayed unbuilt and I didn't feel bad about it because they were not realistically possible anyway.
 
+<aside class="pull-quote"><p>The unbuilt things stayed unbuilt and I didn't feel bad about it because they were not realistically possible anyway.</p></aside>
+
 But now, compute is so cheap and agents are so capable that my creativity is the expensive scarce thing in the system. My imagination, my ability to specify the next useful task, my willingness to actually start the thing instead of just thinking about starting the thing.
 
 The problem I'm describing with AI agents is obviously new, but is the mindset and the anxiety feeling? As always, I like to look to history. The closest parallel I could come up with is personal finance: every dollar not invested is a dollar not compounding. It's the guilt about how much cash is sitting in your checking account when you could invest it with a few clicks, but you don't. The loss is the *money you would have made* if you'd deployed the money you have, but the loss is invisible because it's counterfactual.
