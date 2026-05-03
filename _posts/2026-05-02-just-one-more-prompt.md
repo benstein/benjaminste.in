@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Just one more prompt..."
-date: 2026-05-02
+date: 2026-05-02 23:59:00 -0700
 categories: [personal, ai, creativity]
 excerpt: "Claude Code gives me a constant stream of dopamine hits but also FOMO, guilt, and anxiety."
 ---
