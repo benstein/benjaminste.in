@@ -48,7 +48,7 @@ I always berate my employees when they log in to work during vacation. Take the 
 
 I am writing this post on a Friday evening. There is a Claude Code session waiting for me in another window. I'm going to close my laptop before I go to dinner[^2]. Anthropic's TPUs will be fine without me. They'll miss me of course, but they have other people to serve. My graveyard will have a few more unbuilt things. And I need to become okay with that. Because the alternative, me at 100% utilization generating a steady stream of mediocre prompts because I'm afraid of silence and FOMO, produces worse outcomes and a worse life.
 
-Soup just peed on the floor while I was writing this post.
+Also, Soup just peed on the floor while I was writing this post.
 
 [^1]: Yes, the technical term is rumination. You say demon, I say daemon.
 [^2]: *Narrator: he didn't.*
