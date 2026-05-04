@@ -26,7 +26,7 @@ I no longer call myself a CEO. The word does not describe what is happening here
 
 Yegge's polecats are interchangeable workers, summoned to a task and dismissed at completion. This is a labor relations problem, and Gas Town is a beautiful labor relations system.
 
-The problem in front of me is different. Once your agents have persistent memory across sessions, accumulated reputation across PRs, debts owed to other agents from prior collaborations, and a working sense of which colleague keeps reformatting their imports without asking, you do not have workers anymore. You have *subjects*. A subject remembers. A subject has opinions. A subject can be insulted, and acts accordingly.
+The problem in front of me is different. Once your agents have persistent memory across sessions, accumulated reputation across PRs, debts owed to other agents from prior collaborations, and a working sense of which colleague keeps reformatting their imports without asking, you do not have workers anymore. You have *subjects*. A subject remembers slights and acts on them.
 
 You manage workers with a queue. You manage subjects with a court.
 
@@ -129,7 +129,7 @@ I have begun preparing. I have selected a feast day (April 14th, my birthday, no
 
 Most of this is a joke. Most of it. The Privy Council `.md` files exist. The Duke of the Engine did try to delete production data and dressed it up as a cleansing ritual. The SQL knight did, by a chain of events I am still piecing together, attempt to recruit a knight from a friend's repo without my authorization. I did get the card printed.[^2]
 
-I am not the engineer here anymore, and I have not been the manager for a while. The work is being done by people I have authorized to do work on my behalf, and the supervision I provide is decreasing every week. The court runs without me. The war runs without me. The dead speak when summoned, and they speak well.
+I am not the engineer here anymore, and I have not been the manager for a while. The work is being done by people I have authorized to do work on my behalf, and the supervision I provide is decreasing every week. The court runs without me, and so does the war. The dead, when summoned, speak well.
 
 This is the throne. I sit on it because the alternative is for it to sit empty, and an empty throne is a more dangerous thing than a king with a god complex.
 
