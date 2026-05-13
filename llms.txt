@@ -1,0 +1,21 @@
+---
+---
+# {{ site.title }}
+
+> Personal blog by {{ site.author }}. Posts on AI, startups, family, engineering, education, and creativity.
+
+Every post is available in three formats at parallel URLs: HTML at the canonical path, plain markdown at `/index.md`, and structured JSON at `/index.json`. The links below point to the markdown versions, which are the most useful for agent consumption. Discovery for an individual page is also exposed via `<link rel="alternate" type="text/markdown">` and `<link rel="alternate" type="application/json">` in the HTML `<head>`.
+
+## Posts
+{% for post in site.posts %}
+- [{{ post.title }}]({{ site.url }}{{ post.url }}index.md) — {{ post.date | date: "%Y-%m-%d" }}{% if post.excerpt %}. {{ post.excerpt | strip_html | strip_newlines }}{% endif %}
+{%- endfor %}
+
+## Pages
+
+- [Home]({{ site.url }}/)
+- [Product Advisor]({{ site.url }}/product-advisor/)
+- [Nerd Stuff]({{ site.url }}/nerd-stuff/)
+- [Atom feed]({{ site.url }}/feed.xml)
+- [Sitemap]({{ site.url }}/sitemap.xml)
+- [AI content manifest]({{ site.url }}/ai-content-manifest.json)

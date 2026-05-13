@@ -38,6 +38,7 @@ Good recent posts to match voice against when drafting: `_posts/2026-04-08-we-us
 
 - Post listings on the homepage (liquid iterates `site.posts`).
 - `ai-content-manifest.json` (describes patterns, not individual posts).
+- `llms.txt` — Jekyll renders it at build time via Liquid (`{% for post in site.posts %}`). New posts show up automatically; do not edit by hand.
 - `_site/` (gitignored; `bundle exec jekyll build` regenerates it).
 
 ## Images and icons
