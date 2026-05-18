@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Wordle: Endgame</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1a1a1a;
+      --muted: #787c7e;
+      --border: #d3d6da;
+      --tile-empty-border: #d3d6da;
+      --tile-active-border: #878a8c;
+      --green: #6aaa64;
+      --yellow: #c9b458;
+      --gray: #787c7e;
+      --key-bg: #d3d6da;
+      --key-text: #1a1a1a;
+      --lock: #2a2a2a;
+      --banner-bg: #fff4d6;
+      --banner-border: #e6c97a;
+      --error-bg: #fde2e2;
+      --error-border: #f5b5b5;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+
+    #practice-banner {
+      width: 100%;
+      background: var(--banner-bg);
+      border-bottom: 1px solid var(--banner-border);
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 13px;
+      flex-wrap: wrap;
+    }
+    #practice-banner.error {
+      background: var(--error-bg);
+      border-bottom-color: var(--error-border);
+    }
+    #practice-banner.hidden { display: none; }
+    #practice-banner button {
+      background: rgba(0, 0, 0, 0.08);
+      border: none;
+      border-radius: 4px;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      color: inherit;
+      font-family: inherit;
+    }
+    #practice-banner button:hover { background: rgba(0, 0, 0, 0.16); }
+
+    header {
+      width: 100%;
+      max-width: 500px;
+      padding: 10px 12px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+    header h1 {
+      font-family: "Helvetica Neue", "Georgia", serif;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      flex: 1;
+      text-align: center;
+    }
+    .header-side { width: 80px; display: flex; align-items: center; }
+    .header-side.right { justify-content: flex-end; }
+    a.back-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+    }
+    a.back-link:hover { color: var(--fg); }
+
+    #game {
+      flex: 1;
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 0 0;
+    }
+
+    #grid-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 14px 0;
+      flex: 1;
+      justify-content: center;
+      width: 100%;
+    }
+
+    #grid {
+      display: grid;
+      grid-template-rows: repeat(6, 1fr);
+      gap: 5px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 5px;
+      position: relative;
+    }
+
+    .tile {
+      width: 56px;
+      height: 56px;
+      border: 2px solid var(--tile-empty-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      font-weight: 700;
+      text-transform: uppercase;
+      user-select: none;
+      background: var(--bg);
+      color: var(--fg);
+      transition: transform 0.1s ease;
+    }
+    .tile.filled {
+      border-color: var(--tile-active-border);
+      animation: pop 0.1s ease;
+    }
+    @keyframes pop { 0% { transform: scale(1); } 50% { transform: scale(1.07); } 100% { transform: scale(1); } }
+
+    .tile.green { background: var(--green); border-color: var(--green); color: white; }
+    .tile.yellow { background: var(--yellow); border-color: var(--yellow); color: white; }
+    .tile.gray { background: var(--gray); border-color: var(--gray); color: white; }
+    .tile.revealing { animation: flip 0.5s ease forwards; }
+    @keyframes flip {
+      0% { transform: rotateX(0); }
+      50% { transform: rotateX(90deg); }
+      100% { transform: rotateX(0); }
+    }
+
+    .row.seed .lock {
+      position: absolute;
+      right: -22px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      color: var(--lock);
+      opacity: 0.85;
+    }
+
+    .row.shake { animation: shake 0.35s ease; }
+    @keyframes shake {
+      10%, 90% { transform: translateX(-2px); }
+      20%, 80% { transform: translateX(4px); }
+      30%, 50%, 70% { transform: translateX(-8px); }
+      40%, 60% { transform: translateX(8px); }
+    }
+
+    #message {
+      min-height: 22px;
+      margin: 8px 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--fg);
+      text-align: center;
+    }
+    #message.toast {
+      background: var(--fg);
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 4px;
+      display: inline-block;
+      min-height: auto;
+    }
+
+    #debug-line {
+      margin: 4px 0 8px;
+      font-size: 12px;
+      color: var(--muted);
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    }
+    #debug-line.hidden { display: none; }
+
+    #keyboard {
+      width: 100%;
+      max-width: 500px;
+      padding: 8px 6px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .kb-row {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      touch-action: manipulation;
+    }
+    .key {
+      min-width: 30px;
+      flex: 1 1 36px;
+      max-width: 44px;
+      height: 56px;
+      border: none;
+      border-radius: 4px;
+      background: var(--key-bg);
+      color: var(--key-text);
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .key.wide { flex: 1.6 1 56px; max-width: 70px; font-size: 11px; }
+    .key.green { background: var(--green); color: white; }
+    .key.yellow { background: var(--yellow); color: white; }
+    .key.gray { background: var(--gray); color: white; }
+
+    #footer-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 6px 0 4px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    #footer-controls label {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      user-select: none;
+    }
+    #footer-controls input[type="checkbox"] {
+      accent-color: var(--green);
+    }
+
+    #modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 10;
+    }
+    #modal-backdrop.hidden { display: none; }
+    #modal {
+      background: var(--bg);
+      border-radius: 8px;
+      padding: 24px;
+      max-width: 360px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+    #modal h2 { font-size: 22px; margin-bottom: 8px; }
+    #modal .target {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      margin: 14px 0 18px;
+      color: var(--green);
+    }
+    #modal.lose .target { color: var(--fg); }
+    #modal p { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+    #modal button {
+      background: var(--fg);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 18px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      margin: 0 4px;
+    }
+    #modal button.secondary {
+      background: transparent;
+      color: var(--fg);
+      border: 1px solid var(--border);
+    }
+
+    @media (max-width: 400px) {
+      .tile { width: 48px; height: 48px; font-size: 26px; }
+      .key { height: 50px; font-size: 13px; }
+      .key.wide { font-size: 10px; }
+      .row.seed .lock { right: -18px; width: 12px; height: 12px; }
+      header h1 { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="practice-banner" class="hidden">
+    <span id="practice-text">Practice mode — not counted.</span>
+    <button id="new-random-btn">New random</button>
+    <button id="copy-link-btn">Copy link</button>
+  </div>
+
+  <header>
+    <div class="header-side"><a class="back-link" href="/nerd-stuff/">&larr; Nerd Stuff</a></div>
+    <h1>Wordle: Endgame</h1>
+    <div class="header-side right"></div>
+  </header>
+
+  <div id="game">
+    <div id="grid-wrap">
+      <div id="message"></div>
+      <div id="grid"></div>
+      <div id="debug-line" class="hidden"></div>
+    </div>
+
+    <div id="footer-controls">
+      <label><input type="checkbox" id="hard-mode-toggle"> Hard mode</label>
+    </div>
+
+    <div id="keyboard"></div>
+  </div>
+
+  <div id="modal-backdrop" class="hidden">
+    <div id="modal">
+      <h2 id="modal-title"></h2>
+      <div class="target" id="modal-target"></div>
+      <p id="modal-message"></p>
+      <button id="modal-new-btn" class="secondary">New random</button>
+      <button id="modal-close-btn">Close</button>
+    </div>
+  </div>
+
+  <script src="words.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
