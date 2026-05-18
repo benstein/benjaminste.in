@@ -5,3 +5,7 @@ gem "github-pages", group: :jekyll_plugins
 
 # For local development
 gem "webrick", "~> 1.8"
+
+# Analytics
+gem "posthog-ruby"
+gem "dotenv"

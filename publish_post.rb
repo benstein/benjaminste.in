@@ -15,8 +15,33 @@ require 'cgi'
 require 'fileutils'
 require 'date'
 
+begin
+  require 'dotenv/load'
+rescue LoadError
+  # dotenv not available; fall back to existing env
+end
+
+begin
+  require 'posthog'
+rescue LoadError
+  # posthog-ruby not installed; analytics will be skipped
+end
+
 SITE_URL = 'https://benjaminste.in'
 AUTHOR   = 'Benjamin Stein'
+POSTHOG_DISTINCT_ID = 'benstein'
+
+def posthog_client
+  return @posthog_client if defined?(@posthog_client)
+  token = ENV['POSTHOG_PROJECT_TOKEN']
+  @posthog_client = if token && defined?(PostHog)
+    PostHog::Client.new(
+      api_key: token,
+      host: ENV.fetch('POSTHOG_HOST', 'https://us.i.posthog.com'),
+      on_error: proc { |status, msg| warn "PostHog error: #{status} - #{msg}" }
+    )
+  end
+end
 
 post_path = ARGV[0]
 abort "Usage: ruby publish_post.rb _posts/YYYY-MM-DD-slug.md" unless post_path && File.exist?(post_path)
@@ -107,5 +132,20 @@ else
   File.write('feed.xml', feed)
   puts "Updated feed.xml"
 end
+
+posthog_client&.capture(
+  distinct_id: POSTHOG_DISTINCT_ID,
+  event: 'post_published',
+  properties: {
+    'slug'       => slug,
+    'title'      => fm['title'],
+    'categories' => fm['categories'] || [],
+    'post_url'   => post_url,
+    'year'       => year,
+    'month'      => month,
+    'day'        => day
+  }
+)
+posthog_client&.shutdown
 
 puts "Done. Review the diff with: git diff --stat"

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Say it! Play it!</title>
-  <link rel="icon" href="/arena-survival/favicon.ico">
+  <link rel="icon" href="/say-it-play-it/favicon.ico">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body { width: 100%; height: 100%; overflow: hidden; background: #c8d0d8; }
@@ -93,7 +93,7 @@
     .changelog-entry .name { color: #d35400; font-weight: bold; }
     .changelog-entry .desc { color: #1a2a3a; }
   </style>
-  <script type="module" crossorigin src="/arena-survival/assets/index-CAv39FjP.js"></script>
+  <script type="module" crossorigin src="/say-it-play-it/assets/index-CAv39FjP.js"></script>
 </head>
 <body>
   <div id="game-container">
@@ -101,7 +101,7 @@
     <div id="changelog-panel">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
         <div style="display:flex;align-items:center;gap:10px;">
-          <img id="game-logo" src="/arena-survival/assets/logo.jpg" alt="Say it! Play it!">
+          <img id="game-logo" src="/say-it-play-it/assets/logo.jpg" alt="Say it! Play it!">
           <h2 style="margin-bottom:0">Changelog</h2>
         </div>
         <button id="fullscreen-btn" title="Toggle fullscreen" style="background:none;border:1px solid #95a5a6;border-radius:4px;padding:4px 6px;cursor:pointer;color:#5d6d7e;display:flex;align-items:center;">
@@ -136,7 +136,7 @@
   <div id="build-overlay" style="display:none">
     <div class="build-bg"></div>
     <div class="build-content">
-      <img class="build-logo" src="/arena-survival/assets/logo.jpg" alt="Say it! Play it!">
+      <img class="build-logo" src="/say-it-play-it/assets/logo.jpg" alt="Say it! Play it!">
       <div id="build-name" class="build-title"></div>
       <div id="build-desc" class="build-desc"></div>
       <div class="build-gear-wrap"><div class="build-gear"></div></div>
@@ -380,7 +380,7 @@
       }
 
       function poll() {
-        fetch('/arena-survival/building.json?t=' + Date.now())
+        fetch('/say-it-play-it/building.json?t=' + Date.now())
           .then(function(r) { return r.json(); })
           .then(function(data) {
             if (data.building) {
