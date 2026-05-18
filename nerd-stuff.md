@@ -15,9 +15,9 @@ permalink: /nerd-stuff/
     <h3 class="post-card-title">Connect 4</h3>
     <p class="post-card-excerpt">Play Connect 4 against an AI opponent right in your browser. Drop your pieces and try to get four in a row.</p>
   </a>
-  <a href="https://github.com/benstein/makerfaire2026" class="post-card">
+  <a href="/arena-survival/" class="post-card">
     <h3 class="post-card-title">Arena Survival (Maker Faire 2026)</h3>
-    <p class="post-card-excerpt">A live exhibit I'm running at the Piedmont School Maker Faire. A kid walks up to the TV, tells me how they want to change the game ("make the player a dragon", "the enemies should be dancing bananas", "add a freeze ray"), and Claude Code edits the source code right there in front of them. A few seconds later the game reloads and they play their idea. Then the next kid walks up. It's the most fun thing.</p>
+    <p class="post-card-excerpt">A live exhibit at the Piedmont School Maker Faire. A kid walked up to the TV, told me how they wanted to change the game ("make the player a dragon", "the enemies should be dancing bananas", "add a freeze ray"), and Claude Code edited the source code right there in front of them. A few seconds later the game reloaded and they played their idea. Then the next kid walked up. This is the final version after ~19 kids iterated on it. It is unhinged. <a href="https://github.com/benstein/makerfaire2026" onclick="event.stopPropagation()">Source on GitHub.</a></p>
   </a>
   <a href="https://github.com/benstein/md2gdoc" class="post-card">
     <h3 class="post-card-title">md2gdoc</h3>

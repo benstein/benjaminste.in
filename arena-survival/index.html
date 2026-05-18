@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Say it! Play it!</title>
+  <link rel="icon" href="/arena-survival/favicon.ico">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background: #c8d0d8; }
+    #game-container {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+    }
+    #game-canvas {
+      flex: 3;
+      min-width: 0;
+      display: block;
+      background: #eaf2f8;
+    }
+    #changelog-panel {
+      flex: 1;
+      background: #dde4ea;
+      padding: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #2c3e50;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    #changelog-entries { flex: 1; overflow-y: auto; min-height: 0; }
+    #game-logo {
+      height: 44px;
+      width: 44px;
+      border-radius: 6px;
+      flex-shrink: 0;
+      box-shadow: 0 0 10px rgba(255, 200, 0, 0.3);
+    }
+    .build-logo {
+      width: 150px;
+      height: 150px;
+      border-radius: 14px;
+      margin-bottom: 18px;
+      box-shadow: 0 0 30px rgba(255, 200, 0, 0.55), 0 4px 16px rgba(0,0,0,0.3);
+      animation: build-logo-float 2.8s ease-in-out infinite;
+    }
+    @keyframes build-logo-float {
+      0%, 100% { transform: translateY(0)   scale(1.00); }
+      50%       { transform: translateY(-6px) scale(1.03); }
+    }
+    #controls-help {
+      flex-shrink: 0;
+      border-top: 1px solid #b0b8c0;
+      padding-top: 16px;
+      margin-top: 16px;
+      font-size: 16px;
+      color: #3a4a5a;
+      line-height: 2;
+    }
+    #controls-help h3 {
+      color: #d35400;
+      font-size: 17px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    #controls-help .control-row {
+      display: flex;
+      justify-content: space-between;
+    }
+    #controls-help .control-key {
+      color: #2c3e50;
+      font-weight: bold;
+    }
+    #changelog-panel h2 {
+      color: #d35400;
+      font-size: 22px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+    #fullscreen-btn:hover { color: #d35400; border-color: #d35400; }
+    .changelog-entry {
+      border-left: 4px solid #95a5a6;
+      padding-left: 12px;
+      margin-bottom: 16px;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+    .changelog-entry .version { color: #d35400; font-weight: bold; }
+    .changelog-entry .name { color: #d35400; font-weight: bold; }
+    .changelog-entry .desc { color: #1a2a3a; }
+  </style>
+  <script type="module" crossorigin src="/arena-survival/assets/index-CAv39FjP.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas"></canvas>
+    <div id="changelog-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <img id="game-logo" src="/arena-survival/assets/logo.jpg" alt="Say it! Play it!">
+          <h2 style="margin-bottom:0">Changelog</h2>
+        </div>
+        <button id="fullscreen-btn" title="Toggle fullscreen" style="background:none;border:1px solid #95a5a6;border-radius:4px;padding:4px 6px;cursor:pointer;color:#5d6d7e;display:flex;align-items:center;">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:16px;height:16px;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+          </svg>
+        </button>
+      </div>
+      <div id="changelog-entries"></div>
+      <div id="controls-help">
+        <h3>Controls</h3>
+        <div class="control-row"><span>Move</span><span class="control-key">Left Stick / WASD</span></div>
+        <div class="control-row"><span>Fire</span><span class="control-key">A Button / Space</span></div>
+        <div class="control-row"><span>Restart</span><span class="control-key">Start / Enter</span></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleFullscreen() {
+      if (document.fullscreenElement) {
+        document.exitFullscreen();
+      } else {
+        document.documentElement.requestFullscreen();
+      }
+    }
+    document.getElementById('fullscreen-btn').addEventListener('click', toggleFullscreen);
+    document.getElementById('game-canvas').addEventListener('dblclick', toggleFullscreen);
+  </script>
+
+  <!-- Build overlay: independent of Vite modules, survives HMR and syntax errors -->
+  <div id="build-overlay" style="display:none">
+    <div class="build-bg"></div>
+    <div class="build-content">
+      <img class="build-logo" src="/arena-survival/assets/logo.jpg" alt="Say it! Play it!">
+      <div id="build-name" class="build-title"></div>
+      <div id="build-desc" class="build-desc"></div>
+      <div class="build-gear-wrap"><div class="build-gear"></div></div>
+      <div id="build-steps" class="build-steps"></div>
+      <div class="build-bar-wrap">
+        <div id="build-bar" class="build-bar"></div>
+      </div>
+      <div id="build-pct" class="build-pct"></div>
+    </div>
+  </div>
+  <style>
+    #build-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 999999;
+      font-family: 'Courier New', monospace;
+    }
+    #build-overlay .build-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(135deg, #ffe0f0, #ffd0e8, #ffe8d0, #ffffd0, #d0ffd8, #d0e8ff, #e8d0ff, #ffd0f0);
+      background-size: 400% 400%;
+      animation: build-bg-shift 8s ease infinite;
+    }
+    @keyframes build-bg-shift {
+      0%,100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    #build-overlay .build-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 40px;
+    }
+    #build-overlay .build-title {
+      font-size: 44px;
+      font-weight: bold;
+      color: #ff69b4;
+      text-shadow: 2px 2px 0 #ffb6c1;
+      margin-bottom: 8px;
+      animation: build-title-bounce 1.5s ease-in-out infinite;
+    }
+    @keyframes build-title-bounce {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    #build-overlay .build-desc {
+      font-size: 20px;
+      color: #c070a0;
+      margin-bottom: 32px;
+    }
+    #build-overlay .build-gear-wrap {
+      margin-bottom: 32px;
+    }
+    #build-overlay .build-gear {
+      width: 80px; height: 80px;
+      border: 8px solid #ff69b4;
+      border-radius: 50%;
+      border-top-color: #ffd700;
+      border-right-color: #69b4ff;
+      border-bottom-color: #69ff69;
+      animation: build-gear-spin 1.5s linear infinite;
+    }
+    @keyframes build-gear-spin {
+      to { transform: rotate(360deg); }
+    }
+    #build-overlay .build-steps {
+      text-align: left;
+      margin-bottom: 32px;
+      min-width: 350px;
+    }
+    #build-overlay .build-step {
+      font-size: 18px;
+      padding: 6px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    #build-overlay .build-step.done {
+      color: rgba(0,0,0,0.55);
+    }
+    #build-overlay .build-step.done .step-icon {
+      color: #69ff69;
+    }
+    #build-overlay .build-step.active {
+      color: #333;
+      font-weight: bold;
+    }
+    #build-overlay .build-step.active .step-icon {
+      color: #ff69b4;
+      animation: build-step-pulse 0.8s ease-in-out infinite;
+    }
+    @keyframes build-step-pulse {
+      0%,100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    #build-overlay .build-step.pending {
+      color: rgba(0,0,0,0.2);
+    }
+    .step-icon { font-size: 20px; width: 24px; text-align: center; }
+    #build-overlay .build-bar-wrap {
+      width: 50%;
+      max-width: 500px;
+      height: 14px;
+      background: rgba(0,0,0,0.08);
+      border-radius: 7px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    #build-overlay .build-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #ff6b6b, #ffa500, #ffd700, #69ff69, #69b4ff, #b469ff);
+      background-size: 200% 100%;
+      animation: build-bar-shimmer 2s linear infinite;
+      border-radius: 7px;
+      transition: width 0.5s ease;
+    }
+    @keyframes build-bar-shimmer {
+      to { background-position: 200% 0; }
+    }
+    #build-overlay .build-pct {
+      font-size: 16px;
+      font-weight: bold;
+      color: #ff69b4;
+    }
+  </style>
+  <script>
+    // Build overlay — polls building.json to show a progress screen during live edits.
+    // On this static deployment building.json always returns { building: false }.
+
+    // STEP 1: Patch WebSocket BEFORE Vite's client connects.
+    (function() {
+      var _WS = window.WebSocket;
+      var buildingActive = sessionStorage.getItem('building') === 'true';
+      var pendingReload = false;
+
+      window.WebSocket = function(url, protocols) {
+        var ws = protocols ? new _WS(url, protocols) : new _WS(url);
+        var origOnMessage;
+
+        Object.defineProperty(ws, 'onmessage', {
+          get: function() { return origOnMessage; },
+          set: function(fn) {
+            origOnMessage = fn;
+            ws._wrappedOnMessage = function(event) {
+              try {
+                var data = JSON.parse(event.data);
+                if ((data.type === 'full-reload' || data.type === 'page-reload') && buildingActive) {
+                  pendingReload = true;
+                  return;
+                }
+              } catch(e) {}
+              fn.call(ws, event);
+            };
+            ws.addEventListener('message', function(){});
+          }
+        });
+
+        var origAEL = ws.addEventListener.bind(ws);
+        ws.addEventListener = function(type, handler, opts) {
+          if (type === 'message') {
+            origAEL(type, function(event) {
+              try {
+                var data = JSON.parse(event.data);
+                if ((data.type === 'full-reload' || data.type === 'page-reload') && buildingActive) {
+                  pendingReload = true;
+                  return;
+                }
+              } catch(e) {}
+              handler.call(ws, event);
+            }, opts);
+          } else {
+            origAEL(type, handler, opts);
+          }
+        };
+        return ws;
+      };
+      window.WebSocket.prototype = _WS.prototype;
+      window.WebSocket.CONNECTING = _WS.CONNECTING;
+      window.WebSocket.OPEN = _WS.OPEN;
+      window.WebSocket.CLOSING = _WS.CLOSING;
+      window.WebSocket.CLOSED = _WS.CLOSED;
+
+      window.__buildOverlay = {
+        setBuilding: function(v) { buildingActive = v; },
+        isBuilding: function() { return buildingActive; },
+        hasPendingReload: function() { return pendingReload; }
+      };
+    })();
+
+    // STEP 2: Overlay display + polling
+    (function() {
+      var overlay = document.getElementById('build-overlay');
+      var nameEl = document.getElementById('build-name');
+      var descEl = document.getElementById('build-desc');
+      var stepsEl = document.getElementById('build-steps');
+      var barEl = document.getElementById('build-bar');
+      var pctEl = document.getElementById('build-pct');
+      var ctrl = window.__buildOverlay;
+      var wasBuilding = ctrl.isBuilding();
+
+      if (wasBuilding) {
+        overlay.style.display = '';
+        try {
+          var cached = JSON.parse(sessionStorage.getItem('buildData'));
+          if (cached) updateDisplay(cached);
+        } catch(e) {}
+      }
+
+      function updateDisplay(data) {
+        nameEl.textContent = (data.kid || data.name || 'Someone') + "'s Change";
+        descEl.textContent = data.description || '';
+        if (data.steps && data.steps.length) {
+          var html = '';
+          var doneCount = 0;
+          for (var i = 0; i < data.steps.length; i++) {
+            var step = data.steps[i];
+            var isDone = step.done;
+            var isActive = !isDone && (i === 0 || data.steps[i-1].done);
+            if (isDone) doneCount++;
+            var cls = isDone ? 'done' : (isActive ? 'active' : 'pending');
+            var icon = isDone ? '✔' : (isActive ? '●' : '○');
+            html += '<div class="build-step ' + cls + '"><span class="step-icon">' + icon + '</span>' + (step.label || step.text || step.title || step.name || '...') + '</div>';
+          }
+          stepsEl.innerHTML = html;
+          var pct = Math.round((doneCount / data.steps.length) * 100);
+          barEl.style.width = pct + '%';
+          pctEl.textContent = pct + '%';
+        } else {
+          stepsEl.innerHTML = '<div class="build-step active"><span class="step-icon">●</span>Thinking hard about changes...</div>';
+          barEl.style.width = '0%';
+          pctEl.textContent = '';
+        }
+        var viteErr = document.querySelector('vite-error-overlay');
+        if (viteErr) viteErr.style.display = 'none';
+      }
+
+      function poll() {
+        fetch('/arena-survival/building.json?t=' + Date.now())
+          .then(function(r) { return r.json(); })
+          .then(function(data) {
+            if (data.building) {
+              wasBuilding = true;
+              ctrl.setBuilding(true);
+              overlay.style.display = '';
+              sessionStorage.setItem('building', 'true');
+              sessionStorage.setItem('buildData', JSON.stringify(data));
+              updateDisplay(data);
+            } else if (wasBuilding) {
+              wasBuilding = false;
+              ctrl.setBuilding(false);
+              sessionStorage.removeItem('building');
+              sessionStorage.removeItem('buildData');
+              overlay.style.display = 'none';
+              if (ctrl.hasPendingReload()) {
+                location.reload();
+              }
+            }
+          })
+          .catch(function() {});
+      }
+
+      poll();
+      setInterval(poll, 500);
+    })();
+  </script>
+</body>
+</html>
