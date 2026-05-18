@@ -590,6 +590,7 @@ const App = {
   status: "in-progress",
   toastTimer: null,
   acceptInput: true,
+  pendingReveal: null,  // row index whose colors are being unveiled by the flip animation
 
   init() {
     const urlParams = parseUrlParams();
@@ -712,7 +713,9 @@ const App = {
           const playerRowIdx = r - n;
           if (playerRowIdx < this.guesses.length) {
             letter = this.guesses[playerRowIdx][c];
-            color = this.guessColors[playerRowIdx][c];
+            // Suppress colors for the row currently mid-flip; animateRowReveal
+            // applies them at the midpoint of each tile's rotation.
+            if (r !== this.pendingReveal) color = this.guessColors[playerRowIdx][c];
           } else if (playerRowIdx === this.guesses.length && this.status === "in-progress") {
             letter = this.currentGuess[c] || "";
           }
@@ -817,12 +820,14 @@ const App = {
     this.guesses.push(guess);
     this.guessColors.push(colors);
     this.currentGuess = "";
+    this.pendingReveal = this.puzzle.n + this.guesses.length - 1;
 
     // Disable hard-mode toggle once a guess has been submitted.
     document.getElementById("hard-mode-toggle").disabled = true;
 
     this.renderGrid();
-    this.animateRowReveal(this.puzzle.n + this.guesses.length - 1, colors, () => {
+    this.animateRowReveal(this.pendingReveal, colors, () => {
+      this.pendingReveal = null;
       this.renderKeyboard();
       const won = colors.every(c => c === GREEN);
       const remainingRows = ROWS - this.puzzle.n - this.guesses.length;
