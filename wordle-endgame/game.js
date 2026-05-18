@@ -552,6 +552,7 @@ function buildPuzzleFromUrl(urlParams) {
 // =============================================================================
 
 const STORAGE_PREFIX = "wordle-endgame:";
+const SETTINGS_KEY = STORAGE_PREFIX + "settings";
 
 function storageKey(puzzleId) {
   return STORAGE_PREFIX + puzzleId;
@@ -572,6 +573,24 @@ function saveState(puzzleId, data) {
     localStorage.setItem(storageKey(puzzleId), JSON.stringify(data));
   } catch (e) {
     // Quota or disabled storage — fine, just don't persist.
+  }
+}
+
+function loadSettings() {
+  try {
+    const raw = localStorage.getItem(SETTINGS_KEY);
+    if (!raw) return {};
+    return JSON.parse(raw);
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveSettings(data) {
+  try {
+    localStorage.setItem(SETTINGS_KEY, JSON.stringify(data));
+  } catch (e) {
+    // ignore
   }
 }
 
@@ -607,13 +626,21 @@ const App = {
       this.isPractice = built.isPractice;
     }
 
-    // Restore saved game state for this puzzle.
+    // Hard mode is a global preference. Per-puzzle save records the mode the
+    // puzzle was started in, so a resumed in-progress game stays consistent
+    // even if the global preference has since changed.
+    const settings = loadSettings();
+    this.hardMode = !!settings.hardMode;
+
     const saved = loadSaved(this.puzzle.id);
     if (saved) {
       this.guesses = saved.guesses || [];
       this.guessColors = saved.guessColors || [];
       this.status = saved.status || "in-progress";
-      this.hardMode = !!saved.hardMode;
+      if (this.status === "in-progress" && this.guesses.length > 0 && "hardMode" in saved) {
+        // Lock the puzzle to the mode it was being played in.
+        this.hardMode = !!saved.hardMode;
+      }
     }
 
     this.setupPracticeBanner();
@@ -670,12 +697,18 @@ const App = {
 
   setupHardModeToggle() {
     const cb = document.getElementById("hard-mode-toggle");
+    const label = cb.parentElement;
     cb.checked = this.hardMode;
-    // Once the player has submitted a guess, lock the toggle — switching mid-game
-    // is the standard Wordle restriction.
-    if (this.guesses.length > 0) cb.disabled = true;
+    // Standard Wordle rule: you can't switch hard mode mid-game. So lock the
+    // toggle only when there's a guess on the current in-progress puzzle.
+    // Finished puzzles re-enable the toggle so the next puzzle inherits the
+    // preference the player wants.
+    const lockMidGame = this.status === "in-progress" && this.guesses.length > 0;
+    cb.disabled = lockMidGame;
+    label.title = lockMidGame ? "Hard mode locks after the first guess on a puzzle" : "";
     cb.onchange = () => {
       this.hardMode = cb.checked;
+      saveSettings({ hardMode: this.hardMode });
       this.persist();
     };
   },
