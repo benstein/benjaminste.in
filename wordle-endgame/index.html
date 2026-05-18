@@ -206,6 +206,13 @@
       font-family: ui-monospace, "SF Mono", Menlo, monospace;
     }
     #debug-line.hidden { display: none; }
+    #debug-line .debug-link {
+      color: var(--muted);
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      cursor: pointer;
+    }
+    #debug-line .debug-link:hover { color: var(--fg); }
 
     #keyboard {
       width: 100%;

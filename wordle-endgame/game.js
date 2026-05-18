@@ -685,10 +685,34 @@ const App = {
 
   setupDebugLine() {
     const el = document.getElementById("debug-line");
-    if (this.debug) {
-      el.classList.remove("hidden");
-      el.textContent = this.debugString();
-    }
+    if (!this.debug) return;
+    el.classList.remove("hidden");
+    el.innerHTML = "";
+
+    const text = document.createElement("span");
+    text.textContent = this.debugString();
+    el.appendChild(text);
+
+    const reset = document.createElement("a");
+    reset.href = "#";
+    reset.textContent = "[reset]";
+    reset.className = "debug-link";
+    reset.title = "Clear this puzzle's saved guesses and start over";
+    reset.onclick = (e) => {
+      e.preventDefault();
+      localStorage.removeItem(storageKey(this.puzzle.id));
+      window.location.reload();
+    };
+    el.appendChild(document.createTextNode("  "));
+    el.appendChild(reset);
+
+    const random = document.createElement("a");
+    random.href = "?random&debug";
+    random.textContent = "[new random]";
+    random.className = "debug-link";
+    random.title = "Generate a fresh random puzzle";
+    el.appendChild(document.createTextNode("  "));
+    el.appendChild(random);
   },
 
   debugString() {
