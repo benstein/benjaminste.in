@@ -7,6 +7,10 @@ permalink: /nerd-stuff/
 # Nerd Stuff
 
 <div class="post-list">
+  <a href="/google-classic-favicons/" class="post-card">
+    <h3 class="post-card-title">Google Workspace Classic Favicons</h3>
+    <p class="post-card-excerpt">A Chrome extension that puts the old Google Workspace favicons back. Gmail's rainbow M, Calendar's blue 31, the Drive triangle — all the icons Google quietly replaced in the May 2026 redesign, restored across the seven core apps.</p>
+  </a>
   <a href="/useful-prompts/" class="post-card">
     <h3 class="post-card-title">Useful Prompts</h3>
     <p class="post-card-excerpt">A collection of AI prompt patterns that actually work — tested techniques for getting better results from language models.</p>
