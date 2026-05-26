@@ -3,11 +3,40 @@
   <title>Benjamin Stein</title>
   <link href="https://benjaminste.in/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://benjaminste.in/" rel="alternate" type="text/html"/>
-  <updated>2026-05-03T00:00:00Z</updated>
+  <updated>2026-05-26T00:00:00Z</updated>
   <id>https://benjaminste.in/</id>
   <author>
     <name>Benjamin Stein</name>
   </author>
+  <entry>
+    <title>Everything Is Fixable Now</title>
+    <link href="https://benjaminste.in/blog/2026/05/26/everything-is-fixable-now/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2026/05/26/everything-is-fixable-now/</id>
+    <published>2026-05-26T00:00:00Z</published>
+    <updated>2026-05-26T00:00:00Z</updated>
+    <summary>With AI coding agents, the backlog of fixes you walk around with in your head is a backlog you can clear.</summary>
+    <content type="html">There&#39;s a type of person I call a product person. They walk around noticing what&#39;s broken. The button in the wrong place. The checkout flow that makes you type your address twice. The weather app that hides today&#39;s temperature under three ads for a mattress. They notice, it bugs them, and they&#39;re redesigning it in their head before they&#39;ve finished being annoyed.
+
+It&#39;s the one trait I actually screen for when I interview PMs. Not the pedigree. Not the frameworks they can rattle off. I want to know if they walk around asking how a thing could be better, how it could be faster, who it&#39;s leaving out. The good ones can&#39;t turn it off.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;It&#39;s the one trait I actually screen for when I interview PMs.&lt;/p&gt;&lt;/aside&gt;
+
+For most of history that&#39;s been a low-grade curse. You clock a hundred broken things a day and you can fix none of them. The fix is either possible but not worth your weekend, or worth it but past your skill level. So you file it away and move on, and the pile turns into a backlog you&#39;re never going to ship.
+
+That&#39;s the part that changed.
+
+Some stuff from this week. I can&#39;t stand a single weather app on Android. Weather Underground turned to garbage after IBM bought it. Weather.com and the Weather Channel app are ad-choked messes, all noise and no signal. So I asked Claude to build me my perfect one. My layout, my data, zero ads, on Android, and on my Pixel watch while it was at it. It works. I check it on my wrist every morning. A year ago I would not have bothered.
+
+I have a heat pump. The app that runs it is made by Rheem, who make some of the worst fucking software I have ever put on a phone. I wanted something better. Claude didn&#39;t have the protocol. Fine. It talked to the unit over Bluetooth Low Energy, decompiled Rheem&#39;s app, reverse-engineered the protocol, and built me a replacement. I pushed the buttons when it needed hands. That&#39;s a project I wouldn&#39;t have touched a year ago, and honestly one I&#39;m not sure I could have finished myself at all.
+
+And like every other human being, I hate the new Google Workspace icons in Chrome. So I had Claude write me [an extension](/google-classic-favicons/) to put the old ones back. Ten minutes. A thing I&#39;d otherwise have bitched about until I died.
+
+Most of the talk about coding agents is about replacement. Fewer engineers, cheaper teams. That&#39;s real and it&#39;s the boring half. The interesting half is all the stuff that was never getting built. The work was never the problem. It was nobody&#39;s job and nobody&#39;s weekend. The giant pile of small annoyances that never cleared anyone&#39;s worth-it bar. That pile is getting built now, one pissed-off Saturday at a time.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;That pile is getting built now, one pissed-off Saturday at a time.&lt;/p&gt;&lt;/aside&gt;
+
+We all just picked up a new tool. The world a product person walks around in, the one that could always be better, can now actually get better. The backlog in your head is a backlog you can clear. And I for one am here for it.</content>
+  </entry>
   <entry>
     <title>Just one more prompt...</title>
     <link href="https://benjaminste.in/blog/2026/05/03/just-one-more-prompt/" rel="alternate" type="text/html"/>
