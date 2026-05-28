@@ -68,10 +68,7 @@
       <header>
         <nav class="site-nav">
           <a href="{{ "/" | absolute_url }}" class="site-nav-brand">
-            {% if site.logo %}
-            <img src="{{ site.logo | relative_url }}" alt="Benjamin Stein" class="site-nav-avatar" />
-            {% endif %}
-            <span class="site-nav-name">Benjamin Stein</span>
+            <span class="site-nav-name">{{ site.title | default: 'Benjamin Stein' }}</span>
           </a>
 
           <div class="site-nav-links">
