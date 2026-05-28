@@ -7,6 +7,10 @@ permalink: /nerd-stuff/
 # Nerd Stuff
 
 <div class="post-list">
+  <a href="/ballers-2026/" class="post-card">
+    <h3 class="post-card-title">Oakland Ballers 2026 Home Games Calendar</h3>
+    <p class="post-card-excerpt">A subscribable .ics calendar of all 44 Oakland Ballers home games at Raimondi Park — dates, first-pitch times, opponents, promo nights (Bay Mitzvah, Punk Night, KPOP Demon Bunters), and ticket links. Add it to Apple Calendar, Google Calendar, or Outlook and it stays in sync.</p>
+  </a>
   <a href="/google-classic-favicons/" class="post-card">
     <h3 class="post-card-title">Google Workspace Classic Favicons</h3>
     <p class="post-card-excerpt">A Chrome extension that puts the old Google Workspace favicons back. Gmail's rainbow M, Calendar's blue 31, the Drive triangle — all the icons Google quietly replaced in the May 2026 redesign, restored across the seven core apps.</p>

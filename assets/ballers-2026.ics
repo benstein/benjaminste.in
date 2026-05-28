@@ -1,0 +1,660 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Benjamin Stein//Oakland Ballers 2026 Home Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Oakland Ballers 2026 Home Games
+X-WR-CALDESC:Oakland Ballers 2026 home games at Raimondi Park. Unofficial.
+X-WR-TIMEZONE:America/Los_Angeles
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+X-LIC-LOCATION:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:ballers-2026-05-27@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260527T130500
+DTEND;TZID=America/Los_Angeles:20260527T160500
+SUMMARY:Ballers vs. Long Beach Coast
+DESCRIPTION:Saved By The Ballers (OUSD Field Trip Day)\n\nTickets: https://
+ tickets.oaklandballers.com/event/5-27-2026-oakland-ballers-vs-long-beach-c
+ oast-sa-on98p9
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/5-27-2026-oakland-ballers-vs-l
+ ong-beach-coast-sa-on98p9
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-05-28@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260528T183500
+DTEND;TZID=America/Los_Angeles:20260528T213500
+SUMMARY:Ballers vs. Long Beach Coast
+DESCRIPTION:Ballers Save The Earth (No Big Deal)\n\nTickets: https://ticket
+ s.oaklandballers.com/event/5-28-2026-oakland-ballers-vs-long-beach-coast-t
+ 677g6
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/5-28-2026-oakland-ballers-vs-l
+ ong-beach-coast-t677g6
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-05-29@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260529T183500
+DTEND;TZID=America/Los_Angeles:20260529T213500
+SUMMARY:Ballers vs. RedPocket Mobiles
+DESCRIPTION:Pride\n\nTickets: https://tickets.oaklandballers.com/event/5-29
+ -2026-oakland-ballers-vs-redpocket-mobiles-o-rnh6du
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/5-29-2026-oakland-ballers-vs-r
+ edpocket-mobiles-o-rnh6du
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-05-30@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260530T163500
+DTEND;TZID=America/Los_Angeles:20260530T193500
+SUMMARY:Ballers vs. RedPocket Mobiles
+DESCRIPTION:Chinatown Night\n\nTickets: https://tickets.oaklandballers.com/
+ event/5-30-2026-oakland-ballers-vs-redpocket-mobiles-p2dnko
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/5-30-2026-oakland-ballers-vs-r
+ edpocket-mobiles-p2dnko
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-05-31@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260531T130500
+DTEND;TZID=America/Los_Angeles:20260531T160500
+SUMMARY:Ballers vs. RedPocket Mobiles
+DESCRIPTION:Scrappy's Birthday\n\nTickets: https://tickets.oaklandballers.c
+ om/event/5-31-2026-oakland-ballers-vs-redpocket-mobiles-s-nq949f
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/5-31-2026-oakland-ballers-vs-r
+ edpocket-mobiles-s-nq949f
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-06-16@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260616T183500
+DTEND;TZID=America/Los_Angeles:20260616T213500
+SUMMARY:Ballers vs. Long Beach Coast
+DESCRIPTION:Celebration of Cal\n\nTickets: https://tickets.oaklandballers.c
+ om/event/6-16-2026-oakland-ballers-vs-long-beach-coast-pf8hw7
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/6-16-2026-oakland-ballers-vs-l
+ ong-beach-coast-pf8hw7
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-06-17@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260617T130500
+DTEND;TZID=America/Los_Angeles:20260617T160500
+SUMMARY:Ballers vs. Long Beach Coast
+DESCRIPTION:Parks and Rec Day\n\nTickets: https://tickets.oaklandballers.co
+ m/event/6-17-2026-oakland-ballers-vs-long-beach-coast-ch-irj6qo
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/6-17-2026-oakland-ballers-vs-l
+ ong-beach-coast-ch-irj6qo
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-06-18@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260618T183500
+DTEND;TZID=America/Los_Angeles:20260618T213500
+SUMMARY:Ballers vs. Long Beach Coast
+DESCRIPTION:Lil Ballers (Little League Day)\n\nTickets: https://tickets.oak
+ landballers.com/event/6-18-2026-oakland-ballers-vs-long-beach-coast-li-7ra
+ qcb
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/6-18-2026-oakland-ballers-vs-l
+ ong-beach-coast-li-7raqcb
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-06-19@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260619T183500
+DTEND;TZID=America/Los_Angeles:20260619T213500
+SUMMARY:Ballers vs. Modesto Roadsters
+DESCRIPTION:The Town Experience (Juneteenth)\n\nTickets: https://tickets.oa
+ klandballers.com/event/6-19-2026-oakland-ballers-vs-modesto-roadsters-t-22
+ 3q7y
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/6-19-2026-oakland-ballers-vs-m
+ odesto-roadsters-t-223q7y
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-06-20@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260620T163500
+DTEND;TZID=America/Los_Angeles:20260620T193500
+SUMMARY:Ballers vs. Modesto Roadsters
+DESCRIPTION:Anarchy In The O-A-K (Punk Night)\n\nTickets: https://tickets.o
+ aklandballers.com/event/6-20-2026-oakland-ballers-vs-modesto-roadsters-a-5
+ d7215
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/6-20-2026-oakland-ballers-vs-m
+ odesto-roadsters-a-5d7215
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-06-21@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260621T130500
+DTEND;TZID=America/Los_Angeles:20260621T160500
+SUMMARY:Ballers vs. Modesto Roadsters
+DESCRIPTION:Day of the Dad (Father's Day)\n\nTickets: https://tickets.oakla
+ ndballers.com/event/6-21-2026-oakland-ballers-vs-modesto-roadsters-d-tuy6m
+ m
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/6-21-2026-oakland-ballers-vs-m
+ odesto-roadsters-d-tuy6mm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-06-26@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260626T183500
+DTEND;TZID=America/Los_Angeles:20260626T213500
+SUMMARY:Ballers vs. Yuba-Sutter Freebirds
+DESCRIPTION:Possum! (Phish Night)\n\nTickets: https://tickets.oaklandballer
+ s.com/event/6-26-2026-oakland-ballers-vs-yuba-sutter-freebir-zrhlmt
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/6-26-2026-oakland-ballers-vs-y
+ uba-sutter-freebir-zrhlmt
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-06-27@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260627T163500
+DTEND;TZID=America/Los_Angeles:20260627T193500
+SUMMARY:Ballers vs. Yuba-Sutter Freebirds
+DESCRIPTION:Oakland Stands Up\n\nTickets: https://tickets.oaklandballers.co
+ m/event/6-27-2026-oakland-ballers-vs-yuba-sutter-freebir-qbwvss
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/6-27-2026-oakland-ballers-vs-y
+ uba-sutter-freebir-qbwvss
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-06-28@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260628T130500
+DTEND;TZID=America/Los_Angeles:20260628T160500
+SUMMARY:Ballers vs. Yuba-Sutter Freebirds
+DESCRIPTION:Christmas In June\n\nTickets: https://tickets.oaklandballers.co
+ m/event/6-28-2026-oakland-ballers-vs-yuba-sutter-freebir-vc4pmx
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/6-28-2026-oakland-ballers-vs-y
+ uba-sutter-freebir-vc4pmx
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-07-07@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260707T183500
+DTEND;TZID=America/Los_Angeles:20260707T213500
+SUMMARY:Ballers vs. Modesto Roadsters
+DESCRIPTION:Immigrants - We Get The Job Done\n\nTickets: https://tickets.oa
+ klandballers.com/event/7-07-2026-oakland-ballers-vs-modesto-roadsters-dh5u
+ it
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/7-07-2026-oakland-ballers-vs-m
+ odesto-roadsters-dh5uit
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-07-08@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260708T183500
+DTEND;TZID=America/Los_Angeles:20260708T213500
+SUMMARY:Ballers vs. Modesto Roadsters
+DESCRIPTION:Her Town\, Her Game\n\nTickets: https://tickets.oaklandballers.
+ com/event/7-08-2026-oakland-ballers-vs-modesto-roadsters-asvv4q
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/7-08-2026-oakland-ballers-vs-m
+ odesto-roadsters-asvv4q
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-07-09@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260709T183500
+DTEND;TZID=America/Los_Angeles:20260709T213500
+SUMMARY:Ballers vs. Modesto Roadsters
+DESCRIPTION:Disc A Round & Find Out\n\nTickets: https://tickets.oaklandball
+ ers.com/event/7-09-2026-oakland-ballers-vs-modesto-roadsters-mspqg2
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/7-09-2026-oakland-ballers-vs-m
+ odesto-roadsters-mspqg2
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-07-10@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260710T183500
+DTEND;TZID=America/Los_Angeles:20260710T213500
+SUMMARY:Ballers vs. Yuba-Sutter Freebirds
+DESCRIPTION:Star Wars Night\n\nTickets: https://tickets.oaklandballers.com/
+ event/7-10-2026-oakland-ballers-vs-yuba-sutter-freebir-dxx55q
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/7-10-2026-oakland-ballers-vs-y
+ uba-sutter-freebir-dxx55q
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-07-11@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260711T163500
+DTEND;TZID=America/Los_Angeles:20260711T193500
+SUMMARY:Ballers vs. Yuba-Sutter Freebirds
+DESCRIPTION:Enter Possum (Metal Tribute Night)\n\nTickets: https://tickets.
+ oaklandballers.com/event/7-11-2026-oakland-ballers-vs-yuba-sutter-freebir-
+ 17jb0r
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/7-11-2026-oakland-ballers-vs-y
+ uba-sutter-freebir-17jb0r
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-07-12@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260712T130500
+DTEND;TZID=America/Los_Angeles:20260712T160500
+SUMMARY:Ballers vs. Yuba-Sutter Freebirds
+DESCRIPTION:Oakland Zoo Day\n\nTickets: https://tickets.oaklandballers.com/
+ event/7-12-2026-oakland-ballers-vs-yuba-sutter-freebir-psy2en
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/7-12-2026-oakland-ballers-vs-y
+ uba-sutter-freebir-psy2en
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-07-17@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260717T183500
+DTEND;TZID=America/Los_Angeles:20260717T213500
+SUMMARY:Ballers vs. Modesto Roadsters
+DESCRIPTION:World Cup Night\n\nTickets: https://tickets.oaklandballers.com/
+ event/7-17-2026-oakland-ballers-vs-modesto-roadsters-w-3oano4
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/7-17-2026-oakland-ballers-vs-m
+ odesto-roadsters-w-3oano4
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-07-18@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260718T163500
+DTEND;TZID=America/Los_Angeles:20260718T193500
+SUMMARY:Ballers vs. Modesto Roadsters
+DESCRIPTION:Ballermania\n\nTickets: https://tickets.oaklandballers.com/even
+ t/7-18-2026-oakland-ballers-vs-modesto-roadsters-o-gmksh8
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/7-18-2026-oakland-ballers-vs-m
+ odesto-roadsters-o-gmksh8
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-07-19@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260719T130500
+DTEND;TZID=America/Los_Angeles:20260719T160500
+SUMMARY:Ballers vs. Modesto Roadsters
+DESCRIPTION:A Celebration of Rickey Henderson\n\nTickets: https://tickets.o
+ aklandballers.com/event/7-19-2026-oakland-ballers-vs-modesto-roadsters-k-1
+ 9j1o6
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/7-19-2026-oakland-ballers-vs-m
+ odesto-roadsters-k-19j1o6
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-07-24@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260724T183500
+DTEND;TZID=America/Los_Angeles:20260724T213500
+SUMMARY:Ballers vs. Boise Hawks
+DESCRIPTION:Up Up\, Down Down\, B-A\, B-A-LLERS (Gamer Night)\n\nTickets: h
+ ttps://tickets.oaklandballers.com/event/7-24-2026-oakland-ballers-vs-boise
+ -hawks-up-up-d-o8bp2g
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/7-24-2026-oakland-ballers-vs-b
+ oise-hawks-up-up-d-o8bp2g
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-07-25@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260725T163500
+DTEND;TZID=America/Los_Angeles:20260725T193500
+SUMMARY:Ballers vs. Boise Hawks
+DESCRIPTION:Night of the Living Possum\n\nTickets: https://tickets.oaklandb
+ allers.com/event/7-25-2026-oakland-ballers-vs-boise-hawks-night-o-6kwt1a
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/7-25-2026-oakland-ballers-vs-b
+ oise-hawks-night-o-6kwt1a
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-07-26@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260726T130500
+DTEND;TZID=America/Los_Angeles:20260726T160500
+SUMMARY:Ballers vs. Boise Hawks
+DESCRIPTION:Halloween In July\n\nTickets: https://tickets.oaklandballers.co
+ m/event/7-26-2026-oakland-ballers-vs-boise-hawks-xht3k2
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/7-26-2026-oakland-ballers-vs-b
+ oise-hawks-xht3k2
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-07-31@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260731T183500
+DTEND;TZID=America/Los_Angeles:20260731T213500
+SUMMARY:Ballers vs. RedPocket Mobiles
+DESCRIPTION:Grateful Dead Night\n\nTickets: https://tickets.oaklandballers.
+ com/event/7-31-2026-oakland-ballers-vs-redpocket-mobiles-g-chl19j
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/7-31-2026-oakland-ballers-vs-r
+ edpocket-mobiles-g-chl19j
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-08-01@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260801T163500
+DTEND;TZID=America/Los_Angeles:20260801T193500
+SUMMARY:Ballers vs. RedPocket Mobiles
+DESCRIPTION:Ride The Rally Night\n\nTickets: https://tickets.oaklandballers
+ .com/event/8-01-2026-oakland-ballers-vs-redpocket-mobiles-p-orst8n
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/8-01-2026-oakland-ballers-vs-r
+ edpocket-mobiles-p-orst8n
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-08-02@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260802T130500
+DTEND;TZID=America/Los_Angeles:20260802T160500
+SUMMARY:Ballers vs. RedPocket Mobiles
+DESCRIPTION:Soak The Town Sunday\n\nTickets: https://tickets.oaklandballers
+ .com/event/8-02-2026-oakland-ballers-vs-redpocket-mobiles-1w19oq
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/8-02-2026-oakland-ballers-vs-r
+ edpocket-mobiles-1w19oq
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-08-04@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260804T183500
+DTEND;TZID=America/Los_Angeles:20260804T213500
+SUMMARY:Ballers vs. RedPocket Mobiles
+DESCRIPTION:The Ballers Take The Stage\n\nTickets: https://tickets.oaklandb
+ allers.com/event/8-04-2026-oakland-ballers-vs-redpocket-mobiles-it50jf
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/8-04-2026-oakland-ballers-vs-r
+ edpocket-mobiles-it50jf
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-08-05@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260805T183500
+DTEND;TZID=America/Los_Angeles:20260805T213500
+SUMMARY:Ballers vs. RedPocket Mobiles
+DESCRIPTION:Oakland Athletics Night (not those ones)\n\nTickets: https://ti
+ ckets.oaklandballers.com/event/8-05-2026-oakland-ballers-vs-redpocket-mobi
+ les-47yqml
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/8-05-2026-oakland-ballers-vs-r
+ edpocket-mobiles-47yqml
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-08-06@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260806T183500
+DTEND;TZID=America/Los_Angeles:20260806T213500
+SUMMARY:Ballers vs. RedPocket Mobiles
+DESCRIPTION:Ship Happens (Maritime Night)\n\nTickets: https://tickets.oakla
+ ndballers.com/event/8-06-2026-oakland-ballers-vs-redpocket-mobiles-s-pueo7
+ k
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/8-06-2026-oakland-ballers-vs-r
+ edpocket-mobiles-s-pueo7k
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-08-11@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260811T183500
+DTEND;TZID=America/Los_Angeles:20260811T213500
+SUMMARY:Ballers vs. Modesto Roadsters
+DESCRIPTION:Bay Mitzvah\n\nTickets: https://tickets.oaklandballers.com/even
+ t/8-11-2026-oakland-ballers-vs-modesto-roadsters-b-61s8dn
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/8-11-2026-oakland-ballers-vs-m
+ odesto-roadsters-b-61s8dn
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-08-12@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260812T183500
+DTEND;TZID=America/Los_Angeles:20260812T213500
+SUMMARY:Ballers vs. Modesto Roadsters
+DESCRIPTION:Celebration of Coach Beam\n\nTickets: https://tickets.oaklandba
+ llers.com/event/8-12-2026-oakland-ballers-vs-modesto-roadsters-pntgjy
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/8-12-2026-oakland-ballers-vs-m
+ odesto-roadsters-pntgjy
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-08-13@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260813T183500
+DTEND;TZID=America/Los_Angeles:20260813T213500
+SUMMARY:Ballers vs. Modesto Roadsters
+DESCRIPTION:"Prost!" to Oaktober Fest\n\nTickets: https://tickets.oaklandba
+ llers.com/event/8-13-2026-oakland-ballers-vs-modesto-roadsters-cc0ctk
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/8-13-2026-oakland-ballers-vs-m
+ odesto-roadsters-cc0ctk
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-08-21@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260821T183500
+DTEND;TZID=America/Los_Angeles:20260821T213500
+SUMMARY:Ballers vs. Modesto Roadsters
+DESCRIPTION:Extra Credit Night (Teacher Appreciation Night)\n\nTickets: htt
+ ps://tickets.oaklandballers.com/event/8-21-2026-oakland-ballers-vs-modesto
+ -roadsters-e-fmka5e
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/8-21-2026-oakland-ballers-vs-m
+ odesto-roadsters-e-fmka5e
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-08-22@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260822T163500
+DTEND;TZID=America/Los_Angeles:20260822T193500
+SUMMARY:Ballers vs. Modesto Roadsters
+DESCRIPTION:Dia De Los Ballers\n\nTickets: https://tickets.oaklandballers.c
+ om/event/8-22-2026-oakland-ballers-vs-modesto-roadsters-d-f5uast
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/8-22-2026-oakland-ballers-vs-m
+ odesto-roadsters-d-f5uast
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-08-23@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260823T130500
+DTEND;TZID=America/Los_Angeles:20260823T160500
+SUMMARY:Ballers vs. Modesto Roadsters
+DESCRIPTION:KPOP Demon Bunters\n\nTickets: https://tickets.oaklandballers.c
+ om/event/8-23-2026-oakland-ballers-vs-modesto-roadsters-myx564
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/8-23-2026-oakland-ballers-vs-m
+ odesto-roadsters-myx564
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-08-25@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260825T183500
+DTEND;TZID=America/Los_Angeles:20260825T213500
+SUMMARY:Ballers vs. Missoula PaddleHeads
+DESCRIPTION:Possum Power Play\n\nTickets: https://tickets.oaklandballers.co
+ m/event/8-25-2026-oakland-ballers-vs-missoula-paddlehead-mq1sba
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/8-25-2026-oakland-ballers-vs-m
+ issoula-paddlehead-mq1sba
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-08-26@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260826T183500
+DTEND;TZID=America/Los_Angeles:20260826T213500
+SUMMARY:Ballers vs. Missoula PaddleHeads
+DESCRIPTION:Oakland School For the Arts Night\n\nTickets: https://tickets.o
+ aklandballers.com/event/8-26-2026-oakland-ballers-vs-missoula-paddlehead-c
+ yebjw
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/8-26-2026-oakland-ballers-vs-m
+ issoula-paddlehead-cyebjw
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-08-27@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260827T183500
+DTEND;TZID=America/Los_Angeles:20260827T213500
+SUMMARY:Ballers vs. Missoula PaddleHeads
+DESCRIPTION:Too $hort Takeover\n\nTickets: https://tickets.oaklandballers.c
+ om/event/8-27-2026-oakland-ballers-vs-missoula-paddlehead-r8ly21
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/8-27-2026-oakland-ballers-vs-m
+ issoula-paddlehead-r8ly21
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-08-28@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260828T183500
+DTEND;TZID=America/Los_Angeles:20260828T213500
+SUMMARY:Ballers vs. Long Beach Coast
+DESCRIPTION:Island Night: From Hawaii to Alameda honoring Island Culture\n\
+ nTickets: https://tickets.oaklandballers.com/event/8-28-2026-oakland-balle
+ rs-vs-long-beach-coast-is-spwrdv
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/8-28-2026-oakland-ballers-vs-l
+ ong-beach-coast-is-spwrdv
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-08-29@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260829T163500
+DTEND;TZID=America/Los_Angeles:20260829T193500
+SUMMARY:Ballers vs. Long Beach Coast
+DESCRIPTION:Tickets: https://tickets.oaklandballers.com/event/8-29-2026-oak
+ land-ballers-vs-long-beach-coast-0lglbf
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/8-29-2026-oakland-ballers-vs-l
+ ong-beach-coast-0lglbf
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ballers-2026-08-30@benjaminste.in
+DTSTAMP:20260527T120000Z
+DTSTART;TZID=America/Los_Angeles:20260830T130500
+DTEND;TZID=America/Los_Angeles:20260830T160500
+SUMMARY:Ballers vs. Long Beach Coast
+DESCRIPTION:Fan Appreciation Day\n\nTickets: https://tickets.oaklandballers
+ .com/event/8-30-2026-oakland-ballers-vs-long-beach-coast-fa-1lygrx
+LOCATION:Raimondi Park\, 1689 20th St\, Oakland\, CA 94607
+URL:https://tickets.oaklandballers.com/event/8-30-2026-oakland-ballers-vs-l
+ ong-beach-coast-fa-1lygrx
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
