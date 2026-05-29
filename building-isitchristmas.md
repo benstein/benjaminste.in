@@ -16,77 +16,98 @@ permalink: /building-isitchristmas/
 
 <p class="post-subtitle">484 AI agents. 16 million tokens. Turns out it's not Christmas.</p>
 
-[isitchristmas.com](https://isitchristmas.com) has done one job for more than a decade. You load it, and it tells you whether it is Christmas. The answer is a single word, YES or NO, in giant bold type, and it is right every day of the year by the grace of the calendar. Eric Mill ([@konklone](https://bsky.app/profile/konklone.com)) has quietly maintained it the whole time. It is one of my favorite things on the web, because it is finished. There is nothing left to add.
+[isitchristmas.com](https://isitchristmas.com) answers one question, and it answers it in one word: YES or NO, in giant bold type. Eric Mill ([@konklone](https://bsky.app/profile/konklone.com)) has run it since the late 2000s, and the whole time it has doubled as a place to try whatever web technology he felt like. Look under the hood of the original and you find websockets, a progressive-web-app manifest, live multiplayer cursors, an IFTTT hook. None of that is necessary to tell you the date, and that was never the point. He just wanted somewhere low-stakes to try the new thing.
 
-So I added everything.
+I love that about it, so I am continuing the tradition. The new thing I wanted to try is a way of building rather than a web technology. Claude Opus 4.8 shipped with "dynamic workflows," where instead of one assistant editing files in a loop, you orchestrate hundreds of AI agents from a script: fan them out and compose what they return. I had read the description without understanding it in my gut, so I pointed it at the most pointless target I could think of and watched.
 
-My version, at [benjaminste.in/isitchristmas](/isitchristmas), shows you the same single word. The difference is underneath. The answer is not read off the clock once. It gets computed 121 separate times, by 121 completely independent algorithms that each decide, on their own, whether your local date is December 25. Then they vote, and the site renders the majority verdict.
+This is the account of what it did. The one-word answer on the page is the same as ever. Everything behind it changed, and that is the story.
 
-I did not write those 121 algorithms. I wrote a correctness test and a few hundred words of instructions, and a swarm of Claude Opus 4.8 agents wrote the rest, tested their own work against the gate until it passed, then reviewed each other while I watched. This is an account of what they did.
+## What a dynamic workflow is
 
-<aside class="pull-quote"><p>It gets computed 121 separate times, and they vote.</p></aside>
+The mental model I started with was wrong. I assumed "agents" meant a chat that calls itself a lot. It is closer to this: you write an ordinary JavaScript program, and a few of the function calls in it spawn a fresh AI agent that goes off, does a self-contained task, and returns a value. The program is deterministic; the agents are not. You get ordinary control flow, loops and conditionals and fan-out, to coordinate work that no single context could hold at once.
 
-## What you actually see
+Two primitives do most of the work. `parallel([...])` runs a batch of agents at the same time and waits for all of them. `pipeline(items, stageA, stageB)` runs each item through a series of stages. Each agent can be handed a JSON schema, and the framework forces it to return data in that exact shape, so the next line of your program gets a clean object instead of prose to parse. The whole thing runs in the background and reports when it finishes.
 
-Nothing changed about the experience. You get one word. On December 25, in your own timezone, it says YES. Every other day it says NO. There are no flags, no visitor counts, no cookie banner asking permission to tell you the date.
+Fanning work out to many workers and checking it against a test is not a new idea. What is new is that it is now a first-class thing you drive from a single prompt. The interesting part is what you build with it, and it starts with something that has no AI in it at all.
 
-The original has a famous comment in its source: `Open the developer console (around Christmas).` I kept the tradition. Open the console on my version any day of the year and the parliament shows its work: the running tally, any dissenters, and a 121-row table of every vote with its timing. The whole spectacle is one `console.table` away and otherwise invisible, which felt like the right amount of restraint for a project that has none.
+## Claude built the referee first
 
-## Why a parliament
+I gave Claude an absurd brief: rebuild Is It Christmas so the YES/NO verdict is decided by a parliament of 121 independent algorithms, each a different way to work out whether today is December 25, all voting. Go as strange as you like.
 
-The simplest correct way to answer this is to read the local month and day and check for the twelfth and the twenty-fifth. A version of exactly that, done properly with the platform's internationalization, is one of the 121. It is the most boring algorithm in the building, and the other 120 are the reason it needs the company.
+The first thing it wrote was the judge. Before a single voter existed, Claude wrote a 347-line Node script whose only job is to decide, with no AI involved, whether an algorithm is correct. It generates 148,488 test cases: every hour around Christmas across a dozen years, full-year sweeps to catch leap-year mistakes, 8,000 random instants, and every populated timezone from UTC−12 to UTC+14, including the ones that run daylight saving in December. For each case it derives the true answer from the platform's own calendar tables, runs the candidate, and compares.
 
-They exist because turning a millisecond timestamp into a calendar date is a real problem with a deep literature: Howard Hinnant's `civil_from_days`, the Fliegel–Van Flandern algorithm from a 1968 issue of *Communications of the ACM*, Julian Day numbers, Rata Die, the proleptic Gregorian ordinal that Python runs every time you call `date.fromordinal`. Each is a different, genuine route from a number to a date. I wanted all of them in one room, plus a hundred worse ideas.
+One rule did the most work here, and it holds even if you don't write code: **a language model should not be the final authority on whether code is correct, so it isn't.** The referee is deterministic, and it was tested before anything trusted it. Claude planted a deliberately broken algorithm that used UTC instead of local time and confirmed the referee caught it on 5,571 cases, then confirmed a known-good algorithm passed all 148,488. Only then did it start judging.
 
-Every algorithm gets the same input and answers the same boolean. To handle timezones without any of them needing to understand timezones, the engine hands each one a single number: the millisecond count, shifted so that reading it as if it were UTC reproduces your local wall clock. Load the page at 9pm on December 25 in Auckland and the true UTC instant is still the morning of the 25th in London; the engine shifts it by your offset so the integer it passes out reads back as the evening of the 25th. An algorithm that correctly turns that integer into a date is right in every timezone we tested, including the ones that observe daylight saving in December. The algorithms never know where you are. They just know the number.
+The referee also has a conscience about method. Of the 121 algorithms, 59 were required to derive the date from raw arithmetic with no calendar library. The referee scans their source and disqualifies any that try to cheat, so those 59 really do the arithmetic.
 
-Here is the part worth saying out loud, before anyone else does: the vote is decorative. Correct algorithms never disagree, so the tally comes back 121 to nothing every single day, and the majority rule has never once had to break a tie. I built a parliament that has never been divided. That is the joke, and it cost 16 million tokens.
+## Wave one: 121 authors, fanned out at once
 
-## The eleven cohorts
+With a referee in place, Claude wrote a menu of 121 distinct methodologies, sorted into eleven cohorts so no two agents would build the same thing, and launched the first workflow. Its core is four lines:
 
-I sorted the 121 methodologies into eleven cohorts and assigned each agent exactly one, so no two would collide. The reviewers later rated them: 11 elegant, 58 clever, 51 cursed, and one, fittingly, unhinged. Each algorithm describes itself in a line; those descriptions, quoted below, were also written by the agents.
+```js
+const results = await parallel(
+  MENU.map((m) => () =>
+    agent(promptFor(m), { schema: AUTHOR_SCHEMA, agentType: 'general-purpose' })
+  )
+);
+```
 
-**Calendrical Classics (12).** The published, respectable algorithms: Hinnant, Fliegel–Van Flandern, Meeus' astronomical method, Conway's Doomsday rule. *#5 Rata Die "counts days the way medieval chronologists wished they could: one integer, no calendar, all the way back to a January in year one that nobody actually observed."*
+That spawns 121 agents at once, each assigned one methodology. The part that makes the pattern work is what came next: each author was handed the referee and told to keep going until it passed. Write the algorithm, run it against the 148,488 cases, read the failures, fix the code, run again, and report success only once the referee said PASS. The agents graded themselves against something that could not be talked around.
 
-**Epoch Arithmetic (13).** Raw number-crunching on the millisecond count. One marches forward from 1970 counting leap years on its fingers. One does the whole conversion in BigInt nanoseconds so no December rounds into January. *#23 "guesses the year, checks its own work, and adjusts, like a clerk who never quite trusts the first answer."*
+115 of the 121 passed on their first submission. The six that needed a second pass are the good part, because they are bugs the referee caught that a human skimming the code would have missed. The best one used Rata Die, a day-counting scheme from a book on calendar math. It used 719163 as the constant bridging the Unix epoch to the Rata Die epoch when the right value is 719162, one off. That single digit put about 20,000 cases one day early, all of them clustered around midnight in the far-eastern timezones, exactly where a one-day error hides until you test the boundary. The referee does. The agent read the failures, traced it to the constant, and passed on the second try. No human reviewed the fix.
 
-**Esolang & Exotic Interpreters (10).** These build a tiny computer and make it do the work. A real Brainfuck interpreter runs a Brainfuck program that subtracts 12 and 25. There is also a Turing machine, a Forth stack, a Befunge grid, an S/K combinator reducer, and Rule 110 wired up as logic gates. *#29 "proves it's Christmas without ever using a number, only functions that have strong opinions about how many times to call other functions."* It is also the slowest algorithm in the building, at 19 microseconds a vote.
+The wave finished in about 31 minutes and 4.8 million tokens.
 
-**Machine Learning Cosplay (13).** Models with no training, baked weights, and delusions of grandeur. A hardcoded perceptron. A "random forest" that is five stumps outvoting each other into a calendar lookup. A toy self-attention head with real dot products. *#45 "answers a yes-or-no question by consulting a 366-document vector database, which is roughly the engineering equivalent of hiring a librarian to confirm your own birthday."*
+## A checkpoint between waves
 
-**Stringly Typed (11).** Everything is a string. Slice the ISO timestamp, match a regex against it, split on hyphens, compare `"1225"`. *#48 "never learns that December is month twelve; it just trusts that the two characters after the first dash will say so."*
+When all 121 agents reported done, I ran the referee myself, once, over every shipped algorithm. All 121 passed, which they had to, since nothing could ship that the referee had not already certified. That is the rhythm of working this way: agents do the labor in a wave, and between waves a person reads the result and decides what comes next. It feels less like watching a chatbot type and more like running a small factory and inspecting the output between shifts.
 
-**Number-Base Maximalists (13).** The date is correct, if you agree to read it in a stranger base. Binary, octal, hexadecimal (Christmas is the 19th of month C, and it is technically right about that), balanced ternary, Babylonian sexagesimal, Roman numerals, Morse code, Zeckendorf's Fibonacci representation. *#62, the Roman numeral one, is "the kind of date format that was already obsolete by the time anyone wrote down the date of the first Christmas."*
+## Wave two: 363 reviewers, each fanned out three ways
 
-**Recursion & Functional (10).** No loops allowed. A Y-combinator carries the recursion; a trampoline keeps the stack from overflowing. *#73 passes the answer through continuations and "just keeps passing the buck until someone has to answer for December."*
+The next workflow was adversarial. By the time an algorithm reached it, it had already passed 148,488 cases, so the reviewers were not there to find arithmetic bugs. They were there to check that each algorithm honestly described itself and to find where it would break. Every one of the 121 went to three agents at once, and the script nests `parallel` inside `parallel`:
 
-**Lookup & Memoization (9).** Precompute every Christmas from here to the year 2400 and check the guest list. These are the fastest votes on the page, tens of nanoseconds each. *#79, a hash map, "precomputed every Christmas it will ever need and now just checks the guest list at the door."*
+```js
+const merged = await parallel(ALGOS.map((a) => async () => {
+  const [audit, fragility, curator] = await parallel([
+    () => agent(auditorPrompt(a),   { schema: ACK }),  // does the code do what it claims?
+    () => agent(fragilityPrompt(a), { schema: ACK }),  // where would it break?
+    () => agent(curatorPrompt(a),   { schema: ACK }),  // write one sharp sentence about it
+  ]);
+  return { id: a.id, honest: audit.honest, weakness: fragility.severity, line: curator.oneLiner };
+}));
+```
 
-**Intl & Locale (10).** The grown-up cohort. One formats the date in German (25.12.), one in Japanese kanji, one counts the sleeps until Christmas and only believes it has arrived when there are none left. This cohort holds the single honest algorithm, *#86: "the boring, correct way to do this, which is presumably why the other 120 algorithms exist."*
+That is 363 reviewers. The auditors flagged nine algorithms for possibly misrepresenting themselves, and I read all nine. Every one was a reviewer applying the strict no-calendar-library rule to an algorithm that was allowed to use one. Nothing was lying about itself, which is the answer I wanted and would not have believed without checking. The single genuine limitation the reviewers surfaced is worth stating: 120 of the 121 are only guaranteed correct between 1970 and 2200. Load the site in the year 2250 and a few quietly go wrong, which nobody will, but it is still true.
 
-**Physics & Astronomy Cosplay (8).** Astronomers' machinery aimed at the wrong target: Julian Date from a noon in 4713 BC, days since the J2000.0 epoch, a sidereal clock. *#100 "runs the star clock to look impressive, notices the stars are 3 minutes 56 seconds ahead of the calendar, and quietly uses the calendar anyway."*
+This wave ran 363 agents in about 24 minutes for 11 million tokens, and it is what sold me on the approach. Getting a hundred independent skeptics to attack your work from three fixed angles is not something one agent in a loop can do for you.
 
-**Cursed & Over-Engineered (12).** The cohort that understood the assignment. A seven-microservice pipeline for one boolean. A dependency-injection container wiring up a `CalendarService`. A spreadsheet engine. A single-node private blockchain that mines up to 366 blocks. *#110 "keeps both Christmas and not-Christmas alive until you look, at which point it admits it was just an if statement wearing a lab coat."*
+## The post reviewed itself
 
-## What the agents actually did
+One more, because it is too good to leave out. The draft of this post went through a fourth workflow: four critics in parallel, one hunting the stylistic tics that give AI writing away, one fact-checking every number against the code, one playing a jaded Hacker News commenter, one making sure Eric Mill got proper credit. The fact-checker earned its keep when an earlier draft claimed one algorithm used "Newton's method"; it uses a plainer estimate-and-correct loop, and the critic caught it. The style critic caught me overusing the word "actually" and a contrast trick I lean on, which is part of why this version reads the way it does. The same pattern that built the site checked the story about the site.
 
-The work ran as two waves of a multi-agent workflow, with me orchestrating and a node script acting as the final judge.
+## The parliament, purely for entertainment
 
-**Wave one: 121 authors.** Each agent got one cohort assignment, the input contract, and one rule above all others: your code must pass the gate. Each wrote its algorithm, ran the test, read the failures, fixed the code, and ran it again, looping on its own until the gate printed PASS.
+None of the above depends on the algorithms being interesting. They could all have been the same boring date check. Most of them basically are, the same small comparison in increasingly elaborate costumes, which is the joke. Since you read this far, here are the highlights. The reviewers rated them 11 elegant, 58 clever, 51 cursed, and one unhinged, and each line below was written by the agent that reviewed that algorithm.
 
-So when I say all 121 passed, hold the applause: they passed *by construction*. An agent could not report success until the gate said so, which makes the final pass rate a property of the loop, not a miracle of the model. The number worth reporting is how often the gate caught a real bug mid-loop. 115 of the 121 passed on their first submission. Six needed a second pass. The best of those was the Rata Die algorithm, which used 719163 as its Unix-to-Rata-Die offset when the correct constant is 719162. That off-by-one put about 20,000 of the test samples one day early, all of them clustered around midnight in the far-eastern timezones, exactly where a one-day error hides until you test the boundary. The gate tests the boundary. It was fixed in the second pass.
+- **#29, Church Numeral Equality** "proves it's Christmas without ever using a number, only functions that have strong opinions about how many times to call other functions."
+- **#26, a real Brainfuck interpreter** running a Brainfuck program that subtracts 12 and 25.
+- **#45, RAG over a Holiday Store** "answers a yes-or-no question by consulting a 366-document vector database, which is roughly the engineering equivalent of hiring a librarian to confirm your own birthday."
+- **#110, Quantum Wavefunction Collapse** "keeps both Christmas and not-Christmas alive until you look, at which point it admits it was just an if statement wearing a lab coat."
+- **#107, a single-node private blockchain** that mines up to 366 blocks to look up a date it already knew.
+- **#62, Roman numerals** ("the kind of date format that was already obsolete by the time anyone wrote down the date of the first Christmas"), next to cohorts that check the date in balanced ternary, Babylonian base 60, Morse code, and Fibonacci coding.
+- **#86, the one honest algorithm,** "the boring, correct way to do this, which is presumably why the other 120 algorithms exist."
 
-<aside class="pull-quote"><p>When I say all 121 passed, hold the applause: they passed by construction.</p></aside>
+All 121 ship to your browser and run on page load, and you can read every one in the page source. Open the developer console on [the site itself](/isitchristmas) to watch them vote in real time, a habit I am borrowing straight from the original.
 
-**Wave two: 363 reviewers.** Every shipped algorithm was read by three more agents working different angles. An auditor checked that the code does what its description claims. A second hunted for the algorithm's weakest assumption. A third wrote the one-liner you have been reading throughout this post. The auditors flagged nine algorithms for honesty. I read all nine. Every one was a reviewer holding an "extract" algorithm, which is permitted to read the date with a getter, to the stricter standard meant for the from-scratch cohort. Nothing was actually misrepresenting itself, which is the result I wanted and did not assume. The weakest-assumption reviewers were more sobering: 120 of the 121 are correct only inside their tested range. Push them past the year 2200, or before 1970 into negative timestamps, and some quietly break. No one loading a website in those years will notice, but it is the real footnote on the word "correct."
+## What this kind of orchestration is good for
 
-## The gate is the whole game
+I came out of this with a clearer answer than I went in with. A single agent in a loop is right when the work fits in one head and the steps depend on each other. You reach for a workflow when the work is wide rather than deep: a hundred independent things to build, or one thing to attack from many angles before you trust it.
 
-A language model should not be the final authority on arithmetic, so it isn't. The judge is a plain node script that runs each algorithm against 148,488 distinct timezone-and-moment samples and compares every answer to ground truth. The samples cover 1970 to 2200 and every populated UTC offset from −12 to +14, including the half-hour and 45-minute zones. They include the hourly window around Christmas across a dozen years, full-year daily sweeps that catch leap-year and day-of-year bugs, and 8,000 random instants. The central run alone is about 18 million evaluations. During authoring, the agents ran it many times more than that.
+The shape that kept paying off was simple. Build a deterministic gate first, then fan a swarm of cheap, disposable agents at the problem and make each one earn its way past it. Read the results yourself between waves, and send a second swarm to break what the first one made. The agents were occasionally wrong and it never mattered, because being wrong got caught by something that does not bluff. The thing you are really designing is not the agents. It is the test they have to pass.
 
-The gate also polices method. Fifty-nine algorithms were assigned to derive the date from the raw integer with arithmetic only, no `Date`, no `Intl`, no string parsing. To keep that claim true, the gate scans their source and fails any that reach for a shortcut. The "from scratch" label is enforced, not trusted.
+This only works when you can write that test. Here the right answer was cheap to pin down, so the gate was easy and trustworthy. When correctness is fuzzy or expensive to check, the gate gets weaker and the agents' confident wrongness starts to leak through. Think hard before you point a swarm at something that matters. None of this is free or repeatable either: run it again and you get different agents, different bugs, and a different bill. One engineer would have written the referee and a single correct algorithm in an afternoon. The other 120 algorithms and the 484 robots were the point only because the point was to learn the tool.
 
-There is one thing the gate itself trusts: its ground truth comes from the platform's own internationalization tables, the same machinery every browser uses to format a date. If that is wrong, so is my gate, and so is everyone's calendar. I decided I could live with that.
+That, not the website, is what I built this week, which is what Is It Christmas has always been for.
 
 ## The receipts
 
@@ -94,30 +115,23 @@ There is one thing the gate itself trusts: its ground truth comes from the platf
 
 | | |
 |---|---|
-| Algorithms shipped | **121** |
-| AI agents | **484** (121 authors, 363 reviewers) |
-| Tokens | **~15.9 million** |
-| Rough API cost | **a few hundred dollars**, to render a word your OS already knows |
-| Lines of JavaScript | **5,724** |
-| Correctness samples per algorithm | **148,488** |
+| Frontier model | **Claude Opus 4.8** |
+| Build method | **dynamic multi-agent workflows** |
+| Scripts Claude wrote (gate, menu, workflows) | **~850 lines** |
+| AI agents | **484** (121 authors + 363 reviewers) |
+| Tokens | **~16 million** |
+| Author wave | **121 agents in parallel**, ~31 min |
 | Passed the gate on first submission | **115 / 121** |
-| Algorithms that shipped without passing the gate | **0** |
-| Fastest cohort | **Lookup & Memoization**, tens of nanoseconds a vote |
-| Slowest vote | **#29 Church Numeral Equality**, ~19 microseconds |
-| Full 121-algorithm parliament | about **0.1 milliseconds** of compute |
-| Bundle shipped to every visitor | **419 KB** |
-| Model | **Claude Opus 4.8**, via Claude Code workflows |
+| Review wave | **363 agents** (121 × 3 lenses), ~24 min |
+| Honesty flags raised, then cleared | **9 / 9** |
+| Correctness cases per algorithm | **148,488** |
+| Algorithms shipped | **121** |
+| Shipped to every visitor's browser | **419 KB**, all 121 run on load |
+| Rough API cost | **a few hundred dollars** |
+| What the visitor sees | **one word** |
 
 </div>
 
-Every visitor downloads 419 KB of JavaScript, five orders of magnitude more than the answer needs, and their browser runs all 121 algorithms before painting a single word. The whole parliament reaches a verdict in about a tenth of a millisecond. You will never watch it happen, because the work is the joke and the joke runs faster than a screen refresh.
-
-## Is any of this real?
-
-More than it has any right to be. The answer on the page is the genuine consensus of 121 algorithms that genuinely run in your browser and genuinely agree about nothing, because every one of them passed the same test. The Brainfuck interpreter is a real Brainfuck interpreter. The Church numerals reduce. The blockchain mines. The 5,724 lines exist and do what they say.
-
-What is not real is the need for any of it. One line of JavaScript answers this question correctly, and I shipped 5,724. The marginal 5,723 buy nothing but the bit, and that is the part worth being honest about, because the lesson here is not that AI agents can write a calendar algorithm. Date arithmetic is easy; a single agent would have done it in one try. The lesson is that I could stand up a fleet of them, point them at a hard pass/fail test, and trust the result precisely because I never trusted the agents. The gate did. The agents were cheap, fast, and occasionally wrong, and none of that mattered, because nothing shipped that the test had not certified. That workflow is the actual product. Is It Christmas is just the most ridiculous thing I could aim it at.
-
 ## Credit
 
-The idea, the design, and more than a decade of upkeep belong to [Eric Mill](https://bsky.app/profile/konklone.com). [isitchristmas.com](https://isitchristmas.com) is a small perfect thing, and the right response to a small perfect thing is to respect it, which I have done by building a deranged tribute that produces the identical output through five orders of magnitude more effort. Go read his version. Then open the console on [mine](/isitchristmas), and watch 121 algorithms agree on the obvious.
+Is It Christmas is Eric Mill's, and so is the idea that a silly single-purpose site is the best place to try something new. [Go read the original](https://isitchristmas.com); it has been quietly excellent for the better part of two decades, and it taught me the whole approach I just described. Then open the console on [my version](/isitchristmas) and watch 121 algorithms, built and vetted by 484 robots, agree on the obvious.
