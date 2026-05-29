@@ -16,124 +16,133 @@ permalink: /building-isitchristmas/
 
 <p class="post-subtitle">484 AI agents. 16 million tokens. Turns out it's not Christmas.</p>
 
-[isitchristmas.com](https://isitchristmas.com) answers one question, and it answers it in one word: YES or NO, in giant bold type. Eric Mill ([@konklone](https://bsky.app/profile/konklone.com)) has run it since the late 2000s, and the whole time it has doubled as a place to try whatever web technology he felt like. Look under the hood of the original and you find websockets, a progressive-web-app manifest, live multiplayer cursors, an IFTTT hook. None of that is necessary to tell you the date, and that was never the point. He just wanted somewhere low-stakes to try the new thing.
+[isitchristmas.com](https://isitchristmas.com) has done one thing for fifteen years: tell you, in one giant word, whether it's Christmas. The answer is almost always NO. Eric Mill ([@konklone](https://bsky.app/profile/konklone.com)) built it, and the whole time it's doubled as his excuse to mess with new web tech. Crack open the original and you'll find a websocket, a layer of live multiplayer cursors, a phone-app manifest, an IFTTT hook, none of which a calendar needs. That's the tradition: grab the dumbest site on the internet and use it as a lab.
 
-I love that about it, so I am continuing the tradition. The new thing I wanted to try is a way of building rather than a web technology. Claude Opus 4.8 shipped with "dynamic workflows," where instead of one assistant editing files in a loop, you orchestrate hundreds of AI agents from a script: fan them out and compose what they return. I had read the description without understanding it in my gut, so I pointed it at the most pointless target I could think of and watched.
+I run an AI startup. We build with Claude every day, and I've been shipping agents for a year. So when Claude Code dropped a feature I couldn't get a feel for, I knew exactly where to take it.
 
-This is the account of what it did. The one-word answer on the page is the same as ever. Everything behind it changed, and that is the story.
+The feature is [dynamic workflows](https://code.claude.com/docs/en/workflows), which shipped last week with [Claude Opus 4.8](https://www.anthropic.com/news/claude-opus-4-8). I'd read the docs. I understood what it did. What I didn't have was any instinct for *when you'd reach for it* instead of just letting one agent grind through a job. The only way to get that instinct is to use it on something real, so I pointed it at the stupidest target I could find and watched.
 
-## What a dynamic workflow is
+What came out looks exactly like the original. One word. The difference is that about 500 AI agents built it, on my laptop, in an hour, and I came out the other side understanding the feature. Here's what they did.
 
-The mental model I started with was wrong. I assumed "agents" meant a chat that calls itself a lot. It is closer to this: you write an ordinary JavaScript program, and a few of the function calls in it spawn a fresh AI agent that goes off, does a self-contained task, and returns a value. The program is deterministic; the agents are not. You get ordinary control flow, loops and conditionals and fan-out, to coordinate work that no single context could hold at once.
+## One agent, or five hundred
 
-Two primitives do most of the work. `parallel([...])` runs a batch of agents at the same time and waits for all of them. `pipeline(items, stageA, stageB)` runs each item through a series of stages. Each agent can be handed a JSON schema, and the framework forces it to return data in that exact shape, so the next line of your program gets a clean object instead of prose to parse. The whole thing runs in the background and reports when it finishes.
+If you've used Claude Code, you know the normal loop: one agent, reading your files, making edits, running tests, turn by turn. One worker, one train of thought. That's perfect right up until the job is too big to fit in one head.
 
-Fanning work out to many workers and checking it against a test is not a new idea. What is new is that it is now a first-class thing you drive from a single prompt. The interesting part is what you build with it, and it starts with something that has no AI in it at all.
+A dynamic workflow is the other gear. Claude writes a small JavaScript program whose only job is to spin up a crowd of throwaway Claude agents and boss them around. Two moves do most of the work. `parallel` fires off a batch of agents at once. `pipeline` runs them down an assembly line. Each agent does one small thing and hands back a clean answer. You can run up to a thousand of them, sixteen at a time. You turn the whole thing on by literally typing the word "workflow," which tells you how new it still is.
 
-## Claude built the referee first
+There's a catch nobody mentions. A thousand agents will confidently hand you a thousand answers, and a chunk of them will be wrong. Fan-out multiplies your output and it multiplies your mistakes at the exact same rate. So a workflow is only ever as good as your ability to check what comes back. Hold onto that. It turns out to be the whole game.
 
-I gave Claude an absurd brief: rebuild Is It Christmas so the YES/NO verdict is decided by a parliament of 121 independent algorithms, each a different way to work out whether today is December 25, all voting. Go as strange as you like.
+## Why 121 ways to check a calendar
 
-The first thing it wrote was the judge. Before a single voter existed, Claude wrote a 347-line Node script whose only job is to decide, with no AI involved, whether an algorithm is correct. It generates 148,488 test cases: every hour around Christmas across a dozen years, full-year sweeps to catch leap-year mistakes, 8,000 random instants, and every populated timezone from UTC−12 to UTC+14, including the ones that run daylight saving in December. For each case it derives the true answer from the platform's own calendar tables, runs the candidate, and compares.
+To get a feel for fan-out, I needed work that splits into a lot of independent pieces. "Is it Christmas" is the opposite of that. It's one line of code: is the month December and the day the 25th? You do not need five hundred agents for that. You need about four seconds.
 
-One rule did the most work here, and it holds even if you don't write code: **a language model should not be the final authority on whether code is correct, so it isn't.** The referee is deterministic, and it was tested before anything trusted it. Claude planted a deliberately broken algorithm that used UTC instead of local time and confirmed the referee caught it on 5,571 cases, then confirmed a known-good algorithm passed all 148,488. Only then did it start judging.
+So I made up a job that fits. Instead of checking the date once, I'd check it 121 times, with 121 completely different programs, and then have them vote. A hash table that memorized every Christmas through the year 2400. A tiny neural network with hand-picked weights. A Brainfuck interpreter. A fake blockchain. The date in Roman numerals, in Morse code, in base 60 like the Babylonians.
 
-The referee also has a conscience about method. Of the 121 algorithms, 59 were required to derive the date from raw arithmetic with no calendar library. The referee scans their source and disqualifies any that try to cheat, so those 59 really do the arithmetic.
+None of this is necessary. That is the point. I manufactured 121 chunks of independent work so I'd have something worth fanning out, the way you'd write a pointless 500-file repo to test a migration tool. The ridiculous algorithms aren't the project. They're the load.
 
-## Wave one: 121 authors, fanned out at once
+## Build the referee first
 
-With a referee in place, Claude wrote a menu of 121 distinct methodologies, sorted into eleven cohorts so no two agents would build the same thing, and launched the first workflow. Its core is four lines:
+Back to the catch. 121 agents writing 121 date algorithms is 121 chances to be subtly, invisibly wrong. And I was not going to read 121 hand-rolled calendar algorithms to find out which ones.
+
+So the first thing Claude built wasn't an algorithm. It was a referee: a plain Node script, no AI anywhere in it, that takes any algorithm and rules on whether it's correct.
+
+This works because "what's the date" is a question with a cheap, knowable answer. You don't have to be clever about testing it. You can just brute-force the entire space. The referee throws 148,488 different moments at each algorithm: every hour around Christmas across a dozen years, every timezone on earth, the weird 45-minute ones, leap years, the day the clocks change. For each moment it works out the real answer the boring correct way, then checks whether the algorithm agrees. Miss one and you fail.
+
+That number isn't a brag, it's the trick. When the truth is cheap to generate, you stop trusting the model's say-so and let a dumb deterministic program be the judge instead. The big number just means "exhaustively, no exceptions."
+
+Two things I want to be clear about, because they matter. This referee runs on my laptop while I'm building. It is not in the website, and nothing your browser does ever touches it. And Claude tested the referee before trusting it: it slipped in a deliberately broken algorithm to confirm the referee caught it, then confirmed a known-good one passed all 148,488. A judge you haven't tested is just a confident guess.
+
+## Swarm one: 121 agents write the code
+
+Now the fan-out. Claude wrote a workflow script, ran it on my machine, and it launched 121 agents at once, one per algorithm:
 
 ```js
-const results = await parallel(
-  MENU.map((m) => () =>
-    agent(promptFor(m), { schema: AUTHOR_SCHEMA, agentType: 'general-purpose' })
-  )
+// one agent per algorithm, all running at the same time
+await parallel(
+  menu.map((spec) => () => agent(writePrompt(spec), { schema: RESULT }))
 );
 ```
 
-That spawns 121 agents at once, each assigned one methodology. The part that makes the pattern work is what came next: each author was handed the referee and told to keep going until it passed. Write the algorithm, run it against the 148,488 cases, read the failures, fix the code, run again, and report success only once the referee said PASS. The agents graded themselves against something that could not be talked around.
+There are two populations here and they're easy to mix up, so let me keep them straight. There are the **121 agents**: temporary workers Claude hired for a few minutes to write code. And there are the **121 algorithms** they produce: the things that ship. The agents are scaffolding. They evaporate when the job is done. Only their output lives on.
 
-115 of the 121 passed on their first submission. The six that needed a second pass are the good part, because they are bugs the referee caught that a human skimming the code would have missed. The best one used Rata Die, a day-counting scheme from a book on calendar math. It used 719163 as the constant bridging the Unix epoch to the Rata Die epoch when the right value is 719162, one off. That single digit put about 20,000 cases one day early, all of them clustered around midnight in the far-eastern timezones, exactly where a one-day error hides until you test the boundary. The referee does. The agent read the failures, traced it to the constant, and passed on the second try. No human reviewed the fix.
+The move that makes the swarm trustworthy is what each agent was told: don't come back until the referee passes you. Write your algorithm, run it through all 148,488 checks, read whatever failed, fix it, run it again. Every agent graded its own homework against a teacher that can't be charmed.
 
-The wave finished in about 31 minutes and 4.8 million tokens.
+115 of the 121 passed on the first try. Six needed a second pass, and those six are my favorite part, because they're exactly the kind of bug a human skim sails right past.
 
-## A checkpoint between waves
+The best one used something called Rata Die, an old scheme for counting days as one big number, no months or years, straight back to a January in year one that nobody was around for. The agent got a single constant off by one: it wrote 719163 where the right value is 719162. That one digit shoved about 20,000 of the test dates a day early, and every single one was bunched up around midnight in the far-eastern timezones, which is precisely where a one-day slip hides unless you happen to be looking at midnight in New Zealand. The referee looks at midnight in New Zealand. It flagged the failures, the agent traced it to the constant, fixed it, and passed on the second try. I didn't review the fix. I didn't even know it had happened until I read the logs.
 
-When all 121 agents reported done, I ran the referee myself, once, over every shipped algorithm. All 121 passed, which they had to, since nothing could ship that the referee had not already certified. That is the rhythm of working this way: agents do the labor in a wave, and between waves a person reads the result and decides what comes next. It feels less like watching a chatbot type and more like running a small factory and inspecting the output between shifts.
+The whole swarm took 31 minutes and 4.8 million tokens.
 
-## Wave two: 363 reviewers, each fanned out three ways
+## Swarm two: 363 agents try to break it
 
-The next workflow was adversarial. By the time an algorithm reached it, it had already passed 148,488 cases, so the reviewers were not there to find arithmetic bugs. They were there to check that each algorithm honestly described itself and to find where it would break. Every one of the 121 went to three agents at once, and the script nests `parallel` inside `parallel`:
+When the agents reported done, I reran the referee myself, once, over all 121. Clean. That's the rhythm of this thing: a swarm does a wave of work, then a human looks at the pile and decides what happens next. It feels less like babysitting a chatbot and more like running a shift and inspecting the output between them.
+
+Then I sent a second swarm, and this one was out for blood. Every algorithm went to three more agents at once, 363 in all, each with a different angle:
 
 ```js
-const merged = await parallel(ALGOS.map((a) => async () => {
-  const [audit, fragility, curator] = await parallel([
-    () => agent(auditorPrompt(a),   { schema: ACK }),  // does the code do what it claims?
-    () => agent(fragilityPrompt(a), { schema: ACK }),  // where would it break?
-    () => agent(curatorPrompt(a),   { schema: ACK }),  // write one sharp sentence about it
+// for each algorithm, three reviewers at once
+await parallel(algorithms.map((a) => async () => {
+  const [matches, breaks, blurb] = await parallel([
+    () => agent("does this code do what it claims?"),
+    () => agent("where would this break?"),
+    () => agent("describe it in one sharp line"),
   ]);
-  return { id: a.id, honest: audit.honest, weakness: fragility.severity, line: curator.oneLiner };
+  return { id: a.id, matches, breaks, blurb };
 }));
 ```
 
-That is 363 reviewers. The auditors flagged nine algorithms for possibly misrepresenting themselves, and I read all nine. Every one was a reviewer applying the strict no-calendar-library rule to an algorithm that was allowed to use one. Nothing was lying about itself, which is the answer I wanted and would not have believed without checking. The single genuine limitation the reviewers surfaced is worth stating: 120 of the 121 are only guaranteed correct between 1970 and 2200. Load the site in the year 2250 and a few quietly go wrong, which nobody will, but it is still true.
+The referee had already settled correctness, so this swarm wasn't hunting bugs. It was for the stuff a deterministic test can't judge: is the code honest about what it does, where is it fragile, and, purely for this writeup, what's the one funny thing about it. Three hundred independent opinions, gathered in parallel, is something a single agent grinding in a loop just can't give you. That's the case for fan-out in one sentence.
 
-This wave ran 363 agents in about 24 minutes for 11 million tokens, and it is what sold me on the approach. Getting a hundred independent skeptics to attack your work from three fixed angles is not something one agent in a loop can do for you.
+It flagged nine algorithms as maybe fibbing about themselves. I read all nine; every one was a reviewer being too strict, not an algorithm lying. The only real limitation it surfaced is an honest one: 120 of the 121 only work between 1970 and 2200. Load the site in the year 2250 and a few quietly break. Nobody will, but it's true.
 
-## The post reviewed itself
+## What ships to your browser
 
-One more, because it is too good to leave out. The draft of this post went through a fourth workflow: four critics in parallel, one hunting the stylistic tics that give AI writing away, one fact-checking every number against the code, one playing a jaded Hacker News commenter, one making sure Eric Mill got proper credit. The fact-checker earned its keep when an earlier draft claimed one algorithm used "Newton's method"; it uses a plainer estimate-and-correct loop, and the critic caught it. The style critic caught me overusing the word "actually" and a contrast trick I lean on, which is part of why this version reads the way it does. The same pattern that built the site checked the story about the site.
+All of that, the referee and both swarms and the 484 agents, happened on my laptop while building. None of it ships.
 
-## The parliament, purely for entertainment
+What ships is small and dumb: the 121 finished algorithms in one file, plus a few lines that run them and count the votes. You load the page, your own browser runs all 121, they vote, and you get one word. The whole election takes about a tenth of a millisecond. Open your developer console to watch them argue in real time, a habit I'm stealing straight from the original, whose source code has been telling people to open the console for fifteen years.
 
-None of the above depends on the algorithms being interesting. They could all have been the same boring date check. Most of them basically are, the same small comparison in increasingly elaborate costumes, which is the joke. Since you read this far, here are the highlights. The reviewers rated them 11 elegant, 58 clever, 51 cursed, and one unhinged, and each line below was written by the agent that reviewed that algorithm.
+## The parliament (this part is just for fun)
 
-- **#29, Church Numeral Equality** "proves it's Christmas without ever using a number, only functions that have strong opinions about how many times to call other functions."
-- **#26, a real Brainfuck interpreter** running a Brainfuck program that subtracts 12 and 25.
-- **#45, RAG over a Holiday Store** "answers a yes-or-no question by consulting a 366-document vector database, which is roughly the engineering equivalent of hiring a librarian to confirm your own birthday."
-- **#110, Quantum Wavefunction Collapse** "keeps both Christmas and not-Christmas alive until you look, at which point it admits it was just an if statement wearing a lab coat."
-- **#107, a single-node private blockchain** that mines up to 366 blocks to look up a date it already knew.
-- **#62, Roman numerals** ("the kind of date format that was already obsolete by the time anyone wrote down the date of the first Christmas"), next to cohorts that check the date in balanced ternary, Babylonian base 60, Morse code, and Fibonacci coding.
-- **#86, the one honest algorithm,** "the boring, correct way to do this, which is presumably why the other 120 algorithms exist."
+Since you made it this far, here are a few of the 121, described by the agents that reviewed them:
 
-All 121 ship to your browser and run on page load, and you can read every one in the page source. Open the developer console on [the site itself](/isitchristmas) to watch them vote in real time, a habit I am borrowing straight from the original.
+- **Church Numeral Equality** "proves it's Christmas without ever using a number, only functions that have strong opinions about how many times to call other functions."
+- **RAG over a Holiday Store** "answers a yes-or-no question by consulting a 366-document vector database, which is roughly the engineering equivalent of hiring a librarian to confirm your own birthday."
+- **Quantum Wavefunction Collapse** "keeps both Christmas and not-Christmas alive until you look, at which point it admits it was just an if statement wearing a lab coat."
+- And the one honest one, plain `Intl`: "the boring, correct way to do this, which is presumably why the other 120 algorithms exist."
 
-## What this kind of orchestration is good for
+They all pass, and most of them are the same one-line date check in increasingly elaborate costumes, which is the joke. Every one is in the page source if you want to read them.
 
-I came out of this with a clearer answer than I went in with. A single agent in a loop is right when the work fits in one head and the steps depend on each other. You reach for a workflow when the work is wide rather than deep: a hundred independent things to build, or one thing to attack from many angles before you trust it.
+## So when would you use this?
 
-The shape that kept paying off was simple. Build a deterministic gate first, then fan a swarm of cheap, disposable agents at the problem and make each one earn its way past it. Read the results yourself between waves, and send a second swarm to break what the first one made. The agents were occasionally wrong and it never mattered, because being wrong got caught by something that does not bluff. The thing you are really designing is not the agents. It is the test they have to pass.
+Here is what a couple hundred dollars of tokens bought me, which is the part I was after.
 
-This only works when you can write that test. Here the right answer was cheap to pin down, so the gate was easy and trustworthy. When correctness is fuzzy or expensive to check, the gate gets weaker and the agents' confident wrongness starts to leak through. Think hard before you point a swarm at something that matters. None of this is free or repeatable either: run it again and you get different agents, different bugs, and a different bill. One engineer would have written the referee and a single correct algorithm in an afternoon. The other 120 algorithms and the 484 robots were the point only because the point was to learn the tool.
+Reach for a workflow when the work is wide, not deep: a hundred independent things to build, a hundred files to review, one decision you want attacked from a dozen angles before you commit. A single agent in a loop is still the right tool when the steps depend on each other and the whole thing fits in one context. Fan-out is for when it doesn't.
 
-That, not the website, is what I built this week, which is what Is It Christmas has always been for.
+But a swarm is only as good as its referee. Mine worked because "what's the date" has a cheap, knowable right answer, so I could trust 121 algorithms without reading a line of any of them. The moment the right answer gets fuzzy or expensive to check, that safety net is gone, and five hundred confidently-wrong agents is a far worse place to be than one careful one. Before you point a swarm at something, ask whether you can write the test that catches it lying. If you can't, don't.
 
-Every piece of the machinery is [in the repo](https://github.com/benstein/benjaminste.in/tree/main/isitchristmas/build), with a README: the referee, the methodology menu, the assembler, and all four workflow scripts. Read the code if you would rather see it than take my word for it.
+And none of it is free or repeatable. Run the same thing tomorrow and you get different agents, different bugs, a different bill. A decent engineer would have written my referee and one correct algorithm in an afternoon. The other 120 algorithms and the 484 robots bought me nothing I needed, except a real feel for the tool, which was the whole point.
 
-## The receipts
+If you take one thing from this: the skill isn't writing the agents. It's writing the test that decides whether to trust them.
+
+## Receipts
 
 <div class="iic-receipts" markdown="1">
 
 | | |
 |---|---|
-| Frontier model | **Claude Opus 4.8** |
-| Build method | **dynamic multi-agent workflows** |
-| Scripts Claude wrote (gate, menu, workflows) | **~850 lines** |
-| AI agents | **484** (121 authors + 363 reviewers) |
+| Feature I was learning | **[dynamic workflows](https://code.claude.com/docs/en/workflows)** (Claude Opus 4.8) |
+| Agents that built it | **484** (121 wrote algorithms, 363 reviewed them) |
+| Algorithms they produced | **121** |
 | Tokens | **~16 million** |
-| Author wave | **121 agents in parallel**, ~31 min |
-| Passed the gate on first submission | **115 / 121** |
-| Review wave | **363 agents** (121 × 3 lenses), ~24 min |
-| Honesty flags raised, then cleared | **9 / 9** |
-| Correctness cases per algorithm | **148,488** |
-| Algorithms shipped | **121** |
-| Shipped to every visitor's browser | **419 KB**, all 121 run on load |
-| Rough API cost | **a few hundred dollars** |
+| Rough cost | **a couple hundred dollars** |
+| The referee | **a Node script with no AI in it**, run on my laptop |
+| Cases the referee checks per algorithm | **148,488** |
+| Passed on the first try | **115 / 121** |
+| What ships to your browser | **121 algorithms + a vote counter** (~420 KB) |
 | What the visitor sees | **one word** |
 
 </div>
 
 ## Credit
 
-Is It Christmas is Eric Mill's, and so is the idea that a silly single-purpose site is the best place to try something new. [Go read the original](https://isitchristmas.com); it has been quietly excellent for the better part of two decades, and it taught me the whole approach I just described. Then open the console on [my version](/isitchristmas) and watch 121 algorithms, built and vetted by 484 robots, agree on the obvious.
+Is It Christmas is Eric Mill's, and so is the idea that a stupid little site is the best place to learn something new. [Go read the original](https://isitchristmas.com); it's been quietly great for fifteen years and it taught me the whole move. The machinery behind mine, the referee and all four workflow scripts, is [in the repo](https://github.com/benstein/benjaminste.in/tree/main/isitchristmas/build) with a README. Then open the console on [my version](/isitchristmas) and watch 121 algorithms, built and vetted by 484 robots, agree on the obvious.
