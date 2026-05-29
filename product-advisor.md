@@ -108,6 +108,11 @@ permalink: /product-advisor/
 </div>
 
 <div class="advisor-client">
+<p class="advisor-client-name">Supporting Cast</p>
+<p class="advisor-client-desc">Agentic Engineering Best Practices</p>
+</div>
+
+<div class="advisor-client">
 <p class="advisor-client-name">Art19 (Amazon)</p>
 <p class="advisor-client-desc">OKR and prioritization frameworks</p>
 </div>
