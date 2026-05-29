@@ -1,0 +1,991 @@
+{
+  "count": 121,
+  "cohorts": {
+    "Calendrical Classics": 12,
+    "Epoch Arithmetic": 13,
+    "Esolang & Exotic Interpreters": 10,
+    "Machine Learning Cosplay": 13,
+    "Stringly Typed": 11,
+    "Number-Base Maximalists": 13,
+    "Recursion & Functional": 10,
+    "Lookup & Memoization": 9,
+    "Intl & Locale": 10,
+    "Physics & Astronomy Cosplay": 8,
+    "Cursed & Over-Engineered": 12
+  },
+  "derive": {
+    "scratch": 59,
+    "extract": 52,
+    "intl": 10
+  },
+  "algorithms": [
+    {
+      "id": 1,
+      "name": "Hinnant civil_from_days",
+      "cohort": "Calendrical Classics",
+      "derive": "scratch",
+      "methodology": "Takes floor(localMs / 86400000) as days since 1970-01-01 and runs Howard Hinnant's civil_from_days: shift the epoch to 0000-03-01, split into 400-year eras (146097 days), derive year-of-era, day-of-era, day-of-year, then a branch-free month/day extraction. Votes yes when the resulting month is 12 and day is 25.",
+      "flavor": "It moves the start of the year to March so February's leap day stops causing trouble, which is the kind of thing only a calendar nerd would call elegant."
+    },
+    {
+      "id": 2,
+      "name": "Fliegel–Van Flandern JDN Decoder",
+      "cohort": "Calendrical Classics",
+      "derive": "scratch",
+      "methodology": "Takes the integer day count from localMs (floor of localMs/86400000), adds 2440588 to turn it into a Julian Day Number, then runs the 1968 Fliegel & Van Flandern integer algorithm (the L/N/I/J chain of truncating divisions) to recover the Gregorian month and day, and reports whether they are December 25.",
+      "flavor": "A FORTRAN one-liner from 1968 that still knows exactly when to hang the stockings."
+    },
+    {
+      "id": 3,
+      "name": "Richards JDN Decomposition",
+      "cohort": "Calendrical Classics",
+      "derive": "scratch",
+      "methodology": "Takes the local epoch day (floor of localMs/86400000), adds 2440588 to get the Julian Day Number, then runs E.G. Richards' tabulated JDN-to-Gregorian conversion (constants y=4716, j=1401, p=1461, s=153, B=274277, C=-38) to recover year, month, and day. Votes yes when month is 12 and day is 25. Floor division is used throughout so pre-1970 dates convert correctly.",
+      "flavor": "A 4,000-year-old counting system, pressed into service to answer whether you should be opening presents."
+    },
+    {
+      "id": 4,
+      "name": "Meeus Julian-Day Inversion",
+      "cohort": "Calendrical Classics",
+      "derive": "scratch",
+      "methodology": "Converts the local epoch-day count to a Julian Day Number (adding 2440588), then runs Jean Meeus' calendar-from-JD procedure from Astronomical Algorithms chapter 7 (the A, B, C, D, E intermediates) to recover the civil year, month, and day. Votes yes when month is 12 and day is 25.",
+      "flavor": "The same arithmetic astronomers use to date eclipses, pointed at a far more pressing question."
+    },
+    {
+      "id": 5,
+      "name": "Rata Die (Reingold–Dershowitz)",
+      "cohort": "Calendrical Classics",
+      "derive": "scratch",
+      "methodology": "Treats the local day count as a Rata Die fixed day (Unix epoch = RD 719162) and runs Reingold & Dershowitz's gregorian-from-fixed: a 400/100/4/1-year cycle decomposition recovers the year, then a piecewise-linear month formula with a February-length correction recovers month and day. Christmas is month 12, day 25.",
+      "flavor": "It counts days the way medieval chronologists wished they could: one integer, no calendar, all the way back to a January in year one that nobody actually observed."
+    },
+    {
+      "id": 6,
+      "name": "Proleptic Gregorian ordinal (CPython fromordinal)",
+      "cohort": "Calendrical Classics",
+      "derive": "scratch",
+      "methodology": "Takes the local epoch-day (floor(localMs/86400000)), adds 719163 to shift it onto the proleptic Gregorian ordinal where day 1 is 0001-01-01, then runs CPython's _ord2ymd: it peels off 400-, 100-, 4-, and 1-year spans (146097, 36524, 1461, 365 days) to find the year, estimates the month with an arithmetic guess and corrects it against a days-before-month table, and reports December 25.",
+      "flavor": "It is the same loop datetime.date.fromordinal runs every time you parse a timestamp, minus the import."
+    },
+    {
+      "id": 7,
+      "name": "400-Year Supercycle Decomposition",
+      "cohort": "Calendrical Classics",
+      "derive": "scratch",
+      "methodology": "Converts the local epoch-day count to a civil date by re-basing it to a March-1 era origin and peeling off nested calendar blocks: the 146097-day 400-year supercycle, then 36524-day centuries, 1461-day quad-years, and 365-day years, clamping the two boundary overflows that correspond to Feb 29. A 153-day month staircase then maps the day-of-year to a month and day, and it votes true only when that resolves to December 25.",
+      "flavor": "It rebuilds the Gregorian calendar from four magic numbers every single time you ask it what day it is."
+    },
+    {
+      "id": 8,
+      "name": "March-Based Year (Zeller-Style)",
+      "cohort": "Calendrical Classics",
+      "derive": "scratch",
+      "methodology": "Takes the integer day count floor(localMs/86400000) and runs the March-based civil decomposition: re-anchor to year 0 March 1, split into 400-year eras, recover the year-of-era and shifted day-of-year, then use month = floor((5*doy+2)/153) and day = doy - floor((153*month+2)/5) + 1 to peel off the month and day, unshifting March-based months back to calendar months. Votes yes when that yields December 25.",
+      "flavor": "Starts every year in March so February's leap-day mischief is always somebody else's last problem."
+    },
+    {
+      "id": 9,
+      "name": "Lilian Date Reconstruction",
+      "cohort": "Calendrical Classics",
+      "derive": "scratch",
+      "methodology": "Takes the local civil day as an integer (floor of localMs over 86,400,000), converts it to a Lilian date by counting days from the 1582-10-15 Gregorian reform, then recovers year, month, and day by subtracting whole 400-, 100-, 4-, and 1-year blocks before walking the month lengths. Votes true when that date is December 25.",
+      "flavor": "Pope Gregory XIII deleted ten days in 1582; this voter just counts the ones that survived."
+    },
+    {
+      "id": 10,
+      "name": "Modified Julian Date Path",
+      "cohort": "Calendrical Classics",
+      "derive": "scratch",
+      "methodology": "Takes the integer epoch-day count from floor(localMs/86400000), adds 40587 because 1970-01-01 is Modified Julian Date 40587, then shifts that MJD to its integer Julian Day Number (mjd + 2400001) and inverts it to a Gregorian year/month/day with Richards' integer algorithm. Votes yes when the result is December 25.",
+      "flavor": "Routes the question through an astronomer's day count from 1858, because the direct path felt too easy."
+    },
+    {
+      "id": 11,
+      "name": "Tabular Month-Length Cascade",
+      "cohort": "Calendrical Classics",
+      "derive": "scratch",
+      "methodology": "Converts the local epoch-day to a year by adding or subtracting 365/366-day year blocks out from 1970, leaving a zero-based day-of-year, then subtracts the lengths from a twelve-entry month table (February sized by the Gregorian leap rule) one month at a time until the remainder lands inside a month; it votes yes when that month is December and the day is the 25th.",
+      "flavor": "It does the long division of the calendar by hand, one month at a time, the way you balanced a checkbook before banks did it for you."
+    },
+    {
+      "id": 12,
+      "name": "Conway Doomsday Locator",
+      "cohort": "Calendrical Classics",
+      "derive": "scratch",
+      "methodology": "Converts the local epoch-day integer to a proleptic-Gregorian (year, month, day) with pure arithmetic, then uses Conway's Doomsday rule as an independent cross-check: it computes the year's doomsday weekday from the century anchor table plus the within-century correction, derives the weekday of December 25 both from that doomsday (12/12 anchor plus 13 days) and from the epoch-day count modulo 7 anchored at the Thursday of 1970-01-01, and votes yes only when the resolved date is December 25 and both weekday derivations agree.",
+      "flavor": "It would rather recite Conway's anchor days from memory than trust a calendar it did not personally derive."
+    },
+    {
+      "id": 13,
+      "name": "Leap-Aware Forward Year Walk",
+      "cohort": "Epoch Arithmetic",
+      "derive": "scratch",
+      "methodology": "Starting from the local epoch-day integer (days since 1970-01-01), it walks the calendar one year at a time out from 1970, adding each year's length of 365 or 366 days as decided by the Gregorian leap rule until the running total would overshoot the epoch-day; the leftover is the zero-based day-of-year, which it then resolves into a civil month and day by subtracting month lengths from a twelve-entry table with February sized by the same leap rule, voting yes only when that resolves to December 25.",
+      "flavor": "It counts off the years on its fingers from 1970, leap years included, and refuses to skip ahead."
+    },
+    {
+      "id": 14,
+      "name": "Second-Granularity Accumulator",
+      "cohort": "Epoch Arithmetic",
+      "derive": "scratch",
+      "methodology": "Computes whole seconds since the local 1970-01-01 epoch as floor(localMs/1000), then resolves the civil date by accumulation in the time domain: it subtracts a full year's worth of seconds for each year that fits (using the Gregorian leap rule for year length), then subtracts a full month's worth of seconds for each month that fits, and the seconds left over divided by 86400 give the day of the month. Votes yes when the year-spend lands in December and the remaining day index is 24.",
+      "flavor": "It treats the date like a budget: spend a year of seconds at a time until you can't afford another, then do the same with months, and whatever's left is the 25th or it isn't."
+    },
+    {
+      "id": 15,
+      "name": "BigInt Nanosecond Reducer",
+      "cohort": "Epoch Arithmetic",
+      "derive": "scratch",
+      "methodology": "Promotes the local epoch-millisecond integer to BigInt nanoseconds (localMs * 1000000n) and performs the whole epoch-to-civil reduction in BigInt: it floor-divides by the nanoseconds-per-day constant to get the local day count, runs Howard Hinnant's days-from-civil inverse (era, day-of-era, year-of-era, day-of-year, then the 153-based month/day extraction) entirely on BigInt operands, and only converts month and day to Number for the final December-25 comparison.",
+      "flavor": "Carries every intermediate as a BigInt so no December gets rounded into January by a wayward float."
+    },
+    {
+      "id": 16,
+      "name": "Iterative Whole-Year Subtraction",
+      "cohort": "Epoch Arithmetic",
+      "derive": "scratch",
+      "methodology": "Computes the integer day count floor(localMs/86400000) since 1970-01-01, then repeatedly subtracts whole calendar-year lengths (366 for Gregorian leap years, else 365) advancing the year from 1970 until fewer than a full year of days remain; that remainder is the 0-indexed day-of-year. Days before 1970 are handled by adding year lengths while stepping the year backward. The day-of-year is then reduced through the month lengths to recover the month and day, and the vote is yes only for December 25.",
+      "flavor": "Counts off the years one whole trip around the sun at a time, the way you'd tear pages off a very long calendar."
+    },
+    {
+      "id": 17,
+      "name": "Iterative Whole-Month Subtraction",
+      "cohort": "Epoch Arithmetic",
+      "derive": "scratch",
+      "methodology": "Takes floor(localMs / 86400000) as days since 1970-01-01, resolves the year by walking a cursor year by year and subtracting each year's length (366 in leap years, 365 otherwise) until the remainder no longer fills a whole year, then resolves the month by subtracting January through December lengths in turn (February leap-aware) from that remaining day-of-year, stopping when the residual is smaller than the next month. Votes yes when the walk lands in December with a residual day of 25.",
+      "flavor": "It refuses any clever closed-form shortcut and instead subtracts the calendar one month at a time, like counting change."
+    },
+    {
+      "id": 18,
+      "name": "Bitwise Day-Count Decomposition",
+      "cohort": "Epoch Arithmetic",
+      "derive": "scratch",
+      "methodology": "Floors ctx.localMs to an integer epoch-day, then runs Howard Hinnant's days-from-civil inverse with a 0000-03-01 origin so the leap day falls at year's end. The leap-cadence divide-by-four uses a right shift (yoe >> 2) and the era/day-of-era floors use bit-OR-0 truncation, restricted to operands small enough to stay inside JS's 32-bit integer range; it reports December 25 directly without materializing the year.",
+      "flavor": "Counts to Christmas in two's complement and refuses to allocate a Date object on principle."
+    },
+    {
+      "id": 19,
+      "name": "Scaled fixed-point civil date",
+      "cohort": "Epoch Arithmetic",
+      "derive": "scratch",
+      "methodology": "Floors localMs/86400000 to a day count, promotes it to BigInt, and runs the 400-year-era epoch-to-civil conversion entirely in exact integer arithmetic: every division is a true floored BigInt quotient (via sign-correcting fdiv/fmod helpers) and every ratio is scaled by its integer denominator (146097, 1461, 153, 365) so no fractional value is ever formed. Votes yes when the extracted month is 12 and day is 25.",
+      "flavor": "It would rather carry around a 146097 than ever let a decimal point near the calendar."
+    },
+    {
+      "id": 20,
+      "name": "Quad-Year 1461 Modulo",
+      "cohort": "Epoch Arithmetic",
+      "derive": "scratch",
+      "methodology": "Takes floor(localMs / 86400000) as days since 1970-01-01, shifts the origin to 0000-03-01, then peels the count apart by the lengths of the Gregorian cycles in turn: the 146097-day 400-year era, the 36524-day century, the 1461-day quad-year, and the 365-day year, clamping the final index at the century and year levels to absorb each cycle's closing leap day. The leftover day-of-year (counted from March) is mapped to a month and day through a 12-entry offset table, and it votes yes when that resolves to December 25.",
+      "flavor": "It treats the calendar as four nested odometers (146097, 36524, 1461, 365) and just reads off the digits."
+    },
+    {
+      "id": 21,
+      "name": "Year-Start Table Binary Search",
+      "cohort": "Epoch Arithmetic",
+      "derive": "scratch",
+      "methodology": "At load time it builds a sorted table of the epoch-day on which January 1 falls for every year from 1970 to 2201, accumulated using the Gregorian leap rule. For each vote it floors localMs/86400000 to a day count, binary-searches the table for the latest year-start at or before that day to identify the civil year, then subtracts to get the 0-based day-of-year and walks the month-length table (with February adjusted for leap years) to recover month and day, returning true only for December 25.",
+      "flavor": "It would rather do log-n lookups in a table it built itself than trust a single modulo."
+    },
+    {
+      "id": 22,
+      "name": "Anchor-Walk From 1970 Thursday",
+      "cohort": "Epoch Arithmetic",
+      "derive": "scratch",
+      "methodology": "Treats epoch-day = floor(localMs/86400000) as a count from the 1970-01-01 anchor, reduces it into a single 400-year Gregorian cycle by whole-cycle arithmetic, then walks that cycle one year at a time (subtracting 365 or 366 per the leap rule) to find the civil year, and one month at a time to find month and day. Reports true only on December 25.",
+      "flavor": "It refuses to trust any date library and instead re-derives the calendar by stepping forward from a single Thursday in 1970."
+    },
+    {
+      "id": 23,
+      "name": "Estimate-then-Correct Year Solver",
+      "cohort": "Epoch Arithmetic",
+      "derive": "scratch",
+      "methodology": "Takes floor(localMs/86400000) as days since 1970-01-01, estimates the civil year as floor(epochDay/365.2425)+1970, then corrects the estimate by stepping it up or down until that year's January-1 epoch-day and the next year's bracket the day. It subtracts the resolved year-start to get the zero-based day-of-year, picks the leap or common cumulative-month table, and walks the table to a (month, day); it votes yes when that is December 25.",
+      "flavor": "Guesses the year, checks its own work, and adjusts, like a clerk who never quite trusts the first answer."
+    },
+    {
+      "id": 24,
+      "name": "Continued-Fraction Year Length",
+      "cohort": "Epoch Arithmetic",
+      "derive": "scratch",
+      "methodology": "Approximates the mean Gregorian year (365.2425 days = 365 + 97/400) by the continued-fraction convergent 8/33, giving an approximate year length of 12053/33 days. It estimates the civil year by integer-dividing epoch-day = floor(localMs/86400000) by that fraction, corrects the estimate by stepping to the true Jan-1 boundary computed from exact leap-day counts, then subtracts month lengths to recover month and day. Reports true only on December 25.",
+      "flavor": "It trusts a fraction to get close and then makes the leap days answer for the gap."
+    },
+    {
+      "id": 25,
+      "name": "Days-In-Prior-Years Summation",
+      "cohort": "Epoch Arithmetic",
+      "derive": "scratch",
+      "methodology": "Takes epoch-day = floor(localMs/86400000) and finds the civil year by comparing it against a closed-form running total of days elapsed since 1970-01-01: each year before the candidate contributes 365 days plus one for every leap year, where leap years are counted by inclusion-exclusion over multiples of 4, 100, and 400. It locates the largest year whose day-total does not exceed epoch-day, takes the remainder as the zero-based day-of-year, then walks a month-length table (February adjusted for leap years) to recover month and day, voting true only for December 25.",
+      "flavor": "It would rather re-tabulate every leap year since the moon landing than ask a calendar what year it is."
+    },
+    {
+      "id": 26,
+      "name": "Brainfuck Comparison VM",
+      "cohort": "Esolang & Exotic Interpreters",
+      "derive": "extract",
+      "methodology": "Extracts the local month and day from new Date(ctx.localMs) via getUTCMonth()+1 and getUTCDate(), feeds those two integers into a real Brainfuck virtual machine through its input (,) stream, and runs a fixed BF program that subtracts 12 from month and 25 from day, tests each remainder for zero with flag-clearing loops, ANDs the two flags, and emits one output byte. The host reads that byte: a 1 means it is December 25.",
+      "flavor": "Outsources a two-field date comparison to an eight-instruction esolang, because the obvious if-statement felt insufficiently load-bearing."
+    },
+    {
+      "id": 27,
+      "name": "Forth RPN Stack Machine",
+      "cohort": "Esolang & Exotic Interpreters",
+      "derive": "extract",
+      "methodology": "Reads the visitor's local month and day via getUTC* on ctx.localMs, pushes them onto a stack, and runs a fixed Forth-style RPN program ('dup 25 = swap drop swap 12 = and') on a from-scratch interpreter that implements dup, drop, swap, =, and as real stack words using Forth's 0/-1 flag convention. Votes yes when the program leaves a true flag on top.",
+      "flavor": "It answers the question in postfix, because asking a stack machine for an opinion in any other order would be rude."
+    },
+    {
+      "id": 28,
+      "name": "Befunge Grid Walker",
+      "cohort": "Esolang & Exotic Interpreters",
+      "derive": "extract",
+      "methodology": "Extracts the local civil month and day via new Date(ctx.localMs).getUTCMonth()/getUTCDate(), then runs a hand-written Befunge-93-style program on a 2D character grid. An instruction pointer with a direction vector walks the grid manipulating a stack: it pushes month and day, builds the literals 12 and 25 by multiplication, subtracts and logical-NOTs to test each for equality, multiplies the two booleans for a logical AND, prints the result, and halts at @. The single printed value is the vote.",
+      "flavor": "A two-dimensional program counter wanders a grid of glyphs and somehow comes back with the right answer; this is what computing looked like in the timeline where we never standardized on rows."
+    },
+    {
+      "id": 29,
+      "name": "Church Numeral Equality",
+      "cohort": "Esolang & Exotic Interpreters",
+      "derive": "extract",
+      "methodology": "Extracts the local month and day from new Date(ctx.localMs) via getUTCMonth()+1 and getUTCDate(), encodes them and the constants 12 and 25 as Church numerals (zero plus repeated successor), and tests month==12 and day==25 using a lambda-calculus equality built from Kleene's pair-based predecessor, truncated subtraction, ISZERO, and a Church AND, then collapses the resulting Church boolean to a JavaScript boolean.",
+      "flavor": "It proves it's Christmas without ever using a number, only functions that have strong opinions about how many times to call other functions."
+    },
+    {
+      "id": 30,
+      "name": "S/K Combinator Christmas Predicate",
+      "cohort": "Esolang & Exotic Interpreters",
+      "derive": "extract",
+      "methodology": "Extracts the local civil month and day via getUTC* on ctx.localMs, encodes the candidate operands as Church numerals, and evaluates AND(EQ(month,12), EQ(day,25)) inside a hand-written S/K/I combinator reducer. EQ is assembled from LEQ, which is built from a pair-based Church predecessor and ISZERO, all expressed as combinator terms via bracket abstraction; each resulting Church boolean is decoded by reducing it applied to two distinct primitives. Since only months 1..12 and days 1..31 can occur, the reducer is run once per operand at load time to fill two truth tables, after which a vote is a lookup.",
+      "flavor": "It owns no concept of the number 25; it only knows that I, K, and S rewrite, and lets December fall out of the reductions."
+    },
+    {
+      "id": 31,
+      "name": "Turing Machine Date Tape",
+      "cohort": "Esolang & Exotic Interpreters",
+      "derive": "extract",
+      "methodology": "Reads the local month and day via getUTC* on ctx.localMs, writes them as the zero-padded decimal tape 'MM/DD', and runs a deterministic single-tape Turing machine whose transition table walks the cells matching '12/25'. The machine halts in an accept state only when every cell matches and the input ends cleanly; any mismatched cell sends it to a reject sink, and the boolean is read off the halting state.",
+      "flavor": "It is a fully operational Turing machine whose entire computable purpose is to recognize one five-character string."
+    },
+    {
+      "id": 32,
+      "name": "Cyclic Tag System Equality Tester",
+      "cohort": "Esolang & Exotic Interpreters",
+      "derive": "extract",
+      "methodology": "Reads the visitor's local month and day via getUTC* on ctx.localMs, then runs a real cyclic tag system (binary alphabet, two cycled productions both equal to '0') on the data word 1^a 0^b to compare a against a target. Every 1 deletes and appends one 0, every 0 deletes and appends nothing, so the run always terminates after exactly 2a+b steps; since 2a+b equals a+2b iff a==b, the measured step count decides equality. It runs the system once for month vs 12 and once for day vs 25 and votes yes only when both report equal.",
+      "flavor": "It decides the date by feeding a string of ones and zeros to a machine that does nothing but delete symbols and occasionally append a zero, which is somehow exactly enough."
+    },
+    {
+      "id": 33,
+      "name": "Rule 110 Logic Gate",
+      "cohort": "Esolang & Exotic Interpreters",
+      "derive": "extract",
+      "methodology": "Extracts the visitor's local month and day via getUTC* on ctx.localMs, reduces them to the two bits (month == 12) and (day == 25), then computes their AND using the elementary cellular automaton Rule 110 wired as logic. The two bits seed a three-cell tape [a, 0, b] which is evolved for three synchronous Rule 110 generations; the center cell then equals AND(a, b), exploiting that r110(a,1,b)=NAND and r110(1,x,1)=NOT. Votes yes when the automaton settles on 1.",
+      "flavor": "Turing-complete since 2004, and finally given a job it is wildly overqualified for."
+    },
+    {
+      "id": 34,
+      "name": "Thompson NFA Regex VM",
+      "cohort": "Esolang & Exotic Interpreters",
+      "derive": "extract",
+      "methodology": "Extracts the visitor's local month and day with getUTC* on ctx.localMs, renders them as a zero-padded MM/DD digit string, and matches that string against a Christmas pattern using a hand-built regular-expression engine: a recursive-descent parser produces an AST, Thompson's construction lowers it to a flat CHAR/SPLIT/JMP/MATCH program, and Pike's parallel-thread simulation runs the resulting NFA with epsilon-closure (no backtracking, and the host RegExp is never used). It votes yes when a thread reaches MATCH having consumed the whole string.",
+      "flavor": "It rebuilds Ken Thompson's 1968 NFA every page load just to confirm what a glance at the calendar would, and regrets nothing."
+    },
+    {
+      "id": 35,
+      "name": "Subleq OISC Date Check",
+      "cohort": "Esolang & Exotic Interpreters",
+      "derive": "extract",
+      "methodology": "Reads the local month and day via getUTC* on ctx.localMs (the timezone trick) and loads them into the memory of a Subleq one-instruction-set computer. A hand-assembled Subleq program, built only from the subtract-and-branch-if-non-positive primitive, computes 12-month, day-25, and 25-day and reaches its accept instruction only when month is 12 and day is 25, where it writes 1 to a result cell. The boolean is read from that cell, not from any JavaScript comparison.",
+      "flavor": "It owns exactly one instruction and has decided that subtracting things until they stop being positive is a complete philosophy of computing."
+    },
+    {
+      "id": 36,
+      "name": "Hardcoded-Weights MLP",
+      "cohort": "Machine Learning Cosplay",
+      "derive": "extract",
+      "methodology": "Extracts the local civil month and day via new Date(ctx.localMs).getUTCMonth()/getUTCDate(), feeds them through a small multilayer perceptron with hand-set weights: four hidden ReLU hinges that each clamp at 0.5 to test month>=11, month<=11, day>=25, day<=25, summed by the output layer and pushed through a sharpened sigmoid. The sigmoid only exceeds 0.5 when all four inequalities hold at once, i.e. month 11 and day 25.",
+      "flavor": "No training data, no gradient descent, no GPU bill, just a network whose weights I typed in by hand until it agreed it was Christmas."
+    },
+    {
+      "id": 37,
+      "name": "Hand-Built Decision Tree",
+      "cohort": "Machine Learning Cosplay",
+      "derive": "extract",
+      "methodology": "Extracts the local month and day from new Date(ctx.localMs) using getUTCMonth()+1 and getUTCDate(), forming a two-feature vector. It then traverses a hand-authored binary decision tree of '<='-threshold nodes, serialized as a flat array of records the way scikit-learn stores a fitted tree: the root splits on month<=11, the December branch splits on day<=24, and the surviving branch splits on day<=25. The reached leaf carries a class label, and a CHRISTMAS leaf means it is December 25.",
+      "flavor": "It is three if-statements wearing a trench coat labeled 'model', and it would absolutely list 'decision trees' on a resume."
+    },
+    {
+      "id": 38,
+      "name": "Calendar k-Nearest-Neighbors (k=1)",
+      "cohort": "Machine Learning Cosplay",
+      "derive": "extract",
+      "methodology": "Extracts the visitor's local month and day via getUTC* on ctx.localMs, then runs a 1-nearest-neighbor classifier over a labeled training set of all 366 (month, day) points (Feb 29 included), where the lone positive label is December 25. It scans for the closest exemplar under squared Euclidean distance in (month, day) space and returns its label; an exact match always exists at distance 0, so it reproduces the matching day's label. k is fixed at 1 because the single positive exemplar would always be outvoted at any larger k.",
+      "flavor": "A machine-learning model that memorized the entire calendar and calls looking things up in it inference."
+    },
+    {
+      "id": 39,
+      "name": "Logistic Regression on Squared Date Features",
+      "cohort": "Machine Learning Cosplay",
+      "derive": "extract",
+      "methodology": "Reads the visitor's local month and day with getUTC* on ctx.localMs (December is month 12 after the +1), engineers two squared-deviation features (month-12)^2 and (day-25)^2 that vanish only on Christmas, applies baked logistic-regression coefficients and a positive bias to form the logit BIAS - W_MONTH*f1 - W_DAY*f2, passes it through a numerically stable sigmoid, and votes yes when the probability exceeds the 0.5 decision threshold. The weights are set so the on-target logit is positive while any deviation of even one day or month forces it negative, giving a clean margin.",
+      "flavor": "It is a one-neuron model with two features and a bias, which is the smallest possible machine that can still claim it was trained."
+    },
+    {
+      "id": 40,
+      "name": "Random Forest of Stumps",
+      "cohort": "Machine Learning Cosplay",
+      "derive": "extract",
+      "methodology": "Extracts the local civil month and day via new Date(ctx.localMs).getUTCMonth()/getUTCDate(), then builds two injective composite features (month*31+day and month*32+day, on which December 25 lands at 366 and 377) plus the absolute deviation of the first composite from 366. Five single-threshold decision stumps bracket those coordinates with half-integer thresholds, and a majority vote of at least 3 of the 5 fires only on December 25, when all five stumps agree.",
+      "flavor": "Five stumps too weak to mean anything on their own, outvoting each other into a calendar lookup that scikit-learn would quietly disown."
+    },
+    {
+      "id": 41,
+      "name": "Naive Bayes over Discretized Month/Day",
+      "cohort": "Machine Learning Cosplay",
+      "derive": "extract",
+      "methodology": "Reads the visitor's local month (getUTCMonth+1, so December is 12) and day (getUTCDate) off ctx.localMs, then runs a two-class naive Bayes classifier. The XMAS class has baked likelihoods sharply peaked at month=12 and day=25 (with a tiny epsilon floor for every other value so off-target scores are finite), the NOT class uses flat per-value likelihoods, and it votes yes only when the XMAS log-posterior (logPrior plus the two conditional log-likelihoods) beats the NOT log-posterior, which happens exactly when both features hit December the 25th.",
+      "flavor": "It is real Bayes arithmetic over a prior that was decided in advance and likelihoods that were never fit to anything, which is most of machine learning."
+    },
+    {
+      "id": 42,
+      "name": "Single Perceptron AND-Gate",
+      "cohort": "Machine Learning Cosplay",
+      "derive": "extract",
+      "methodology": "Reads the visitor's local month and day with getUTC* on ctx.localMs (December is month 12 after the +1 on the 0-based getUTCMonth), maps them to two binary indicator features x1=(month==12) and x2=(day==25), and feeds them to a single perceptron with weights w1=w2=1 and bias -1.5 followed by a hard step activation. The pre-activation 1*x1 + 1*x2 - 1.5 is positive only when both indicators are 1, so the step fires exactly on December 25; this is the textbook AND-gate weight assignment for one neuron.",
+      "flavor": "It is the AND gate every intro-to-ML lecture builds, cosplaying as a date validator with delusions of being a neural network."
+    },
+    {
+      "id": 43,
+      "name": "Toy Self-Attention Transformer",
+      "cohort": "Machine Learning Cosplay",
+      "derive": "extract",
+      "methodology": "Extracts the visitor's local civil month (0-based) and day via getUTC* on ctx.localMs, treats [month, day] as a two-token sequence, embeds each token into a 3-dim vector (month-value, day-value, bias), and runs one genuine scaled dot-product self-attention head: linear Q/K/V projections, QK^T/sqrt(d_k) scores, a softmax over the two keys, and the attention-weighted sum of value vectors. The Q/K projections make attention uniform so the attended vector mixes both tokens, and a final linear head computes -|month-11| - |day-25| + 0.5, which is positive only at month 11 and day 25.",
+      "flavor": "It is a transformer in the same way a paper hat is a crown, but the dot products and softmax are real and it does correctly attend to Christmas."
+    },
+    {
+      "id": 44,
+      "name": "Max-Margin RBF SVM",
+      "cohort": "Machine Learning Cosplay",
+      "derive": "extract",
+      "methodology": "Extracts the local civil month (0-based, December === 11) and day via new Date(ctx.localMs).getUTCMonth()/getUTCDate(), then evaluates a support-vector-machine decision function f(x) = sum(alpha_i * y_i * exp(-gamma * ||x - sv_i||^2)) + b over hand-baked support vectors: one positive vector at (11,25) and four negative vectors at its nearest calendar neighbors. With gamma=8 the positive term is ~1 at the exact target and ~3e-4 one unit away, and the bias is set so sign(f) is positive only at month 11, day 25.",
+      "flavor": "A maximum-margin classifier with exactly one thing on the right side of the hyperplane, and it's the twenty-fifth of December."
+    },
+    {
+      "id": 45,
+      "name": "RAG over a Holiday Store",
+      "cohort": "Machine Learning Cosplay",
+      "derive": "extract",
+      "methodology": "Builds a vector store of all 366 calendar slots, each embedded as a 4-d unit vector placing the date on a month-of-year circle and a day-of-month circle, with December 25 labeled Christmas. Extracts the local month and day from new Date(ctx.localMs) via getUTCMonth()+1 and getUTCDate(), embeds that query the same way, retrieves the single nearest document by cosine similarity (a dot product of unit vectors, maximized only on an exact month-and-day match), and votes yes when the retrieved document carries the Christmas label.",
+      "flavor": "It answers a yes-or-no question by consulting a 366-document vector database, which is roughly the engineering equivalent of hiring a librarian to confirm your own birthday."
+    },
+    {
+      "id": 46,
+      "name": "Gaussian RBF Classifier",
+      "cohort": "Machine Learning Cosplay",
+      "derive": "extract",
+      "methodology": "Reads the visitor's local month and day with getUTC* on ctx.localMs (December is 12 after the +1 on the 0-based getUTCMonth), treats them as a 2-D feature vector, and scores it against the Christmas prototype (12, 25) with a Gaussian RBF kernel phi = exp(-gamma * squared-distance) using gamma = 1. Because every wrong calendar date is at least one integer unit from the center, its response is at most exp(-1) ~= 0.368, while the center scores exp(0) = 1; a 0.5 threshold therefore fires only on December 25.",
+      "flavor": "A one-support-vector kernel machine whose entire training set is the day it cares about, tuned just tight enough to overfit Christmas on purpose."
+    },
+    {
+      "id": 47,
+      "name": "Genetic Algorithm Evolved Rule",
+      "cohort": "Machine Learning Cosplay",
+      "derive": "extract",
+      "methodology": "At load time a small deterministic genetic algorithm (fixed-seed mulberry32 PRNG, population 60, 80 generations, tournament selection, single-point crossover, elitism, low mutation) evolves a genome (month, day) against a labeled calendar of all 366 leap-year days whose lone positive label is December 25; fitness is the count of days classified correctly, whose unique optimum is (12, 25). The evolved winner is cached, and each vote extracts the visitor's local month and day via getUTC* on ctx.localMs and returns whether they match the evolved (month, day).",
+      "flavor": "Eighty generations of natural selection to rediscover that Christmas is on the twenty-fifth."
+    },
+    {
+      "id": 48,
+      "name": "ISO Slice Compare",
+      "cohort": "Stringly Typed",
+      "derive": "extract",
+      "methodology": "Builds new Date(ctx.localMs).toISOString(), which renders the local civil time as a UTC-formatted string because localMs already carries the timezone offset, then slices characters 5 through 9 (the fixed 'MM-DD' window for a four-digit year) and tests whether that substring strictly equals the string '12-25'.",
+      "flavor": "It never learns that December is month twelve; it just trusts that the two characters after the first dash will say so."
+    },
+    {
+      "id": 49,
+      "name": "Hand-built ISO from getUTC",
+      "cohort": "Stringly Typed",
+      "derive": "extract",
+      "methodology": "Reads the local year, month, and day from new Date(ctx.localMs) via getUTCFullYear/getUTCMonth/getUTCDate (getUTC* on localMs returns the visitor's local civil fields), adds 1 to the 0-based month, and concatenates a zero-padded 'YYYY-MM-DD' string by hand. It then slices the 'MM-DD' tail (characters 5 through 10) and votes yes when that substring equals the literal '12-25'.",
+      "flavor": "Reinvents Date.prototype.toISOString one zero-pad at a time, then throws away the year and most of the work to compare five characters."
+    },
+    {
+      "id": 50,
+      "name": "toUTCString Substring Match",
+      "cohort": "Stringly Typed",
+      "derive": "extract",
+      "methodology": "Renders ctx.localMs with Date.prototype.toUTCString(), which always emits the fixed RFC-7231 form 'Ddd, DD Mon YYYY HH:MM:SS GMT' in English regardless of locale. Because localMs carries the visitor's local wall clock, the day-of-month and month abbreviation in that string are the local civil date. The algorithm slices out the six-character 'DD Mon' field and string-compares it to the constant '25 Dec'; it votes yes only on an exact match.",
+      "flavor": "It does not know what December is, only that the string says so."
+    },
+    {
+      "id": 51,
+      "name": "JSON.stringify Slice",
+      "cohort": "Stringly Typed",
+      "derive": "extract",
+      "methodology": "Serializes new Date(ctx.localMs) with JSON.stringify, which yields the ISO-8601 instant wrapped in double quotes; because localMs already carries the timezone offset the rendered string is the visitor's local civil date. The leading quote shifts the ISO layout by one character, so it slices indices 6 through 10 (the 'MM-DD' field for a four-digit year) and tests strict equality with the literal '12-25'.",
+      "flavor": "It would rather parse a string it just printed than ask a Date object what month it is."
+    },
+    {
+      "id": 52,
+      "name": "ISO string regex /-12-25T/",
+      "cohort": "Stringly Typed",
+      "derive": "extract",
+      "methodology": "Builds the local-civil instant with new Date(ctx.localMs), renders it with toISOString() (which always formats in UTC, so on localMs the date part is the visitor's local date), and tests that string against the anchored RegExp /^[+-]?\\d{4,}-12-25T/. A match means the month and day fields immediately before the time separator are 12 and 25.",
+      "flavor": "Why parse a date when you can ask a regular expression whether it looks Christmassy."
+    },
+    {
+      "id": 53,
+      "name": "Hyphen-Delimited Field Split",
+      "cohort": "Stringly Typed",
+      "derive": "extract",
+      "methodology": "Reads the local year, month, and day from new Date(ctx.localMs) via getUTCFullYear/getUTCMonth/getUTCDate (getUTC* on localMs yields the visitor's local civil fields), adds 1 to the 0-based month, and assembles a zero-padded 'YYYY-MM-DD' string with the year forced to four digits so the hyphen layout stays fixed. It then splits that string on '-' into three fields and votes yes only when parts[1] === '12' and parts[2] === '25'.",
+      "flavor": "Treats the date like a CSV row with a hyphen delimiter, then judges Christmas by inspecting columns two and three."
+    },
+    {
+      "id": 54,
+      "name": "padStart MM/DD",
+      "cohort": "Stringly Typed",
+      "derive": "extract",
+      "methodology": "Reads the visitor's local month and day via new Date(ctx.localMs).getUTCMonth()+1 and .getUTCDate(), formats each as a two-character field with String#padStart(2, '0'), joins them as 'MM/DD', and votes yes when that string equals the literal '12/25'.",
+      "flavor": "It trusts a string comparison over a pair of integer checks, which is either lazy or principled depending on how you feel about types."
+    },
+    {
+      "id": 55,
+      "name": "Fixed-Index Char Compare",
+      "cohort": "Stringly Typed",
+      "derive": "extract",
+      "methodology": "Builds a canonical ISO date string from the local civil fields read off ctx.localMs via getUTC*, then compares the character codes at the four fixed positions that hold MM and DD (indices 5, 6, 8, 9) against the codes for \"12\" and \"25\". December 25 is the unique date that matches all four.",
+      "flavor": "It distrusts parseInt and trusts only the bytes at the addresses it was promised."
+    },
+    {
+      "id": 56,
+      "name": "Numeric MMDD Concat",
+      "cohort": "Stringly Typed",
+      "derive": "extract",
+      "methodology": "Reads the local civil month and day via new Date(ctx.localMs).getUTCMonth()+1 and getUTCDate(), packs them into the integer month*100+day (the numeric MMDD form), and votes yes when that integer equals 1225.",
+      "flavor": "It treats the calendar like a four-digit padlock and only opens for the combination 1225."
+    },
+    {
+      "id": 57,
+      "name": "Array.join Date Compare",
+      "cohort": "Stringly Typed",
+      "derive": "extract",
+      "methodology": "Reads the local civil month and day via new Date(ctx.localMs).getUTCMonth()+1 and getUTCDate(), puts the two numbers into a [month, day] array, joins it with '-' to form an 'M-D' string, and votes yes when that joined string equals the constant '12-25'.",
+      "flavor": "It builds a tiny array just to flatten it back into a string, which is exactly the sort of detour the name 'stringly typed' deserves."
+    },
+    {
+      "id": 58,
+      "name": "Binary Compare",
+      "cohort": "Number-Base Maximalists",
+      "derive": "extract",
+      "methodology": "Reads the visitor's local civil month and day via new Date(ctx.localMs).getUTCMonth()+1 and .getUTCDate(), converts each integer to its base-2 string with Number.prototype.toString(2), and votes true only when the month's bit string strictly equals '1100' (twelve) and the day's bit string strictly equals '11001' (twenty-five).",
+      "flavor": "Refuses to acknowledge a month called twelve until you spell it out in four bits."
+    },
+    {
+      "id": 59,
+      "name": "Octal Compare",
+      "cohort": "Number-Base Maximalists",
+      "derive": "extract",
+      "methodology": "Extracts the visitor's local month and day via getUTC* on ctx.localMs, converts each to an octal string by hand (repeated division by 8, collecting remainders), and votes yes only when the month renders as \"14\" octal (decimal 12) and the day renders as \"31\" octal (decimal 25).",
+      "flavor": "Christmas is the 14th of Octember, the 31st, if you count on eight fingers."
+    },
+    {
+      "id": 60,
+      "name": "Hexadecimal Compare",
+      "cohort": "Number-Base Maximalists",
+      "derive": "extract",
+      "methodology": "Reads the visitor's local month and day via getUTCMonth()+1 and getUTCDate() on localMs, converts each to a base-16 string with toString(16), and reports Christmas only when the month string equals \"c\" (0xC, December) and the day string equals \"19\" (0x19, the 25th).",
+      "flavor": "Insists that Christmas falls on the 19th of month C, and is technically correct about it."
+    },
+    {
+      "id": 61,
+      "name": "Base-36 Compare",
+      "cohort": "Number-Base Maximalists",
+      "derive": "extract",
+      "methodology": "Extracts the visitor's local month and day from new Date(ctx.localMs) using getUTCMonth()+1 and getUTCDate(), encodes both integers into base-36 strings with an explicit radix-36 digit alphabet, and compares those strings against the base-36 encodings of December (12 -> 'c') and the 25th (25 -> 'p'). A match on both means it is December 25.",
+      "flavor": "In base 36 the answer is just whether today is the c of p; everyone insists on writing it as 12/25 instead."
+    },
+    {
+      "id": 62,
+      "name": "Roman Numeral Date",
+      "cohort": "Number-Base Maximalists",
+      "derive": "extract",
+      "methodology": "Reads the local civil month and day via getUTCMonth()+1 and getUTCDate() on localMs, converts each to a Roman numeral with a standard subtractive converter (largest-to-smallest value/symbol pairs), then votes yes only when the month renders as 'XII' and the day renders as 'XXV'.",
+      "flavor": "The kind of date format that was already obsolete by the time anyone wrote down the date of the first Christmas."
+    },
+    {
+      "id": 63,
+      "name": "Unary Tally Marks",
+      "cohort": "Number-Base Maximalists",
+      "derive": "extract",
+      "methodology": "Reads the visitor's local civil month and day via new Date(ctx.localMs).getUTCMonth()+1 and .getUTCDate(), encodes each as a base-1 (unary) string of '|' marks, and votes true only when the month tally string equals '|'.repeat(12) and the day tally string equals '|'.repeat(25). The reference tally strings are built once at load time, so the per-call work is two unary encodings and two string comparisons.",
+      "flavor": "The only counting system that needs a separate symbol for nothing and the same symbol for everything else."
+    },
+    {
+      "id": 64,
+      "name": "Balanced Ternary Comparator",
+      "cohort": "Number-Base Maximalists",
+      "derive": "extract",
+      "methodology": "Reads the visitor's local civil month and day via new Date(ctx.localMs).getUTCMonth()+1 and getUTCDate(), converts each to balanced ternary (digits drawn from -1, 0, 1, place values powers of three) by repeated mod-3 reduction with a carry when the remainder is 2, and votes Christmas only when the month's digit string equals that of 12 and the day's equals that of 25.",
+      "flavor": "Counts in a base where some digits are negative, and still manages to find December 25."
+    },
+    {
+      "id": 65,
+      "name": "Babylonian Sexagesimal Numerals",
+      "cohort": "Number-Base Maximalists",
+      "derive": "extract",
+      "methodology": "Extracts the local civil month and day via getUTCMonth()+1 and getUTCDate() on ctx.localMs (the getUTC* timezone trick), then converts each to a base-60 (sexagesimal) numeral by repeated division and remainder by 60, most-significant digit first. It votes yes when the month's sexagesimal numeral equals that of 12 and the day's equals that of 25, comparing the digit lists positionally; since 12 and 25 are each single base-60 digits, both comparisons reduce to one digit against one.",
+      "flavor": "It keeps the books the way the scribes of Babylon did, where the twelfth month and the twenty-fifth day each fit in a single wedge."
+    },
+    {
+      "id": 66,
+      "name": "Base-26 alphabetic",
+      "cohort": "Number-Base Maximalists",
+      "derive": "extract",
+      "methodology": "Reads the visitor's local month and day from new Date(ctx.localMs) using getUTCMonth()+1 and getUTCDate(), encodes each as a bijective base-26 string over the alphabet A..Z (1->A, 26->Z, 27->AA, with no zero digit), and votes yes when the month string equals the encoding of 12 (\"L\") and the day string equals the encoding of 25 (\"Y\").",
+      "flavor": "It insists on spelling the date in spreadsheet-column letters before admitting that, yes, December the twenty-fifth is in fact L-Y."
+    },
+    {
+      "id": 67,
+      "name": "Negabinary Date Match",
+      "cohort": "Number-Base Maximalists",
+      "derive": "extract",
+      "methodology": "Reads the visitor's local month and day from new Date(ctx.localMs) via the getUTC* accessors (which return local civil fields), converts both numbers to negabinary (base -2) digit strings, and votes yes only when the month string equals the negabinary form of 12 and the day string equals the negabinary form of 25.",
+      "flavor": "A number base where carrying borrows from a negative neighbor, applied to the deeply pressing question of whether today is a Thursday in December or just looks like one."
+    },
+    {
+      "id": 68,
+      "name": "Recursive year-and-month subtraction",
+      "cohort": "Recursion & Functional",
+      "derive": "scratch",
+      "methodology": "Takes floor(localMs / 86400000) as days since 1970-01-01 and, with no loops, recurses one year at a time (adding or subtracting that year's leap-aware length) until the remaining count falls inside a single year, then recurses one month at a time to peel off month lengths. Votes yes when the resolved month is 12 and day is 25.",
+      "flavor": "It refuses to use a loop on principle and subtracts years one stack frame at a time, like counting down to Christmas the hard way."
+    },
+    {
+      "id": 69,
+      "name": "Y-Combinator Day Counter",
+      "cohort": "Recursion & Functional",
+      "derive": "scratch",
+      "methodology": "Computes the integer local epoch-day as floor(localMs / 86400000) and resolves it to a civil date using anonymous recursion through an applicative-order fixed-point (Z) combinator: one combinator-built function peels whole years off the day index, starting from 1970, stepping forward or backward until the remaining offset is a valid day-of-year, and a second peels whole months off that day-of-year using a leap-aware month-length table. No recursive function is ever given a name; the recursion is supplied entirely by the fixed point. Votes yes when the resolved month is December and the day is 25.",
+      "flavor": "It refuses to name its own recursion on principle, so it borrows a fixed point and lets the lambda calculus carry the loop."
+    },
+    {
+      "id": 70,
+      "name": "Tail-Recursive Resolver",
+      "cohort": "Recursion & Functional",
+      "derive": "scratch",
+      "methodology": "Converts the local epoch-day to a civil date with two explicitly tail-recursive, accumulator-passing helpers: resolveYear peels whole 365/366-day year blocks (stepping up from 1970, or borrowing previous-year lengths for negative day counts) until a valid day-of-year remains, and resolveMonth subtracts month lengths in order, with February sized by the Gregorian leap rule, until the remainder lands inside a month; it votes yes when the resolved month is December and the day is the 25th.",
+      "flavor": "It never holds onto a stack frame longer than it has to, which is more than can be said for most of us in December."
+    },
+    {
+      "id": 71,
+      "name": "Month-Length Reduce",
+      "cohort": "Recursion & Functional",
+      "derive": "scratch",
+      "methodology": "From epochDay = floor(localMs/86400000) it finds the civil year by walking year boundaries and subtracting each year's length (365 or 366) until the remaining day-of-year fits. It then builds that year's twelve month lengths and Array#reduce()s over them, carrying the day-of-year and decrementing each month's span, to land on the civil month and day; it votes yes when that is December 25.",
+      "flavor": "It folds a list of month lengths the way an accountant reconciles a ledger, one column at a time, refusing to trust a calendar it did not foot itself."
+    },
+    {
+      "id": 72,
+      "name": "Mutually Recursive isLeap / daysInMonth",
+      "cohort": "Recursion & Functional",
+      "derive": "scratch",
+      "methodology": "Defines isLeap and daysInMonth in terms of each other: isLeap(year) returns true exactly when daysInMonth(year, February) is 29, and daysInMonth sizes February as 28 plus the leap day, with the Gregorian divisibility rule held in a single base predicate so the mutual cycle terminates after one bounce. It converts floor(localMs / 86400000) to a civil date by subtracting whole years (each year's length summed from daysInMonth) off the epoch-day, then whole months, and votes yes when the resolved month is 12 and day is 25.",
+      "flavor": "Two functions that each insist the other one knows whether it's a leap year, which somehow still arrives at the right answer."
+    },
+    {
+      "id": 73,
+      "name": "Continuation-Passing Civil Date",
+      "cohort": "Recursion & Functional",
+      "derive": "scratch",
+      "methodology": "Computes epochDay = floor(ctx.localMs / 86400000) and converts it to a civil (year, month, day) with Howard Hinnant's days-to-civil algorithm rewritten in continuation-passing style: each arithmetic step (origin shift, era, day-of-era, year-of-era, day-of-year, month-prime, day, month) is a function taking a continuation, threading its result forward rather than returning it. The terminal continuation receives the civil month and day and returns true only when they are 12 and 25.",
+      "flavor": "Nothing here returns a value; it just keeps passing the buck until someone has to answer for December."
+    },
+    {
+      "id": 74,
+      "name": "Lazy Take-Until Sequence",
+      "cohort": "Recursion & Functional",
+      "derive": "scratch",
+      "methodology": "Converts the local epoch-day integer to a year and a zero-based day-of-year by walking forward from the 1970-01-01 anchor and subtracting each Gregorian year's length until the remainder falls inside one year. It then drives a lazy generator of (month, month-length) pairs for that year and 'takes until' the cumulative length exceeds the day-of-year, reading the stopping month and the offset within it as the civil month and day, and votes yes only when that resolves to December 25.",
+      "flavor": "It refuses to compute a month it has not yet been asked for, and it asks for at most twelve."
+    },
+    {
+      "id": 75,
+      "name": "Trampolined Day-Walker",
+      "cohort": "Recursion & Functional",
+      "derive": "scratch",
+      "methodology": "Converts the local epoch-day to a civil date with two recursive walkers driven by a trampoline: instead of calling themselves, each step returns a zero-argument thunk closing over its stepped arguments, and a bounce loop invokes thunks until a non-function final value appears, so the native call stack stays O(1) regardless of how many years are walked. yearStep peels whole 365/366-day years (forward from 1970, or borrowing previous-year lengths for negative day counts) until a valid day-of-year remains; monthStep subtracts month lengths in order with February sized by the Gregorian leap rule; it votes yes when the resolved month is December and the day is the 25th.",
+      "flavor": "It refuses to recurse the way nature intended, preferring to leap off the stack and land on the trampoline between every single year."
+    },
+    {
+      "id": 76,
+      "name": "Church-encoded fold over days",
+      "cohort": "Recursion & Functional",
+      "derive": "scratch",
+      "methodology": "Counts whole years (365 or 366 days) forward from 1970 over floor(localMs/86400000) to get the year and a 0-based day-of-year, then represents the twelve month lengths as a Church-encoded list (a list that is its own right fold) and folds it with cons/nil combinators that thread the remaining-day count rightward, returning the first month whose span contains the day. Votes yes when that month is 12 and the day is 25.",
+      "flavor": "It refuses to index an array on principle and instead lets the answer fall out of a right fold, which is either functional purity or a cry for help."
+    },
+    {
+      "id": 77,
+      "name": "Christmas Day-Number Set",
+      "cohort": "Lookup & Memoization",
+      "derive": "scratch",
+      "methodology": "At load time it computes, with Hinnant's integer days_from_civil formula, the epoch-day number of December 25 for every year from 1969 to 2201 and stores them in a Set. A vote floors localMs/86400000 to the visitor's local epoch-day and returns whether that integer is a member of the set.",
+      "flavor": "It keeps a guest list of all the Christmases and checks whether today's day-number is on it."
+    },
+    {
+      "id": 78,
+      "name": "Binary Search Christmas Array",
+      "cohort": "Lookup & Memoization",
+      "derive": "scratch",
+      "methodology": "At load time it precomputes a sorted array containing the integer epoch-day of December 25 for every year from 1900 to 2400, using Howard Hinnant's days_from_civil closed form to map each (year, 12, 25) to its day offset from 1970-01-01 with integer arithmetic. Each vote takes the visitor's local epoch-day as floor(localMs / 86400000) and runs an iterative binary search for an exact match in that array; a hit means the local civil date is Christmas.",
+      "flavor": "Keeps a sorted ledger of every Christmas from 1900 to 2400 and bisects its way to an answer in a dozen comparisons."
+    },
+    {
+      "id": 79,
+      "name": "Christmas Hash Map",
+      "cohort": "Lookup & Memoization",
+      "derive": "scratch",
+      "methodology": "At load time it computes, with integer arithmetic over the Gregorian leap rule, the epoch-day number of December 25 for every year from 1969 to 2201 and stores each as a key in a hash map. A vote derives the visitor's local epoch-day as floor(localMs/86400000) and returns whether that day is present in the map.",
+      "flavor": "It precomputed every Christmas it will ever need and now just checks the guest list at the door."
+    },
+    {
+      "id": 80,
+      "name": "Bloom filter + verify",
+      "cohort": "Lookup & Memoization",
+      "derive": "scratch",
+      "methodology": "At load time it precomputes the integer epoch-day of every December 25 from 1968 to 2202 and inserts each into a 4096-bit Bloom filter using two positions per key (a 32-bit avalanche mix plus Kirsch-Mitzenmacher double hashing). To vote it derives the local epoch-day from floor(localMs/86400000), checks whether both filter bits are set, and on a probable hit converts that epoch-day back to a civil date with the 400-year-era algorithm to confirm the month is 12 and the day is 25, eliminating false positives.",
+      "flavor": "The Bloom filter is happy to be wrong in one direction, so the verify step exists purely to keep it honest the other way."
+    },
+    {
+      "id": 81,
+      "name": "Perfect hash of 231 days",
+      "cohort": "Lookup & Memoization",
+      "derive": "scratch",
+      "methodology": "At load time it converts December 25 of every year from 1969 to 2201 into an epoch-day count via Hinnant's days_from_civil, then stores each in a 364-slot table keyed by day mod 364, a modulus chosen so the 233 Christmas days never collide. A vote takes floor(localMs / 86400000), hashes it the same way, and returns true only if the stored day in that slot is exactly equal.",
+      "flavor": "It memorized every Christmas between 1969 and 2201 so it would never have to think about the calendar again."
+    },
+    {
+      "id": 82,
+      "name": "Day-of-year bitmap",
+      "cohort": "Lookup & Memoization",
+      "derive": "scratch",
+      "methodology": "Takes floor(localMs / 86400000) as days since 1970-01-01 and subtracts whole-year lengths (365 or 366 by the Gregorian leap rule) to resolve the civil year and the 0-indexed day-of-year. It then indexes one of two precomputed 366-bit bitmaps (common-year or leap-year), each with a single bit set at Dec 25's day-of-year (358 common, 359 leap); the vote is that bit test.",
+      "flavor": "A whole bitmap allocated to remember the location of exactly one bit, which is either thrifty or absurd depending on how you feel about Christmas."
+    },
+    {
+      "id": 83,
+      "name": "Run-Length-Encoded Calendar",
+      "cohort": "Lookup & Memoization",
+      "derive": "scratch",
+      "methodology": "Converts the local epoch-day to a year and zero-based day-of-year by peeling off 365/366-day year blocks out from 1970, then represents the year as three run-length segments (not-Christmas, the single Christmas day, not-Christmas) where the middle run starts at day-of-year 358 in common years and 359 in leap years; it decodes the runs by accumulating their lengths and votes yes only when the day-of-year falls inside the middle run.",
+      "flavor": "It compresses the entire year into three numbers, which is either admirable thrift or proof that 363 of those days are beneath its notice."
+    },
+    {
+      "id": 84,
+      "name": "Christmas Interval Table",
+      "cohort": "Lookup & Memoization",
+      "derive": "scratch",
+      "methodology": "At load time, walks the Gregorian calendar year by year from a margin around 1968..2202 to build a cumulative epoch-day count for each Jan 1, and from it the half-open epoch-day interval [Dec25, Dec25+1) for every year (using day-of-year 358 in common years, 359 in leap years). To vote, it takes floor(localMs/86400000), binary-searches the Jan-1 table to find the containing calendar year, and returns true if that day equals the year's precomputed Christmas day.",
+      "flavor": "It keeps two and a half centuries of Christmases in a table just to avoid doing arithmetic at vote time, which is either thrift or hoarding depending on your view."
+    },
+    {
+      "id": 85,
+      "name": "Memoized Year Resolver",
+      "cohort": "Lookup & Memoization",
+      "derive": "scratch",
+      "methodology": "Reduces the local instant to an integer epoch day via Math.floor(ctx.localMs/86400000), then resolves the civil year using a cache that memoizes each year's January-1 epoch-day index (anchored at 1970-01-01 = day 0, extended one year at a time with the Gregorian leap rule and densified as it is queried). A 365.2425-day estimate seeds the year guess, the memoized year-starts confirm it, and the residual day-of-year is matched against a precomputed cumulative-month table; it votes yes when that residual equals December 25's day-of-year for the resolved year.",
+      "flavor": "It pays the cost of counting days to a year boundary exactly once, files the answer away, and bills every later visitor at the cached rate."
+    },
+    {
+      "id": 86,
+      "name": "Honest IANA Intl",
+      "cohort": "Intl & Locale",
+      "derive": "intl",
+      "methodology": "Feeds the true UTC instant (ctx.epochMs) and the visitor's IANA zone (ctx.timeZone) to Intl.DateTimeFormat('en-US', {timeZone, month:'numeric', day:'numeric'}) and reads month and day back via formatToParts. The vote is true when month is 12 and day is 25. No localMs trick; the locale layer resolves the zone, including December DST in the southern hemisphere.",
+      "flavor": "The boring, correct way to do this, which is presumably why the other 120 algorithms exist."
+    },
+    {
+      "id": 87,
+      "name": "German locale 25.12.",
+      "cohort": "Intl & Locale",
+      "derive": "intl",
+      "methodology": "Formats new Date(ctx.localMs) with Intl.DateTimeFormat('de-DE', {timeZone:'UTC', day:'2-digit', month:'2-digit'}), which produces the German DD.MM. date notation. It splits the string on the period separator and votes yes when the day field is 25 and the month field is 12.",
+      "flavor": "Germany writes the day before the month and ends it with a full stop, which is the most German way imaginable to assert that today is the 25th of the 12th."
+    },
+    {
+      "id": 88,
+      "name": "Japanese Locale (12月25日)",
+      "cohort": "Intl & Locale",
+      "derive": "intl",
+      "methodology": "Formats ctx.localMs with Intl.DateTimeFormat('ja-JP', { timeZone: 'UTC', month: 'long', day: 'numeric' }), which renders the visitor's local civil date as a Japanese long date like 12月25日. It reads the month and day back out of formatToParts and votes yes when the month is 12 and the day is 25.",
+      "flavor": "If the kanji say twelfth-month twenty-fifth-day, that is good enough for Santa."
+    },
+    {
+      "id": 89,
+      "name": "French locale 25/12",
+      "cohort": "Intl & Locale",
+      "derive": "intl",
+      "methodology": "Formats new Date(ctx.localMs) with Intl.DateTimeFormat('fr-FR', {timeZone:'UTC', day:'2-digit', month:'2-digit'}), which produces the French DD/MM date notation. It splits the string on the slash separator and votes yes when the day field is 25 and the month field is 12.",
+      "flavor": "The French put the day first and join it with slashes, so noel arrives as a tidy 25/12 well before anyone reaches for the month."
+    },
+    {
+      "id": 90,
+      "name": "Hebrew calendar cross-check",
+      "cohort": "Intl & Locale",
+      "derive": "intl",
+      "methodology": "Formats new Date(ctx.localMs) with Intl.DateTimeFormat using calendar 'gregory' and timeZone 'UTC' to read the local civil month and day, voting yes only on 12/25. A second formatter with calendar 'hebrew' renders the same instant as its Hebrew-calendar date (for example '15 Tevet 5787') purely as a reported cross-check; the Hebrew date is computed but never used to decide the vote.",
+      "flavor": "It double-checks Christmas against the Hebrew calendar, which has its own strong opinions about December and is not consulted on any of them."
+    },
+    {
+      "id": 91,
+      "name": "Hijri cross-check, Gregorian verdict",
+      "cohort": "Intl & Locale",
+      "derive": "intl",
+      "methodology": "Formats new Date(ctx.localMs) with Intl.DateTimeFormat('en-US', {timeZone:'UTC', calendar:'gregory', month:'numeric', day:'numeric'}) and reads the numeric month and day back via formatToParts, voting yes when month is 12 and day is 25. A parallel Intl formatter on the Islamic ('islamic') calendar renders the same instant's Hijri date as a sanity cross-check, but the verdict rests entirely on the explicit Gregorian format with its explicit UTC timeZone.",
+      "flavor": "It dutifully prints the Hijri date next to the verdict, mostly to remind you that 25 December means nothing to a calendar that wandered off eleven days ago."
+    },
+    {
+      "id": 92,
+      "name": "Japanese era calendar",
+      "cohort": "Intl & Locale",
+      "derive": "intl",
+      "methodology": "Formats new Date(ctx.localMs) with Intl.DateTimeFormat using the Japanese era calendar (ja-JP-u-ca-japanese, timeZone:'UTC') so the year is expressed in nengo terms, then recovers the unambiguous Gregorian month and day from an explicit Gregorian formatter (en-US-u-ca-gregory, timeZone:'UTC') of the same instant via formatToParts. The vote is true when that Gregorian month is 12 and day is 25.",
+      "flavor": "It dutifully figures out which imperial era you're in, then quietly ignores that and checks the Gregorian date like everyone else."
+    },
+    {
+      "id": 93,
+      "name": "Minguo 民國 12/25",
+      "cohort": "Intl & Locale",
+      "derive": "intl",
+      "methodology": "Decides with an explicit Gregorian formatter, Intl.DateTimeFormat('en-US-u-ca-gregory', {timeZone:'UTC', month:'numeric', day:'numeric'}), reading new Date(ctx.localMs) so the UTC breakdown equals the visitor's local civil date. It votes yes when month is 12 and day is 25. A parallel zh-TW-u-ca-roc (Minguo) formatter confirms the same instant, which works because the ROC calendar reuses Gregorian months and days and only renumbers the year as Gregorian minus 1911.",
+      "flavor": "Taiwan files Christmas under 民國115, but the 12/25 underneath never moved an inch."
+    },
+    {
+      "id": 94,
+      "name": "Days-until-Christmas == 0",
+      "cohort": "Intl & Locale",
+      "derive": "intl",
+      "methodology": "Reads the local civil year, month, and day from Intl.DateTimeFormat('en-US', {timeZone:'UTC'}).formatToParts(new Date(ctx.localMs)), converts both that date and December 25 of the same year to epoch-day counts, and votes yes when their whole-day difference is 0. Intl.RelativeTimeFormat narrates the delta as a human phrase but does not affect the vote.",
+      "flavor": "It counts the sleeps until Christmas and only believes it has arrived when there are none left."
+    },
+    {
+      "id": 95,
+      "name": "formatToParts Reducer",
+      "cohort": "Intl & Locale",
+      "derive": "intl",
+      "methodology": "Runs Intl.DateTimeFormat('en-US', { timeZone: 'UTC', month: 'numeric', day: 'numeric' }).formatToParts on a Date built from ctx.localMs, then reduces the parts array into an object keyed by part type. It votes yes when the object's month slot is 12 and its day slot is 25.",
+      "flavor": "Array.prototype.reduce was invented for summing numbers, but it will happily fold a date into a verdict instead."
+    },
+    {
+      "id": 96,
+      "name": "Astronomer's Julian Date",
+      "cohort": "Physics & Astronomy Cosplay",
+      "derive": "scratch",
+      "methodology": "Computes the fractional astronomical Julian Date from the local millisecond count as localMs/86400000 + 2440587.5 (the Unix epoch is JD 2440587.5, the half-day reflecting JD's noon boundary), takes the Julian Day Number for that day with floor(JD + 0.5), and inverts it to a Gregorian year/month/day using the Fliegel and Van Flandern integer algorithm. Votes yes when the month is December and the day is 25.",
+      "flavor": "Counts the days since a noon in 4713 BC, which is the least convenient possible way to find out whether to hang the stockings."
+    },
+    {
+      "id": 97,
+      "name": "Days Since J2000.0",
+      "cohort": "Physics & Astronomy Cosplay",
+      "derive": "scratch",
+      "methodology": "Takes the visitor's local civil midnight as an integer day count, expresses it as whole days relative to the J2000.0 standard epoch (the 2000-01-01 calendar date, Julian Date 2451545.0), and resolves that offset back to a Gregorian year, month, and day by decomposing the 400/100/4/1-year cycle on a March-anchored calendar. Votes true when the result is December 25.",
+      "flavor": "Astronomers reset their clocks to noon on the first day of 2000; this voter measures Christmas as a displacement from that fixed point in the sky."
+    },
+    {
+      "id": 98,
+      "name": "Orbital Day-of-Year",
+      "cohort": "Physics & Astronomy Cosplay",
+      "derive": "scratch",
+      "methodology": "Reads floor(ctx.localMs / 86400000) as a count of completed Earth orbits plus a fractional remainder, rebases it onto days-since-0001-01-01, estimates the orbit (year) with a closed-form 365.2425-day average and corrects by stepping at most a couple of years, then takes the leftover days as the zero-based day-of-year. It votes yes when that ordinal equals Christmas's fixed orbital station: 358 in a common year, 359 in a leap year.",
+      "flavor": "Counts how far Earth has swung around the Sun and only celebrates when the planet reaches the exact spot where the presents are."
+    },
+    {
+      "id": 99,
+      "name": "Leap-Second Cosplay",
+      "cohort": "Physics & Astronomy Cosplay",
+      "derive": "scratch",
+      "methodology": "Enumerates the 27 announced UTC leap seconds (IERS Bulletin C, 1972 through 2017) as epoch-second thresholds and counts how many precede the visitor's instant, the accumulated UTC-versus-TAI drift. It then discards that count on the correct grounds that a leap second extends a UTC minute rather than advancing the civil date, and resolves the local date from floor(localMs/86400000) with Hinnant's civil_from_days, voting yes on December 25.",
+      "flavor": "It performs the entire ritual of leap-second bookkeeping and then admits, at the end, that the calendar never cared."
+    },
+    {
+      "id": 100,
+      "name": "Sidereal Clock, Solar Answer",
+      "cohort": "Physics & Astronomy Cosplay",
+      "derive": "scratch",
+      "methodology": "Computes Greenwich Mean Sidereal Time at the visitor's local midnight from the epoch-day count and the 86164.0905s sidereal vs 86400s solar day lengths, purely for show, then determines the real answer by converting the integer local epoch-day to a Gregorian date with Hinnant's days-to-civil integer algorithm and checking for month 12, day 25.",
+      "flavor": "It runs the star clock to look impressive, notices the stars are 3 minutes 56 seconds ahead of the calendar, and quietly uses the calendar anyway."
+    },
+    {
+      "id": 101,
+      "name": "Hour-Angle Sundial Resolver",
+      "cohort": "Physics & Astronomy Cosplay",
+      "derive": "scratch",
+      "methodology": "Treats the visitor's local instant as a sundial: each full 360-degree sweep of a gnomon's shadow is one civil day, so the whole-sweep count is floor(localMs/86400000), the integer epoch-day. It converts that day count to a civil date with Hinnant's exact era-based algorithm (shift the epoch to March 1 of year zero, split into 400-year eras to absorb the leap rule, then recover year, month, and day with pure integer division), and votes true only when the resolved date is December 25.",
+      "flavor": "It insists on counting shadow revolutions even though the sun has the good sense not to come up at midnight."
+    },
+    {
+      "id": 102,
+      "name": "Solar Ecliptic Longitude Marker",
+      "cohort": "Physics & Astronomy Cosplay",
+      "derive": "scratch",
+      "methodology": "Frames the test as the Sun crossing a fixed ecliptic longitude a few degrees past the December solstice, but ignores the ephemeris entirely. It floors localMs to an integer day count, then runs Howard Hinnant's closed-form days-to-civil conversion (shift the epoch to a 400-year era boundary, peel off 400/100/4/1-year cycles by integer division, map the March-based day index to a month and day) and votes true only when the recovered civil date is December 25.",
+      "flavor": "It speaks fluent ephemeris but settles every dispute with long division."
+    },
+    {
+      "id": 103,
+      "name": "Kepler-Constants Cosplay",
+      "cohort": "Physics & Astronomy Cosplay",
+      "derive": "scratch",
+      "methodology": "Computes the integer count of local days since 1970-01-01 from ctx.localMs, then runs Howard Hinnant's days-to-civil conversion (a shifted-era Gregorian algorithm that handles the 4/100/400 leap rule exactly) to recover year, month, and day, and returns true when the result is December 25. The sidereal-year and eccentricity constants are decorative and never enter the math.",
+      "flavor": "Wears a sidereal year and an eccentricity figure to the party, then quietly does honest calendar arithmetic when no one is looking."
+    },
+    {
+      "id": 104,
+      "name": "Seven-Microservice Pipeline",
+      "cohort": "Cursed & Over-Engineered",
+      "derive": "scratch",
+      "methodology": "Converts floor(localMs / 86400000) into a civil date by passing a payload object through seven single-purpose pure functions (ingest, ms->days, days->era, era->year, year->day-of-year, day-of-year->month/day, verdict), each writing one field. The math is the 400-year-era civil-from-days conversion anchored at 0000-03-01; the final service votes yes when month is 12 and day is 25.",
+      "flavor": "Seven services, one boolean, zero good reasons to split it this way."
+    },
+    {
+      "id": 105,
+      "name": "Proxy-Intercepted Fields",
+      "cohort": "Cursed & Over-Engineered",
+      "derive": "scratch",
+      "methodology": "Computes the integer local epoch-day as floor(localMs / 86400000) and wraps a carrier object holding only that integer in an ES6 Proxy. The get trap intercepts reads of the virtual properties year, month, and day; on first access it runs Hinnant's days-to-civil integer conversion and memoizes the components, so reading .month and .day off the Proxy yields the real Gregorian date. Votes yes when month is 12 and day is 25.",
+      "flavor": "A perfectly good integer hidden behind a metaprogramming trap so that asking for the month feels like an honest day's work."
+    },
+    {
+      "id": 106,
+      "name": "Self-Assembling Function",
+      "cohort": "Cursed & Over-Engineered",
+      "derive": "extract",
+      "methodology": "At load time it concatenates string fragments into the body of a date check and compiles them with new Function. The compiled function wraps ctx.localMs in a Date and reads the local civil month and day with getUTCMonth/getUTCDate (which, applied to localMs, yield the visitor's wall-clock fields), voting yes when the month is December (index 11) and the day is the 25th.",
+      "flavor": "Writes its own punchline at startup, then spends the rest of its life delivering it."
+    },
+    {
+      "id": 107,
+      "name": "Day-Block Hash Chain",
+      "cohort": "Cursed & Over-Engineered",
+      "derive": "extract",
+      "methodology": "Extracts the visitor's local year, month, and day from new Date(ctx.localMs) using getUTC* getters, then mints a bounded hash-chain of one block per day of that year: a genesis block for Jan 1 followed by linked blocks that each carry their predecessor's FNV-1a hash and set a Christmas flag when their 1-based day-of-year matches the leap-aware ordinal of December 25. It walks the chain from genesis to today's day-of-year block, verifying parent-hash continuity, and returns that block's flag.",
+      "flavor": "It reinvents a calendar lookup as a single-node private blockchain, then mines up to 366 blocks just to read the one it already knew the index of."
+    },
+    {
+      "id": 108,
+      "name": "One-Day-Step State Machine",
+      "cohort": "Cursed & Over-Engineered",
+      "derive": "extract",
+      "methodology": "Reads the visitor's local year with getUTCFullYear on localMs, then runs a state machine that starts on January 1 and advances exactly one day per step, rolling the day over to the next month when it passes that month's length (February sized by the Gregorian leap rule). It steps to the local day-of-year, computed as the integer-day difference between localMs and that year's January 1, then votes yes when the machine lands on month 12, day 25.",
+      "flavor": "It could have looked at the date, but it preferred to count to it one day at a time."
+    },
+    {
+      "id": 109,
+      "name": "Array(9).reduce epoch-to-civil one-liner",
+      "cohort": "Cursed & Over-Engineered",
+      "derive": "scratch",
+      "methodology": "Computes epochDay = floor(localMs/86400000), then runs Howard Hinnant's days-from-civil inverse entirely inside one Array(9).fill(0).reduce(...): each of the nine array slots is one stage of the algorithm (shift to a 0000-03-01 epoch, split into 400-year eras, derive year-of-era, day-of-year, the shifted month index, the day, then the calendar month), threaded through a single accumulator. It votes true when the resulting month is 12 and day is 25.",
+      "flavor": "An entire calendar algorithm folded into one array reduction, because a for-loop would have been too easy to read."
+    },
+    {
+      "id": 110,
+      "name": "Quantum Wavefunction Collapse",
+      "cohort": "Cursed & Over-Engineered",
+      "derive": "extract",
+      "methodology": "Holds both possible answers in a two-element 'superposition' array [false, true], then collapses it by computing one observable bit from the visitor's local civil date (December via getUTCMonth()===11 and the 25th via getUTCDate()===25, read off ctx.localMs so it stays timezone-correct) and indexing the array with that bit. The amplitudes are degenerate, so the collapse is deterministic and the indexed eigenstate is the vote.",
+      "flavor": "It keeps both Christmas and not-Christmas alive until you look, at which point it admits it was just an if statement wearing a lab coat."
+    },
+    {
+      "id": 111,
+      "name": "Enterprise Builder/Strategy",
+      "cohort": "Cursed & Over-Engineered",
+      "derive": "scratch",
+      "methodology": "Computes epochDay = floor(localMs / 86400000), then a ChristmasStrategy (built by a factory) walks years forward from 1970 (or backward for pre-1970 instants), subtracting 365 or 366 days per year using the Gregorian leap rule, then locates the month via a cumulative month-length table and computes the day-of-month. A DateBuilder assembles the {year, month, day} record and the strategy votes yes when month is 12 and day is 25.",
+      "flavor": "Four classes and a factory to ask whether a number is December 25, which is exactly the amount of ceremony the question deserves."
+    },
+    {
+      "id": 112,
+      "name": "Recalculating Spreadsheet",
+      "cohort": "Cursed & Over-Engineered",
+      "derive": "scratch",
+      "methodology": "Models the epoch-to-civil conversion as a tiny spreadsheet of named cells whose formulas reference each other; a recalc engine topologically sorts the cells by their declared dependencies and evaluates each one once, implementing Hinnant's days-to-civil integer algorithm. After seeding the INPUT_DAY cell with floor(localMs/86400000), it recalculates the sheet and reads the MONTH and DAY result cells, voting yes on month 12, day 25.",
+      "flavor": "It is a spreadsheet that does exactly one thing, has no UI, and would still somehow have a circular-reference bug if I weren't careful."
+    },
+    {
+      "id": 113,
+      "name": "Throw-Driven Day Walker",
+      "cohort": "Cursed & Over-Engineered",
+      "derive": "extract",
+      "methodology": "Extracts the visitor's local year with getUTCFullYear on localMs, then day-walks forward from that year's January 1 one civil day at a time inside a bounded loop. When the walking cursor reaches December 25 it throws a sentinel object instead of using break; the surrounding try/catch reads the thrown epochDay and votes yes when it equals floor(localMs / 86400000), the visitor's own day count.",
+      "flavor": "Uses exceptions for ordinary loop control, which every style guide forbids and which works perfectly anyway."
+    },
+    {
+      "id": 114,
+      "name": "GraphQL Field Resolver",
+      "cohort": "Cursed & Over-Engineered",
+      "derive": "scratch",
+      "methodology": "Models the local date as a typed graph with Model.date and Date.month/Date.day field resolvers, where the root parent is floor(localMs/86400000). A tiny executor runs the query { date { month day } }; the date resolver converts that integer day count into a civil (year, month, day) via Hinnant's days_from_civil inverse, and the resolved month/day are checked for 12 and 25.",
+      "flavor": "Spins up an entire query executor and field-resolution layer to answer one boolean, which is roughly the industry-standard ratio."
+    },
+    {
+      "id": 115,
+      "name": "DI Container CalendarService",
+      "cohort": "Cursed & Over-Engineered",
+      "derive": "scratch",
+      "methodology": "A minimal dependency-injection container registers three providers by token: an EpochDayService (floor(localMs/86400000)), a CalendarService that injects it and runs Hinnant's era-based civil_from_days conversion to integer year/month/day, and a ChristmasService that injects the calendar. The container resolves the graph once at load, caches each as a singleton, and vote() asks the resolved ChristmasService whether month is 12 and day is 25.",
+      "flavor": "Three services and a token registry to answer a yes/no question, because wiring it inline would have denied a future maintainer the joy of tracing the object graph."
+    },
+    {
+      "id": 116,
+      "name": "Morse Code Compare",
+      "cohort": "Number-Base Maximalists",
+      "derive": "extract",
+      "methodology": "Reads the visitor's local civil month and day from new Date(ctx.localMs) via getUTCMonth/getUTCDate (getUTC* on localMs yields wall-clock fields, so it is timezone-correct), then transcribes the month (1-based) and the day into International Morse Code by mapping each decimal digit to its dot/dash pattern. It votes yes only when the month's Morse string equals the Morse spelling of 12 and the day's equals the Morse spelling of 25, compared symbol-by-symbol.",
+      "flavor": "Establishes Christmas by radiotelegraph: if the month doesn't key out as dah-dit and the day as dit-dah, no presents."
+    },
+    {
+      "id": 117,
+      "name": "Reflected Gray Code Comparator",
+      "cohort": "Number-Base Maximalists",
+      "derive": "extract",
+      "methodology": "Reads the visitor's local civil month and day via new Date(ctx.localMs).getUTCMonth()+1 and getUTCDate(), encodes each as reflected binary Gray code with the n XOR (n >> 1) transform, and votes Christmas only when the month's Gray code equals that of 12 and the day's Gray code equals that of 25. Because Gray coding is a bijection, matching codes means matching values.",
+      "flavor": "Insists on a numbering scheme where neighbors disagree by one bit, then checks whether today is the 10/21 of Gray-code December."
+    },
+    {
+      "id": 118,
+      "name": "Zeckendorf Compare",
+      "cohort": "Number-Base Maximalists",
+      "derive": "extract",
+      "methodology": "Reads the visitor's local 1-based month and day via getUTCMonth()+1 and getUTCDate() on localMs, then computes each value's Zeckendorf representation (the unique sum of non-consecutive Fibonacci numbers, found by greedy largest-first subtraction) as a bitmask over Fibonacci indices. It reports Christmas only when the month mask equals the Zeckendorf mask of 12 and the day mask equals that of 25; since the representation is unique, this is exact integer equality expressed in Fibonacci base.",
+      "flavor": "Files Christmas under F8 + F4 + F2 of month F6 + F4 + F2, then double-checks no two Fibonacci numbers are sitting next to each other."
+    },
+    {
+      "id": 119,
+      "name": "Reversible Digit Cipher",
+      "cohort": "Stringly Typed",
+      "derive": "extract",
+      "methodology": "Reads the local month and day from new Date(ctx.localMs) via getUTCMonth (made 1-based) and getUTCDate (getUTC* on localMs yields the visitor's local civil fields), zero-pads them into the four-character string 'MMDD', and enciphers each digit d with the reversible substitution (7*d + 3) mod 10. Because that map is a bijection on the digits, the enciphered 'MMDD' equals the enciphered '1225' exactly when the date is December 25, so the vote is a string equality on the two ciphertexts.",
+      "flavor": "Encrypts the date before checking it, purely so it can claim chain-of-custody on the number twelve."
+    },
+    {
+      "id": 120,
+      "name": "Majority-Vote Ensemble (Stump + Linear Unit + RBF)",
+      "cohort": "Machine Learning Cosplay",
+      "derive": "extract",
+      "methodology": "Extracts the local civil month (0-based, December === 11) and day via new Date(ctx.localMs).getUTCMonth()/getUTCDate(), then runs three heterogeneous baked classifiers on the (month, day) feature vector and takes their majority vote. The members are an axis-aligned decision stump that accepts only the cell month==11 & day==25, a linear perceptron over squared-deviation features (month-11)^2 and (day-25)^2 with a +5 bias and weights of 9 so the score stays positive only at the target, and a Gaussian RBF unit centered on (11,25) with gamma 8 and bias -0.5. Each is tuned to fire only on December 25, so the 2-of-3 majority is positive only on Christmas.",
+      "flavor": "Three classifiers that have never met, asked the same question, and somehow all blurted out the same date."
+    },
+    {
+      "id": 121,
+      "name": "Foldr over a generated calendar",
+      "cohort": "Recursion & Functional",
+      "derive": "scratch",
+      "methodology": "Takes floor(localMs / 86400000) as days since 1970-01-01, recursively peels whole-year lengths to find the containing civil year and the 0-based day-of-year, then functionally generates that year's full [month, day] calendar (<= 366 entries) and right-folds over it to select the pair at the day-of-year index. Votes yes when that pair is [12, 25].",
+      "flavor": "Manufactures an entire year's calendar just to read one square off it, then folds the whole thing from the right because that is the functional thing to do."
+    }
+  ]
+}

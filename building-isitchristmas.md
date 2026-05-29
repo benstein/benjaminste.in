@@ -109,6 +109,8 @@ This only works when you can write that test. Here the right answer was cheap to
 
 That, not the website, is what I built this week, which is what Is It Christmas has always been for.
 
+Every piece of the machinery is [in the repo](https://github.com/benstein/benjaminste.in/tree/main/isitchristmas/build), with a README: the referee, the methodology menu, the assembler, and all four workflow scripts. Read the code if you would rather see it than take my word for it.
+
 ## The receipts
 
 <div class="iic-receipts" markdown="1">
