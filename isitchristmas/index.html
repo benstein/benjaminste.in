@@ -1,0 +1,111 @@
+<!--
+
+  Is It Christmas?  —  an over-engineered tribute.
+
+  The original is by Eric Mill: https://bsky.app/profile/konklone.com
+  This rebuild answers the same one-word question, but decides it with a parliament of ~121
+  completely independent algorithms that each vote on whether your local date is December 25.
+
+  In the tradition of the original: open the developer console (around Christmas, or any time).
+
+  Writeup of how every line here was produced by AI agents:
+  https://benjaminste.in/building-isitchristmas
+
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Is it Christmas?</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <meta name="theme-color" content="#fff" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description" content="Is it Christmas? Yes or no, decided by a parliament of 121 independent algorithms voting in your browser." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://benjaminste.in/isitchristmas/" />
+  <meta property="og:title" content="Is it Christmas?" />
+  <meta property="og:description" content="Yes or no, decided by a parliament of 121 independent algorithms voting in your browser." />
+
+  <style type="text/css">
+    body {
+      color: black;
+      background-color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    a, body { color: black; }
+
+    a#answer {
+      display: inline-block;
+      margin-top: 200px;
+      font-weight: bold;
+      font-size: 120pt;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      cursor: default;
+    }
+
+    #links {
+      position: fixed;
+      top: 0; left: 0;
+      width: 340px;
+      padding-left: 15px; padding-top: 5px;
+      text-align: left;
+      font-size: 10pt;
+      opacity: 0;
+
+      -webkit-transition: 0.5s ease-out;
+         -moz-transition: 0.5s ease-out;
+           -o-transition: 0.5s ease-out;
+              transition: 0.5s ease-out;
+    }
+
+    #links a {
+      color: #333;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    @media only screen and (max-device-width: 480px) {
+      a#answer { margin-top: 120px; }
+    }
+
+    /*
+      Dark mode overrides.
+      Order matters: these need to come after any rule they modify.
+    */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: black;
+        color: white;
+      }
+      a#answer { color: white; }
+      #links a { color: #ccc; }
+    }
+  </style>
+</head>
+
+<body>
+  <!--
+    The <noscript> value is the static fallback for clients without JavaScript. Determining the
+    answer in a visitor's own timezone requires running code in their browser, so without JS we
+    fall back to "NO" (correct on all but one day of the year).
+  -->
+  <a id="answer" href="#" title="NO" onclick="return false"><noscript>NO</noscript></a>
+
+  <div id="links">
+    <a href="https://bsky.app/profile/konklone.com" target="_blank" rel="noopener">Inspired by @konklone</a>
+    <a href="https://benjaminste.in/building-isitchristmas" target="_blank" rel="noopener">Learn More</a>
+  </div>
+
+  <script src="engine.js"></script>
+  <script src="algorithms.js"></script>
+  <script>
+    // The parliament convenes. One word is rendered. The other 99.99% of the work is in the console.
+    IIC.boot();
+  </script>
+</body>
+</html>
