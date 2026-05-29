@@ -16,3 +16,11 @@ node_modules/
 # Editor
 *.orig
 .superpowers/
+
+# Agent plugin/skill caches and per-user settings. Shared project instructions
+# live in AGENTS.md, with CLAUDE.md importing them for Claude Code.
+.agents/skills/
+.codex/skills/
+.codex/config.toml
+.claude/skills/
+.claude/settings.local.json

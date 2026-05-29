@@ -26,6 +26,15 @@ Personal website and blog built with Jekyll and hosted on GitHub Pages.
 
    The site will automatically rebuild when you make changes to files.
 
+### AI coding agents
+
+This repo is configured for both Codex and Claude Code:
+
+- Codex reads `AGENTS.md`.
+- Claude Code reads `CLAUDE.md`, which imports `AGENTS.md`.
+- Agent/plugin caches such as `.agents/skills/`, `.codex/skills/`, and `.claude/skills/` are local-only.
+- Review generated prose against the writing guidance in `AGENTS.md` before committing.
+
 ### Building the site
 
 To build the site without serving it:

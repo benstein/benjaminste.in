@@ -45,5 +45,9 @@ exclude:
   - Gemfile.lock
   - README.md
   - CLAUDE.md
+  - AGENTS.md
+  - .agents/
+  - .claude/
+  - .codex/
   - vendor/
   - .github
