@@ -6,52 +6,78 @@ permalink: /product-advisor/
 
 # Product Advisor
 
-<p class="advisor-subtitle">I help founders and product leaders build what matters</p>
+<p class="advisor-subtitle">I help founders, CEOs, and product leaders turn AI ambition into shipped product, better operating habits, and measurable business results.</p>
 
-<p class="advisor-intro">I work with founders, CEOs, and product leaders to build high-growth B2B companies. After years as a product executive and operator, from seed-stage startups to Fortune 500, I share what I've learned so you can grow quickly and efficiently.</p>
+<p class="advisor-intro">I work with founders, CEOs, and product leaders at B2B startups and growth-stage companies that need experienced product judgment at a strategic moment. That might mean setting the first product operating rhythm, pressure-testing a roadmap, advising a new CPO or VP Product, or deciding where AI belongs in the product and how to run it responsibly.</p>
+
+<div class="advisor-top-cta">
+<a href="{{ site.linkedin_url }}">Let's Talk</a>
+</div>
 
 ## How I Can Help
+
+### AI Product Advisory
+
+<p class="advisor-section-intro">For teams moving from prototypes and scattered experiments to AI features, agents, and operating practices they can trust.</p>
+
+<div class="advisor-services">
+
+<div class="advisor-service">
+<h3>Production AI Agents</h3>
+<p>Choosing the agent workflows worth shipping, defining tool permissions and human review, designing failure modes, and setting a practical launch plan.</p>
+</div>
+
+<div class="advisor-service">
+<h3>Inference Strategy & Cost</h3>
+<p>Evaluating hosted APIs, multi-provider routing, open-weight models, caching, and product-level cost controls so AI margins hold up as usage grows.</p>
+</div>
+
+<div class="advisor-service">
+<h3>Evals & Quality Systems</h3>
+<p>Building eval sets, regression tests, trace review, and release gates so model and prompt changes ship with evidence.</p>
+</div>
+
+<div class="advisor-service">
+<h3>AI Operating Culture</h3>
+<p>Helping engineering, product, support, sales, and operations adopt AI agents in the workflows they already use, with standards that fit the company.</p>
+</div>
+
+</div>
+
+### Product Leadership Advisory
+
+<p class="advisor-section-intro">Senior product help for roadmaps, teams, rituals, customer learning, and executive decisions.</p>
 
 <div class="advisor-services">
 
 <div class="advisor-service">
 <h3>Product Strategy</h3>
-<p>Product vision and roadmap, pricing & packaging, product-led growth, portfolio management, and AI strategy.</p>
+<p>Product vision and roadmap, market focus, pricing & packaging, product-led growth, portfolio bets, and board-ready tradeoffs.</p>
 </div>
 
 <div class="advisor-service">
-<h3>People & Culture</h3>
-<p>Hiring your first PM through CPO. Career ladders, performance frameworks, org structures, and building a product-led culture.</p>
-</div>
-
-<div class="advisor-service">
-<h3>Product Processes</h3>
+<h3>Product Operating Rhythm</h3>
 <p>Product-engineering partnerships, customer-first validation, prioritization frameworks, OKRs, experimentation, and enterprise readiness.</p>
 </div>
 
 <div class="advisor-service">
+<h3>People & Culture</h3>
+<p>Hiring your first PM through CPO, advising new product leaders, career ladders, performance frameworks, org structures, and building a product-led culture.</p>
+</div>
+
+<div class="advisor-service">
+<h3>Customers & Markets</h3>
+<p>Personas, user journeys, research practices, customer advisory boards, NPS/CSAT, segment expansion, and customer-first validation.</p>
+</div>
+
+<div class="advisor-service">
 <h3>Leadership & Communications</h3>
-<p>Executive presence, board prep, stakeholder management, and running effective offsites and strategic planning sessions.</p>
-</div>
-
-<div class="advisor-service">
-<h3>Customers</h3>
-<p>Personas, user journeys, research practices, customer advisory boards, NPS/CSAT, and segment expansion.</p>
-</div>
-
-<div class="advisor-service">
-<h3>Leading Through Change</h3>
-<p>Fundraising and pitch prep, M&A due diligence, exit support, IPO readiness, and leading teams through the AI transformation.</p>
+<p>Board prep, executive presence, stakeholder management, offsites, strategic planning, and hard decision framing.</p>
 </div>
 
 <div class="advisor-service">
 <h3>Developer Experience</h3>
-<p>World-class APIs, docs, and SDKs. Developer go-to-market strategy and community building.</p>
-</div>
-
-<div class="advisor-service">
-<h3>AI Transformation</h3>
-<p>Designing AI and agentic products, evaluating AI technologies, and driving internal adoption of AI across your organization.</p>
+<p>World-class APIs, docs, and SDKs. Developer go-to-market strategy, community building, and technical buyer education.</p>
 </div>
 
 <div class="advisor-service">
@@ -178,6 +204,15 @@ Every engagement includes access to my library of battle-tested templates and fr
 <li>One session per week</li>
 <li>Quarterly deep dive</li>
 <li>Ad hoc email, Slack & video support</li>
+</ul>
+</div>
+
+<div class="advisor-tier">
+<div class="advisor-tier-name">Personalized</div>
+<ul>
+<li>Custom advisory cadence</li>
+<li>Tailored working sessions</li>
+<li>Built around your organization's needs</li>
 </ul>
 </div>
 

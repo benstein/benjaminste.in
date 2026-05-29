@@ -510,7 +510,34 @@ footer p {
 .advisor-intro {
   font-size: 1.05em;
   line-height: 1.7;
-  margin-bottom: 2.5em;
+  margin-bottom: 1.2em;
+}
+
+.advisor-top-cta {
+  margin: 0 0 2.5em;
+}
+
+.advisor-top-cta a {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #fff;
+  background-color: #267CB9;
+  border-radius: 6px;
+  padding: 9px 15px;
+}
+
+.advisor-top-cta a:hover {
+  background-color: #1f6698;
+  text-decoration: none;
+}
+
+.advisor-section-intro {
+  color: #666;
+  font-size: 0.98em;
+  line-height: 1.6;
+  margin: -0.3em 0 1.2em;
 }
 
 /* Service cards — 2-col grid */
@@ -666,10 +693,10 @@ footer p {
   background-color: #c9a96e;
 }
 
-/* Pricing cards — 3-col */
+/* Pricing cards */
 .advisor-pricing {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
   gap: 20px;
   margin-bottom: 1.5em;
 }
