@@ -20,13 +20,15 @@ permalink: /building-isitchristmas/
 
 I run an AI startup and ship agents every day. Claude Code just added a feature I couldn't get a feel for, [dynamic workflows](https://code.claude.com/docs/en/workflows), so I did the konklone thing and pointed it at a problem that needs exactly none of it.
 
-The result looks identical to the original. One word. The difference is that about 500 throwaway AI agents built it on my laptop in an hour, and the way that works is the part worth writing down.
+The result looks identical to the original. One word. The difference is that about 500 throwaway AI agents, run by one Claude acting as their manager, built it on my laptop in an hour. How that manager works is the part worth writing down.
 
-## What "Claude writes code to run a swarm" actually means
+## Who's running the swarm
 
-Every article about this feature lands on the same line: Claude writes code that spins up a swarm of subagents. True, but that's the view from orbit. One click down, it's simpler than it sounds.
+The headline on this feature is always the same: Claude writes code that spins up a swarm of subagents. True, but it skips the most useful part. When one of these runs, three different things are doing three different jobs.
 
-A dynamic workflow ([new in Opus 4.8](https://www.anthropic.com/news/claude-opus-4-8)) is a plain JavaScript program. Claude writes it and the runtime runs it in the background while your session keeps going. There's no model inside the script. It's loops and arrays and `await`, with a few extra functions the runtime hands you. The important one is `agent()`:
+At the top is one Claude I'll call the coordinator. It's the one I talk to. I described the bit, rebuild Is It Christmas with 121 voting algorithms and go nuts, and the coordinator did the rest of the work of a tech lead. It wrote the test suite, wrote out 121 algorithm assignments, wrote the scripts that run the swarm, launched them, read the results back, and decided what to do next. I mostly watched.
+
+The coordinator doesn't write 121 algorithms itself. It writes a script that hires 121 other Claudes to do that. The script ([new in Opus 4.8](https://www.anthropic.com/news/claude-opus-4-8)) is plain JavaScript with no model inside it, and the runtime runs it in the background. It gets a couple of special functions, and the one that matters is `agent()`:
 
 ```js
 // agent() boots a fresh Claude with its own context, shell, and tools,
@@ -34,9 +36,7 @@ A dynamic workflow ([new in Opus 4.8](https://www.anthropic.com/news/claude-opus
 const result = await agent("write an algorithm that...", { schema: RESULT });
 ```
 
-That's the whole primitive. `agent(prompt)` is a function call that spins up a complete Claude, gives it one job, and waits. Pass a `schema` and you get a clean object back instead of a wall of text.
-
-The second function turns one agent into a swarm. `parallel()` takes a list of those calls and runs them at the same time, sixteen at once, up to a thousand total:
+`agent(prompt)` spins up a complete Claude, gives it one job, and waits. Pass a `schema` and you get a clean object back instead of a wall of text. `parallel()` runs a list of those at once, sixteen at a time, up to a thousand:
 
 ```js
 // 121 agents, one per algorithm, all running at once
@@ -45,7 +45,9 @@ const algorithms = await parallel(
 );
 ```
 
-A `.map()` over a list, wrapped in `parallel()`. That is the swarm. Claude wrote roughly that, the runtime ran it on my machine, and 121 copies of Claude wrote code at the same time. (There's a sibling, `pipeline()`, for when the work is stages instead of a batch.) Everything past here is just me pointing those two functions at something ridiculous.
+A `.map()` wrapped in `parallel()`. That's the swarm: throwaway Claudes that each do one job and vanish, with their answers landing back in the script as plain objects. (There's a sibling, `pipeline()`, for stages instead of a batch.)
+
+So the chain is: I point the coordinator at the problem, the coordinator writes a script, the script hires the swarm, and the answers flow back up the same path. That last step, the answers flowing back up, is the half the headlines skip, and it's where the real question lives.
 
 ## A job that needs 121 of something
 
@@ -59,13 +61,13 @@ Asking 121 agents to write 121 date algorithms is 121 chances to be subtly wrong
 
 The `parallel()` snippet above doesn't show the trick that made it trustworthy, because it isn't in the orchestration code. It's in what each agent was told: write your algorithm, run it against the test suite, fix what fails, and don't report back until it's green. Each subagent has its own shell, so it runs the tests and loops on its own. The script just launches the 121 and collects what they return.
 
-115 passed on the first try. The six that didn't are the fun ones, because they're the bugs a human skim sails right past. My favorite used Rata Die, an old trick for counting days as one running number, and got a single constant off by one: 719163 instead of 719162. That one digit pushed about 20,000 of the test dates a day early, all of them bunched around midnight in the far-eastern timezones, where you'd never catch it by eye. The test suite catches it. The agent saw the failures, fixed the constant, and moved on. I found out from the logs.
+115 passed on the first try. The six that didn't are the fun ones, because they're the bugs a human skim sails right past. My favorite used Rata Die, an old trick for counting days as one running number, and got a single constant off by one: 719163 instead of 719162. That one digit pushed about 20,000 of the test dates a day early, all of them bunched around midnight in the far-eastern timezones, where you'd never catch it by eye. The test suite catches it. The agent saw the failures, fixed the constant, and moved on. I found out from the logs. When all 121 reported done, the coordinator ran the suite once more over the whole set, to be sure nothing slipped through on a self-report. Clean.
 
-## Wave two: tearing them apart
+## Wave two: who checks the checkers?
 
-Wave one is the easy case, because the answer is checkable. Wave two is the interesting one, because nothing here is.
+Wave one was the easy half. There's a test, so trust costs nothing: run the suite, believe the green, nobody reads anything.
 
-I fanned out a second swarm, 363 agents, three per algorithm. The code is a `parallel()` inside a `parallel()`:
+Wave two has no test. "Does this code do what it claims" and "where would it break" aren't things you can check by running them. So the coordinator fanned out a second swarm, 363 Claudes, three per algorithm, one of the three aimed squarely at breaking the work:
 
 ```js
 await parallel(algorithms.map((algo) => async () => {
@@ -78,11 +80,9 @@ await parallel(algorithms.map((algo) => async () => {
 }));
 ```
 
-The outer `parallel()` fans across all 121 algorithms. The inner one asks three questions about each at the same time. 363 Claudes running at once, each reading one algorithm and answering one question, and the results land back in the script as plain objects I can sort and count.
+The outer `parallel()` fans across all 121 algorithms; the inner one asks three questions about each at once. So who reads 363 reviews? Nobody, and that's the part I had backwards at first. The script reads them. The lines after that `parallel()` are ordinary code: tally the verdicts, keep the disagreements, drop the rest. What comes back to the coordinator isn't 363 reviews, it's a paragraph. Nine algorithms flagged, here are the ids. The coordinator looked at those nine. I looked at none of it. I trusted the coordinator, the coordinator trusted the aggregate, and the aggregate only bothered anyone about the nine that split.
 
-But none of those three questions has a test. "Is this code honest about what it does" has no answer I can compute. "Where would it break" is a judgment call. So wave two isn't verification, it's 363 opinions, and I read them as opinions. They flagged nine algorithms as maybe misrepresenting themselves; I checked all nine by hand and disagreed with every one. The only finding that stuck was a limitation, not a bug: most of these only work between 1970 and 2200. Nobody's loading this site in 2250, but it's true.
-
-That contrast is the thing I actually came away with. When the output is cheap to test, fan-out is a cheat code: you trust a hundred agents without reading a line, because the test does the reading for you. When it isn't, fan-out still buys you something real, a hundred independent reads you'd never sit down and do yourself, but now judging them is your job. Same machinery, opposite amount of trust.
+So it's not really "verifiable or not," and the line between the two waves is gentler than that. It's how far up the trust has to travel before a person looks. With a test, it stops at the bottom and nobody above it has to think. Without one, you lean on redundancy, three independent reads where agreement is the closest thing to a check, and you trust the aggregate, looking only where it disagrees with itself. The nine flags were all the same false alarm, a reviewer holding an algorithm to a stricter rule than it was handed. The one finding that survived was a limitation, not a bug: most of these only work between 1970 and 2200. Nobody's loading this in 2250, but it's true.
 
 ## What ships
 
@@ -92,7 +92,7 @@ A few of the voters, in the words of the agents that wrote them: **Church Numera
 
 ## Was it worth it?
 
-A decent engineer writes that test suite and one correct algorithm in an afternoon. The other 120 algorithms and the 484 agents bought me nothing I needed, except the thing I came for: a feel for when to reach for this. Wide work with a cheap test, reach for it without thinking. Wide work you can't test, still useful, but you're signing up to read the output. And it's neither free nor repeatable. Run it again tomorrow and you get different agents, different bugs, and a different couple hundred dollars on the bill.
+A decent engineer writes that test suite and one correct algorithm in an afternoon. The other 120 algorithms and the 484 agents bought me nothing I needed, except the thing I came for: a feel for when to reach for this. Wide work with a cheap test, reach for it without thinking. Wide work you can't test, still worth it, but you're trusting the swarm to agree with itself and watching only where it doesn't. And it's neither free nor repeatable. Run it again tomorrow and you get different agents, different bugs, and a different couple hundred dollars on the bill.
 
 <div class="iic-receipts" markdown="1">
 
