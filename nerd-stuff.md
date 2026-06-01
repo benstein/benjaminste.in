@@ -11,7 +11,7 @@ permalink: /nerd-stuff/
     <h3 class="post-card-title">Is It Christmas?</h3>
     <p class="post-card-excerpt">The same one-word answer as the original isitchristmas.com, YES or NO, in your own timezone, except the verdict is decided by 121 completely independent algorithms voting in your browser. Brainfuck interpreters, Church numerals, a single-node blockchain, and 118 more, all agreeing on the obvious. Open the developer console to watch the parliament. A tribute to Eric Mill's original.</p>
   </a>
-  <a href="/building-isitchristmas/" class="post-card">
+  <a href="/blog/2026/05/29/building-isitchristmas/" class="post-card">
     <h3 class="post-card-title">Building 'Is It Christmas' in 2026</h3>
     <p class="post-card-excerpt">How I used 484 AI agents and about 16 million tokens to rebuild a website that displays one word. A tour of all 121 voting algorithms, the node gate that kept them honest across 148,488 test samples, and why the real lesson is to trust the test, not the agents.</p>
   </a>

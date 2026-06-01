@@ -2,7 +2,7 @@
 
 This directory is the orchestration behind **[benjaminste.in/isitchristmas](https://benjaminste.in/isitchristmas)** — a rebuild of Eric Mill's [isitchristmas.com](https://isitchristmas.com) where the one-word YES/NO answer is decided by a parliament of 121 independent algorithms voting in your browser.
 
-Almost none of it was written by a human. It was built by **Claude Opus 4.8** driving **dynamic multi-agent workflows**: JavaScript scripts that fan work out across hundreds of disposable AI subagents and compose what they return. The full story is in the writeup: **[Building 'Is It Christmas' in 2026](https://benjaminste.in/building-isitchristmas)**.
+Almost none of it was written by a human. It was built by **Claude Opus 4.8** driving **dynamic multi-agent workflows**: JavaScript scripts that fan work out across hundreds of disposable AI subagents and compose what they return. The full story is in the writeup: **[Building 'Is It Christmas' in 2026](https://benjaminste.in/blog/2026/05/29/building-isitchristmas/)**.
 
 The point was never the website. It was to learn what these workflows are good for. The files here are the answer.
 

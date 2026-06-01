@@ -8,7 +8,7 @@
 
   Algorithms register themselves by calling IIC.register({...}). They are loaded from
   algorithms.js, which is assembled from files that each passed a node correctness gate
-  over ~148,000 (timezone, instant) samples. See https://benjaminste.in/building-isitchristmas
+  over ~148,000 (timezone, instant) samples. See https://benjaminste.in/blog/2026/05/29/building-isitchristmas/
 */
 (function (global) {
   'use strict';
@@ -104,7 +104,7 @@
           };
         }));
       }
-      console.log('How this was built (and why): https://benjaminste.in/building-isitchristmas');
+      console.log('How this was built (and why): https://benjaminste.in/blog/2026/05/29/building-isitchristmas/');
       console.log('Poke at it:  IsItChristmas.poll("2026-12-25")   IsItChristmas.roster()   IsItChristmas.cohorts()');
     } catch (e) { /* console styling is best-effort */ }
   }

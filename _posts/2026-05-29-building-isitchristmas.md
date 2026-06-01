@@ -1,7 +1,9 @@
 ---
 layout: default
 title: "Building 'Is It Christmas' in 2026"
-permalink: /building-isitchristmas/
+date: 2026-05-29
+categories: [ai, engineering, creativity]
+excerpt: "484 AI agents. 16 million tokens. Turns out today is not Christmas."
 ---
 
 <style>
@@ -11,10 +13,6 @@ permalink: /building-isitchristmas/
 .iic-receipts tr td:first-child { color: #555; padding-right: 1.5em; width: 48%; }
 .iic-receipts tr td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
 </style>
-
-# Building 'Is It Christmas' in 2026
-
-<p class="post-subtitle">484 AI agents. 16 million tokens. Turns out today is not Christmas.</p>
 
 [isitchristmas.com](https://isitchristmas.com) has done one thing for fifteen years: tell you whether it's Christmas. Eric Mill ([@konklone](https://bsky.app/profile/konklone.com)) built it. The genius behind it is that it's always doubled as an excuse to try new web tech. Look at the source or the git history. There's a websocket in there, live multiplayer cursors, a phone-app manifest, an IFTTT hook.
 

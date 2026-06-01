@@ -51,7 +51,7 @@ const header = `/*
   UTC offset. Each is an IIFE that registers itself with the engine via IIC.register(). They do not
   share state; they only share the question.
 
-  Generated, not hand-written. See https://benjaminste.in/building-isitchristmas
+  Generated, not hand-written. See https://benjaminste.in/blog/2026/05/29/building-isitchristmas/
 */
 `;
 const body = entries
