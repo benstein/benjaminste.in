@@ -18,7 +18,7 @@ excerpt: "484 AI agents. 16 million tokens. Turns out today is not Christmas."
 
 Claude Code added a feature I intellectually understood but don't have a great mental model for: [dynamic workflows](https://code.claude.com/docs/en/workflows). The idea is simple - Claude writes code that spins up a swarm of subagents. Lots of them. But when does it make sense to reach for this tool? Always? Anything that feels complicated (to me)? When I know the task is massively parallelizable? So I did the konklone thing and pointed it at a problem that needs exactly none of it.
 
-The end result looks identical to the original: "NO" (at least for today). However the implementation and the journey is nothing short of absurd, and taught me some lessons along the way.
+[The end result](/isitchristmas/) looks identical to the original: "NO" (at least for today). However the implementation and the journey is nothing short of absurd, and taught me some lessons along the way.
 
 ## Dynamic Workflows in Action
 
