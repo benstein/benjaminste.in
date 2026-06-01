@@ -4,6 +4,7 @@ title: "Building 'Is It Christmas' in 2026"
 date: 2026-05-29
 categories: [ai, engineering, creativity]
 excerpt: "484 AI agents. 16 million tokens. Turns out today is not Christmas."
+subtitle: '484 AI agents. 16 million tokens. Turns out <a href="/isitchristmas/">today is not Christmas</a>.'
 ---
 
 <style>

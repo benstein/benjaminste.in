@@ -102,7 +102,9 @@
       <section>
         {% if page.date %}
         <h1 class="post-title">{{ page.title }}</h1>
-        {% if page.excerpt %}
+        {% if page.subtitle %}
+        <p class="post-subtitle">{{ page.subtitle }}</p>
+        {% elsif page.excerpt %}
         <p class="post-subtitle">{{ page.excerpt | strip_html }}</p>
         {% endif %}
         <div class="post-meta">
