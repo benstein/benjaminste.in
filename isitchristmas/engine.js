@@ -197,13 +197,4 @@
 
   global.IIC = IIC;
   global.IsItChristmas = PublicAPI;
-
-  // fade the corner links in, matching the original's restraint
-  if (typeof document !== 'undefined') {
-    var fade = function () {
-      setTimeout(function () { var l = document.getElementById('links'); if (l) l.style.opacity = 1; }, 1200);
-    };
-    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fade);
-    else fade();
-  }
 })(typeof window !== 'undefined' ? window : this);
