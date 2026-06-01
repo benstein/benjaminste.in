@@ -14,21 +14,21 @@ permalink: /building-isitchristmas/
 
 # Building 'Is It Christmas' in 2026
 
-<p class="post-subtitle">484 AI agents. 16 million tokens. Turns out it's not Christmas.</p>
+<p class="post-subtitle">484 AI agents. 16 million tokens. Turns out today is not Christmas.</p>
 
-[isitchristmas.com](https://isitchristmas.com) has done one thing for fifteen years: tell you, in one giant word, whether it's Christmas. Eric Mill ([@konklone](https://bsky.app/profile/konklone.com)) built it, and it's always doubled as his excuse to try new web tech. There's a websocket in there, live multiplayer cursors, a phone-app manifest, an IFTTT hook, none of which a calendar needs. Take a site with one job, use it as a lab.
+[isitchristmas.com](https://isitchristmas.com) has done one thing for fifteen years: tell you whether it's Christmas. Eric Mill ([@konklone](https://bsky.app/profile/konklone.com)) built it. The genius behind it is that it's always doubled as an excuse to try new web tech. Look at the source or the git history. There's a websocket in there, live multiplayer cursors, a phone-app manifest, an IFTTT hook.
 
-I run an AI startup and ship agents every day. Claude Code just added a feature I couldn't get a feel for, [dynamic workflows](https://code.claude.com/docs/en/workflows), so I did the konklone thing and pointed it at a problem that needs exactly none of it.
+Claude Code added a feature I intellectually understood but don't have a great mental model for: [dynamic workflows](https://code.claude.com/docs/en/workflows). The idea is simple - Claude writes code that spins up a swarm of subagents. Lots of them. But when does it make sense to reach for this tool? Always? Anything that feels complicated (to me)? When I know the task is massively parallelizable? So I did the konklone thing and pointed it at a problem that needs exactly none of it.
 
-The result looks identical to the original. One word. The difference is that about 500 throwaway AI agents, run by one Claude acting as their manager, built it on my laptop in an hour. How that manager works is the part worth writing down.
+The end result looks identical to the original: "NO" (at least for today). However the implementation and the journey is nothing short of absurd, and taught me some lessons along the way.
 
-## Who's running the swarm
+## Dynamic Workflows in Action
 
-The headline on this feature is always the same: Claude writes code that spins up a swarm of subagents. True, but it skips the most useful part. When one of these runs, three different things are doing three different jobs.
+To make the problem sufficiently interesting, rather than just check the local user's timestamp, I decided to implement 121 voting algorithms that would decide in parallel if it was indeed Christmas or not. Seems like a great task for a swarm of subagents to build in parallel (vs a massive 1-shot Claude Code loop).
 
-At the top is one Claude I'll call the coordinator. It's the one I talk to. I described the bit, rebuild Is It Christmas with 121 voting algorithms and go nuts, and the coordinator did the rest of the work of a tech lead. It wrote the test suite, wrote out 121 algorithm assignments, wrote the scripts that run the swarm, launched them, read the results back, and decided what to do next. I mostly watched.
+At the top is one Claude Code instance I'll call the Coordinator. It's the one I talk to. The Coordinator wrote the test suite, wrote out 121 algorithm assignments, wrote the scripts that run the swarm, launched them, read the results back, and decided what to do next.
 
-The coordinator doesn't write 121 algorithms itself. It writes a script that hires 121 other Claudes to do that. The script ([new in Opus 4.8](https://www.anthropic.com/news/claude-opus-4-8)) is plain JavaScript with no model inside it, and the runtime runs it in the background. It gets a couple of special functions, and the one that matters is `agent()`:
+To make this very clear, the Coordinator doesn't write 121 algorithms itself. It writes a script that calls 121 other Claudes, each to write their own. The script ([new in Opus 4.8](https://www.anthropic.com/news/claude-opus-4-8)) is plain JavaScript with no model inside it, and the runtime runs it in the background. It gets a couple of special functions, and the one that matters is `agent()`:
 
 ```js
 // agent() boots a fresh Claude with its own context, shell, and tools,
@@ -47,27 +47,23 @@ const algorithms = await parallel(
 
 A `.map()` wrapped in `parallel()`. That's the swarm: throwaway Claudes that each do one job and vanish, with their answers landing back in the script as plain objects. (There's a sibling, `pipeline()`, for stages instead of a batch.)
 
-So the chain is: I point the coordinator at the problem, the coordinator writes a script, the script hires the swarm, and the answers flow back up the same path. That last step, the answers flowing back up, is the half the headlines skip, and it's where the real question lives.
+So the chain is: I point the Coordinator at the problem, the Coordinator writes a script, the script hires the swarm, and the answers flow back up the same path. That last step, the answers flowing back up, is the half the headlines skip, and it's where the real question lives.
 
-## A job that needs 121 of something
+<aside class="pull-quote"><p>The answers flowing back up is the half the headlines skip.</p></aside>
 
-To get a feel for fan-out you need a pile of independent work, and "is it Christmas" is one line: is the month December and the day the 25th. So I made up a job that fits. Check the date 121 times, with 121 completely different programs, and have them vote. A hash table that memorized every Christmas through 2400. A hand-weighted neural network. A Brainfuck interpreter. The date in Roman numerals, in Morse code, in base 60 like the Babylonians.
+## 121 Claudes
 
-None of it is necessary. That's the joke. The absurd algorithms are there so the swarm has something to fan out across. They're the load, not the point.
+To get a feel for fan-out, let's consider the 121 completely different algorithms that each Claude wrote: a simple date-time match, a hash table that memorized every Christmas through 2400, a hand-weighted neural network, a Brainfuck interpreter, the date in Roman numerals, the date in Morse code, the date in base 60 like the Babylonians (obviously).
 
-## Wave one: writing them
+Asking 121 agents to write 121 date algorithms is 121 chances to be subtly wrong, and I wasn't going to read 121 hand-rolled calendar algorithms to find the broken ones. So before the swarm, Claude wrote a test suite: a Node script that runs each algorithm against 148,488 known dates, covering every timezone, leap years, and the hours on either side of midnight where date bugs hide. Big and brute-force, nothing clever.
 
-Asking 121 agents to write 121 date algorithms is 121 chances to be subtly wrong, and I wasn't going to read 121 hand-rolled calendar algorithms to find the broken ones. So before the swarm, Claude wrote a test suite: a Node script that runs an algorithm against 148,488 dates, covering every timezone, leap years, and the hours on either side of midnight where date bugs hide. Big and brute-force, nothing clever.
+The `parallel()` snippet above doesn't show this because it isn't in the orchestration code. It's in what each agent was told in its prompt: "write your algorithm, run it against the test suite, fix what fails, and don't report back until it's green." Each subagent has its own shell, so it runs the tests and loops on its own. The script just launches the 121 and collects what they return.
 
-The `parallel()` snippet above doesn't show the trick that made it trustworthy, because it isn't in the orchestration code. It's in what each agent was told: write your algorithm, run it against the test suite, fix what fails, and don't report back until it's green. Each subagent has its own shell, so it runs the tests and loops on its own. The script just launches the 121 and collects what they return.
+115 passed on the first try. My favorite used Rata Die, an old trick for counting days as one running number, and got a single constant off by one: 719163 instead of 719162. That one digit pushed about 20,000 of the test dates a day early, specifically around midnight in the far-eastern timezones. The test suite caught it. When all 121 reported done, the Coordinator ran the suite once more over the whole set, to be sure nothing slipped through on a self-report. Neat.
 
-115 passed on the first try. The six that didn't are the fun ones, because they're the bugs a human skim sails right past. My favorite used Rata Die, an old trick for counting days as one running number, and got a single constant off by one: 719163 instead of 719162. That one digit pushed about 20,000 of the test dates a day early, all of them bunched around midnight in the far-eastern timezones, where you'd never catch it by eye. The test suite catches it. The agent saw the failures, fixed the constant, and moved on. I found out from the logs. When all 121 reported done, the coordinator ran the suite once more over the whole set, to be sure nothing slipped through on a self-report. Clean.
+## Wave two: who watches the watchers?
 
-## Wave two: who checks the checkers?
-
-Wave one was the easy half. There's a test, so trust costs nothing: run the suite, believe the green, nobody reads anything.
-
-Wave two has no test. "Does this code do what it claims" and "where would it break" aren't things you can check by running them. So the coordinator fanned out a second swarm, 363 Claudes, three per algorithm, one of the three aimed squarely at breaking the work:
+In Wave Two, the Coordinator wanted to verify and code review it all: "Does this code do what it claims" and "where would it break". So the Coordinator fanned out a second swarm, 363 Claudes this time - three per algorithm:
 
 ```js
 await parallel(algorithms.map((algo) => async () => {
@@ -80,36 +76,40 @@ await parallel(algorithms.map((algo) => async () => {
 }));
 ```
 
-The outer `parallel()` fans across all 121 algorithms; the inner one asks three questions about each at once. So who reads 363 reviews? Nobody, and that's the part I had backwards at first. The script reads them. The lines after that `parallel()` are ordinary code: tally the verdicts, keep the disagreements, drop the rest. What comes back to the coordinator isn't 363 reviews, it's a paragraph. Nine algorithms flagged, here are the ids. The coordinator looked at those nine. I looked at none of it. I trusted the coordinator, the coordinator trusted the aggregate, and the aggregate only bothered anyone about the nine that split.
+The outer `parallel()` fans across all 121 algorithms; the inner one asks three questions about each at once. The lines after that `parallel()` are ordinary code: tally the verdicts, keep the disagreements, drop the rest.
 
-So it's not really "verifiable or not," and the line between the two waves is gentler than that. It's how far up the trust has to travel before a person looks. With a test, it stops at the bottom and nobody above it has to think. Without one, you lean on redundancy, three independent reads where agreement is the closest thing to a check, and you trust the aggregate, looking only where it disagrees with itself. The nine flags were all the same false alarm, a reviewer holding an algorithm to a stricter rule than it was handed. The one finding that survived was a limitation, not a bug: most of these only work between 1970 and 2200. Nobody's loading this in 2250, but it's true.
+Ooh! Fun fact: this swarm found a subtle bug that the test suite missed: the hash table version only works up until year 2200, which the test suite didn't test for.
 
-## What ships
+<aside class="pull-quote"><p>This swarm found a bug the test suite missed.</p></aside>
 
-None of this ships. Not the test suite, not the 484 agents. What ships is the 121 finished algorithms in one file plus a few lines that run them and count the vote. Your browser runs all 121, they vote, you get one word, in about a tenth of a millisecond. Open the developer console to watch them argue, which the original has been telling people to do for fifteen years.
+A few of the voters, in the words of the agents that wrote them:
 
-A few of the voters, in the words of the agents that wrote them: **Church Numeral Equality** "proves it's Christmas without ever using a number." **RAG over a Holiday Store** "consults a 366-document vector database, which is roughly the engineering equivalent of hiring a librarian to confirm your own birthday." **Quantum Wavefunction Collapse** "keeps both Christmas and not-Christmas alive until you look, then admits it was an if statement wearing a lab coat." All 121 are in the appendix at the bottom, if that's your idea of a good time.
+- **Church Numeral Equality** "proves it's Christmas without ever using a number."
+- **RAG over a Holiday Store** "consults a 366-document vector database, which is roughly the engineering equivalent of hiring a librarian to confirm your own birthday."
+- **Quantum Wavefunction Collapse** "keeps both Christmas and not-Christmas alive until you look, then admits it was an if statement wearing a lab coat."
 
-## Was it worth it?
+(The rest are in the [appendix](#appendix-the-whole-parliament) if that's your idea of a good time.)
 
-A decent engineer writes that test suite and one correct algorithm in an afternoon. The other 120 algorithms and the 484 agents bought me nothing I needed, except the thing I came for: a feel for when to reach for this. Wide work with a cheap test, reach for it without thinking. Wide work you can't test, still worth it, but you're trusting the swarm to agree with itself and watching only where it doesn't. And it's neither free nor repeatable. Run it again tomorrow and you get different agents, different bugs, and a different couple hundred dollars on the bill.
+## I get it now!
+
+All the local Node code never ships. It's all just code that Claude wrote and runs locally to organize the subagents deterministically. The word deterministically is doing a lot of work in that sentence (OMG did I just use a Claudism in my own writing? Snake, eat tail.). And that's the new difference between Dynamic Workflows and the previous "cross your fingers and spin up a subagent if your task description roughly matches the subagent's purpose" that I was hoping to grok with this exercise.
+
+<aside class="pull-quote"><p>OMG did I just use a Claudism in my own writing? Snake, eat tail.</p></aside>
+
+## In conclusion
 
 <div class="iic-receipts" markdown="1">
 
 | | |
 |---|---|
-| Feature | **[dynamic workflows](https://code.claude.com/docs/en/workflows)** (Claude Opus 4.8) |
-| Agents | **484** (121 wrote algorithms, 363 reviewed them) |
-| Algorithms shipped | **121** |
-| Tokens / cost | **~16 million** / a couple hundred dollars |
-| Test suite | **a Node script**, 148,488 dates per algorithm |
-| Passed on the first try | **115 / 121** |
-| What ships to your browser | **121 algorithms + a vote counter** (~420 KB) |
-| What you see | **one word** |
+| Agents | **484** |
+| Tokens used | **16,000,000+** |
+| What ships to your browser | **121 algorithms and a vote counter** |
+| Learning to use Dynamic Workflows | **priceless (technically $85)** |
 
 </div>
 
-Is It Christmas is Eric Mill's, and so is the idea that a single-purpose site is the perfect place to try something new. [Go read the original](https://isitchristmas.com). The test suite and all four workflow scripts are [in the repo](https://github.com/benstein/benjaminste.in/tree/main/isitchristmas/build) if you want the real thing instead of the simplified snippets. Then open the console on [my version](/isitchristmas) and watch 121 algorithms agree on the obvious.
+[Is It Christmas](https://isitchristmas.com) remains the best site on the Internet. My Claude Code "internal" workflow scripts are [in the repo](https://github.com/benstein/benjaminste.in/tree/main/isitchristmas/build) if you want the real thing instead of the simplified snippets here. Open the console on [my version](/isitchristmas) to watch 121 algorithms agree on the obvious.
 
 ## Appendix: the whole parliament
 
