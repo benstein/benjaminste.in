@@ -10,7 +10,7 @@
 
 [Loop engineering](https://x.com/steipete/status/2063697162748260627) is the new AI hotness, spurred on by [@steipete's post](https://x.com/steipete/status/2063697162748260627): "You should be designing loops that prompt your agents."
 
-OK, on the surface I get it: something prompts Claude Code over and over again until it's done. But as with many things, it's easy to intellectually understand but 1-click down to truly grok. Like what system is actually running the while-loop? Is it inside Claude Code / Codex or external? How does it stop? How do you prevent infinite loops?
+OK, on the surface I get it: something prompts Claude Code over and over again until it's done. But as with many things, it's easy to understand _intellectually_ at 10,000 feet, but a bit harder to truly grok without being hands on. Like what system is actually running the while-loop? Is it inside Claude Code / Codex or external? How does it stop? How do you prevent infinite loops?
 
 To try out loop engineering for the first time, I went with a non-coding example. It seemed more approachable as a way to explain it than "setup evals" or "code review agent". And as a bonus, I like inspiring people to use these tools for non-coding use cases that you maybe didn't think of.
 
@@ -18,10 +18,12 @@ My wife and I are currently working on our estate planning. Nothing exotic, just
 
 So I thought: what a great use case to learn about loop engineering!
 
-I had prepared something earlier just using traditional agent prompting. Claude gathered our info, interviewed us about our wishes, and proceeded to draft over 100 pages in 15 PDF documents. Great! But now what… it would NOT be a trivial ask to bring to an estate planning attorney and ask them to review. It would be easier to start from scratch. Especially since, even to my layman's eye, these documents had a lot of slop. Verbose LLM tells, explaining itself inline, hallucinated statutes (bad!), and more. Nothing unexpected, but not something I'd want to spend $thousands getting a lawyer to review.
+I had prepared something earlier just using traditional agent prompting. Claude gathered our info, interviewed us about our wishes, and proceeded to draft over 100 pages in 15 PDF documents. Great! But now what? It would not be a trivial request to ask an estate planning attorney to review it all. It would be easier and cheaper for them to start from scratch! Especially since, even to my layman's eye, these documents had a lot of slop. Verbose LLM tells, explaining itself inline, hallucinated statutes (bad!), and more. Nothing unexpected, but not something I'd want to spend $thousands getting a lawyer to review.
 
-So I asked Claude to review its work and come up with constructive feedback. It did, and it corrected a bunch of things. Great!  
-So I asked ChatGPT to review Claude's work and come up with constructive feedback. It did, and Claude agreed and corrected a bunch of things. Great!  
+So I asked Claude to review its work and come up with constructive feedback. It did, and it corrected a bunch of things. Great!
+
+So I asked ChatGPT to review Claude's work and come up with constructive feedback. It did, and Claude agreed and corrected a bunch of things. Great!
+
 So I asked Claude again to review its work and come up with constructive feedback. It did, and it corrected a bunch of things. Great!
 
 Can you see where this is going?
@@ -30,15 +32,15 @@ As an aside, it genuinely felt like we were making demonstrable progress with ea
 
 <aside class="pull-quote"><p>It didn't feel bottomless, it just felt inefficient to have a human in the loop.</p></aside>
 
-Enter loop engineering!
+## Enter loop engineering
 
 OK so it looks like we have a good candidate for loop engineering… Now what?
 
 (Note: this is a point-in-time blog post. It'll likely be obsolete tomorrow. There's also likely many ways to skin the cat here too. This is just one of them.)
 
-Claude Code recently shipped with a `/goal` command. You can set a goal and it will work until the condition is met. That's our loop's control plane. But what are the conditions? Also, a contract review is not deterministic like code that you can write tests for. What's the "we're done" equivalent of "all tests passing"?
+Claude Code recently shipped with a `/goal` command. You can set a goal and it will work until the condition is met. That's our loop's control plane. But what are the conditions? Also, a contract review is not deterministic like code that you can write tests for. What's the "we're done" equivalent of "all tests passing" when evaluating a legal document?
 
-<aside class="pull-quote"><p>What's the "we're done" equivalent of "all tests passing"?</p></aside>
+<aside class="pull-quote"><p>What's the "we're done" equivalent of "all tests passing" when evaluating a legal document?</p></aside>
 
 Here's my setup:
 
