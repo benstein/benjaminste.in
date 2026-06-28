@@ -14,7 +14,7 @@ Now say "AI startup."
 
 Same energy. We just can't hear it yet.
 
-## The YC Chart That Should Scare You
+## Every Startup is an AI Startup
 
 This chart from Benedict Evans tells a simple story: AI startups went from a sliver of each YC batch to the majority. By the most recent cohorts, the red bar (AI) is taller than the black bar (everything else). More than half of all YC startups now call themselves AI companies.
 
@@ -66,7 +66,3 @@ If you're a founder, here's a test. Describe your company without using the word
 The internet didn't go away. It became everything. AI won't go away either. It'll become everything too. And when it does, the companies that spent their energy talking about the technology will be forgotten, and the companies that spent their energy solving problems will be the ones left standing.
 
 We're not an AI startup. We're just a startup. And we help parents raise great kids without losing their minds.
-
----
-
-*I'm Ben Stein, co-founder and CEO of SuperDuper. I live in Oakland with my Keeper wife Arin, our two overprogrammed teenage boys, and a dog named Soup who contributes nothing helpful to the family logistics and arguably makes them harder, but he's really cute. If you want to follow along: [superduperlabs.com](https://superduperlabs.com) · [benjaminste.in](https://benjaminste.in) · [LinkedIn](https://www.linkedin.com/in/benjaminstein/)*
