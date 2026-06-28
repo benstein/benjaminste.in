@@ -3,7 +3,7 @@ layout: default
 title: "Stop Refreshing the Camp Blog"
 date: 2026-06-21
 categories: [family, personal]
-excerpt: "The camp photo blog soothes our anxiety and quietly takes the one thing camp is supposed to give kids: a month that belongs entirely to them."
+excerpt: "I don't look at the camp blog. Here's why."
 ---
 
 "REFRESH!" That's all you have to say on our Camp Gilboa Parents WhatsApp thread to start the detective work. Whose kids are in the pictures? Do they look happy? Are they with their friends? Which boys and girls are they sitting near? Do they look like they've showered?
@@ -20,7 +20,7 @@ I'm curious, obviously. Of course I want to know what my kids are up to. But the
 
 I grew up at Habonim Dror Camp Moshava, in a serpentine area in rural Maryland in the 1990s. I was what we called a "10-and-2 kid." I lived ten months of the year in normal life just to get to those two months at summer camp. I wrote my parents the requisite letter or two. (Probably exactly two.) Socialist Zionist summer camp was *my* space. My parents had no idea what I was doing, who I was hanging out with, or whether I'd showered. I wanted it that way.
 
-And it was liberating in a way that's hard to explain to anyone who didn't have it. Sure, the outdoors stuff mattered — the woods, the lake, building a fire. But the real thing was psychological. For two months, I got to figure out who I was without anyone who'd known me since birth watching me do it. I could try on different versions of myself, screw up, and nobody was going to text my mom about it. When I came home, *I* got to decide what to tell them.
+And it was liberating in a way that's hard to explain to anyone who didn't have it. Sure, the outdoors stuff mattered — the tiyulim (hikes), the agam (lake), building a midurah (campfire). But the real thing was psychological. For two months, I got to figure out who I was without anyone who'd known me since birth watching me do it. I could try on different versions of myself, screw up, and nobody was going to text my mom about it. When I came home, *I* got to decide what to tell them.
 
 <aside class="pull-quote"><p>When I came home, I got to decide what to tell them.</p></aside>
 
@@ -30,7 +30,7 @@ I want my kids to have that too.
 
 My teenage boys go to Camp Tawonga and Habonim Dror Camp Gilboa now. Different camps than mine, but the same idea.
 
-But something has changed. When I was at Moshava in the '90s, my parents' only windows into my summer were a couple of letters that said "sorry I haven't written sooner" and a 90-minute lunch on Visitors Day. Today's parents get a live photo feed that they treat like surveillance footage.
+But something has changed. When I was at Moshava in the '90s, my parents' only windows into my summer were a couple of letters that said "sorry I haven't written sooner" and a 90-minute lunch on Visitors Day. Today's parents get a live photo feed that they watch like it's The Truman Show.
 
 I get why people look. You miss your kid. The camp blog takes the edge off. But I think it's quietly ruining something much more important. Every modern parent I know — myself very much included — already struggles with how much space to leave our kids. We track their locations, we know their grades in real time, we manage their social calendars. Camp is supposed to be the one place where we stop doing all that.
 
