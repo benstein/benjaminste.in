@@ -30,22 +30,22 @@ That was the gift of camp, and I want my kids to have it too.
 
 ---
 
-My teenage boys go to Camp Tawonga and Habonim Dror Camp Gilboa now. Different camps, same Jewish summer camp magic.
+My teenage boys go to Camp Tawonga and Habonim Dror Camp Gilboa now. Different camps from mine, same idea.
 
-But something has changed between then and now. When I was at Moshava in the '90s, my parents' only windows into my summer were a couple of letters that said "sorry I haven't written sooner" and a 90-minute lunch on Visitors Day. Today's parents get a live photo feed that they consume like they're watching The Truman Show.
+But something has changed. When I was at Moshava in the '90s, my parents' only windows into my summer were a couple of letters that said "sorry I haven't written sooner" and a 90-minute lunch on Visitors Day. (Hella awkward with divorced parents. 1-star. Do not recommend.) Today's parents get a live photo feed that they watch like it's The Truman Show.
 
-I get it. You miss your kid. You want to know they're okay. You want visual proof that the money you're spending is producing real joy. The camp blog is a pressure valve for parental anxiety. I understand the appeal on every level.
+I get it. You miss your kid, you want to know they're okay, you want proof that the money you're spending is buying real joy. The camp blog is a pressure valve for parental anxiety, and I feel it too.
 
-I just think it's ruining something much more important. Every modern parent I know, myself very much included, already struggles with how much space we leave our kids. We track their locations. We know their grades in real time. We manage their social calendars. We have, with the best intentions, constructed a childhood of near-total surveillance.
+I just think it's ruining something more important. Every modern parent I know, myself very much included, already struggles with how much space to leave our kids. We track their locations, we know their grades in real time, we manage their social calendars. With the best intentions, we've built a childhood of near-total surveillance.
 
 Summer camp can be the break from all of that. Four weeks in a safe, supervised environment where kids can be messy and free and unseen by us. Where they get to decide what to share and what to keep. I feel voyeuristic scrolling through those photos, or worse: like I'm trespassing.
 
 <aside class="pull-quote"><p>I feel like I'm trespassing.</p></aside>
 
-As a parent, I'm probably in the minority here. Although I suspect most camp directors would love to ditch the blog and reassign the photographer (or photographers. Oy vey!) to something more fun or pedagogical. But the parental pressure is real, and no camp wants to be the first one to go dark.
+As a parent, I know I'm in the minority here. Although I suspect most camp directors would love to ditch the blog and reassign the photographer (or photographers, plural. Oy vey!) to something more fun or pedagogical. But the parental pressure is real, and no camp wants to be the first one to go dark.
 
-What if we trusted the camps we chose? What if we trusted our kids? What if we let them disappear for a month and come back with stories that belong fully to them?
+What if we just trusted the camps we chose, trusted our kids, and let them disappear for a month and come back with stories that belong fully to them?
 
 I'd love it if the next time someone typed in the summer camp group chat, it was to invite us all out to dinner. One where we don't talk about our kids. Summer is a break for parents too.
 
-My kids are at machaneh. They're fine. They're great even. And what they're doing is none of my business.
+My kids are at machaneh being kids. And what they're doing there is none of my business.
