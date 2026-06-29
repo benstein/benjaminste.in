@@ -20,7 +20,7 @@ I'm curious. Of course I want to know what my kids are up to. But these photos a
 
 I grew up at Habonim Dror Camp Moshava, in a serpentine area in rural Maryland in the 1990s. I was what we called a "10-and-2 kid." I lived ten months of the year in normal life just to get to those two months at summer camp. I wrote my parents the requisite letter or two. (Probably exactly two.) Socialist Zionist summer camp was *my* space. My parents had no idea what I was doing, who I was hanging out with, or whether I'd showered. I wanted it that way.
 
-And it was liberating in a way that's hard to explain to anyone who didn't have it. The physical part was the woods and lakes and campfires with no adults hovering. The psychological part was bigger. For two months, I got to figure out who I was without anyone who'd known me since birth watching me do it. I could be brave or stupid or kind or selfish, and the consequences were mine. I decided which stories made it home. Not a photographer with a DSLR and a blog schedule.
+And it was liberating in a way that's hard to explain to anyone who didn't have it. The physical part was the tiyulim (hikes), the agam (lake), the midurah (campfire) with no adults hovering. The psychological part was bigger. For two months, I got to figure out who I was without anyone who'd known me since birth watching me do it. I could be brave or stupid or kind or selfish, and the consequences were mine. I decided which stories made it home. Not a photographer with a DSLR and a blog schedule.
 
 <aside class="pull-quote"><p>I decided which stories made it home.</p></aside>
 
@@ -36,7 +36,7 @@ I get it. You miss your kid, you want to know they're okay, you want proof that 
 
 I just think it's ruining something more important. Every modern parent I know, myself included, already struggles with how much space to leave our kids. We track their locations, we know their grades before they get home, we manage their social calendars. With the best intentions, we've built a childhood of near-total surveillance.
 
-Summer camp can be the break from all of that. Four weeks in a safe, supervised environment where kids can be messy and free and unseen by us. Where they get to decide what to share and what to keep. I feel voyeuristic scrolling through those photos, or worse: like I'm trespassing.
+Camp is supposed to be the one place where we stop doing all that. Four weeks in a safe, supervised environment where kids can be messy and free and unseen by us. Where they get to decide what to share and what to keep. I feel voyeuristic scrolling through those photos, or worse: like I'm trespassing.
 
 <aside class="pull-quote"><p>I feel like I'm trespassing.</p></aside>
 
