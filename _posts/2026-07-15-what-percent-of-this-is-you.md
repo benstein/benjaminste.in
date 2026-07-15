@@ -36,11 +36,18 @@ That's the thing that makes me allergic — the absence of anyone home behind th
 
 I obv write almost none of my own words by hand anymore. I core-dump thoughts into Claude, argue with the draft, paste in feedback from a second model, argue with that too, rewrite, cut, rewrite again. By the time something ships, I might have typed two hundred words of the four thousand that make up the post. The rest came out of a model. Natch.
 
-And yet I'd bet real money you can't find the seam. (Sometimes you can, but that's usually on purpose — see [the Cinderhall post](https://benjaminste.in/blog/2026/05/02/welcome-to-cinderhall/), where the AI-ness is loud and stupid and part of the joke, not something I was trying to hide.) Not because I'm some prompt-engineering savant, but because every sentence in there passed through my judgment at least three times before it shipped. The words aren't mine. The decisions about which words survive are. As are the cultural references that are so simultaneously low brow and high brow that no one but Kenny, Jacob Tierney, and Jared Keeso appreciate them. That's what I actually mean by the content of a piece of writing — who decided, not who typed.
+And yet I'd bet real money you can't find the seam. (Sometimes you can, but that's usually on purpose — see [the Cinderhall post](https://benjaminste.in/blog/2026/05/02/welcome-to-cinderhall/), where the AI-ness is loud and stupid and part of the joke, not something I was trying to hide.) Not because I'm some prompt-engineering savant, but because every sentence in there passed through my judgment at least three times before it shipped. The words aren't mine. The decisions about which words survive are.
+
+<aside class="pull-quote"><p>The words aren't mine. The decisions about which words survive are.</p></aside>
+
+As are the cultural references that are so simultaneously low brow and high brow that no one but Kenny, Jacob Tierney, and Jared Keeso appreciate them. That's what I actually mean by the content of a piece of writing — who decided, not who typed.
 
 **So the question I actually want answered isn't "did AI write this."**
 
-Everything's AI-written now, in the trivial sense. The question is what fraction of the thinking in front of me is the author's, versus the model filling gaps the author never bothered to close. And I don't mean that as a token count — a document can be ninety percent human-typed and still be entirely the model's idea, if the human was just transcribing a summary they half-understood. (LOL wut? Yeah, that happens more than people admit.) I mean it as a measure of where the judgment lived.
+Everything's AI-written now, in the trivial sense. The question is what fraction of the thinking in front of me is the author's, versus the model filling gaps the author never bothered to close.
+
+<aside class="pull-quote"><p>Everything's AI-written now, in the trivial sense.</p></aside>
+ And I don't mean that as a token count — a document can be ninety percent human-typed and still be entirely the model's idea, if the human was just transcribing a summary they half-understood. (LOL wut? Yeah, that happens more than people admit.) I mean it as a measure of where the judgment lived.
 
 I want a number for that. Something like: 80% author, 20% model — meaning the ideas, the structure, the specific claims, the stuff that would be wrong if you cut a paragraph, all came from a person who sat with the problem. Versus 5% author, 95% model — meaning someone typed a sentence and a half and let the gaps fill themselves in, and what you're reading is mostly the model's extrapolation of what a competent person in that role might say.
 
