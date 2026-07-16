@@ -71,6 +71,45 @@ LLMs just made that trick available to everyone, instantly, for free, at the bot
 I already do a version of this informally — I&#39;ve [posted the raw prompt behind a piece before](https://benjaminste.in/blog/2026/05/03/did-i-even-write-that-last-post/), specifically so people could see the ratio for themselves. I want to make that a habit instead of a novelty. A line at the top of anything I publish: author-thinking versus model-filled-in, my best guess, no more scientific than that. I doubt many people will follow. I don&#39;t really care, natch. If more people told me upfront how much of the ten pages was actually theirs, I&#39;d read a lot less garbage, and I&#39;d stop skipping the good stuff that happens to look like it.</content>
   </entry>
   <entry>
+    <title>My Mom&#39;s Will Has Unit Tests</title>
+    <link href="https://benjaminste.in/blog/2026/07/15/my-moms-will-has-unit-tests/" rel="alternate" type="text/html"/>
+    <id>https://benjaminste.in/blog/2026/07/15/my-moms-will-has-unit-tests/</id>
+    <published>2026-07-15T00:00:00Z</published>
+    <updated>2026-07-15T00:00:00Z</updated>
+    <summary>Estate planning now runs through a build pipeline with a test suite. I did not see that coming.</summary>
+    <content type="html">I have written more test suites for a last will and testament than for some of the actual production code at SuperDuper. That sentence is true and I don&#39;t fully know what to do with it.
+
+Basically everything big in my life right now runs inside Claude Code or Codex. Estate planning. My mom&#39;s will. Zeke&#39;s bar mitzvah. Vacations. Not &quot;I asked ChatGPT a question about it.&quot; The whole project lives there, source files and all. I&#39;m not unique in this. What I didn&#39;t expect is that my agents started writing test suites for documents that have nothing to do with code, without me asking for it.
+
+Take the will. It&#39;s not one file. There&#39;s a source doc with the actual decisions: who gets what, who&#39;s executor, guardianship, the sentences Arin and I fought over for three conversations. There&#39;s markdown citing the relevant California statutes and case law. There&#39;s markdown enumerating our specific wishes against the boilerplate. And there&#39;s the deliverable: a PDF that has to look like a real legal document, margins, signature block, a spot for a notary, or a probate court isn&#39;t taking it seriously.
+
+Source files, an intermediate markdown layer, a render step. That&#39;s a build pipeline. I&#39;ve built plenty of these for software. Never expected to build one for a will.
+
+And a pipeline breaks. Change a guardianship clause, a cross-reference on page 9 points at the wrong section. Fix a citation, the page numbers shift, the table of contents lies. Reword the trust language, a document downstream that&#39;s supposed to mirror it quietly drifts. This happened, repeatedly, and every time Claude caught it because it ran a test suite after the edit. Not &quot;let me reread this and see if it looks right.&quot; An actual check: does every cross-reference resolve, does the rendered PDF contain the clause the source says it should, did a global find-and-replace eat one of the kids&#39; names.
+
+That last one is the kind of mistake that sits undetected in a human-drafted will for years. A machine caught it in four seconds.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;A machine caught it in four seconds.&lt;/p&gt;&lt;/aside&gt;
+
+I already wrote about the fuzzier version of this: an adversarial drafter/reviewer loop arguing about whether the will says what we actually mean. That&#39;s judgment. No green checkmark for &quot;does this trust reflect our values.&quot; What I&#39;m describing here is one layer down: the boring mechanical stuff. Rendering. Internal consistency. Whether an edit three files away broke something nobody was looking at. Turns out that layer is completely, deterministically testable, same as &quot;does this function return the right value,&quot; and I did not see that coming. I&#39;d spent twenty years assuming &quot;code is testable, prose isn&#39;t&quot; was just a fact about the world.[^1] It&#39;s not. It was true because no human can hold a hundred pages of cross-references in their head and write assertions against it by hand. An agent can. So it does.
+
+Then it got weirder. Claude started asking whether the test suite itself was any good, not &quot;did the tests pass&quot; but &quot;are these the right tests, or is this just a green checkmark that feels reassuring and means nothing.&quot; So now there&#39;s a second agent whose job is reviewing the test suite, checking whether it catches real failure modes or just checks page numbers while a whole paragraph about my mother&#39;s second husband quietly vanished three drafts ago. A test suite for the test suite. Never needed that phrase for a Word document before. I say it out loud now, regularly, and Arin stopped listening to me talk about this a long time ago.
+
+&lt;aside class=&quot;pull-quote&quot;&gt;&lt;p&gt;A test suite for the test suite. Never needed that phrase for a Word document before.&lt;/p&gt;&lt;/aside&gt;
+
+I don&#39;t know if this is a universal pattern or just what happens when you run personal life admin through a tool built for coding. Could be a config artifact of how I use Claude Code specifically. But my mom&#39;s will is now checked more rigorously than most contracts I signed in my twenties, and that&#39;s not because I hired a better lawyer.
+
+What I can&#39;t tell yet is whether this stays a weird founder habit or turns into something a normal parent does with their kid&#39;s financial aid paperwork. I&#39;ll take the second one. But I wanted to write this down before it starts feeling normal and I forget it was ever strange.
+
+[^1]: Ok, not entirely true. Twilio&#39;s docs had unit tests: the code samples embedded in the docs actually ran in CI, so if an API changed shape the sample would fail the build instead of quietly lying to a developer for six months. I thought that was the coolest thing in the world at the time. But that was testing the code blocks sitting inside the prose. This is testing the prose itself. Different animal.
+
+---
+
+*I&#39;m Ben Stein, co-founder and CEO of [SuperDuper](https://superduperlabs.com), helping underwater parents manage all their family logistics. I live in Oakland with my wife Arin, our two teenage boys, and a dog named Soup, who has never once passed a test suite in his life.*
+
+*If you want to follow along: [superduperlabs.com](https://superduperlabs.com) · [benjaminste.in](https://benjaminste.in) · [LinkedIn](https://www.linkedin.com/in/benjaminstein/) · [Substack](https://benjaminstein.substack.com/)*</content>
+  </entry>
+  <entry>
     <title>Loop Engineering Explained With a Non-Coding Example</title>
     <link href="https://benjaminste.in/blog/2026/06/22/loop-engineering-explained-with-a-non-coding-example/" rel="alternate" type="text/html"/>
     <id>https://benjaminste.in/blog/2026/06/22/loop-engineering-explained-with-a-non-coding-example/</id>
