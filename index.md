@@ -11,7 +11,7 @@ title: Home
   </div>
 </div>
 
-<p class="homepage-bio">Ayo! I'm Ben. I live in Oakland, CA with my illustrious <a href="http://thefloweringartichoke.com">wife</a>, two teenage boys, and a pup named <a href="/assets/images/soup.jpg">Soup</a>. I love birds, bridge, beer, bots, bears, beets, Battlestar Galactica. And losing at pub trivia. Electrify everything.</p>
+<p class="homepage-bio">Ayo! I'm Ben. I live in Oakland, CA with my illustrious <a href="http://thefloweringartichoke.com">wife</a>, two teenage boys, and two pups named <a href="/assets/images/soup.jpg">Soup</a> and <a href="/assets/images/salad.jpg">Salad</a>. I love birds, bridge, beer, bots, bears, beets, Battlestar Galactica. And losing at pub trivia. Electrify everything.</p>
 
 <p class="homepage-status">
 <em>Current Status:</em> Reading Dikkens with two Ks, the well-known Dutch author<br>
