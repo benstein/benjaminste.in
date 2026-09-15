@@ -4,6 +4,10 @@ This is the canonical project instruction file for AI coding agents. Claude Code
 
 This repository powers the personal website and blog at benjaminste.in. It is a Jekyll site deployed via GitHub Pages.
 
+## Branching for content changes
+
+Simple content updates — new blog posts, bio/homepage copy edits, image swaps, typo fixes, and similar low-risk changes to site content — go **directly to `main`**. Do not create a feature branch or open a pull request for these; just commit to `main` and push. Reserve branches and PRs for larger or riskier work (layout/CSS overhauls, plugin or build changes, anything you'd want reviewed before it goes live).
+
 ## Publishing a new blog post
 
 Do **not** try to run the Jekyll plugin in `_plugins/alternate_formats.rb` to generate the JSON/MD alt-formats. It never runs during deploy: the `github-pages` gem forces Jekyll into safe mode, which skips custom plugins. The committed files under `blog/YYYY/MM/DD/slug/` are what actually get served.
