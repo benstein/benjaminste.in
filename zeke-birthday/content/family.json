@@ -1,0 +1,64 @@
+{
+  "members": [
+    {
+      "id": "gabi",
+      "name": "Gabi",
+      "hue": 120,
+      "lines": {
+        "greeting": [
+          "[Gabi greeting stub 1: he got to the living room first]",
+          "[Gabi greeting stub 2: he is not handing over a candle for free]"
+        ],
+        "phaseIntro": ["[Gabi phase intro stub: he goes first and says why]"],
+        "phaseWin": ["[Gabi phase win stub: he admits Zeke got him]", "Fine. One candle. Take it."],
+        "phaseLose": ["[Gabi phase lose stub: he is enjoying this too much]"],
+        "afterFight": ["[Gabi after-fight stub: the cake is on the table, or a rematch?]"]
+      },
+      "bossRef": {
+        "attackName": "[Gabi attack name stub]",
+        "taunt": "[Gabi taunt stub]"
+      }
+    },
+    {
+      "id": "mami",
+      "name": "Mami",
+      "hue": 340,
+      "lines": {
+        "greeting": ["[Mami greeting stub 1: she has been waiting all day]"],
+        "phaseIntro": ["[Mami phase intro stub: her turn, and she means it]"],
+        "phaseWin": ["[Mami phase win stub: proud, and one candle lighter]"],
+        "phaseLose": ["[Mami phase lose stub: try that again, mijo]"],
+        "afterFight": ["[Mami after-fight stub: she is ready to light the candles]"]
+      },
+      "bossRef": {
+        "attackName": "[Mami attack name stub]",
+        "taunt": "[Mami taunt stub]"
+      }
+    },
+    {
+      "id": "papi",
+      "name": "Papi",
+      "hue": 30,
+      "lines": {
+        "greeting": ["[Papi greeting stub 1: he built the whole thing and is pretending he did not]"],
+        "phaseIntro": ["[Papi phase intro stub: last one standing]"],
+        "phaseWin": ["[Papi phase win stub: thirteen candles down, one to go]"],
+        "phaseLose": ["[Papi phase lose stub: he is not going easy]"],
+        "afterFight": ["[Papi after-fight stub: he offers one more round or the cake]"]
+      },
+      "bossRef": {
+        "attackName": "[Papi attack name stub]",
+        "taunt": "[Papi taunt stub]"
+      }
+    }
+  ],
+  "ending": {
+    "message": [
+      "[Ending paragraph 1 stub: what the family wants to say to Zeke on his fourteenth birthday. Ben writes this one.]",
+      "[Ending paragraph 2 stub: the part about the year he has had.]",
+      "[Ending paragraph 3 stub: the part about what comes next.]"
+    ],
+    "reveal": "[Reveal stub: the real-world thing this game is actually announcing.]",
+    "credits": ["[Credits stub: made by Papi with a lot of help.]"]
+  }
+}

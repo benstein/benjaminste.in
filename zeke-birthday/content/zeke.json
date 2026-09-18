@@ -1,0 +1,613 @@
+{
+  "zekle": {
+    "rounds": 3,
+    "words": [
+      "PARTY",
+      "CANDY",
+      "CAKES",
+      "GIFTS",
+      "GAMES",
+      "PIZZA",
+      "MUSIC",
+      "DANCE",
+      "LIGHT",
+      "SMILE",
+      "HAPPY",
+      "SUPER",
+      "LUCKY",
+      "MAGIC",
+      "ROBOT",
+      "PLANT",
+      "RIVER",
+      "OCEAN",
+      "BEACH",
+      "STORM",
+      "CLOUD",
+      "SUNNY",
+      "MONTH",
+      "NIGHT",
+      "DREAM",
+      "SPACE",
+      "EARTH",
+      "CRANE",
+      "TIGER",
+      "ZEBRA",
+      "SCOUT",
+      "SALAD",
+      "CURRY"
+    ]
+  },
+  "crossword": {
+    "grid": ["BAG#ACT", "I#E#G#A", "BALLOON", "#I#I#D#", "FRIENDS", "A#C#A#A", "DOE#PAD"],
+    "across": [
+      {
+        "n": 1,
+        "row": 0,
+        "col": 0,
+        "clue": "Sack you carry the groceries home in"
+      },
+      {
+        "n": 3,
+        "row": 0,
+        "col": 4,
+        "clue": "Perform in a play"
+      },
+      {
+        "n": 5,
+        "row": 2,
+        "col": 0,
+        "clue": "Party decoration you blow up"
+      },
+      {
+        "n": 9,
+        "row": 4,
+        "col": 0,
+        "clue": "The ten people Zeke is visiting today"
+      },
+      {
+        "n": 13,
+        "row": 6,
+        "col": 0,
+        "clue": "Female deer"
+      },
+      {
+        "n": 14,
+        "row": 6,
+        "col": 4,
+        "clue": "Block of paper glued at the top"
+      }
+    ],
+    "down": [
+      {
+        "n": 1,
+        "row": 0,
+        "col": 0,
+        "clue": "Cloth tied under a baby to catch spills"
+      },
+      {
+        "n": 2,
+        "row": 0,
+        "col": 2,
+        "clue": "Goo for styling hair"
+      },
+      {
+        "n": 3,
+        "row": 0,
+        "col": 4,
+        "clue": "In the past, as in 'two years ___'"
+      },
+      {
+        "n": 4,
+        "row": 0,
+        "col": 6,
+        "clue": "Color the sun gives your skin"
+      },
+      {
+        "n": 6,
+        "row": 2,
+        "col": 1,
+        "clue": "What you breathe"
+      },
+      {
+        "n": 7,
+        "row": 2,
+        "col": 3,
+        "clue": "Something that is not true"
+      },
+      {
+        "n": 8,
+        "row": 2,
+        "col": 5,
+        "clue": "Not even"
+      },
+      {
+        "n": 9,
+        "row": 4,
+        "col": 0,
+        "clue": "Craze that does not last"
+      },
+      {
+        "n": 10,
+        "row": 4,
+        "col": 2,
+        "clue": "Frozen water"
+      },
+      {
+        "n": 11,
+        "row": 4,
+        "col": 4,
+        "clue": "Short sleep in the afternoon"
+      },
+      {
+        "n": 12,
+        "row": 4,
+        "col": 6,
+        "clue": "Opposite of happy"
+      }
+    ]
+  },
+  "blaster": {
+    "enemyName": "Party Crasher",
+    "waves": [
+      {
+        "count": 6,
+        "speed": 40,
+        "hp": 1
+      },
+      {
+        "count": 9,
+        "speed": 55,
+        "hp": 1
+      },
+      {
+        "count": 12,
+        "speed": 70,
+        "hp": 2
+      }
+    ]
+  },
+  "snake": {
+    "targetCandles": 14,
+    "startSpeedMs": 160,
+    "minSpeedMs": 70,
+    "obstacles": 6
+  },
+  "logic": {
+    "categories": [
+      {
+        "name": "Guest",
+        "values": ["Koh", "Kian", "Soli", "Xuan"]
+      },
+      {
+        "name": "Brought",
+        "values": ["Balloons", "Cupcakes", "Pizza", "Streamers"]
+      },
+      {
+        "name": "Arrived",
+        "values": ["3:00", "3:15", "3:30", "3:45"]
+      }
+    ],
+    "clues": [
+      {
+        "kind": "is",
+        "a": ["Brought", "Balloons"],
+        "b": ["Arrived", "3:00"],
+        "text": "Whoever brought the balloons was first through the door, at 3:00."
+      },
+      {
+        "kind": "adjacent",
+        "a": ["Guest", "Koh"],
+        "b": ["Brought", "Streamers"],
+        "text": "Koh and whoever brought the streamers arrived one slot apart."
+      },
+      {
+        "kind": "before",
+        "a": ["Brought", "Streamers"],
+        "b": ["Brought", "Pizza"],
+        "text": "The streamers got there before the pizza did."
+      },
+      {
+        "kind": "before",
+        "a": ["Guest", "Kian"],
+        "b": ["Guest", "Soli"],
+        "text": "Kian beat Soli to the house."
+      },
+      {
+        "kind": "after",
+        "a": ["Guest", "Koh"],
+        "b": ["Guest", "Soli"],
+        "text": "Koh turned up after Soli."
+      },
+      {
+        "kind": "not",
+        "a": ["Brought", "Pizza"],
+        "b": ["Arrived", "3:45"],
+        "text": "The pizza did not arrive at 3:45."
+      }
+    ],
+    "solution": {
+      "Koh": {
+        "Brought": "Pizza",
+        "Arrived": "3:30"
+      },
+      "Kian": {
+        "Brought": "Balloons",
+        "Arrived": "3:00"
+      },
+      "Soli": {
+        "Brought": "Streamers",
+        "Arrived": "3:15"
+      },
+      "Xuan": {
+        "Brought": "Cupcakes",
+        "Arrived": "3:45"
+      }
+    }
+  },
+  "rhythm": {
+    "bpm": 100,
+    "lanes": 4,
+    "durationBeats": 32,
+    "passPercent": 80,
+    "notes": [
+      {
+        "beat": 0,
+        "lane": 0
+      },
+      {
+        "beat": 0.5,
+        "lane": 1
+      },
+      {
+        "beat": 1,
+        "lane": 2
+      },
+      {
+        "beat": 1.5,
+        "lane": 3
+      },
+      {
+        "beat": 2,
+        "lane": 3
+      },
+      {
+        "beat": 2.5,
+        "lane": 2
+      },
+      {
+        "beat": 3,
+        "lane": 1
+      },
+      {
+        "beat": 3.5,
+        "lane": 0
+      },
+      {
+        "beat": 4,
+        "lane": 0
+      },
+      {
+        "beat": 4.5,
+        "lane": 1
+      },
+      {
+        "beat": 5,
+        "lane": 2
+      },
+      {
+        "beat": 6,
+        "lane": 3
+      },
+      {
+        "beat": 6.5,
+        "lane": 3
+      },
+      {
+        "beat": 7,
+        "lane": 2
+      },
+      {
+        "beat": 7.5,
+        "lane": 1
+      },
+      {
+        "beat": 8,
+        "lane": 0
+      },
+      {
+        "beat": 8.5,
+        "lane": 0
+      },
+      {
+        "beat": 9,
+        "lane": 1
+      },
+      {
+        "beat": 9.5,
+        "lane": 2
+      },
+      {
+        "beat": 10,
+        "lane": 3
+      },
+      {
+        "beat": 10.5,
+        "lane": 3
+      },
+      {
+        "beat": 11,
+        "lane": 2
+      },
+      {
+        "beat": 11.5,
+        "lane": 1
+      },
+      {
+        "beat": 12,
+        "lane": 0
+      },
+      {
+        "beat": 12.5,
+        "lane": 0
+      },
+      {
+        "beat": 13,
+        "lane": 1
+      },
+      {
+        "beat": 14,
+        "lane": 2
+      },
+      {
+        "beat": 14.5,
+        "lane": 3
+      },
+      {
+        "beat": 15,
+        "lane": 3
+      },
+      {
+        "beat": 15.5,
+        "lane": 2
+      },
+      {
+        "beat": 16,
+        "lane": 1
+      },
+      {
+        "beat": 16.5,
+        "lane": 0
+      },
+      {
+        "beat": 17,
+        "lane": 0
+      },
+      {
+        "beat": 17.5,
+        "lane": 1
+      },
+      {
+        "beat": 18,
+        "lane": 2
+      },
+      {
+        "beat": 18.5,
+        "lane": 3
+      },
+      {
+        "beat": 19,
+        "lane": 3
+      },
+      {
+        "beat": 19.5,
+        "lane": 2
+      },
+      {
+        "beat": 20,
+        "lane": 1
+      },
+      {
+        "beat": 20.5,
+        "lane": 0
+      },
+      {
+        "beat": 21,
+        "lane": 0
+      },
+      {
+        "beat": 22,
+        "lane": 1
+      },
+      {
+        "beat": 22.5,
+        "lane": 2
+      },
+      {
+        "beat": 23,
+        "lane": 3
+      },
+      {
+        "beat": 23.5,
+        "lane": 3
+      },
+      {
+        "beat": 24,
+        "lane": 2
+      },
+      {
+        "beat": 24.5,
+        "lane": 1
+      },
+      {
+        "beat": 25,
+        "lane": 0
+      },
+      {
+        "beat": 25.5,
+        "lane": 0
+      },
+      {
+        "beat": 26,
+        "lane": 1
+      },
+      {
+        "beat": 26.5,
+        "lane": 2
+      },
+      {
+        "beat": 27,
+        "lane": 3
+      },
+      {
+        "beat": 27.5,
+        "lane": 3
+      },
+      {
+        "beat": 28,
+        "lane": 2
+      },
+      {
+        "beat": 28.5,
+        "lane": 1
+      },
+      {
+        "beat": 29,
+        "lane": 0
+      },
+      {
+        "beat": 30,
+        "lane": 0
+      },
+      {
+        "beat": 30.5,
+        "lane": 1
+      },
+      {
+        "beat": 31,
+        "lane": 2
+      },
+      {
+        "beat": 31.5,
+        "lane": 3
+      }
+    ]
+  },
+  "sokoban": {
+    "levels": [
+      ["########", "#......#", "#.o**$@#", "#......#", "#####..#", "########"],
+      ["######", "#.o###", "#..###", "#*@..#", "#..$.#", "#..###", "######"],
+      ["#########", "###..####", "#.....$.#", "#.#..#$.#", "#.o.o#@.#", "#########"]
+    ]
+  },
+  "picross": {
+    "rows": 10,
+    "cols": 10,
+    "title": "Birthday cake",
+    "picture": [
+      "....#.....",
+      "...###....",
+      "....#.....",
+      "..######..",
+      ".########.",
+      "##########",
+      "#.#.#.#.#.",
+      "##########",
+      "##########",
+      ".########."
+    ]
+  },
+  "platformer": {
+    "ingredientsNeeded": 12,
+    "level": [
+      "....................................................................................................",
+      "....................................................................................................",
+      "..............c...........................c................c.................c......................",
+      "....................................................................................................",
+      ".............---.........................---..............---...............---.....................",
+      ".........c...............c..........c.................c.................c................c..........",
+      "...............................c.................c.................c.................c..............",
+      "........---.............---........---...............---...............---..............---.........",
+      "....................................................................................................",
+      "..S...^^............^^^....^..........^^^..^............^^^...^...........^^^..^^..........^^^...F..",
+      "############....##############....##############....##############....##############....############",
+      "############....##############....##############....##############....##############....############"
+    ]
+  },
+  "trivia": {
+    "askCount": 10,
+    "lives": 3,
+    "secondsPerQuestion": 8,
+    "questions": [
+      {
+        "q": "How many days are in a leap year?",
+        "options": ["364", "365", "366", "367"],
+        "answer": 2
+      },
+      {
+        "q": "Which is the largest planet in our solar system?",
+        "options": ["Jupiter", "Saturn", "Neptune", "Earth"],
+        "answer": 0
+      },
+      {
+        "q": "Which is the only mammal that can truly fly?",
+        "options": ["Owl", "Flying squirrel", "Sugar glider", "Bat"],
+        "answer": 3
+      },
+      {
+        "q": "What do you call a group of wolves?",
+        "options": ["A herd", "A pack", "A school", "A flock"],
+        "answer": 1
+      },
+      {
+        "q": "How many sides does a hexagon have?",
+        "options": ["5", "6", "7", "8"],
+        "answer": 1
+      },
+      {
+        "q": "Which planet is closest to the Sun?",
+        "options": ["Venus", "Earth", "Mercury", "Mars"],
+        "answer": 2
+      },
+      {
+        "q": "What gas do plants take in to make their food?",
+        "options": ["Oxygen", "Nitrogen", "Carbon dioxide", "Helium"],
+        "answer": 2
+      },
+      {
+        "q": "How many minutes are in one full day?",
+        "options": ["720", "1200", "1440", "2400"],
+        "answer": 2
+      },
+      {
+        "q": "Which is the fastest land animal?",
+        "options": ["Cheetah", "Lion", "Horse", "Greyhound"],
+        "answer": 0
+      },
+      {
+        "q": "Which ocean is the largest?",
+        "options": ["Atlantic", "Indian", "Arctic", "Pacific"],
+        "answer": 3
+      },
+      {
+        "q": "How many strings does a standard guitar have?",
+        "options": ["4", "5", "6", "7"],
+        "answer": 2
+      },
+      {
+        "q": "What is the chemical symbol for gold?",
+        "options": ["Go", "Au", "Ag", "Gd"],
+        "answer": 1
+      },
+      {
+        "q": "How many players from one team are on a soccer field at kickoff?",
+        "options": ["9", "10", "11", "12"],
+        "answer": 2
+      },
+      {
+        "q": "Which shape has no corners at all?",
+        "options": ["Circle", "Triangle", "Square", "Pentagon"],
+        "answer": 0
+      }
+    ]
+  }
+}

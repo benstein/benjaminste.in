@@ -1,0 +1,156 @@
+{
+  "portraits": [
+    {
+      "key": "portrait-koh",
+      "file": "assets/portraits/koh.png"
+    },
+    {
+      "key": "portrait-kian",
+      "file": "assets/portraits/kian.png"
+    },
+    {
+      "key": "portrait-benc",
+      "file": "assets/portraits/benc.png"
+    },
+    {
+      "key": "portrait-kai",
+      "file": "assets/portraits/kai.png"
+    },
+    {
+      "key": "portrait-zubin",
+      "file": "assets/portraits/zubin.png"
+    },
+    {
+      "key": "portrait-xuan",
+      "file": "assets/portraits/xuan.png"
+    },
+    {
+      "key": "portrait-sammyl",
+      "file": "assets/portraits/sammyl.png"
+    },
+    {
+      "key": "portrait-soli",
+      "file": "assets/portraits/soli.png"
+    },
+    {
+      "key": "portrait-miles",
+      "file": "assets/portraits/miles.png"
+    },
+    {
+      "key": "portrait-sammys",
+      "file": "assets/portraits/sammys.png"
+    },
+    {
+      "key": "portrait-zeke",
+      "file": "assets/portraits/zeke.png"
+    },
+    {
+      "key": "portrait-mami",
+      "file": "assets/portraits/mami.png"
+    },
+    {
+      "key": "portrait-papi",
+      "file": "assets/portraits/papi.png"
+    },
+    {
+      "key": "portrait-gabi",
+      "file": "assets/portraits/gabi.png"
+    },
+    {
+      "key": "portrait-placeholder",
+      "file": "assets/portraits/placeholder.png"
+    }
+  ],
+  "npcSprites": [
+    {
+      "key": "npc-koh",
+      "file": "assets/sprites/npc-koh.png"
+    },
+    {
+      "key": "npc-kian",
+      "file": "assets/sprites/npc-kian.png"
+    },
+    {
+      "key": "npc-benc",
+      "file": "assets/sprites/npc-benc.png"
+    },
+    {
+      "key": "npc-kai",
+      "file": "assets/sprites/npc-kai.png"
+    },
+    {
+      "key": "npc-zubin",
+      "file": "assets/sprites/npc-zubin.png"
+    },
+    {
+      "key": "npc-xuan",
+      "file": "assets/sprites/npc-xuan.png"
+    },
+    {
+      "key": "npc-sammyl",
+      "file": "assets/sprites/npc-sammyl.png"
+    },
+    {
+      "key": "npc-soli",
+      "file": "assets/sprites/npc-soli.png"
+    },
+    {
+      "key": "npc-miles",
+      "file": "assets/sprites/npc-miles.png"
+    },
+    {
+      "key": "npc-sammys",
+      "file": "assets/sprites/npc-sammys.png"
+    },
+    {
+      "key": "npc-mami",
+      "file": "assets/sprites/npc-mami.png"
+    },
+    {
+      "key": "npc-papi",
+      "file": "assets/sprites/npc-papi.png"
+    },
+    {
+      "key": "npc-gabi",
+      "file": "assets/sprites/npc-gabi.png"
+    }
+  ],
+  "landmarks": [
+    {
+      "key": "landmark-phs",
+      "file": "assets/landmarks/phs.png"
+    },
+    {
+      "key": "landmark-pms",
+      "file": "assets/landmarks/pms.png"
+    },
+    {
+      "key": "landmark-park",
+      "file": "assets/landmarks/park.png"
+    },
+    {
+      "key": "landmark-pool",
+      "file": "assets/landmarks/pool.png"
+    },
+    {
+      "key": "landmark-beach",
+      "file": "assets/landmarks/beach.png"
+    },
+    {
+      "key": "landmark-havens",
+      "file": "assets/landmarks/havens.png"
+    },
+    {
+      "key": "landmark-wildwood",
+      "file": "assets/landmarks/wildwood.png"
+    },
+    {
+      "key": "landmark-skate",
+      "file": "assets/landmarks/skate.png"
+    },
+    {
+      "key": "landmark-witter",
+      "file": "assets/landmarks/witter.png"
+    }
+  ]
+}

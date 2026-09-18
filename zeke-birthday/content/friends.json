@@ -1,0 +1,212 @@
+[
+  {
+    "id": "koh",
+    "name": "Koh",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
+    "hue": 15,
+    "room": {
+      "floor": "wood",
+      "wallColor": "cream",
+      "props": ["bed", "desk", "chair", "table", "poster", "plant", "ball"]
+    },
+    "minigame": "zekle",
+    "lines": {
+      "greeting": ["Hey Zeke! [Koh greeting stub 1]", "[Koh greeting stub 2]"],
+      "beforeGame": ["[Koh before-game stub: sets up the zekle challenge]"],
+      "win": ["[Koh win stub: cheers Zeke on]", "Here, take a candle for your cake."],
+      "replay": ["[Koh replay stub: want another go?]"],
+      "locked": "[Koh locked stub: nobody is home yet.]",
+      "clue": "Next up: Kian's house."
+    }
+  },
+  {
+    "id": "kian",
+    "name": "Kian",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
+    "hue": 50,
+    "room": {
+      "floor": "carpet",
+      "wallColor": "blue",
+      "props": ["bed", "bookshelf", "lamp", "plant", "table", "poster", "trophy"]
+    },
+    "minigame": "crossword",
+    "lines": {
+      "greeting": ["Hey Zeke! [Kian greeting stub 1]", "[Kian greeting stub 2]"],
+      "beforeGame": ["[Kian before-game stub: sets up the crossword challenge]"],
+      "win": ["[Kian win stub: cheers Zeke on]", "Here, take a candle for your cake."],
+      "replay": ["[Kian replay stub: want another go?]"],
+      "locked": "[Kian locked stub: nobody is home yet.]",
+      "clue": "Next up: Ben's house on Parkside Dr."
+    }
+  },
+  {
+    "id": "benc",
+    "name": "Ben",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
+    "hue": 90,
+    "room": {
+      "floor": "tile",
+      "wallColor": "green",
+      "props": ["desk", "tv", "chair", "poster", "skateboard", "table", "plant"]
+    },
+    "minigame": "blaster",
+    "lines": {
+      "greeting": ["Hey Zeke! [Ben greeting stub 1]", "[Ben greeting stub 2]"],
+      "beforeGame": ["[Ben before-game stub: sets up the blaster challenge]"],
+      "win": ["[Ben win stub: cheers Zeke on]", "Here, take a candle for your cake."],
+      "replay": ["[Ben replay stub: want another go?]"],
+      "locked": "[Ben locked stub: nobody is home yet.]",
+      "clue": "Next up: Kai's house."
+    }
+  },
+  {
+    "id": "kai",
+    "name": "Kai",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
+    "hue": 125,
+    "room": {
+      "floor": "wood",
+      "wallColor": "grey",
+      "props": ["bed", "guitar", "chair", "table", "poster", "lamp", "ball"]
+    },
+    "minigame": "snake",
+    "lines": {
+      "greeting": ["Hey Zeke! [Kai greeting stub 1]", "[Kai greeting stub 2]"],
+      "beforeGame": ["[Kai before-game stub: sets up the snake challenge]"],
+      "win": ["[Kai win stub: cheers Zeke on]", "Here, take a candle for your cake."],
+      "replay": ["[Kai replay stub: want another go?]"],
+      "locked": "[Kai locked stub: nobody is home yet.]",
+      "clue": "Next up: Zubin's house on Grand Ave."
+    }
+  },
+  {
+    "id": "zubin",
+    "name": "Zubin",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
+    "hue": 160,
+    "room": {
+      "floor": "carpet",
+      "wallColor": "cream",
+      "props": ["desk", "bookshelf", "trophy", "lamp", "plant", "table", "poster"]
+    },
+    "minigame": "logic",
+    "lines": {
+      "greeting": ["Hey Zeke! [Zubin greeting stub 1]", "[Zubin greeting stub 2]"],
+      "beforeGame": ["[Zubin before-game stub: sets up the logic challenge]"],
+      "win": ["[Zubin win stub: cheers Zeke on]", "Here, take a candle for your cake."],
+      "replay": ["[Zubin replay stub: want another go?]"],
+      "locked": "[Zubin locked stub: nobody is home yet.]",
+      "clue": "Next up: Xuan's house on Lake Ave."
+    }
+  },
+  {
+    "id": "xuan",
+    "name": "Xuan",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
+    "hue": 200,
+    "room": {
+      "floor": "tile",
+      "wallColor": "blue",
+      "props": ["bed", "guitar", "poster", "plant", "tv", "bookshelf", "chair"]
+    },
+    "minigame": "rhythm",
+    "lines": {
+      "greeting": ["Hey Zeke! [Xuan greeting stub 1]", "[Xuan greeting stub 2]"],
+      "beforeGame": ["[Xuan before-game stub: sets up the rhythm challenge]"],
+      "win": ["[Xuan win stub: cheers Zeke on]", "Here, take a candle for your cake."],
+      "replay": ["[Xuan replay stub: want another go?]"],
+      "locked": "[Xuan locked stub: nobody is home yet.]",
+      "clue": "Next up: Sammy L's house on Nace Ave."
+    }
+  },
+  {
+    "id": "sammyl",
+    "name": "Sammy L",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
+    "hue": 235,
+    "room": {
+      "floor": "wood",
+      "wallColor": "green",
+      "props": ["desk", "chair", "tv", "ball", "table", "poster", "skateboard", "plant"]
+    },
+    "minigame": "sokoban",
+    "lines": {
+      "greeting": ["Hey Zeke! [Sammy L greeting stub 1]", "[Sammy L greeting stub 2]"],
+      "beforeGame": ["[Sammy L before-game stub: sets up the sokoban challenge]"],
+      "win": ["[Sammy L win stub: cheers Zeke on]", "Here, take a candle for your cake."],
+      "replay": ["[Sammy L replay stub: want another go?]"],
+      "locked": "[Sammy L locked stub: nobody is home yet.]",
+      "clue": "Next up: Soli's house on Nace Ave."
+    }
+  },
+  {
+    "id": "soli",
+    "name": "Soli",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
+    "hue": 270,
+    "room": {
+      "floor": "carpet",
+      "wallColor": "grey",
+      "props": ["bed", "bookshelf", "plant", "lamp", "poster", "table", "trophy"]
+    },
+    "minigame": "picross",
+    "lines": {
+      "greeting": ["Hey Zeke! [Soli greeting stub 1]", "[Soli greeting stub 2]"],
+      "beforeGame": ["[Soli before-game stub: sets up the picross challenge]"],
+      "win": ["[Soli win stub: cheers Zeke on]", "Here, take a candle for your cake."],
+      "replay": ["[Soli replay stub: want another go?]"],
+      "locked": "[Soli locked stub: nobody is home yet.]",
+      "clue": "Next up: Miles's house."
+    }
+  },
+  {
+    "id": "miles",
+    "name": "Miles",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
+    "hue": 305,
+    "room": {
+      "floor": "tile",
+      "wallColor": "cream",
+      "props": ["skateboard", "desk", "tv", "trophy", "chair", "poster", "ball", "lamp"]
+    },
+    "minigame": "platformer",
+    "lines": {
+      "greeting": ["Hey Zeke! [Miles greeting stub 1]", "[Miles greeting stub 2]"],
+      "beforeGame": ["[Miles before-game stub: sets up the platformer challenge]"],
+      "win": ["[Miles win stub: cheers Zeke on]", "Here, take a candle for your cake."],
+      "replay": ["[Miles replay stub: want another go?]"],
+      "locked": "[Miles locked stub: nobody is home yet.]",
+      "clue": "Next up: Sammy S's house on Manor Dr."
+    }
+  },
+  {
+    "id": "sammys",
+    "name": "Sammy S",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
+    "hue": 340,
+    "room": {
+      "floor": "wood",
+      "wallColor": "blue",
+      "props": ["bed", "table", "chair", "guitar", "ball", "poster"]
+    },
+    "minigame": "trivia",
+    "lines": {
+      "greeting": ["Hey Zeke! [Sammy S greeting stub 1]", "[Sammy S greeting stub 2]"],
+      "beforeGame": ["[Sammy S before-game stub: sets up the trivia challenge]"],
+      "win": ["[Sammy S win stub: cheers Zeke on]", "Here, take a candle for your cake."],
+      "replay": ["[Sammy S replay stub: want another go?]"],
+      "locked": "[Sammy S locked stub: nobody is home yet.]",
+      "clue": "That's everyone. Head home for the last surprise!"
+    }
+  }
+]
