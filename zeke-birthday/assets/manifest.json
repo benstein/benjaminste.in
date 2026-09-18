@@ -160,5 +160,15 @@
       "key": "landmark-witter",
       "file": "assets/landmarks/witter.png"
     }
+  ],
+  "petSits": [
+    {
+      "key": "npc-soup-sit",
+      "file": "assets/sprites/npc-soup-sit.png"
+    },
+    {
+      "key": "npc-salad-sit",
+      "file": "assets/sprites/npc-salad-sit.png"
+    }
   ]
 }
