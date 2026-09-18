@@ -113,6 +113,14 @@
     {
       "key": "npc-gabi",
       "file": "assets/sprites/npc-gabi.png"
+    },
+    {
+      "key": "npc-soup",
+      "file": "assets/sprites/npc-soup.png"
+    },
+    {
+      "key": "npc-salad",
+      "file": "assets/sprites/npc-salad.png"
     }
   ],
   "landmarks": [
