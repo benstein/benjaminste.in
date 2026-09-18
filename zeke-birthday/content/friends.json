@@ -23,8 +23,8 @@
   {
     "id": "kian",
     "name": "Kian",
-    "portrait": "placeholder",
-    "npcSprite": "placeholder",
+    "portrait": "generated",
+    "npcSprite": "generated",
     "hue": 50,
     "room": {
       "floor": "carpet",
@@ -86,8 +86,8 @@
   {
     "id": "zubin",
     "name": "Zubin",
-    "portrait": "placeholder",
-    "npcSprite": "placeholder",
+    "portrait": "generated",
+    "npcSprite": "generated",
     "hue": 160,
     "room": {
       "floor": "carpet",
@@ -107,8 +107,8 @@
   {
     "id": "xuan",
     "name": "Xuan",
-    "portrait": "placeholder",
-    "npcSprite": "placeholder",
+    "portrait": "generated",
+    "npcSprite": "generated",
     "hue": 200,
     "room": {
       "floor": "tile",
@@ -128,8 +128,8 @@
   {
     "id": "sammyl",
     "name": "Sammy L",
-    "portrait": "placeholder",
-    "npcSprite": "placeholder",
+    "portrait": "generated",
+    "npcSprite": "generated",
     "hue": 235,
     "room": {
       "floor": "wood",
@@ -149,8 +149,8 @@
   {
     "id": "soli",
     "name": "Soli",
-    "portrait": "placeholder",
-    "npcSprite": "placeholder",
+    "portrait": "generated",
+    "npcSprite": "generated",
     "hue": 270,
     "room": {
       "floor": "carpet",
@@ -170,8 +170,8 @@
   {
     "id": "miles",
     "name": "Miles",
-    "portrait": "placeholder",
-    "npcSprite": "placeholder",
+    "portrait": "generated",
+    "npcSprite": "generated",
     "hue": 305,
     "room": {
       "floor": "tile",
