@@ -32,7 +32,37 @@
       },
       "bossRef": {
         "attackName": "[Mami attack name stub]",
-        "taunt": "[Mami taunt stub]"
+        "taunt": "[Mami taunt stub]",
+        "vocabulary": [
+          {
+            "es": "estudiar",
+            "en": ["study"]
+          },
+          {
+            "es": "aprender",
+            "en": ["learn"]
+          },
+          {
+            "es": "leer",
+            "en": ["read"]
+          },
+          {
+            "es": "escribir",
+            "en": ["write"]
+          },
+          {
+            "es": "hablar",
+            "en": ["talk", "speak"]
+          },
+          {
+            "es": "practicar",
+            "en": ["practice", "practise"]
+          },
+          {
+            "es": "copiar",
+            "en": ["copy"]
+          }
+        ]
       }
     },
     {
