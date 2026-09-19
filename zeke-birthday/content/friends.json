@@ -65,8 +65,8 @@
   {
     "id": "kai",
     "name": "Kai",
-    "portrait": "placeholder",
-    "npcSprite": "placeholder",
+    "portrait": "generated",
+    "npcSprite": "generated",
     "hue": 125,
     "room": {
       "floor": "wood",
