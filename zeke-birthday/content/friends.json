@@ -2,8 +2,8 @@
   {
     "id": "koh",
     "name": "Koh",
-    "portrait": "placeholder",
-    "npcSprite": "placeholder",
+    "portrait": "generated",
+    "npcSprite": "generated",
     "hue": 15,
     "room": {
       "floor": "wood",
@@ -44,8 +44,8 @@
   {
     "id": "benc",
     "name": "Ben",
-    "portrait": "placeholder",
-    "npcSprite": "placeholder",
+    "portrait": "generated",
+    "npcSprite": "generated",
     "hue": 90,
     "room": {
       "floor": "tile",
@@ -191,8 +191,8 @@
   {
     "id": "sammys",
     "name": "Sammy S",
-    "portrait": "placeholder",
-    "npcSprite": "placeholder",
+    "portrait": "generated",
+    "npcSprite": "generated",
     "hue": 340,
     "room": {
       "floor": "wood",
