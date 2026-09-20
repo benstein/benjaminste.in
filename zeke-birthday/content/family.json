@@ -6,17 +6,23 @@
       "hue": 120,
       "lines": {
         "greeting": [
-          "[Gabi greeting stub 1: he got to the living room first]",
-          "[Gabi greeting stub 2: he is not handing over a candle for free]"
+          "Zeke. Ten candles. Not bad, for you.",
+          "I got here first, obviously, and no, you don't get my candle for free. You have to earn it."
         ],
-        "phaseIntro": ["[Gabi phase intro stub: he goes first and says why]"],
-        "phaseWin": ["[Gabi phase win stub: he admits Zeke got him]", "Fine. One candle. Take it."],
-        "phaseLose": ["[Gabi phase lose stub: he is enjoying this too much]"],
-        "afterFight": ["[Gabi after-fight stub: the cake is on the table, or a rematch?]"]
+        "phaseIntro": [
+          "Me first. Youngest goes first, that's the rule I just made.",
+          "Cake fight. Dodge my stuff, hit me with yours. Don't sell."
+        ],
+        "phaseWin": [
+          "Okay. Okay! You got me. That was low key kind of sigma.",
+          "Take the candle. Mami's next and she is NOT playing."
+        ],
+        "phaseLose": ["L. Massive L. You want to try that again or should I just keep the candle?"],
+        "afterFight": ["The cake's on the table. Or we run it back and I get my revenge?"]
       },
       "bossRef": {
-        "attackName": "[Gabi attack name stub]",
-        "taunt": "[Gabi taunt stub]"
+        "attackName": "Little Brother Energy",
+        "taunt": "Catch, birthday boy!"
       }
     },
     {

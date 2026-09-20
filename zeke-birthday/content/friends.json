@@ -12,12 +12,15 @@
     },
     "minigame": "zekle",
     "lines": {
-      "greeting": ["Hey Zeke! [Koh greeting stub 1]", "[Koh greeting stub 2]"],
-      "beforeGame": ["[Koh before-game stub: sets up the zekle challenge]"],
-      "win": ["[Koh win stub: cheers Zeke on]", "Here, take a candle for your cake."],
-      "replay": ["[Koh replay stub: want another go?]"],
-      "locked": "[Koh locked stub: nobody is home yet.]",
-      "clue": "Next up: Kian's house."
+      "greeting": [
+        "Zeke. My guy. Birthday sigma himself.",
+        "Koh's house is officially the first stop, so no pressure, but this run is being judged."
+      ],
+      "beforeGame": ["Five letters, six tries, three words. I've seen you type. Lock in."],
+      "win": ["Okay that was clean. You cooked, no cap.", "Here, take a candle for your cake."],
+      "replay": ["Run it back? Low key I want to see if that was luck."],
+      "locked": "Koh isn't home yet. He said something about a bagel.",
+      "clue": "Next up: Kian's house on Kingston Ave."
     }
   },
   {
@@ -33,11 +36,16 @@
     },
     "minigame": "crossword",
     "lines": {
-      "greeting": ["Hey Zeke! [Kian greeting stub 1]", "[Kian greeting stub 2]"],
-      "beforeGame": ["[Kian before-game stub: sets up the crossword challenge]"],
-      "win": ["[Kian win stub: cheers Zeke on]", "Here, take a candle for your cake."],
-      "replay": ["[Kian replay stub: want another go?]"],
-      "locked": "[Kian locked stub: nobody is home yet.]",
+      "greeting": [
+        "Zeke! You made it. That's a W already.",
+        "I built you a crossword. Seven by seven. It's giving newspaper, but for people with aura."
+      ],
+      "beforeGame": [
+        "Every word is something you know. If you don't know it, that's a you problem. Don't sell."
+      ],
+      "win": ["Bro filled the whole grid. Certified.", "Here, take a candle for your cake."],
+      "replay": ["Same puzzle, faster? Chat, is he going for the record?"],
+      "locked": "Kian's door is locked. Probably still writing clues.",
       "clue": "Next up: Ben's house on Parkside Dr."
     }
   },
@@ -54,12 +62,17 @@
     },
     "minigame": "blaster",
     "lines": {
-      "greeting": ["Hey Zeke! [Ben greeting stub 1]", "[Ben greeting stub 2]"],
-      "beforeGame": ["[Ben before-game stub: sets up the blaster challenge]"],
-      "win": ["[Ben win stub: cheers Zeke on]", "Here, take a candle for your cake."],
-      "replay": ["[Ben replay stub: want another go?]"],
-      "locked": "[Ben locked stub: nobody is home yet.]",
-      "clue": "Next up: Kai's house."
+      "greeting": [
+        "Yo Zeke. Happy birthday. I have prepared a threat.",
+        "Waves. Lots of them. You, one blaster. Very fair. Very balanced."
+      ],
+      "beforeGame": [
+        "Arrows move, space shoots. Don't crash out on wave three, everyone crashes out on wave three."
+      ],
+      "win": ["Every wave. He cleared every wave. I need a minute.", "Here, take a candle for your cake."],
+      "replay": ["Again? Bet. The waves have been humbled and they want revenge."],
+      "locked": "Ben's not home. The blaster is charging, allegedly.",
+      "clue": "Next up: Kai's house on Bowles Pl. If he says Towonga, just nod."
     }
   },
   {
@@ -75,11 +88,17 @@
     },
     "minigame": "snake",
     "lines": {
-      "greeting": ["Hey Zeke! [Kai greeting stub 1]", "[Kai greeting stub 2]"],
-      "beforeGame": ["[Kai before-game stub: sets up the snake challenge]"],
-      "win": ["[Kai win stub: cheers Zeke on]", "Here, take a candle for your cake."],
-      "replay": ["[Kai replay stub: want another go?]"],
-      "locked": "[Kai locked stub: nobody is home yet.]",
+      "greeting": [
+        "Times in Towonga, Zeke.",
+        "You know what that means. You've always known. Anyway, happy birthday."
+      ],
+      "beforeGame": ["Candle snake. Eat candles, grow, do not hit yourself. Simple game. Sigma game."],
+      "win": [
+        "Times in Towonga. Fr fr. That's the highest honor I give out.",
+        "Here, take a candle for your cake."
+      ],
+      "replay": ["One more? The snake said it's personal now."],
+      "locked": "Kai's out. The note on the door just says 'Towonga'.",
       "clue": "Next up: Zubin's house on Grand Ave."
     }
   },
@@ -96,11 +115,16 @@
     },
     "minigame": "logic",
     "lines": {
-      "greeting": ["Hey Zeke! [Zubin greeting stub 1]", "[Zubin greeting stub 2]"],
-      "beforeGame": ["[Zubin before-game stub: sets up the logic challenge]"],
-      "win": ["[Zubin win stub: cheers Zeke on]", "Here, take a candle for your cake."],
-      "replay": ["[Zubin replay stub: want another go?]"],
-      "locked": "[Zubin locked stub: nobody is home yet.]",
+      "greeting": [
+        "Zeke! Okay, listen, I threw a party and now I can't remember who brought what.",
+        "Four people, four times, four gifts. I have clues. I have a grid. I have a headache."
+      ],
+      "beforeGame": [
+        "Logic puzzle. Mark the X's first, the O's find themselves. Low key this is my favorite kind of game and I'm not sorry."
+      ],
+      "win": ["You solved my whole party. That's genuinely goated.", "Here, take a candle for your cake."],
+      "replay": ["Want the grid again? It's the same party. The guests are very patient."],
+      "locked": "Zubin isn't answering. Probably making another grid.",
       "clue": "Next up: Xuan's house on Lake Ave."
     }
   },
@@ -117,11 +141,14 @@
     },
     "minigame": "rhythm",
     "lines": {
-      "greeting": ["Hey Zeke! [Xuan greeting stub 1]", "[Xuan greeting stub 2]"],
-      "beforeGame": ["[Xuan before-game stub: sets up the rhythm challenge]"],
-      "win": ["[Xuan win stub: cheers Zeke on]", "Here, take a candle for your cake."],
-      "replay": ["[Xuan replay stub: want another go?]"],
-      "locked": "[Xuan locked stub: nobody is home yet.]",
+      "greeting": [
+        "Zeke! Birthday boy! Okay hear me out: rhythm game.",
+        "Four lanes, notes come down, you hit them on the beat. It's giving concert. It's giving aura."
+      ],
+      "beforeGame": ["Don't spam. Spamming is an L. Feel the beat and let it cook."],
+      "win": ["That was on beat. Like actually on beat. Ate.", "Here, take a candle for your cake."],
+      "replay": ["Play it again? Same song, and this time I'm watching your hands."],
+      "locked": "Xuan's not home. You can hear the beat from the street, though.",
       "clue": "Next up: Sammy L's house on Nace Ave."
     }
   },
@@ -138,11 +165,17 @@
     },
     "minigame": "sokoban",
     "lines": {
-      "greeting": ["Hey Zeke! [Sammy L greeting stub 1]", "[Sammy L greeting stub 2]"],
-      "beforeGame": ["[Sammy L before-game stub: sets up the sokoban challenge]"],
-      "win": ["[Sammy L win stub: cheers Zeke on]", "Here, take a candle for your cake."],
-      "replay": ["[Sammy L replay stub: want another go?]"],
-      "locked": "[Sammy L locked stub: nobody is home yet.]",
+      "greeting": [
+        "Zeke. Sammy L. We have a situation.",
+        "Pizza boxes. Everywhere. They need to go on the marks and I can only push, never pull. Classic."
+      ],
+      "beforeGame": ["Three rooms. If you push a box into a corner it's cooked, and so are you. Lock in."],
+      "win": [
+        "Every box on a mark. Zero boxes in corners. That's a sigma move.",
+        "Here, take a candle for your cake."
+      ],
+      "replay": ["More boxes? Bet. Somehow there are always more boxes."],
+      "locked": "Sammy L's door won't open. Something's pushed against it.",
       "clue": "Next up: Soli's house on Nace Ave."
     }
   },
@@ -159,11 +192,19 @@
     },
     "minigame": "picross",
     "lines": {
-      "greeting": ["Hey Zeke! [Soli greeting stub 1]", "[Soli greeting stub 2]"],
-      "beforeGame": ["[Soli before-game stub: sets up the picross challenge]"],
-      "win": ["[Soli win stub: cheers Zeke on]", "Here, take a candle for your cake."],
-      "replay": ["[Soli replay stub: want another go?]"],
-      "locked": "[Soli locked stub: nobody is home yet.]",
+      "greeting": [
+        "Zeke! Happy birthday! I have a picture for you, but it's hidden in numbers.",
+        "Picross. The numbers say how many squares get filled in each row and column. That's it. That's the whole game."
+      ],
+      "beforeGame": [
+        "Start with the big numbers, they give the most away. And don't guess. Guessing is mid."
+      ],
+      "win": [
+        "You found the picture! Low key I forgot what it was, so thanks.",
+        "Here, take a candle for your cake."
+      ],
+      "replay": ["Another board? I've got one that's diabolical."],
+      "locked": "Soli's not in. There's graph paper taped to the window.",
       "clue": "Next up: Miles's house."
     }
   },
@@ -180,11 +221,17 @@
     },
     "minigame": "platformer",
     "lines": {
-      "greeting": ["Hey Zeke! [Miles greeting stub 1]", "[Miles greeting stub 2]"],
-      "beforeGame": ["[Miles before-game stub: sets up the platformer challenge]"],
-      "win": ["[Miles win stub: cheers Zeke on]", "Here, take a candle for your cake."],
-      "replay": ["[Miles replay stub: want another go?]"],
-      "locked": "[Miles locked stub: nobody is home yet.]",
+      "greeting": [
+        "Zeke! Bro! Okay so the cake ingredients got scattered. Not my fault. Mostly.",
+        "They're all over the course. Jumps, pits, the usual. Grab enough and we're good."
+      ],
+      "beforeGame": ["Space jumps. Hold it longer to jump higher. The pits are real. Don't sell."],
+      "win": [
+        "He got the ingredients AND made it look easy. Aura through the roof.",
+        "Here, take a candle for your cake."
+      ],
+      "replay": ["Run it again? I moved nothing. The pits were already diabolical."],
+      "locked": "Miles isn't home. There's flour on the doormat.",
       "clue": "Next up: Sammy S's house on Manor Dr."
     }
   },
@@ -201,11 +248,17 @@
     },
     "minigame": "trivia",
     "lines": {
-      "greeting": ["Hey Zeke! [Sammy S greeting stub 1]", "[Sammy S greeting stub 2]"],
-      "beforeGame": ["[Sammy S before-game stub: sets up the trivia challenge]"],
-      "win": ["[Sammy S win stub: cheers Zeke on]", "Here, take a candle for your cake."],
-      "replay": ["[Sammy S replay stub: want another go?]"],
-      "locked": "[Sammy S locked stub: nobody is home yet.]",
+      "greeting": [
+        "Zeke! Last house! You lock in for ten houses and THEN I hit you with trivia.",
+        "Lightning round. Questions about you and the people who know you. Any wrong answers are on them, not me."
+      ],
+      "beforeGame": ["Read fast, pick fast. No overthinking. Overthinking is how you lose aura."],
+      "win": [
+        "He knows himself. Certified W. That's the last candle from us.",
+        "Here, take a candle for your cake."
+      ],
+      "replay": ["Again? Same questions. I'll pretend I don't know you've seen them."],
+      "locked": "Sammy S isn't home yet. He's writing questions about you, probably.",
       "clue": "That's everyone. Head home for the last surprise!"
     }
   }
