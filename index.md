@@ -7,7 +7,7 @@ title: Home
   <img src="{{ site.logo | relative_url }}" alt="Benjamin Stein" class="homepage-hero-avatar" />
   <div>
     <h1>Benjamin Stein</h1>
-    <p>President of <a href="https://piedmontmakers.org">Piedmont Makers</a>. Oakland, CA.</p>
+    <p>VP Software &amp; Data at <a href="https://inertia.com/">Inertia</a>, working to commercialize fusion energy. President of <a href="https://piedmontmakers.org">Piedmont Makers</a>. Oakland, CA.</p>
   </div>
 </div>
 
