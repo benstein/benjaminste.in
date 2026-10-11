@@ -30,15 +30,26 @@
       "name": "Mami",
       "hue": 340,
       "lines": {
-        "greeting": ["[Mami greeting stub 1: she has been waiting all day]"],
-        "phaseIntro": ["[Mami phase intro stub: her turn, and she means it]"],
-        "phaseWin": ["[Mami phase win stub: proud, and one candle lighter]"],
-        "phaseLose": ["[Mami phase lose stub: try that again, mijo]"],
-        "afterFight": ["[Mami after-fight stub: she is ready to light the candles]"]
+        "greeting": [
+          "Mijo. Come here. I have been standing next to this cake since four o'clock.",
+          "Ten candles already. And you walked the whole town for them, with the dogs, in those shoes."
+        ],
+        "phaseIntro": [
+          "My turn, mijo. And no, we are not fighting. Nobody throws anything in my living room.",
+          "I say a word in Spanish, you tell me what it means in English, and then you walk over here and you hug your mother. Seven times."
+        ],
+        "phaseWin": [
+          "Seven. Ay, mi amor, my heart.",
+          "Take the candle. Papi is next, and he is pretending he has no idea what is about to happen."
+        ],
+        "phaseLose": ["Otra vez, mijo. The words are not going anywhere and neither am I."],
+        "afterFight": [
+          "Everybody is here and the cake is on the table. Do you want to go around again, or should we light it?"
+        ]
       },
       "bossRef": {
-        "attackName": "[Mami attack name stub]",
-        "taunt": "[Mami taunt stub]",
+        "attackName": "Preguntas y Abrazos",
+        "taunt": "No shooting in my house, mijo. Just answer me.",
         "vocabulary": [
           {
             "es": "estudiar",
@@ -76,15 +87,26 @@
       "name": "Papi",
       "hue": 30,
       "lines": {
-        "greeting": ["[Papi greeting stub 1: he built the whole thing and is pretending he did not]"],
-        "phaseIntro": ["[Papi phase intro stub: last one standing]"],
-        "phaseWin": ["[Papi phase win stub: thirteen candles down, one to go]"],
-        "phaseLose": ["[Papi phase lose stub: he is not going easy]"],
-        "afterFight": ["[Papi after-fight stub: he offers one more round or the cake]"]
+        "greeting": [
+          "Hey bud. Happy birthday.",
+          "And I had nothing to do with any of this, by the way. The whole town, all ten houses, your friends waiting in them. No idea who would do that."
+        ],
+        "phaseIntro": [
+          "Alright. Last one. Me.",
+          "Soup! Salad! With me. Let's see what the birthday boy has got."
+        ],
+        "phaseWin": [
+          "That is thirteen candles, bud. Thirteen down, one to go.",
+          "Come here. Your mother and I have something to tell you."
+        ],
+        "phaseLose": ["Nope. Again. Going easy on you on your birthday would be insulting, and you know it."],
+        "afterFight": [
+          "The cake is on the table whenever you want it. Or one more round, if you want to beat me properly?"
+        ]
       },
       "bossRef": {
-        "attackName": "[Papi attack name stub]",
-        "taunt": "[Papi taunt stub]"
+        "attackName": "Peak Dad Energy",
+        "taunt": "Fourteen years of practice, bud. Mine, not yours."
       }
     }
   ],

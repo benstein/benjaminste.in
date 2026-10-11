@@ -255,32 +255,16 @@
         "lane": 0
       },
       {
-        "beat": 0.5,
+        "beat": 1,
         "lane": 1
       },
       {
-        "beat": 1,
-        "lane": 2
-      },
-      {
-        "beat": 1.5,
-        "lane": 3
-      },
-      {
         "beat": 2,
-        "lane": 3
-      },
-      {
-        "beat": 2.5,
         "lane": 2
       },
       {
         "beat": 3,
-        "lane": 1
-      },
-      {
-        "beat": 3.5,
-        "lane": 0
+        "lane": 3
       },
       {
         "beat": 4,
@@ -295,19 +279,19 @@
         "lane": 2
       },
       {
+        "beat": 5.5,
+        "lane": 3
+      },
+      {
         "beat": 6,
         "lane": 3
       },
       {
         "beat": 6.5,
-        "lane": 3
-      },
-      {
-        "beat": 7,
         "lane": 2
       },
       {
-        "beat": 7.5,
+        "beat": 7,
         "lane": 1
       },
       {
@@ -315,8 +299,8 @@
         "lane": 0
       },
       {
-        "beat": 8.5,
-        "lane": 0
+        "beat": 8,
+        "lane": 3
       },
       {
         "beat": 9,
@@ -328,62 +312,50 @@
       },
       {
         "beat": 10,
-        "lane": 3
-      },
-      {
-        "beat": 10.5,
-        "lane": 3
+        "lane": 0
       },
       {
         "beat": 11,
-        "lane": 2
-      },
-      {
-        "beat": 11.5,
-        "lane": 1
+        "lane": 3
       },
       {
         "beat": 12,
-        "lane": 0
-      },
-      {
-        "beat": 12.5,
-        "lane": 0
-      },
-      {
-        "beat": 13,
         "lane": 1
       },
       {
-        "beat": 14,
+        "beat": 12.5,
+        "lane": 1
+      },
+      {
+        "beat": 13,
         "lane": 2
       },
       {
-        "beat": 14.5,
+        "beat": 13.5,
+        "lane": 2
+      },
+      {
+        "beat": 14,
+        "lane": 0
+      },
+      {
+        "beat": 14,
         "lane": 3
       },
       {
         "beat": 15,
-        "lane": 3
-      },
-      {
-        "beat": 15.5,
-        "lane": 2
+        "lane": 0
       },
       {
         "beat": 16,
-        "lane": 1
-      },
-      {
-        "beat": 16.5,
         "lane": 0
       },
       {
         "beat": 17,
-        "lane": 0
+        "lane": 3
       },
       {
-        "beat": 17.5,
+        "beat": 18,
         "lane": 1
       },
       {
@@ -391,16 +363,8 @@
         "lane": 2
       },
       {
-        "beat": 18.5,
-        "lane": 3
-      },
-      {
         "beat": 19,
-        "lane": 3
-      },
-      {
-        "beat": 19.5,
-        "lane": 2
+        "lane": 0
       },
       {
         "beat": 20,
@@ -408,23 +372,27 @@
       },
       {
         "beat": 20.5,
-        "lane": 0
-      },
-      {
-        "beat": 21,
-        "lane": 0
-      },
-      {
-        "beat": 22,
-        "lane": 1
-      },
-      {
-        "beat": 22.5,
         "lane": 2
       },
       {
-        "beat": 23,
+        "beat": 21,
+        "lane": 1
+      },
+      {
+        "beat": 21.5,
+        "lane": 2
+      },
+      {
+        "beat": 22,
+        "lane": 0
+      },
+      {
+        "beat": 22.5,
         "lane": 3
+      },
+      {
+        "beat": 23,
+        "lane": 0
       },
       {
         "beat": 23.5,
@@ -432,19 +400,27 @@
       },
       {
         "beat": 24,
-        "lane": 2
+        "lane": 0
       },
       {
-        "beat": 24.5,
+        "beat": 24.25,
         "lane": 1
       },
       {
+        "beat": 24.5,
+        "lane": 2
+      },
+      {
+        "beat": 24.75,
+        "lane": 3
+      },
+      {
         "beat": 25,
-        "lane": 0
+        "lane": 3
       },
       {
         "beat": 25.5,
-        "lane": 0
+        "lane": 2
       },
       {
         "beat": 26,
@@ -452,42 +428,54 @@
       },
       {
         "beat": 26.5,
-        "lane": 2
+        "lane": 0
+      },
+      {
+        "beat": 27,
+        "lane": 0
       },
       {
         "beat": 27,
         "lane": 3
       },
       {
-        "beat": 27.5,
-        "lane": 3
-      },
-      {
         "beat": 28,
-        "lane": 2
+        "lane": 1
       },
       {
         "beat": 28.5,
-        "lane": 1
+        "lane": 2
       },
       {
         "beat": 29,
         "lane": 0
       },
       {
+        "beat": 29.5,
+        "lane": 3
+      },
+      {
         "beat": 30,
         "lane": 0
+      },
+      {
+        "beat": 30,
+        "lane": 3
       },
       {
         "beat": 30.5,
         "lane": 1
       },
       {
-        "beat": 31,
+        "beat": 30.5,
         "lane": 2
       },
       {
-        "beat": 31.5,
+        "beat": 31,
+        "lane": 0
+      },
+      {
+        "beat": 31,
         "lane": 3
       }
     ]
@@ -521,16 +509,16 @@
     "level": [
       "....................................................................................................",
       "....................................................................................................",
-      "..............c...........................c................c.................c......................",
+      "..............................c.....................c...............................................",
       "....................................................................................................",
-      ".............---.........................---..............---...............---.....................",
-      ".........c...............c..........c.................c.................c................c..........",
-      "...............................c.................c.................c.................c..............",
-      "........---.............---........---...............---...............---..............---.........",
+      ".............................---...................---..............................................",
+      "..........c...............c...........c.........c......................................c............",
+      "................c.................c.........c................c.......c......c......c................",
+      ".........---.............---.........---.......---....................................---...........",
       "....................................................................................................",
-      "..S...^^............^^^....^..........^^^..^............^^^...^...........^^^..^^..........^^^...F..",
-      "############....##############....##############....##############....##############....############",
-      "############....##############....##############....##############....##############....############"
+      "..S...^^.............^^^...^.....................^^^...^....................................^^^..F..",
+      "##############....##############....######....#############....####....###....###....###############",
+      "##############....##############....######....#############....####....###....###....###############"
     ]
   },
   "trivia": {
@@ -539,73 +527,73 @@
     "secondsPerQuestion": 8,
     "questions": [
       {
-        "q": "How many days are in a leap year?",
-        "options": ["364", "365", "366", "367"],
-        "answer": 2
+        "q": "Who is the only person alive who calls you Zekiepoo?",
+        "options": ["Koh", "Sammy L", "Kian", "Gabi"],
+        "answer": 1
       },
       {
-        "q": "Which is the largest planet in our solar system?",
-        "options": ["Jupiter", "Saturn", "Neptune", "Earth"],
+        "q": "Whose beach party ended with sand crabs in Zubin's swim trunks?",
+        "options": ["Kian's", "Kai's", "Koh's", "Miles's"],
         "answer": 0
       },
       {
-        "q": "Which is the only mammal that can truly fly?",
-        "options": ["Owl", "Flying squirrel", "Sugar glider", "Bat"],
+        "q": "Be honest, it's your birthday. Who put those crabs in there?",
+        "options": ["Gabi did", "Nobody knows", "You did", "They crawled in"],
+        "answer": 2
+      },
+      {
+        "q": "Kai has greeted you the same way for years. What does he say?",
+        "options": ["Lock in", "No cap", "Mad respect", "Times in Towonga"],
         "answer": 3
       },
       {
-        "q": "What do you call a group of wolves?",
-        "options": ["A herd", "A pack", "A school", "A flock"],
-        "answer": 1
+        "q": "Which one of your friends built you a seven by seven crossword?",
+        "options": ["Zubin", "Soli", "Koh", "Kian"],
+        "answer": 3
       },
       {
-        "q": "How many sides does a hexagon have?",
-        "options": ["5", "6", "7", "8"],
-        "answer": 1
-      },
-      {
-        "q": "Which planet is closest to the Sun?",
-        "options": ["Venus", "Earth", "Mercury", "Mars"],
-        "answer": 2
-      },
-      {
-        "q": "What gas do plants take in to make their food?",
-        "options": ["Oxygen", "Nitrogen", "Carbon dioxide", "Helium"],
-        "answer": 2
-      },
-      {
-        "q": "How many minutes are in one full day?",
-        "options": ["720", "1200", "1440", "2400"],
-        "answer": 2
-      },
-      {
-        "q": "Which is the fastest land animal?",
-        "options": ["Cheetah", "Lion", "Horse", "Greyhound"],
+        "q": "Whose room was full of pizza boxes you could push but never pull?",
+        "options": ["Sammy L", "Sammy S", "Ben", "Miles"],
         "answer": 0
       },
       {
-        "q": "Which ocean is the largest?",
-        "options": ["Atlantic", "Indian", "Arctic", "Pacific"],
-        "answer": 3
-      },
-      {
-        "q": "How many strings does a standard guitar have?",
-        "options": ["4", "5", "6", "7"],
+        "q": "Who scattered the cake ingredients across a course full of pits?",
+        "options": ["Xuan", "Kai", "Miles", "Koh"],
         "answer": 2
       },
       {
-        "q": "What is the chemical symbol for gold?",
-        "options": ["Go", "Au", "Ag", "Gd"],
+        "q": "Name both of the dogs that followed you around town all day.",
+        "options": ["Salad and Sandwich", "Soup and Salad", "Soup and Spoon", "Soup and Taco"],
         "answer": 1
       },
       {
-        "q": "How many players from one team are on a soccer field at kickoff?",
-        "options": ["9", "10", "11", "12"],
+        "q": "How many candles does the cake need tonight?",
+        "options": ["12", "13", "14", "15"],
         "answer": 2
       },
       {
-        "q": "Which shape has no corners at all?",
-        "options": ["Circle", "Triangle", "Square", "Pentagon"],
+        "q": "Who is your little brother, the one who claims he got everywhere first?",
+        "options": ["Gabi", "Kian", "Soup", "Miles"],
+        "answer": 0
+      },
+      {
+        "q": "Which language does Mami switch into when she really means it?",
+        "options": ["Portuguese", "French", "Spanish", "Italian"],
+        "answer": 2
+      },
+      {
+        "q": "Which street do you walk down to get to Kian's house?",
+        "options": ["Grand Ave", "Kingston Ave", "Lake Ave", "Manor Dr"],
+        "answer": 1
+      },
+      {
+        "q": "How many houses did you get through before you knocked on this one?",
+        "options": ["Eight", "Nine", "Ten", "Eleven"],
+        "answer": 1
+      },
+      {
+        "q": "Who told you the waves had been humbled and wanted revenge?",
+        "options": ["Ben", "Koh", "Xuan", "Soli"],
         "answer": 0
       }
     ]

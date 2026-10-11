@@ -17,7 +17,11 @@
         "Koh's house is officially the first stop, so no pressure, but this run is being judged."
       ],
       "beforeGame": ["Five letters, six tries, three words. I've seen you type. Lock in."],
-      "win": ["Okay that was clean. You cooked, no cap.", "Here, take a candle for your cake."],
+      "win": [
+        "Okay that was clean. You cooked, no cap.",
+        "Candle one of ten. I'm the scorekeeper and I'm logging it. Take it."
+      ],
+      "lose": ["That's a reset, not an L. The judges are lenient on birthdays."],
       "replay": ["Run it back? Low key I want to see if that was luck."],
       "locked": "Koh isn't home yet. He said something about a bagel.",
       "clue": "Next up: Kian's house on Kingston Ave."
@@ -38,12 +42,17 @@
     "lines": {
       "greeting": [
         "Zeke! You made it. That's a W already.",
+        "My mom is STILL talking about my beach party. The crabs. Zubin's trunks. Zubin doing the little dance all the way to the water.",
         "I built you a crossword. Seven by seven. It's giving newspaper, but for people with aura."
       ],
       "beforeGame": [
         "Every word is something you know. If you don't know it, that's a you problem. Don't sell."
       ],
-      "win": ["Bro filled the whole grid. Certified.", "Here, take a candle for your cake."],
+      "win": [
+        "Bro filled the whole grid. Certified.",
+        "Candle's yours. Across AND down, no help. Put it on the cake."
+      ],
+      "lose": ["The grid's not going anywhere. Come back for it when you want."],
       "replay": ["Same puzzle, faster? Chat, is he going for the record?"],
       "locked": "Kian's door is locked. Probably still writing clues.",
       "clue": "Next up: Ben's house on Parkside Dr."
@@ -69,7 +78,11 @@
       "beforeGame": [
         "Arrows move, space shoots. Don't crash out on wave three, everyone crashes out on wave three."
       ],
-      "win": ["Every wave. He cleared every wave. I need a minute.", "Here, take a candle for your cake."],
+      "win": [
+        "Every wave. He cleared every wave. I need a minute.",
+        "Take a candle. It's from the waves. They're not happy about it."
+      ],
+      "lose": ["The wave got you. The wave gets everyone. I'm on your side here."],
       "replay": ["Again? Bet. The waves have been humbled and they want revenge."],
       "locked": "Ben's not home. The blaster is charging, allegedly.",
       "clue": "Next up: Kai's house on Bowles Pl. If he says Towonga, just nod."
@@ -95,8 +108,9 @@
       "beforeGame": ["Candle snake. Eat candles, grow, do not hit yourself. Simple game. Sigma game."],
       "win": [
         "Times in Towonga. Fr fr. That's the highest honor I give out.",
-        "Here, take a candle for your cake."
+        "Candle. Towonga rules: it does not get lit until the cake."
       ],
+      "lose": ["Times in Towonga, Zeke. Counts double when it goes badly."],
       "replay": ["One more? The snake said it's personal now."],
       "locked": "Kai's out. The note on the door just says 'Towonga'.",
       "clue": "Next up: Zubin's house on Grand Ave."
@@ -116,13 +130,18 @@
     "minigame": "logic",
     "lines": {
       "greeting": [
-        "Zeke! Okay, listen, I threw a party and now I can't remember who brought what.",
+        "Zeke! Happy birthday. We are not talking about the beach. Not the crabs, not the trunks, none of it.",
+        "Okay, listen. I threw a party of my own and now I can't remember who brought what.",
         "Four people, four times, four gifts. I have clues. I have a grid. I have a headache."
       ],
       "beforeGame": [
         "Logic puzzle. Mark the X's first, the O's find themselves. Low key this is my favorite kind of game and I'm not sorry."
       ],
-      "win": ["You solved my whole party. That's genuinely goated.", "Here, take a candle for your cake."],
+      "win": [
+        "You solved my whole party. That's goated behavior, no notes.",
+        "Candle. On the cake please. Not in anybody's trunks."
+      ],
+      "lose": ["My clues, my fault. Come back and I'll be nicer about it."],
       "replay": ["Want the grid again? It's the same party. The guests are very patient."],
       "locked": "Zubin isn't answering. Probably making another grid.",
       "clue": "Next up: Xuan's house on Lake Ave."
@@ -146,7 +165,11 @@
         "Four lanes, notes come down, you hit them on the beat. It's giving concert. It's giving aura."
       ],
       "beforeGame": ["Don't spam. Spamming is an L. Feel the beat and let it cook."],
-      "win": ["That was on beat. Like actually on beat. Ate.", "Here, take a candle for your cake."],
+      "win": [
+        "That was on beat. Like actually on beat. Ate.",
+        "Here's your candle. Hold it up like a lighter, you earned it."
+      ],
+      "lose": ["Off beat happens. Shake your hands out, run it back whenever."],
       "replay": ["Play it again? Same song, and this time I'm watching your hands."],
       "locked": "Xuan's not home. You can hear the beat from the street, though.",
       "clue": "Next up: Sammy L's house on Nace Ave."
@@ -166,15 +189,18 @@
     "minigame": "sokoban",
     "lines": {
       "greeting": [
-        "Zeke. Sammy L. We have a situation.",
+        "Zekiepoo. Sammy L. We have a situation.",
         "Pizza boxes. Everywhere. They need to go on the marks and I can only push, never pull. Classic."
       ],
-      "beforeGame": ["Three rooms. If you push a box into a corner it's cooked, and so are you. Lock in."],
+      "beforeGame": [
+        "Three rooms, Zekiepoo. If you push a box into a corner it's cooked, and so are you. Lock in."
+      ],
       "win": [
         "Every box on a mark. Zero boxes in corners. That's a sigma move.",
-        "Here, take a candle for your cake."
+        "Candle, Zekiepoo. I pushed it over here myself."
       ],
-      "replay": ["More boxes? Bet. Somehow there are always more boxes."],
+      "lose": ["Box in the corner, Zekiepoo. That is a weekly event for me."],
+      "replay": ["More boxes, Zekiepoo? Bet. Somehow there are always more boxes."],
       "locked": "Sammy L's door won't open. Something's pushed against it.",
       "clue": "Next up: Soli's house on Nace Ave."
     }
@@ -201,8 +227,9 @@
       ],
       "win": [
         "You found the picture! Low key I forgot what it was, so thanks.",
-        "Here, take a candle for your cake."
+        "Candle for you. I shaded in every square of the box it came in."
       ],
+      "lose": ["It's okay! The picture will still be there, it's very patient."],
       "replay": ["Another board? I've got one that's diabolical."],
       "locked": "Soli's not in. There's graph paper taped to the window.",
       "clue": "Next up: Miles's house."
@@ -228,8 +255,9 @@
       "beforeGame": ["Space jumps. Hold it longer to jump higher. The pits are real. Don't sell."],
       "win": [
         "He got the ingredients AND made it look easy. Aura through the roof.",
-        "Here, take a candle for your cake."
+        "Candle's yours, and the cake is starting to look like a real cake."
       ],
+      "lose": ["The pit ate you. The pit eats everyone. Ingredients are still out there."],
       "replay": ["Run it again? I moved nothing. The pits were already diabolical."],
       "locked": "Miles isn't home. There's flour on the doormat.",
       "clue": "Next up: Sammy S's house on Manor Dr."
@@ -255,8 +283,9 @@
       "beforeGame": ["Read fast, pick fast. No overthinking. Overthinking is how you lose aura."],
       "win": [
         "He knows himself. Certified W. That's the last candle from us.",
-        "Here, take a candle for your cake."
+        "Candle ten. That's all of us, every house, every game."
       ],
+      "lose": ["That was the clock, not you. You know this stuff, come back."],
       "replay": ["Again? Same questions. I'll pretend I don't know you've seen them."],
       "locked": "Sammy S isn't home yet. He's writing questions about you, probably.",
       "clue": "That's everyone. Head home for the last surprise!"
