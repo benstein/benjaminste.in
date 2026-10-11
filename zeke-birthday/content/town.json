@@ -1287,20 +1287,20 @@
         "price": 1,
         "items": [
           {
-            "name": "Nerds Gummy Clusters",
-            "line": "Nerds Gummy Clusters. Crunchy on the outside, gummy on the inside. That counts as breakfast."
+            "name": "Candy",
+            "line": "Nerds Gummy Clusters, M&M's and a Reese's. Crunchy, chocolate, peanut butter. That counts as breakfast."
           },
           {
-            "name": "Corndog",
-            "line": "A corndog from the hot case. It's been turning since this morning. Perfect."
+            "name": "Ramen",
+            "line": "A cup of instant ramen. Zeke will burn his tongue on it at home, like every time."
           },
           {
-            "name": "M&M's",
-            "line": "M&M's. Peanut. Obviously."
+            "name": "Soda",
+            "line": "A soda from the back of the cooler, where they're coldest."
           },
           {
-            "name": "Reese's",
-            "line": "Reese's. Two cups: one for now, one for in a minute."
+            "name": "Corn Dogs",
+            "line": "Corn dogs from the hot case. Not for Zeke. Soup and Salad have been staring at it since the door opened."
           }
         ],
         "declined": "Card declined. Six hundred twenty-one candies, and the card has finally had enough."
@@ -2352,7 +2352,7 @@
           "once": true,
           "sound": "squeak",
           "lines": [
-            "A coyote, behind the coop. It is not looking at Zeke. It is looking at Soup and Salad the way Zeke looks at the corndog case."
+            "A coyote, behind the coop. It is not looking at Zeke. It is looking at Soup and Salad the way Zeke looks at a bag of Nerds Gummy Clusters."
           ]
         },
         {

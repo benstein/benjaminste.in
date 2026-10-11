@@ -522,7 +522,7 @@
     ]
   },
   "trivia": {
-    "askCount": 10,
+    "askCount": 8,
     "lives": 3,
     "secondsPerQuestion": 8,
     "questions": [
@@ -537,49 +537,14 @@
         "answer": 2
       },
       {
-        "q": "Which one of your friends built you a seven by seven crossword?",
-        "options": ["Zubin", "Soli", "Koh", "Kian"],
-        "answer": 3
-      },
-      {
-        "q": "Whose room was full of pizza boxes you could push but never pull?",
-        "options": ["Sammy L", "Sammy S", "Ben", "Miles"],
-        "answer": 0
-      },
-      {
-        "q": "Who scattered the cake ingredients across a course full of pits?",
-        "options": ["Xuan", "Kai", "Miles", "Koh"],
+        "q": "What is Soup's full name?",
+        "options": ["Soup", "Chicken Noodle Soup", "Assaf Lotan Matzah Ball Soup", "Rachel Vogelstein Soup"],
         "answer": 2
       },
       {
-        "q": "Name both of the dogs that followed you around town all day.",
-        "options": ["Salad and Sandwich", "Soup and Salad", "Soup and Spoon", "Soup and Taco"],
-        "answer": 1
-      },
-      {
-        "q": "How many candles does the cake need tonight?",
-        "options": ["12", "13", "14", "15"],
+        "q": "How many grams is a kilogram?",
+        "options": ["10", "100", "1,000", "100,000"],
         "answer": 2
-      },
-      {
-        "q": "Which language does Mami switch into when she really means it?",
-        "options": ["Portuguese", "French", "Spanish", "Italian"],
-        "answer": 2
-      },
-      {
-        "q": "Which street do you walk down to get to Kian's house?",
-        "options": ["Grand Ave", "Kingston Ave", "Lake Ave", "Manor Dr"],
-        "answer": 1
-      },
-      {
-        "q": "How many houses did you get through before you knocked on this one?",
-        "options": ["Eight", "Nine", "Ten", "Eleven"],
-        "answer": 1
-      },
-      {
-        "q": "Who told you the waves had been humbled and wanted revenge?",
-        "options": ["Ben", "Koh", "Xuan", "Soli"],
-        "answer": 0
       },
       {
         "q": "Who is your all-time favorite teacher?",
@@ -590,6 +555,36 @@
         "q": "What was your Bar Mitzvah portion?",
         "options": ["Bereshit", "Bo", "Behar", "Bamidbar"],
         "answer": 2
+      },
+      {
+        "q": "In Dungeon Crawler Carl, what breed of cat is Princess Donut?",
+        "options": ["Maine Coon", "Persian", "Siamese", "Ragdoll"],
+        "answer": 1
+      },
+      {
+        "q": "In Brooklyn Nine-Nine, what is the name of Captain Holt's dog?",
+        "options": ["Cheddar", "Gouda", "Brie", "Kevin"],
+        "answer": 0
+      },
+      {
+        "q": "Which of these players was on the 2025-26 Golden State Warriors?",
+        "options": ["Jimmy Butler", "Klay Thompson", "Andrew Wiggins", "Jordan Poole"],
+        "answer": 0
+      },
+      {
+        "q": "What should you NEVER say to Mami in Spanish?",
+        "options": [
+          "Te quiero mucho, Mami",
+          "Eres la mejor",
+          "Gracias por todo",
+          "¡No mames, pinche puta madre!"
+        ],
+        "answer": 3
+      },
+      {
+        "q": "Who does NOT work at Lakeshow?",
+        "options": ["Joey", "Darne", "Javon", "John Pork"],
+        "answer": 3
       }
     ]
   }
