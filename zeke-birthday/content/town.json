@@ -1394,28 +1394,8 @@
       "prompt": "shoot",
       "talks": [
         {
-          "when": {
-            "notFlags": ["hoop:1"]
-          },
-          "sets": ["hoop:1"],
-          "sound": "thud",
-          "lines": ["Zeke shoots from the top of the cul-de-sac. Swish. Soup barks like he made it himself."]
-        },
-        {
-          "when": {
-            "flags": ["hoop:1"],
-            "notFlags": ["hoop:2"]
-          },
-          "sets": ["hoop:2"],
-          "sound": "thud",
-          "lines": [
-            "Off the rim. The ball rolls all the way down Calvert Court, and Salad chases it and does not bring it back."
-          ]
-        },
-        {
-          "clears": ["hoop:1", "hoop:2"],
-          "sound": "thud",
-          "lines": ["Zeke banks one in off the backboard. Nobody saw it. It still counts."]
+          "lines": [],
+          "game": "freethrow"
         }
       ],
       "source": "Papi, 2026-10-11: the old cul-de-sac where Calvert Court's three road sections meet"

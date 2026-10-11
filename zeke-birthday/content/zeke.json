@@ -532,19 +532,9 @@
         "answer": 3
       },
       {
-        "q": "Whose beach party ended with sand crabs in Zubin's swim trunks?",
-        "options": ["Kian's", "Kai's", "Koh's", "Miles's"],
-        "answer": 0
-      },
-      {
-        "q": "Be honest, it's your birthday. Who put those crabs in there?",
-        "options": ["Gabi did", "Nobody knows", "You did", "They crawled in"],
+        "q": "Who put sand crabs in Zubin's pants?",
+        "options": ["Gabi", "Kian", "You did", "They crawled in on their own"],
         "answer": 2
-      },
-      {
-        "q": "Kai has greeted you the same way for years. What does he say?",
-        "options": ["Lock in", "No cap", "Mad respect", "Times in Towonga"],
-        "answer": 3
       },
       {
         "q": "Which one of your friends built you a seven by seven crossword?",
@@ -570,11 +560,6 @@
         "q": "How many candles does the cake need tonight?",
         "options": ["12", "13", "14", "15"],
         "answer": 2
-      },
-      {
-        "q": "Who is your little brother, the one who claims he got everywhere first?",
-        "options": ["Gabi", "Kian", "Soup", "Miles"],
-        "answer": 0
       },
       {
         "q": "Which language does Mami switch into when she really means it?",

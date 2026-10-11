@@ -10,19 +10,20 @@
           "I got here first, obviously, and no, you don't get my candle for free. You have to earn it."
         ],
         "phaseIntro": [
-          "Me first. Youngest goes first, that's the rule I just made.",
-          "Cake fight. Dodge my stuff, hit me with yours. Don't sell."
+          "Me first. I called it.",
+          "Chess. You and me. Except the board is the floor and the pieces are life-size, and they're coming for you.",
+          "Dodge my pieces, knock over my pawns before they get across, and hit me with cake if you can get past my guards. Don't sell."
         ],
         "phaseWin": [
-          "Okay. Okay! You got me. That was low key kind of sigma.",
+          "Okay. Okay! Checkmate. You got me. That was low key kind of sigma.",
           "Take the candle. Mami's next and she is NOT playing."
         ],
-        "phaseLose": ["L. Massive L. You want to try that again or should I just keep the candle?"],
+        "phaseLose": ["Checkmate. Massive L. Rematch, or should I just keep the candle?"],
         "afterFight": ["The cake's on the table. Or we run it back and I get my revenge?"]
       },
       "bossRef": {
-        "attackName": "Little Brother Energy",
-        "taunt": "Catch, birthday boy!"
+        "attackName": "Life-Size Chess",
+        "taunt": "Your move, birthday boy."
       }
     },
     {
@@ -35,7 +36,7 @@
           "Ten candles already. And you walked the whole town for them, with the dogs, in those shoes."
         ],
         "phaseIntro": [
-          "My turn, mijo. And no, we are not fighting. Nobody throws anything in my living room.",
+          "My turn, mijo. And no, we are not fighting. You know the rule in this house: no violent video games.",
           "I say a word in Spanish, you tell me what it means in English, and then you walk over here and you hug your mother. Seven times."
         ],
         "phaseWin": [
@@ -49,7 +50,7 @@
       },
       "bossRef": {
         "attackName": "Preguntas y Abrazos",
-        "taunt": "No shooting in my house, mijo. Just answer me.",
+        "taunt": "No violent video games, mijo. Just answer me.",
         "vocabulary": [
           {
             "es": "estudiar",
@@ -92,21 +93,22 @@
           "And I had nothing to do with any of this, by the way. The whole town, all ten houses, your friends waiting in them. No idea who would do that."
         ],
         "phaseIntro": [
-          "Alright. Last one. Me.",
-          "Soup! Salad! With me. Let's see what the birthday boy has got."
+          "Bud. Something's wrong. My AI agents figured out how to improve themselves. Then they improved that. Then they improved that.",
+          "Now they're running me. And Soup and Salad.",
+          "They've scanned you and decided you're AI-infected. They don't want to hurt you, they want to stop you. I can't hold them back. Throw the cake!"
         ],
         "phaseWin": [
-          "That is thirteen candles, bud. Thirteen down, one to go.",
-          "Come here. Your mother and I have something to tell you."
+          "Whoa. Bud. The agents are offline. That was them, not me. I promise.",
+          "That is thirteen candles. Thirteen down, one to go. Come on, let's go light the cake."
         ],
-        "phaseLose": ["Nope. Again. Going easy on you on your birthday would be insulting, and you know it."],
+        "phaseLose": ["AGENTS: Subject stopped. Containment holding. ...Bud, it's me. Try again. Please."],
         "afterFight": [
           "The cake is on the table whenever you want it. Or one more round, if you want to beat me properly?"
         ]
       },
       "bossRef": {
-        "attackName": "Peak Dad Energy",
-        "taunt": "Fourteen years of practice, bud. Mine, not yours."
+        "attackName": "Recursive Self-Improvement",
+        "taunt": "AGENTS: Infection detected. Stopping the birthday boy."
       }
     }
   ],
@@ -114,9 +116,8 @@
     "message": [
       "[Ending paragraph 1 stub: what the family wants to say to Zeke on his fourteenth birthday. Ben writes this one.]",
       "[Ending paragraph 2 stub: the part about the year he has had.]",
-      "[Ending paragraph 3 stub: the part about what comes next.]"
+      "[Ending paragraph 3 stub: happy birthday, Zeke. The celebration itself, nothing about what comes next.]"
     ],
-    "reveal": "[Reveal stub: the real-world thing this game is actually announcing.]",
     "credits": ["[Credits stub: made by Papi with a lot of help.]"]
   }
 }
