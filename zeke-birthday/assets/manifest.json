@@ -159,6 +159,66 @@
     {
       "key": "landmark-witter",
       "file": "assets/landmarks/witter.png"
+    },
+    {
+      "key": "landmark-mulberrys",
+      "file": "assets/landmarks/mulberrys.png"
+    },
+    {
+      "key": "landmark-cityhall",
+      "file": "assets/landmarks/cityhall.png"
+    },
+    {
+      "key": "landmark-police",
+      "file": "assets/landmarks/police.png"
+    },
+    {
+      "key": "landmark-church",
+      "file": "assets/landmarks/church.png"
+    },
+    {
+      "key": "landmark-vetshall",
+      "file": "assets/landmarks/vetshall.png"
+    },
+    {
+      "key": "landmark-communityhall",
+      "file": "assets/landmarks/communityhall.png"
+    },
+    {
+      "key": "landmark-rec",
+      "file": "assets/landmarks/rec.png"
+    },
+    {
+      "key": "landmark-pca",
+      "file": "assets/landmarks/pca.png"
+    },
+    {
+      "key": "landmark-patch",
+      "file": "assets/landmarks/patch.png"
+    },
+    {
+      "key": "landmark-swings",
+      "file": "assets/landmarks/swings.png"
+    },
+    {
+      "key": "landmark-lionhouse",
+      "file": "assets/landmarks/lionhouse.png"
+    },
+    {
+      "key": "landmark-brickhouse",
+      "file": "assets/landmarks/brickhouse.png"
+    },
+    {
+      "key": "landmark-quarry",
+      "file": "assets/landmarks/quarry.png"
+    },
+    {
+      "key": "landmark-ctrain",
+      "file": "assets/landmarks/ctrain.png"
+    },
+    {
+      "key": "landmark-gasstation",
+      "file": "assets/landmarks/gasstation.png"
     }
   ],
   "petSits": [

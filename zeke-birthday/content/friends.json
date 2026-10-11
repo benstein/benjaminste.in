@@ -161,7 +161,9 @@
     "minigame": "rhythm",
     "lines": {
       "greeting": [
-        "Zeke! Birthday boy! Okay hear me out: rhythm game.",
+        "Zeke! Birthday boy! Wait. Are Soup and Salad with you? Bro, I'm allergic. Like, my eyes close allergic.",
+        "Can they wait outside? I love them. From across the street.",
+        "Okay, hear me out: rhythm game.",
         "Four lanes, notes come down, you hit them on the beat. It's giving concert. It's giving aura."
       ],
       "beforeGame": ["Don't spam. Spamming is an L. Feel the beat and let it cook."],
@@ -249,7 +251,9 @@
     "minigame": "platformer",
     "lines": {
       "greeting": [
-        "Zeke! Bro! Okay so the cake ingredients got scattered. Not my fault. Mostly.",
+        "Wait. WAIT. Zeke is inside my house? You've never been in here. Not once. This is historic.",
+        "Take it in. That's the couch. Yes, it's a real couch. That's the kitchen, where the snacks live. Don't open the closet.",
+        "Okay, focus. The cake ingredients got scattered. Not my fault. Mostly.",
         "They're all over the course. Jumps, pits, the usual. Grab enough and we're good."
       ],
       "beforeGame": ["Space jumps. Hold it longer to jump higher. The pits are real. Don't sell."],
