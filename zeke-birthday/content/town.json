@@ -398,9 +398,11 @@
       "spots": [
         {
           "at": {
-            "landmark": "havens",
-            "dx": 3,
-            "dy": 1
+            "tile": {
+              "x": 182,
+              "y": 178
+            },
+            "exact": true
           }
         }
       ],
@@ -825,9 +827,11 @@
       "spots": [
         {
           "at": {
-            "landmark": "police",
-            "dx": 4,
-            "dy": -1
+            "tile": {
+              "x": 204,
+              "y": 178
+            },
+            "exact": true
           }
         }
       ],
@@ -1379,8 +1383,8 @@
         {
           "at": {
             "tile": {
-              "x": 340,
-              "y": 177
+              "x": 324,
+              "y": 168
             },
             "exact": true
           }
@@ -1414,13 +1418,13 @@
           "lines": ["Zeke banks one in off the backboard. Nobody saw it. It still counts."]
         }
       ],
-      "source": "Papi, 2026-10-11: the old cul-de-sac at the end of Calvert Court"
+      "source": "Papi, 2026-10-11: the old cul-de-sac where Calvert Court's three road sections meet"
     },
     {
       "id": "mountain-sean",
       "kind": "npc",
       "name": "Sean",
-      "title": "Dad, Mountain Ave",
+      "title": "Max and Ezra's dad",
       "look": {
         "kind": "person",
         "hair": "#5d4037",
@@ -1445,11 +1449,11 @@
           "once": true,
           "lines": [
             "Zeke! Happy birthday, buddy.",
-            "Max and Ezra have been asking all week if the big kid with the two dogs was coming by."
+            "Max and Ezra have been asking all week when you're coming over to play Smash Bros."
           ]
         },
         {
-          "lines": ["Max wants to know if Soup does tricks. I told him Soup's trick is being a dog."]
+          "lines": ["Fair warning: they've been practicing Smash. A lot."]
         }
       ],
       "journal": true,
@@ -1459,7 +1463,7 @@
       "id": "mountain-marta",
       "kind": "npc",
       "name": "Marta",
-      "title": "Mom, Mountain Ave",
+      "title": "Max and Ezra's mom",
       "look": {
         "kind": "person",
         "hair": "#212121",
@@ -1495,7 +1499,7 @@
       "id": "mountain-max",
       "kind": "npc",
       "name": "Max",
-      "title": "Little neighbor",
+      "title": "Zeke's cousin",
       "look": {
         "kind": "person",
         "hair": "#8d6e63",
@@ -1518,7 +1522,7 @@
       ],
       "talks": [
         {
-          "lines": ["Is that your dog? Is that ALSO your dog? Can I pet them? Both of them?"]
+          "lines": ["Zeke! Smash Bros? Right now? I call first pick!"]
         }
       ],
       "journal": true,
@@ -1532,7 +1536,7 @@
       "id": "mountain-ezra",
       "kind": "npc",
       "name": "Ezra",
-      "title": "Little neighbor",
+      "title": "Zeke's cousin",
       "look": {
         "kind": "person",
         "hair": "#3e2723",
@@ -1556,10 +1560,13 @@
       "talks": [
         {
           "once": true,
-          "lines": ["Ezra holds up a rock so Zeke can see it. It is a great rock."]
+          "lines": [
+            "Ezra holds up a rock so Zeke can see it. It is a great rock.",
+            "Now can we play Smash Bros?"
+          ]
         },
         {
-          "lines": ["Ezra has found a second rock. It is also great."]
+          "lines": ["Ezra found a second rock. 'I'll show you the third one after Smash Bros.'"]
         }
       ],
       "journal": true,
@@ -2314,7 +2321,7 @@
       "id": "dog-maisey",
       "kind": "pet",
       "name": "Maisey",
-      "title": "Maisey, Ben C's dog",
+      "title": "Maisey, Ben C's dog, the OG Mangy Mutt",
       "look": {
         "kind": "dog",
         "size": "medium",
@@ -2324,8 +2331,15 @@
       "prompt": "pet",
       "talks": [
         {
-          "lines": ["Maisey brings Zeke a sock. Not a toy. A sock. It is a gift."],
-          "sound": "bark"
+          "once": true,
+          "sound": "bark",
+          "lines": [
+            "Maisey. The OG Mangy Mutt. Every scruffy dog in Piedmont is just doing an impression of Maisey."
+          ]
+        },
+        {
+          "sound": "bark",
+          "lines": ["The OG Mangy Mutt brings Zeke a sock. Not a toy. A sock. It is a gift."]
         }
       ],
       "collect": {

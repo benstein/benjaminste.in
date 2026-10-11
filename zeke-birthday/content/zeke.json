@@ -527,9 +527,9 @@
     "secondsPerQuestion": 8,
     "questions": [
       {
-        "q": "Who is the only person alive who calls you Zekiepoo?",
-        "options": ["Koh", "Sammy L", "Kian", "Gabi"],
-        "answer": 1
+        "q": "Which nickname will you NOT answer to?",
+        "options": ["Zekiefish", "Zekiepoo", "Easy E / E.Z.E", "Rooster"],
+        "answer": 3
       },
       {
         "q": "Whose beach party ended with sand crabs in Zubin's swim trunks?",
@@ -595,6 +595,16 @@
         "q": "Who told you the waves had been humbled and wanted revenge?",
         "options": ["Ben", "Koh", "Xuan", "Soli"],
         "answer": 0
+      },
+      {
+        "q": "Who is your all-time favorite teacher?",
+        "options": ["Ms. Love", "Ms. Bloom", "Mr. Spencer", "Ms. Archer"],
+        "answer": 2
+      },
+      {
+        "q": "What was your Bar Mitzvah portion?",
+        "options": ["Bereshit", "Bo", "Behar", "Bamidbar"],
+        "answer": 2
       }
     ]
   }
