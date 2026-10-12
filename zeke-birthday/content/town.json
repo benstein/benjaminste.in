@@ -23,7 +23,8 @@
       "id": "ppd",
       "name": "PPD Blue",
       "title": "Police Log Regular",
-      "hint": "The board outside the police station posts the Picks of the Week. Go see them for yourself."
+      "hint": "The board outside the police station posts the Pick of the Week. Read it once and this page keeps the latest pick.",
+      "board": "ppd-board"
     },
     {
       "id": "spanish",
@@ -660,6 +661,16 @@
         }
       ],
       "talks": [
+        {
+          "once": true,
+          "lines": [
+            "PPD BLUE. Every week the Piedmont police post a Pick of the Week: the strangest call in town.",
+            "There are 11 picks this year, and every one happened somewhere in Piedmont. Find all 11 scenes.",
+            "Find one and the next pick goes up. No need to walk back here: your Journal (J) always shows the latest pick.",
+            "This week's pick is in your Journal now. Press J."
+          ],
+          "sets": ["read:ppd-board"]
+        },
         {
           "lines": [
             "PPD BLUE. PICK OF THE WEEK: 'Holy buzzcut, Batman.' Rabid bat dive-bombing people by the bridge in Dracena Park."
@@ -1931,6 +1942,35 @@
       "source": "Papi, 2026-10-11: a few cars on the quiet outer streets"
     },
     {
+      "id": "home-mailbox",
+      "kind": "sign",
+      "name": "The mailbox",
+      "title": "Home",
+      "look": {
+        "kind": "sprite",
+        "sprite": "mailbox"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 341,
+              "y": 171
+            },
+            "exact": true
+          }
+        }
+      ],
+      "prompt": "open",
+      "talks": [
+        {
+          "lines": [],
+          "game": "letter"
+        }
+      ],
+      "source": "Papi, 2026-10-11: the family's letter, with the rules and the first candle"
+    },
+    {
       "id": "home-coop",
       "kind": "decor",
       "name": "The chicken coop",
@@ -2242,7 +2282,7 @@
       "look": {
         "kind": "dog",
         "size": "medium",
-        "coat": "#3e2723",
+        "coat": "#f5f5f5",
         "patch": "#d7ccc8"
       },
       "prompt": "pet",
@@ -2305,8 +2345,8 @@
       "look": {
         "kind": "dog",
         "size": "medium",
-        "coat": "#212121",
-        "patch": "#ffffff"
+        "coat": "#f2f2ee",
+        "patch": "#bdbdbd"
       },
       "prompt": "pet",
       "talks": [

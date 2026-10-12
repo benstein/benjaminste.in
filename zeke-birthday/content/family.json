@@ -6,7 +6,7 @@
       "hue": 120,
       "lines": {
         "greeting": [
-          "Zeke. Ten candles. Not bad, for you.",
+          "Zeke. Eleven candles. Not bad, for you.",
           "I got here first, obviously, and no, you don't get my candle for free. You have to earn it."
         ],
         "phaseIntro": [
@@ -33,7 +33,7 @@
       "lines": {
         "greeting": [
           "Mijo. Come here. I have been standing next to this cake since four o'clock.",
-          "Ten candles already. And you walked the whole town for them, with the dogs, in those shoes."
+          "Eleven candles already. And you walked the whole town for them, with the dogs, in those shoes."
         ],
         "phaseIntro": [
           "My turn, mijo. And no, we are not fighting. You know the rule in this house: no violent video games.",
@@ -99,7 +99,7 @@
         ],
         "phaseWin": [
           "Whoa. Bud. The agents are offline. That was them, not me. I promise.",
-          "That is thirteen candles. Thirteen down, one to go. Come on, let's go light the cake."
+          "That's all fourteen candles, bud. Come on, let's go light the cake."
         ],
         "phaseLose": ["AGENTS: Subject stopped. Containment holding. ...Bud, it's me. Try again. Please."],
         "afterFight": [
@@ -115,7 +115,7 @@
   "ending": {
     "message": [
       "Zeke, we are so proud of you, and of the young man you are becoming. You're funny, you're good to your brother (most days), and you show up for your friends. Ten of them were waiting in their houses tonight, which tells you everything about the kind of friend you are.",
-      "What a year. Lakeshow. Another summer at Tawonga. And your Bar Mitzvah, where you stood up in front of everyone who loves you and read Behar like you'd been doing it forever. Then tonight you walked all of Piedmont with Soup and Salad to earn thirteen candles.",
+      "What a year. Lakeshow. Another summer at Tawonga. And your Bar Mitzvah, where you stood up in front of everyone who loves you and read Behar like you'd been doing it forever. Then tonight you walked all of Piedmont with Soup and Salad to collect all fourteen candles.",
       "Here's to fourteen. We hope this is the happiest birthday you've ever had, and that all year long you never sell the clip. Make a wish, Zeke. Then blow out the candles before Gabi does."
     ],
     "credits": ["With love by Papi, all by himself, with no AI."]
