@@ -673,7 +673,7 @@
         },
         {
           "lines": [
-            "PPD BLUE. PICK OF THE WEEK: 'Holy buzzcut, Batman.' Rabid bat dive-bombing people by the bridge in Dracena Park."
+            "PPD BLUE. PICK OF THE WEEK: 'Holy buzzcut, Batman.' A bat dive-bombing people. WHERE: Dracena Park, in the dog park just north of Blair's Quarry."
           ],
           "when": {
             "notFlags": ["got:ppd:bat"]
@@ -681,7 +681,7 @@
         },
         {
           "lines": [
-            "PPD BLUE. PICK OF THE WEEK: 'Found bound hound sound.' Large gray and white dog stuck between two walls on Grand Ave."
+            "PPD BLUE. PICK OF THE WEEK: 'Found bound hound sound.' A big gray and white dog stuck between two walls. WHERE: Grand Ave, a few houses east of Zubin's."
           ],
           "when": {
             "notFlags": ["got:ppd:hound"]
@@ -689,7 +689,7 @@
         },
         {
           "lines": [
-            "PPD BLUE. PICK OF THE WEEK: 'How a bus does a wheelie.' Visiting team's bus stuck at the Witter Field entrance on three wheels."
+            "PPD BLUE. PICK OF THE WEEK: 'How a bus does a wheelie.' A visiting team's bus stuck on three wheels. WHERE: the entrance to Witter Field. Look for a tilted bus."
           ],
           "when": {
             "notFlags": ["got:ppd:bus"]
@@ -697,7 +697,7 @@
         },
         {
           "lines": [
-            "PPD BLUE. PICK OF THE WEEK: 'Just hit it.' Wasps attacking dogs on Sandringham Rd. Officer checks. No wasps."
+            "PPD BLUE. PICK OF THE WEEK: 'Just hit it.' Wasps attacking dogs. An officer checks. WHERE: Sandringham Rd, a long way southwest of the Brick Maze House."
           ],
           "when": {
             "notFlags": ["got:ppd:wasps"]
@@ -705,7 +705,7 @@
         },
         {
           "lines": [
-            "PPD BLUE. PICK OF THE WEEK: 'Too early for Santa.' Gardeners on a Linda Ave roof with a gas leaf blower."
+            "PPD BLUE. PICK OF THE WEEK: 'Too early for Santa.' People up on a roof in September. WHERE: Linda Ave, south of Soli's house."
           ],
           "when": {
             "notFlags": ["got:ppd:santa"]
@@ -713,7 +713,7 @@
         },
         {
           "lines": [
-            "PPD BLUE. PICK OF THE WEEK: 'What do teens without ebikes do?' Boys on San Carlos Ave getting cars to honk at them."
+            "PPD BLUE. PICK OF THE WEEK: 'What do teens without ebikes do?' Teens getting cars to honk at them. WHERE: San Carlos Ave at El Cerrito, west of the Middle School."
           ],
           "when": {
             "notFlags": ["got:ppd:honk"]
@@ -721,7 +721,7 @@
         },
         {
           "lines": [
-            "PPD BLUE. PICK OF THE WEEK: 'Can we keep it, pleeease?' A small friendly white dog at Wildwood School, no collar."
+            "PPD BLUE. PICK OF THE WEEK: 'Can we keep it, pleeease?' A small white dog with no collar at Wildwood Elementary. WHERE: the dog is at the school. His owner is on Wildwood Ave, just east of it."
           ],
           "when": {
             "notFlags": ["got:ppd:whitedog"]
@@ -729,7 +729,7 @@
         },
         {
           "lines": [
-            "PPD BLUE. PICK OF THE WEEK: 'Not going to win that one.' SUV sideswipes garbage truck on Prospect Rd. No damage to garbage truck."
+            "PPD BLUE. PICK OF THE WEEK: 'Not going to win that one.' An SUV versus a garbage truck. WHERE: Prospect Rd, southeast of Wildwood Elementary."
           ],
           "when": {
             "notFlags": ["got:ppd:garbage"]
@@ -737,7 +737,7 @@
         },
         {
           "lines": [
-            "PPD BLUE. PICK OF THE WEEK: 'Burning Man? No, no, just a road trip.' Two people packing a beach cruiser at 2 a.m. on Oakland Ave."
+            "PPD BLUE. PICK OF THE WEEK: 'Burning Man? No, no, just a road trip.' Somebody packing a beach cruiser at 2 a.m. WHERE: a driveway on Oakland Ave, just north of Havens Elementary."
           ],
           "when": {
             "notFlags": ["got:ppd:roadtrip"]
@@ -745,7 +745,7 @@
         },
         {
           "lines": [
-            "PPD BLUE. PICK OF THE WEEK: 'Uber Eats or EMT?' A man on Highland Ave calls an ambulance because he wants something to eat."
+            "PPD BLUE. PICK OF THE WEEK: 'Uber Eats or EMT?' A man called an ambulance because he was hungry. WHERE: Highland Ave, outside the Community Hall."
           ],
           "when": {
             "notFlags": ["got:ppd:ubereats"]
@@ -753,7 +753,7 @@
         },
         {
           "lines": [
-            "PPD BLUE. PICK OF THE WEEK: 'MHS Falcon Hour during summer?' A hawk in the cafeteria on Magnolia Ave."
+            "PPD BLUE. PICK OF THE WEEK: 'MHS Falcon Hour during summer?' A 'falcon' in a school cafeteria. WHERE: Piedmont Middle School on Magnolia Ave. Ask the custodian out front."
           ],
           "when": {
             "notFlags": ["got:ppd:hawk"]
@@ -3592,7 +3592,13 @@
         "item": "hawk"
       },
       "tier": 1,
-      "source": "PPD Blue 2026-06-17 Pick of the Week, 'MHS Falcon Hour during summer?' (a Cooper's hawk in a Magnolia Ave cafeteria)"
+      "source": "PPD Blue 2026-06-17 Pick of the Week, 'MHS Falcon Hour during summer?' (a Cooper's hawk in a Magnolia Ave cafeteria)",
+      "article": {
+        "kicker": "PPD Blue  -  Pick of the Week",
+        "headline": "MHS Falcon Hour during summer?",
+        "dateline": "Friday, June 5  -  Magnolia Ave.",
+        "text": "Somebody reported a falcon in the school cafeteria on Magnolia Ave, in June, with no students around. Police nets couldn't reach it. Wildlife experts came, said it was a Cooper's hawk, and made a plan to trap it. The hawk didn't wait. After dark it let itself out. It lives down by Bushy Dell Creek."
+      }
     },
     {
       "id": "bus-wheelie",
@@ -3631,7 +3637,13 @@
       },
       "radius": 3,
       "tier": 1,
-      "source": "PPD Blue 2026-09-23 Pick of the Week"
+      "source": "PPD Blue 2026-09-23 Pick of the Week",
+      "article": {
+        "kicker": "PPD Blue  -  Pick of the Week",
+        "headline": "How a bus does a wheelie",
+        "dateline": "Friday, Sept. 11  -  Witter Field",
+        "text": "A visiting football team's bus took the steep entrance to Witter Field and ended up balanced on three wheels, with the fourth in the air. It wasn't blocking the road and nobody was hurt. A tow truck got it down. Not the warm-up anyone planned."
+      }
     },
     {
       "id": "tow-driver",
@@ -4073,7 +4085,13 @@
       "radius": 2,
       "effect": "swoop",
       "tier": 1,
-      "source": "PPD Blue 2026-08-26 Pick of the Week (rabid bat by the bridge in Dracena Park)"
+      "source": "PPD Blue 2026-08-26 Pick of the Week (rabid bat by the bridge in Dracena Park)",
+      "article": {
+        "kicker": "PPD Blue  -  Pick of the Week",
+        "headline": "Holy buzzcut, Batman",
+        "dateline": "Friday, Aug. 14  -  Dracena Park",
+        "text": "A bat with rabies spent the evening dive-bombing people near the bridge in Dracena Park, flying low enough to give free haircuts. Hence the buzzcut. The Batman part is Robin, who yells \"Holy something, Batman!\" at every problem in the old TV show. Animal Control took the call. A bat flapping around in daylight is sick, so never touch one."
+      }
     },
     {
       "id": "animal-control",
@@ -5674,7 +5692,13 @@
       },
       "radius": 3,
       "tier": 1,
-      "source": "PPD Blue 2026-09-23 Pick of the Week (Linda Ave, gardeners on the roof with a gas leaf blower)"
+      "source": "PPD Blue 2026-09-23 Pick of the Week (Linda Ave, gardeners on the roof with a gas leaf blower)",
+      "article": {
+        "kicker": "PPD Blue  -  Pick of the Week",
+        "headline": "Too early for Santa",
+        "dateline": "Friday, Sept. 18  -  Linda Ave.",
+        "text": "Somebody looked up and saw people on a Linda Ave roof in September. Not Santa: gardeners, blasting leaves off with a gas-powered leaf blower. Piedmont has rules about gas leaf blowers, and the police log is full of complaints about them. The officer explained the rule. Santa is still on schedule."
+      }
     },
     {
       "id": "hound",
@@ -5760,7 +5784,13 @@
         "item": "hound"
       },
       "tier": 1,
-      "source": "PPD Blue 2026-10-07"
+      "source": "PPD Blue 2026-10-07",
+      "article": {
+        "kicker": "PPD Blue  -  Pick of the Week",
+        "headline": "Found bound hound sound",
+        "dateline": "Monday, Sept. 28  -  Grand Ave.",
+        "text": "Neighbors on Grand heard howling and found a big gray and white dog wedged in the gap of a dividing wall. Nobody knew how long he had been stuck. He got pulled out and the call was canceled. The headline is four rhymes in a row, which is the police department showing off."
+      }
     },
     {
       "id": "hound-neighbor",
@@ -6483,7 +6513,13 @@
         "byTalk": true
       },
       "tier": 1,
-      "source": "PPD Blue 2026-09-30 Pick of the Week, 'What do teens without ebikes do?'"
+      "source": "PPD Blue 2026-09-30 Pick of the Week, 'What do teens without ebikes do?'",
+      "article": {
+        "kicker": "PPD Blue  -  Pick of the Week",
+        "headline": "What do teens without ebikes do?",
+        "dateline": "Sunday, Sept. 20  -  San Carlos Ave.",
+        "text": "Three boys, somewhere between 12 and 15, worked out that if you step toward the road and pump your arm, drivers honk. Somebody called it in. An officer had a chat with them about cars being heavier than people. The headline's theory: take away the ebikes and this is what you get."
+      }
     },
     {
       "id": "honk-officer",
@@ -6558,7 +6594,13 @@
       },
       "radius": 2,
       "tier": 1,
-      "source": "PPD Blue 2026-09-09 Pick of the Week (Oakland Ave, 2:07 a.m.)"
+      "source": "PPD Blue 2026-09-09 Pick of the Week (Oakland Ave, 2:07 a.m.)",
+      "article": {
+        "kicker": "PPD Blue  -  Pick of the Week",
+        "headline": "Burning Man? No, no, just a road trip",
+        "dateline": "Saturday, Aug. 29, 2:07 a.m.  -  Oakland Ave.",
+        "text": "At 2 in the morning, a neighbor reported people fiddling with a beach cruiser in a driveway. Late August is Burning Man, a giant art festival in the Nevada desert where everybody rides a beach cruiser, so it looked suspicious. The officer checked. Two people were packing their car for a road trip. Very early start."
+      }
     },
     {
       "id": "fiveway-sign",
@@ -6745,7 +6787,13 @@
         "byTalk": true
       },
       "tier": 1,
-      "source": "PPD Blue 2026-08-19 ('Dog returned to owner')"
+      "source": "PPD Blue 2026-08-19 ('Dog returned to owner')",
+      "article": {
+        "kicker": "PPD Blue  -  Pick of the Week",
+        "headline": "Can we keep it, pleeease?",
+        "dateline": "Wednesday, Aug. 12  -  Wildwood Ave.",
+        "text": "A small, extremely friendly white dog with no collar turned up at Wildwood Elementary and made a lot of friends very fast. You can guess what every kid there asked. The answer was no. The police found the owner and the dog went home."
+      }
     },
     {
       "id": "white-dog-home",
@@ -7429,7 +7477,13 @@
       },
       "radius": 3,
       "tier": 1,
-      "source": "PPD Blue 2026-09-02 Pick of the Week (Sandringham Rd)"
+      "source": "PPD Blue 2026-09-02 Pick of the Week (Sandringham Rd)",
+      "article": {
+        "kicker": "PPD Blue  -  Pick of the Week",
+        "headline": "Just hit it",
+        "dateline": "Thursday, Aug. 27  -  Sandringham Rd.",
+        "text": "Someone reported wasps attacking dogs on Sandringham Road. The officer looked around and saw no wasps. So the officer gave the suspected nest one good whack with a baton, to be sure. Still no wasps. Science."
+      }
     },
     {
       "id": "garbage-truck",
@@ -7466,7 +7520,13 @@
       },
       "radius": 3,
       "tier": 1,
-      "source": "PPD Blue 2026-06-17 Pick of the Week (Prospect Rd)"
+      "source": "PPD Blue 2026-06-17 Pick of the Week (Prospect Rd)",
+      "article": {
+        "kicker": "PPD Blue  -  Pick of the Week",
+        "headline": "Not going to win that one",
+        "dateline": "Friday, June 12  -  Prospect Rd.",
+        "text": "A gray SUV sideswiped a garbage truck on Prospect Road and drove off, which makes it a hit and run. The garbage truck was fine. Not a scratch. The SUV picked a fight with something that weighs about as much as ten SUVs."
+      }
     },
     {
       "id": "big-sale",
@@ -9362,7 +9422,13 @@
         "item": "ubereats"
       },
       "tier": 1,
-      "source": "PPD Blue 2026-06-24 Pick of the Week, 'Uber Eats or EMT?'"
+      "source": "PPD Blue 2026-06-24 Pick of the Week, 'Uber Eats or EMT?'",
+      "article": {
+        "kicker": "PPD Blue  -  Pick of the Week",
+        "headline": "Uber Eats or EMT?",
+        "dateline": "Thursday, June 18, 4:31 a.m.  -  Highland Ave.",
+        "text": "At 4:31 in the morning, a man on Highland Ave called for an ambulance. His emergency: he wanted something to eat. Ambulances are for heart attacks and broken bones. For a 4 a.m. burrito, there are apps."
+      }
     },
     {
       "id": "porch-pumpkin-1",
