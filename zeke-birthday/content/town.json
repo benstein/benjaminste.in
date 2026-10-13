@@ -36,7 +36,7 @@
       "id": "pumpkins",
       "name": "Pumpkin Varieties",
       "title": "Patch Papa's Helper",
-      "hint": "Four at the Coaches Field patch, four on porches around town."
+      "hint": "Four at the Coaches Field patch, four on porches around town. Carved ones are just decoration."
     },
     {
       "id": "libraries",
@@ -697,7 +697,7 @@
         },
         {
           "lines": [
-            "PPD BLUE. PICK OF THE WEEK: 'Just hit it.' Wasps attacking dogs. An officer checks. WHERE: Sandringham Rd, a long way southwest of the Brick Maze House."
+            "PPD BLUE. PICK OF THE WEEK: 'Just hit it.' Wasps attacking dogs. An officer checks. WHERE: walk straight south from the Brick Maze House to Hampton Rd, then follow Sandringham Rd to an officer and a buzzing hedge."
           ],
           "when": {
             "notFlags": ["got:ppd:wasps"]
@@ -4484,8 +4484,7 @@
       "title": "Knucklehead",
       "look": {
         "kind": "sprite",
-        "sprite": "pumpkin",
-        "tint": "#d35400"
+        "sprite": "knucklehead"
       },
       "spots": [
         {
@@ -4516,8 +4515,7 @@
       "title": "Red Warty",
       "look": {
         "kind": "sprite",
-        "sprite": "pumpkin",
-        "tint": "#c0392b"
+        "sprite": "redwarty"
       },
       "spots": [
         {
@@ -4549,8 +4547,7 @@
       "title": "One Too Many",
       "look": {
         "kind": "sprite",
-        "sprite": "pumpkin",
-        "tint": "#f2f3f4"
+        "sprite": "onetoomany"
       },
       "spots": [
         {
@@ -4582,8 +4579,7 @@
       "title": "Porcelain Doll",
       "look": {
         "kind": "sprite",
-        "sprite": "pumpkin",
-        "tint": "#f5b7b1"
+        "sprite": "porcelaindoll"
       },
       "spots": [
         {
@@ -4617,8 +4613,7 @@
       "title": "Turk's Turban",
       "look": {
         "kind": "sprite",
-        "sprite": "pumpkin",
-        "tint": "#e74c3c"
+        "sprite": "turban"
       },
       "spots": [
         {
@@ -4649,8 +4644,7 @@
       "title": "Blue Jarrahdale",
       "look": {
         "kind": "sprite",
-        "sprite": "pumpkin",
-        "tint": "#85929e"
+        "sprite": "jarrahdale"
       },
       "spots": [
         {
@@ -4682,8 +4676,7 @@
       "title": "Wee-B-Little",
       "look": {
         "kind": "sprite",
-        "sprite": "pumpkin",
-        "tint": "#f39c12"
+        "sprite": "weepumpkin"
       },
       "spots": [
         {
@@ -4715,8 +4708,7 @@
       "title": "Swan Neck Gourd",
       "look": {
         "kind": "sprite",
-        "sprite": "pumpkin",
-        "tint": "#58d68d"
+        "sprite": "swanneck"
       },
       "spots": [
         {
@@ -7447,8 +7439,7 @@
       "title": "'Just hit it'",
       "look": {
         "kind": "sprite",
-        "sprite": "flower",
-        "tint": "#27ae60"
+        "sprite": "wasps"
       },
       "spots": [
         {
@@ -7484,6 +7475,45 @@
         "dateline": "Thursday, Aug. 27  -  Sandringham Rd.",
         "text": "Someone reported wasps attacking dogs on Sandringham Road. The officer looked around and saw no wasps. So the officer gave the suspected nest one good whack with a baton, to be sure. Still no wasps. Science."
       }
+    },
+    {
+      "id": "wasp-officer",
+      "kind": "npc",
+      "name": "Patrol officer with a baton",
+      "look": {
+        "kind": "person",
+        "hair": "#2b1b0e",
+        "skin": "#c68642",
+        "shirt": "#24305e",
+        "pants": "#24305e",
+        "extra": "badge"
+      },
+      "spots": [
+        {
+          "at": {
+            "place": "sandringham",
+            "dx": -1
+          }
+        }
+      ],
+      "behavior": {
+        "type": "stand",
+        "facing": "left"
+      },
+      "talks": [
+        {
+          "lines": [
+            "Report said wasps were attacking dogs. I gave the hedge one good whack.",
+            "No wasps. Case closed."
+          ],
+          "once": true
+        },
+        {
+          "lines": ["Wasps? Where? I'm looking right at it."]
+        }
+      ],
+      "tier": 1,
+      "source": "PPD Blue 2026-09-02 Pick of the Week (Sandringham Rd)"
     },
     {
       "id": "garbage-truck",
@@ -9433,11 +9463,10 @@
     {
       "id": "porch-pumpkin-1",
       "kind": "decor",
-      "name": "A pumpkin on a porch",
+      "name": "A jack-o'-lantern on a porch",
       "look": {
         "kind": "sprite",
-        "sprite": "pumpkin",
-        "tint": "#e67e22"
+        "sprite": "jackolantern"
       },
       "spots": [
         {
@@ -9455,11 +9484,10 @@
     {
       "id": "porch-pumpkin-2",
       "kind": "decor",
-      "name": "A pumpkin on a porch",
+      "name": "A jack-o'-lantern on a porch",
       "look": {
         "kind": "sprite",
-        "sprite": "pumpkin",
-        "tint": "#e67e22"
+        "sprite": "jackolantern"
       },
       "spots": [
         {
@@ -9477,11 +9505,10 @@
     {
       "id": "porch-pumpkin-3",
       "kind": "decor",
-      "name": "A pumpkin on a porch",
+      "name": "A jack-o'-lantern on a porch",
       "look": {
         "kind": "sprite",
-        "sprite": "pumpkin",
-        "tint": "#e67e22"
+        "sprite": "jackolantern"
       },
       "spots": [
         {
@@ -9499,11 +9526,10 @@
     {
       "id": "porch-pumpkin-4",
       "kind": "decor",
-      "name": "A pumpkin on a porch",
+      "name": "A jack-o'-lantern on a porch",
       "look": {
         "kind": "sprite",
-        "sprite": "pumpkin",
-        "tint": "#e67e22"
+        "sprite": "jackolantern"
       },
       "spots": [
         {
@@ -9521,11 +9547,10 @@
     {
       "id": "porch-pumpkin-5",
       "kind": "decor",
-      "name": "A pumpkin on a porch",
+      "name": "A jack-o'-lantern on a porch",
       "look": {
         "kind": "sprite",
-        "sprite": "pumpkin",
-        "tint": "#e67e22"
+        "sprite": "jackolantern"
       },
       "spots": [
         {
@@ -9543,11 +9568,10 @@
     {
       "id": "porch-pumpkin-6",
       "kind": "decor",
-      "name": "A pumpkin on a porch",
+      "name": "A jack-o'-lantern on a porch",
       "look": {
         "kind": "sprite",
-        "sprite": "pumpkin",
-        "tint": "#e67e22"
+        "sprite": "jackolantern"
       },
       "spots": [
         {
@@ -9565,11 +9589,10 @@
     {
       "id": "porch-pumpkin-7",
       "kind": "decor",
-      "name": "A pumpkin on a porch",
+      "name": "A jack-o'-lantern on a porch",
       "look": {
         "kind": "sprite",
-        "sprite": "pumpkin",
-        "tint": "#e67e22"
+        "sprite": "jackolantern"
       },
       "spots": [
         {
@@ -9586,11 +9609,10 @@
     {
       "id": "porch-pumpkin-8",
       "kind": "decor",
-      "name": "A pumpkin on a porch",
+      "name": "A jack-o'-lantern on a porch",
       "look": {
         "kind": "sprite",
-        "sprite": "pumpkin",
-        "tint": "#e67e22"
+        "sprite": "jackolantern"
       },
       "spots": [
         {
@@ -9608,11 +9630,10 @@
     {
       "id": "porch-pumpkin-9",
       "kind": "decor",
-      "name": "A pumpkin on a porch",
+      "name": "A jack-o'-lantern on a porch",
       "look": {
         "kind": "sprite",
-        "sprite": "pumpkin",
-        "tint": "#e67e22"
+        "sprite": "jackolantern"
       },
       "spots": [
         {
@@ -9630,11 +9651,10 @@
     {
       "id": "porch-pumpkin-10",
       "kind": "decor",
-      "name": "A pumpkin on a porch",
+      "name": "A jack-o'-lantern on a porch",
       "look": {
         "kind": "sprite",
-        "sprite": "pumpkin",
-        "tint": "#e67e22"
+        "sprite": "jackolantern"
       },
       "spots": [
         {
