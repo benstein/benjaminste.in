@@ -23,7 +23,7 @@
       "id": "ppd",
       "name": "PPD Blue",
       "title": "Police Log Regular",
-      "hint": "The board outside the police station posts the Pick of the Week. Read it once and this page keeps the latest pick.",
+      "hint": "Go to the police station and read the PPD Blue board for the Pick of the Week.",
       "board": "ppd-board"
     },
     {
