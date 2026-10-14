@@ -1942,6 +1942,618 @@
       "source": "Papi, 2026-10-11: a few cars on the quiet outer streets"
     },
     {
+      "id": "car-clarewood",
+      "kind": "decor",
+      "name": "A car",
+      "look": {
+        "kind": "sprite",
+        "sprite": "drivecar",
+        "tint": "#2e86c1"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 199,
+              "y": 37
+            }
+          },
+          "route": [
+            {
+              "tile": {
+                "x": 196,
+                "y": 20
+              }
+            }
+          ]
+        }
+      ],
+      "behavior": {
+        "type": "drive"
+      },
+      "solid": false,
+      "tier": 2,
+      "source": "Papi, 2026-10-13: more cars, the overworld is boring outside downtown (Clarewood Drive)"
+    },
+    {
+      "id": "car-proctor",
+      "kind": "decor",
+      "name": "A car",
+      "look": {
+        "kind": "sprite",
+        "sprite": "drivecar",
+        "tint": "#c0392b"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 312,
+              "y": 36
+            }
+          },
+          "route": [
+            {
+              "tile": {
+                "x": 274,
+                "y": 24
+              }
+            }
+          ]
+        }
+      ],
+      "behavior": {
+        "type": "drive"
+      },
+      "solid": false,
+      "tier": 2,
+      "source": "Papi, 2026-10-13: more cars, the overworld is boring outside downtown (Proctor Avenue)"
+    },
+    {
+      "id": "car-estrella",
+      "kind": "decor",
+      "name": "A car",
+      "look": {
+        "kind": "sprite",
+        "sprite": "drivecar",
+        "tint": "#f1c40f"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 104,
+              "y": 105
+            }
+          },
+          "route": [
+            {
+              "tile": {
+                "x": 133,
+                "y": 114
+              }
+            }
+          ]
+        }
+      ],
+      "behavior": {
+        "type": "drive"
+      },
+      "solid": false,
+      "tier": 2,
+      "source": "Papi, 2026-10-13: more cars, the overworld is boring outside downtown (Moraga Avenue)"
+    },
+    {
+      "id": "car-pala",
+      "kind": "decor",
+      "name": "A car",
+      "look": {
+        "kind": "sprite",
+        "sprite": "drivecar",
+        "tint": "#ecf0f1"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 174,
+              "y": 106
+            }
+          },
+          "route": [
+            {
+              "tile": {
+                "x": 210,
+                "y": 128
+              }
+            }
+          ]
+        }
+      ],
+      "behavior": {
+        "type": "drive"
+      },
+      "solid": false,
+      "tier": 2,
+      "source": "Papi, 2026-10-13: more cars, the overworld is boring outside downtown (Moraga Avenue)"
+    },
+    {
+      "id": "car-moraga-pala",
+      "kind": "decor",
+      "name": "A car",
+      "look": {
+        "kind": "sprite",
+        "sprite": "drivecar",
+        "tint": "#27ae60"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 241,
+              "y": 108
+            }
+          },
+          "route": [
+            {
+              "tile": {
+                "x": 199,
+                "y": 100
+              }
+            }
+          ]
+        }
+      ],
+      "behavior": {
+        "type": "drive"
+      },
+      "solid": false,
+      "tier": 2,
+      "source": "Papi, 2026-10-13: more cars, the overworld is boring outside downtown (Moraga Avenue)"
+    },
+    {
+      "id": "car-warren",
+      "kind": "decor",
+      "name": "A car",
+      "look": {
+        "kind": "sprite",
+        "sprite": "drivecar",
+        "tint": "#7f8c8d"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 384,
+              "y": 104
+            }
+          },
+          "route": [
+            {
+              "tile": {
+                "x": 417,
+                "y": 141
+              }
+            }
+          ]
+        }
+      ],
+      "behavior": {
+        "type": "drive"
+      },
+      "solid": false,
+      "tier": 2,
+      "source": "Papi, 2026-10-13: more cars, the overworld is boring outside downtown (Warren Freeway)"
+    },
+    {
+      "id": "car-kingston",
+      "kind": "decor",
+      "name": "A car",
+      "look": {
+        "kind": "sprite",
+        "sprite": "drivecar",
+        "tint": "#8e44ad"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 34,
+              "y": 174
+            }
+          },
+          "route": [
+            {
+              "tile": {
+                "x": 15,
+                "y": 139
+              }
+            }
+          ]
+        }
+      ],
+      "behavior": {
+        "type": "drive"
+      },
+      "solid": false,
+      "tier": 2,
+      "source": "Papi, 2026-10-13: more cars, the overworld is boring outside downtown (Kingston Avenue)"
+    },
+    {
+      "id": "car-latham",
+      "kind": "decor",
+      "name": "A car",
+      "look": {
+        "kind": "sprite",
+        "sprite": "drivecar",
+        "tint": "#e67e22"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 107,
+              "y": 180
+            }
+          },
+          "route": [
+            {
+              "tile": {
+                "x": 143,
+                "y": 214
+              }
+            }
+          ]
+        }
+      ],
+      "behavior": {
+        "type": "drive"
+      },
+      "solid": false,
+      "tier": 2,
+      "source": "Papi, 2026-10-13: more cars, the overworld is boring outside downtown (Latham Street)"
+    },
+    {
+      "id": "car-bonita",
+      "kind": "decor",
+      "name": "A car",
+      "look": {
+        "kind": "sprite",
+        "sprite": "drivecar",
+        "tint": "#34495e"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 175,
+              "y": 180
+            }
+          },
+          "route": [
+            {
+              "tile": {
+                "x": 218,
+                "y": 171
+              }
+            }
+          ]
+        }
+      ],
+      "behavior": {
+        "type": "drive"
+      },
+      "solid": false,
+      "tier": 2,
+      "source": "Papi, 2026-10-13: more cars, the overworld is boring outside downtown (Bonita Avenue)"
+    },
+    {
+      "id": "car-sharon",
+      "kind": "decor",
+      "name": "A car",
+      "look": {
+        "kind": "sprite",
+        "sprite": "drivecar",
+        "tint": "#d35400"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 243,
+              "y": 179
+            }
+          },
+          "route": [
+            {
+              "tile": {
+                "x": 270,
+                "y": 208
+              }
+            }
+          ]
+        }
+      ],
+      "behavior": {
+        "type": "drive"
+      },
+      "solid": false,
+      "tier": 2,
+      "source": "Papi, 2026-10-13: more cars, the overworld is boring outside downtown (Sharon Avenue)"
+    },
+    {
+      "id": "car-littlewood",
+      "kind": "decor",
+      "name": "A car",
+      "look": {
+        "kind": "sprite",
+        "sprite": "drivecar",
+        "tint": "#16a085"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 313,
+              "y": 184
+            }
+          },
+          "route": [
+            {
+              "tile": {
+                "x": 294,
+                "y": 161
+              }
+            }
+          ]
+        }
+      ],
+      "behavior": {
+        "type": "drive"
+      },
+      "solid": false,
+      "tier": 2,
+      "source": "Papi, 2026-10-13: more cars, the overworld is boring outside downtown (Littlewood Drive)"
+    },
+    {
+      "id": "car-jean",
+      "kind": "decor",
+      "name": "A car",
+      "look": {
+        "kind": "sprite",
+        "sprite": "drivecar",
+        "tint": "#1f618d"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 40,
+              "y": 255
+            }
+          },
+          "route": [
+            {
+              "tile": {
+                "x": 78,
+                "y": 241
+              }
+            }
+          ]
+        }
+      ],
+      "behavior": {
+        "type": "drive"
+      },
+      "solid": false,
+      "tier": 2,
+      "source": "Papi, 2026-10-13: more cars, the overworld is boring outside downtown (Jean Street)"
+    },
+    {
+      "id": "car-wildwood",
+      "kind": "decor",
+      "name": "A car",
+      "look": {
+        "kind": "sprite",
+        "sprite": "drivecar",
+        "tint": "#b7950b"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 104,
+              "y": 254
+            }
+          },
+          "route": [
+            {
+              "tile": {
+                "x": 60,
+                "y": 272
+              }
+            }
+          ]
+        }
+      ],
+      "behavior": {
+        "type": "drive"
+      },
+      "solid": false,
+      "tier": 2,
+      "source": "Papi, 2026-10-13: more cars, the overworld is boring outside downtown (Wildwood Avenue)"
+    },
+    {
+      "id": "car-requa",
+      "kind": "decor",
+      "name": "A car",
+      "look": {
+        "kind": "sprite",
+        "sprite": "drivecar",
+        "tint": "#cb4335"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 174,
+              "y": 249
+            }
+          },
+          "route": [
+            {
+              "tile": {
+                "x": 217,
+                "y": 240
+              }
+            }
+          ]
+        }
+      ],
+      "behavior": {
+        "type": "drive"
+      },
+      "solid": false,
+      "tier": 2,
+      "source": "Papi, 2026-10-13: more cars, the overworld is boring outside downtown (Wildwood Avenue)"
+    },
+    {
+      "id": "car-wildwood-hampton",
+      "kind": "decor",
+      "name": "A car",
+      "look": {
+        "kind": "sprite",
+        "sprite": "drivecar",
+        "tint": "#5d6d7e"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 243,
+              "y": 249
+            }
+          },
+          "route": [
+            {
+              "tile": {
+                "x": 287,
+                "y": 275
+              }
+            }
+          ]
+        }
+      ],
+      "behavior": {
+        "type": "drive"
+      },
+      "solid": false,
+      "tier": 2,
+      "source": "Papi, 2026-10-13: more cars, the overworld is boring outside downtown (Wildwood Avenue)"
+    },
+    {
+      "id": "car-lexford",
+      "kind": "decor",
+      "name": "A car",
+      "look": {
+        "kind": "sprite",
+        "sprite": "drivecar",
+        "tint": "#2e86c1"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 385,
+              "y": 252
+            }
+          },
+          "route": [
+            {
+              "tile": {
+                "x": 400,
+                "y": 277
+              }
+            }
+          ]
+        }
+      ],
+      "behavior": {
+        "type": "drive"
+      },
+      "solid": false,
+      "tier": 2,
+      "source": "Papi, 2026-10-13: more cars, the overworld is boring outside downtown (Lexford Road)"
+    },
+    {
+      "id": "car-walavista",
+      "kind": "decor",
+      "name": "A car",
+      "look": {
+        "kind": "sprite",
+        "sprite": "drivecar",
+        "tint": "#c0392b"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 174,
+              "y": 324
+            }
+          },
+          "route": [
+            {
+              "tile": {
+                "x": 198,
+                "y": 306
+              }
+            }
+          ]
+        }
+      ],
+      "behavior": {
+        "type": "drive"
+      },
+      "solid": false,
+      "tier": 2,
+      "source": "Papi, 2026-10-13: more cars, the overworld is boring outside downtown (Walavista Avenue)"
+    },
+    {
+      "id": "car-ashmount",
+      "kind": "decor",
+      "name": "A car",
+      "look": {
+        "kind": "sprite",
+        "sprite": "drivecar",
+        "tint": "#f1c40f"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 243,
+              "y": 327
+            }
+          },
+          "route": [
+            {
+              "tile": {
+                "x": 281,
+                "y": 343
+              }
+            }
+          ]
+        }
+      ],
+      "behavior": {
+        "type": "drive"
+      },
+      "solid": false,
+      "tier": 2,
+      "source": "Papi, 2026-10-13: more cars, the overworld is boring outside downtown (Ashmount Avenue)"
+    },
+    {
       "id": "home-mailbox",
       "kind": "sign",
       "name": "The mailbox",
