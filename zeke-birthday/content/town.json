@@ -713,7 +713,7 @@
         },
         {
           "lines": [
-            "PPD BLUE. PICK OF THE WEEK: 'What do teens without ebikes do?' Teens getting cars to honk at them. WHERE: San Carlos Ave at El Cerrito, west of the Middle School."
+            "PPD BLUE. PICK OF THE WEEK: 'What do teens without ebikes do?' Teens getting cars to honk at them. WHERE: San Carlos Ave, between Magnolia and Oakland Ave, west of the Middle School."
           ],
           "when": {
             "notFlags": ["got:ppd:honk"]
@@ -7071,9 +7071,7 @@
       "spots": [
         {
           "at": {
-            "place": "sancarlos",
-            "dx": 2,
-            "dy": -1
+            "label": "San Carlos Avenue"
           }
         }
       ],
@@ -7140,9 +7138,9 @@
       "spots": [
         {
           "at": {
-            "place": "sancarlos",
-            "dx": 5,
-            "dy": -1
+            "label": "San Carlos Avenue",
+            "dx": 2,
+            "dy": 1
           }
         }
       ],
