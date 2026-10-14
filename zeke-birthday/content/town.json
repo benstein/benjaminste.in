@@ -4484,6 +4484,32 @@
       "source": "Piedmont Post 2026-09-16, 2026-09-23 (Cardboard Boat Race results)"
     },
     {
+      "id": "pool-board",
+      "kind": "decor",
+      "name": "The high dive",
+      "look": {
+        "kind": "sprite",
+        "sprite": "diveboard"
+      },
+      "spots": [
+        {
+          "at": {
+            "landmark": "pool",
+            "dx": 0,
+            "dy": 2
+          }
+        }
+      ],
+      "prompt": "dive",
+      "talks": [
+        {
+          "lines": [],
+          "game": "dive"
+        }
+      ],
+      "source": "Papi, 2026-10-14: a 3 m board at the pool, with three judges and a front desk guy in range of a cannonball"
+    },
+    {
       "id": "jack-fischrup",
       "kind": "npc",
       "name": "Jack Fischrup",
