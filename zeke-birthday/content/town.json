@@ -5768,6 +5768,222 @@
       "source": "Piedmont Post 2026-09-16 (History of Piedmont)"
     },
     {
+      "id": "headstone-1",
+      "kind": "sign",
+      "name": "Zeke's 13th Year",
+      "title": "Mountain View Cemetery",
+      "look": {
+        "kind": "sprite",
+        "sprite": "headstone"
+      },
+      "spots": [
+        {
+          "at": {
+            "place": "cemetery",
+            "dx": 14,
+            "dy": 4
+          }
+        }
+      ],
+      "solid": true,
+      "prompt": "read",
+      "talks": [
+        {
+          "lines": ["2025 - 2026.", "It smelled like Axe body spray and feet."]
+        }
+      ],
+      "source": "Papi, 2026-10-14: a joke headstone in Mountain View Cemetery, for the ghost night"
+    },
+    {
+      "id": "headstone-2",
+      "kind": "sign",
+      "name": "Papi's Last Nerve",
+      "title": "Mountain View Cemetery",
+      "look": {
+        "kind": "sprite",
+        "sprite": "headstone"
+      },
+      "spots": [
+        {
+          "at": {
+            "place": "cemetery",
+            "dx": 20,
+            "dy": 8
+          }
+        }
+      ],
+      "solid": true,
+      "prompt": "read",
+      "talks": [
+        {
+          "lines": ["Cause of death: Zeke.", "Survived by no other nerves."]
+        }
+      ],
+      "source": "Papi, 2026-10-14: a joke headstone in Mountain View Cemetery, for the ghost night"
+    },
+    {
+      "id": "headstone-3",
+      "kind": "sign",
+      "name": "Gabi's Chess Rating",
+      "title": "Mountain View Cemetery",
+      "look": {
+        "kind": "sprite",
+        "sprite": "headstone"
+      },
+      "spots": [
+        {
+          "at": {
+            "place": "cemetery",
+            "dx": 26,
+            "dy": 4
+          }
+        }
+      ],
+      "solid": true,
+      "prompt": "read",
+      "talks": [
+        {
+          "lines": ["Temporarily deceased.", "Will rise again. Probably. Maybe."]
+        }
+      ],
+      "source": "Papi, 2026-10-14: a joke headstone in Mountain View Cemetery, for the ghost night"
+    },
+    {
+      "id": "headstone-4",
+      "kind": "sign",
+      "name": "The Homework",
+      "title": "Mountain View Cemetery",
+      "look": {
+        "kind": "sprite",
+        "sprite": "headstone"
+      },
+      "spots": [
+        {
+          "at": {
+            "place": "cemetery",
+            "dx": 12,
+            "dy": -4
+          }
+        }
+      ],
+      "solid": true,
+      "prompt": "read",
+      "talks": [
+        {
+          "lines": ["Soup ate it.", "Soup regrets nothing."]
+        }
+      ],
+      "source": "Papi, 2026-10-14: a joke headstone in Mountain View Cemetery, for the ghost night"
+    },
+    {
+      "id": "headstone-5",
+      "kind": "sign",
+      "name": "Zubin's Dignity",
+      "title": "Mountain View Cemetery",
+      "look": {
+        "kind": "sprite",
+        "sprite": "headstone"
+      },
+      "spots": [
+        {
+          "at": {
+            "place": "cemetery",
+            "dx": 20,
+            "dy": -2
+          }
+        }
+      ],
+      "solid": true,
+      "prompt": "read",
+      "talks": [
+        {
+          "lines": ["Lost at Kian's beach party.", "Taken by sand crabs. In the trunks. Rest in pieces."]
+        }
+      ],
+      "source": "Papi, 2026-10-14: a joke headstone in Mountain View Cemetery, for the ghost night"
+    },
+    {
+      "id": "headstone-6",
+      "kind": "sign",
+      "name": "Zeke's Screen Time",
+      "title": "Mountain View Cemetery",
+      "look": {
+        "kind": "sprite",
+        "sprite": "headstone"
+      },
+      "spots": [
+        {
+          "at": {
+            "place": "cemetery",
+            "dx": 30,
+            "dy": 10
+          }
+        }
+      ],
+      "solid": true,
+      "prompt": "read",
+      "talks": [
+        {
+          "lines": ["Gone every school night at 9.", "Mami pulled the plug. Mami always pulls the plug."]
+        }
+      ],
+      "source": "Papi, 2026-10-14: a joke headstone in Mountain View Cemetery, for the ghost night"
+    },
+    {
+      "id": "headstone-7",
+      "kind": "sign",
+      "name": "The Last Slice",
+      "title": "Mountain View Cemetery",
+      "look": {
+        "kind": "sprite",
+        "sprite": "headstone"
+      },
+      "spots": [
+        {
+          "at": {
+            "place": "cemetery",
+            "dx": 8,
+            "dy": -10
+          }
+        }
+      ],
+      "solid": true,
+      "prompt": "read",
+      "talks": [
+        {
+          "lines": ["Nobody admits anything.", "Ben C was seen nearby."]
+        }
+      ],
+      "source": "Papi, 2026-10-14: a joke headstone in Mountain View Cemetery, for the ghost night"
+    },
+    {
+      "id": "headstone-8",
+      "kind": "sign",
+      "name": "Here Lies Salad's Ball",
+      "title": "Mountain View Cemetery",
+      "look": {
+        "kind": "sprite",
+        "sprite": "headstone"
+      },
+      "spots": [
+        {
+          "at": {
+            "place": "cemetery",
+            "dx": 18,
+            "dy": -12
+          }
+        }
+      ],
+      "solid": true,
+      "prompt": "read",
+      "talks": [
+        {
+          "lines": ["Somewhere in a hedge.", "Forever. Salad still checks."]
+        }
+      ],
+      "source": "Papi, 2026-10-14: a joke headstone in Mountain View Cemetery, for the ghost night"
+    },
+    {
       "id": "nace-banner",
       "kind": "decor",
       "name": "NACE IS NICE",
