@@ -5670,6 +5670,33 @@
       "source": "Papi, 2026-10-14: the chemistry lab at Piedmont High, seven bottles and ten reactions to find"
     },
     {
+      "id": "pms-classroom",
+      "kind": "decor",
+      "name": "A classroom window",
+      "look": {
+        "kind": "sprite",
+        "sprite": "bulletin",
+        "tint": "#33691e"
+      },
+      "spots": [
+        {
+          "at": {
+            "landmark": "pms",
+            "dx": 1,
+            "dy": 2
+          }
+        }
+      ],
+      "prompt": "go in",
+      "talks": [
+        {
+          "lines": [],
+          "game": "chalkboard"
+        }
+      ],
+      "source": "Papi, 2026-10-14: the chalkboard at Piedmont Middle, a Mad Minute and a board full of nonsense math"
+    },
+    {
       "id": "cone-1",
       "kind": "decor",
       "name": "Traffic cone",
