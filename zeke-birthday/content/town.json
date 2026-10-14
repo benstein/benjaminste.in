@@ -6978,6 +6978,60 @@
       "source": "Piedmont Post 2026-09-02"
     },
     {
+      "id": "ctrain-stop",
+      "kind": "decor",
+      "name": "The C Train stop",
+      "look": {
+        "kind": "sprite",
+        "sprite": "trainstop"
+      },
+      "spots": [
+        {
+          "at": {
+            "landmark": "ctrain",
+            "dx": 0,
+            "dy": 2
+          }
+        }
+      ],
+      "prompt": "wait",
+      "talks": [
+        {
+          "lines": [],
+          "game": "ctrain"
+        }
+      ],
+      "source": "Papi, 2026-10-14: wait at the old Key System station and the C Train comes back for one more ride"
+    },
+    {
+      "id": "calvert-trainstop",
+      "kind": "decor",
+      "name": "A C Train stop",
+      "look": {
+        "kind": "sprite",
+        "sprite": "trainstop"
+      },
+      "spots": [
+        {
+          "at": {
+            "tile": {
+              "x": 322,
+              "y": 170
+            },
+            "exact": true
+          }
+        }
+      ],
+      "prompt": "wait",
+      "talks": [
+        {
+          "lines": [],
+          "game": "ctrain"
+        }
+      ],
+      "source": "Papi, 2026-10-14: Not historical: the C Train never came up Calvert Court. It does now."
+    },
+    {
       "id": "street-vista",
       "kind": "sign",
       "name": "Vista Avenue",
