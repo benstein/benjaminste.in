@@ -5724,6 +5724,32 @@
       "source": "Papi, 2026-10-14: the Havens spelling bee, eight words and then ZEKIEPOO"
     },
     {
+      "id": "wildwood-tetherball",
+      "kind": "decor",
+      "name": "A tetherball pole",
+      "look": {
+        "kind": "sprite",
+        "sprite": "tetherball"
+      },
+      "spots": [
+        {
+          "at": {
+            "landmark": "wildwood",
+            "dx": 1,
+            "dy": 3
+          }
+        }
+      ],
+      "prompt": "play",
+      "talks": [
+        {
+          "lines": [],
+          "game": "tetherball"
+        }
+      ],
+      "source": "Papi, 2026-10-14: tetherball at Wildwood against Brayden, a kindergartner who never loses"
+    },
+    {
       "id": "cone-1",
       "kind": "decor",
       "name": "Traffic cone",

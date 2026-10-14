@@ -24,15 +24,15 @@
         "h": 32
       }
     },
-    "bell": {
+    "tetherball": {
       "frame": {
         "x": 112,
         "y": 0,
         "w": 16,
-        "h": 24
+        "h": 32
       }
     },
-    "bulletin": {
+    "bell": {
       "frame": {
         "x": 128,
         "y": 0,
@@ -40,7 +40,7 @@
         "h": 24
       }
     },
-    "bulletin@33691e": {
+    "bulletin": {
       "frame": {
         "x": 144,
         "y": 0,
@@ -48,7 +48,7 @@
         "h": 24
       }
     },
-    "bulletin@fdd835": {
+    "bulletin@33691e": {
       "frame": {
         "x": 160,
         "y": 0,
@@ -56,7 +56,7 @@
         "h": 24
       }
     },
-    "camera": {
+    "bulletin@fdd835": {
       "frame": {
         "x": 176,
         "y": 0,
@@ -64,7 +64,7 @@
         "h": 24
       }
     },
-    "camera-1": {
+    "camera": {
       "frame": {
         "x": 192,
         "y": 0,
@@ -72,7 +72,7 @@
         "h": 24
       }
     },
-    "candyrack": {
+    "camera-1": {
       "frame": {
         "x": 208,
         "y": 0,
@@ -80,9 +80,17 @@
         "h": 24
       }
     },
-    "cooler": {
+    "candyrack": {
       "frame": {
         "x": 224,
+        "y": 0,
+        "w": 16,
+        "h": 24
+      }
+    },
+    "cooler": {
+      "frame": {
+        "x": 240,
         "y": 0,
         "w": 16,
         "h": 24
