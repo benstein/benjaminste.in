@@ -5618,6 +5618,32 @@
       "source": "Papi, 2026-10-14: the half-pipe at the Skate Park, for scooter tricks"
     },
     {
+      "id": "phs-lab",
+      "kind": "decor",
+      "name": "The chemistry lab window",
+      "look": {
+        "kind": "sprite",
+        "sprite": "beaker"
+      },
+      "spots": [
+        {
+          "at": {
+            "landmark": "phs",
+            "dx": 1,
+            "dy": 2
+          }
+        }
+      ],
+      "prompt": "go in",
+      "talks": [
+        {
+          "lines": [],
+          "game": "chemlab"
+        }
+      ],
+      "source": "Papi, 2026-10-14: the chemistry lab at Piedmont High, seven bottles and ten reactions to find"
+    },
+    {
       "id": "cone-1",
       "kind": "decor",
       "name": "Traffic cone",
