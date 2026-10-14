@@ -99,7 +99,8 @@
     "dog-ginger",
     "ebike-kids",
     "paper-kid",
-    "hungry-man"
+    "hungry-man",
+    "cheddar"
   ],
   "spritePortraits": [
     "banner",
@@ -111,6 +112,7 @@
     "camera",
     "candyrack",
     "car",
+    "cat",
     "chalk",
     "cone",
     "cookie",

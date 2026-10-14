@@ -10668,6 +10668,88 @@
         "place": "Southwest Corner of the Video Game Map",
         "caption": "Zeke, Soup and Salad on Grand Avenue, a few blocks from the Grand Lake Theatre, in the bottom left corner of the map. Soup wanted popcorn."
       }
+    },
+    {
+      "id": "princess-donut",
+      "kind": "critter",
+      "name": "Princess Donut",
+      "title": "Piedmont Center for the Arts",
+      "look": {
+        "kind": "sprite",
+        "sprite": "cat"
+      },
+      "spots": [
+        {
+          "at": {
+            "landmark": "pca",
+            "dx": 3,
+            "dy": 1
+          }
+        }
+      ],
+      "solid": true,
+      "prompt": "talk",
+      "talks": [
+        {
+          "once": true,
+          "sets": ["secret:donut"],
+          "lines": [
+            "You may approach. Slowly.",
+            "I am Princess Donut. Former Grand Champion, current queen of this staircase, and I have one point two million followers.",
+            "And you have... broccoli on your head. Fascinating. Is that a choice?"
+          ]
+        },
+        {
+          "lines": [
+            "Do not let those dogs near me. The small one looked at me. I felt it.",
+            "Mongo would eat you in one bite. Mongo is a dinosaur. Keep up.",
+            "Fourteen? Ugh. I was a Grand Champion before I was one. Try harder."
+          ]
+        }
+      ],
+      "source": "Papi, 2026-10-14: Zeke's book, Dungeon Crawler Carl (trivia question 7)"
+    },
+    {
+      "id": "cheddar",
+      "kind": "pet",
+      "name": "Cheddar",
+      "title": "Captain Holt's dog",
+      "look": {
+        "kind": "dog",
+        "size": "small",
+        "coat": "#d98a3a",
+        "patch": "#f5efe6"
+      },
+      "spots": [
+        {
+          "at": {
+            "landmark": "police",
+            "dx": 3,
+            "dy": 1
+          }
+        }
+      ],
+      "prompt": "pet",
+      "talks": [
+        {
+          "once": true,
+          "sets": ["secret:cheddar"],
+          "sound": "bark",
+          "lines": [
+            "A corgi in a tiny police vest. His tag says CHEDDAR.",
+            "Cheddar regards you with total professionalism."
+          ]
+        },
+        {
+          "sound": "bark",
+          "lines": [
+            "Cheddar is not a dog. Cheddar is a detective. He will not be taking questions.",
+            "BONE?!",
+            "You try to pet Cheddar. He allows it. Once. Do not get comfortable."
+          ]
+        }
+      ],
+      "source": "Papi, 2026-10-14: Brooklyn Nine-Nine, Captain Holt's dog (trivia question 8)"
     }
   ]
 }
