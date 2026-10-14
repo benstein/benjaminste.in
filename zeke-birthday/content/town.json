@@ -5697,6 +5697,33 @@
       "source": "Papi, 2026-10-14: the chalkboard at Piedmont Middle, a Mad Minute and a board full of nonsense math"
     },
     {
+      "id": "havens-bee",
+      "kind": "decor",
+      "name": "A poster: SPELLING BEE TODAY",
+      "look": {
+        "kind": "sprite",
+        "sprite": "bulletin",
+        "tint": "#fdd835"
+      },
+      "spots": [
+        {
+          "at": {
+            "landmark": "havens",
+            "dx": 1,
+            "dy": 2
+          }
+        }
+      ],
+      "prompt": "enter",
+      "talks": [
+        {
+          "lines": [],
+          "game": "spellingbee"
+        }
+      ],
+      "source": "Papi, 2026-10-14: the Havens spelling bee, eight words and then ZEKIEPOO"
+    },
+    {
       "id": "cone-1",
       "kind": "decor",
       "name": "Traffic cone",
