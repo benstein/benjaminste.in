@@ -5592,6 +5592,32 @@
       "source": "Piedmont Skate Park (existing landmark), next to the patch"
     },
     {
+      "id": "skate-ramp",
+      "kind": "decor",
+      "name": "The half-pipe",
+      "look": {
+        "kind": "sprite",
+        "sprite": "ramp"
+      },
+      "spots": [
+        {
+          "at": {
+            "landmark": "skate",
+            "dx": -1,
+            "dy": 1
+          }
+        }
+      ],
+      "prompt": "ride",
+      "talks": [
+        {
+          "lines": [],
+          "game": "halfpipe"
+        }
+      ],
+      "source": "Papi, 2026-10-14: the half-pipe at the Skate Park, for scooter tricks"
+    },
+    {
       "id": "cone-1",
       "kind": "decor",
       "name": "Traffic cone",
