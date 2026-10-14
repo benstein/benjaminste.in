@@ -4779,6 +4779,32 @@
       "source": "Piedmont Post 2026-09-16 (History of Piedmont: Walter Blair)"
     },
     {
+      "id": "quarry-edge",
+      "kind": "decor",
+      "name": "The quarry rim",
+      "look": {
+        "kind": "sprite",
+        "sprite": "barrier"
+      },
+      "spots": [
+        {
+          "at": {
+            "landmark": "quarry",
+            "dx": 0,
+            "dy": 2
+          }
+        }
+      ],
+      "prompt": "shout",
+      "talks": [
+        {
+          "lines": [],
+          "game": "echo"
+        }
+      ],
+      "source": "Papi, 2026-10-14: the rim of Blair's Quarry, where a shout comes back"
+    },
+    {
       "id": "milk-can",
       "kind": "sign",
       "name": "An old milk can",
