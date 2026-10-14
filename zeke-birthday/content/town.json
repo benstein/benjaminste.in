@@ -6469,6 +6469,34 @@
       "source": "Piedmont Post 2026-08-26 ('may last until the first rain')"
     },
     {
+      "id": "chalk-box",
+      "kind": "decor",
+      "name": "A bucket of sidewalk chalk",
+      "look": {
+        "kind": "sprite",
+        "sprite": "chalkbucket",
+        "tint": "#ffd54f"
+      },
+      "spots": [
+        {
+          "at": {
+            "landmark": "beach",
+            "dx": 5,
+            "dy": 2,
+            "exact": true
+          }
+        }
+      ],
+      "prompt": "draw",
+      "talks": [
+        {
+          "lines": [],
+          "game": "chalk"
+        }
+      ],
+      "source": "Papi, 2026-10-14: a bucket of sidewalk chalk on the Beach Elementary blacktop, and whatever Zeke draws stays there"
+    },
+    {
       "id": "padre-grande",
       "kind": "npc",
       "name": "Padre Grande",
