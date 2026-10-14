@@ -4805,6 +4805,33 @@
       "source": "Papi, 2026-10-14: the rim of Blair's Quarry, where a shout comes back"
     },
     {
+      "id": "witter-plate",
+      "kind": "decor",
+      "name": "Home plate",
+      "look": {
+        "kind": "sprite",
+        "sprite": "homeplate"
+      },
+      "spots": [
+        {
+          "at": {
+            "landmark": "witter",
+            "dx": -1,
+            "dy": 2
+          }
+        }
+      ],
+      "solid": false,
+      "prompt": "bat",
+      "talks": [
+        {
+          "lines": [],
+          "game": "derby"
+        }
+      ],
+      "source": "Papi, 2026-10-14: home plate at Witter Field, for a home run derby"
+    },
+    {
       "id": "milk-can",
       "kind": "sign",
       "name": "An old milk can",
