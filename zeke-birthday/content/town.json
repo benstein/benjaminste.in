@@ -7138,34 +7138,6 @@
       "source": "Papi, 2026-10-14: wait at the old Key System station and the C Train comes back for one more ride"
     },
     {
-      "id": "calvert-trainstop",
-      "kind": "decor",
-      "name": "A C Train stop",
-      "look": {
-        "kind": "sprite",
-        "sprite": "trainstop"
-      },
-      "spots": [
-        {
-          "at": {
-            "tile": {
-              "x": 302,
-              "y": 151
-            },
-            "exact": true
-          }
-        }
-      ],
-      "prompt": "wait",
-      "talks": [
-        {
-          "lines": [],
-          "game": "ctrain"
-        }
-      ],
-      "source": "Papi, 2026-10-14: Not historical: the C Train never came up Calvert Court. It does now. Moved 2026-10-14 from beside the hoop to the northwest end, at the corner of Blair, so the two are not confused."
-    },
-    {
       "id": "street-vista",
       "kind": "sign",
       "name": "Vista Avenue",
@@ -11182,7 +11154,7 @@
       "id": "princess-donut",
       "kind": "critter",
       "name": "Princess Donut",
-      "title": "Piedmont Center for the Arts",
+      "title": "Park Way",
       "look": {
         "kind": "sprite",
         "sprite": "cat"
@@ -11190,9 +11162,11 @@
       "spots": [
         {
           "at": {
-            "landmark": "pca",
-            "dx": 3,
-            "dy": 1
+            "tile": {
+              "x": 181,
+              "y": 127
+            },
+            "exact": true
           }
         }
       ],
@@ -11204,7 +11178,7 @@
           "sets": ["secret:donut"],
           "lines": [
             "You may approach. Slowly.",
-            "I am Princess Donut. Former Grand Champion, current queen of this staircase, and I have one point two million followers.",
+            "I am Princess Donut. Former Grand Champion, current queen of Park Way, and I have one point two million followers.",
             "And you have... broccoli on your head. Fascinating. Is that a choice?"
           ]
         },
@@ -11216,7 +11190,7 @@
           ]
         }
       ],
-      "source": "Papi, 2026-10-14: Zeke's book, Dungeon Crawler Carl (trivia question 7)"
+      "source": "Papi, 2026-10-14: Zeke's book, Dungeon Crawler Carl (trivia question 7) Moved 2026-10-14 from the arts center steps to a quiet stretch of Park Way."
     },
     {
       "id": "cheddar",

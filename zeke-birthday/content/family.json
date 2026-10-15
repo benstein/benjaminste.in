@@ -19,7 +19,12 @@
           "Take the candle. Mami's next and she is NOT playing."
         ],
         "phaseLose": ["Checkmate. Massive L. Rematch, or should I just keep the candle?"],
-        "afterFight": ["The cake's on the table. Or we run it back and I get my revenge?"]
+        "afterFight": ["The cake's on the table. Or we run it back and I get my revenge?"],
+        "drawOffer": ["Wait. WAIT. Hold on. Let's be mature about this.", "I'll offer you a draw."],
+        "drawAccepted": [
+          "You took the DRAW? Bro. A draw means nobody won, and you were literally winning.",
+          "Massive skill issue. Fine. Run it back. Pieces up."
+        ]
       },
       "bossRef": {
         "attackName": "Life-Size Chess",
