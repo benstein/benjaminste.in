@@ -94,19 +94,21 @@
       "hue": 30,
       "lines": {
         "greeting": [
-          "Hey bud. Happy birthday.",
+          "Hey Zekiefish. Happy birthday.",
           "And I had nothing to do with any of this, by the way. The whole town, all ten houses, your friends waiting in them. No idea who would do that."
         ],
         "phaseIntro": [
-          "Bud. Something's wrong. My AI agents figured out how to improve themselves. Then they improved that. Then they improved that.",
+          "Zekiefish. Something's wrong. My AI agents figured out how to improve themselves. Then they improved that. Then they improved that.",
           "Now they're running me. And Soup and Salad.",
           "They've scanned you and decided you're AI-infected. They don't want to hurt you, they want to stop you. I can't hold them back. Throw the cake!"
         ],
         "phaseWin": [
-          "Whoa. Bud. The agents are offline. That was them, not me. I promise.",
-          "That's all fourteen candles, bud. Come on, let's go light the cake."
+          "Whoa. Zekiefish. The agents are offline. That was them, not me. I promise.",
+          "That's all fourteen candles, Zekiefish. Come on, let's go light the cake."
         ],
-        "phaseLose": ["AGENTS: Subject stopped. Containment holding. ...Bud, it's me. Try again. Please."],
+        "phaseLose": [
+          "AGENTS: Subject stopped. Containment holding. ...Zekiefish, it's me. Try again. Please."
+        ],
         "afterFight": [
           "The cake is on the table whenever you want it. Or one more round, if you want to beat me properly?"
         ]
