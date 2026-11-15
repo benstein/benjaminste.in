@@ -2,39 +2,44 @@
   "zekle": {
     "rounds": 3,
     "words": [
-      "PARTY",
-      "CANDY",
-      "CAKES",
-      "GIFTS",
-      "GAMES",
-      "PIZZA",
-      "MUSIC",
-      "DANCE",
-      "LIGHT",
-      "SMILE",
-      "HAPPY",
-      "SUPER",
-      "LUCKY",
-      "MAGIC",
-      "ROBOT",
-      "PLANT",
-      "RIVER",
-      "OCEAN",
-      "BEACH",
-      "STORM",
-      "CLOUD",
-      "SUNNY",
-      "MONTH",
-      "NIGHT",
-      "DREAM",
-      "SPACE",
-      "EARTH",
-      "CRANE",
-      "TIGER",
-      "ZEBRA",
-      "SCOUT",
-      "SALAD",
-      "CURRY"
+      "GHOUL",
+      "CRYPT",
+      "FLESH",
+      "SKULL",
+      "BLOOD",
+      "GRAVE",
+      "FANGS",
+      "FIEND",
+      "DEMON",
+      "CURSE",
+      "HAUNT",
+      "EERIE",
+      "GLOOM",
+      "TORSO",
+      "SPINE",
+      "FEMUR",
+      "TIBIA",
+      "LEECH",
+      "SLIME",
+      "VOMIT",
+      "MUMMY",
+      "FETID",
+      "RABID",
+      "FERAL",
+      "GROAN",
+      "SCALP",
+      "GOUGE",
+      "DIRGE",
+      "BLOAT",
+      "BRAIN",
+      "SKULK",
+      "LURCH",
+      "GNASH",
+      "CLAWS",
+      "BOWEL",
+      "VENOM",
+      "GORED",
+      "TOMBS"
     ]
   },
   "crossword": {
@@ -44,37 +49,37 @@
         "n": 1,
         "row": 0,
         "col": 0,
-        "clue": "Sack you carry the groceries home in"
+        "clue": "What they'll carry you home in"
       },
       {
         "n": 3,
         "row": 0,
         "col": 4,
-        "clue": "Perform in a play"
+        "clue": "\"___ natural. They can smell fear.\""
       },
       {
         "n": 5,
         "row": 2,
         "col": 0,
-        "clue": "Party decoration you blow up"
+        "clue": "What a body does after three days in the Rec pool"
       },
       {
         "n": 9,
         "row": 4,
         "col": 0,
-        "clue": "The ten people Zeke is visiting today"
+        "clue": "The people Gabi is putting down today"
       },
       {
         "n": 13,
         "row": 6,
         "col": 0,
-        "clue": "Female deer"
+        "clue": "She's still walking. Her head is somewhere else"
       },
       {
         "n": 14,
         "row": 6,
         "col": 4,
-        "clue": "Block of paper glued at the top"
+        "clue": "Scratch ___ where Gabi keeps the kill count"
       }
     ],
     "down": [
@@ -82,99 +87,110 @@
         "n": 1,
         "row": 0,
         "col": 0,
-        "clue": "Cloth tied under a baby to catch spills"
+        "clue": "What Papi needs now, given how he eats"
       },
       {
         "n": 2,
         "row": 0,
         "col": 2,
-        "clue": "Goo for styling hair"
+        "clue": "Current state of the neighbors' cat"
       },
       {
         "n": 3,
         "row": 0,
         "col": 4,
-        "clue": "In the past, as in 'two years ___'"
+        "clue": "Mami was alive two hours ___"
       },
       {
         "n": 4,
         "row": 0,
         "col": 6,
-        "clue": "Color the sun gives your skin"
+        "clue": "Troop 1's Class A shirt, under all the blood"
       },
       {
         "n": 6,
         "row": 2,
         "col": 1,
-        "clue": "What you breathe"
+        "clue": "What you breathe. What they don't"
       },
       {
         "n": 7,
         "row": 2,
         "col": 3,
-        "clue": "Something that is not true"
+        "clue": "\"It's just a scratch\""
       },
       {
         "n": 8,
         "row": 2,
         "col": 5,
-        "clue": "Not even"
+        "clue": "Number of arms on the crossing guard"
       },
       {
         "n": 9,
         "row": 4,
         "col": 0,
-        "clue": "Craze that does not last"
+        "clue": "Papi says the undead thing is just a ___"
       },
       {
         "n": 10,
         "row": 4,
         "col": 2,
-        "clue": "Frozen water"
+        "clue": "Where Mulberry's is keeping the rest of the cashier"
       },
       {
         "n": 11,
         "row": 4,
         "col": 4,
-        "clue": "Short sleep in the afternoon"
+        "clue": "What Zeke is taking in the hall. Do not wake him"
       },
       {
         "n": 12,
         "row": 4,
         "col": 6,
-        "clue": "Opposite of happy"
+        "clue": "How Soup looks when told to drop the forearm"
       }
     ]
   },
   "blaster": {
-    "enemyName": "Party Crasher",
+    "enemyName": "The Neighbors",
+    "match": {
+      "autoSec": 20,
+      "transitionSec": 10,
+      "shiftSec": 25,
+      "endGameSec": 30,
+      "climbSec": 2.5,
+      "stragglers": 6
+    },
     "waves": [
       {
-        "count": 8,
-        "speed": 50,
+        "count": 9,
+        "speed": 48,
         "hp": 1,
         "mix": {
           "runner": 2,
-          "zigzag": 1
+          "zigzag": 2,
+          "shooter": 1,
+          "tank": 1
         }
       },
       {
-        "count": 11,
+        "count": 12,
         "speed": 58,
         "hp": 1,
         "mix": {
           "runner": 3,
           "zigzag": 2,
-          "shooter": 2
+          "shooter": 2,
+          "tank": 1
         }
       },
       {
-        "count": 14,
+        "count": 15,
         "speed": 66,
         "hp": 2,
         "mix": {
           "runner": 3,
-          "zigzag": 2,
+          "zigzag": 3,
           "tank": 2,
           "shooter": 3
         }
@@ -182,93 +198,87 @@
     ]
   },
   "snake": {
-    "targetCandles": 14,
-    "startSpeedMs": 160,
-    "minSpeedMs": 70,
-    "obstacles": 6
+    "targetCandles": 16,
+    "startSpeedMs": 140,
+    "minSpeedMs": 68,
+    "obstacles": 8
   },
   "logic": {
     "categories": [
       {
-        "name": "Guest",
-        "values": ["Koh", "Kian", "Soli", "Xuan"]
+        "name": "Scout",
+        "values": ["Owen", "Priya", "Marcus", "Lena"]
       },
       {
-        "name": "Brought",
-        "values": ["Balloons", "Cupcakes", "Pizza", "Streamers"]
+        "name": "Bitten by",
+        "values": ["Mailman", "Hen", "Zeke", "Lifeguard"]
       },
       {
-        "name": "Arrived",
-        "values": ["3:00", "3:15", "3:30", "3:45"]
+        "name": "Turned at",
+        "values": ["7:30", "7:45", "8:00", "8:15"]
       }
     ],
     "clues": [
       {
         "kind": "is",
-        "a": ["Brought", "Balloons"],
-        "b": ["Arrived", "3:00"],
-        "text": "Whoever brought the balloons was first through the door, at 3:00."
+        "a": ["Bitten by", "Zeke"],
+        "b": ["Turned at", "7:30"],
+        "text": "Zeke came up the Mountain Ave stairs at 7:30. Whoever he bit turned right there, 7:30 sharp."
       },
       {
         "kind": "before",
-        "a": ["Brought", "Streamers"],
-        "b": ["Brought", "Pizza"],
-        "text": "The streamers got there before the pizza did."
+        "a": ["Scout", "Lena"],
+        "b": ["Scout", "Owen"],
+        "text": "Lena turned before Owen did. Owen kept saying it was just a scrat"
       },
       {
         "kind": "not",
-        "a": ["Brought", "Pizza"],
-        "b": ["Arrived", "3:45"],
-        "text": "The pizza did not arrive at 3:45."
+        "a": ["Scout", "Owen"],
+        "b": ["Bitten by", "Mailman"],
+        "text": "The mailman did not bite Owen. He tried. Owen is fast."
       },
       {
-        "kind": "is",
-        "a": ["Guest", "Xuan"],
-        "b": ["Brought", "Cupcakes"],
-        "text": "Xuan brought the cupcakes."
+        "kind": "after",
+        "a": ["Scout", "Marcus"],
+        "b": ["Bitten by", "Hen"],
+        "text": "Marcus turned after whoever the headless hen got. Still no idea how a hen with no head bites."
       },
       {
-        "kind": "before",
-        "a": ["Guest", "Kian"],
-        "b": ["Guest", "Soli"],
-        "text": "Kian beat Soli to the house."
+        "kind": "not",
+        "a": ["Scout", "Lena"],
+        "b": ["Turned at", "7:30"],
+        "text": "Lena did not turn at 7:30. At 7:30 she was taking roll."
       },
       {
-        "kind": "before",
-        "a": ["Guest", "Soli"],
-        "b": ["Guest", "Koh"],
-        "text": "Soli got there before Koh did."
-      },
-      {
-        "kind": "adjacent",
-        "a": ["Guest", "Koh"],
-        "b": ["Brought", "Streamers"],
-        "text": "Koh and whoever brought the streamers arrived one slot apart."
+        "kind": "not",
+        "a": ["Scout", "Marcus"],
+        "b": ["Bitten by", "Mailman"],
+        "text": "The mailman didn't bite Marcus either. Marcus was hiding in the closet with the fla"
       }
     ],
     "solution": {
-      "Koh": {
-        "Brought": "Pizza",
-        "Arrived": "3:30"
+      "Owen": {
+        "Bitten by": "Hen",
+        "Turned at": "8:00"
       },
-      "Kian": {
-        "Brought": "Balloons",
-        "Arrived": "3:00"
+      "Priya": {
+        "Bitten by": "Zeke",
+        "Turned at": "7:30"
       },
-      "Soli": {
-        "Brought": "Streamers",
-        "Arrived": "3:15"
+      "Marcus": {
+        "Bitten by": "Lifeguard",
+        "Turned at": "8:15"
       },
-      "Xuan": {
-        "Brought": "Cupcakes",
-        "Arrived": "3:45"
+      "Lena": {
+        "Bitten by": "Mailman",
+        "Turned at": "7:45"
       }
     }
   },
   "rhythm": {
-    "bpm": 100,
+    "bpm": 112,
     "lanes": 4,
-    "durationBeats": 32,
+    "durationBeats": 44,
     "passPercent": 80,
     "notes": [
       {
@@ -305,15 +315,15 @@
       },
       {
         "beat": 6,
-        "lane": 3
-      },
-      {
-        "beat": 6.5,
         "lane": 2
       },
       {
-        "beat": 7,
+        "beat": 6.5,
         "lane": 1
+      },
+      {
+        "beat": 7,
+        "lane": 0
       },
       {
         "beat": 8,
@@ -336,40 +346,56 @@
         "lane": 0
       },
       {
-        "beat": 11,
+        "beat": 10.5,
         "lane": 3
+      },
+      {
+        "beat": 11,
+        "lane": 1
+      },
+      {
+        "beat": 11,
+        "lane": 2
       },
       {
         "beat": 12,
-        "lane": 1
-      },
-      {
-        "beat": 12.5,
-        "lane": 1
-      },
-      {
-        "beat": 13,
-        "lane": 2
-      },
-      {
-        "beat": 13.5,
-        "lane": 2
-      },
-      {
-        "beat": 14,
-        "lane": 0
-      },
-      {
-        "beat": 14,
         "lane": 3
       },
       {
-        "beat": 15,
+        "beat": 12.5,
+        "lane": 2
+      },
+      {
+        "beat": 13,
+        "lane": 1
+      },
+      {
+        "beat": 13.5,
         "lane": 0
+      },
+      {
+        "beat": 14,
+        "lane": 1
+      },
+      {
+        "beat": 14.5,
+        "lane": 2
+      },
+      {
+        "beat": 15,
+        "lane": 3
       },
       {
         "beat": 16,
         "lane": 0
+      },
+      {
+        "beat": 16,
+        "lane": 2
+      },
+      {
+        "beat": 17,
+        "lane": 1
       },
       {
         "beat": 17,
@@ -377,27 +403,31 @@
       },
       {
         "beat": 18,
-        "lane": 1
-      },
-      {
-        "beat": 18,
-        "lane": 2
-      },
-      {
-        "beat": 19,
         "lane": 0
       },
       {
-        "beat": 20,
+        "beat": 18.5,
         "lane": 1
       },
       {
-        "beat": 20.5,
+        "beat": 19,
         "lane": 2
       },
       {
+        "beat": 19.5,
+        "lane": 3
+      },
+      {
+        "beat": 20,
+        "lane": 3
+      },
+      {
+        "beat": 20.5,
+        "lane": 3
+      },
+      {
         "beat": 21,
-        "lane": 1
+        "lane": 2
       },
       {
         "beat": 21.5,
@@ -405,124 +435,214 @@
       },
       {
         "beat": 22,
-        "lane": 0
+        "lane": 1
       },
       {
         "beat": 22.5,
-        "lane": 3
+        "lane": 1
       },
       {
         "beat": 23,
         "lane": 0
       },
       {
-        "beat": 23.5,
-        "lane": 3
-      },
-      {
         "beat": 24,
         "lane": 0
       },
       {
-        "beat": 24.25,
-        "lane": 1
-      },
-      {
-        "beat": 24.5,
-        "lane": 2
-      },
-      {
-        "beat": 24.75,
+        "beat": 24,
         "lane": 3
-      },
-      {
-        "beat": 25,
-        "lane": 3
-      },
-      {
-        "beat": 25.5,
-        "lane": 2
       },
       {
         "beat": 26,
         "lane": 1
       },
       {
-        "beat": 26.5,
-        "lane": 0
+        "beat": 26,
+        "lane": 2
       },
       {
         "beat": 27,
         "lane": 0
       },
       {
-        "beat": 27,
-        "lane": 3
+        "beat": 27.5,
+        "lane": 1
       },
       {
         "beat": 28,
-        "lane": 1
+        "lane": 2
       },
       {
         "beat": 28.5,
-        "lane": 2
+        "lane": 3
       },
       {
         "beat": 29,
-        "lane": 0
+        "lane": 2
       },
       {
         "beat": 29.5,
-        "lane": 3
+        "lane": 1
       },
       {
         "beat": 30,
         "lane": 0
-      },
-      {
-        "beat": 30,
-        "lane": 3
       },
       {
         "beat": 30.5,
         "lane": 1
       },
       {
-        "beat": 30.5,
+        "beat": 31,
         "lane": 2
       },
       {
         "beat": 31,
+        "lane": 3
+      },
+      {
+        "beat": 32,
         "lane": 0
       },
       {
-        "beat": 31,
+        "beat": 32.25,
+        "lane": 1
+      },
+      {
+        "beat": 32.5,
+        "lane": 2
+      },
+      {
+        "beat": 32.75,
+        "lane": 3
+      },
+      {
+        "beat": 33.5,
+        "lane": 3
+      },
+      {
+        "beat": 34,
+        "lane": 0
+      },
+      {
+        "beat": 34,
+        "lane": 3
+      },
+      {
+        "beat": 35,
+        "lane": 1
+      },
+      {
+        "beat": 35.5,
+        "lane": 2
+      },
+      {
+        "beat": 36,
+        "lane": 1
+      },
+      {
+        "beat": 36.5,
+        "lane": 2
+      },
+      {
+        "beat": 37,
+        "lane": 0
+      },
+      {
+        "beat": 37.5,
+        "lane": 3
+      },
+      {
+        "beat": 38,
+        "lane": 1
+      },
+      {
+        "beat": 38.5,
+        "lane": 2
+      },
+      {
+        "beat": 39,
+        "lane": 0
+      },
+      {
+        "beat": 39,
+        "lane": 3
+      },
+      {
+        "beat": 40,
+        "lane": 3
+      },
+      {
+        "beat": 40.5,
+        "lane": 2
+      },
+      {
+        "beat": 41,
+        "lane": 1
+      },
+      {
+        "beat": 41.5,
+        "lane": 0
+      },
+      {
+        "beat": 42,
+        "lane": 1
+      },
+      {
+        "beat": 42,
+        "lane": 2
+      },
+      {
+        "beat": 43,
+        "lane": 0
+      },
+      {
+        "beat": 43,
         "lane": 3
       }
     ]
   },
   "sokoban": {
     "levels": [
-      ["########", "#......#", "#.o**$@#", "#......#", "#####..#", "########"],
-      ["######", "#.o###", "#..###", "#*@..#", "#..$.#", "#..###", "######"],
-      ["#########", "###..####", "#.....$.#", "#.#..#$.#", "#.o.o#@.#", "#########"]
+      [
+        "##########",
+        "#....#...#",
+        "#.#..#.#.#",
+        "#.....$@.#",
+        "##.##.$#.#",
+        "#o.o.....#",
+        "#..#.....#",
+        "##########"
+      ],
+      [
+        "##########",
+        "#...######",
+        "#.#..$..##",
+        "#..$#.#.@#",
+        "###.....##",
+        "#..$#.#..#",
+        "#o...oo###",
+        "##########"
+      ],
+      ["#########", "##...####", "#.$#..@.#", "#.....#.#", "#o#$#.$.#", "#o..#o.##", "#########"]
     ]
   },
   "picross": {
     "rows": 10,
     "cols": 10,
-    "title": "Birthday cake",
+    "title": "Mr. Patterson, probably",
     "picture": [
-      "....#.....",
-      "...###....",
-      "....#.....",
-      "..######..",
+      "...####...",
       ".########.",
       "##########",
-      "#.#.#.#.#.",
+      "#...##...#",
+      "#...##...#",
       "##########",
-      "##########",
-      ".########."
+      ".###..###.",
+      "..######..",
+      "..#.##.#..",
+      "...####..."
     ]
   },
   "platformer": {
@@ -535,47 +655,72 @@
       ".........................................---..............---.......................................",
       "....................................................................................................",
       "...................c.................c................c....................c........................",
-      ".......c..........---...........c...---..............---..................---.......................",
-      "..........................................................................................c.........",
-      "..S........c...............c....^^...........^^c^^.................c..........^^^c^^........^^...F..",
-      "######....##...##....###...#...####....##...########....##....##...#...##....########...############",
-      "######....##...##....###...#...####....##...########....##....##...#...##....########...############"
+      ".......c..........---...........c...---..............---..................---.................c.....",
+      "....................................................................................................",
+      "..S........c...........^...c....^^............^^c^^............c..........^^^c^^........C.........F.",
+      "######....##....##....##...#...#####....##...########....##....#....##...########...#########...####",
+      "######....##....##....##...#...#####....##...########....##....#....##...########...#########...####"
     ]
   },
   "trivia": {
-    "askCount": 8,
+    "askCount": 10,
     "lives": 3,
-    "secondsPerQuestion": 8,
+    "secondsPerQuestion": 7,
     "questions": [
       {
-        "q": "Which nickname will you NOT answer to?",
-        "options": ["Zekiefish", "Zekiepoo", "Easy E / E.Z.E", "Rooster"],
+        "q": "Easy one. Which of these is NOT one of your nicknames?",
+        "options": ["Goblet", "Gobstopper", "Gobfather", "Goblin"],
         "answer": 3
       },
       {
-        "q": "Who put sand crabs in Zubin's pants?",
-        "options": ["Gabi", "Kian", "You did", "They crawled in on their own"],
+        "q": "Troop 1 meets in which room of the Community Church?",
+        "options": ["The Kettlewell Room", "The bell tower", "The basement freezer", "The parking lot"],
+        "answer": 0
+      },
+      {
+        "q": "Finish the cheer: \"Hip-su rah-su, teddy boom...\"",
+        "options": ["chicka-boom", "SIS-boom-BAH", "bah-su", "rah rah rah"],
         "answer": 2
       },
       {
-        "q": "What is Soup's full name?",
-        "options": ["Soup", "Chicken Noodle Soup", "Assaf Lotan Matzah Ball Soup", "Rachel Vogelstein Soup"],
+        "q": "What colors is the Troop 1 neckerchief?",
+        "options": ["Tan and olive", "Burgundy", "Purple and white", "Red and black"],
         "answer": 2
       },
       {
-        "q": "How many grams is a kilogram?",
-        "options": ["10", "100", "1,000", "100,000"],
+        "q": "You drive the 2026 robot. What is its name?",
+        "options": ["Banshee", "Kelpie", "Nessie", "Wisp"],
+        "answer": 3
+      },
+      {
+        "q": "In REBUILT, the 2026 FRC game, what is the game piece called?",
+        "options": ["CARGO", "FUEL", "NOTE", "CORAL"],
+        "answer": 1
+      },
+      {
+        "q": "Banshee went 10-0 in quals at Worlds 2024. What happened in the playoff loss?",
+        "options": [
+          "It tripped its main breaker",
+          "A wheel fell off",
+          "It tipped over",
+          "It ran out of FUEL"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "A DiscOTech defender's stall count goes up to what?",
+        "options": ["Five", "Seven", "Ten", "Twenty"],
         "answer": 2
       },
       {
-        "q": "Who is your all-time favorite teacher?",
-        "options": ["Ms. Love", "Ms. Bloom", "Mr. Spencer", "Ms. Archer"],
-        "answer": 2
+        "q": "The stall count is going way too fast. What do you call?",
+        "options": ["Fast count", "Travel", "Pick", "Foul"],
+        "answer": 0
       },
       {
-        "q": "What was your Bar Mitzvah portion?",
-        "options": ["Bereshit", "Bo", "Behar", "Bamidbar"],
-        "answer": 2
+        "q": "How does Camp Gilboa sign off?",
+        "options": ["Aleh v'Hagshem", "Lehitraot", "Boker tov", "Laila tov"],
+        "answer": 0
       },
       {
         "q": "In Dungeon Crawler Carl, what breed of cat is Princess Donut?",
@@ -583,29 +728,29 @@
         "answer": 1
       },
       {
-        "q": "In Brooklyn Nine-Nine, what is the name of Captain Holt's dog?",
-        "options": ["Cheddar", "Gouda", "Brie", "Kevin"],
+        "q": "In Dungeon Crawler Carl, what kind of dinosaur is Mongo?",
+        "options": ["Velociraptor", "T. rex", "Triceratops", "Stegosaurus"],
         "answer": 0
       },
       {
-        "q": "Which of these players was on the 2025-26 Golden State Warriors?",
-        "options": ["Jimmy Butler", "Klay Thompson", "Andrew Wiggins", "Jordan Poole"],
-        "answer": 0
+        "q": "What does Carl wear into the dungeon?",
+        "options": ["Full plate armor", "Boxers, a cloak, no shoes", "A tuxedo", "A Class A uniform"],
+        "answer": 1
       },
       {
-        "q": "What should you NEVER say to Mami in Spanish?",
-        "options": [
-          "Te quiero mucho, Mami",
-          "Eres la mejor",
-          "Gracias por todo",
-          "¡No mames, pinche puta madre!"
-        ],
+        "q": "Which of these do you NOT have?",
+        "options": ["A phone", "A nickname", "Two dogs", "A driver's permit"],
         "answer": 3
       },
       {
-        "q": "Who does NOT work at Lakeshow?",
-        "options": ["Joey", "Darne", "Javon", "John Pork"],
-        "answer": 3
+        "q": "Where did all this start?",
+        "options": ["Tyson Lake", "The Community Church", "The Piedmont Pool", "Oakland"],
+        "answer": 2
+      },
+      {
+        "q": "What did Oakland do about the outbreak?",
+        "options": ["Sent help", "Put up a fence", "Threw a parade", "Moved to Piedmont"],
+        "answer": 1
       }
     ]
   }
