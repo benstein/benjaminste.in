@@ -1,0 +1,130 @@
+{
+  "members": [
+    {
+      "id": "zeke",
+      "name": "Zeke",
+      "hue": 210,
+      "lines": {
+        "greeting": [
+          "Zeke. Eleven candles. Not bad, for you.",
+          "I got here first, obviously, and no, you don't get my candle for free. You have to earn it."
+        ],
+        "phaseIntro": [
+          "Me first. I called it.",
+          "Chess. You and me. Except the board is the floor and the pieces are life-size, and they're coming for you.",
+          "Dodge my pieces, knock over my pawns before they get across, and hit me with cake if you can get past my guards. Don't sell."
+        ],
+        "phaseWin": [
+          "Okay. Okay! Checkmate. You got me. That was low key kind of sigma.",
+          "Take the candle. Mami's next and she is NOT playing."
+        ],
+        "phaseLose": ["Checkmate. Massive L. Rematch, or should I just keep the candle?"],
+        "afterFight": ["The cake's on the table. Or we run it back and I get my revenge?"],
+        "drawOffer": ["Wait. WAIT. Hold on. Let's be mature about this.", "I'll offer you a draw."],
+        "drawAccepted": [
+          "You took the DRAW? Bro. A draw means nobody won, and you were literally winning.",
+          "Massive skill issue. Fine. Run it back. Pieces up."
+        ]
+      },
+      "bossRef": {
+        "attackName": "Life-Size Chess",
+        "taunt": "Your move, birthday boy."
+      }
+    },
+    {
+      "id": "mami",
+      "name": "Mami",
+      "hue": 340,
+      "lines": {
+        "greeting": [
+          "Mijo. Come here. I have been standing next to this cake since four o'clock.",
+          "Eleven candles already. And you walked the whole town for them, with the dogs, in those shoes."
+        ],
+        "phaseIntro": [
+          "My turn, mijo. And no, we are not fighting. You know the rule in this house: no violent video games.",
+          "I say a word in Spanish, you tell me what it means in English, and then you walk over here and you hug your mother. Seven times."
+        ],
+        "phaseWin": [
+          "Seven. Ay, mi amor, my heart.",
+          "Take the candle. Papi is next, and he is pretending he has no idea what is about to happen."
+        ],
+        "phaseLose": ["Otra vez, mijo. The words are not going anywhere and neither am I."],
+        "afterFight": [
+          "Everybody is here and the cake is on the table. Do you want to go around again, or should we light it?"
+        ]
+      },
+      "bossRef": {
+        "attackName": "Preguntas y Abrazos",
+        "taunt": "No violent video games, mijo. Just answer me.",
+        "vocabulary": [
+          {
+            "es": "estudiar",
+            "en": ["study"]
+          },
+          {
+            "es": "aprender",
+            "en": ["learn"]
+          },
+          {
+            "es": "leer",
+            "en": ["read"]
+          },
+          {
+            "es": "escribir",
+            "en": ["write"]
+          },
+          {
+            "es": "hablar",
+            "en": ["talk", "speak"]
+          },
+          {
+            "es": "practicar",
+            "en": ["practice", "practise"]
+          },
+          {
+            "es": "copiar",
+            "en": ["copy"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "papi",
+      "name": "Papi",
+      "hue": 30,
+      "lines": {
+        "greeting": [
+          "Hey Zekiefish. Happy birthday.",
+          "And I had nothing to do with any of this, by the way. The whole town, all ten houses, your friends waiting in them. No idea who would do that."
+        ],
+        "phaseIntro": [
+          "Zekiefish. Something's wrong. My AI agents figured out how to improve themselves. Then they improved that. Then they improved that.",
+          "Now they're running me. And Soup and Salad.",
+          "They've scanned you and decided you're AI-infected. They don't want to hurt you, they want to stop you. I can't hold them back. Throw the cake!"
+        ],
+        "phaseWin": [
+          "Whoa. Zekiefish. The agents are offline. That was them, not me. I promise.",
+          "That's all fourteen candles, Zekiefish. Come on, let's go light the cake."
+        ],
+        "phaseLose": [
+          "AGENTS: Subject stopped. Containment holding. ...Zekiefish, it's me. Try again. Please."
+        ],
+        "afterFight": [
+          "The cake is on the table whenever you want it. Or one more round, if you want to beat me properly?"
+        ]
+      },
+      "bossRef": {
+        "attackName": "Recursive Self-Improvement",
+        "taunt": "AGENTS: Infection detected. Stopping the birthday boy."
+      }
+    }
+  ],
+  "ending": {
+    "message": [
+      "Zeke, we are so proud of you, and of the young man you are becoming. You're funny, you're good to your brother (most days), and you show up for your friends. Ten of them were waiting in their houses tonight, which tells you everything about the kind of friend you are.",
+      "What a year. Lakeshow. Another summer at Tawonga. And your Bar Mitzvah, where you stood up in front of everyone who loves you and read Behar like you'd been doing it forever. Then tonight you walked all of Piedmont with Soup and Salad to collect all fourteen candles.",
+      "Here's to fourteen. We hope this is the happiest birthday you've ever had, and that all year long you never sell the clip. Make a wish, Zeke. Then blow out the candles before Gabi does."
+    ],
+    "credits": ["With love by Papi, all by himself, with no AI."]
+  }
+}
