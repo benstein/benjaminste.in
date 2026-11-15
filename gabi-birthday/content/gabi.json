@@ -689,7 +689,7 @@
       },
       {
         "q": "You drive the 2026 robot. What is its name?",
-        "options": ["Banshee", "Kelpie", "Nessie", "Wisp"],
+        "options": ["Banshee", "Kelpie", "Nessie", "John Dumper"],
         "answer": 3
       },
       {

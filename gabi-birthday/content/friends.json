@@ -63,14 +63,14 @@
       ],
       "replay": ["Same puzzle, faster? The walls aren't getting any cleaner."],
       "locked": "Cade's door is locked. Something red is dripping under it, in neat little rows.",
-      "clue": "Next stop: the high school. 8033 is holding the engineering lab. Bring your driver hands."
+      "clue": "Next stop: the high school. Kevin and 8033 are holding the Engineering Lab. Bring your driver hands."
     },
     "bio": "Ran out of markers on day two and switched to a medium his mother would not approve of. Writes clues on the wall. The wall is load-bearing. So is the clue."
   },
   {
     "id": "frc8033",
-    "name": "8033",
-    "portrait": "placeholder",
+    "name": "Kevin",
+    "portrait": "generated",
     "npcSprite": "placeholder",
     "hue": 275,
     "room": {
@@ -81,9 +81,9 @@
     "minigame": "blaster",
     "lines": {
       "greeting": [
-        "Room ST-128, Mary G. Ross Engineering Lab. The bumpers are purple and so are the walls now, sort of.",
+        "Engineering Lab. Gabi, it's Kevin. The bumpers are purple and so are the walls now, sort of.",
         "We've been in lockdown since build night. The robots kept working. The rest of us, mostly.",
-        "Gabi. Thank god. We need a driver. Wisp's charged, the hub's up, and the neighbors are coming over the Engineering Patio."
+        "We need a driver. John Dumper's charged, the hub's up, and the neighbors are coming over the Engineering Patio."
       ],
       "beforeGame": [
         "Twenty seconds of auto, then it's your stick. Three hordes. When the hub goes inactive, stop shooting and start ramming."
@@ -94,10 +94,10 @@
       ],
       "lose": ["They got the robot. That's okay, we have spares. We do not have spare people."],
       "replay": ["Queue up again? Pit's open. Pit is always open. Pit has nowhere else to be."],
-      "locked": "The lab door's chained from the inside. Through the window, a robot is guarding it. It's not ours.",
+      "locked": "The Engineering Lab door's chained from the inside. Through the window, Kevin is guarding it with a robot. It's not John Dumper.",
       "clue": "Gilboa's running a ken event in Dracena Park. A birthday party. Nobody has told the madrichimot they're dead."
     },
-    "bio": "An FRC team that went into lockdown on build night and kept building. The robots are fine. Several of the students are now mostly robot. Quals record: undefeated against the living."
+    "bio": "Held the Engineering Lab with 8033 since build night. The robots are fine. Kevin is mostly fine. Quals record: undefeated against the living."
   },
   {
     "id": "gilboa",
