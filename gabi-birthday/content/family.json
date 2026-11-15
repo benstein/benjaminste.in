@@ -6,29 +6,33 @@
       "hue": 210,
       "lines": {
         "greeting": [
-          "Zeke. Eleven candles. Not bad, for you.",
-          "I got here first, obviously, and no, you don't get my candle for free. You have to earn it."
+          "Gabi. You came home. Everyone's here. Everyone's SO here.",
+          "I'm fine, by the way. I'm a little damp. I've been damp since the pool. Don't look at my eyes, they're doing a thing."
         ],
         "phaseIntro": [
-          "Me first. I called it.",
-          "Chess. You and me. Except the board is the floor and the pieces are life-size, and they're coming for you.",
-          "Dodge my pieces, knock over my pawns before they get across, and hit me with cake if you can get past my guards. Don't sell."
+          "You play chess on your phone. I play chess with the living room.",
+          "Life-size. The pieces are coming for you. Some of them are the neighbors. Your move, Goblet."
         ],
         "phaseWin": [
-          "Okay. Okay! Checkmate. You got me. That was low key kind of sigma.",
-          "Take the candle. Mami's next and she is NOT playing."
+          "Checkmate. Fine. FINE. That was low key sigma, for a guy who's still alive.",
+          "Take the candle. Mami's next and she wants a hug so bad. Like, SO bad."
         ],
-        "phaseLose": ["Checkmate. Massive L. Rematch, or should I just keep the candle?"],
-        "afterFight": ["The cake's on the table. Or we run it back and I get my revenge?"],
-        "drawOffer": ["Wait. WAIT. Hold on. Let's be mature about this.", "I'll offer you a draw."],
+        "phaseLose": ["Checkmate. Massive L. Your rating's going down AND you're about to be lunch."],
+        "afterFight": [
+          "The cake's on the table. Or we run it back. I've got time. I've got all the time now."
+        ],
+        "drawOffer": [
+          "Wait. WAIT. Hold on. Let's be mature about this.",
+          "I'll offer you a draw. Come closer and shake on it."
+        ],
         "drawAccepted": [
-          "You took the DRAW? Bro. A draw means nobody won, and you were literally winning.",
-          "Massive skill issue. Fine. Run it back. Pieces up."
+          "You took the DRAW? Bro. You shook my hand. My hand came off. And then I bit you a little.",
+          "That's a skill issue AND a bite. Pieces up. Again."
         ]
       },
       "bossRef": {
         "attackName": "Life-Size Chess",
-        "taunt": "Your move, birthday boy."
+        "taunt": "Your move, Goblet."
       }
     },
     {
@@ -37,25 +41,27 @@
       "hue": 340,
       "lines": {
         "greeting": [
-          "Mijo. Come here. I have been standing next to this cake since four o'clock.",
-          "Eleven candles already. And you walked the whole town for them, with the dogs, in those shoes."
+          "Mijo. Come here. I have been standing next to this cake since four o'clock. I have not blinked since four o'clock.",
+          "You walked the whole town at night. In those shoes. Come give your mother a hug."
         ],
         "phaseIntro": [
-          "My turn, mijo. And no, we are not fighting. You know the rule in this house: no violent video games.",
-          "I say a word in Spanish, you tell me what it means in English, and then you walk over here and you hug your mother. Seven times."
+          "We are not fighting, mijo. You know the rule in this house: no violent video games.",
+          "I say a word in Spanish, you tell me what it means. Then I hug you. Then I hug you very, very hard."
         ],
         "phaseWin": [
-          "Seven. Ay, mi amor, my heart.",
-          "Take the candle. Papi is next, and he is pretending he has no idea what is about to happen."
+          "Ay, you got so fast. When did you get so fast?",
+          "Take the candle. Papi is next. He has been practicing his jokes. Lo siento."
         ],
-        "phaseLose": ["Otra vez, mijo. The words are not going anywhere and neither am I."],
+        "phaseLose": [
+          "Ven aquí. Otra vez, mijo. I am not going anywhere. I physically can't, my foot is in the floor."
+        ],
         "afterFight": [
-          "Everybody is here and the cake is on the table. Do you want to go around again, or should we light it?"
+          "Everybody is here and the cake is on the table. We could go around again. Or we could go to the pool. Everyone is going to the pool."
         ]
       },
       "bossRef": {
         "attackName": "Preguntas y Abrazos",
-        "taunt": "No violent video games, mijo. Just answer me.",
+        "taunt": "No violent video games, mijo. Just a hug.",
         "vocabulary": [
           {
             "es": "estudiar",
@@ -94,37 +100,30 @@
       "hue": 30,
       "lines": {
         "greeting": [
-          "Hey Zekiefish. Happy birthday.",
-          "And I had nothing to do with any of this, by the way. The whole town, all ten houses, your friends waiting in them. No idea who would do that."
+          "Gabi! You made it! I built something for the occasion. Well. Re-built. Banshee had some parts I didn't need.",
+          "Your mother says I have no taste. I have a LOT of taste. Ask the Pattersons. Actually, don't."
         ],
         "phaseIntro": [
-          "Zekiefish. Something's wrong. My AI agents figured out how to improve themselves. Then they improved that. Then they improved that.",
-          "Now they're running me. And Soup and Salad.",
-          "They've scanned you and decided you're AI-infected. They don't want to hurt you, they want to stop you. I can't hold them back. Throw the cake!"
+          "You don't have your permit, so I'm driving.",
+          "Three, two, one... hub's active. Get ready to groan, kiddo."
         ],
         "phaseWin": [
-          "Whoa. Zekiefish. The agents are offline. That was them, not me. I promise.",
-          "That's all fourteen candles, Zekiefish. Come on, let's go light the cake."
+          "The main breaker. You went for the main breaker. That's my kid.",
+          "Here's the last candle from us. Now take the cake to the pool. It came out of the drain, Gabi. Put it back."
         ],
-        "phaseLose": [
-          "AGENTS: Subject stopped. Containment holding. ...Zekiefish, it's me. Try again. Please."
-        ],
+        "phaseLose": ["Ha! Gotcha. Want to hear another one? You don't get a choice."],
         "afterFight": [
-          "The cake is on the table whenever you want it. Or one more round, if you want to beat me properly?"
+          "The pool's that way. Everyone's following you. Don't look back, it only encourages them."
         ]
       },
       "bossRef": {
-        "attackName": "Recursive Self-Improvement",
-        "taunt": "AGENTS: Infection detected. Stopping the birthday boy."
+        "attackName": "Dad Jokes and Banshee",
+        "taunt": "Groan for me, kiddo."
       }
     }
   ],
   "ending": {
-    "message": [
-      "Zeke, we are so proud of you, and of the young man you are becoming. You're funny, you're good to your brother (most days), and you show up for your friends. Ten of them were waiting in their houses tonight, which tells you everything about the kind of friend you are.",
-      "What a year. Lakeshow. Another summer at Tawonga. And your Bar Mitzvah, where you stood up in front of everyone who loves you and read Behar like you'd been doing it forever. Then tonight you walked all of Piedmont with Soup and Salad to collect all fourteen candles.",
-      "Here's to fourteen. We hope this is the happiest birthday you've ever had, and that all year long you never sell the clip. Make a wish, Zeke. Then blow out the candles before Gabi does."
-    ],
-    "credits": ["With love by Papi, all by himself, with no AI."]
+    "message": ["Happy sixteenth, Gabi. We love you.", "Mami, Papi and Zeke."],
+    "credits": ["With love by Papi, and a great deal of fake blood."]
   }
 }

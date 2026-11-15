@@ -1,247 +1,269 @@
 [
   {
-    "id": "koh",
-    "name": "Koh",
-    "portrait": "generated",
-    "npcSprite": "generated",
+    "id": "theo",
+    "name": "Theo",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
     "hue": 15,
     "room": {
       "floor": "wood",
       "wallColor": "cream",
-      "props": ["bed", "desk", "chair", "table", "poster", "plant", "ball"]
+      "props": ["bed", "desk", "chair", "table", "poster", "lamp", "plant"]
     },
     "minigame": "zekle",
     "lines": {
       "greeting": [
-        "Zeke. My guy. Birthday sigma himself.",
-        "Koh's house is officially the first stop, so no pressure, but this run is being judged."
+        "Gabi? GABI. Get in, get in, shut the door. Is it locked? Lock it twice.",
+        "I've been in this closet since Thursday. My little brother tried to eat my phone charger. Then my phone. Then my hand.",
+        "Everybody's gone weird, bro. Wet weird. They all smell like the deep end."
       ],
-      "beforeGame": ["Five letters, six tries, three words. I've seen you type. Lock in."],
+      "beforeGame": [
+        "I'm typing through the crack under the door. Five letters, six guesses before the door gives. Every wrong row is another plank off the barricade. No pressure."
+      ],
       "win": [
-        "Okay that was clean. You cooked, no cap.",
-        "Candle one of ten. I'm the scorekeeper and I'm logging it. Take it."
+        "The barricade held. You actually cooked.",
+        "Candle's yours. Light it. Apparently that's the one thing they hate, and honestly, same, I hate them too."
       ],
-      "lose": ["That's a reset, not an L. The judges are lenient on birthdays."],
-      "replay": ["Run it back? Low key I want to see if that was luck."],
-      "locked": "Koh isn't home yet. He said something about a bagel.",
-      "clue": "Next up: Kian's house on Kingston Ave."
-    }
+      "lose": [
+        "That was the last plank. Run. No, wait, come back, it's fine, it was just the cat. The cat is also dead."
+      ],
+      "replay": ["Again? The door's held together with tape and prayer. Sure."],
+      "locked": "The door won't budge. Something on the other side is breathing through the mail slot.",
+      "clue": "Cade's next. Kingston side. He was writing clues on the wall when the power went. Not with a pen."
+    },
+    "bio": "Barricaded in a closet since Thursday. Has typed nothing but five-letter words for three days. His little brother is outside the door. His little brother is hungry."
   },
   {
-    "id": "kian",
-    "name": "Kian",
-    "portrait": "generated",
-    "npcSprite": "generated",
+    "id": "cade",
+    "name": "Cade",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
     "hue": 50,
     "room": {
       "floor": "carpet",
-      "wallColor": "blue",
+      "wallColor": "grey",
       "props": ["bed", "bookshelf", "lamp", "plant", "table", "poster", "trophy"]
     },
     "minigame": "crossword",
     "lines": {
       "greeting": [
-        "Zeke! You made it. That's a W already.",
-        "My mom is STILL talking about my beach party. The crabs. Zubin's trunks. Zubin doing the little dance all the way to the water.",
-        "I built you a crossword. Seven by seven. It's giving newspaper, but for people with aura."
+        "Gabi. Don't look at the walls. Okay, look at the walls, I wrote you a crossword on them.",
+        "Ran out of markers on day two. Improvised. It's red because of reasons. The reasons are mostly my neighbor.",
+        "Same grid your little brother did. Same answers. Very different clues."
       ],
       "beforeGame": [
-        "Every word is something you know. If you don't know it, that's a you problem. Don't sell."
+        "Every clue is something you've seen on the walk over here. If you haven't seen it yet, you will."
       ],
       "win": [
-        "Bro filled the whole grid. Certified.",
-        "Candle's yours. Across AND down, no help. Put it on the cake."
+        "Full grid, no help. That's a W written in somebody else's blood, which is still a W.",
+        "Candle. I kept it dry in a sandwich bag. It's the only thing in this house that's dry."
       ],
-      "lose": ["The grid's not going anywhere. Come back for it when you want."],
-      "replay": ["Same puzzle, faster? Chat, is he going for the record?"],
-      "locked": "Kian's door is locked. Probably still writing clues.",
-      "clue": "Next up: Ben's house on Parkside Dr."
-    }
+      "lose": [
+        "Grid's not going anywhere. Neither am I. I physically can't, my legs are kind of attached to the carpet now."
+      ],
+      "replay": ["Same puzzle, faster? The walls aren't getting any cleaner."],
+      "locked": "Cade's door is locked. Something red is dripping under it, in neat little rows.",
+      "clue": "Next stop: the high school. 8033 is holding the engineering lab. Bring your driver hands."
+    },
+    "bio": "Ran out of markers on day two and switched to a medium his mother would not approve of. Writes clues on the wall. The wall is load-bearing. So is the clue."
   },
   {
-    "id": "benc",
-    "name": "Ben",
-    "portrait": "generated",
-    "npcSprite": "generated",
-    "hue": 90,
+    "id": "frc8033",
+    "name": "8033",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
+    "hue": 275,
     "room": {
       "floor": "tile",
-      "wallColor": "green",
-      "props": ["desk", "tv", "chair", "poster", "skateboard", "table", "plant"]
+      "wallColor": "grey",
+      "props": ["desk", "table", "chair", "poster", "trophy", "lamp", "tv"]
     },
     "minigame": "blaster",
     "lines": {
       "greeting": [
-        "Yo Zeke. Happy birthday. I have prepared a threat.",
-        "Waves. Lots of them. You, one blaster. Very fair. Very balanced."
+        "Room ST-128, Mary G. Ross Engineering Lab. The bumpers are purple and so are the walls now, sort of.",
+        "We've been in lockdown since build night. The robots kept working. The rest of us, mostly.",
+        "Gabi. Thank god. We need a driver. Wisp's charged, the hub's up, and the neighbors are coming over the Engineering Patio."
       ],
       "beforeGame": [
-        "Arrows move, space shoots. Don't crash out on wave three, everyone crashes out on wave three."
+        "Twenty seconds of auto, then it's your stick. Three hordes. When the hub goes inactive, stop shooting and start ramming."
       ],
       "win": [
-        "Every wave. He cleared every wave. I need a minute.",
-        "Take a candle. It's from the waves. They're not happy about it."
+        "That's a qual win. Put it on the pick list. Put ALL of them on the pick list.",
+        "Candle's from the whole team. Somebody soldered it to a battery terminal. Don't ask."
       ],
-      "lose": ["The wave got you. The wave gets everyone. I'm on your side here."],
-      "replay": ["Again? Bet. The waves have been humbled and they want revenge."],
-      "locked": "Ben's not home. The blaster is charging, allegedly.",
-      "clue": "Next up: Kai's house on Bowles Pl. If he says Towonga, just nod."
-    }
+      "lose": ["They got the robot. That's okay, we have spares. We do not have spare people."],
+      "replay": ["Queue up again? Pit's open. Pit is always open. Pit has nowhere else to be."],
+      "locked": "The lab door's chained from the inside. Through the window, a robot is guarding it. It's not ours.",
+      "clue": "Gilboa's running a ken event in Dracena Park. A birthday party. Nobody has told the madrichimot they're dead."
+    },
+    "bio": "An FRC team that went into lockdown on build night and kept building. The robots are fine. Several of the students are now mostly robot. Quals record: undefeated against the living."
   },
   {
-    "id": "kai",
-    "name": "Kai",
-    "portrait": "generated",
-    "npcSprite": "generated",
-    "hue": 125,
+    "id": "gilboa",
+    "name": "Gilboa",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
+    "hue": 210,
     "room": {
       "floor": "wood",
-      "wallColor": "grey",
-      "props": ["bed", "guitar", "chair", "table", "poster", "lamp", "ball"]
+      "wallColor": "green",
+      "props": ["table", "chair", "plant", "guitar", "cake", "lamp"]
     },
     "minigame": "snake",
     "lines": {
       "greeting": [
-        "Times in Towonga, Zeke.",
-        "You know what that means. You've always known. Anyway, happy birthday."
+        "Gabi! You came! Welcome to the ken event! It's a birthday party! It's YOUR birthday party!",
+        "We did the three-legged race already. Somebody ended up with three legs. We're not sure whose the third one is.",
+        "Next up is rikud. Everyone in a line. Hold on tight. Some of them have very loose arms right now."
       ],
-      "beforeGame": ["Candle snake. Eat candles, grow, do not hit yourself. Simple game. Sigma game."],
+      "beforeGame": [
+        "You lead the line. Every camper you tag joins the end. Don't run into the end of your own line. Everything is shared here, including bites."
+      ],
       "win": [
-        "Times in Towonga. Fr fr. That's the highest honor I give out.",
-        "Candle. Towonga rules: it does not get lit until the cake."
+        "That was the best rikud since machaneh! Aleh v'hagshem! Arise and actualize!",
+        "They have arisen. Here's a candle from the kupa. Everyone chipped in. Some of them chipped."
       ],
-      "lose": ["Times in Towonga, Zeke. Counts double when it goes badly."],
-      "replay": ["One more? The snake said it's personal now."],
-      "locked": "Kai's out. The note on the door just says 'Towonga'.",
-      "clue": "Next up: Zubin's house on Grand Ave."
-    }
+      "lose": ["The line got you. Happens at every ken event. We'll do a peula about it after."],
+      "replay": ["Again? Hitkansut's not for an hour. We have time. We have so much time."],
+      "locked": "The picnic is roped off with blue chultzah string. A sign says: SIGN-UP SHEET FULL. BRING A DISH. BRING YOURSELF.",
+      "clue": "Troop 1's still meeting in the Kettlewell Room. Up the stairs on Mountain Avenue. Tuesday never ended."
+    },
+    "bio": "A ken event that started as a birthday party and never ended. Everyone is sharing everything. Everyone. Everything."
   },
   {
-    "id": "zubin",
-    "name": "Zubin",
-    "portrait": "generated",
-    "npcSprite": "generated",
-    "hue": 160,
+    "id": "troop1",
+    "name": "Troop 1",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
+    "hue": 330,
     "room": {
-      "floor": "carpet",
+      "floor": "wood",
       "wallColor": "cream",
-      "props": ["desk", "bookshelf", "trophy", "lamp", "plant", "table", "poster"]
+      "props": ["table", "chair", "bookshelf", "poster", "trophy", "lamp"]
     },
     "minigame": "logic",
     "lines": {
       "greeting": [
-        "Zeke! Happy birthday. We are not talking about the beach. Not the crabs, not the trunks, none of it.",
-        "Okay, listen. I threw a party of my own and now I can't remember who brought what.",
-        "Four people, four times, four gifts. I have clues. I have a grid. I have a headache."
+        "Kettlewell Room, Piedmont Community Church. The meeting started at seven thirty. It is still going.",
+        "Purple and white neckerchiefs on every one of them. Full Class A. Nobody's blinked since roll call.",
+        "They turn when you walk in. All of them. They're waiting for the Senior Patrol Leader."
       ],
       "beforeGame": [
-        "Logic puzzle. Mark the X's first, the O's find themselves. Low key this is my favorite kind of game and I'm not sorry."
+        "Roll call. Who in the troop got bitten by what, and when they turned. The patrol leaders kept notes. The notes are a little chewed."
       ],
       "win": [
-        "You solved my whole party. That's goated behavior, no notes.",
-        "Candle. On the cake please. Not in anybody's trunks."
+        "Every scout accounted for. A Scout is trustworthy, loyal, helpful, and currently deceased.",
+        "Candle. Firem'n Chit's on the back. You're cleared to light it.",
+        "And the troop's yours now, Senior Patrol Leader. Out there, raise the sign with Q and any Scout who sees it goes quiet. In this town that's most of them."
       ],
-      "lose": ["My clues, my fault. Come back and I'll be nicer about it."],
-      "replay": ["Want the grid again? It's the same party. The guests are very patient."],
-      "locked": "Zubin isn't answering. Probably making another grid.",
-      "clue": "Next up: Xuan's house on Lake Ave."
-    }
+      "lose": ["Roll call failed. Somebody's patrol is missing a scout and the scout is missing a head."],
+      "replay": ["Run roll call again? Sign's up. They'll wait. They're very good at waiting."],
+      "locked": "The Kettlewell Room door is shut. From inside, very slowly: 'Hip-su rah-su... teddy boom bah-su...'",
+      "clue": "DiscOTech's at Witter Field, under the lights. They came for an away game and got fenced in."
+    },
+    "bio": "The longest troop meeting in the history of the Piedmont Council. Nobody has been dismissed. Nobody has asked to be."
   },
   {
-    "id": "xuan",
-    "name": "Xuan",
-    "portrait": "generated",
-    "npcSprite": "generated",
-    "hue": 200,
+    "id": "discotech",
+    "name": "DiscOTech",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
+    "hue": 30,
     "room": {
       "floor": "tile",
-      "wallColor": "blue",
-      "props": ["bed", "guitar", "poster", "plant", "tv", "bookshelf", "chair"]
+      "wallColor": "grey",
+      "props": ["ball", "table", "chair", "poster", "trophy", "tv"]
     },
     "minigame": "rhythm",
     "lines": {
       "greeting": [
-        "Zeke! Birthday boy! Wait. Are Soup and Salad with you? Bro, I'm allergic. Like, my eyes close allergic.",
-        "Can they wait outside? I love them. From across the street.",
-        "Okay, hear me out: rhythm game.",
-        "Four lanes, notes come down, you hit them on the beat. It's giving concert. It's giving aura."
+        "Witter Field, under the lights. Half of DiscOTech made it inside the fence before it closed. The other half is the other team.",
+        "There's no ref in ultimate, so even the dead honor the calls. Yell foul and they stop to think about it.",
+        "Somebody hung a disco ball off the light tower. It's a whole thing now. It's DISCO Tech."
       ],
-      "beforeGame": ["Don't spam. Spamming is an L. Feel the beat and let it cook."],
+      "beforeGame": [
+        "Four lanes, four throws: backhand, flick, hammer, scoober. Hit the throw as the cutter gets open. Eighty percent completions or we're getting stalled out."
+      ],
       "win": [
-        "That was on beat. Like actually on beat. Ate.",
-        "Here's your candle. Hold it up like a lighter, you earned it."
+        "Clean point. Spirit circle! Everybody link arms. Count the arms. Okay, close enough.",
+        "Candle from the sideline. One of the parents brought it. Don't eat the snacks.",
+        "Take a disc, too. C throws it and it comes back. And they all know the rules now: F calls foul, and if one's counting too fast, call that too."
       ],
-      "lose": ["Off beat happens. Shake your hands out, run it back whenever."],
-      "replay": ["Play it again? Same song, and this time I'm watching your hands."],
-      "locked": "Xuan's not home. You can hear the beat from the street, though.",
-      "clue": "Next up: Sammy L's house on Nace Ave."
-    }
+      "lose": ["Turnover. They picked it off. One of them picked off a whole hand."],
+      "replay": ["Run it back? 3, 2, 1, disc in."],
+      "locked": "The gate to Witter is chained. Somebody on the far side is counting very slowly. 'Stalling one. Stalling two.'",
+      "clue": "Ciaran's next. Nace Avenue. He said something about pushing boxes. They're not pizza boxes anymore."
+    },
+    "bio": "Self-officiated, spirited, and dead on their feet. Their spirit score is still a five. Nobody can work out how."
   },
   {
-    "id": "sammyl",
-    "name": "Sammy L",
-    "portrait": "generated",
-    "npcSprite": "generated",
+    "id": "ciaran",
+    "name": "Ciaran",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
     "hue": 235,
     "room": {
       "floor": "wood",
-      "wallColor": "green",
+      "wallColor": "blue",
       "props": ["desk", "chair", "tv", "ball", "table", "poster", "skateboard", "plant"]
     },
     "minigame": "sokoban",
     "lines": {
       "greeting": [
-        "Zekiepoo. Sammy L. We have a situation.",
-        "Pizza boxes. Everywhere. They need to go on the marks and I can only push, never pull. Classic."
+        "Gabi. Help me with these. They're coffins. I don't know where they came from. I know exactly where they came from.",
+        "They go in the holes in the yard. I can only push, never pull, same as always. Some of them push back."
       ],
-      "beforeGame": [
-        "Three rooms, Zekiepoo. If you push a box into a corner it's cooked, and so are you. Lock in."
-      ],
+      "beforeGame": ["Three yards. A coffin in a corner is stuck forever, and so is whatever's in it."],
       "win": [
-        "Every box on a mark. Zero boxes in corners. That's a sigma move.",
-        "Candle, Zekiepoo. I pushed it over here myself."
+        "Every coffin in a hole. Six feet under, no notes.",
+        "Candle. Don't light it near the coffins. I mean, light it near the coffins. That's sort of the point."
       ],
-      "lose": ["Box in the corner, Zekiepoo. That is a weekly event for me."],
-      "replay": ["More boxes, Zekiepoo? Bet. Somehow there are always more boxes."],
-      "locked": "Sammy L's door won't open. Something's pushed against it.",
-      "clue": "Next up: Soli's house on Nace Ave."
-    }
+      "lose": ["Corner. You pushed it into the corner. It's knocking now."],
+      "replay": [
+        "More coffins? There are always more coffins. That's kind of the whole problem with this week."
+      ],
+      "locked": "Ciaran's door won't open. Something heavy and rectangular is pushed against it.",
+      "clue": "Hugo's up the street. He's matching dental records. He says he knows who everyone used to be."
+    },
+    "bio": "Pushes things that should not be pushed into places they should not go. Was like this before the outbreak."
   },
   {
-    "id": "soli",
-    "name": "Soli",
-    "portrait": "generated",
-    "npcSprite": "generated",
+    "id": "hugo",
+    "name": "Hugo",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
     "hue": 270,
     "room": {
       "floor": "carpet",
-      "wallColor": "grey",
+      "wallColor": "green",
       "props": ["bed", "bookshelf", "plant", "lamp", "poster", "table", "trophy"]
     },
     "minigame": "picross",
     "lines": {
       "greeting": [
-        "Zeke! Happy birthday! I have a picture for you, but it's hidden in numbers.",
-        "Picross. The numbers say how many squares get filled in each row and column. That's it. That's the whole game."
+        "Gabi, perfect timing. I'm identifying the neighbors from their teeth. It's going great. I've done nine. Some of them twice.",
+        "The numbers tell you which squares to fill in. Fill in the right ones and you get a face. Get a face and you know who it was."
       ],
       "beforeGame": [
-        "Start with the big numbers, they give the most away. And don't guess. Guessing is mid."
+        "Start with the big numbers. Don't guess. Guessing is how I ended up with two of Mr. Patterson."
       ],
       "win": [
-        "You found the picture! Low key I forgot what it was, so thanks.",
-        "Candle for you. I shaded in every square of the box it came in."
+        "That's a skull. A very confident skull. Good work.",
+        "Candle. I found it in somebody's molars, so maybe wash it."
       ],
-      "lose": ["It's okay! The picture will still be there, it's very patient."],
-      "replay": ["Another board? I've got one that's diabolical."],
-      "locked": "Soli's not in. There's graph paper taped to the window.",
-      "clue": "Next up: Miles's house."
-    }
+      "lose": ["Wrong squares. You made a face. It's not anyone's face. It's looking at me."],
+      "replay": ["Another one? I've got a big pile. The pile has opinions."],
+      "locked": "Hugo's not answering. There's graph paper taped to the window, and teeth glued to the graph paper.",
+      "clue": "Marina's after that. Wildwood. She's trying to put somebody back together and she's missing a few parts."
+    },
+    "bio": "Identifies the dead by their teeth. Has identified some of them twice. Keeps the spares in a jar labeled SPARES."
   },
   {
-    "id": "miles",
-    "name": "Miles",
-    "portrait": "generated",
-    "npcSprite": "generated",
+    "id": "marina",
+    "name": "Marina",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
     "hue": 305,
     "room": {
       "floor": "tile",
@@ -251,48 +273,56 @@
     "minigame": "platformer",
     "lines": {
       "greeting": [
-        "Wait. WAIT. Zeke is inside my house? You've never been in here. Not once. This is historic.",
-        "Take it in. That's the couch. Yes, it's a real couch. That's the kitchen, where the snacks live. Don't open the closet.",
-        "Okay, focus. The cake ingredients got scattered. Not my fault. Mostly.",
-        "They're all over the course. Jumps, pits, the usual. Grab enough and we're good."
+        "Gabi! Okay, don't freak out. My cousin came apart. Like, apart apart. He's fine, he's talking, he's just in fourteen pieces.",
+        "They're all over the kitchen. On the counters, in the cabinets, one's in the fridge. Grab twelve and I can work with that.",
+        "Don't open the closet. That rule's from before all this and it still stands."
       ],
-      "beforeGame": ["Space jumps. Hold it longer to jump higher. The pits are real. Don't sell."],
+      "beforeGame": [
+        "Space jumps. Hold it to jump higher. Don't fall in the pit. The pit's where the rest of the family is."
+      ],
       "win": [
-        "He got the ingredients AND made it look easy. Aura through the roof.",
-        "Candle's yours, and the cake is starting to look like a real cake."
+        "Twelve pieces! That's enough cousin! The rest he can live without, probably.",
+        "Candle. He wants you to have it. He'd hand it to you himself but he's still waiting on a hand."
       ],
-      "lose": ["The pit ate you. The pit eats everyone. Ingredients are still out there."],
-      "replay": ["Run it again? I moved nothing. The pits were already diabolical."],
-      "locked": "Miles isn't home. There's flour on the doormat.",
-      "clue": "Next up: Sammy S's house on Manor Dr."
-    }
+      "lose": ["You fell in. They were happy to see you. Everyone in the pit is always happy to see you."],
+      "replay": ["Again? I moved nothing. Well. I moved a foot. It was in the toaster."],
+      "locked": "Marina's house is dark. There's a thumb on the doormat.",
+      "clue": "Last house. Violet. She's running a quiz show from inside a panic room and she knows everything about you."
+    },
+    "bio": "Trying to put her cousin back together from parts found around the kitchen. Twelve out of fourteen is, she says, a passing grade."
   },
   {
-    "id": "sammys",
-    "name": "Sammy S",
-    "portrait": "generated",
-    "npcSprite": "generated",
+    "id": "violet",
+    "name": "Violet",
+    "portrait": "placeholder",
+    "npcSprite": "placeholder",
     "hue": 340,
     "room": {
-      "floor": "wood",
+      "floor": "carpet",
       "wallColor": "blue",
-      "props": ["bed", "table", "chair", "guitar", "ball", "poster"]
+      "props": ["bed", "table", "chair", "guitar", "ball", "poster", "tv"]
     },
     "minigame": "trivia",
     "lines": {
       "greeting": [
-        "Zeke! Last house! You lock in for ten houses and THEN I hit you with trivia.",
-        "Lightning round. Questions about you and the people who know you. Any wrong answers are on them, not me."
+        "Gabi. You found the panic room. Most people find the other room first.",
+        "Lightning round. Questions about you. I know you better than you'd think. I've had a lot of time to think.",
+        "Three lives. Every miss, the ceiling comes down a little. It's a real ceiling. I tested it on the mailman."
       ],
-      "beforeGame": ["Read fast, pick fast. No overthinking. Overthinking is how you lose aura."],
+      "beforeGame": ["Read fast, answer faster. Overthinking is how the mailman lost."],
       "win": [
-        "He knows himself. Certified W. That's the last candle from us.",
-        "Candle ten. That's all of us, every house, every game."
+        "You know yourself. That's rare in this town right now. Most people don't know their own legs.",
+        "Candle eleven. That's every stop. Go home, Gabi. They're waiting. You know they're waiting."
       ],
-      "lose": ["That was the clock, not you. You know this stuff, come back."],
-      "replay": ["Again? Same questions. I'll pretend I don't know you've seen them."],
-      "locked": "Sammy S isn't home yet. He's writing questions about you, probably.",
-      "clue": "That's everyone. Head home for the last surprise!"
-    }
+      "lose": [
+        "Ceiling's down. That's on the clock, not on you. You'll get it next time, if there's a next time."
+      ],
+      "replay": [
+        "Again? Same questions. I'll pretend I don't know you've seen them. I'm good at pretending. Ask the mailman."
+      ],
+      "locked": "Violet's door is a vault. A voice through the intercom says: 'Wrong answer. Come back later.'",
+      "clue": "That's every stop. Head home. The family's waiting. They have been waiting all day, and they are so, so hungry."
+    },
+    "bio": "Runs a quiz show from inside a panic room. The prize is the panic room. Knows things about you that you have not told anyone."
   }
 ]

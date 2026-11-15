@@ -2881,7 +2881,7 @@
       "tier": 1,
       "source": "Papi, 2026-10-11",
       "room": {
-        "id": "sammyl",
+        "id": "ciaran",
         "x": 7,
         "y": 5
       }
@@ -2913,7 +2913,7 @@
       "tier": 1,
       "source": "Papi, 2026-10-11",
       "room": {
-        "id": "zubin",
+        "id": "theo",
         "x": 7,
         "y": 5
       }
@@ -2944,7 +2944,7 @@
       "tier": 1,
       "source": "Papi, 2026-10-11",
       "room": {
-        "id": "soli",
+        "id": "hugo",
         "x": 7,
         "y": 5
       }
@@ -2981,7 +2981,7 @@
       "tier": 1,
       "source": "Papi, 2026-10-11",
       "room": {
-        "id": "benc",
+        "id": "cade",
         "x": 7,
         "y": 5
       }
@@ -10562,7 +10562,7 @@
       "spots": [
         {
           "at": {
-            "door": "koh",
+            "door": "theo",
             "dx": 2,
             "dy": 2
           }
@@ -10604,7 +10604,7 @@
       "spots": [
         {
           "at": {
-            "door": "miles",
+            "door": "marina",
             "dx": 2,
             "dy": 2
           }
@@ -10625,7 +10625,7 @@
       "spots": [
         {
           "at": {
-            "door": "sammys",
+            "door": "violet",
             "dx": -2,
             "dy": 2
           }
@@ -10667,7 +10667,7 @@
       "spots": [
         {
           "at": {
-            "door": "kian",
+            "door": "cade",
             "dx": -2,
             "dy": 2
           }
