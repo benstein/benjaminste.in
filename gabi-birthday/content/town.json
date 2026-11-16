@@ -3064,14 +3064,14 @@
       "talks": [
         {
           "lines": [
-            "Rosey, also known as the rat. She is not a rat. She has heard the nickname, though, and lives up to it from under the couch."
+            "Rosey, also known as the rat. She is not a rat. She came over in Violet's bag and is living up to the nickname from under Cade's bed."
           ],
           "sound": "bark",
           "once": true
         },
         {
           "lines": [
-            "The rat comes out to sniff Gabi's ankle, decides it is not food yet, and goes back under the couch."
+            "The rat comes out to sniff Gabi's ankle, finds it acceptable, and goes back under the bed with Violet."
           ],
           "sound": "bark"
         }
@@ -3103,17 +3103,22 @@
       "talks": [
         {
           "lines": [
-            "Marmalade: orange, enormous, asleep through the end of the world. One eye opens. It closes again."
+            "Marmalade: orange, enormous, Violet's cat, asleep on Cade's porch. One eye opens. It closes again. Why is Violet's cat on Cade's porch?"
           ]
         }
       ],
       "tier": 1,
       "source": "Papi, 2026-11-15",
-      "room": {
-        "id": "violet",
-        "x": 14,
-        "y": 3
-      }
+      "spots": [
+        {
+          "at": {
+            "door": "cade",
+            "dx": 1,
+            "dy": 1,
+            "exact": true
+          }
+        }
+      ]
     },
     {
       "id": "cat-pretzel",
@@ -3130,17 +3135,22 @@
       "talks": [
         {
           "lines": [
-            "Pretzel is folded into a shape only a cat named Pretzel could manage. Gabi is not invited to pet Pretzel. Gabi is allowed to look."
+            "Pretzel, Violet's other cat, folded into a shape only a cat named Pretzel could manage, on Cade's front walk. Gabi is not invited to pet Pretzel. Gabi is allowed to wonder what she is doing here."
           ]
         }
       ],
       "tier": 1,
       "source": "Papi, 2026-11-15",
-      "room": {
-        "id": "violet",
-        "x": 5,
-        "y": 10
-      }
+      "spots": [
+        {
+          "at": {
+            "door": "cade",
+            "dx": 2,
+            "dy": 3,
+            "exact": true
+          }
+        }
+      ]
     },
     {
       "id": "dog-callie",
@@ -11175,7 +11185,7 @@
       "spots": [
         {
           "at": {
-            "door": "violet",
+            "door": "ciaran",
             "dx": -2,
             "dy": 2
           }

@@ -64,14 +64,15 @@
       ],
       "win": [
         "Full grid, no help. That's a W written in somebody else's blood, which is still a W.",
-        "Candle. I kept it dry in a sandwich bag. It's the only thing in this house that's dry."
+        "Candle. I kept it dry in a sandwich bag. It's the only thing in this house that's dry.",
+        "That thump was the house settling. It's an old house. It settles a lot. Mostly under my bed."
       ],
       "lose": [
         "Grid's not going anywhere. Neither am I. I physically can't, my legs are kind of attached to the carpet now."
       ],
       "replay": ["Same puzzle, faster? The walls aren't getting any cleaner."],
       "locked": "Cade's door is locked. Something red is dripping under it, in neat little rows.",
-      "clue": "Next stop: the high school. Kevin and 8033 are holding the Engineering Lab. Bring your driver hands."
+      "clue": "Okay. You should go. Walk around the block, take your time, then come back here. For no reason. Don't tell my mom you came twice."
     },
     "bio": "Ran out of markers on day two and switched to a medium his mother would not approve of. Writes clues on the wall. The wall is load-bearing. So is the clue.",
     "body": {
@@ -79,6 +80,51 @@
       "skin": "#e8c09a",
       "longHair": true,
       "shirt": "#b9a17a"
+    }
+  },
+  {
+    "id": "violet",
+    "name": "Violet",
+    "hidingAt": "cade",
+    "portrait": "generated",
+    "npcSprite": "placeholder",
+    "hue": 340,
+    "room": {
+      "floor": "carpet",
+      "wallColor": "grey",
+      "props": ["bed", "bookshelf", "lamp", "plant", "table", "poster", "trophy"]
+    },
+    "minigame": "trivia",
+    "lines": {
+      "greeting": [
+        "Is she gone? His mom's been folding the same towel for two hours. She doesn't need towels anymore. She folds it anyway.",
+        "Oh. Gabi. Hi. I'm not here. I'm at home, studying. Marmalade and Pretzel can confirm. Rosey can't, she came with me.",
+        "Cade's downstairs keeping his parents busy. If they find me they'll eat me. Worse, they'll call my mom.",
+        "Since you're here. Lightning round, questions about you. I've had a lot of time under that bed to think.",
+        "I have receipts. 'Tate is so cool, charismatic, and sexy. I wish I was Tate.' Gabi, 2026. It's in the question bank.",
+        "Three lives. Every miss, the ceiling comes down a little. It's a real ceiling. I tested it on the mailman."
+      ],
+      "beforeGame": ["Read fast, answer faster, and whisper. Overthinking is how the mailman lost."],
+      "win": [
+        "You know yourself. That's rare in this town right now. Most people don't know their own legs.",
+        "Candle. Take it and use the front door like a normal person. I'm staying under here until his parents go to bed. They don't sleep anymore, so, a while."
+      ],
+      "lose": [
+        "Ceiling's down. Quietly, at least. You'll get it next time, if his mom doesn't get you first."
+      ],
+      "replay": [
+        "Again? Same questions. Keep your voice down. I'll pretend I don't know you've seen them. I'm good at pretending. Ask Cade's parents."
+      ],
+      "locked": "Cade's bedroom door is shut. Something under the bed is breathing very quietly.",
+      "clue": "Next stop: the high school. Kevin and 8033 are holding the Engineering Lab. Bring your driver hands. And Gabi? You didn't see me."
+    },
+    "bio": "Hiding under her boyfriend's bed from his parents, who are dead and would still call her mom. Runs a quiz show from down there. Knows things about you that you have not told anyone.",
+    "body": {
+      "hair": "#1c1416",
+      "skin": "#a8724e",
+      "longHair": true,
+      "glasses": "#4a2a2a",
+      "shirt": "#22222a"
     }
   },
   {
@@ -218,7 +264,7 @@
       "lose": ["Turnover. They picked it off. One of them picked off a whole hand."],
       "replay": ["Run it back? 3, 2, 1, disc in."],
       "locked": "The gate to Witter is chained. Somebody on the far side is counting very slowly. 'Stalling one. Stalling two.'",
-      "clue": "Ciaran's next. Nace Avenue. He said something about pushing boxes. They're not pizza boxes anymore."
+      "clue": "Ciaran's next. Grand Avenue. He said something about pushing boxes. They're not pizza boxes anymore."
     },
     "bio": "Self-officiated, spirited, and dead on their feet. Their spirit score is still a five. Nobody can work out how."
   },
@@ -249,7 +295,7 @@
         "More coffins? There are always more coffins. That's kind of the whole problem with this week."
       ],
       "locked": "Ciaran's door won't open. Something heavy and rectangular is pushed against it.",
-      "clue": "Hugo's up the street. He's matching dental records. He says he knows who everyone used to be."
+      "clue": "Hugo's over on Olive Avenue. He's matching dental records. He says he knows who everyone used to be."
     },
     "bio": "Pushes things that should not be pushed into places they should not go. Was like this before the outbreak.",
     "body": {
@@ -287,7 +333,7 @@
       "lose": ["Wrong squares. You made a face. It's not anyone's face. It's looking at me."],
       "replay": ["Another one? I've got a big pile. The pile has opinions."],
       "locked": "Hugo's not answering. There's graph paper taped to the window, and teeth glued to the graph paper.",
-      "clue": "Marina's after that. Grand Avenue. She's trying to put somebody back together and she's missing a few parts."
+      "clue": "Marina's the last house. Back on Grand Avenue, past Ciaran's. She's trying to put somebody back together and she's missing a few parts."
     },
     "bio": "Identifies the dead by their teeth. Has identified some of them twice. Keeps the spares in a jar labeled SPARES.",
     "body": {
@@ -320,12 +366,13 @@
       ],
       "win": [
         "Twelve pieces! That's enough cousin! The rest he can live without, probably.",
-        "Candle. He wants you to have it. He'd hand it to you himself but he's still waiting on a hand."
+        "Candle. He wants you to have it. He'd hand it to you himself but he's still waiting on a hand.",
+        "That's eleven candles, and that's all of spec sev. You know who's left."
       ],
       "lose": ["You fell in. They were happy to see you. Everyone in the pit is always happy to see you."],
       "replay": ["Again? I moved nothing. Well. I moved a foot. It was in the toaster."],
       "locked": "Marina's house is dark. There's a thumb on the doormat. From somewhere inside: 'She's busy, bruh.'",
-      "clue": "Last house. Violet. She's running a quiz show from inside a panic room and she knows everything about you."
+      "clue": "Head home. The family's waiting. They have been waiting all day, and they are so, so hungry."
     },
     "bio": "Trying to put her cousin back together from parts found around the kitchen. Twelve out of fourteen is, she says, a passing grade.",
     "body": {
@@ -333,48 +380,6 @@
       "skin": "#f0c8a8",
       "longHair": true,
       "shirt": "#4f8f8a"
-    }
-  },
-  {
-    "id": "violet",
-    "name": "Violet",
-    "portrait": "generated",
-    "npcSprite": "placeholder",
-    "hue": 340,
-    "room": {
-      "floor": "carpet",
-      "wallColor": "blue",
-      "props": ["bed", "table", "chair", "guitar", "ball", "poster", "tv"]
-    },
-    "minigame": "trivia",
-    "lines": {
-      "greeting": [
-        "Gabi. You found the panic room. Most people find the other room first.",
-        "Lightning round. Questions about you. I know you better than you'd think. I've had a lot of time to think.",
-        "I have receipts. 'Tate is so cool, charismatic, and sexy. I wish I was Tate.' Gabi, 2026. It's in the question bank.",
-        "Three lives. Every miss, the ceiling comes down a little. It's a real ceiling. I tested it on the mailman."
-      ],
-      "beforeGame": ["Read fast, answer faster. Overthinking is how the mailman lost."],
-      "win": [
-        "You know yourself. That's rare in this town right now. Most people don't know their own legs.",
-        "Candle eleven. That's every stop, and that's all of spec sev. Go home, Gabi. They're waiting. You know they're waiting."
-      ],
-      "lose": [
-        "Ceiling's down. That's on the clock, not on you. You'll get it next time, if there's a next time."
-      ],
-      "replay": [
-        "Again? Same questions. I'll pretend I don't know you've seen them. I'm good at pretending. Ask the mailman."
-      ],
-      "locked": "Violet's door is a vault. A voice through the intercom says: 'Wrong answer. Come back later.'",
-      "clue": "That's every stop. Head home. The family's waiting. They have been waiting all day, and they are so, so hungry."
-    },
-    "bio": "Runs a quiz show from inside a panic room. The prize is the panic room. Knows things about you that you have not told anyone.",
-    "body": {
-      "hair": "#1c1416",
-      "skin": "#a8724e",
-      "longHair": true,
-      "glasses": "#4a2a2a",
-      "shirt": "#22222a"
     }
   }
 ]

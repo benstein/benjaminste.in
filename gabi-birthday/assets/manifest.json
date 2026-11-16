@@ -9,6 +9,10 @@
       "file": "assets/portraits/cade.png"
     },
     {
+      "key": "portrait-violet",
+      "file": "assets/portraits/violet.png"
+    },
+    {
       "key": "portrait-frc8033",
       "file": "assets/portraits/frc8033.png"
     },
@@ -35,10 +39,6 @@
     {
       "key": "portrait-marina",
       "file": "assets/portraits/marina.png"
-    },
-    {
-      "key": "portrait-violet",
-      "file": "assets/portraits/violet.png"
     },
     {
       "key": "portrait-zeke",
@@ -71,6 +71,10 @@
       "file": "assets/sprites/npc-cade.png"
     },
     {
+      "key": "npc-violet",
+      "file": "assets/sprites/npc-violet.png"
+    },
+    {
       "key": "npc-frc8033",
       "file": "assets/sprites/npc-frc8033.png"
     },
@@ -97,10 +101,6 @@
     {
       "key": "npc-marina",
       "file": "assets/sprites/npc-marina.png"
-    },
-    {
-      "key": "npc-violet",
-      "file": "assets/sprites/npc-violet.png"
     },
     {
       "key": "npc-zeke",
