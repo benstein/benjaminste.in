@@ -14,12 +14,12 @@
     "lines": {
       "greeting": [
         "Gabi? GABI. Get in, get in, shut the door. Is it locked? Lock it twice.",
-        "I've been in this closet since Thursday. My little brother ate my phone charger, and then he tried my hand.",
+        "I've been barricaded in here since Thursday. My little brother ate my phone charger, and then he tried my hand.",
         "Everybody's gone weird, bro. Wet weird. They all smell like the deep end.",
         "Spec sev chat's been dead since the pool. Like, actually dead. You're the first of the seven I've seen with all ten fingers."
       ],
       "beforeGame": [
-        "I'll slide the words under the closet door. Five letters, six guesses. Every wrong guess, my brother pries another plank off the bedroom door, so guess faster than he pries."
+        "I'll write the words down, you guess. Five letters, six guesses. Every wrong guess, my brother pries another plank off the bedroom door, so guess faster than he pries."
       ],
       "win": [
         "The barricade held. You actually cooked.",
@@ -32,7 +32,7 @@
       "locked": "The door won't budge. Something on the other side is breathing through the mail slot.",
       "clue": "Cade's next, on Lorita Avenue. Last I heard he was writing clues on his bedroom wall."
     },
-    "bio": "Barricaded in a closet since Thursday, typing nothing but five-letter words. His little brother is outside the door, and hungry.",
+    "bio": "Barricaded in his bedroom since Thursday, thinking in nothing but five-letter words. His little brother is outside the door, and hungry.",
     "body": {
       "hair": "#9a6a3a",
       "skin": "#e8c09a",
@@ -157,7 +157,7 @@
     "body": {
       "hair": "#2e2a28",
       "skin": "#e0b08a",
-      "shirt": "#2f9e47"
+      "shirt": "#5b2a86"
     }
   },
   {
@@ -188,7 +188,7 @@
       "lose": ["The line got you. Happens at every ken event. We'll do a peula about it after."],
       "replay": ["Again? Hitkansut isn't for another hour, and nobody's going home."],
       "locked": "The picnic is roped off with blue chultzah string. A sign says: SIGN-UP SHEET FULL. BRING A DISH. BRING YOURSELF.",
-      "clue": "Scoutmaster Cantrill's still running Troop 1 in the Kettlewell Room, up the stairs on Mountain Avenue. Tuesday's meeting never ended."
+      "clue": "Scoutmaster Cantrill's still running Troop 1 in the Kettlewell Room at the Community Church on Highland. The meeting never ended."
     },
     "bio": "A ken event that started as a birthday party and never ended. The food sign-up sheet now lists the guests."
   },
@@ -240,7 +240,7 @@
     "room": {
       "floor": "tile",
       "wallColor": "grey",
-      "props": ["ball", "table", "chair", "poster", "trophy", "tv"]
+      "props": ["table", "chair", "poster", "trophy", "tv", "plant"]
     },
     "minigame": "rhythm",
     "lines": {
@@ -314,7 +314,7 @@
     "lines": {
       "greeting": [
         "Gabi, perfect timing. I'm identifying the neighbors from their teeth. Nine done so far.",
-        "And don't. I know what you're about to say. 'What are WE singing in choir, Hugo?' I still don't know. I'm not sure there's still a choir.",
+        "Don't. I know what you're about to say. 'What are WE singing in choir, Hugo?' I still don't know. I'm not sure there's still a choir.",
         "The numbers tell you which squares to fill in. Get them right and you get a face, and then we know who it was."
       ],
       "beforeGame": [

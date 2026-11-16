@@ -223,7 +223,7 @@
         "kind": "is",
         "a": ["Bitten by", "Zeke"],
         "b": ["Turned at", "7:30"],
-        "text": "Zeke came up the Mountain Ave stairs at 7:30. Whoever he bit turned right there, 7:30 sharp."
+        "text": "Zeke came up the church steps at 7:30. Whoever he bit turned right there, 7:30 sharp."
       },
       {
         "kind": "before",
@@ -744,7 +744,7 @@
       },
       {
         "q": "What does Carl wear into the dungeon?",
-        "options": ["Full plate armor", "Boxers, a cloak, no shoes", "A tuxedo", "A Class A uniform"],
+        "options": ["Full plate armor", "No pants and pink Crocs", "A tuxedo", "A Class A uniform"],
         "answer": 1
       },
       {

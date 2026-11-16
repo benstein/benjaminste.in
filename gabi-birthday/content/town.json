@@ -11,7 +11,7 @@
       "id": "dogs",
       "name": "Dogs of Piedmont Merit Badge",
       "title": "Every Dog Petted",
-      "hint": "Ten walk with the Wednesday Walkers; the dogs are fine, the Walkers are not. Seven live in friends' houses, Peanut walks with Francisco, four more are out with their people around town, and one is not a dog at all."
+      "hint": "Ten walk with the Wednesday Walkers; the dogs are fine, the Walkers are not. Five live in friends' houses, Peanut walks with Francisco, four more are out with their people around town, and one is not a dog at all."
     },
     {
       "id": "plaques",
@@ -944,7 +944,7 @@
       "talks": [
         {
           "lines": [
-            "Formed in 1910 as the first non-denominational church west of the Mississippi. Troop 1 meets downstairs. This week's meeting is running long.",
+            "Formed in 1910 as the first non-denominational church west of the Mississippi. Troop 1 meets here in the Kettlewell Room. This week's meeting is running long.",
             "Albert Farr drew the building in 1917: two bell towers, a copper dome, and an organ with pipes up to thirty-two feet. From the stairs on Mountain Avenue, someone is doing the troop cheer very slowly."
           ]
         }
@@ -3228,71 +3228,6 @@
           }
         }
       ]
-    },
-    {
-      "id": "dog-callie",
-      "kind": "pet",
-      "name": "Callie",
-      "title": "Callie, guarding Theo's",
-      "look": {
-        "kind": "dog",
-        "size": "medium",
-        "coat": "#f5f5f5",
-        "patch": "#d7ccc8"
-      },
-      "prompt": "pet",
-      "talks": [
-        {
-          "lines": [
-            "Callie flops over for a belly rub. As far as Callie is concerned, this is why Gabi came, and whatever is scratching upstairs can wait."
-          ],
-          "sound": "bark"
-        }
-      ],
-      "collect": {
-        "set": "dogs",
-        "item": "callie"
-      },
-      "tier": 1,
-      "source": "Papi, 2026-10-11",
-      "room": {
-        "id": "theo",
-        "x": 7,
-        "y": 5
-      }
-    },
-    {
-      "id": "dog-babka",
-      "kind": "pet",
-      "name": "Babka",
-      "title": "Babka, keeping Hugo company",
-      "look": {
-        "kind": "dog",
-        "size": "small",
-        "coat": "#f5f5f5",
-        "patch": "#bcaaa4",
-        "fluffy": true
-      },
-      "prompt": "pet",
-      "talks": [
-        {
-          "lines": [
-            "Babka is named after a pastry, and smells a little like one. In this town that makes Babka the best-smelling thing for a mile."
-          ],
-          "sound": "bark"
-        }
-      ],
-      "collect": {
-        "set": "dogs",
-        "item": "babka"
-      },
-      "tier": 1,
-      "source": "Papi, 2026-10-11",
-      "room": {
-        "id": "hugo",
-        "x": 7,
-        "y": 5
-      }
     },
     {
       "id": "dog-coyote",
