@@ -2,7 +2,7 @@
   {
     "id": "theo",
     "name": "Theo",
-    "portrait": "placeholder",
+    "portrait": "generated",
     "npcSprite": "placeholder",
     "hue": 15,
     "room": {
@@ -29,14 +29,14 @@
       ],
       "replay": ["Again? The door's held together with tape and prayer. Sure."],
       "locked": "The door won't budge. Something on the other side is breathing through the mail slot.",
-      "clue": "Cade's next. Kingston side. He was writing clues on the wall when the power went. Not with a pen."
+      "clue": "Cade's next. Lorita Avenue. He was writing clues on the wall when the power went. Not with a pen."
     },
     "bio": "Barricaded in a closet since Thursday. Has typed nothing but five-letter words for three days. His little brother is outside the door. His little brother is hungry."
   },
   {
     "id": "cade",
     "name": "Cade",
-    "portrait": "placeholder",
+    "portrait": "generated",
     "npcSprite": "placeholder",
     "hue": 50,
     "room": {
@@ -200,7 +200,7 @@
   {
     "id": "ciaran",
     "name": "Ciaran",
-    "portrait": "placeholder",
+    "portrait": "generated",
     "npcSprite": "placeholder",
     "hue": 235,
     "room": {
@@ -231,7 +231,7 @@
   {
     "id": "hugo",
     "name": "Hugo",
-    "portrait": "placeholder",
+    "portrait": "generated",
     "npcSprite": "placeholder",
     "hue": 270,
     "room": {
@@ -262,7 +262,7 @@
   {
     "id": "marina",
     "name": "Marina",
-    "portrait": "placeholder",
+    "portrait": "generated",
     "npcSprite": "placeholder",
     "hue": 305,
     "room": {
@@ -294,7 +294,7 @@
   {
     "id": "violet",
     "name": "Violet",
-    "portrait": "placeholder",
+    "portrait": "generated",
     "npcSprite": "placeholder",
     "hue": 340,
     "room": {
