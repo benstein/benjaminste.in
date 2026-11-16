@@ -6,28 +6,26 @@
       "hue": 210,
       "lines": {
         "greeting": [
-          "Gabi. You came home. Everyone's here. Everyone's SO here.",
-          "I'm fine, by the way. I'm a little damp. I've been damp since the pool. Don't look at my eyes, they're doing a thing."
+          "Gabi, you came home! Everyone's here, even the people nobody invited.",
+          "I'm fine, by the way, just a little damp. I've been damp since the pool. Don't look at my eyes, they're doing a thing."
         ],
         "phaseIntro": [
           "You play chess on your phone. I play chess with the living room.",
-          "Life-size. The pieces are coming for you. Some of them are the neighbors. Your move, Goblet."
+          "The pieces are life-size, and some of them are the neighbors. Your move, Goblet."
         ],
         "phaseWin": [
-          "Checkmate. Fine. FINE. That was low key sigma, for a guy who's still alive.",
+          "Okay, checkmate. That was low key sigma, for a guy who's still alive.",
           "Take the candle. Mami's next and she wants a hug so bad. Like, SO bad."
         ],
         "phaseLose": ["Checkmate. Massive L. Your rating's going down AND you're about to be lunch."],
-        "afterFight": [
-          "The cake's on the table. Or we run it back. I've got time. I've got all the time now."
-        ],
+        "afterFight": ["The cake's on the table. Or we run it back, I've got nothing but time now."],
         "drawOffer": [
-          "Wait. WAIT. Hold on. Let's be mature about this.",
+          "Wait, WAIT. Let's be mature about this.",
           "I'll offer you a draw. Come closer and shake on it."
         ],
         "drawAccepted": [
-          "You took the DRAW? Bro. You shook my hand. My hand came off. And then I bit you a little.",
-          "That's a skill issue AND a bite. Pieces up. Again."
+          "You took the DRAW? Bro, you shook my hand and it came off. Then I bit you a little.",
+          "Skill issue. Set the pieces up again."
         ]
       },
       "bossRef": {
@@ -41,22 +39,22 @@
       "hue": 340,
       "lines": {
         "greeting": [
-          "Mijo. Come here. I have been standing next to this cake since four o'clock. I have not blinked since four o'clock.",
-          "You walked the whole town at night. In those shoes. Come give your mother a hug."
+          "Mijo, come here. I have been standing next to this cake since four o'clock, and I have not blinked once.",
+          "You walked the whole town in those shoes? Come give your mother a hug."
         ],
         "phaseIntro": [
           "We are not fighting, mijo. You know the rule in this house: no violent video games.",
-          "I say a word in Spanish, you tell me what it means. Then I hug you. Then I hug you very, very hard."
+          "I say a word in Spanish, you tell me what it means. Every one is on a street sign, with my note under it. Then I hug you, very, very hard."
         ],
         "phaseWin": [
           "Ay, you got so fast. When did you get so fast?",
-          "Take the candle. Papi is next. He has been practicing his jokes. Lo siento."
+          "Take the candle. Papi is next, and he has been practicing his jokes. Lo siento."
         ],
         "phaseLose": [
-          "Ven aquí. Otra vez, mijo. I am not going anywhere. I physically can't, my foot is in the floor."
+          "Ven aquí. Otra vez, mijo. I am not going anywhere. I will be right here, by the cake."
         ],
         "afterFight": [
-          "Everybody is here and the cake is on the table. We could go around again. Or we could go to the pool. Everyone is going to the pool."
+          "We could go around again, mijo. Or we could all go to the pool. Everyone is going to the pool."
         ]
       },
       "bossRef": {
@@ -64,32 +62,32 @@
         "taunt": "No violent video games, mijo. Just a hug.",
         "vocabulary": [
           {
-            "es": "estudiar",
-            "en": ["study"]
+            "es": "vista",
+            "en": ["view"]
           },
           {
-            "es": "aprender",
-            "en": ["learn"]
+            "es": "bonita",
+            "en": ["pretty"]
           },
           {
-            "es": "leer",
-            "en": ["read"]
+            "es": "arroyo",
+            "en": ["creek", "stream"]
           },
           {
-            "es": "escribir",
-            "en": ["write"]
+            "es": "estrella",
+            "en": ["star"]
           },
           {
-            "es": "hablar",
-            "en": ["talk", "speak"]
+            "es": "monte",
+            "en": ["mountain", "mount"]
           },
           {
-            "es": "practicar",
-            "en": ["practice", "practise"]
+            "es": "mesa",
+            "en": ["table"]
           },
           {
-            "es": "copiar",
-            "en": ["copy"]
+            "es": "pala",
+            "en": ["shovel", "spade"]
           }
         ]
       }
@@ -100,20 +98,20 @@
       "hue": 30,
       "lines": {
         "greeting": [
-          "Gabi! You made it! I built something for the occasion. Well. Re-built. Banshee had some parts I didn't need.",
-          "Your mother says I have no taste. I have a LOT of taste. Ask the Pattersons. Actually, don't."
+          "Gabi! You made it! I got Banshee running again for the occasion. I had some parts left over.",
+          "Your mother says no jokes at the dinner table. We are not at the dinner table."
         ],
         "phaseIntro": [
           "You don't have your permit, so I'm driving.",
           "Three, two, one... hub's active. Get ready to groan, kiddo."
         ],
         "phaseWin": [
-          "The main breaker. You went for the main breaker. That's my kid.",
-          "Here's the last candle from us. Now take the cake to the pool. It came out of the drain, Gabi. Put it back."
+          "You tripped the main breaker. Just like Worlds, except this time I'm proud of it.",
+          "Here's the last candle from us. Take the cake to the pool, Gabi. Whatever came out of that drain, put it back."
         ],
         "phaseLose": ["Ha! Gotcha. Want to hear another one? You don't get a choice."],
         "afterFight": [
-          "The pool's that way. Everyone's following you. Don't look back, it only encourages them."
+          "The pool's that way, and everyone's following you. Don't look back, it only encourages them."
         ]
       },
       "bossRef": {

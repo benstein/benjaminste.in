@@ -5,13 +5,13 @@
       "id": "owls",
       "name": "Four Owls Merit Badge",
       "title": "Owl Spotter",
-      "hint": "Jack Fischrup says four great horned owls live in Dracena Park. Their heads turn all the way round now. Then keep going."
+      "hint": "Jack Fischrup says four great horned owls live in Dracena Park. Their heads turn all the way round now, and then keep going."
     },
     {
       "id": "dogs",
       "name": "Dogs of Piedmont Merit Badge",
       "title": "Every Dog Petted",
-      "hint": "The Walkers still bring their dogs; the dogs are fine, the Walkers are not. Seven more live in friends' houses, one walks with Francisco, and one is not a dog at all."
+      "hint": "Ten walk with the Wednesday Walkers; the dogs are fine, the Walkers are not. Seven live in friends' houses, Peanut walks with Francisco, four more are out with their people around town, and one is not a dog at all."
     },
     {
       "id": "plaques",
@@ -115,6 +115,7 @@
         "pants": "#b49c6b",
         "extra": "apron"
       },
+      "turned": true,
       "room": {
         "id": "mulberrys",
         "x": 10,
@@ -124,7 +125,7 @@
         {
           "lines": [
             "Welcome to Mulberry's. The Post-Mortem is in the rack by the door. A dollar eighty-one, plus tax.",
-            "I ring it up with two fingers now. People ask where the other eight went. The ice case, with the rest of me."
+            "I ring it up with two fingers now. The other eight are in a sandwich bag in the ice case, in case somebody can sew them back on."
           ],
           "once": true
         },
@@ -143,7 +144,7 @@
         {
           "lines": [
             "We sponsor the Beach Dads' pancake breakfast every year. Us, Piedmont Grocery and Village Market.",
-            "Three markets, one very sticky blacktop. We stopped supplying the batter. Somebody else supplies it now."
+            "Three markets, one very sticky blacktop. This year the Beach Dads brought their own batter, and nobody has asked what's in it."
           ],
           "once": true
         },
@@ -183,7 +184,7 @@
       "talks": [
         {
           "lines": [
-            "You pay a dollar eighty-one. Plus tax. The change comes back damp.",
+            "You pay a dollar eighty-one plus tax. The change comes back damp.",
             "PIEDMONT POST-MORTEM, Vol. 28. 'Patch sales notch 1000 gourds for Wildwood. Several gourds had names.'",
             {
               "by": "gabi",
@@ -281,7 +282,9 @@
             },
             {
               "label": "I wish they'd slow down.",
-              "reply": ["Judy Sokoloff, word for word. The dead agree with you both. They can't keep up."],
+              "reply": [
+                "Judy Sokoloff said that, word for word. The dead would like them slower too. They can't keep up."
+              ],
               "sets": ["qm:1"]
             }
           ]
@@ -330,13 +333,14 @@
             "Last question of the season. What was your first car?",
             {
               "by": "gabi",
-              "text": "I don't have my permit."
+              "text": "I don't have my permit yet."
             },
+            "Every car in town has its keys in it right now, and nobody left to check.",
             {
               "by": "gabi",
-              "text": "Every car in town has the keys in it right now. I still do not have my permit."
+              "text": "Papi would check."
             },
-            "Then you're in the same spot as the man whose first car was a 1958 Edsel he bought for three hundred dollars. He's still sitting in it. It still won't start."
+            "Then you've got a head start on the man whose first car was a 1958 Edsel he bought for three hundred dollars. He's still sitting in it. It still won't start."
           ],
           "when": {
             "notFlags": ["qm:3"],
@@ -375,6 +379,7 @@
         "pants": "#24305e",
         "extra": "vest"
       },
+      "turned": true,
       "spots": [
         {
           "at": {
@@ -424,7 +429,7 @@
       "talks": [
         {
           "lines": [
-            "Frank C. Havens Elementary. The city's oldest elementary school, in a building from 2010 built to look a hundred years older. Tonight it looks two hundred.",
+            "Frank C. Havens Elementary. The city's oldest elementary school, in a building from 2010 built to look a hundred years older. Now it looks two hundred.",
             "No computers in TK or K. Scratched under that, in small letters: 'No recess. Do not open the doors.'"
           ]
         }
@@ -457,7 +462,7 @@
       "talks": [
         {
           "lines": [
-            "ONE WAY. NO TURN FROM OAKLAND AVE. DIAGONAL PARKING. 17 NEW SPACES. Somebody has crossed out ONE WAY and written NO WAY OUT."
+            "ONE WAY. NO TURN FROM OAKLAND AVE. DIAGONAL PARKING. 17 NEW SPACES. ONE WAY is crossed out, and under it in marker: NO WAY OUT."
           ]
         }
       ],
@@ -518,7 +523,7 @@
       "talks": [
         {
           "lines": [
-            "Hey. You're the birthday kid, right? Word gets around in a town this size. So does everything else.",
+            "Hey. You're the birthday kid, right? Word gets around in a town this size. So do bites.",
             "Quick question, since you're here. Does your family have two weeks of water at home? Pool water does not count."
           ],
           "once": true,
@@ -532,7 +537,7 @@
             {
               "label": "Does pool water count?",
               "reply": [
-                "No. Never. Only about a third of town has clean water. Ask tonight, if anyone at home can still answer.",
+                "No. Never. Only about a third of town has clean water. Ask at home, if anyone there can still answer.",
                 "Give us thirty minutes and we'll help you turn 'we should have a plan' into a plan. Step one is fire. Step two is more fire."
               ]
             }
@@ -617,7 +622,7 @@
       "talks": [
         {
           "lines": [
-            "I've been here about two months. Planning is a fun puzzle. I love puzzles. A town full of the walking dead is a very big puzzle.",
+            "I've been here about two months. Planning is a fun puzzle, and a town full of the walking dead is a very big one.",
             "There's Coffee, Cops and Cars. I keep pitching gluten-free pizza with planners. At this point I'd take brains-free."
           ],
           "once": true
@@ -654,7 +659,7 @@
         {
           "lines": [
             "City Hall, designed by Albert Farr, who also drew the Exedra and the Community Church. He did not design it to be boarded up from inside.",
-            "Piedmont became a city in 1907. Somebody has added, in marker: 'Became a cemetery in 2026.'"
+            "Piedmont became a city in 1907. Scratched into the bronze under it: 'Cemetery, 2026.'"
           ]
         }
       ],
@@ -687,7 +692,7 @@
           "once": true,
           "lines": [
             "PPD BLUE. Every week the Piedmont police still post a Pick of the Week: the strangest call in town. Runner-up: 'Neighbor eating other neighbor. Officer advised it was a civil matter.'",
-            "There are 11 picks this year, and every one happened somewhere in Piedmont. Find all 11 scenes. Bring a flashlight.",
+            "There are 11 picks this year, and every one happened somewhere in Piedmont. Find all 11 scenes.",
             "Find one and the next pick goes up. No need to walk back here: your Journal (J) always shows the latest pick.",
             "This week's pick is in your Journal now. Press J. The officer who pins these up has fewer thumbs every week."
           ],
@@ -703,7 +708,7 @@
         },
         {
           "lines": [
-            "PPD BLUE. PICK OF THE WEEK: 'Found bound hound sound.' A big gray and white dog stuck between two walls. Dog fine. Walls under investigation. WHERE: Grand Ave, a few houses east of Zubin's."
+            "PPD BLUE. PICK OF THE WEEK: 'Found bound hound sound.' A big gray and white dog stuck between two walls. Dog fine. Walls under investigation. WHERE: Grand Ave, up near Greenbank Ave."
           ],
           "when": {
             "notFlags": ["got:ppd:hound"]
@@ -727,7 +732,7 @@
         },
         {
           "lines": [
-            "PPD BLUE. PICK OF THE WEEK: 'Too early for Santa.' People up on a roof in September. They are still up there, and they are right not to come down. WHERE: Linda Ave, south of Hugo's house."
+            "PPD BLUE. PICK OF THE WEEK: 'Too early for Santa.' People up on a roof in September. They are still up there, and they are right not to come down. WHERE: Linda Ave, east of Hugo's house on Olive."
           ],
           "when": {
             "notFlags": ["got:ppd:santa"]
@@ -815,7 +820,7 @@
       "talks": [
         {
           "lines": [
-            "Afternoon. Chief Shavies. Keep six feet back. It's not personal, it's policy now.",
+            "Afternoon. Chief Shavies. Keep six feet back. Department policy, as of Thursday.",
             "You ride an e-bike? A lot of what kids call e-bikes are really e-motos. That thing under you is a robot. I'll allow it."
           ],
           "once": true
@@ -939,7 +944,7 @@
       "talks": [
         {
           "lines": [
-            "Formed in 1910 as the first non-denominational church west of the Mississippi. Troop 1 meets downstairs. Tonight's meeting is running long.",
+            "Formed in 1910 as the first non-denominational church west of the Mississippi. Troop 1 meets downstairs. This week's meeting is running long.",
             "Albert Farr drew the building in 1917: two bell towers, a copper dome, and an organ with pipes up to thirty-two feet. From the stairs on Mountain Avenue, someone is doing the troop cheer very slowly."
           ]
         }
@@ -1027,6 +1032,7 @@
         "pants": "#b49c6b",
         "extra": "vest"
       },
+      "turned": true,
       "spots": [
         {
           "at": {
@@ -1067,6 +1073,7 @@
         "pants": "#2a2a2a",
         "extra": "badge"
       },
+      "turned": true,
       "spots": [
         {
           "at": {
@@ -1172,6 +1179,7 @@
         "shirt": "#f5b7b1",
         "pants": "#b49c6b"
       },
+      "turned": true,
       "spots": [
         {
           "at": {
@@ -1202,6 +1210,7 @@
         "shirt": "#5d6d7e",
         "pants": "#b49c6b"
       },
+      "turned": true,
       "spots": [
         {
           "at": {
@@ -1339,7 +1348,7 @@
           },
           {
             "name": "Batteries",
-            "line": "Double A's for the flashlight. The flashlight is the only reason you see them first."
+            "line": "Double A's for the flashlight. The first night was long enough without them."
           },
           {
             "name": "Bat Nails",
@@ -1371,7 +1380,7 @@
       "talks": [
         {
           "lines": [
-            "Every candy Piedmont has ever heard of. Zeke has tried them all, and he's saving a few to throw at you."
+            "Every candy Piedmont has ever heard of, and a few it hasn't. Zeke has tried them all. There's a gap on the rack where his usual goes."
           ]
         }
       ],
@@ -1394,7 +1403,7 @@
       "talks": [
         {
           "lines": [
-            "The sour shelf. Somebody has been eating the blue raspberry ones. The wrappers are wet, and the fingerprints on them are pruned."
+            "The sour shelf. Half the blue raspberry ones are gone. The wrappers on the floor are wet, and the fingerprints on them are pruned."
           ]
         }
       ],
@@ -1417,7 +1426,7 @@
       "talks": [
         {
           "lines": [
-            "Sodas, sports drinks, and one lonely bottle of kombucha nobody will ever buy. Even the dead walk past it. It is quietly the best medicine in Piedmont."
+            "Sodas, sports drinks, and one lonely bottle of kombucha nobody will ever buy. Even the dead walk past it, though it is the best medicine in Piedmont."
           ]
         }
       ],
@@ -1465,6 +1474,7 @@
         "shirt": "#2e7d32",
         "pants": "#455a64"
       },
+      "turned": true,
       "spots": [
         {
           "at": {
@@ -1506,6 +1516,7 @@
         "shirt": "#ad1457",
         "pants": "#37474f"
       },
+      "turned": true,
       "spots": [
         {
           "at": {
@@ -2656,6 +2667,12 @@
       "prompt": "look",
       "talks": [
         {
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": ["The coop. Seven hens live here, and every one of them thinks she runs it."]
+        },
+        {
           "once": true,
           "sound": "squeak",
           "lines": [
@@ -2673,7 +2690,7 @@
     {
       "id": "hen-1",
       "kind": "critter",
-      "name": "A headless hen",
+      "name": "A hen",
       "title": "Home's backyard",
       "look": {
         "kind": "sprite",
@@ -2698,6 +2715,12 @@
       "prompt": "look",
       "talks": [
         {
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": ["Bawk."]
+        },
+        {
           "lines": ["Bawk. It comes from somewhere in her neck."],
           "sound": "squeak"
         }
@@ -2707,7 +2730,7 @@
     {
       "id": "hen-2",
       "kind": "critter",
-      "name": "A headless hen",
+      "name": "A hen",
       "title": "Home's backyard",
       "look": {
         "kind": "sprite",
@@ -2732,6 +2755,12 @@
       "prompt": "look",
       "talks": [
         {
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": ["This hen is sitting on an egg and would like Gabi to keep walking."]
+        },
+        {
           "lines": [
             "This hen is sitting on an egg with an eye in it. The egg would like Gabi to keep walking."
           ],
@@ -2743,7 +2772,7 @@
     {
       "id": "hen-3",
       "kind": "critter",
-      "name": "A headless hen",
+      "name": "A hen",
       "title": "Home's backyard",
       "look": {
         "kind": "sprite",
@@ -2768,7 +2797,13 @@
       "prompt": "look",
       "talks": [
         {
-          "lines": ["She has no eyes, but she eyes Soup anyway. Soup eyes her back. Nobody moves."],
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": ["She and Soup stare at each other, and neither one moves."]
+        },
+        {
+          "lines": ["She has no eyes, but she stares at Soup anyway, and Soup stares back."],
           "sound": "squeak"
         }
       ],
@@ -2777,7 +2812,7 @@
     {
       "id": "hen-4",
       "kind": "critter",
-      "name": "A headless hen",
+      "name": "A hen",
       "title": "Home's backyard",
       "look": {
         "kind": "sprite",
@@ -2802,6 +2837,12 @@
       "prompt": "look",
       "talks": [
         {
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": ["This one got out of the run again. She always does."]
+        },
+        {
           "lines": [
             "This one got out of the run again. Losing her head made her harder to keep in, not easier."
           ],
@@ -2813,7 +2854,7 @@
     {
       "id": "hen-5",
       "kind": "critter",
-      "name": "A headless hen",
+      "name": "A hen",
       "title": "Home's backyard",
       "look": {
         "kind": "sprite",
@@ -2838,7 +2879,15 @@
       "prompt": "look",
       "talks": [
         {
-          "lines": ["Bawk? Gabi checks his pockets. No corn. She pecks at his finger anyway, with her neck."],
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": ["Bawk? Gabi checks his pockets for corn and finds none."]
+        },
+        {
+          "lines": [
+            "Bawk? Gabi checks his pockets for corn and finds none. She pecks at his finger anyway, with her neck."
+          ],
           "sound": "squeak"
         }
       ],
@@ -2847,7 +2896,7 @@
     {
       "id": "hen-6",
       "kind": "critter",
-      "name": "A headless hen",
+      "name": "A hen",
       "title": "Home's backyard",
       "look": {
         "kind": "sprite",
@@ -2872,6 +2921,12 @@
       "prompt": "look",
       "talks": [
         {
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": ["She pecks Gabi's shoe, decides it is not food, and wanders off."]
+        },
+        {
           "lines": ["She pecks Gabi's shoe, decides it is not food yet, and wanders off."],
           "sound": "squeak"
         }
@@ -2881,7 +2936,7 @@
     {
       "id": "hen-7",
       "kind": "critter",
-      "name": "A headless hen",
+      "name": "A hen",
       "title": "Home's backyard",
       "look": {
         "kind": "sprite",
@@ -2906,6 +2961,12 @@
       "prompt": "look",
       "talks": [
         {
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": ["The boss hen. The other six do what she says."]
+        },
+        {
           "lines": ["The boss hen. She lost her head first, and the other six followed her lead."],
           "sound": "squeak"
         }
@@ -2928,14 +2989,14 @@
       "talks": [
         {
           "lines": [
-            "Stella the doodle decides Gabi is her favourite person. She decided the same thing about the zombie at the window an hour ago. Stella is not a good judge of character. Stella is a very good dog."
+            "Stella the doodle decides Gabi is her favorite person. An hour ago she decided the same about the zombie at the window. She is a very good dog with no judgment at all."
           ],
           "sound": "bark",
           "once": true
         },
         {
           "lines": [
-            "Stella shakes herself off. Doodle fur holds a surprising amount of water. It is mostly water."
+            "Stella shakes herself off all over Gabi. Doodle fur holds a surprising amount of water, and not all of it smells like water."
           ],
           "sound": "bark"
         }
@@ -3032,7 +3093,7 @@
       "talks": [
         {
           "lines": [
-            "Miso is small and warm and smells faintly of soup. Not Soup the dog. Soup the food. Gabi checks anyway."
+            "Miso is small and warm and smells faintly of miso soup. Soup the dog sniffs him for a long time, trying to work out whether they are related."
           ],
           "sound": "bark"
         }
@@ -3102,8 +3163,16 @@
       "prompt": "pet",
       "talks": [
         {
+          "when": {
+            "minCandles": 4
+          },
           "lines": [
-            "Marmalade: orange, enormous, Violet's cat, asleep on Cade's porch. One eye opens. It closes again. Why is Violet's cat on Cade's porch?"
+            "Marmalade, still asleep on Cade's porch. Now you know why: Violet is upstairs under Cade's bed, and Marmalade is standing guard. Lying guard."
+          ]
+        },
+        {
+          "lines": [
+            "Marmalade: orange, enormous, Violet's cat, asleep on Cade's porch. One eye opens and closes again. What is Violet's cat doing on Cade's porch?"
           ]
         }
       ],
@@ -3134,8 +3203,16 @@
       "prompt": "pet",
       "talks": [
         {
+          "when": {
+            "minCandles": 4
+          },
           "lines": [
-            "Pretzel, Violet's other cat, folded into a shape only a cat named Pretzel could manage, on Cade's front walk. Gabi is not invited to pet Pretzel. Gabi is allowed to wonder what she is doing here."
+            "Pretzel, still folded on the front walk, waiting for Violet to come out from under the bed, however long that takes."
+          ]
+        },
+        {
+          "lines": [
+            "Pretzel, Violet's other cat, folded into a shape only a cat named Pretzel could manage, on Cade's front walk. She does not want to be petted. She seems to be waiting for someone inside."
           ]
         }
       ],
@@ -3156,7 +3233,7 @@
       "id": "dog-callie",
       "kind": "pet",
       "name": "Callie",
-      "title": "Callie, Zubin's dog, guarding Theo's",
+      "title": "Callie, guarding Theo's",
       "look": {
         "kind": "dog",
         "size": "medium",
@@ -3188,7 +3265,7 @@
       "id": "dog-babka",
       "kind": "pet",
       "name": "Babka",
-      "title": "Babka, Soli's dog, keeping Hugo company",
+      "title": "Babka, keeping Hugo company",
       "look": {
         "kind": "dog",
         "size": "small",
@@ -3231,6 +3308,14 @@
       },
       "prompt": "look",
       "talks": [
+        {
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": [
+            "A coyote, behind the coop. It is not looking at Gabi. It is looking at Soup and Salad the way Gabi looks at a bag of Nerds Gummy Clusters."
+          ]
+        },
         {
           "once": true,
           "sound": "squeak",
@@ -3278,6 +3363,7 @@
         "shirt": "#ff8f00",
         "pants": "#263238"
       },
+      "turned": true,
       "spots": [
         {
           "at": {
@@ -3366,6 +3452,7 @@
         "pants": "#b49c6b",
         "extra": "glasses"
       },
+      "turned": true,
       "room": {
         "id": "rec",
         "x": 10,
@@ -3388,7 +3475,7 @@
         },
         {
           "lines": [
-            "I'm retiring at the end of the year. Don't tell anybody. Everybody already knows. Same with the biting."
+            "I'm retiring at the end of the year. Don't tell anybody. Everybody already knows, same as the biting."
           ]
         }
       ],
@@ -3422,7 +3509,7 @@
         },
         {
           "lines": [
-            "You're in tenth grade? Last year for NextGen CIT. We train counselors. We are very, very short on counselors."
+            "Sixteen? You'd make a good NextGen CIT. We train counselors. We are very, very short on counselors."
           ]
         }
       ],
@@ -3499,7 +3586,7 @@
         {
           "lines": [
             "Joseph Gold, the Musical Gourmet. I just turned eighty. It was a long time coming.",
-            "No amplification is ever needed. If I can hear it from across the street, I am across the street. The moaning I can hear from anywhere. There is nowhere left to cross to."
+            "I never use amplification. If I can hear the music from across the street, I go and stand across the street. The moaning I can hear from every street in town, so I have stopped crossing."
           ],
           "once": true
         },
@@ -3532,7 +3619,7 @@
       "talks": [
         {
           "lines": [
-            "PIEDMONT CENTER FOR THE ARTS. 'HOPES AND DREAMS' THROUGH NOV 1. OPERATIC MAD SCENES, HELD OVER INDEFINITELY. COSTUMES ENCOURAGED. Always(!) something unexpected at 801 Magnolia Ave. Tonight it's the audience."
+            "PIEDMONT CENTER FOR THE ARTS. 'HOPES AND DREAMS' THROUGH NOV 1. OPERATIC MAD SCENES, HELD OVER INDEFINITELY. COSTUMES ENCOURAGED. Always(!) something unexpected at 801 Magnolia Ave. This week it's the audience."
           ]
         }
       ],
@@ -3562,7 +3649,7 @@
       "talks": [
         {
           "lines": [
-            "A purple yard sign: WE GIVE. PIEDMONT EDUCATION FOUNDATION. Somebody has added, in something red: BLOOD."
+            "A purple yard sign: WE GIVE. PIEDMONT EDUCATION FOUNDATION. Under it, in something red: BLOOD."
           ]
         }
       ],
@@ -3767,7 +3854,7 @@
       "prompt": "read",
       "talks": [
         {
-          "lines": ["VOTE NOV 3. Somebody has scrawled a write-in underneath: BRAAAINS."]
+          "lines": ["VOTE NOV 3. A write-in is scrawled underneath: BRAAAINS."]
         }
       ],
       "tier": 1,
@@ -3869,6 +3956,7 @@
         "pants": "#3b5b8c",
         "small": true
       },
+      "turned": true,
       "spots": [
         {
           "at": {
@@ -3882,7 +3970,7 @@
         {
           "lines": [
             "They took the swings out when I was four.",
-            "They said November. It's November. I'll wait. I don't get tired anymore."
+            "They said November, and it's November, so I'll wait. I don't get tired anymore."
           ],
           "when": {
             "maxCandles": 9
@@ -4167,13 +4255,13 @@
       "talks": [
         {
           "lines": [
-            "Gabi! Drive team's here. Piedmont Makers built us a full-size practice field in Oakland. It's on the other side of the fence now.",
-            "The co-president says the real heroes are the kids and the volunteer parents. Most of the volunteer parents are trying to eat the kids.",
+            "Gabi! You're alive! Drive team's here. The practice field in Oakland is on the other side of the fence now. So much for 10th Street.",
+            "The co-president keeps saying the real heroes are the kids and the volunteer parents. Most of the volunteer parents are trying to eat the kids.",
             {
               "by": "gabi",
-              "text": "That's my dad."
+              "text": "One of those is my dad."
             },
-            "No way. Tell him the field's sick. From a distance."
+            "I know. Tell him the field's sick. From a distance."
           ],
           "once": true
         },
@@ -4237,7 +4325,7 @@
         {
           "lines": [
             "FROZEN JR. Alan Harvey Theater, Oct 23-25. 'Sure to thaw even the coldest heart!' The audience is still in there, and their hearts are very cold.",
-            "Underneath, an older one: 'AI: WILL IT SAVE OR END THE WORLD? Sept 26.' Somebody has written across it: NEITHER. IT WAS THE POOL."
+            "Underneath, an older one: 'AI: WILL IT SAVE OR END THE WORLD? Sept 26.' The answer turned out to be the pool."
           ]
         }
       ],
@@ -4277,7 +4365,7 @@
         },
         {
           "lines": [
-            "We rekeyed every classroom this summer. A thousand doors. First time in twenty years. Best timing of my career.",
+            "We rekeyed every classroom this summer, a thousand doors, the first time in twenty years. Best timing of my career.",
             "I've lost one key. One. Out of a thousand. Room 108 is the one with the scratching."
           ],
           "when": {
@@ -4350,7 +4438,7 @@
         {
           "lines": [
             "JOHN MORRISON GYMNASIUM. Principal of Piedmont Middle School for twenty-seven years.",
-            "He never lost a game of ping-pong to a middle school student. He may have lost once to a teacher. Somewhere in the gym, a paddle is still going, steady as ever.",
+            "He never lost a game of ping-pong to a middle school student. He may have lost once to a teacher. From inside the gym comes the sound of a ping-pong paddle, steady as ever.",
             "He knew every car in the Fourth of July parade, and every driver. Someone has wiped this plaque clean. Nothing else on the block has been."
           ]
         }
@@ -4504,7 +4592,7 @@
       "talks": [
         {
           "lines": [
-            "A visiting team's bus is stuck at the Witter Field entrance. On three wheels. There are hands pressed to every window.",
+            "A visiting team's bus is stuck at the Witter Field entrance on three wheels, with hands pressed to every window.",
             {
               "by": "tow-driver",
               "text": "How does a bus do a wheelie? Carefully. And I'm not opening that door to find out who's driving."
@@ -4523,7 +4611,7 @@
         "kicker": "PPD Blue  -  Pick of the Week",
         "headline": "How a bus does a wheelie",
         "dateline": "Friday, Sept. 11  -  Witter Field",
-        "text": "A visiting football team's bus took the steep entrance to Witter Field and ended up balanced on three wheels, with the fourth in the air. It wasn't blocking the road and nobody was hurt. A tow truck got it down. It is back up there now, on the same three wheels, with the visiting team still aboard and hungry. Not the warm-up anyone planned."
+        "text": "A visiting football team's bus took the steep entrance to Witter Field and ended up balanced on three wheels, with the fourth in the air. It wasn't blocking the road and nobody was hurt. A tow truck got it down. It is back up there now, on the same three wheels, with the visiting team still aboard and hungry."
       }
     },
     {
@@ -4569,6 +4657,7 @@
         "pants": "#b49c6b",
         "hat": "#5b2a86"
       },
+      "turned": true,
       "spots": [
         {
           "at": {
@@ -4707,6 +4796,7 @@
         "shirt": "#24305e",
         "pants": "#2a2a2a"
       },
+      "turned": true,
       "spots": [
         {
           "at": {
@@ -4813,7 +4903,7 @@
         },
         {
           "lines": [
-            "Here, smell this. Lemon verbena. I bring a bag on the walks. These days it's mostly for me.",
+            "Here, smell this. Lemon verbena. I bring a bag on the walks.",
             "Smells like a lemon that went to college. Covers the smell of me pretty well."
           ],
           "once": true
@@ -5192,7 +5282,7 @@
       "talks": [
         {
           "lines": [
-            "Paw prints set in the new concrete. Some dog ignored the cones. Next to them, bare footprints that are still wet and never dried."
+            "Paw prints set in the new concrete. Some dog ignored the cones. Next to them, bare footprints that are still wet."
           ]
         }
       ],
@@ -5245,7 +5335,7 @@
       "talks": [
         {
           "lines": [
-            "DRACENA PARK. Dracena is a plant. Nobody knows which one. It's the only thing in the park that hasn't tried to bite you."
+            "DRACENA PARK. Dracena is a plant, though nobody in Piedmont could point to one. Something has gnawed the bottom of this sign."
           ]
         }
       ],
@@ -5278,12 +5368,14 @@
         {
           "lines": [
             "Welcome to the patch! Wildwood Dads Club, biggest fundraiser of the year.",
-            "Pumpkins came in the middle of the night. Thirteen thousand pounds. Nobody ever sees the truck. This year some of them came with hair."
+            "The pumpkins come in the middle of the night, thirteen thousand pounds of them, and nobody ever sees the truck. This year some of them came with hair."
           ],
           "once": true
         },
         {
-          "lines": ["Prices haven't changed in four years. The customers have. Most of them shamble."],
+          "lines": [
+            "Prices haven't changed in four years. The customers have, and most of them shamble now."
+          ],
           "once": true
         },
         {
@@ -5309,6 +5401,7 @@
         "pants": "#b49c6b",
         "hat": "#1e8449"
       },
+      "turned": true,
       "spots": [
         {
           "at": {
@@ -5395,7 +5488,7 @@
         {
           "lines": [
             "GIANT JACK WEIGHED IN AT 1,247 LB, NOT COUNTING THE ROOTS. Closest guess wins curbside delivery.",
-            "That's you! Jack will be delivered to Calvert Ct. Do not feed him after dark. He will vanish in November, along with whatever he eats."
+            "That's you! Jack will be delivered to Calvert Ct. Do not feed him after dark. He will rot by Thanksgiving, along with whatever he eats."
           ],
           "when": {
             "flags": ["jack:c"],
@@ -5483,7 +5576,9 @@
       "prompt": "look",
       "talks": [
         {
-          "lines": ["KNUCKLEHEAD. Covered in warts, and hair, and one ear. It is a head. Named honestly."]
+          "lines": [
+            "KNUCKLEHEAD. Covered in warts, with some hair and one ear. Nobody at the patch wants to check that it is a pumpkin."
+          ]
         }
       ],
       "collect": {
@@ -5614,7 +5709,7 @@
       "prompt": "look",
       "talks": [
         {
-          "lines": ["TURK'S TURBAN. Looks like a hat. Is a squash. Something underneath it is wearing it."]
+          "lines": ["TURK'S TURBAN. A squash shaped like a hat, and something underneath it is wearing it."]
         }
       ],
       "collect": {
@@ -5647,7 +5742,7 @@
       "talks": [
         {
           "lines": [
-            "BLUE JARRAHDALE. Blue-grey, the color of the neighbors. Australian. Very calm. Breathing, a little."
+            "BLUE JARRAHDALE. An Australian squash, blue-grey, the color of the neighbors. Very calm, and breathing a little."
           ]
         }
       ],
@@ -5714,7 +5809,7 @@
       "prompt": "look",
       "talks": [
         {
-          "lines": ["SWAN NECK GOURD. A long curly neck. Not a swan. Not entirely a gourd anymore, either."]
+          "lines": ["SWAN NECK GOURD. A long curly neck, and it turns to follow you."]
         }
       ],
       "collect": {
@@ -6192,7 +6287,7 @@
         {
           "lines": [
             "These eucalyptus came from William Blair's nursery near the cemetery in the 1800s.",
-            "They are still here. So is the smell. For once it is covering up a worse one."
+            "They are still here, and so is the smell. For once it is covering up a worse one."
           ]
         }
       ],
@@ -6206,7 +6301,7 @@
     {
       "id": "headstone-1",
       "kind": "sign",
-      "name": "Zeke's 13th Year",
+      "name": "Gabi's 15th Year",
       "title": "Mountain View Cemetery",
       "look": {
         "kind": "sprite",
@@ -6225,14 +6320,21 @@
       "prompt": "read",
       "talks": [
         {
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": ["2025 to 2026.", "It smelled like Axe body spray and feet."]
+        },
+        {
           "lines": [
-            "2025 - 2026.",
+            "2025 to 2026.",
             "It smelled like Axe body spray and feet.",
-            "The grave is open. Whatever climbed out still smells like Axe body spray and feet. Follow your nose. Actually, please don't."
-          ]
+            "Dug up from below. Whatever climbed out still smells like Axe body spray and feet, so if you smell it coming, run."
+          ],
+          "sets": ["read:headstone-1"]
         }
       ],
-      "source": "Papi, 2026-10-14: a joke headstone in Mountain View Cemetery, for the ghost night"
+      "source": "Papi, 2026-10-14, from Zeke's game; reworked for Gabi 2026-11-16"
     },
     {
       "id": "headstone-2",
@@ -6256,14 +6358,22 @@
       "prompt": "read",
       "talks": [
         {
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": ["Cause of death: Gabi and Zeke.", "Survived by no other nerves."]
+        },
+        {
           "lines": [
-            "Cause of death: Zeke.",
+            "Cause of death: Gabi and Zeke.",
             "Survived by no other nerves.",
-            "The grave is open. Something six feet long and twitching went over the wall toward Highland. Whatever you do, do not say \"actually\" near it."
-          ]
+            "Empty. Something long, thin and twitching went over the wall toward Highland.",
+            "Whatever you do, don't ask it for a ride."
+          ],
+          "sets": ["read:headstone-2"]
         }
       ],
-      "source": "Papi, 2026-10-14: a joke headstone in Mountain View Cemetery, for the ghost night"
+      "source": "Papi, 2026-10-14, from Zeke's game; reworked for Gabi 2026-11-16"
     },
     {
       "id": "headstone-3",
@@ -6287,14 +6397,22 @@
       "prompt": "read",
       "talks": [
         {
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": ["Temporarily deceased.", "Will rise again. Probably."]
+        },
+        {
           "lines": [
             "Temporarily deceased.",
-            "Will rise again. Probably. Maybe.",
-            "It rose. A four-digit number clawed its way out and shambled off toward town. It is still low."
-          ]
+            "Will rise again. Probably.",
+            "It rose. A four-digit number clawed its way out and shambled off toward town.",
+            "It is still low, and every time you die it gets lower."
+          ],
+          "sets": ["read:headstone-3"]
         }
       ],
-      "source": "Papi, 2026-10-14: a joke headstone in Mountain View Cemetery, for the ghost night"
+      "source": "Papi, 2026-10-14, from Zeke's game; reworked for Gabi 2026-11-16"
     },
     {
       "id": "headstone-4",
@@ -6318,19 +6436,27 @@
       "prompt": "read",
       "talks": [
         {
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": ["Soup ate it.", "Soup regrets nothing."]
+        },
+        {
           "lines": [
             "Soup ate it.",
             "Soup regrets nothing.",
-            "The grave has been dug up. Soup did that too. The homework is out there somewhere, and it is due."
-          ]
+            "Dug up from the top, not from below. Soup again.",
+            "The homework is loose in town, and it is still due."
+          ],
+          "sets": ["read:headstone-4"]
         }
       ],
-      "source": "Papi, 2026-10-14: a joke headstone in Mountain View Cemetery, for the ghost night"
+      "source": "Papi, 2026-10-14, from Zeke's game; reworked for Gabi 2026-11-16"
     },
     {
       "id": "headstone-5",
       "kind": "sign",
-      "name": "Zubin's Dignity",
+      "name": "Banshee's Main Breaker",
       "title": "Mountain View Cemetery",
       "look": {
         "kind": "sprite",
@@ -6349,19 +6475,27 @@
       "prompt": "read",
       "talks": [
         {
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": ["Worlds 2024. Ten and oh in qualifications.", "Tripped in the playoffs."]
+        },
+        {
           "lines": [
-            "Lost at Kian's beach party.",
-            "Taken by sand crabs. In the trunks. Rest in pieces.",
-            "The grave is open and the dirt is full of little holes. The crabs are back, and there are more of them."
-          ]
+            "Worlds 2024. Ten and oh in qualifications.",
+            "Tripped in the playoffs.",
+            "Dug up. Something is going house to house flipping breakers, which explains the traffic lights.",
+            "Banshee has been looking for it ever since."
+          ],
+          "sets": ["read:headstone-5"]
         }
       ],
-      "source": "Papi, 2026-10-14: a joke headstone in Mountain View Cemetery, for the ghost night"
+      "source": "Stand-in for Gabi until Papi sends his own headstones (TODO-BEN.md), 2026-11-16"
     },
     {
       "id": "headstone-6",
       "kind": "sign",
-      "name": "Zeke's Screen Time",
+      "name": "Gabi's Screen Time",
       "title": "Mountain View Cemetery",
       "look": {
         "kind": "sprite",
@@ -6380,14 +6514,21 @@
       "prompt": "read",
       "talks": [
         {
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": ["Gone every school night at 9.", "Mami pulled the plug. Mami always pulls the plug."]
+        },
+        {
           "lines": [
             "Gone every school night at 9.",
             "Mami pulled the plug. Mami always pulls the plug.",
-            "The only grave in the row that is still shut. When Mami puts something down, it stays down."
-          ]
+            "The only grave in the row that is still shut. When Mami pulls the plug, it stays pulled."
+          ],
+          "sets": ["read:headstone-6"]
         }
       ],
-      "source": "Papi, 2026-10-14: a joke headstone in Mountain View Cemetery, for the ghost night"
+      "source": "Papi, 2026-10-14, from Zeke's game; reworked for Gabi 2026-11-16"
     },
     {
       "id": "headstone-7",
@@ -6411,14 +6552,22 @@
       "prompt": "read",
       "talks": [
         {
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": ["Nobody admits anything.", "Zeke was seen nearby."]
+        },
+        {
           "lines": [
             "Nobody admits anything.",
-            "Ben C was seen nearby.",
-            "The grave is open. Something triangular, with pepperoni and teeth, is loose downtown. Ben C was seen nearby. Again."
-          ]
+            "Zeke was seen nearby.",
+            "The grave is open. Something triangular, with pepperoni and teeth, is loose downtown.",
+            "Zeke was seen nearby. Again."
+          ],
+          "sets": ["read:headstone-7"]
         }
       ],
-      "source": "Papi, 2026-10-14: a joke headstone in Mountain View Cemetery, for the ghost night"
+      "source": "Papi, 2026-10-14, from Zeke's game; reworked for Gabi 2026-11-16"
     },
     {
       "id": "headstone-8",
@@ -6442,14 +6591,95 @@
       "prompt": "read",
       "talks": [
         {
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": ["Somewhere in a hedge.", "Forever. Salad still checks."]
+        },
+        {
           "lines": [
             "Somewhere in a hedge.",
             "Forever. Salad still checks.",
-            "The hedge behind it has a fresh Salad-sized tunnel in it. Somewhere inside, a tail is wagging hard enough to hum."
-          ]
+            "The hedge behind it has a fresh Salad-sized tunnel in it. Something in there is wagging hard enough to shake the leaves."
+          ],
+          "sets": ["read:headstone-8"]
         }
       ],
-      "source": "Papi, 2026-10-14: a joke headstone in Mountain View Cemetery, for the ghost night"
+      "source": "Papi, 2026-10-14, from Zeke's game; reworked for Gabi 2026-11-16"
+    },
+    {
+      "id": "headstone-9",
+      "kind": "sign",
+      "name": "Paddo the Frog",
+      "title": "Mountain View Cemetery",
+      "look": {
+        "kind": "sprite",
+        "sprite": "headstone"
+      },
+      "spots": [
+        {
+          "at": {
+            "place": "cemetery",
+            "dx": 26,
+            "dy": -6
+          }
+        }
+      ],
+      "solid": true,
+      "prompt": "read",
+      "talks": [
+        {
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": ["8033, 2023.", "Retired."]
+        },
+        {
+          "lines": [
+            "8033, 2023.",
+            "Retired.",
+            "The dirt is wet and pushed up from below. Something green is hopping around town, croaking like a stripped gear."
+          ],
+          "sets": ["read:headstone-9"]
+        }
+      ],
+      "source": "Stand-in for Gabi until Papi sends his own headstones (TODO-BEN.md), 2026-11-16"
+    },
+    {
+      "id": "headstone-gabi",
+      "kind": "sign",
+      "name": "GABI",
+      "title": "Mountain View Cemetery",
+      "look": {
+        "kind": "sprite",
+        "sprite": "headstone"
+      },
+      "spots": [
+        {
+          "at": {
+            "place": "cemetery",
+            "dx": 14,
+            "dy": 8
+          },
+          "from": 1
+        }
+      ],
+      "solid": true,
+      "prompt": "read",
+      "talks": [
+        {
+          "lines": [
+            "GABI. 2010 to later today.",
+            "The hole is fresh and exactly your size. A sign is stuck in the dirt beside it: RESERVED.",
+            {
+              "by": "gabi",
+              "text": "It's a scratch. I'm fine."
+            }
+          ],
+          "sets": ["read:headstone-gabi"]
+        }
+      ],
+      "source": "Papi's concept page, section 8: Gabi's own open grave (2026-11-16)"
     },
     {
       "id": "nace-banner",
@@ -6475,7 +6705,7 @@
         {
           "lines": [
             "NACE IS NICE. A faded banner from the Fourth of July block party. It's been nice since 1976.",
-            "Somebody has painted WAS over the IS. The paint is still running."
+            "WAS has been painted over the IS, and the paint is still running."
           ]
         }
       ],
@@ -6608,7 +6838,7 @@
         {
           "lines": [
             "We're catching roly-polies. Twenty-eight kids on Nace, nineteen now, and we still need more roly-polies.",
-            "They're the only bugs on this street that aren't hungry."
+            "They curl up when the dead walk by, same as us."
           ]
         }
       ],
@@ -6652,7 +6882,7 @@
         },
         {
           "lines": [
-            "Another skunk stuck in a rat trap. Third week. Same fence. Something's different about this one. I'm not going closer to find out."
+            "Another skunk stuck in a rat trap, third week running, same fence. Something's different about this one, and I'm not going closer to find out."
           ],
           "when": {
             "flags": ["skunk:1"],
@@ -6663,7 +6893,7 @@
         {
           "lines": [
             "Thanks for that. Animal Control took the last one to Lindsay Wildlife. Animal Control never came back.",
-            "You did yours yourself."
+            "This time you did it yourself, and you came back."
           ],
           "when": {
             "flags": ["skunk:1"],
@@ -6673,7 +6903,7 @@
         {
           "lines": [
             "There's a skunk stuck in a rat trap by my fence. Don't startle it. Please. My car's parked right there.",
-            "It's the only thing on Nace that still smells better than the neighbors."
+            "These days it smells better than the neighbors."
           ],
           "when": {
             "notFlags": ["skunk:1"],
@@ -6683,7 +6913,7 @@
           "toast": "Errand: Skunk Trouble on Nace"
         },
         {
-          "lines": ["Nace is nice. Mostly. Some weeks it's skunks. This week it's everybody."]
+          "lines": ["Nace is nice, mostly. Some weeks it's skunks. This week it's everybody."]
         }
       ],
       "tier": 1,
@@ -6715,8 +6945,8 @@
       "talks": [
         {
           "lines": [
-            "A small skunk with its foot in a rat trap. Behind it, a neighbor in a bathrobe is chewing on the fence. You move slow. Very slow.",
-            "Click. It's free. It waddles off without spraying anybody. Huge."
+            "A small skunk with its foot in a rat trap. Behind it, a neighbor in a bathrobe is chewing on the fence. You move very slowly.",
+            "Click, and it's free. It waddles off without spraying anybody."
           ],
           "sets": ["skunk:1"],
           "sound": "squeak"
@@ -6752,8 +6982,8 @@
       "talks": [
         {
           "lines": [
-            "Another skunk. Same fence. Same trap. Different face: this one has a rat's head.",
-            "Click. Free. It looks back at you with the rat's little eyes like this is your fault."
+            "Another skunk in the same trap on the same fence, except this one has a rat's head.",
+            "Click. It gets free and looks back at you with the rat's little eyes, like this is your fault."
           ],
           "sets": ["skunk:2"],
           "sound": "squeak"
@@ -6785,7 +7015,7 @@
       "talks": [
         {
           "lines": [
-            "A chalk Snoopy, still bright. No rain since August. Somebody has drawn a police outline around him."
+            "A chalk Snoopy, still bright, because it hasn't rained since August. There is a police outline drawn around him."
           ]
         }
       ],
@@ -6922,6 +7152,7 @@
         "hat": "#2e86c1",
         "extra": "apron"
       },
+      "turned": true,
       "spots": [
         {
           "at": {
@@ -7081,7 +7312,7 @@
         {
           "lines": [
             "A white Camry, parked a little crooked. It looks like it's been through something.",
-            "Its blinker is on. It has been on since Thursday."
+            "Its blinker has been on since Thursday."
           ]
         }
       ],
@@ -7225,7 +7456,7 @@
         "kicker": "PPD Blue  -  Pick of the Week",
         "headline": "Found bound hound sound",
         "dateline": "Monday, Sept. 28  -  Grand Ave.",
-        "text": "Neighbors on Grand heard howling and found a big gray and white dog wedged in the gap of a dividing wall. He got pulled out and the call was canceled. The headline is four rhymes in a row, which is the police department showing off. Update: the same gap has since caught two neighbors who went in after him and stayed. Dogs are immune. Neighbors are not. Officers are leaving them there."
+        "text": "Neighbors on Grand heard howling and found a big gray and white dog wedged in the gap of a dividing wall. He got pulled out and the call was canceled. The headline is four rhymes in a row, which is the police department showing off. Update: the same gap has since caught two neighbors who went in after him and stayed. Dogs are immune and neighbors are not, so officers are leaving them there."
       }
     },
     {
@@ -7290,8 +7521,7 @@
       "talks": [
         {
           "lines": [
-            "This car's front plate is on the back. And the back plate is on the front. So is the driver's head.",
-            "Somebody committed to the bit."
+            "This car's front plate is on the back, and the back plate is on the front. So is the driver's head."
           ]
         }
       ],
@@ -7743,7 +7973,7 @@
         {
           "lines": [
             "ESTRELLA. 'Star.' Leafy, tree-lined, very nice.",
-            "Taped under it, in Mami's handwriting: 'Star.' None tonight. Something is covering them."
+            "Taped under it, in Mami's handwriting: 'Star.' Make a wish on one tonight, mijo. Make it a big one."
           ]
         }
       ],
@@ -7951,7 +8181,7 @@
         },
         {
           "lines": [
-            "Some of the walkers call it Shovel Street now. The Walkers don't call it anything. They just moan when I go by."
+            "The Wednesday Walkers used to call it Shovel Street. Now they don't call it anything. They just moan when I go by."
           ]
         }
       ],
@@ -8012,7 +8242,7 @@
           "sound": "honk"
         },
         {
-          "lines": ["The officer advised us. We are being advised. The hedge is still honking."]
+          "lines": ["The officer advised us, and we are being advised. The hedge is still honking."]
         }
       ],
       "collect": {
@@ -8026,7 +8256,7 @@
         "kicker": "PPD Blue  -  Pick of the Week",
         "headline": "What do teens without ebikes do?",
         "dateline": "Sunday, Sept. 20  -  San Carlos Ave.",
-        "text": "Three boys, somewhere between 12 and 15, worked out that if you step toward the road and pump your arm, drivers honk. An officer had a chat with them about cars being heavier than people. Now most of the cars on San Carlos have nobody in them, and they honk anyway. The boys have moved to the median, which they say is the safest place in town. The officer is keeping an eye on it. One eye."
+        "text": "Three boys, somewhere between 12 and 15, worked out that if you step toward the road and pump your arm, drivers honk. An officer had a chat with them about cars being heavier than people. Now most of the cars on San Carlos have nobody in them, and they honk anyway. The boys have moved to the median, which they say is the safest place in town. The officer is keeping an eye on it."
       }
     },
     {
@@ -8041,6 +8271,7 @@
         "pants": "#24305e",
         "extra": "badge"
       },
+      "turned": true,
       "spots": [
         {
           "at": {
@@ -8089,7 +8320,7 @@
             },
             {
               "by": "gabi",
-              "text": "Burning man?"
+              "text": "Burning Man?"
             },
             {
               "by": "roadtrip",
@@ -8133,7 +8364,7 @@
         {
           "lines": [
             "FIVE WAY STOP. Wallace, Winsor, Warfield and Wildwood. That's four names for five corners.",
-            "Somebody counted wrong and nobody fixed it. Now there are six cars stopped here, engines running, every driver waiting for somebody else to go first. Two of the drivers have no heads."
+            "Nobody agrees whose turn it is. Six cars are stopped here, engines running, every driver waiting for somebody else to go first. Two of the drivers have no heads."
           ]
         }
       ],
@@ -8199,7 +8430,7 @@
       "talks": [
         {
           "lines": [
-            "A small, friendly white dog. No collar. It sits on your foot and growls at the dark on your behalf.",
+            "A small, friendly white dog. No collar. It sits on your foot and growls at the hedge on your behalf.",
             {
               "by": "wildwood-kids",
               "text": "Can we keep it? Pleeease?"
@@ -8246,7 +8477,7 @@
         {
           "lines": [
             "It doesn't have a collar. That means it's ours, right? Right?",
-            "It's the only one at recess that doesn't bite."
+            "It doesn't even bite. Hardly anybody at recess is like that anymore."
           ]
         }
       ],
@@ -8265,6 +8496,7 @@
         "shirt": "#48c9b0",
         "pants": "#b49c6b"
       },
+      "turned": true,
       "spots": [
         {
           "at": {
@@ -8377,7 +8609,7 @@
         {
           "lines": [
             "It's not a pellet gun! It's Orbeez! They soak up water. I shoot the wet ones and they dry out a little.",
-            "A cop came. He said it 'does not resemble firearm.' Then he tried to bite me. I'm putting both on my birthday list as reviews."
+            "A cop came. He said it 'does not resemble firearm.' Then he tried to bite me, so I shot him too. He dried out a little."
           ]
         }
       ],
@@ -8406,7 +8638,7 @@
         {
           "lines": [
             "The Wildwood jungle gym. It looks smaller than you remember.",
-            "That's how you know you're sixteen. Three kids on top of it refuse to come down until morning, and you think they have a point."
+            "That's how you know you're sixteen. Three kids on top of it refuse to come down until this is over, and you think they have a point."
           ]
         }
       ],
@@ -8437,7 +8669,7 @@
         {
           "lines": [
             "SOLD. A million dollars over asking. The buyers moved in Friday and haven't come out.",
-            "Somebody has written 'Higher than 5 stars!' on it in marker. Somebody else has written 'NO' underneath, in something that is not marker."
+            "In marker across it: 'Higher than 5 stars!' Under that, in something that is not marker: 'NO.'"
           ]
         }
       ],
@@ -8686,8 +8918,8 @@
       "talks": [
         {
           "lines": [
-            "The lion stares into the middle distance. There's a cookie on its plinth. Somebody has taken a bite out of it.",
-            "You decide not to ask. You also decide it was farther away a minute ago."
+            "The lion stares into the middle distance. There's a cookie on its plinth with one bite gone, and crumbs on the lion's chin.",
+            "You don't ask. You are fairly sure it was farther away a minute ago."
           ],
           "sound": "pickup"
         }
@@ -8716,7 +8948,7 @@
         {
           "lines": [
             "Julia Morgan, 1925. The first woman licensed as an architect in California.",
-            "She also did Hearst Castle. This one's a little smaller, and it is the only house on the block with every window still in it. She built well."
+            "She also did Hearst Castle. This one's a little smaller, and it is the only house on the block with every window still in it."
           ]
         }
       ],
@@ -8744,7 +8976,7 @@
         {
           "lines": [
             "ST. JAMES WOOD. Two big white columns and terracotta tiles set into the sidewalk.",
-            "Very 1910s. Very serious about it. The columns are the only things on this block still standing up straight."
+            "Very 1910s, and very serious about it. The columns are still standing up straight, which is more than the neighbors can say."
           ]
         }
       ],
@@ -8843,7 +9075,7 @@
             "A 1939 Carr Jones storybook house: a round brick turret, a wavy brick wall, and a brick maze on the lawn.",
             "The kids who live here built the maze out of spare bricks during Covid. It's taller than you now. Nobody added any bricks.",
             "On the door: 'The Rooster Crows, but the Hen Delivers.'",
-            "Seven headless hens are waiting at the entrance. They seem to know the way."
+            "A headless hen is waiting at the entrance. She seems to know the way."
           ]
         }
       ],
@@ -8901,6 +9133,12 @@
       ],
       "talks": [
         {
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": ["TYSON LAKE. PRIVATE. NO SWIMMING.", "The only lake in Piedmont. Some say it's haunted."]
+        },
+        {
           "lines": [
             "TYSON LAKE. PRIVATE. NO SWIMMING. After the pool, nobody needs telling.",
             "The only lake in Piedmont. Some say it's haunted. Out in the middle, something with purple bumpers surfaces, turns exactly ninety degrees, and sinks again."
@@ -8934,6 +9172,15 @@
       ],
       "talks": [
         {
+          "when": {
+            "maxCandles": 0
+          },
+          "lines": [
+            "Carp. Nobody believes there's a lake in Piedmont. I let them not believe it.",
+            "Haunted? It's a pond with good PR."
+          ]
+        },
+        {
           "lines": [
             "Carp.",
             "*reels in a hand, looks at it, throws it back*",
@@ -8945,7 +9192,11 @@
         {
           "lines": [
             "Haunted? It's a pond with good PR. The PR has gotten worse.",
-            "Some high school robotics team dumped an old robot in here. Called it Nessie. It has earned the name."
+            "Some high school robotics team dumped an old robot in here. Called it Nessie. It has earned the name.",
+            {
+              "by": "gabi",
+              "text": "That's my team. Nessie was 2020, before my time."
+            }
           ]
         }
       ],
@@ -9034,7 +9285,7 @@
         "kicker": "PPD Blue  -  Pick of the Week",
         "headline": "Just hit it",
         "dateline": "Thursday, Aug. 27  -  Sandringham Rd.",
-        "text": "Someone reported wasps attacking dogs on Sandringham Road. The officer saw no wasps, so he gave the suspected nest one good whack with a baton, to be sure. Still no wasps. He went back and whacked it again. The bush whacked back. Still no wasps. Something in there has knuckles. Science."
+        "text": "Someone reported wasps attacking dogs on Sandringham Road. The officer saw no wasps, so he gave the suspected nest one good whack with a baton, to be sure. Still no wasps. He went back and whacked it again. The bush whacked back. Still no wasps. Something in there has knuckles."
       }
     },
     {
@@ -9097,7 +9348,7 @@
         {
           "lines": [
             "A garbage truck idles on Prospect, compactor grinding. Next to it, an SUV with a long scrape down its side and its driver halfway out the window.",
-            "The garbage truck has no scratch at all. It is still running its route. It is picking up more than cans.",
+            "The garbage truck doesn't have a scratch on it, and it is still running its route. It is picking up more than cans.",
             {
               "by": "gabi",
               "text": "Not going to win that one."
@@ -9234,8 +9485,8 @@
       "talks": [
         {
           "lines": [
-            "Two green street signs leaning on a garage: ESTATES and WYNGAARD. Somebody has been chewing on the corners.",
-            "Somebody's going to be very confused about where they live, and lately that includes the dead. You take them."
+            "Two green street signs leaning on a garage: ESTATES and WYNGAARD. Something has been chewing on the corners.",
+            "Without them, people on two streets can't tell where they live, and lately that includes the dead. You take them."
           ],
           "sets": ["signs:carrying"],
           "sound": "pickup"
@@ -9453,7 +9704,7 @@
             "I WILL KILL YOU AND YOUR MOTHER!",
             {
               "by": "gabi",
-              "text": "My mom's already a zombie. She keeps trying to hug me."
+              "text": "You'd have to get past Zeke. He got to her first."
             },
             "THEN I WILL KILL YOU FIRST AND FIT HER IN AFTER. I AM VERY BUSY."
           ],
@@ -9490,7 +9741,7 @@
           "lines": [
             "636 Highland, the Ghirardelli House. After the 1906 earthquake, Joseph Ghirardelli tried to walk home from Santa Cruz.",
             "He never made it, and he never got to live here.",
-            "Tonight the front door is open. Wet, muddy footprints go up the steps and inside. A hundred and twenty years of walking, and he made it."
+            "The front door is open now. Wet, muddy footprints go up the steps and inside. A hundred and twenty years of walking, and he made it."
           ]
         }
       ],
@@ -9610,7 +9861,7 @@
         {
           "lines": [
             "Built in 1907 by Frank Havens' development company as a showcase home, to sell lots.",
-            "It's been selling the neighborhood ever since. Tonight it's showing: every window lit, somebody standing very still in each one."
+            "It's been selling the neighborhood ever since. It's still showing: somebody standing very still in every window."
           ]
         }
       ],
@@ -9890,9 +10141,7 @@
           "sets": ["blowers:gardens"]
         },
         {
-          "lines": [
-            "Leaves don't move themselves. Well. These do. They crawl right back onto the lawn. That's the problem."
-          ]
+          "lines": ["Leaves don't move themselves. Well, these do. They crawl right back onto the lawn."]
         }
       ],
       "tier": 1,
@@ -9954,6 +10203,7 @@
         "pants": "#b49c6b",
         "hat": "#c8ad7f"
       },
+      "turned": true,
       "spots": [
         {
           "at": {
@@ -10038,7 +10288,7 @@
       "talks": [
         {
           "lines": [
-            "Dick Carter, Walking on Wednesday. Fifty walkers and their K-9 best friends, every week from the Exedra. Same route. Same pace. Less skin.",
+            "Dick Carter, Walking on Wednesday. Fifty walkers and their K-9 best friends, every week from the Exedra. Same route as always, with less skin.",
             "Bit Piedmont hot today. We can't really tell anymore."
           ],
           "when": {
@@ -10048,7 +10298,7 @@
         },
         {
           "lines": [
-            "Twenty-seven houses on this street and about twenty-eight kids. We counted. We keep counting. The number keeps going down."
+            "There's a round sauna on this street. We'd love to go in, but the kids hiding in it won't open the door, and at a hundred and ninety degrees I'm not sure we'd come out."
           ],
           "when": {
             "minCandles": 3,
@@ -10098,7 +10348,7 @@
       "talks": [
         {
           "lines": [
-            "I taught Piedmont history at Wildwood for years. Every house on Highland has a story. Tonight most of them have the same one.",
+            "I taught Piedmont history at Wildwood for years. Every house on Highland has a story. This month most of them have the same one.",
             "Ask me about the house that moved. Annie Hendry had the right idea."
           ],
           "once": true
@@ -10125,6 +10375,7 @@
         "pants": "#b49c6b",
         "hat": "#eeeeee"
       },
+      "turned": true,
       "behavior": {
         "type": "follow",
         "leader": "dick-carter",
@@ -10160,7 +10411,7 @@
       "talks": [
         {
           "lines": [
-            "Pepper wags. Pepper has walked every Wednesday since June. Pepper's leash still has a hand on the other end. Pepper doesn't mind."
+            "Pepper has walked every Wednesday since June, and the leash still has a hand on the other end. Pepper wags anyway."
           ],
           "sound": "bark"
         }
@@ -10183,6 +10434,7 @@
         "shirt": "#a3e4d7",
         "pants": "#2a2a2a"
       },
+      "turned": true,
       "behavior": {
         "type": "follow",
         "leader": "dick-carter",
@@ -10217,7 +10469,7 @@
       "talks": [
         {
           "lines": [
-            "Brie trots along very seriously. Brie is a professional. Brie is also dragging most of a Walker and has not slowed down."
+            "Brie trots along very seriously, like a professional, dragging most of a Walker and not slowing down."
           ],
           "sound": "bark"
         }
@@ -10273,6 +10525,7 @@
         "pants": "#b49c6b",
         "hat": "#f9e79f"
       },
+      "turned": true,
       "behavior": {
         "type": "follow",
         "leader": "dick-carter",
@@ -10341,7 +10594,7 @@
       "talks": [
         {
           "lines": [
-            "Roger leans on you. Roger is large and has decided you are furniture. His owner is leaning on Roger. Roger has decided that's fine too."
+            "Roger leans on you. He is large and has decided you are furniture. His owner is leaning on Roger, which Roger has also decided is fine."
           ],
           "sound": "bark"
         }
@@ -10364,6 +10617,7 @@
         "shirt": "#bb8fce",
         "pants": "#2a2a2a"
       },
+      "turned": true,
       "behavior": {
         "type": "follow",
         "leader": "dick-carter",
@@ -10398,7 +10652,7 @@
       "prompt": "pet",
       "talks": [
         {
-          "lines": ["Mocha is the color of mocha. Mocha knows. Mocha is the only clean thing on this walk."],
+          "lines": ["Mocha is the color of mocha, with not a speck of anything else on that coat, somehow."],
           "sound": "bark"
         }
       ],
@@ -10430,7 +10684,7 @@
       "talks": [
         {
           "lines": [
-            "Petunia was new in June. She's a regular now. She is the last regular with a heartbeat, and nobody has told her it's special."
+            "Petunia was new in June. Now she's the only regular who still knows the whole route, so the Walkers follow her."
           ],
           "sound": "bark"
         }
@@ -10462,7 +10716,7 @@
       "talks": [
         {
           "lines": [
-            "Gwen does a little spin. Gwen is happy to be here. Gwen has no idea anything is wrong, and you are not going to be the one to tell her."
+            "Gwen does a little spin. She is happy to be here and has no idea anything is wrong, and you are not going to be the one to tell her."
           ],
           "sound": "bark"
         }
@@ -10526,7 +10780,7 @@
       "talks": [
         {
           "lines": [
-            "Zippy zips. Zippy is aptly named. Zippy is the only one on the walk who can outrun them, and does it for fun."
+            "Zippy lives up to the name, running circles around the Walkers and around the things chasing them, for fun."
           ],
           "sound": "bark"
         }
@@ -10562,7 +10816,7 @@
       "talks": [
         {
           "lines": [
-            "Kojak wags. He's walked every Wednesday since June. He's carrying a shin. He found it himself and he's keeping it."
+            "Kojak wags. Kojak is immune, as Jack keeps telling everybody. He's carrying a shin. He found it himself and he's keeping it."
           ],
           "sound": "bark"
         }
@@ -10598,7 +10852,7 @@
       "talks": [
         {
           "lines": [
-            "Pip is asleep. Pip skips excursions. Pip has slept through the entire end of the world. Pip is living correctly."
+            "Pip is asleep. Pip has slept through the whole end of the world so far, and is living correctly."
           ]
         }
       ],
@@ -10637,7 +10891,7 @@
       "talks": [
         {
           "lines": [
-            "Kobe brings you a ball. You check carefully. It is a ball. Kobe would like you to throw the ball. Forever."
+            "Kobe brings you a ball. You check carefully, and it is a ball. Kobe would like you to throw it forever."
           ],
           "sound": "bark"
         }
@@ -10675,7 +10929,7 @@
       "talks": [
         {
           "lines": [
-            "Ginger is ginger. Ginger rolls over for a belly rub. Something in the bushes groans. Ginger does not care at all."
+            "Ginger rolls over for a belly rub. Something in the bushes groans, and Ginger does not care at all."
           ],
           "sound": "bark"
         }
@@ -10774,7 +11028,7 @@
       "talks": [
         {
           "lines": [
-            "A skunk. You stop. It stops. The zombie behind it stops too. Even they have limits. Everybody agrees to keep it that way."
+            "A skunk. You stop, it stops, and the zombie behind it stops too. Even the dead don't want to get sprayed."
           ]
         }
       ],
@@ -10836,7 +11090,7 @@
       "prompt": "look",
       "talks": [
         {
-          "lines": ["A squirrel. It's busy. Very busy. It's burying a finger for winter. Leave it alone."]
+          "lines": ["A squirrel, burying a finger for winter. Leave it alone."]
         }
       ],
       "tier": 1,
@@ -10928,9 +11182,7 @@
       "prompt": "look",
       "talks": [
         {
-          "lines": [
-            "A squirrel. It's busy. Very busy. Its tail is on backward and it hasn't noticed. Leave it alone."
-          ]
+          "lines": ["A squirrel. Its tail is on backward and it hasn't noticed. Leave it alone."]
         }
       ],
       "tier": 1,
@@ -11070,6 +11322,7 @@
         "shirt": "#7f8c8d",
         "pants": "#2a2a2a"
       },
+      "turned": true,
       "spots": [
         {
           "at": {
@@ -11094,7 +11347,7 @@
         {
           "lines": [
             "Do you have a snack? No? You kind of look like one.",
-            "Next Food Truck Friday is the sixteenth. I'll wait. Unless you come a little closer."
+            "I'll wait for Food Truck Friday. Unless you come a little closer."
           ]
         }
       ],
@@ -11504,7 +11757,7 @@
       "talks": [
         {
           "lines": [
-            "A leaf pile. Not a narrow row. It's breathing. Somebody's getting a note from Public Works."
+            "A leaf pile, not a narrow row, and it's breathing. Somebody's getting a note from Public Works."
           ]
         }
       ],
@@ -11789,9 +12042,9 @@
         {
           "sound": "bark",
           "lines": [
-            "Cheddar is not a dog. Cheddar is a detective. He has found a femur, and he will not be taking questions.",
+            "Detective Cheddar has found a femur and will not be taking questions.",
             "BONE?!",
-            "You try to pet Cheddar. He allows it. Once. Do not get comfortable."
+            "You try to pet Cheddar. He allows it, once. Do not get comfortable."
           ]
         }
       ],

@@ -61,13 +61,13 @@
         "n": 5,
         "row": 2,
         "col": 0,
-        "clue": "What a body does after three days in the Rec pool"
+        "clue": "What a body does after three days in the deep end"
       },
       {
         "n": 9,
         "row": 4,
         "col": 0,
-        "clue": "The people Gabi is putting down today"
+        "clue": "Spec sev, minus Gabi. Pulses not guaranteed"
       },
       {
         "n": 13,
@@ -111,7 +111,7 @@
         "n": 6,
         "row": 2,
         "col": 1,
-        "clue": "What you breathe. What they don't"
+        "clue": "What you breathe and they don't"
       },
       {
         "n": 7,
@@ -235,7 +235,7 @@
         "kind": "not",
         "a": ["Scout", "Sawyer"],
         "b": ["Bitten by", "Mailman"],
-        "text": "The mailman did not bite Sawyer. He tried. Sawyer is fast."
+        "text": "The mailman did not bite Sawyer. He tried, but Sawyer is fast."
       },
       {
         "kind": "after",
@@ -671,6 +671,16 @@
         "q": "Easy one. Which of these is NOT one of your nicknames?",
         "options": ["Goblet", "Gobstopper", "Gobfather", "Goblin"],
         "answer": 3
+      },
+      {
+        "q": "Finish your own quote: \"Tate is so cool, charismatic, and sexy...\"",
+        "options": [
+          "I wish I was Tate.",
+          "Tate should run for mayor.",
+          "Tate owes me a Slurpee.",
+          "Tate is a Libra."
+        ],
+        "answer": 0
       },
       {
         "q": "Troop 1 meets in which room of the Community Church?",

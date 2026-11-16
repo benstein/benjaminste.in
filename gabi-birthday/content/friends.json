@@ -14,25 +14,25 @@
     "lines": {
       "greeting": [
         "Gabi? GABI. Get in, get in, shut the door. Is it locked? Lock it twice.",
-        "I've been in this closet since Thursday. My little brother tried to eat my phone charger. Then my phone. Then my hand.",
+        "I've been in this closet since Thursday. My little brother ate my phone charger, and then he tried my hand.",
         "Everybody's gone weird, bro. Wet weird. They all smell like the deep end.",
         "Spec sev chat's been dead since the pool. Like, actually dead. You're the first of the seven I've seen with all ten fingers."
       ],
       "beforeGame": [
-        "I'm typing through the crack under the door. Five letters, six guesses before the door gives. Every wrong row is another plank off the barricade. No pressure."
+        "I'll slide the words under the closet door. Five letters, six guesses. Every wrong guess, my brother pries another plank off the bedroom door, so guess faster than he pries."
       ],
       "win": [
         "The barricade held. You actually cooked.",
-        "Candle's yours. Light it. Apparently that's the one thing they hate, and honestly, same, I hate them too."
+        "Candle's yours. Light it, they hate fire. Listen, my brother's already backing off the door."
       ],
       "lose": [
         "That was the last plank. Run. No, wait, come back, it's fine, it was just the cat. The cat is also dead."
       ],
       "replay": ["Again? The door's held together with tape and prayer. Sure."],
       "locked": "The door won't budge. Something on the other side is breathing through the mail slot.",
-      "clue": "Cade's next. Lorita Avenue. He was writing clues on the wall when the power went. Not with a pen."
+      "clue": "Cade's next, on Lorita Avenue. Last I heard he was writing clues on his bedroom wall."
     },
-    "bio": "Barricaded in a closet since Thursday. Has typed nothing but five-letter words for three days. His little brother is outside the door. His little brother is hungry.",
+    "bio": "Barricaded in a closet since Thursday, typing nothing but five-letter words. His little brother is outside the door, and hungry.",
     "body": {
       "hair": "#9a6a3a",
       "skin": "#e8c09a",
@@ -56,25 +56,23 @@
     "lines": {
       "greeting": [
         "Gabi. Don't look at the walls. Okay, look at the walls, I wrote you a crossword on them.",
-        "Ran out of markers on day two. Improvised. It's red because of reasons. The reasons are mostly my neighbor.",
-        "Same grid your little brother did. Same answers. Very different clues."
+        "I ran out of markers on day two. The red is mostly my neighbor.",
+        "It's the grid your little brother did, same answers. I rewrote the clues."
       ],
-      "beforeGame": [
-        "Every clue is something you've seen on the walk over here. If you haven't seen it yet, you will."
-      ],
+      "beforeGame": ["Every clue is something out there in town. If you haven't seen it yet, you will."],
       "win": [
         "Full grid, no help. That's a W written in somebody else's blood, which is still a W.",
         "Candle. I kept it dry in a sandwich bag. It's the only thing in this house that's dry.",
-        "That thump was the house settling. It's an old house. It settles a lot. Mostly under my bed."
+        "That thump was the house settling. It's an old house, and it mostly settles under my bed."
       ],
       "lose": [
         "Grid's not going anywhere. Neither am I. I physically can't, my legs are kind of attached to the carpet now."
       ],
       "replay": ["Same puzzle, faster? The walls aren't getting any cleaner."],
       "locked": "Cade's door is locked. Something red is dripping under it, in neat little rows.",
-      "clue": "Okay. You should go. Walk around the block, take your time, then come back here. For no reason. Don't tell my mom you came twice."
+      "clue": "Okay, you should go. Walk around the block and come back here, for no reason. Don't tell my mom you came twice."
     },
-    "bio": "Ran out of markers on day two and switched to a medium his mother would not approve of. Writes clues on the wall. The wall is load-bearing. So is the clue.",
+    "bio": "Wrote you a crossword on his bedroom wall, in a medium his mother would not approve of. Do not ask him what is under his bed.",
     "body": {
       "hair": "#b8935a",
       "skin": "#e8c09a",
@@ -97,24 +95,22 @@
     "minigame": "trivia",
     "lines": {
       "greeting": [
-        "Is she gone? His mom's been folding the same towel for two hours. She doesn't need towels anymore. She folds it anyway.",
+        "Is she gone? His mom's been folding the same towel for two hours. She keeps dripping on it.",
         "Oh. Gabi. Hi. I'm not here. I'm at home, studying. Marmalade and Pretzel can confirm. Rosey can't, she came with me.",
         "Cade's downstairs keeping his parents busy. If they find me they'll eat me. Worse, they'll call my mom.",
-        "Since you're here. Lightning round, questions about you. I've had a lot of time under that bed to think.",
+        "Since you're here: lightning round, all questions about you. I've had a lot of time under this bed to think.",
         "I have receipts. 'Tate is so cool, charismatic, and sexy. I wish I was Tate.' Gabi, 2026. It's in the question bank.",
-        "Three lives. Every miss, the ceiling comes down a little. It's a real ceiling. I tested it on the mailman."
+        "Three lives. Every miss, the ceiling comes down a notch."
       ],
       "beforeGame": ["Read fast, answer faster, and whisper. Overthinking is how the mailman lost."],
       "win": [
-        "You know yourself. That's rare in this town right now. Most people don't know their own legs.",
+        "You know yourself. Half this town can't remember its own name right now.",
         "Candle. Take it and use the front door like a normal person. I'm staying under here until his parents go to bed. They don't sleep anymore, so, a while."
       ],
       "lose": [
         "Ceiling's down. Quietly, at least. You'll get it next time, if his mom doesn't get you first."
       ],
-      "replay": [
-        "Again? Same questions. Keep your voice down. I'll pretend I don't know you've seen them. I'm good at pretending. Ask Cade's parents."
-      ],
+      "replay": ["Again? Same questions. Keep your voice down and I'll pretend you haven't seen them."],
       "locked": "Cade's bedroom door is shut. Something under the bed is breathing very quietly.",
       "clue": "Next stop: the high school. Kevin and 8033 are holding the Engineering Lab. Bring your driver hands. And Gabi? You didn't see me."
     },
@@ -149,15 +145,15 @@
         "Twenty seconds of auto, then it's your stick. Three hordes. When the hub goes inactive, stop shooting and start ramming."
       ],
       "win": [
-        "That's a qual win. Put it on the pick list. Put ALL of them on the pick list.",
+        "That's a qual win. You're going at the top of our pick list.",
         "Candle's from the whole team. Somebody soldered it to a battery terminal. Don't ask."
       ],
       "lose": ["They got the robot. That's okay, we have spares. We do not have spare people."],
-      "replay": ["Queue up again? Pit's open. Pit is always open. Pit has nowhere else to be."],
-      "locked": "The Engineering Lab door's chained from the inside. Through the window, Kevin is guarding it with a robot. It's not John Dumper.",
-      "clue": "Gilboa's running a ken event in Dracena Park. A birthday party. Nobody has told the madrichimot they're dead."
+      "replay": ["Queue up again? The pit's open."],
+      "locked": "The Engineering Lab door's chained from the inside. Through the window, Kevin is guarding it with a robot.",
+      "clue": "Gilboa's running a ken event in Dracena Park, a birthday party. Nobody has told the madrichimot they're dead."
     },
-    "bio": "Held the Engineering Lab with 8033 since build night. The robots are fine. Kevin is mostly fine. Quals record: undefeated against the living.",
+    "bio": "Has held the Engineering Lab with 8033 since build night. The robots are fine, and Kevin is mostly fine. Undefeated in quals against the living.",
     "body": {
       "hair": "#2e2a28",
       "skin": "#e0b08a",
@@ -180,21 +176,21 @@
       "greeting": [
         "Gabi! You came! Welcome to the ken event! It's a birthday party! It's YOUR birthday party!",
         "We did the three-legged race already. Somebody ended up with three legs. We're not sure whose the third one is.",
-        "Next up is rikud. Everyone in a line. Hold on tight. Some of them have very loose arms right now."
+        "Next up is rikud, everyone in a line. Hold on tight, some of the arms are only loosely attached."
       ],
       "beforeGame": [
-        "You lead the line. Every camper you tag joins the end. Don't run into the end of your own line. Everything is shared here, including bites."
+        "You lead the line. Every camper you tag joins the back of it, so don't run into your own line."
       ],
       "win": [
         "That was the best rikud since machaneh! Aleh v'hagshem! Arise and actualize!",
         "They have arisen. Here's a candle from the kupa. Everyone chipped in. Some of them chipped."
       ],
       "lose": ["The line got you. Happens at every ken event. We'll do a peula about it after."],
-      "replay": ["Again? Hitkansut's not for an hour. We have time. We have so much time."],
+      "replay": ["Again? Hitkansut isn't for another hour, and nobody's going home."],
       "locked": "The picnic is roped off with blue chultzah string. A sign says: SIGN-UP SHEET FULL. BRING A DISH. BRING YOURSELF.",
-      "clue": "Scoutmaster Cantrill's still running Troop 1 in the Kettlewell Room. Up the stairs on Mountain Avenue. Tuesday never ended."
+      "clue": "Scoutmaster Cantrill's still running Troop 1 in the Kettlewell Room, up the stairs on Mountain Avenue. Tuesday's meeting never ended."
     },
-    "bio": "A ken event that started as a birthday party and never ended. Everyone is sharing everything. Everyone. Everything."
+    "bio": "A ken event that started as a birthday party and never ended. The food sign-up sheet now lists the guests."
   },
   {
     "id": "troop1",
@@ -211,23 +207,23 @@
     "lines": {
       "greeting": [
         "Gabi. Good. Come in, we're in the Kettlewell Room. The meeting started at seven thirty and it is still going.",
-        "Full Class A, purple and white neckerchiefs, every scout. Nobody has blinked since roll call. I haven't either. I'm calling it discipline.",
+        "Full Class A, purple and white neckerchiefs, every scout. Nobody has sat down since roll call, and I'm calling it discipline.",
         "They've all turned to look at you, Senior Patrol Leader. I'd stand up straight."
       ],
       "beforeGame": [
-        "I need a roll call. Who got bitten by what, and when they turned. The patrol leaders kept notes. The notes are a little chewed. So am I."
+        "I need a roll call: who got bitten by what, and when they turned. The patrol leaders kept notes. The notes are a little chewed, and so am I."
       ],
       "win": [
         "Every scout accounted for. A Scout is trustworthy, loyal, helpful, and currently deceased.",
-        "Here's your candle. Firem'n Chit first. Good. You're cleared to light it.",
-        "The troop's yours now, Senior Patrol Leader. Out there, raise the sign with Q and any Scout who sees it goes quiet. In this town that's most of them."
+        "Here's your candle. You have your Firem'n Chit? Good, you're cleared to light it.",
+        "The troop's yours now, Senior Patrol Leader. Out there, raise the sign with Q and any Scout who sees it goes quiet. In this town, that's most of the dead."
       ],
       "lose": ["Roll call failed. Somebody's patrol is missing a scout, and that scout is missing a head."],
-      "replay": ["Run roll call again? Sign's up. We'll wait. We're very good at waiting now."],
+      "replay": ["Run roll call again? Sign's up, we'll wait."],
       "locked": "The Kettlewell Room door is shut. From inside, very slowly: 'Hip-su rah-su... teddy boom bah-su...'",
-      "clue": "DiscOTech's at Witter Field, under the lights. They came for an away game and got fenced in."
+      "clue": "DiscOTech's at Witter Field. They came for an away game and got fenced in."
     },
-    "bio": "Scoutmaster of Troop 1. Has been running the same meeting since seven thirty. Nobody has been dismissed. Nobody has asked to be.",
+    "bio": "Scoutmaster of Troop 1. Has been running the same meeting since seven thirty, and has not dismissed anyone.",
     "body": {
       "hair": "#5a3a24",
       "skin": "#e2b48c",
@@ -249,9 +245,9 @@
     "minigame": "rhythm",
     "lines": {
       "greeting": [
-        "Witter Field, under the lights. Half of DiscOTech made it inside the fence before it closed. The other half is the other team.",
+        "Welcome to Witter Field. Half of DiscOTech made it inside the fence before it closed. The other half is the other team now.",
         "There's no ref in ultimate, so even the dead honor the calls. Yell foul and they stop to think about it.",
-        "Somebody hung a disco ball off the light tower. It's a whole thing now. It's DISCO Tech."
+        "Somebody hung a disco ball off the light tower. It's a whole thing now."
       ],
       "beforeGame": [
         "Four lanes, four throws: backhand, flick, hammer, scoober. Hit the throw as the cutter gets open. Eighty percent completions or we're getting stalled out."
@@ -264,9 +260,9 @@
       "lose": ["Turnover. They picked it off. One of them picked off a whole hand."],
       "replay": ["Run it back? 3, 2, 1, disc in."],
       "locked": "The gate to Witter is chained. Somebody on the far side is counting very slowly. 'Stalling one. Stalling two.'",
-      "clue": "Ciaran's next. Grand Avenue. He said something about pushing boxes. They're not pizza boxes anymore."
+      "clue": "Ciaran's next, on Grand Avenue. He said something about pushing boxes, the long kind."
     },
-    "bio": "Self-officiated, spirited, and dead on their feet. Their spirit score is still a five. Nobody can work out how."
+    "bio": "Self-officiated and dead on their feet. Still the most spirited team on the field, and still calling their own fouls."
   },
   {
     "id": "ciaran",
@@ -288,12 +284,10 @@
       "beforeGame": ["Three yards. A coffin in a corner is stuck forever, and so is whatever's in it."],
       "win": [
         "Every coffin in a hole. Six feet under, no notes.",
-        "Candle. Don't light it near the coffins. I mean, light it near the coffins. That's sort of the point."
+        "Candle. Light it near the coffins, they settle right down."
       ],
       "lose": ["Corner. You pushed it into the corner. It's knocking now."],
-      "replay": [
-        "More coffins? There are always more coffins. That's kind of the whole problem with this week."
-      ],
+      "replay": ["More coffins? There are always more coffins this week."],
       "locked": "Ciaran's door won't open. Something heavy and rectangular is pushed against it.",
       "clue": "Hugo's over on Olive Avenue. He's matching dental records. He says he knows who everyone used to be."
     },
@@ -319,23 +313,23 @@
     "minigame": "picross",
     "lines": {
       "greeting": [
-        "Gabi, perfect timing. I'm identifying the neighbors from their teeth. It's going great. I've done nine. Some of them twice.",
+        "Gabi, perfect timing. I'm identifying the neighbors from their teeth. Nine done so far.",
         "And don't. I know what you're about to say. 'What are WE singing in choir, Hugo?' I still don't know. I'm not sure there's still a choir.",
-        "The numbers tell you which squares to fill in. Fill in the right ones and you get a face. Get a face and you know who it was."
+        "The numbers tell you which squares to fill in. Get them right and you get a face, and then we know who it was."
       ],
       "beforeGame": [
         "Start with the big numbers. Don't guess. Guessing is how I ended up with two of Mr. Patterson."
       ],
       "win": [
-        "That's a skull. A very confident skull. Good work.",
+        "That's Mr. Patterson, or one of the two. Good work.",
         "Candle. I found it in somebody's molars, so maybe wash it."
       ],
-      "lose": ["Wrong squares. You made a face. It's not anyone's face. It's looking at me."],
+      "lose": ["Wrong squares. You made a face that isn't anybody's, and it's looking at me."],
       "replay": ["Another one? I've got a big pile. The pile has opinions."],
       "locked": "Hugo's not answering. There's graph paper taped to the window, and teeth glued to the graph paper.",
       "clue": "Marina's the last house. Back on Grand Avenue, past Ciaran's. She's trying to put somebody back together and she's missing a few parts."
     },
-    "bio": "Identifies the dead by their teeth. Has identified some of them twice. Keeps the spares in a jar labeled SPARES.",
+    "bio": "Identifies the dead by their teeth. Keeps the spares in a jar labeled SPARES.",
     "body": {
       "hair": "#1a1a20",
       "skin": "#e8c7a4",
@@ -362,17 +356,17 @@
         "Don't open the closet. That rule's from before all this and it still stands."
       ],
       "beforeGame": [
-        "Space jumps. Hold it to jump higher. Don't fall in the pit. The pit's where the rest of the family is."
+        "Space jumps, and holding it jumps higher. Don't fall in the pit. That's where the rest of the family is."
       ],
       "win": [
         "Twelve pieces! That's enough cousin! The rest he can live without, probably.",
         "Candle. He wants you to have it. He'd hand it to you himself but he's still waiting on a hand.",
         "That's eleven candles, and that's all of spec sev. You know who's left."
       ],
-      "lose": ["You fell in. They were happy to see you. Everyone in the pit is always happy to see you."],
-      "replay": ["Again? I moved nothing. Well. I moved a foot. It was in the toaster."],
+      "lose": ["You fell in. I'd come get you, but I'm not going down there."],
+      "replay": ["Again? Everything's where it was, except a foot. It was in the toaster."],
       "locked": "Marina's house is dark. There's a thumb on the doormat. From somewhere inside: 'She's busy, bruh.'",
-      "clue": "Head home. The family's waiting. They have been waiting all day, and they are so, so hungry."
+      "clue": "Head home. The family has been waiting all day, and they are so hungry."
     },
     "bio": "Trying to put her cousin back together from parts found around the kitchen. Twelve out of fourteen is, she says, a passing grade.",
     "body": {
