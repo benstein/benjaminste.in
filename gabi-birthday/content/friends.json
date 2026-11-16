@@ -31,7 +31,14 @@
       "locked": "The door won't budge. Something on the other side is breathing through the mail slot.",
       "clue": "Cade's next. Lorita Avenue. He was writing clues on the wall when the power went. Not with a pen."
     },
-    "bio": "Barricaded in a closet since Thursday. Has typed nothing but five-letter words for three days. His little brother is outside the door. His little brother is hungry."
+    "bio": "Barricaded in a closet since Thursday. Has typed nothing but five-letter words for three days. His little brother is outside the door. His little brother is hungry.",
+    "body": {
+      "hair": "#9a6a3a",
+      "skin": "#e8c09a",
+      "longHair": true,
+      "glasses": "#3a4fbf",
+      "shirt": "#8a8f9a"
+    }
   },
   {
     "id": "cade",
@@ -65,7 +72,13 @@
       "locked": "Cade's door is locked. Something red is dripping under it, in neat little rows.",
       "clue": "Next stop: the high school. Kevin and 8033 are holding the Engineering Lab. Bring your driver hands."
     },
-    "bio": "Ran out of markers on day two and switched to a medium his mother would not approve of. Writes clues on the wall. The wall is load-bearing. So is the clue."
+    "bio": "Ran out of markers on day two and switched to a medium his mother would not approve of. Writes clues on the wall. The wall is load-bearing. So is the clue.",
+    "body": {
+      "hair": "#b8935a",
+      "skin": "#e8c09a",
+      "longHair": true,
+      "shirt": "#b9a17a"
+    }
   },
   {
     "id": "frc8033",
@@ -97,7 +110,12 @@
       "locked": "The Engineering Lab door's chained from the inside. Through the window, Kevin is guarding it with a robot. It's not John Dumper.",
       "clue": "Gilboa's running a ken event in Dracena Park. A birthday party. Nobody has told the madrichimot they're dead."
     },
-    "bio": "Held the Engineering Lab with 8033 since build night. The robots are fine. Kevin is mostly fine. Quals record: undefeated against the living."
+    "bio": "Held the Engineering Lab with 8033 since build night. The robots are fine. Kevin is mostly fine. Quals record: undefeated against the living.",
+    "body": {
+      "hair": "#2e2a28",
+      "skin": "#e0b08a",
+      "shirt": "#2f9e47"
+    }
   },
   {
     "id": "gilboa",
@@ -226,7 +244,13 @@
       "locked": "Ciaran's door won't open. Something heavy and rectangular is pushed against it.",
       "clue": "Hugo's up the street. He's matching dental records. He says he knows who everyone used to be."
     },
-    "bio": "Pushes things that should not be pushed into places they should not go. Was like this before the outbreak."
+    "bio": "Pushes things that should not be pushed into places they should not go. Was like this before the outbreak.",
+    "body": {
+      "hair": "#1e1e26",
+      "skin": "#e6c3a0",
+      "glasses": "#b8b8c0",
+      "shirt": "#3a3d48"
+    }
   },
   {
     "id": "hugo",
@@ -257,7 +281,13 @@
       "locked": "Hugo's not answering. There's graph paper taped to the window, and teeth glued to the graph paper.",
       "clue": "Marina's after that. Wildwood. She's trying to put somebody back together and she's missing a few parts."
     },
-    "bio": "Identifies the dead by their teeth. Has identified some of them twice. Keeps the spares in a jar labeled SPARES."
+    "bio": "Identifies the dead by their teeth. Has identified some of them twice. Keeps the spares in a jar labeled SPARES.",
+    "body": {
+      "hair": "#1a1a20",
+      "skin": "#e8c7a4",
+      "glasses": "#c8962e",
+      "shirt": "#7c8088"
+    }
   },
   {
     "id": "marina",
@@ -289,7 +319,13 @@
       "locked": "Marina's house is dark. There's a thumb on the doormat.",
       "clue": "Last house. Violet. She's running a quiz show from inside a panic room and she knows everything about you."
     },
-    "bio": "Trying to put her cousin back together from parts found around the kitchen. Twelve out of fourteen is, she says, a passing grade."
+    "bio": "Trying to put her cousin back together from parts found around the kitchen. Twelve out of fourteen is, she says, a passing grade.",
+    "body": {
+      "hair": "#c8a066",
+      "skin": "#f0c8a8",
+      "longHair": true,
+      "shirt": "#4f8f8a"
+    }
   },
   {
     "id": "violet",
@@ -323,6 +359,13 @@
       "locked": "Violet's door is a vault. A voice through the intercom says: 'Wrong answer. Come back later.'",
       "clue": "That's every stop. Head home. The family's waiting. They have been waiting all day, and they are so, so hungry."
     },
-    "bio": "Runs a quiz show from inside a panic room. The prize is the panic room. Knows things about you that you have not told anyone."
+    "bio": "Runs a quiz show from inside a panic room. The prize is the panic room. Knows things about you that you have not told anyone.",
+    "body": {
+      "hair": "#1c1416",
+      "skin": "#a8724e",
+      "longHair": true,
+      "glasses": "#4a2a2a",
+      "shirt": "#22222a"
+    }
   }
 ]
