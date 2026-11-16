@@ -207,7 +207,7 @@
     "categories": [
       {
         "name": "Scout",
-        "values": ["Owen", "Priya", "Marcus", "Lena"]
+        "values": ["Sawyer", "Susu", "Sammy L", "Julia"]
       },
       {
         "name": "Bitten by",
@@ -227,49 +227,49 @@
       },
       {
         "kind": "before",
-        "a": ["Scout", "Lena"],
-        "b": ["Scout", "Owen"],
-        "text": "Lena turned before Owen did. Owen kept saying it was just a scrat"
+        "a": ["Scout", "Julia"],
+        "b": ["Scout", "Sawyer"],
+        "text": "Julia turned before Sawyer did. Sawyer kept saying it was just a scrat"
       },
       {
         "kind": "not",
-        "a": ["Scout", "Owen"],
+        "a": ["Scout", "Sawyer"],
         "b": ["Bitten by", "Mailman"],
-        "text": "The mailman did not bite Owen. He tried. Owen is fast."
+        "text": "The mailman did not bite Sawyer. He tried. Sawyer is fast."
       },
       {
         "kind": "after",
-        "a": ["Scout", "Marcus"],
+        "a": ["Scout", "Sammy L"],
         "b": ["Bitten by", "Hen"],
-        "text": "Marcus turned after whoever the headless hen got. Still no idea how a hen with no head bites."
+        "text": "Sammy L turned after whoever the headless hen got. Still no idea how a hen with no head bites."
       },
       {
         "kind": "not",
-        "a": ["Scout", "Lena"],
+        "a": ["Scout", "Julia"],
         "b": ["Turned at", "7:30"],
-        "text": "Lena did not turn at 7:30. At 7:30 she was taking roll."
+        "text": "Julia did not turn at 7:30. Somebody had to take roll."
       },
       {
         "kind": "not",
-        "a": ["Scout", "Marcus"],
+        "a": ["Scout", "Sammy L"],
         "b": ["Bitten by", "Mailman"],
-        "text": "The mailman didn't bite Marcus either. Marcus was hiding in the closet with the fla"
+        "text": "The mailman didn't bite Sammy L either. Sammy L was hiding in the closet with the fla"
       }
     ],
     "solution": {
-      "Owen": {
+      "Sawyer": {
         "Bitten by": "Hen",
         "Turned at": "8:00"
       },
-      "Priya": {
+      "Susu": {
         "Bitten by": "Zeke",
         "Turned at": "7:30"
       },
-      "Marcus": {
+      "Sammy L": {
         "Bitten by": "Lifeguard",
         "Turned at": "8:15"
       },
-      "Lena": {
+      "Julia": {
         "Bitten by": "Mailman",
         "Turned at": "7:45"
       }

@@ -11,7 +11,7 @@
       "id": "dogs",
       "name": "Dogs of Piedmont Merit Badge",
       "title": "Every Dog Petted",
-      "hint": "The Walkers still bring their dogs; the dogs are fine, the Walkers are not. Four more live in friends' houses, one walks with Francisco, and one is not a dog at all."
+      "hint": "The Walkers still bring their dogs; the dogs are fine, the Walkers are not. Seven more live in friends' houses, one walks with Francisco, and one is not a dog at all."
     },
     {
       "id": "plaques",
@@ -2913,35 +2913,233 @@
       "source": "Papi, 2026-10-11: the backyard coop and our seven hens"
     },
     {
-      "id": "dog-waffles",
+      "id": "dog-stella",
       "kind": "pet",
-      "name": "Waffles",
-      "title": "Waffles, Sammy L's dog, holding the fort at Ciaran's",
+      "name": "Stella",
+      "title": "Stella, Cade's doodle",
       "look": {
         "kind": "dog",
         "size": "medium",
-        "coat": "#d4a373",
-        "patch": "#fff3e0"
+        "coat": "#d9a066",
+        "patch": "#f3d9b1",
+        "fluffy": true
       },
       "prompt": "pet",
       "talks": [
         {
           "lines": [
-            "Waffles sniffs Gabi's shoes, smells Soup and Salad and a fair amount of zombie on them, and decides that's fine. Dogs are immune. Dogs are also not picky."
+            "Stella the doodle decides Gabi is her favourite person. She decided the same thing about the zombie at the window an hour ago. Stella is not a good judge of character. Stella is a very good dog."
+          ],
+          "sound": "bark",
+          "once": true
+        },
+        {
+          "lines": [
+            "Stella shakes herself off. Doodle fur holds a surprising amount of water. It is mostly water."
           ],
           "sound": "bark"
         }
       ],
       "collect": {
         "set": "dogs",
-        "item": "waffles"
+        "item": "stella"
       },
       "tier": 1,
-      "source": "Papi, 2026-10-11",
+      "source": "Papi, 2026-11-15",
+      "room": {
+        "id": "cade",
+        "x": 7,
+        "y": 5
+      }
+    },
+    {
+      "id": "dog-biju",
+      "kind": "pet",
+      "name": "Biju",
+      "title": "Biju, Ciaran's dog",
+      "look": {
+        "kind": "dog",
+        "size": "small",
+        "coat": "#f5f1ea",
+        "patch": "#d7c4a8",
+        "fluffy": true
+      },
+      "prompt": "pet",
+      "talks": [
+        {
+          "lines": [
+            "Biju trots over, inspects Gabi's shoes, approves, and goes back to guarding the grave dirt Ciaran tracked in."
+          ],
+          "sound": "bark"
+        }
+      ],
+      "collect": {
+        "set": "dogs",
+        "item": "biju"
+      },
+      "tier": 1,
+      "source": "Papi, 2026-11-15",
       "room": {
         "id": "ciaran",
         "x": 7,
         "y": 5
+      }
+    },
+    {
+      "id": "dog-skelly",
+      "kind": "pet",
+      "name": "Skelly",
+      "title": "Skelly, Ciaran's dog",
+      "look": {
+        "kind": "dog",
+        "size": "medium",
+        "coat": "#2b2b2b",
+        "patch": "#eeeeee"
+      },
+      "prompt": "pet",
+      "talks": [
+        {
+          "lines": [
+            "Skelly. Ciaran swears the name came before all this. Skelly brings Gabi a bone, and Gabi decides not to ask where it came from."
+          ],
+          "sound": "bark"
+        }
+      ],
+      "collect": {
+        "set": "dogs",
+        "item": "skelly"
+      },
+      "tier": 1,
+      "source": "Papi, 2026-11-15",
+      "room": {
+        "id": "ciaran",
+        "x": 13,
+        "y": 5
+      }
+    },
+    {
+      "id": "dog-miso",
+      "kind": "pet",
+      "name": "Miso",
+      "title": "Miso, Ciaran's dog",
+      "look": {
+        "kind": "dog",
+        "size": "small",
+        "coat": "#c99a5b",
+        "patch": "#f5e6cc"
+      },
+      "prompt": "pet",
+      "talks": [
+        {
+          "lines": [
+            "Miso is small and warm and smells faintly of soup. Not Soup the dog. Soup the food. Gabi checks anyway."
+          ],
+          "sound": "bark"
+        }
+      ],
+      "collect": {
+        "set": "dogs",
+        "item": "miso"
+      },
+      "tier": 1,
+      "source": "Papi, 2026-11-15",
+      "room": {
+        "id": "ciaran",
+        "x": 14,
+        "y": 8
+      }
+    },
+    {
+      "id": "dog-rosey",
+      "kind": "pet",
+      "name": "Rosey",
+      "title": "Rosey, Violet's dog, also known as the rat",
+      "look": {
+        "kind": "dog",
+        "size": "tiny",
+        "coat": "#8d6e63",
+        "patch": "#d7ccc8"
+      },
+      "prompt": "pet",
+      "talks": [
+        {
+          "lines": [
+            "Rosey, also known as the rat. She is not a rat. She has heard the nickname, though, and lives up to it from under the couch."
+          ],
+          "sound": "bark",
+          "once": true
+        },
+        {
+          "lines": [
+            "The rat comes out to sniff Gabi's ankle, decides it is not food yet, and goes back under the couch."
+          ],
+          "sound": "bark"
+        }
+      ],
+      "collect": {
+        "set": "dogs",
+        "item": "rosey"
+      },
+      "tier": 1,
+      "source": "Papi, 2026-11-15",
+      "room": {
+        "id": "violet",
+        "x": 7,
+        "y": 5
+      }
+    },
+    {
+      "id": "cat-marmalade",
+      "kind": "critter",
+      "name": "Marmalade",
+      "title": "Marmalade, Violet's cat",
+      "look": {
+        "kind": "sprite",
+        "sprite": "housecat",
+        "tint": "#e08a3c"
+      },
+      "solid": true,
+      "prompt": "pet",
+      "talks": [
+        {
+          "lines": [
+            "Marmalade: orange, enormous, asleep through the end of the world. One eye opens. It closes again."
+          ]
+        }
+      ],
+      "tier": 1,
+      "source": "Papi, 2026-11-15",
+      "room": {
+        "id": "violet",
+        "x": 14,
+        "y": 3
+      }
+    },
+    {
+      "id": "cat-pretzel",
+      "kind": "critter",
+      "name": "Pretzel",
+      "title": "Pretzel, Violet's cat",
+      "look": {
+        "kind": "sprite",
+        "sprite": "housecat",
+        "tint": "#b8875a"
+      },
+      "solid": true,
+      "prompt": "pet",
+      "talks": [
+        {
+          "lines": [
+            "Pretzel is folded into a shape only a cat named Pretzel could manage. Gabi is not invited to pet Pretzel. Gabi is allowed to look."
+          ]
+        }
+      ],
+      "tier": 1,
+      "source": "Papi, 2026-11-15",
+      "room": {
+        "id": "violet",
+        "x": 5,
+        "y": 10
       }
     },
     {
@@ -3005,45 +3203,6 @@
       "source": "Papi, 2026-10-11",
       "room": {
         "id": "hugo",
-        "x": 7,
-        "y": 5
-      }
-    },
-    {
-      "id": "dog-maisey",
-      "kind": "pet",
-      "name": "Maisey",
-      "title": "Maisey, Ben C's dog, the OG Mangy Mutt, minding Cade's",
-      "look": {
-        "kind": "dog",
-        "size": "medium",
-        "coat": "#f2f2ee",
-        "patch": "#bdbdbd"
-      },
-      "prompt": "pet",
-      "talks": [
-        {
-          "once": true,
-          "sound": "bark",
-          "lines": [
-            "Maisey. The OG Mangy Mutt. Every scruffy dog in Piedmont is just doing an impression of Maisey. So is every zombie."
-          ]
-        },
-        {
-          "sound": "bark",
-          "lines": [
-            "The OG Mangy Mutt brings Gabi a sock. Not a toy. A sock. There is still a foot in it. It is a gift."
-          ]
-        }
-      ],
-      "collect": {
-        "set": "dogs",
-        "item": "maisey"
-      },
-      "tier": 1,
-      "source": "Papi, 2026-10-11",
-      "room": {
-        "id": "cade",
         "x": 7,
         "y": 5
       }

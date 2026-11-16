@@ -15,7 +15,8 @@
       "greeting": [
         "Gabi? GABI. Get in, get in, shut the door. Is it locked? Lock it twice.",
         "I've been in this closet since Thursday. My little brother tried to eat my phone charger. Then my phone. Then my hand.",
-        "Everybody's gone weird, bro. Wet weird. They all smell like the deep end."
+        "Everybody's gone weird, bro. Wet weird. They all smell like the deep end.",
+        "Spec sev chat's been dead since the pool. Like, actually dead. You're the first of the seven I've seen with all ten fingers."
       ],
       "beforeGame": [
         "I'm typing through the crack under the door. Five letters, six guesses before the door gives. Every wrong row is another plank off the barricade. No pressure."
@@ -145,14 +146,14 @@
       "lose": ["The line got you. Happens at every ken event. We'll do a peula about it after."],
       "replay": ["Again? Hitkansut's not for an hour. We have time. We have so much time."],
       "locked": "The picnic is roped off with blue chultzah string. A sign says: SIGN-UP SHEET FULL. BRING A DISH. BRING YOURSELF.",
-      "clue": "Troop 1's still meeting in the Kettlewell Room. Up the stairs on Mountain Avenue. Tuesday never ended."
+      "clue": "Scoutmaster Cantrill's still running Troop 1 in the Kettlewell Room. Up the stairs on Mountain Avenue. Tuesday never ended."
     },
     "bio": "A ken event that started as a birthday party and never ended. Everyone is sharing everything. Everyone. Everything."
   },
   {
     "id": "troop1",
-    "name": "Troop 1",
-    "portrait": "placeholder",
+    "name": "Scoutmaster Cantrill",
+    "portrait": "generated",
     "npcSprite": "placeholder",
     "hue": 330,
     "room": {
@@ -163,24 +164,30 @@
     "minigame": "logic",
     "lines": {
       "greeting": [
-        "Kettlewell Room, Piedmont Community Church. The meeting started at seven thirty. It is still going.",
-        "Purple and white neckerchiefs on every one of them. Full Class A. Nobody's blinked since roll call.",
-        "They turn when you walk in. All of them. They're waiting for the Senior Patrol Leader."
+        "Gabi. Good. Come in, we're in the Kettlewell Room. The meeting started at seven thirty and it is still going.",
+        "Full Class A, purple and white neckerchiefs, every scout. Nobody has blinked since roll call. I haven't either. I'm calling it discipline.",
+        "They've all turned to look at you, Senior Patrol Leader. I'd stand up straight."
       ],
       "beforeGame": [
-        "Roll call. Who in the troop got bitten by what, and when they turned. The patrol leaders kept notes. The notes are a little chewed."
+        "I need a roll call. Who got bitten by what, and when they turned. The patrol leaders kept notes. The notes are a little chewed. So am I."
       ],
       "win": [
         "Every scout accounted for. A Scout is trustworthy, loyal, helpful, and currently deceased.",
-        "Candle. Firem'n Chit's on the back. You're cleared to light it.",
-        "And the troop's yours now, Senior Patrol Leader. Out there, raise the sign with Q and any Scout who sees it goes quiet. In this town that's most of them."
+        "Here's your candle. Firem'n Chit first. Good. You're cleared to light it.",
+        "The troop's yours now, Senior Patrol Leader. Out there, raise the sign with Q and any Scout who sees it goes quiet. In this town that's most of them."
       ],
-      "lose": ["Roll call failed. Somebody's patrol is missing a scout and the scout is missing a head."],
-      "replay": ["Run roll call again? Sign's up. They'll wait. They're very good at waiting."],
+      "lose": ["Roll call failed. Somebody's patrol is missing a scout, and that scout is missing a head."],
+      "replay": ["Run roll call again? Sign's up. We'll wait. We're very good at waiting now."],
       "locked": "The Kettlewell Room door is shut. From inside, very slowly: 'Hip-su rah-su... teddy boom bah-su...'",
       "clue": "DiscOTech's at Witter Field, under the lights. They came for an away game and got fenced in."
     },
-    "bio": "The longest troop meeting in the history of the Piedmont Council. Nobody has been dismissed. Nobody has asked to be."
+    "bio": "Scoutmaster of Troop 1. Has been running the same meeting since seven thirty. Nobody has been dismissed. Nobody has asked to be.",
+    "body": {
+      "hair": "#5a3a24",
+      "skin": "#e2b48c",
+      "glasses": "#5f6368",
+      "shirt": "#c8b48a"
+    }
   },
   {
     "id": "discotech",
@@ -267,6 +274,7 @@
     "lines": {
       "greeting": [
         "Gabi, perfect timing. I'm identifying the neighbors from their teeth. It's going great. I've done nine. Some of them twice.",
+        "And don't. I know what you're about to say. 'What are WE singing in choir, Hugo?' I still don't know. I'm not sure there's still a choir.",
         "The numbers tell you which squares to fill in. Fill in the right ones and you get a face. Get a face and you know who it was."
       ],
       "beforeGame": [
@@ -316,7 +324,7 @@
       ],
       "lose": ["You fell in. They were happy to see you. Everyone in the pit is always happy to see you."],
       "replay": ["Again? I moved nothing. Well. I moved a foot. It was in the toaster."],
-      "locked": "Marina's house is dark. There's a thumb on the doormat.",
+      "locked": "Marina's house is dark. There's a thumb on the doormat. From somewhere inside: 'She's busy, bruh.'",
       "clue": "Last house. Violet. She's running a quiz show from inside a panic room and she knows everything about you."
     },
     "bio": "Trying to put her cousin back together from parts found around the kitchen. Twelve out of fourteen is, she says, a passing grade.",
@@ -343,12 +351,13 @@
       "greeting": [
         "Gabi. You found the panic room. Most people find the other room first.",
         "Lightning round. Questions about you. I know you better than you'd think. I've had a lot of time to think.",
+        "I have receipts. 'Tate is so cool, charismatic, and sexy. I wish I was Tate.' Gabi, 2026. It's in the question bank.",
         "Three lives. Every miss, the ceiling comes down a little. It's a real ceiling. I tested it on the mailman."
       ],
       "beforeGame": ["Read fast, answer faster. Overthinking is how the mailman lost."],
       "win": [
         "You know yourself. That's rare in this town right now. Most people don't know their own legs.",
-        "Candle eleven. That's every stop. Go home, Gabi. They're waiting. You know they're waiting."
+        "Candle eleven. That's every stop, and that's all of spec sev. Go home, Gabi. They're waiting. You know they're waiting."
       ],
       "lose": [
         "Ceiling's down. That's on the clock, not on you. You'll get it next time, if there's a next time."
