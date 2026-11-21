@@ -252,9 +252,9 @@
     "hue": 30,
     "body": { "hair": "#1c1c22", "skin": "#e8c09a", "glasses": "#3a3a42", "shirt": "#5a3e28" },
     "room": {
-      "floor": "tile",
-      "wallColor": "grey",
-      "props": ["table", "chair", "poster", "trophy", "tv", "plant"]
+      "floor": "turf",
+      "wallColor": "bleachers",
+      "props": ["goalpost", "lightTower", "cones", "cones", "cones", "cones", "disc", "disc"]
     },
     "minigame": "rhythm",
     "lines": {
