@@ -247,9 +247,10 @@
   {
     "id": "discotech",
     "name": "DiscOTech",
-    "portrait": "placeholder",
+    "portrait": "generated",
     "npcSprite": "placeholder",
     "hue": 30,
+    "body": { "hair": "#1c1c22", "skin": "#e8c09a", "glasses": "#3a3a42", "shirt": "#5a3e28" },
     "room": {
       "floor": "tile",
       "wallColor": "grey",
