@@ -6,19 +6,19 @@
       "hue": 210,
       "lines": {
         "greeting": [
-          "Gabi, you came home! Everyone's here, even the people nobody invited.",
-          "I'm fine, by the way, just a little damp. I've been damp since the pool. Don't look at my eyes, they're doing a thing."
+          "Oh. Gabi. Hi. Everyone's here, even the people nobody invited. I'm lwky busy.",
+          "I'm not texting anyone. Don't look at my phone. Don't look at my eyes either, they've been doing a thing since the pool."
         ],
         "phaseIntro": [
-          "You play chess on your phone. I play chess with the living room.",
-          "The pieces are life-size, and some of them are the neighbors. Your move, Goblet."
+          "Fine, I'll put the phone down. One game. You play chess on your phone, I play chess with the living room.",
+          "The pieces are life-size, and some of them are the neighbors. Your move."
         ],
         "phaseWin": [
-          "Okay, checkmate. That was low key sigma, for a guy who's still alive.",
-          "Take the candle. Mami's next and she wants a hug so bad. Like, SO bad."
+          "Okay, checkmate. That was lwky sigma, for a guy who's still alive.",
+          "Take the candle. Hold on, I have to answer this. It's nobody. Mami's next and she wants a hug so bad."
         ],
         "phaseLose": ["Checkmate. Massive L. Your rating's going down AND you're about to be lunch."],
-        "afterFight": ["The cake's on the table. Or we run it back, I've got nothing but time now."],
+        "afterFight": ["The cake's on the table. Or we run it back. I'll be on my phone, texting nobody."],
         "drawOffer": [
           "Wait, WAIT. Let's be mature about this.",
           "I'll offer you a draw. Come closer and shake on it."
@@ -30,7 +30,7 @@
       },
       "bossRef": {
         "attackName": "Life-Size Chess",
-        "taunt": "Your move, Goblet."
+        "taunt": "Your move. I'm lwky texting."
       }
     },
     {
@@ -44,7 +44,7 @@
         ],
         "phaseIntro": [
           "We are not fighting, mijo. You know the rule in this house: no violent video games.",
-          "I say a word in Spanish, you tell me what it means. Every one is on a street sign, with my note under it. Then I hug you, very, very hard."
+          "I say a word in Spanish, you tell me what it means. Then I hug you, very, very hard."
         ],
         "phaseWin": [
           "Ay, you got so fast. When did you get so fast?",
@@ -62,32 +62,32 @@
         "taunt": "No violent video games, mijo. Just a hug.",
         "vocabulary": [
           {
-            "es": "vista",
-            "en": ["view"]
+            "es": "estudiar",
+            "en": ["study"]
           },
           {
-            "es": "bonita",
-            "en": ["pretty"]
+            "es": "aprender",
+            "en": ["learn"]
           },
           {
-            "es": "arroyo",
-            "en": ["creek", "stream"]
+            "es": "leer",
+            "en": ["read"]
           },
           {
-            "es": "estrella",
-            "en": ["star"]
+            "es": "escribir",
+            "en": ["write"]
           },
           {
-            "es": "monte",
-            "en": ["mountain", "mount"]
+            "es": "hablar",
+            "en": ["talk", "speak"]
           },
           {
-            "es": "mesa",
-            "en": ["table"]
+            "es": "practicar",
+            "en": ["practice", "practise"]
           },
           {
-            "es": "pala",
-            "en": ["shovel", "spade"]
+            "es": "copiar",
+            "en": ["copy"]
           }
         ]
       }
@@ -98,16 +98,16 @@
       "hue": 30,
       "lines": {
         "greeting": [
-          "Gabi! You made it! I got Banshee running again for the occasion. I had some parts left over.",
-          "Your mother says no jokes at the dinner table. We are not at the dinner table."
+          "Goblet. Did you do your dish chores?",
+          "Why do I have to nag you to do your dish chores?"
         ],
         "phaseIntro": [
-          "You don't have your permit, so I'm driving.",
-          "Three, two, one... hub's active. Get ready to groan, kiddo."
+          "I was going to drive Banshee, but the 8033 kids wouldn't let me reprogram it with AI, so I can't get it driving.",
+          "So it's just me and my agents. Three, two, one... get ready to groan, Goblet."
         ],
         "phaseWin": [
-          "You tripped the main breaker. Just like Worlds, except this time I'm proud of it.",
-          "Here's the last candle from us. Take the cake to the pool, Gabi. Whatever came out of that drain, put it back."
+          "Okay, you win. My agents couldn't beat you either. Don't tell the 8033 kids.",
+          "Here's the last candle from us. Take the cake to the pool, Goblet. Whatever came out of that drain, put it back."
         ],
         "phaseLose": ["Ha! Gotcha. Want to hear another one? You don't get a choice."],
         "afterFight": [
@@ -115,13 +115,13 @@
         ]
       },
       "bossRef": {
-        "attackName": "Dad Jokes and Banshee",
-        "taunt": "Groan for me, kiddo."
+        "attackName": "Dad Jokes and AI Agents",
+        "taunt": "Groan for me, Goblet."
       }
     }
   ],
   "ending": {
-    "message": ["Happy sixteenth, Gabi. We love you.", "Mami, Papi and Zeke."],
+    "message": [],
     "credits": ["With love by Papi, and a great deal of fake blood."]
   }
 }
