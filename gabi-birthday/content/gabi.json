@@ -223,7 +223,7 @@
         "kind": "before",
         "a": ["Scout", "Julia"],
         "b": ["Scout", "Sawyer"],
-        "text": "Julia turned before Sawyer did. Sawyer kept saying it was just a scrat"
+        "text": "Julia turned before Sawyer did. Sawyer kept saying it was just a scratch."
       },
       {
         "kind": "not",
@@ -247,7 +247,7 @@
         "kind": "not",
         "a": ["Scout", "Sammy L"],
         "b": ["Bitten by", "Mailman"],
-        "text": "The mailman didn't bite Sammy L either. Sammy L was hiding in the closet with the fla"
+        "text": "The mailman didn't bite Sammy L either. Sammy L was hiding in the closet with the flags."
       }
     ],
     "solution": {

@@ -132,7 +132,20 @@
     "room": {
       "floor": "tile",
       "wallColor": "grey",
-      "props": ["desk", "table", "chair", "poster", "trophy", "lamp", "tv"]
+      "props": [
+        "desk",
+        "table",
+        "chair",
+        "poster",
+        "trophy",
+        "lamp",
+        "tv",
+        "cnc",
+        "drillPress",
+        "electricGuitars",
+        "electricGuitars",
+        "electricGuitars"
+      ]
     },
     "minigame": "blaster",
     "lines": {
