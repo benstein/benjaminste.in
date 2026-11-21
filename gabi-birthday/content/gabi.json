@@ -17,29 +17,23 @@
       "GLOOM",
       "TORSO",
       "SPINE",
-      "FEMUR",
-      "TIBIA",
       "LEECH",
       "SLIME",
       "VOMIT",
       "MUMMY",
-      "FETID",
       "RABID",
-      "FERAL",
       "GROAN",
       "SCALP",
-      "GOUGE",
-      "DIRGE",
       "BLOAT",
       "BRAIN",
-      "SKULK",
       "LURCH",
-      "GNASH",
-      "CLAWS",
-      "BOWEL",
       "VENOM",
-      "GORED",
-      "TOMBS"
+      "TOMBS",
+      "GHOST",
+      "BONES",
+      "TEETH",
+      "DEATH",
+      "SCARY"
     ]
   },
   "crossword": {
@@ -67,13 +61,13 @@
         "n": 9,
         "row": 4,
         "col": 0,
-        "clue": "Spec sev, minus Gabi. Pulses not guaranteed"
+        "clue": "Sped Seven, minus Gabi. Pulses not guaranteed"
       },
       {
         "n": 13,
         "row": 6,
         "col": 0,
-        "clue": "She's still walking. Her head is somewhere else"
+        "clue": "Bambi's dead mother"
       },
       {
         "n": 14,

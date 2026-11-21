@@ -14,16 +14,16 @@
     "lines": {
       "greeting": [
         "Gabi? GABI. Get in, get in, shut the door. Is it locked? Lock it twice.",
-        "I've been barricaded in here since Thursday. My little brother ate my phone charger, and then he tried my hand.",
+        "I've been barricaded in here since Thursday. My little brother Felix ate my phone charger, and then he tried my hand.",
         "Everybody's gone weird, bro. Wet weird. They all smell like the deep end.",
-        "Spec sev chat's been dead since the pool. Like, actually dead. You're the first of the seven I've seen with all ten fingers."
+        "Sped Seven chat's been dead since the pool. Like, actually dead. You're the first of the seven I've seen with all ten fingers."
       ],
       "beforeGame": [
-        "I'll write the words down, you guess. Five letters, six guesses. Every wrong guess, my brother pries another plank off the bedroom door, so guess faster than he pries."
+        "I'll write the words down, you guess. Five letters, six guesses. Every wrong guess, Felix pries another plank off the bedroom door, so guess faster than he pries."
       ],
       "win": [
         "The barricade held. You actually cooked.",
-        "Candle's yours. Light it, they hate fire. Listen, my brother's already backing off the door."
+        "Candle's yours. Light it, they hate fire. Listen, Felix is already backing off the door."
       ],
       "lose": [
         "That was the last plank. Run. No, wait, come back, it's fine, it was just the cat. The cat is also dead."
@@ -32,7 +32,7 @@
       "locked": "The door won't budge. Something on the other side is breathing through the mail slot.",
       "clue": "Cade's next, on Lorita Avenue. Last I heard he was writing clues on his bedroom wall."
     },
-    "bio": "Barricaded in his bedroom since Thursday, thinking in nothing but five-letter words. His little brother is outside the door, and hungry.",
+    "bio": "Barricaded in his bedroom since Thursday, thinking in nothing but five-letter words. His little brother Felix is outside the door, and hungry.",
     "body": {
       "hair": "#9a6a3a",
       "skin": "#e8c09a",
@@ -361,7 +361,7 @@
       "win": [
         "Twelve pieces! That's enough cousin! The rest he can live without, probably.",
         "Candle. He wants you to have it. He'd hand it to you himself but he's still waiting on a hand.",
-        "That's eleven candles, and that's all of spec sev. You know who's left."
+        "That's eleven candles, and that's all of Sped Seven. You know who's left."
       ],
       "lose": ["You fell in. I'd come get you, but I'm not going down there."],
       "replay": ["Again? Everything's where it was, except a foot. It was in the toaster."],
