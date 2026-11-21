@@ -167,9 +167,9 @@
     "npcSprite": "placeholder",
     "hue": 210,
     "room": {
-      "floor": "wood",
-      "wallColor": "green",
-      "props": ["table", "chair", "plant", "guitar", "cake", "lamp"]
+      "floor": "grass",
+      "wallColor": "trees",
+      "props": ["picnicTable", "picnicTable", "tree", "tree", "tree", "tree", "guitar", "cake"]
     },
     "minigame": "snake",
     "lines": {
