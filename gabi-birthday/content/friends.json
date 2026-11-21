@@ -163,7 +163,7 @@
   {
     "id": "gilboa",
     "name": "Gilboa",
-    "portrait": "placeholder",
+    "portrait": "generated",
     "npcSprite": "placeholder",
     "hue": 210,
     "room": {
