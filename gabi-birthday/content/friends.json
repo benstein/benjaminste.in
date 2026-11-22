@@ -234,7 +234,7 @@
       "lose": ["Roll call failed. Somebody's patrol is missing a scout, and that scout is missing a head."],
       "replay": ["Run roll call again? Sign's up, we'll wait."],
       "locked": "The Kettlewell Room door is shut. From inside, very slowly: 'Hip-su rah-su... teddy boom bah-su...'",
-      "clue": "DiscOTech's at Witter Field. They came for an away game and got fenced in."
+      "clue": "Coach Matt has DiscOTech at Witter Field. They came for an away game and got fenced in."
     },
     "bio": "Scoutmaster of Troop 1. Has been running the same meeting since seven thirty, and has not dismissed anyone.",
     "body": {
@@ -246,7 +246,7 @@
   },
   {
     "id": "discotech",
-    "name": "DiscOTech",
+    "name": "Matt",
     "portrait": "generated",
     "npcSprite": "placeholder",
     "hue": 30,
@@ -277,7 +277,7 @@
       "locked": "The gate to Witter is chained. Somebody on the far side is counting very slowly. 'Stalling one. Stalling two.'",
       "clue": "Ciaran's next, on Grand Avenue. He said something about pushing boxes, the long kind."
     },
-    "bio": "Self-officiated and dead on their feet. Still the most spirited team on the field, and still calling their own fouls."
+    "bio": "Coaches DiscOTech from the Witter sideline, dead on his feet. Still makes his players call their own fouls, and still the most spirited coach in the league."
   },
   {
     "id": "ciaran",
