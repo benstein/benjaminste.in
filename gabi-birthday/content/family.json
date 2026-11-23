@@ -39,55 +39,57 @@
       "hue": 340,
       "lines": {
         "greeting": [
-          "Mijo, come here. I have been standing next to this cake since four o'clock, and I have not blinked once.",
-          "You walked the whole town in those shoes? Come give your mother a hug."
+          "Mijo, come here. Your father put me in his video game. He did not ask me. A violent video game, with me in it, and I am the one who says no violent video games.",
+          "And the blood. On the walls, on the cake, on my good blouse. Who is going to clean all this? Not Papi.",
+          "Don't think I don't know GTA 6 came out. Everyone in your grade has it. Their mothers can explain that to God. You are not playing it."
         ],
         "phaseIntro": [
-          "We are not fighting, mijo. You know the rule in this house: no violent video games.",
-          "I say a word in Spanish, you tell me what it means. Then I hug you, very, very hard."
+          "We are not fighting, mijo. I don't care what kind of game Papi made. The rule in this house is no violent video games, and that includes this one.",
+          "So no shooting. I say a body part in Spanish, you tell me what it is in English. Then I hug you, very, very hard."
         ],
         "phaseWin": [
-          "Ay, you got so fast. When did you get so fast?",
-          "Take the candle. Papi is next, and he has been practicing his jokes. Lo siento."
+          "Ay, you got so fast. You think that's from these games? It is not from these games.",
+          "I know, you thought those were zombie words. No, mijo. That was medical Spanish, for our trip to Guatemala.",
+          "Take the candle. And don't ask me about GTA 6 again, the answer is still no. Papi is next. Lo siento."
         ],
         "phaseLose": [
-          "Ven aquí. Otra vez, mijo. I am not going anywhere. I will be right here, by the cake."
+          "Ven aquí. Otra vez, mijo. You see? This is what these games do to you. I will be right here, by the cake."
         ],
         "afterFight": [
-          "We could go around again, mijo. Or we could all go to the pool. Everyone is going to the pool."
+          "We could go around again, mijo. Or you could turn this off and go outside. Everyone is going to the pool anyway."
         ]
       },
       "bossRef": {
         "attackName": "Preguntas y Abrazos",
-        "taunt": "No violent video games, mijo. Just a hug.",
+        "taunt": "This is not GTA 6, mijo. Just a hug.",
         "vocabulary": [
           {
-            "es": "estudiar",
-            "en": ["study"]
+            "es": "cabeza",
+            "en": ["head"]
           },
           {
-            "es": "aprender",
-            "en": ["learn"]
+            "es": "brazo",
+            "en": ["arm"]
           },
           {
-            "es": "leer",
-            "en": ["read"]
+            "es": "pierna",
+            "en": ["leg"]
           },
           {
-            "es": "escribir",
-            "en": ["write"]
+            "es": "mano",
+            "en": ["hand"]
           },
           {
-            "es": "hablar",
-            "en": ["talk", "speak"]
+            "es": "ojo",
+            "en": ["eye"]
           },
           {
-            "es": "practicar",
-            "en": ["practice", "practise"]
+            "es": "corazón",
+            "en": ["heart"]
           },
           {
-            "es": "copiar",
-            "en": ["copy"]
+            "es": "cerebro",
+            "en": ["brain", "brains"]
           }
         ]
       }
@@ -121,7 +123,9 @@
     }
   ],
   "ending": {
-    "message": [],
+    "message": [
+      "Happy sixteenth, Goblet. You're old enough to play GTA 6 now, as long as it's OK with Mami and Safta. Love, Papi"
+    ],
     "credits": ["With love by Papi, and a great deal of fake blood."]
   }
 }
